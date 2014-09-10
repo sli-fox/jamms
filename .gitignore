@@ -1,3 +1,4 @@
+MARK WAS HERE
 # Compiled Object files
 *.slo
 *.lo
@@ -8,7 +9,7 @@
 *.so
 *.dylib
 *.dll
-
+AND HERE
 # Compiled Static libraries
 *.lai
 *.la
@@ -19,3 +20,4 @@
 *.exe
 *.out
 *.app
+AND HERE TOO
