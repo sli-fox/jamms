@@ -1,7 +1,7 @@
 jamms
 =====
 
-# Installing SFML
+## Installing SFML
 SFML is the graphical library we will be using for this project. It's a dependency for the project, so please install it locally by following the steps below. 
 
 1. First, you must download the SFML SDK from the [download page](http://sfml-dev.org/download/sfml/2.1/).
