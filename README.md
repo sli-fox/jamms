@@ -3,6 +3,7 @@ jamms
 
 ## Guidelines for commits
 - Only add and commit files that you have actually changed code in.
+- .gitignore will prevent untracked files from being added (without an add -f) to the set of files tracked by git, however git will continue to track any files that are already being tracked. So you will see a lot of files like .suo and .sdf files in your git status. Ignore them! Only check in code (cpp and h files)!
 
 ## Installing SFML
 SFML is the graphical library we will be using for this project. It's a dependency for the project, so please install it locally by following the steps below. 
