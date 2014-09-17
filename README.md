@@ -1,6 +1,10 @@
 jamms
 =====
 
+## Consistent naming and style conventions
+If in doubt, we should all use the same naming and style conventions. I vote we use Google's guide for C++
+[http://google-styleguide.googlecode.com/svn/trunk/cppguide.html#General_Naming_Rules]
+
 ## Guidelines for commits
 - Only add and commit files that you have actually changed code in.
 - .gitignore will prevent untracked files from being added (without an add -f) to the set of files tracked by git, however git will continue to track any files that are already being tracked. So you will see a lot of files like .suo and .sdf files in your git status. Ignore them! Only check in code (cpp and h files)!
