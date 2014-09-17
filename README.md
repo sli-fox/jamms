@@ -28,4 +28,4 @@ SFML is the graphical library we will be using for this project. It's a dependen
   - Copy all files FROM SFML-2.1/bin into jamms/Debug
   - Make sure you're only adding .dll files
 
-5. Now, your SFML should be ready! I've include a SFMLTest.txt file with code that should render a green circle in your solution if SFML is properly installed. To test, you can copy the code in SFMLTest.txt into your jamms.cpp file and run the main function. If a green circle appears, then SFML works! :)
+5. Now, your SFML should be ready! I've included a SFMLTest.txt file with code that should render a green circle in your solution if SFML is properly installed. To test, you can copy the code in SFMLTest.txt into your jamms.cpp file and run the main function. If a green circle appears, then SFML works! :)
