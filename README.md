@@ -11,7 +11,7 @@ jamms
 SFML is the graphical library we will be using for this project. It's a dependency for the project, so please install it locally by following the steps below. 
 
 1. First, you must download the SFML SDK from the [download page](http://sfml-dev.org/download/sfml/2.1/).
-  - You must download the package that matches your version of Visual C++. A library compiled with VC++ 9 (Visual Studio 2008) won't be compatible with VC++ 10 (Visual Studio 2010) for example.
+  - You must download the package that matches your version of Visual C++. If you got your VS2012 from the Dreamspark school download, its a 32-bit version (even if your system is 64-bit). So, if your VS2012 is 32-bit, download the "Visual C++ 11 (2012) - 32 bits" SFML package.
   - Remember where you extract your SFML folder to because you will need that path to link it up to VS.
 
 2. When you open the jamms project in Visual Studio, you have to tell the complier where your SFML headers are and the linker where to find the SFML libraries. When you first pull the project off our repo, you have to change the linkage to your local url where SFML was extracted to.
@@ -24,4 +24,8 @@ SFML is the graphical library we will be using for this project. It's a dependen
   - **sfml-system-d.lib;sfml-main-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-window-d.lib;**
   - ![alt tag](http://sfml-dev.org/tutorials/2.1/images/start-vc-link-libs.png)
 
-4. Now, your SFML should be ready! Make sure you can build the solution. :)
+4. Last step, you need to copy all your SFML .dll files into the Debug folder of your jamms project.
+  - Copy all files FROM SFML-2.1/bin into jamms/Debug
+  - Make sure you're only adding .dll files
+
+5. Now, your SFML should be ready! I've include a SFMLTest.txt file with code that should render a green circle in your solution if SFML is properly installed. To test, you can copy the code in SFMLTest.txt into your jamms.cpp file and run the main function. If a green circle appears, then SFML works! :)
