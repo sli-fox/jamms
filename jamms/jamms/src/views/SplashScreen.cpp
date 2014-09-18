@@ -1,16 +1,15 @@
-#include "stdafx.h"
-#include "SplashScreen.h"
+#include <SplashScreen.h>
+#include <TextureManager.h>
 
-void SplashScreen::Show(sf::RenderWindow & render_window) {
-  sf::Texture texture;
+void SplashScreen::Show(sf::RenderWindow& render_window) {
+/*  sf::Texture texture;
   if(texture.loadFromFile("resources/images/SplashScreen.png") != true)
     return;   //Should throw error 
+*/
+  TextureManager& t_manager = TextureManager::getInstance();
+  sf::Sprite splash_screen_sprite(t_manager.loadTexture("resources/images/SplashScreen.png"));
 
-  sf::Sprite sprite;
-  sprite.setTexture(texture);   //Should we have a helper class that loads textures
-                                //and creates Sprites?
-
-  render_window.draw(sprite);
+  render_window.draw(splash_screen_sprite);
   render_window.display();
 
   sf::Event event;

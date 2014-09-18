@@ -1,5 +1,6 @@
 #pragma once
-#include "stdafx.h"
+#include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
 
 class Game {
 //Overkill to implement this class a Singleton,
@@ -8,14 +9,14 @@ class Game {
     static void Start();
 
   private:
-    static bool IsExiting();
-    static void GameLoop();
+    static bool isExiting();
+    static void gameLoop();
 
-    static void ShowSplashScreen();
+    static void showSplashScreen();
 
     enum GameState { Unintialized, ShowingSplash, Paused,
       ShowingMenu, Playing, Exiting };
     
-    static GameState game_state_;
-    static sf::RenderWindow main_window_;
+    static GameState _game_state;
+    static sf::RenderWindow _main_window;
 };
