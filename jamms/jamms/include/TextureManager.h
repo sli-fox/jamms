@@ -12,7 +12,7 @@ class TextureManager {
     }
 
     const sf::Texture& loadTexture(const std::string& file_name);  //Add bool smooth = true to params to enable texture smoothing
-    //bool unloadTexture(const std::string& file_name);
+    bool unloadTexture(const std::string& file_name);
 
   private:
     TextureManager() {}
