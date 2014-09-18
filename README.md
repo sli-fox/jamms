@@ -52,6 +52,6 @@ SFML is the graphical library we will be using for this project. It's a dependen
 
 ## Adding jamms headers path
 To simplify adding headers to the project, you must add (<jamms-folder-path>/include) to C/C++ » General » Additional Include Directories in your project properties. 
-  - For example, mine is <C:\Users\Steph\Projects\COMP345\jamms\jamms\jamms\include>
+  - For example, mine is "C:\Users\Steph\Projects\COMP345\jamms\jamms\jamms\include"
   - Then, in the project, create header files ONLY in the that same include folder
     - You'll be able to include header files simply by using #include <MyHeaderFile.h> without worrying about paths. 
