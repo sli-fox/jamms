@@ -14,7 +14,7 @@ If in doubt, we should all use the same naming and style conventions. I chose th
     - MyEnumName
   - Code blocks with curly braces have the first brace inline:
     - void myMethodName {
-    -   //Add code
+      -   //Add code
     - }
   - Don't use "using namespace std" declarations, use "std::string" in front of the variable type instead
 
