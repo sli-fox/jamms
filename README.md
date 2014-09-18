@@ -1,6 +1,8 @@
 jamms
 =====
 
+[TOC]
+
 ## Consistent naming and style conventions
 If in doubt, we should all use the same naming and style conventions. I chose this system because I think it helps to quickly recognize what is a variable or a method, etc.
   - Variable names have underscores
