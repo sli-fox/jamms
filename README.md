@@ -1,6 +1,15 @@
 jamms
 =====
 
+**Table of Contents** 
+
+- [jamms](#user-content-jamms)
+	- [Consistent naming and style conventions](#user-content-consistent-naming-and-style-conventions)
+	- [Guidelines for commits](#user-content-guidelines-for-commits)
+	- [Installing SFML](#user-content-installing-sfml)
+	- [Adding jamms headers path](#user-content-adding-jamms-headers-path)
+	- [The TextureManager class](#user-content-the-texturemanager-class)
+
 ## Consistent naming and style conventions
 If in doubt, we should all use the same naming and style conventions. I chose this system because I think it helps to quickly recognize what is a variable or a method, etc.
   - Variable names have underscores
@@ -55,3 +64,20 @@ To simplify adding headers to the project, you must add (<jamms-folder-path>/inc
   - For example, mine is "C:\Users\Steph\Projects\COMP345\jamms\jamms\jamms\include"
   - Then, in the project, create header files ONLY in the that same include folder
     - You'll be able to include header files simply by using #include <MyHeaderFile.h> without worrying about paths. 
+
+
+##The TextureManager class
+So, I created a singleton class called TextureManager that makes handles texture loading efficiently. Why is it useful? The class holds a single instance (hence the singleton class) of a map where all previously loaded texture go. Whenever you create a sprite and you give it a path to a texture image, the TextureManager class checks it against the map of textures. If the texture has been previously loaded, the loadTexture function of the class returns a reference to the loaded texture. If the texture is new, it loads the texture, saves the texture reference in the map, and returns you the newly loaded texture reference. Note all textures are implemented in the heap. 
+
+How to create a sprite using the TextureManager class:
+- TextureManager& t_manager = TextureManager::getInstance();  //Get an instance of the TextureManager object
+- sf::Sprite yourSpriteName(t_manager.loadTexture("resources/images/YourImage.png"));  //Create the sprite!
+
+Easy as pie!
+
+There's also the unloadTexture() function whih removes the instance of texture associated with a image path in the texture map.
+
+
+
+----
+Note for Github markdown TOC: http://doctoc.herokuapp.com/
