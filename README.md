@@ -1,6 +1,15 @@
 jamms
 =====
 
+**Table of Contents** 
+
+- [jamms](#user-content-jamms)
+	- [Consistent naming and style conventions](#user-content-consistent-naming-and-style-conventions)
+	- [Guidelines for commits](#user-content-guidelines-for-commits)
+	- [Installing SFML](#user-content-installing-sfml)
+	- [Adding jamms headers path](#user-content-adding-jamms-headers-path)
+	- [The TextureManager class](#user-content-the-texturemanager-class)
+
 ## Consistent naming and style conventions
 If in doubt, we should all use the same naming and style conventions. I chose this system because I think it helps to quickly recognize what is a variable or a method, etc.
   - Variable names have underscores
