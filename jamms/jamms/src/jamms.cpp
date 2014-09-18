@@ -1,11 +1,8 @@
 // jamms.cpp : Defines the entry point for the console application.
 //
+#include <Game.h>
 
-#include "stdafx.h"
-#include <SFML/Graphics.hpp>
-#include "Game.h"
-
-int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, char** argv[])
 {
 	Game::Start();
 
