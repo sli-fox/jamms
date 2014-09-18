@@ -82,10 +82,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="helpers\SpriteHelper.h" />
     <ClInclude Include="include\Game.h" />
     <ClInclude Include="include\MainMenu.h" />
     <ClInclude Include="include\SplashScreen.h" />
+    <ClInclude Include="include\TextureManager.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Images\SplashScreen.png" />
@@ -93,7 +93,7 @@
   <ItemGroup>
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\jamms.cpp" />
-    <ClCompile Include="src\utility\SpriteHelper.cpp" />
+    <ClCompile Include="src\managers\TextureManager.cpp" />
     <ClCompile Include="src\views\MainMenu.cpp" />
     <ClCompile Include="src\views\SplashScreen.cpp" />
   </ItemGroup>
