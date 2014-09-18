@@ -2,7 +2,23 @@ jamms
 =====
 
 ## Consistent naming and style conventions
-If in doubt, we should all use the same naming and style conventions. I vote we use Google's guide for C++:
+If in doubt, we should all use the same naming and style conventions. I chose this system because I think it helps to quickly recognize what is a variable or a method, etc.
+  - Variable names have underscores
+    - Public: my_public_var
+    - Private: _my_private_var
+  - Class and struct names are in upper camel case
+    - MyClassName
+  - Method names are in lover camel case
+    - myMethodName()
+  - Enums are in upper camel case
+    - MyEnumName
+  - Code blocks with curly braces have the first brace inline:
+    - void myMethodName {
+    -   //Add code
+    - }
+  - Don't use "using namespace std" declarations, use "std::string" in front of the variable type instead
+
+The above conventions I've used are based from Google's guide for C++:
 [http://google-styleguide.googlecode.com/svn/trunk/cppguide.html#General_Naming_Rules]
 
 ## Guidelines for commits
