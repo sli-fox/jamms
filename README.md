@@ -60,17 +60,17 @@ SFML is the graphical library we will be using for this project. It's a dependen
   - Copy all .dll files FROM SFML-2.1/bin into jamms/Debug
   - Make sure you're only adding .dll files
 
-5. Now, your SFML should be ready! I've included a SFMLTest.txt file with code that should render a green circle in your solution if SFML is properly installed. To test, you can copy the code in SFMLTest.txt into your jamms.cpp file and run the main function. If a green circle appears, then SFML works! :)
+5. Now, your SFML should be ready! I've included a SFMLTest.txt file with code that should render a green circle in AN EMPTY SOLUTION if SFML is properly installed. To test, you can copy the code in SFMLTest.txt into your main cpp file and run the main function. If a green circle appears, then SFML works! :) Alternatively, you can just run the exisiting jamms project to test.
 
 ## Adding jamms headers path
 To simplify adding headers to the project, you must add (<jamms-folder-path>/include) to C/C++ » General » Additional Include Directories in your project properties. 
   - For example, mine is "C:\Users\Steph\Projects\COMP345\jamms\jamms\jamms\include"
   - Then, in the project, create header files ONLY in the that same include folder
-    - You'll be able to include header files simply by using #include <MyHeaderFile.h> without worrying about paths. 
+    - You'll be able to include header files simply by using #include \<MyHeaderFile.h\> without worrying about paths. 
 
 
 ##The TextureManager class
-So, I created a singleton class called TextureManager that makes handles texture loading efficiently. Why is it useful? The class holds a single instance (hence the singleton class) of a map where all previously loaded texture go. Whenever you create a sprite and you give it a path to a texture image, the TextureManager class checks it against the map of textures. If the texture has been previously loaded, the loadTexture function of the class returns a reference to the loaded texture. If the texture is new, it loads the texture, saves the texture reference in the map, and returns you the newly loaded texture reference. Note all textures are implemented in the heap. 
+So, I created a singleton class called TextureManager that makes handles texture loading efficiently. Why is it useful? The class holds a single instance (hence the singleton class) of a map where all previously loaded textures go. Whenever you create a sprite and you give it a path to a texture image, the TextureManager class checks it against the map of textures. If the texture has been previously loaded, the loadTexture function of the class returns a reference to the loaded texture. If the texture is new, it loads the texture, saves the texture reference in the map, and returns you the newly loaded texture reference. Note all textures are implemented in the heap. 
 
 How to create a sprite using the TextureManager class:
 - TextureManager& t_manager = TextureManager::getInstance();  //Get an instance of the TextureManager object
