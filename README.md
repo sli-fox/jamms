@@ -35,8 +35,8 @@ The above conventions I've used are based from Google's guide for C++:
 
 ## Guidelines for commits
 - Only add and commit files that you have actually changed code in AND the .vcxproj file (if it has changed)
-  - The .vcxproj file is the actual project file so it should be checked it.
-  - If you've changed the .vcxproj.filters file, we need to talk as a team if you guys want to check that file in.The .vcxproj.filter files provides the folder structure you see in your build. IMO, I think all the devs should be using the same folder structure to lesson confusion, but that means each dev needs to NOT make unecessary changes to the file structure in jamms.
+  - The .vcxproj file is the actual project file so it should be checked in (committed and pushed to the repo).
+  - If you've changed the .vcxproj.filters file, we need to talk as a team if you guys want to check that file in.The .vcxproj.filter files provides the folder structure you see in your solution. IMO, I think all the devs should be using the same folder structure to be in sync, but that means each dev needs to NOT make unecessary changes to the file structure in jamms. We may want to NOT check this file in and work off our own file structures (if people want drastically different solution views. TBD.
 - .gitignore will prevent untracked files from being added (without an add -f) to the set of files tracked by git, however git will continue to track any files that are already being tracked. So you will see a lot of files like .suo and .sdf files in your git status. Ignore them! Only check in code (cpp and h files)!
 - If you add files that you're not supposed to, use "git reset" to revert back to before you added the wrong files to your staging area. 
 - Guide on git commands: [http://gitref.org/basic/]
