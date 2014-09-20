@@ -16,9 +16,6 @@
     <Filter Include="Source Files\views">
       <UniqueIdentifier>{2d8899d7-131c-4c25-9b05-78568e949c20}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\helpers">
-      <UniqueIdentifier>{e41abed1-d45a-41ab-982d-5c77054410e9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\managers">
       <UniqueIdentifier>{aeb1b895-9f85-499e-b3c6-d83e67e6c01d}</UniqueIdentifier>
     </Filter>
