@@ -24,32 +24,29 @@ bool Game::isExiting() {
 }
 
 void Game::gameLoop() {
-  sf::Event current_event;
-  while(_main_window.pollEvent(current_event)) {
-    switch(_game_state) {
-      case Game::ShowingMenu: {
-        showMenu();
-        break;
-      }
-      case Game::ShowingSplash: {
-        showSplashScreen();
-        break;
-      }
-      case Game::Playing: {
-        sf::Event current_event;
-        while(_main_window.pollEvent(current_event)) {      
-          _main_window.clear(sf::Color(0, 0, 0));
-          _main_window.display();
-
-          if(current_event.type == sf::Event::Closed) {
-            _game_state = Game::Exiting;
-          }
-
-          if(current_event.type == sf::Event::KeyPressed) {
-            if(current_event.key.code == sf::Keyboard::Key::Escape) showMenu(); }
-        }
+  switch(_game_state) {
+    case Game::ShowingMenu: {
+      showMenu();
       break;
+    }
+    case Game::ShowingSplash: {
+      showSplashScreen();
+      break;
+    }
+    case Game::Playing: {
+      sf::Event current_event;
+      while(_main_window.pollEvent(current_event)) {      
+        _main_window.clear(sf::Color(0, 0, 0));
+        _main_window.display();
+
+        if(current_event.type == sf::Event::Closed) {
+          _game_state = Game::Exiting;
+        }
+
+        if(current_event.type == sf::Event::KeyPressed) {
+          if(current_event.key.code == sf::Keyboard::Key::Escape) showMenu(); }
       }
+    break;
     }
   }
 }
