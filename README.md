@@ -34,7 +34,9 @@ The above conventions I've used are based from Google's guide for C++:
 [http://google-styleguide.googlecode.com/svn/trunk/cppguide.html#General_Naming_Rules]
 
 ## Guidelines for commits
-- Only add and commit files that you have actually changed code in.
+- Only add and commit files that you have actually changed code in AND the .vcxproj file (if it has changed)
+  - The .vcxproj file is the actual project file so it should be checked in (committed and pushed to the repo).
+  - If you've changed the .vcxproj.filters file, we need to talk as a team if you guys want to check that file in.The .vcxproj.filter files provides the folder structure you see in your solution. IMO, I think all the devs should be using the same folder structure to be in sync, but that means each dev needs to NOT make unecessary changes to the file structure in jamms. We may want to NOT check this file in and work off our own file structures (if people want drastically different solution views. TBD.
 - .gitignore will prevent untracked files from being added (without an add -f) to the set of files tracked by git, however git will continue to track any files that are already being tracked. So you will see a lot of files like .suo and .sdf files in your git status. Ignore them! Only check in code (cpp and h files)!
 - If you add files that you're not supposed to, use "git reset" to revert back to before you added the wrong files to your staging area. 
 - Guide on git commands: [http://gitref.org/basic/]
@@ -60,17 +62,17 @@ SFML is the graphical library we will be using for this project. It's a dependen
   - Copy all .dll files FROM SFML-2.1/bin into jamms/Debug
   - Make sure you're only adding .dll files
 
-5. Now, your SFML should be ready! I've included a SFMLTest.txt file with code that should render a green circle in your solution if SFML is properly installed. To test, you can copy the code in SFMLTest.txt into your jamms.cpp file and run the main function. If a green circle appears, then SFML works! :)
+5. Now, your SFML should be ready! I've included a SFMLTest.txt file with code that should render a green circle in AN EMPTY SOLUTION if SFML is properly installed. To test, you can copy the code in SFMLTest.txt into your main cpp file and run the main function. If a green circle appears, then SFML works! :) Alternatively, you can just run the exisiting jamms project to test.
 
 ## Adding jamms headers path
 To simplify adding headers to the project, you must add (<jamms-folder-path>/include) to C/C++ » General » Additional Include Directories in your project properties. 
   - For example, mine is "C:\Users\Steph\Projects\COMP345\jamms\jamms\jamms\include"
   - Then, in the project, create header files ONLY in the that same include folder
-    - You'll be able to include header files simply by using #include <MyHeaderFile.h> without worrying about paths. 
+    - You'll be able to include header files simply by using #include \<MyHeaderFile.h\> without worrying about paths. 
 
 
 ##The TextureManager class
-So, I created a singleton class called TextureManager that makes handles texture loading efficiently. Why is it useful? The class holds a single instance (hence the singleton class) of a map where all previously loaded texture go. Whenever you create a sprite and you give it a path to a texture image, the TextureManager class checks it against the map of textures. If the texture has been previously loaded, the loadTexture function of the class returns a reference to the loaded texture. If the texture is new, it loads the texture, saves the texture reference in the map, and returns you the newly loaded texture reference. Note all textures are implemented in the heap. 
+So, I created a singleton class called TextureManager that makes handles texture loading efficiently. Why is it useful? The class holds a single instance (hence the singleton class) of a map where all previously loaded textures go. Whenever you create a sprite and you give it a path to a texture image, the TextureManager class checks it against the map of textures. If the texture has been previously loaded, the loadTexture function of the class returns a reference to the loaded texture. If the texture is new, it loads the texture, saves the texture reference in the map, and returns you the newly loaded texture reference. Note all textures are implemented in the heap. 
 
 How to create a sprite using the TextureManager class:
 - TextureManager& t_manager = TextureManager::getInstance();  //Get an instance of the TextureManager object
