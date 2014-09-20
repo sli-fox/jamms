@@ -5,5 +5,5 @@
 
 class SplashScreen {
   public:
-    void Show(sf::RenderWindow& window);
+    void show(sf::RenderWindow& window);
 };

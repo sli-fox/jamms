@@ -39,11 +39,9 @@
     <ClInclude Include="include\TextureManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Resources\Images\SplashScreen.png">
-      <Filter>Resource Files</Filter>
-    </Image>
+    <ClInclude Include="include\Menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game.cpp">
@@ -61,5 +59,13 @@
     <ClCompile Include="src\managers\TextureManager.cpp">
       <Filter>Source Files\managers</Filter>
     </ClCompile>
+    <ClCompile Include="include\Menu.cpp">
+      <Filter>Source Files\views</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Images\SplashScreen.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -84,6 +84,7 @@
   <ItemGroup>
     <ClInclude Include="include\Game.h" />
     <ClInclude Include="include\MainMenu.h" />
+    <ClInclude Include="include\Menu.h" />
     <ClInclude Include="include\SplashScreen.h" />
     <ClInclude Include="include\TextureManager.h" />
   </ItemGroup>
@@ -91,6 +92,7 @@
     <Image Include="Resources\Images\SplashScreen.png" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="include\Menu.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\jamms.cpp" />
     <ClCompile Include="src\managers\TextureManager.cpp" />

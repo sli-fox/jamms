@@ -1,6 +1,6 @@
 #include <SplashScreen.h>
 
-void SplashScreen::Show(sf::RenderWindow& render_window) {
+void SplashScreen::show(sf::RenderWindow& render_window) {
   TextureManager& t_manager = TextureManager::getInstance();
   sf::Sprite splash_screen_sprite(t_manager.loadTexture("resources/images/SplashScreen.png"));
 

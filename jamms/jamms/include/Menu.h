@@ -10,14 +10,14 @@ class Menu {
 
     struct MenuItem {
       public:
-        sf::Rect<int> rect;
+        sf::IntRect rect;
         MenuAction action;
     };
 
-    virtual MenuAction show(sf::RenderWindow& window) =0;
+    virtual MenuAction show(sf::RenderWindow& window) = 0;
 
   protected:
-    MenuAction getMenuResponse(sf::RenderWindow& window);
+    virtual MenuAction getMenuResponse(sf::RenderWindow& window) = 0;
     MenuAction handleClick(int x, int y);
     std::list<MenuItem> _menu_items;
 };
