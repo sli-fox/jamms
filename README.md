@@ -17,7 +17,7 @@ If in doubt, we should all use the same naming and style conventions. I chose th
     - Private: _my_private_var
   - Class and struct names are in upper camel case
     - MyClassName
-  - Method names are in lover camel case
+  - Method names are in lower camel case
     - myMethodName()
   - Enums are in upper camel case
     - MyEnumName
