@@ -31,12 +31,12 @@ MainMenu::MenuAction MainMenu::show(sf::RenderWindow& window) {
 Menu::MenuAction MainMenu::getMenuResponse(sf::RenderWindow& window) {
   sf::Event menu_event;
 
-  while(true) {
-    while(window.pollEvent(menu_event)) {
+  while (true) {
+    while (window.pollEvent(menu_event)) {
       if(menu_event.type == sf::Event::MouseButtonPressed) {
         return handleClick(menu_event.mouseButton.x, menu_event.mouseButton.y);
       }
-      if(menu_event.type == sf::Event::Closed) {
+      if (menu_event.type == sf::Event::Closed) {
         return Exit;
       }
     }
