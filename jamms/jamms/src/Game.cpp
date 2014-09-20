@@ -1,7 +1,7 @@
 #include <Game.h>
 
 void Game::Start(void) {
-  if(_game_state != Unintialized)
+  if (_game_state != Unintialized)
     return;   //Doesn't throw error because program exits
 
   //Game runs at fixed resolution of 1024x768
@@ -9,7 +9,7 @@ void Game::Start(void) {
   
   _game_state = Game::ShowingSplash;
 
-  while(!isExiting()) {
+  while (!isExiting()) {
     gameLoop();
   }
 
@@ -17,14 +17,14 @@ void Game::Start(void) {
 }
 
 bool Game::isExiting() {
-  if(_game_state == Game::Exiting)
+  if (_game_state == Game::Exiting)
     return true;
   else
     return false;
 }
 
 void Game::gameLoop() {
-  switch(_game_state) {
+  switch (_game_state) {
     case Game::ShowingMenu: {
       showMenu();
       break;
@@ -35,17 +35,19 @@ void Game::gameLoop() {
     }
     case Game::Playing: {
       sf::Event current_event;
-      while(_main_window.pollEvent(current_event)) {      
+      while (_main_window.pollEvent(current_event)) {      
         _main_window.clear(sf::Color(0, 0, 0));
         _main_window.display();
 
-        if(current_event.type == sf::Event::Closed) {
+        if (current_event.type == sf::Event::Closed) {
           _game_state = Game::Exiting;
         }
 
-        if(current_event.type == sf::Event::KeyPressed) {
-          if(current_event.key.code == sf::Keyboard::Key::Escape) showMenu(); }
-      }
+        if (current_event.type == sf::Event::KeyPressed) {
+          if (current_event.key.code == sf::Keyboard::Key::Escape) 
+            showMenu(); 
+        }
+       }
     break;
     }
   }
@@ -61,7 +63,7 @@ void Game::showMenu() {
   MainMenu main_menu;
   MainMenu::MenuAction action = main_menu.show(_main_window);
 
-  switch(action) {
+  switch (action) {
     case MainMenu::Exit:
       _game_state = Game::Exiting;
       break;
