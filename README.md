@@ -4,10 +4,13 @@ jamms
 **Table of Contents** 
 
 - [jamms](#user-content-jamms)
+  - General info
 	- [Consistent naming and style conventions](#user-content-consistent-naming-and-style-conventions)
 	- [Guidelines for commits](#user-content-guidelines-for-commits)
+  - Project configuration (what you need to do to get the project to compile)
 	- [Installing SFML](#user-content-installing-sfml)
 	- [Adding jamms headers path](#user-content-adding-jamms-headers-path)
+  - About the code
 	- [The TextureManager class](#user-content-the-texturemanager-class)
 
 ## Consistent naming and style conventions
@@ -17,7 +20,7 @@ If in doubt, we should all use the same naming and style conventions. I chose th
     - Private: _my_private_var
   - Class and struct names are in upper camel case
     - MyClassName
-  - Method names are in lover camel case
+  - Method names are in lower camel case
     - myMethodName()
   - Enums are in upper camel case
     - MyEnumName
