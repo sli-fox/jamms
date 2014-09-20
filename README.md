@@ -4,10 +4,13 @@ jamms
 **Table of Contents** 
 
 - [jamms](#user-content-jamms)
+  - General info
 	- [Consistent naming and style conventions](#user-content-consistent-naming-and-style-conventions)
 	- [Guidelines for commits](#user-content-guidelines-for-commits)
+  - Project configuration (what you need to do to get the project to compile)
 	- [Installing SFML](#user-content-installing-sfml)
 	- [Adding jamms headers path](#user-content-adding-jamms-headers-path)
+  - About the code
 	- [The TextureManager class](#user-content-the-texturemanager-class)
 
 ## Consistent naming and style conventions
