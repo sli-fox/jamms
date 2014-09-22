@@ -21,5 +21,5 @@ class GameObjectManager {
       void operator()(const std::pair<std::string, GameObject*>& p) const {
         delete p.second;
       }
-    }
+    };
 };

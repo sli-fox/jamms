@@ -83,20 +83,24 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Game.h" />
+    <ClInclude Include="include\GameObject.h" />
+    <ClInclude Include="include\GameObjectManager.h" />
     <ClInclude Include="include\MainMenu.h" />
     <ClInclude Include="include\Menu.h" />
+    <ClInclude Include="include\Pathogen.h" />
     <ClInclude Include="include\SplashScreen.h" />
     <ClInclude Include="include\TextureManager.h" />
-    <ClInclude Include="src\views\GameObject.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Images\SplashScreen.png" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="include\Pathogen.cpp" />
     <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\GameObject.cpp" />
     <ClCompile Include="src\jamms.cpp" />
+    <ClCompile Include="src\managers\GameObjectManager.cpp" />
     <ClCompile Include="src\managers\TextureManager.cpp" />
-    <ClCompile Include="src\views\GameObject.cpp" />
     <ClCompile Include="src\views\MainMenu.cpp" />
     <ClCompile Include="src\views\Menu.cpp" />
     <ClCompile Include="src\views\SplashScreen.cpp" />

@@ -1,8 +1,10 @@
 #pragma once
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+#include <vector>
 #include <SplashScreen.h>
 #include <MainMenu.h>
+#include <Pathogen.h>
 #include <GameObjectManager.h>
 
 class Game {
