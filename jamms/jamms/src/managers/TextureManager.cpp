@@ -1,9 +1,9 @@
 #include <TextureManager.h>
 
 const sf::Texture& TextureManager::loadTexture(const std::string& file_name) {
-  std::map<std::string, sf::Texture*>::const_iterator texture_search_iterator = m_texture_map.find(file_name);
-  
-  if (texture_search_iterator != m_texture_map.end())
+  std::map<std::string, sf::Texture*>::const_iterator texture_search_iterator = _m_texture_map.find(file_name);
+
+  if (texture_search_iterator != _m_texture_map.end())
     return *texture_search_iterator->second;
   
   sf::Texture* texture = new sf::Texture;  
@@ -11,20 +11,18 @@ const sf::Texture& TextureManager::loadTexture(const std::string& file_name) {
     std::cout << "Error: unable to load image " + file_name;
   }
 
-  m_texture_map.insert(std::map<std::string, sf::Texture*>::value_type (file_name, texture));
-  return *m_texture_map[file_name];
+  _m_texture_map.insert(std::map<std::string, sf::Texture*>::value_type (file_name, texture));
+  return *_m_texture_map[file_name];
 }
 
 bool TextureManager::unloadTexture(const std::string& file_name) {
-  std::map<std::string, sf::Texture*>::const_iterator texture_search_iterator = m_texture_map.find(file_name);
+  std::map<std::string, sf::Texture*>::const_iterator texture_search_iterator = _m_texture_map.find(file_name);
 
-  if (texture_search_iterator != m_texture_map.end()) {
+  if (texture_search_iterator != _m_texture_map.end()) {
     delete texture_search_iterator->second;
-    m_texture_map.erase(texture_search_iterator);
+    _m_texture_map.erase(texture_search_iterator);
     return true;
   } else {
     return false;
   }
 }
-
-std::map<std::string, sf::Texture*> m_texture_map;

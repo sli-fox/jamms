@@ -87,16 +87,18 @@
     <ClInclude Include="include\Menu.h" />
     <ClInclude Include="include\SplashScreen.h" />
     <ClInclude Include="include\TextureManager.h" />
+    <ClInclude Include="src\views\GameObject.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Images\SplashScreen.png" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="include\Menu.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\jamms.cpp" />
     <ClCompile Include="src\managers\TextureManager.cpp" />
+    <ClCompile Include="src\views\GameObject.cpp" />
     <ClCompile Include="src\views\MainMenu.cpp" />
+    <ClCompile Include="src\views\Menu.cpp" />
     <ClCompile Include="src\views\SplashScreen.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -21,5 +21,5 @@ class TextureManager {
     TextureManager(TextureManager const&);
     void operator=(TextureManager const&);
 
-    std::map<std::string, sf::Texture*> m_texture_map;
+    std::map<std::string, sf::Texture*> _m_texture_map;
 };
