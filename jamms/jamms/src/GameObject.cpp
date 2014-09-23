@@ -4,7 +4,7 @@ GameObject::GameObject() : _isSpriteCreated(false) {}
 
 void GameObject::load(std::string file_name) {
   TextureManager& t_manager = TextureManager::getInstance();
-  sf::Sprite _sprite(t_manager.loadTexture(file_name));
+  _sprite.setTexture(t_manager.loadTexture(file_name));
   _isSpriteCreated = true;
 }
 

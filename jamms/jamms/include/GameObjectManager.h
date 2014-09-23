@@ -7,6 +7,7 @@ class GameObjectManager {
     ~GameObjectManager();
 
     void add(std::string name, GameObject* game_object);
+    //addVectorContents function
     void remove(std::string name);
     int getObjectCount() const;
     GameObject* getGameObject(std::string name) const;

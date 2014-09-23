@@ -3,9 +3,15 @@
 
 class Pathogen: public GameObject {
   public:
-    Pathogen(std::string name);
+    enum PathogenType { CommonCold };
+
+    Pathogen(PathogenType type, std::string name);
     ~Pathogen() {};
+
+    std::string getName() const;
+    Pathogen::PathogenType getType() const;
 
   private:
     std::string name;
+    PathogenType type;
 };
