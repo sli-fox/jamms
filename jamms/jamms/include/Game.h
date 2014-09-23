@@ -1,8 +1,11 @@
 #pragma once
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+#include <vector>
 #include <SplashScreen.h>
 #include <MainMenu.h>
+#include <Pathogen.h>
+#include <GameObjectManager.h>
 
 class Game {
 //Overkill to implement this class a Singleton,
@@ -23,4 +26,6 @@ class Game {
     
     static GameState _game_state;
     static sf::RenderWindow _main_window;
+
+    static GameObjectManager _game_object_manager;
 };

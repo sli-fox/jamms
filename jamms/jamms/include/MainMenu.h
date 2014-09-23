@@ -6,7 +6,7 @@
 #include <TextureManager.h>
 
 class MainMenu: public Menu {
-public:
+  public:
     Menu::MenuAction show(sf::RenderWindow& window);
     Menu::MenuAction Menu::getMenuResponse(sf::RenderWindow& window);
 };

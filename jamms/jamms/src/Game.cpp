@@ -7,6 +7,18 @@ void Game::Start(void) {
   //Game runs at fixed resolution of 1024x768
   _main_window.create(sf::VideoMode(1024, 768, 32), "Cell Defense!");
   
+  //Code to create pathogen sprites on screen
+  //Users GameObjectManager
+  for (int n=1; n<=10; ++n) {
+    std::string pathogen_name = "common_cold" + std::to_string(n);
+    Pathogen* pathogen = new Pathogen(Pathogen::PathogenType::CommonCold, pathogen_name);
+    
+    pathogen->load("resources/images/CommonCold.png");
+    pathogen->setPosition(500, (300 + 40*n));
+
+    _game_object_manager.add(pathogen_name, pathogen);
+  }
+
   _game_state = Game::ShowingSplash;
 
   while (!isExiting()) {
@@ -37,6 +49,9 @@ void Game::gameLoop() {
       sf::Event current_event;
       while (_main_window.pollEvent(current_event)) {      
         _main_window.clear(sf::Color(0, 0, 0));
+        
+        _game_object_manager.drawAll(_main_window);
+
         _main_window.display();
 
         if (current_event.type == sf::Event::Closed) {
@@ -75,3 +90,4 @@ void Game::showMenu() {
 
 Game::GameState Game::_game_state = Unintialized;
 sf::RenderWindow Game::_main_window;
+GameObjectManager Game::_game_object_manager;
