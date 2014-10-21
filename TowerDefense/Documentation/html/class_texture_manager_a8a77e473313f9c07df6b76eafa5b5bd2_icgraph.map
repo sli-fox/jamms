@@ -1,0 +1,3 @@
+<map id="TextureManager::unloadTexture" name="TextureManager::unloadTexture">
+<area shape="rect" id="node2" href="$class_texture_manager_test.html#adcea36cb8961f391b772da37416a3c76" title="Test for unloadTexture() to see if a texture was correctly removed to the TextureManager map..." alt="" coords="257,5,397,47"/>
+</map>

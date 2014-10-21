@@ -1,0 +1,113 @@
+\hypertarget{class_game_object_manager}{\section{Game\+Object\+Manager Class Reference}
+\label{class_game_object_manager}\index{Game\+Object\+Manager@{Game\+Object\+Manager}}
+}
+
+
+{\ttfamily \#include $<$Game\+Object\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Game\+Object\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{class_game_object_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_game_object_manager_1_1_game_object_deallocator}{Game\+Object\+Deallocator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_game_object_manager_a58cbaec4182cda7c6d48eef7b14885e8}{Game\+Object\+Manager} ()
+\item 
+\hyperlink{class_game_object_manager_a91d57baff47ce5090e5e4590f531051d}{$\sim$\+Game\+Object\+Manager} ()
+\item 
+void \hyperlink{class_game_object_manager_abd5bf89a1a767486dbcb0ef1a600d0b2}{add} (std\+::string name, \hyperlink{class_game_object}{Game\+Object} $\ast$game\+\_\+object)
+\item 
+void \hyperlink{class_game_object_manager_a0469ca3148149a6cfa0214a0f4f4b102}{remove} (std\+::string name)
+\item 
+int \hyperlink{class_game_object_manager_aea3ab827dd015aae7a8e8d53fdd6d2b5}{get\+Object\+Count} () const 
+\item 
+\hyperlink{class_game_object}{Game\+Object} $\ast$ \hyperlink{class_game_object_manager_a9711a8874ef5581db4832fc28dc0e87c}{get\+Game\+Object} (std\+::string name) const 
+\item 
+void \hyperlink{class_game_object_manager_a7ab22ae52c51eba926aa461028c00fb3}{draw\+All} (sf\+::\+Render\+Window \&render\+\_\+window)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, \\*
+\hyperlink{class_game_object}{Game\+Object} $\ast$ $>$ \hyperlink{class_game_object_manager_a8e5f1dadc41529ca112ff4aa23d92048}{\+\_\+m\+\_\+game\+\_\+objects}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_game_object_manager_a58cbaec4182cda7c6d48eef7b14885e8}{\index{Game\+Object\+Manager@{Game\+Object\+Manager}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\index{Game\+Object\+Manager@{Game\+Object\+Manager}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection[{Game\+Object\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Object\+Manager\+::\+Game\+Object\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_game_object_manager_a58cbaec4182cda7c6d48eef7b14885e8}
+\hypertarget{class_game_object_manager_a91d57baff47ce5090e5e4590f531051d}{\index{Game\+Object\+Manager@{Game\+Object\+Manager}!````~Game\+Object\+Manager@{$\sim$\+Game\+Object\+Manager}}
+\index{````~Game\+Object\+Manager@{$\sim$\+Game\+Object\+Manager}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection[{$\sim$\+Game\+Object\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Object\+Manager\+::$\sim$\+Game\+Object\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_object_manager_a91d57baff47ce5090e5e4590f531051d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_object_manager_abd5bf89a1a767486dbcb0ef1a600d0b2}{\index{Game\+Object\+Manager@{Game\+Object\+Manager}!add@{add}}
+\index{add@{add}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Object\+Manager\+::add (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name, }
+\item[{{\bf Game\+Object} $\ast$}]{game\+\_\+object}
+\end{DoxyParamCaption}
+)}}\label{class_game_object_manager_abd5bf89a1a767486dbcb0ef1a600d0b2}
+\hypertarget{class_game_object_manager_a7ab22ae52c51eba926aa461028c00fb3}{\index{Game\+Object\+Manager@{Game\+Object\+Manager}!draw\+All@{draw\+All}}
+\index{draw\+All@{draw\+All}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection[{draw\+All}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Object\+Manager\+::draw\+All (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{render\+\_\+window}
+\end{DoxyParamCaption}
+)}}\label{class_game_object_manager_a7ab22ae52c51eba926aa461028c00fb3}
+\hypertarget{class_game_object_manager_a9711a8874ef5581db4832fc28dc0e87c}{\index{Game\+Object\+Manager@{Game\+Object\+Manager}!get\+Game\+Object@{get\+Game\+Object}}
+\index{get\+Game\+Object@{get\+Game\+Object}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection[{get\+Game\+Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Object} $\ast$ Game\+Object\+Manager\+::get\+Game\+Object (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+) const}}\label{class_game_object_manager_a9711a8874ef5581db4832fc28dc0e87c}
+\hypertarget{class_game_object_manager_aea3ab827dd015aae7a8e8d53fdd6d2b5}{\index{Game\+Object\+Manager@{Game\+Object\+Manager}!get\+Object\+Count@{get\+Object\+Count}}
+\index{get\+Object\+Count@{get\+Object\+Count}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection[{get\+Object\+Count}]{\setlength{\rightskip}{0pt plus 5cm}int Game\+Object\+Manager\+::get\+Object\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_game_object_manager_aea3ab827dd015aae7a8e8d53fdd6d2b5}
+\hypertarget{class_game_object_manager_a0469ca3148149a6cfa0214a0f4f4b102}{\index{Game\+Object\+Manager@{Game\+Object\+Manager}!remove@{remove}}
+\index{remove@{remove}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Object\+Manager\+::remove (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_game_object_manager_a0469ca3148149a6cfa0214a0f4f4b102}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_game_object_manager_a8e5f1dadc41529ca112ff4aa23d92048}{\index{Game\+Object\+Manager@{Game\+Object\+Manager}!\+\_\+m\+\_\+game\+\_\+objects@{\+\_\+m\+\_\+game\+\_\+objects}}
+\index{\+\_\+m\+\_\+game\+\_\+objects@{\+\_\+m\+\_\+game\+\_\+objects}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection[{\+\_\+m\+\_\+game\+\_\+objects}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string, {\bf Game\+Object}$\ast$$>$ Game\+Object\+Manager\+::\+\_\+m\+\_\+game\+\_\+objects\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_object_manager_a8e5f1dadc41529ca112ff4aa23d92048}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/managers/\hyperlink{_game_object_manager_8h}{Game\+Object\+Manager.\+h}\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/src/managers/\hyperlink{_game_object_manager_8cpp}{Game\+Object\+Manager.\+cpp}\end{DoxyCompactItemize}

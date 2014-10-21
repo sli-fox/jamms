@@ -1,0 +1,171 @@
+\hypertarget{class_game_state_play}{\section{Game\+State\+Play Class Reference}
+\label{class_game_state_play}\index{Game\+State\+Play@{Game\+State\+Play}}
+}
+
+
+\hyperlink{class_game}{Game} state that represents the gameplay.  
+
+
+
+
+{\ttfamily \#include $<$Game\+State\+Play.\+h$>$}
+
+
+
+Inheritance diagram for Game\+State\+Play\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{class_game_state_play__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+State\+Play\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_game_state_play__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_game_state_play_a705c09eac3d2b27757e5b4cc048b22d5}{Game\+State\+Play} (\hyperlink{class_game}{Game} $\ast$\hyperlink{class_game_state_a355a79415b9ef63c2aec1448a99f6e71}{game})
+\begin{DoxyCompactList}\small\item\em Constructor that takes in a pointer to the \hyperlink{class_game}{Game} that created them. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_state_play_a63a3ba0c891afd8ec126806bab4f315a}{draw} (const float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Draws game to the render window. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_state_play_a2faf041a447ddf86726658455560abb8}{update} (const float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Updates game changes. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_state_play_ae9acc781e1fdbc931784ba3892c469ce}{handle\+Input} ()
+\begin{DoxyCompactList}\small\item\em Handles player input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+View \hyperlink{class_game_state_play_a9513cfeac2178d83e23ba6f9291fba8c}{\+\_\+game\+View}
+\begin{DoxyCompactList}\small\item\em Camera view for the gameplay displayed to the window. \end{DoxyCompactList}\item 
+sf\+::\+View \hyperlink{class_game_state_play_affee804e287fd1968fe8c5b0a303b05d}{\+\_\+gui\+View}
+\begin{DoxyCompactList}\small\item\em Camera view for the H\+U\+D displayed to the window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_game_object_manager}{Game\+Object\+Manager} \hyperlink{class_game_state_play_a3f05ff560a8dbeb5a1922e23c6bbff72}{\+\_\+game\+\_\+object\+\_\+manager}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_game}{Game} state that represents the gameplay. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_game_state_play_a705c09eac3d2b27757e5b4cc048b22d5}{\index{Game\+State\+Play@{Game\+State\+Play}!Game\+State\+Play@{Game\+State\+Play}}
+\index{Game\+State\+Play@{Game\+State\+Play}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{Game\+State\+Play}]{\setlength{\rightskip}{0pt plus 5cm}Game\+State\+Play\+::\+Game\+State\+Play (
+\begin{DoxyParamCaption}
+\item[{{\bf Game} $\ast$}]{game}
+\end{DoxyParamCaption}
+)}}\label{class_game_state_play_a705c09eac3d2b27757e5b4cc048b22d5}
+
+
+Constructor that takes in a pointer to the \hyperlink{class_game}{Game} that created them. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Pointer to game.\\
+\hline
+\end{DoxyParams}
+The constructor sets the view to the size of the window and centers the view on the center of the window. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_state_play_a63a3ba0c891afd8ec126806bab4f315a}{\index{Game\+State\+Play@{Game\+State\+Play}!draw@{draw}}
+\index{draw@{draw}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Play\+::draw (
+\begin{DoxyParamCaption}
+\item[{const float}]{delta\+\_\+time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_state_play_a63a3ba0c891afd8ec126806bab4f315a}
+
+
+Draws game to the render window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & Elapsed time during the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void.
+\end{DoxyReturn}
+This function sets the view to be drawn to the window, and draws everything related to state. 
+
+Implements \hyperlink{class_game_state_a55a6a68aabdf7054ea0e6ddbf24902df}{Game\+State}.
+
+\hypertarget{class_game_state_play_ae9acc781e1fdbc931784ba3892c469ce}{\index{Game\+State\+Play@{Game\+State\+Play}!handle\+Input@{handle\+Input}}
+\index{handle\+Input@{handle\+Input}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{handle\+Input}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Play\+::handle\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_state_play_ae9acc781e1fdbc931784ba3892c469ce}
+
+
+Handles player input. 
+
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+Close the window 
+
+Implements \hyperlink{class_game_state_a970b55edd5a1da31ea0f7113e2c1f85a}{Game\+State}.
+
+\hypertarget{class_game_state_play_a2faf041a447ddf86726658455560abb8}{\index{Game\+State\+Play@{Game\+State\+Play}!update@{update}}
+\index{update@{update}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Play\+::update (
+\begin{DoxyParamCaption}
+\item[{const float}]{delta\+\_\+time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_state_play_a2faf041a447ddf86726658455560abb8}
+
+
+Updates game changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & Elapsed time during the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_game_state_ad331d02d3989271b8cbc88fcb1448959}{Game\+State}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_game_state_play_a3f05ff560a8dbeb5a1922e23c6bbff72}{\index{Game\+State\+Play@{Game\+State\+Play}!\+\_\+game\+\_\+object\+\_\+manager@{\+\_\+game\+\_\+object\+\_\+manager}}
+\index{\+\_\+game\+\_\+object\+\_\+manager@{\+\_\+game\+\_\+object\+\_\+manager}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{\+\_\+game\+\_\+object\+\_\+manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Object\+Manager} Game\+State\+Play\+::\+\_\+game\+\_\+object\+\_\+manager\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_game_state_play_a3f05ff560a8dbeb5a1922e23c6bbff72}
+\hypertarget{class_game_state_play_a9513cfeac2178d83e23ba6f9291fba8c}{\index{Game\+State\+Play@{Game\+State\+Play}!\+\_\+game\+View@{\+\_\+game\+View}}
+\index{\+\_\+game\+View@{\+\_\+game\+View}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{\+\_\+game\+View}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+View Game\+State\+Play\+::\+\_\+game\+View\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_a9513cfeac2178d83e23ba6f9291fba8c}
+
+
+Camera view for the gameplay displayed to the window. 
+
+\hypertarget{class_game_state_play_affee804e287fd1968fe8c5b0a303b05d}{\index{Game\+State\+Play@{Game\+State\+Play}!\+\_\+gui\+View@{\+\_\+gui\+View}}
+\index{\+\_\+gui\+View@{\+\_\+gui\+View}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{\+\_\+gui\+View}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+View Game\+State\+Play\+::\+\_\+gui\+View\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_affee804e287fd1968fe8c5b0a303b05d}
+
+
+Camera view for the H\+U\+D displayed to the window. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/game\+States/\hyperlink{_game_state_play_8h}{Game\+State\+Play.\+h}\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/src/game\+States/\hyperlink{_game_state_play_8cpp}{Game\+State\+Play.\+cpp}\end{DoxyCompactItemize}

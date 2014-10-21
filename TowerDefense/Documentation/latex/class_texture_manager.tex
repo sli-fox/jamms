@@ -1,0 +1,246 @@
+\hypertarget{class_texture_manager}{\section{Texture\+Manager Class Reference}
+\label{class_texture_manager}\index{Texture\+Manager@{Texture\+Manager}}
+}
+
+
+Manages all the textures in the application.  
+
+
+
+
+{\ttfamily \#include $<$Texture\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Texture\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{class_texture_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const sf\+::\+Texture \& \hyperlink{class_texture_manager_aa631660b783d448a29b1096c64fe65e4}{load\+Texture} (const std\+::string \&file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Returns the instance of a texture loaded by the file name. \end{DoxyCompactList}\item 
+bool \hyperlink{class_texture_manager_a8a77e473313f9c07df6b76eafa5b5bd2}{unload\+Texture} (const std\+::string \&file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Removes the instance of a texture given by the file name. \end{DoxyCompactList}\item 
+const bool \hyperlink{class_texture_manager_a8ec1c28bde7e07f64d3e155add36c0df}{is\+Previously\+Loaded} (const std\+::string \&file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Returns true if texture was previously loaded, false otherwise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_texture_manager}{Texture\+Manager} \& \hyperlink{class_texture_manager_a0a6bc63e2f6fa7e1d0aee5b24cfa089a}{get\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Returns the only instance of a \hyperlink{class_texture_manager}{Texture\+Manager} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_texture_manager_ad76abb178b37cedf4514eb0154349935}{Texture\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Privatized constructor for singleton implementation of the class. \end{DoxyCompactList}\item 
+\hyperlink{class_texture_manager_a001d6d74674961db79987e3222682576}{$\sim$\+Texture\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Privatized destructor for singleton implementation of the class. \end{DoxyCompactList}\item 
+\hyperlink{class_texture_manager_a66ddaf848b4dd3f75e3c311af536ebe4}{Texture\+Manager} (\hyperlink{class_texture_manager}{Texture\+Manager} const \&)
+\begin{DoxyCompactList}\small\item\em Overloaded constructor that is not implemented. \end{DoxyCompactList}\item 
+void \hyperlink{class_texture_manager_ac39a48038aa63007dd02f0c53ecc77eb}{operator=} (\hyperlink{class_texture_manager}{Texture\+Manager} const \&)
+\begin{DoxyCompactList}\small\item\em Operator overload that is not implemented. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, \\*
+sf\+::\+Texture $\ast$ $>$ \hyperlink{class_texture_manager_a78bfaa7b400c1229762b49af63913752}{\+\_\+m\+\_\+texture\+\_\+map}
+\begin{DoxyCompactList}\small\item\em Map of textures belonging to the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages all the textures in the application. 
+
+\hyperlink{class_texture_manager}{Texture\+Manager} is a singleton class that holds the sole instance of a map of all the textures in the application. The purpose of this class is to ensure each texture is loaded only once. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_texture_manager_ad76abb178b37cedf4514eb0154349935}{\index{Texture\+Manager@{Texture\+Manager}!Texture\+Manager@{Texture\+Manager}}
+\index{Texture\+Manager@{Texture\+Manager}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{Texture\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Texture\+Manager\+::\+Texture\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_texture_manager_ad76abb178b37cedf4514eb0154349935}
+
+
+Privatized constructor for singleton implementation of the class. 
+
+\hypertarget{class_texture_manager_a001d6d74674961db79987e3222682576}{\index{Texture\+Manager@{Texture\+Manager}!````~Texture\+Manager@{$\sim$\+Texture\+Manager}}
+\index{````~Texture\+Manager@{$\sim$\+Texture\+Manager}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{$\sim$\+Texture\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Texture\+Manager\+::$\sim$\+Texture\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_texture_manager_a001d6d74674961db79987e3222682576}
+
+
+Privatized destructor for singleton implementation of the class. 
+
+\hypertarget{class_texture_manager_a66ddaf848b4dd3f75e3c311af536ebe4}{\index{Texture\+Manager@{Texture\+Manager}!Texture\+Manager@{Texture\+Manager}}
+\index{Texture\+Manager@{Texture\+Manager}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{Texture\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Texture\+Manager\+::\+Texture\+Manager (
+\begin{DoxyParamCaption}
+\item[{{\bf Texture\+Manager} const \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_texture_manager_a66ddaf848b4dd3f75e3c311af536ebe4}
+
+
+Overloaded constructor that is not implemented. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_texture_manager_a0a6bc63e2f6fa7e1d0aee5b24cfa089a}{\index{Texture\+Manager@{Texture\+Manager}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{get\+Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Texture\+Manager}\& Texture\+Manager\+::get\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_texture_manager_a0a6bc63e2f6fa7e1d0aee5b24cfa089a}
+
+
+Returns the only instance of a \hyperlink{class_texture_manager}{Texture\+Manager} object. 
+
+\begin{DoxyReturn}{Returns}
+The instance of \hyperlink{class_texture_manager}{Texture\+Manager} object. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_texture_manager_a0a6bc63e2f6fa7e1d0aee5b24cfa089a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_texture_manager_a8ec1c28bde7e07f64d3e155add36c0df}{\index{Texture\+Manager@{Texture\+Manager}!is\+Previously\+Loaded@{is\+Previously\+Loaded}}
+\index{is\+Previously\+Loaded@{is\+Previously\+Loaded}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{is\+Previously\+Loaded}]{\setlength{\rightskip}{0pt plus 5cm}const bool Texture\+Manager\+::is\+Previously\+Loaded (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)}}\label{class_texture_manager_a8ec1c28bde7e07f64d3e155add36c0df}
+
+
+Returns true if texture was previously loaded, false otherwise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & The file name of the texture that is being loaded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean that indicates whether the texture was previously loaded into the \hyperlink{class_texture_manager}{Texture\+Manager} map.
+\end{DoxyReturn}
+\hyperlink{class_texture_manager_a8ec1c28bde7e07f64d3e155add36c0df}{is\+Previously\+Loaded()} looks for the given file name in the map of textures shared across the application. If the file name is found, that means the texture has been previously loaded and the function returns true. If the texture has not previously loaded, it returns false. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_texture_manager_a8ec1c28bde7e07f64d3e155add36c0df_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_texture_manager_aa631660b783d448a29b1096c64fe65e4}{\index{Texture\+Manager@{Texture\+Manager}!load\+Texture@{load\+Texture}}
+\index{load\+Texture@{load\+Texture}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{load\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}const sf\+::\+Texture \& Texture\+Manager\+::load\+Texture (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)}}\label{class_texture_manager_aa631660b783d448a29b1096c64fe65e4}
+
+
+Returns the instance of a texture loaded by the file name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & The file name of the texture that is being loaded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the texture being loaded.
+\end{DoxyReturn}
+\hyperlink{class_texture_manager_aa631660b783d448a29b1096c64fe65e4}{load\+Texture()} looks for the given file name string in the map of textures shared across the application. If the file name is found, that means the texture has been previously loaded and the function returns a reference to the texture. If the file name is not found, the texture is loaded, added to the map of textures and a reference to it is returned. Note\+: Adding 'bool smooth = true' as a parameter enables texture smoothing. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_texture_manager_aa631660b783d448a29b1096c64fe65e4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_texture_manager_ac39a48038aa63007dd02f0c53ecc77eb}{\index{Texture\+Manager@{Texture\+Manager}!operator=@{operator=}}
+\index{operator=@{operator=}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void Texture\+Manager\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Texture\+Manager} const \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_texture_manager_ac39a48038aa63007dd02f0c53ecc77eb}
+
+
+Operator overload that is not implemented. 
+
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\hypertarget{class_texture_manager_a8a77e473313f9c07df6b76eafa5b5bd2}{\index{Texture\+Manager@{Texture\+Manager}!unload\+Texture@{unload\+Texture}}
+\index{unload\+Texture@{unload\+Texture}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{unload\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}bool Texture\+Manager\+::unload\+Texture (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)}}\label{class_texture_manager_a8a77e473313f9c07df6b76eafa5b5bd2}
+
+
+Removes the instance of a texture given by the file name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & The file name of the texture that is being unloaded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean that indicates whether the texture is unloaded.
+\end{DoxyReturn}
+\hyperlink{class_texture_manager_aa631660b783d448a29b1096c64fe65e4}{load\+Texture()} looks for the given file name string in the map of textures shared across the application. If the file name is found, the texture reference is removed from the map and the function returns true. If the file name is not found or can't be removed, the function returns false. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_texture_manager_a8a77e473313f9c07df6b76eafa5b5bd2_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_texture_manager_a78bfaa7b400c1229762b49af63913752}{\index{Texture\+Manager@{Texture\+Manager}!\+\_\+m\+\_\+texture\+\_\+map@{\+\_\+m\+\_\+texture\+\_\+map}}
+\index{\+\_\+m\+\_\+texture\+\_\+map@{\+\_\+m\+\_\+texture\+\_\+map}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{\+\_\+m\+\_\+texture\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string, sf\+::\+Texture$\ast$$>$ Texture\+Manager\+::\+\_\+m\+\_\+texture\+\_\+map\hspace{0.3cm}{\ttfamily [private]}}}\label{class_texture_manager_a78bfaa7b400c1229762b49af63913752}
+
+
+Map of textures belonging to the class. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/managers/\hyperlink{_texture_manager_8h}{Texture\+Manager.\+h}\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/src/managers/\hyperlink{_texture_manager_8cpp}{Texture\+Manager.\+cpp}\end{DoxyCompactItemize}

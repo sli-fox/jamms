@@ -1,0 +1,246 @@
+\hypertarget{class_game_state_main_menu}{\section{Game\+State\+Main\+Menu Class Reference}
+\label{class_game_state_main_menu}\index{Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}}
+}
+
+
+\hyperlink{class_game}{Game} state that represents the game start, including the main game menu.  
+
+
+
+
+{\ttfamily \#include $<$Game\+State\+Main\+Menu.\+h$>$}
+
+
+
+Inheritance diagram for Game\+State\+Main\+Menu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{class_game_state_main_menu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+State\+Main\+Menu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{class_game_state_main_menu__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_game_state_main_menu_a7d7b3f28e70701ec9af22098b4220ec1}{Game\+State\+Main\+Menu} (\hyperlink{class_game}{Game} $\ast$\hyperlink{class_game_state_a355a79415b9ef63c2aec1448a99f6e71}{game})
+\begin{DoxyCompactList}\small\item\em Constructor that takes in a pointer to the \hyperlink{class_game}{Game} that created them. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_state_main_menu_ad34efc1ade7193ce765d00ac60f019ed}{draw} (const float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Draws game to the render window. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_state_main_menu_a15b2abc99f50183569112f7fe1499951}{update} (const float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Updates game changes. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_state_main_menu_a91ca3c60e107d135ab67c5f9e05e8aa6}{handle\+Input} ()
+\begin{DoxyCompactList}\small\item\em Handles player input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_game_state_main_menu_a76d18652314696ffa6369713ef5be3ed}{load\+Game} ()
+\begin{DoxyCompactList}\small\item\em Function that transitions to the \hyperlink{class_game_state_play}{Game\+State\+Play} state. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_state_main_menu_a85d646b336e1bb6372d851f4f654e6f1}{handle\+Selected\+Action} ()
+\begin{DoxyCompactList}\small\item\em Perform the correct action given the user's selection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+View \hyperlink{class_game_state_main_menu_a0c21a143cf8c10490b03da6657a81232}{\+\_\+view}
+\begin{DoxyCompactList}\small\item\em Camera view for the \hyperlink{class_game_state}{Game\+State} displayed to the window. \end{DoxyCompactList}\item 
+\hyperlink{class_menu_a2d708ce8df47ab5feaea1ba559a938d3}{Menu\+::\+Menu\+Action} \hyperlink{class_game_state_main_menu_ae63addaca64e4099cd1afff642e0307d}{selected\+\_\+action}
+\begin{DoxyCompactList}\small\item\em The user selected action on the menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_game}{Game} state that represents the game start, including the main game menu. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_game_state_main_menu_a7d7b3f28e70701ec9af22098b4220ec1}{\index{Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}!Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}}
+\index{Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}!Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}}
+\subsubsection[{Game\+State\+Main\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}Game\+State\+Main\+Menu\+::\+Game\+State\+Main\+Menu (
+\begin{DoxyParamCaption}
+\item[{{\bf Game} $\ast$}]{game}
+\end{DoxyParamCaption}
+)}}\label{class_game_state_main_menu_a7d7b3f28e70701ec9af22098b4220ec1}
+
+
+Constructor that takes in a pointer to the \hyperlink{class_game}{Game} that created them. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Pointer to game.\\
+\hline
+\end{DoxyParams}
+The constructor sets the view to the size of the window and centers the view on the center of the window. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_state_main_menu_ad34efc1ade7193ce765d00ac60f019ed}{\index{Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}!draw@{draw}}
+\index{draw@{draw}!Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Main\+Menu\+::draw (
+\begin{DoxyParamCaption}
+\item[{const float}]{delta\+\_\+time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_state_main_menu_ad34efc1ade7193ce765d00ac60f019ed}
+
+
+Draws game to the render window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & Elapsed time during the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void.
+\end{DoxyReturn}
+This function sets the view to be drawn to the window and also calls a function to draw the splash screen. 
+
+Implements \hyperlink{class_game_state_a55a6a68aabdf7054ea0e6ddbf24902df}{Game\+State}.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_main_menu_ad34efc1ade7193ce765d00ac60f019ed_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_main_menu_a91ca3c60e107d135ab67c5f9e05e8aa6}{\index{Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}!handle\+Input@{handle\+Input}}
+\index{handle\+Input@{handle\+Input}!Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}}
+\subsubsection[{handle\+Input}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Main\+Menu\+::handle\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_state_main_menu_a91ca3c60e107d135ab67c5f9e05e8aa6}
+
+
+Handles player input. 
+
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_game_state_a970b55edd5a1da31ea0f7113e2c1f85a}{Game\+State}.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_main_menu_a91ca3c60e107d135ab67c5f9e05e8aa6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_main_menu_a85d646b336e1bb6372d851f4f654e6f1}{\index{Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}!handle\+Selected\+Action@{handle\+Selected\+Action}}
+\index{handle\+Selected\+Action@{handle\+Selected\+Action}!Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}}
+\subsubsection[{handle\+Selected\+Action}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Main\+Menu\+::handle\+Selected\+Action (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_main_menu_a85d646b336e1bb6372d851f4f654e6f1}
+
+
+Perform the correct action given the user's selection. 
+
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\hypertarget{class_game_state_main_menu_a76d18652314696ffa6369713ef5be3ed}{\index{Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}!load\+Game@{load\+Game}}
+\index{load\+Game@{load\+Game}!Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}}
+\subsubsection[{load\+Game}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Main\+Menu\+::load\+Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_main_menu_a76d18652314696ffa6369713ef5be3ed}
+
+
+Function that transitions to the \hyperlink{class_game_state_play}{Game\+State\+Play} state. 
+
+\begin{DoxyReturn}{Returns}
+Void.
+\end{DoxyReturn}
+Add the \hyperlink{class_game_state_play}{Game\+State\+Play} state to the game 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{class_game_state_main_menu_a76d18652314696ffa6369713ef5be3ed_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_main_menu_a76d18652314696ffa6369713ef5be3ed_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_main_menu_a15b2abc99f50183569112f7fe1499951}{\index{Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}!update@{update}}
+\index{update@{update}!Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Main\+Menu\+::update (
+\begin{DoxyParamCaption}
+\item[{const float}]{delta\+\_\+time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_state_main_menu_a15b2abc99f50183569112f7fe1499951}
+
+
+Updates game changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & Elapsed time during the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_game_state_ad331d02d3989271b8cbc88fcb1448959}{Game\+State}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_game_state_main_menu_a0c21a143cf8c10490b03da6657a81232}{\index{Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}!\+\_\+view@{\+\_\+view}}
+\index{\+\_\+view@{\+\_\+view}!Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}}
+\subsubsection[{\+\_\+view}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+View Game\+State\+Main\+Menu\+::\+\_\+view\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_main_menu_a0c21a143cf8c10490b03da6657a81232}
+
+
+Camera view for the \hyperlink{class_game_state}{Game\+State} displayed to the window. 
+
+\hypertarget{class_game_state_main_menu_ae63addaca64e4099cd1afff642e0307d}{\index{Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}!selected\+\_\+action@{selected\+\_\+action}}
+\index{selected\+\_\+action@{selected\+\_\+action}!Game\+State\+Main\+Menu@{Game\+State\+Main\+Menu}}
+\subsubsection[{selected\+\_\+action}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Menu\+::\+Menu\+Action} Game\+State\+Main\+Menu\+::selected\+\_\+action\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_main_menu_ae63addaca64e4099cd1afff642e0307d}
+
+
+The user selected action on the menu. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/game\+States/\hyperlink{_game_state_main_menu_8h}{Game\+State\+Main\+Menu.\+h}\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/src/game\+States/\hyperlink{_game_state_main_menu_8cpp}{Game\+State\+Main\+Menu.\+cpp}\end{DoxyCompactItemize}

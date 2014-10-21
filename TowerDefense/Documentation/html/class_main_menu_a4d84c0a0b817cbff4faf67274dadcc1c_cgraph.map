@@ -1,0 +1,5 @@
+<map id="MainMenu::show" name="MainMenu::show">
+<area shape="rect" id="node2" href="$class_texture_manager.html#a0a6bc63e2f6fa7e1d0aee5b24cfa089a" title="Returns the only instance of a TextureManager object. " alt="" coords="173,5,364,32"/>
+<area shape="rect" id="node3" href="$class_texture_manager.html#aa631660b783d448a29b1096c64fe65e4" title="Returns the instance of a texture loaded by the file name. " alt="" coords="173,56,364,83"/>
+<area shape="rect" id="node4" href="$class_menu.html#a445fe4244dc401a85ab8bbaf61373443" title="Menu::getMenuResponse" alt="" coords="183,107,354,133"/>
+</map>

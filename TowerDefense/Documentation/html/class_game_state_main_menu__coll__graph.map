@@ -1,0 +1,4 @@
+<map id="GameStateMainMenu" name="GameStateMainMenu">
+<area shape="rect" id="node2" href="$class_game_state.html" title="GameState virtual base class. GameState is an interface for states within the game. " alt="" coords="35,248,143,355"/>
+<area shape="rect" id="node3" href="$class_game.html" title="Creates a Game. Game is a GameState manager that handles the changing of the states and info storage ..." alt="" coords="32,5,147,185"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="GameState" name="GameState">
+<area shape="rect" id="node2" href="$class_game_state_main_menu.html" title="Game state that represents the game start, including the main game menu. " alt="" coords="5,160,173,325"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html" title="Game state that represents the gameplay. " alt="" coords="197,167,365,318"/>
+<area shape="rect" id="node4" href="$class_game_state_start.html" title="Game state that represents the game start, including the main game menu. " alt="" coords="389,167,560,318"/>
+</map>

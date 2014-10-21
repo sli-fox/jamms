@@ -1,0 +1,4 @@
+<map id="Game::popState" name="Game::popState">
+<area shape="rect" id="node2" href="$class_game.html#ae3d112ca6e0e55150d2fdbc704474530" title="Destructor of Game removes all GameStates from game states stack. " alt="" coords="186,5,294,32"/>
+<area shape="rect" id="node3" href="$class_game.html#a8683b16995200bd11d95efc372e6722a" title="Helper function for GameState stack to change previous state into given state. " alt="" coords="171,56,309,83"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Game::changeState" name="Game::changeState">
+<area shape="rect" id="node2" href="$class_game.html#a4b33dd67adef59bebadba8a234282c88" title="Helper pop function for GameState stack. " alt="" coords="195,5,313,32"/>
+<area shape="rect" id="node3" href="$class_game.html#a5898f1edb6e3bc1700b2ffb1943bc609" title="Helper push function for GameState stack. " alt="" coords="192,56,316,83"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="GameStatePlay" name="GameStatePlay">
+<area shape="rect" id="node2" href="$class_game_state.html" title="GameState virtual base class. GameState is an interface for states within the game. " alt="" coords="9,277,117,384"/>
+<area shape="rect" id="node3" href="$class_game.html" title="Creates a Game. Game is a GameState manager that handles the changing of the states and info storage ..." alt="" coords="5,5,120,185"/>
+<area shape="rect" id="node4" href="$class_game_object_manager.html" title="{GameObjectManager\n|&#45; _m_game_objects\l|+ GameObjectManager()\l+ ~GameObjectManager()\l+ add()\l+ remove()\l+ getObjectCount()\l+ getGameObject()\l+ drawAll()\l}" alt="" coords="141,248,315,413"/>
+</map>
