@@ -1,0 +1,4 @@
+<map id="GameObject::load" name="GameObject::load">
+<area shape="rect" id="node2" href="$class_texture_manager.html#a0a6bc63e2f6fa7e1d0aee5b24cfa089a" title="Returns the only instance of a TextureManager object. " alt="" coords="180,5,371,32"/>
+<area shape="rect" id="node3" href="$class_texture_manager.html#aa631660b783d448a29b1096c64fe65e4" title="Returns the instance of a texture loaded by the file name. " alt="" coords="180,56,371,83"/>
+</map>

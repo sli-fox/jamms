@@ -1,0 +1,4 @@
+<map id="Menu::getMenuResponse" name="Menu::getMenuResponse">
+<area shape="rect" id="node2" href="$class_main_menu.html#a4d84c0a0b817cbff4faf67274dadcc1c" title="MainMenu::show" alt="" coords="224,5,344,32"/>
+<area shape="rect" id="node3" href="$class_game_state_main_menu.html#ad34efc1ade7193ce765d00ac60f019ed" title="Draws game to the render window. " alt="" coords="392,5,575,32"/>
+</map>

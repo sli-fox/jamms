@@ -1,0 +1,4 @@
+<map id="GameStateMainMenu::handleInput" name="GameStateMainMenu::handleInput">
+<area shape="rect" id="node2" href="$class_game_state_main_menu.html#a76d18652314696ffa6369713ef5be3ed" title="Function that transitions to the GameStatePlay state. " alt="" coords="209,5,365,47"/>
+<area shape="rect" id="node3" href="$class_game.html#a5898f1edb6e3bc1700b2ffb1943bc609" title="Helper push function for GameState stack. " alt="" coords="413,13,537,39"/>
+</map>

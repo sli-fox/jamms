@@ -1,0 +1,5 @@
+<map id="GameStateStart::draw" name="GameStateStart::draw">
+<area shape="rect" id="node2" href="$class_game_state_start.html#aca967324121e7e404a2f411102f186ac" title="Load texture and create StartScreen sprite. " alt="" coords="204,23,387,65"/>
+<area shape="rect" id="node3" href="$class_texture_manager.html#a0a6bc63e2f6fa7e1d0aee5b24cfa089a" title="Returns the only instance of a TextureManager object. " alt="" coords="435,5,625,32"/>
+<area shape="rect" id="node4" href="$class_texture_manager.html#aa631660b783d448a29b1096c64fe65e4" title="Returns the instance of a texture loaded by the file name. " alt="" coords="435,56,625,83"/>
+</map>

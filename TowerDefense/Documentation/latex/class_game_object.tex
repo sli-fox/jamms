@@ -1,0 +1,171 @@
+\hypertarget{class_game_object}{\section{Game\+Object Class Reference}
+\label{class_game_object}\index{Game\+Object@{Game\+Object}}
+}
+
+
+Creates a \hyperlink{class_game_object}{Game\+Object}. \hyperlink{class_game_object}{Game\+Object} is a class that creates all objects seen in the application. Each \hyperlink{class_game_object}{Game\+Object} instance creates a sprite at a specified position. Game\+Objects can then be drawn to the render window.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Object.\+h$>$}
+
+
+
+Collaboration diagram for Game\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_game_object__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{Game\+Object} ()
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_game_object}{Game\+Object} constructor. Default setup is the sprite has not been created. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_game_object_a224d4f6d9dd75c8a6f9d022eaf586fd9}{$\sim$\+Game\+Object} ()
+\item 
+virtual void \hyperlink{class_game_object_acc593e5b75a58c4a59ad59da654ce807}{load} (std\+::string \hyperlink{class_game_object_a1b725daa9c79833a7139469468dc770a}{file\+\_\+name})
+\begin{DoxyCompactList}\small\item\em Loads a texture using the \hyperlink{class_texture_manager}{Texture\+Manager} class and creates a sprite. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_object_abf4de46e52c8f23d18d51bc29744b136}{draw} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Draws a sprite to the render window if the \hyperlink{class_game_object}{Game\+Object} instance has previously been loaded. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_object_a180d6e9e7afa44b30ca678a95c6f4dad}{set\+Position} (float x, float y)
+\begin{DoxyCompactList}\small\item\em Sets the initial draw position of a \hyperlink{class_game_object}{Game\+Object} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Sprite \hyperlink{class_game_object_abb3608f1c76edd590e023585c2216f02}{sprite}
+\begin{DoxyCompactList}\small\item\em The Sprite instance of the \hyperlink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_game_object_a1b725daa9c79833a7139469468dc770a}{file\+\_\+name}
+\begin{DoxyCompactList}\small\item\em The file name of the sprite's texture. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_object_a677286bcb906871b6a3eb0c0b9342176}{is\+Sprite\+Created}
+\begin{DoxyCompactList}\small\item\em Boolean indicating whether or not a sprite has been created. The purpose of this bool is to ensure that the sprite exists before the class attempts to draw the \hyperlink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Creates a \hyperlink{class_game_object}{Game\+Object}. \hyperlink{class_game_object}{Game\+Object} is a class that creates all objects seen in the application. Each \hyperlink{class_game_object}{Game\+Object} instance creates a sprite at a specified position. Game\+Objects can then be drawn to the render window. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{\index{Game\+Object@{Game\+Object}!Game\+Object@{Game\+Object}}
+\index{Game\+Object@{Game\+Object}!Game\+Object@{Game\+Object}}
+\subsubsection[{Game\+Object}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Object\+::\+Game\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}
+
+
+The \hyperlink{class_game_object}{Game\+Object} constructor. Default setup is the sprite has not been created. 
+
+\hypertarget{class_game_object_a224d4f6d9dd75c8a6f9d022eaf586fd9}{\index{Game\+Object@{Game\+Object}!````~Game\+Object@{$\sim$\+Game\+Object}}
+\index{````~Game\+Object@{$\sim$\+Game\+Object}!Game\+Object@{Game\+Object}}
+\subsubsection[{$\sim$\+Game\+Object}]{\setlength{\rightskip}{0pt plus 5cm}virtual Game\+Object\+::$\sim$\+Game\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_game_object_a224d4f6d9dd75c8a6f9d022eaf586fd9}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_object_abf4de46e52c8f23d18d51bc29744b136}{\index{Game\+Object@{Game\+Object}!draw@{draw}}
+\index{draw@{draw}!Game\+Object@{Game\+Object}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Object\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{render\+\_\+window}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_object_abf4de46e52c8f23d18d51bc29744b136}
+
+
+Draws a sprite to the render window if the \hyperlink{class_game_object}{Game\+Object} instance has previously been loaded. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & A reference to the main render window of the application. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void.
+\end{DoxyReturn}
+\hyperlink{class_game_object_abf4de46e52c8f23d18d51bc29744b136}{draw()} takes in a reference to a rendering window and checks if sprite is created, if it has been, the sprite is drawn to the window. \hypertarget{class_game_object_acc593e5b75a58c4a59ad59da654ce807}{\index{Game\+Object@{Game\+Object}!load@{load}}
+\index{load@{load}!Game\+Object@{Game\+Object}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Object\+::load (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_object_acc593e5b75a58c4a59ad59da654ce807}
+
+
+Loads a texture using the \hyperlink{class_texture_manager}{Texture\+Manager} class and creates a sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & The file name of the texture that is being loaded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void.
+\end{DoxyReturn}
+\hyperlink{class_game_object_acc593e5b75a58c4a59ad59da654ce807}{load()} gets a reference to the \hyperlink{class_texture_manager}{Texture\+Manager} instance, loads the texture based on the given file name, sets the texture for the \hyperlink{class_game_object}{Game\+Object} sprite, and indicates that the sprite creation is true. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_object_acc593e5b75a58c4a59ad59da654ce807_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_object_a180d6e9e7afa44b30ca678a95c6f4dad}{\index{Game\+Object@{Game\+Object}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Game\+Object@{Game\+Object}}
+\subsubsection[{set\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Object\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_object_a180d6e9e7afa44b30ca678a95c6f4dad}
+
+
+Sets the initial draw position of a \hyperlink{class_game_object}{Game\+Object} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X-\/coordinate of the position. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void.
+\end{DoxyReturn}
+\hyperlink{class_game_object_a180d6e9e7afa44b30ca678a95c6f4dad}{set\+Position()} sets x and y coordinates of the sprite if it has been created. 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_game_object_a1b725daa9c79833a7139469468dc770a}{\index{Game\+Object@{Game\+Object}!file\+\_\+name@{file\+\_\+name}}
+\index{file\+\_\+name@{file\+\_\+name}!Game\+Object@{Game\+Object}}
+\subsubsection[{file\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Game\+Object\+::file\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_game_object_a1b725daa9c79833a7139469468dc770a}
+
+
+The file name of the sprite's texture. 
+
+\hypertarget{class_game_object_a677286bcb906871b6a3eb0c0b9342176}{\index{Game\+Object@{Game\+Object}!is\+Sprite\+Created@{is\+Sprite\+Created}}
+\index{is\+Sprite\+Created@{is\+Sprite\+Created}!Game\+Object@{Game\+Object}}
+\subsubsection[{is\+Sprite\+Created}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+Object\+::is\+Sprite\+Created\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_game_object_a677286bcb906871b6a3eb0c0b9342176}
+
+
+Boolean indicating whether or not a sprite has been created. The purpose of this bool is to ensure that the sprite exists before the class attempts to draw the \hyperlink{class_game_object}{Game\+Object}. 
+
+\hypertarget{class_game_object_abb3608f1c76edd590e023585c2216f02}{\index{Game\+Object@{Game\+Object}!sprite@{sprite}}
+\index{sprite@{sprite}!Game\+Object@{Game\+Object}}
+\subsubsection[{sprite}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Sprite Game\+Object\+::sprite\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_game_object_abb3608f1c76edd590e023585c2216f02}
+
+
+The Sprite instance of the \hyperlink{class_game_object}{Game\+Object}. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/game\+Objects/\hyperlink{_game_object_8h}{Game\+Object.\+h}\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/src/game\+Objects/\hyperlink{_game_object_8cpp}{Game\+Object.\+cpp}\end{DoxyCompactItemize}

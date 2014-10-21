@@ -1,0 +1,258 @@
+\hypertarget{class_game}{\section{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+}
+
+
+Creates a \hyperlink{class_game}{Game}. \hyperlink{class_game}{Game} is a \hyperlink{class_game_state}{Game\+State} manager that handles the changing of the states and info storage in every game state.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+
+
+Collaboration diagram for Game\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_game__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game} ()
+\begin{DoxyCompactList}\small\item\em Constructor of \hyperlink{class_game}{Game} sets the game window properties and frame rate. \end{DoxyCompactList}\item 
+\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{$\sim$\+Game} ()
+\begin{DoxyCompactList}\small\item\em Destructor of \hyperlink{class_game}{Game} removes all Game\+States from game states stack. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_a5898f1edb6e3bc1700b2ffb1943bc609}{push\+State} (\hyperlink{class_game_state}{Game\+State} $\ast$state)
+\begin{DoxyCompactList}\small\item\em Helper push function for \hyperlink{class_game_state}{Game\+State} stack. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_a4b33dd67adef59bebadba8a234282c88}{pop\+State} ()
+\begin{DoxyCompactList}\small\item\em Helper pop function for \hyperlink{class_game_state}{Game\+State} stack. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_a8683b16995200bd11d95efc372e6722a}{change\+State} (\hyperlink{class_game_state}{Game\+State} $\ast$state)
+\begin{DoxyCompactList}\small\item\em Helper function for \hyperlink{class_game_state}{Game\+State} stack to change previous state into given state. \end{DoxyCompactList}\item 
+\hyperlink{class_game_state}{Game\+State} $\ast$ \hyperlink{class_game_a6cdc6cb374ab8e7d8ac9b280284b3793}{peek\+State} ()
+\begin{DoxyCompactList}\small\item\em Helper peek function for \hyperlink{class_game_state}{Game\+State} stack. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_aede5f46c8c7bbbaf8459eeec397a11e7}{game\+Loop} ()
+\begin{DoxyCompactList}\small\item\em Drives the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::stack$<$ \hyperlink{class_game_state}{Game\+State} $\ast$ $>$ \hyperlink{class_game_a5ed7be8060ef5d384b62f384fb8662ed}{game\+\_\+states}
+\begin{DoxyCompactList}\small\item\em Stack for storing the game states. \end{DoxyCompactList}\item 
+sf\+::\+Render\+Window \hyperlink{class_game_ae19475408ec62b8ed6d4109b56d28b1d}{game\+\_\+window}
+\begin{DoxyCompactList}\small\item\em Main window for game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Creates a \hyperlink{class_game}{Game}. \hyperlink{class_game}{Game} is a \hyperlink{class_game_state}{Game\+State} manager that handles the changing of the states and info storage in every game state. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}{\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\subsubsection[{Game}]{\setlength{\rightskip}{0pt plus 5cm}Game\+::\+Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_ad59df6562a58a614fda24622d3715b65}
+
+
+Constructor of \hyperlink{class_game}{Game} sets the game window properties and frame rate. 
+
+\hypertarget{class_game_ae3d112ca6e0e55150d2fdbc704474530}{\index{Game@{Game}!````~Game@{$\sim$\+Game}}
+\index{````~Game@{$\sim$\+Game}!Game@{Game}}
+\subsubsection[{$\sim$\+Game}]{\setlength{\rightskip}{0pt plus 5cm}Game\+::$\sim$\+Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_ae3d112ca6e0e55150d2fdbc704474530}
+
+
+Destructor of \hyperlink{class_game}{Game} removes all Game\+States from game states stack. 
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{class_game_ae3d112ca6e0e55150d2fdbc704474530_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_a8683b16995200bd11d95efc372e6722a}{\index{Game@{Game}!change\+State@{change\+State}}
+\index{change\+State@{change\+State}!Game@{Game}}
+\subsubsection[{change\+State}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::change\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+State} $\ast$}]{state}
+\end{DoxyParamCaption}
+)}}\label{class_game_a8683b16995200bd11d95efc372e6722a}
+
+
+Helper function for \hyperlink{class_game_state}{Game\+State} stack to change previous state into given state. 
+
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{class_game_a8683b16995200bd11d95efc372e6722a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_aede5f46c8c7bbbaf8459eeec397a11e7}{\index{Game@{Game}!game\+Loop@{game\+Loop}}
+\index{game\+Loop@{game\+Loop}!Game@{Game}}
+\subsubsection[{game\+Loop}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::game\+Loop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_aede5f46c8c7bbbaf8459eeec397a11e7}
+
+
+Drives the game. 
+
+\begin{DoxyReturn}{Returns}
+Void.
+\end{DoxyReturn}
+This function controls the speed of the logic in the game and passes it to any function that needs it. since \hyperlink{class_game_aede5f46c8c7bbbaf8459eeec397a11e7}{game\+Loop()} is called every frame, this function starts the clock at the beginning of the frame, stops it at the end and calculates the elapsed time.
+
+The functions from \hyperlink{class_game_state}{Game\+State} are then called to draw updates to the render window. Calculate elapsed time
+
+Draw updates to render window 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{class_game_aede5f46c8c7bbbaf8459eeec397a11e7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{class_game_aede5f46c8c7bbbaf8459eeec397a11e7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_a6cdc6cb374ab8e7d8ac9b280284b3793}{\index{Game@{Game}!peek\+State@{peek\+State}}
+\index{peek\+State@{peek\+State}!Game@{Game}}
+\subsubsection[{peek\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+State} $\ast$ Game\+::peek\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_a6cdc6cb374ab8e7d8ac9b280284b3793}
+
+
+Helper peek function for \hyperlink{class_game_state}{Game\+State} stack. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to \hyperlink{class_game_state}{Game\+State} that's on top of the stack. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a6cdc6cb374ab8e7d8ac9b280284b3793_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_a4b33dd67adef59bebadba8a234282c88}{\index{Game@{Game}!pop\+State@{pop\+State}}
+\index{pop\+State@{pop\+State}!Game@{Game}}
+\subsubsection[{pop\+State}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::pop\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_a4b33dd67adef59bebadba8a234282c88}
+
+
+Helper pop function for \hyperlink{class_game_state}{Game\+State} stack. 
+
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{class_game_a4b33dd67adef59bebadba8a234282c88_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_a5898f1edb6e3bc1700b2ffb1943bc609}{\index{Game@{Game}!push\+State@{push\+State}}
+\index{push\+State@{push\+State}!Game@{Game}}
+\subsubsection[{push\+State}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::push\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+State} $\ast$}]{state}
+\end{DoxyParamCaption}
+)}}\label{class_game_a5898f1edb6e3bc1700b2ffb1943bc609}
+
+
+Helper push function for \hyperlink{class_game_state}{Game\+State} stack. 
+
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a5898f1edb6e3bc1700b2ffb1943bc609_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_game_a5ed7be8060ef5d384b62f384fb8662ed}{\index{Game@{Game}!game\+\_\+states@{game\+\_\+states}}
+\index{game\+\_\+states@{game\+\_\+states}!Game@{Game}}
+\subsubsection[{game\+\_\+states}]{\setlength{\rightskip}{0pt plus 5cm}std\+::stack$<${\bf Game\+State}$\ast$$>$ Game\+::game\+\_\+states}}\label{class_game_a5ed7be8060ef5d384b62f384fb8662ed}
+
+
+Stack for storing the game states. 
+
+\hypertarget{class_game_ae19475408ec62b8ed6d4109b56d28b1d}{\index{Game@{Game}!game\+\_\+window@{game\+\_\+window}}
+\index{game\+\_\+window@{game\+\_\+window}!Game@{Game}}
+\subsubsection[{game\+\_\+window}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Render\+Window Game\+::game\+\_\+window}}\label{class_game_ae19475408ec62b8ed6d4109b56d28b1d}
+
+
+Main window for game. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/\hyperlink{_game_8h}{Game.\+h}\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/src/\hyperlink{_game_8cpp}{Game.\+cpp}\end{DoxyCompactItemize}

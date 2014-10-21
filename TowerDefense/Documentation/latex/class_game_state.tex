@@ -1,0 +1,136 @@
+\hypertarget{class_game_state}{\section{Game\+State Class Reference}
+\label{class_game_state}\index{Game\+State@{Game\+State}}
+}
+
+
+\hyperlink{class_game_state}{Game\+State} virtual base class. \hyperlink{class_game_state}{Game\+State} is an interface for states within the game.  
+
+
+
+
+{\ttfamily \#include $<$Game\+State.\+h$>$}
+
+
+
+Inheritance diagram for Game\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_game_state__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_game_state_a55a6a68aabdf7054ea0e6ddbf24902df}{draw} (const float delta\+\_\+time)=0
+\item 
+virtual void \hyperlink{class_game_state_ad331d02d3989271b8cbc88fcb1448959}{update} (const float delta\+\_\+time)=0
+\item 
+virtual void \hyperlink{class_game_state_a970b55edd5a1da31ea0f7113e2c1f85a}{handle\+Input} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_game}{Game} $\ast$ \hyperlink{class_game_state_a355a79415b9ef63c2aec1448a99f6e71}{game}
+\begin{DoxyCompactList}\small\item\em Pointer to \hyperlink{class_game}{Game} instance that handles the changing. of the states and store the info in every game state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_game_state}{Game\+State} virtual base class. \hyperlink{class_game_state}{Game\+State} is an interface for states within the game. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_state_a55a6a68aabdf7054ea0e6ddbf24902df}{\index{Game\+State@{Game\+State}!draw@{draw}}
+\index{draw@{draw}!Game\+State@{Game\+State}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Game\+State\+::draw (
+\begin{DoxyParamCaption}
+\item[{const float}]{delta\+\_\+time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_game_state_a55a6a68aabdf7054ea0e6ddbf24902df}
+
+
+Implemented in \hyperlink{class_game_state_main_menu_ad34efc1ade7193ce765d00ac60f019ed}{Game\+State\+Main\+Menu}, \hyperlink{class_game_state_start_a0969e5227b6f2eaabd53ee69f32a37e7}{Game\+State\+Start}, and \hyperlink{class_game_state_play_a63a3ba0c891afd8ec126806bab4f315a}{Game\+State\+Play}.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_a55a6a68aabdf7054ea0e6ddbf24902df_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_a970b55edd5a1da31ea0f7113e2c1f85a}{\index{Game\+State@{Game\+State}!handle\+Input@{handle\+Input}}
+\index{handle\+Input@{handle\+Input}!Game\+State@{Game\+State}}
+\subsubsection[{handle\+Input}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Game\+State\+::handle\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_game_state_a970b55edd5a1da31ea0f7113e2c1f85a}
+
+
+Implemented in \hyperlink{class_game_state_main_menu_a91ca3c60e107d135ab67c5f9e05e8aa6}{Game\+State\+Main\+Menu}, \hyperlink{class_game_state_start_afa9da08e1a51b4914ee436e7f1c4f6e6}{Game\+State\+Start}, and \hyperlink{class_game_state_play_ae9acc781e1fdbc931784ba3892c469ce}{Game\+State\+Play}.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_a970b55edd5a1da31ea0f7113e2c1f85a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_ad331d02d3989271b8cbc88fcb1448959}{\index{Game\+State@{Game\+State}!update@{update}}
+\index{update@{update}!Game\+State@{Game\+State}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Game\+State\+::update (
+\begin{DoxyParamCaption}
+\item[{const float}]{delta\+\_\+time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_game_state_ad331d02d3989271b8cbc88fcb1448959}
+
+
+Implemented in \hyperlink{class_game_state_main_menu_a15b2abc99f50183569112f7fe1499951}{Game\+State\+Main\+Menu}, \hyperlink{class_game_state_start_afbfe6831f8f9a14456840a98c7b5ef9c}{Game\+State\+Start}, and \hyperlink{class_game_state_play_a2faf041a447ddf86726658455560abb8}{Game\+State\+Play}.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_ad331d02d3989271b8cbc88fcb1448959_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_game_state_a355a79415b9ef63c2aec1448a99f6e71}{\index{Game\+State@{Game\+State}!game@{game}}
+\index{game@{game}!Game\+State@{Game\+State}}
+\subsubsection[{game}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game}$\ast$ Game\+State\+::game}}\label{class_game_state_a355a79415b9ef63c2aec1448a99f6e71}
+
+
+Pointer to \hyperlink{class_game}{Game} instance that handles the changing. of the states and store the info in every game state. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/game\+States/\hyperlink{_game_state_8h}{Game\+State.\+h}\end{DoxyCompactItemize}

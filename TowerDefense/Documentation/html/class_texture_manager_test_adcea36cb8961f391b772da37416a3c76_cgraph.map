@@ -1,0 +1,6 @@
+<map id="TextureManagerTest::testUnloadTexture" name="TextureManagerTest::testUnloadTexture">
+<area shape="rect" id="node2" href="$class_texture_manager.html#a0a6bc63e2f6fa7e1d0aee5b24cfa089a" title="Returns the only instance of a TextureManager object. " alt="" coords="200,5,391,32"/>
+<area shape="rect" id="node3" href="$class_texture_manager.html#aa631660b783d448a29b1096c64fe65e4" title="Returns the instance of a texture loaded by the file name. " alt="" coords="200,56,391,83"/>
+<area shape="rect" id="node4" href="$class_texture_manager.html#a8ec1c28bde7e07f64d3e155add36c0df" title="Returns true if texture was previously loaded, false otherwise. " alt="" coords="199,107,391,149"/>
+<area shape="rect" id="node5" href="$class_texture_manager.html#a8a77e473313f9c07df6b76eafa5b5bd2" title="Removes the instance of a texture given by the file name. " alt="" coords="193,173,397,200"/>
+</map>
