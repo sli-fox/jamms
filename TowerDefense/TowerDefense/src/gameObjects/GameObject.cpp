@@ -22,7 +22,7 @@ void GameObject::load(std::string file_name) {
   */
 void GameObject::draw(sf::RenderWindow& render_window) {
   if (isSpriteCreated) {
-    render_window.draw(sprite);
+    render_window.draw(this->sprite);
   }
 }
 

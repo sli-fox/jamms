@@ -11,6 +11,7 @@
 #include <SFML/Graphics.hpp>
 #include <gameStates/GameState.h>
 #include <managers/GameObjectManager.h>
+#include <gameObjects/WhiteCat.h>
 
 /** @brief Game state that represents the gameplay.
  */
