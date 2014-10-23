@@ -11,11 +11,14 @@
 #include <SFML/Graphics.hpp>
 #include <gameStates/GameState.h>
 #include <managers/GameObjectManager.h>
+#include <gameObjects/WhiteCat.h>
 
 /** @brief Game state that represents the gameplay.
  */
 class GameStatePlay : public GameState {
   public:
+    WhiteCat mew;
+
     /** @brief Constructor that takes in a pointer to the Game
      *  that created them.
      *  @param game Pointer to game.

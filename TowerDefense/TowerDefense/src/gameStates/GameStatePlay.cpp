@@ -22,10 +22,12 @@ GameStatePlay::GameStatePlay(Game* game) {
 void GameStatePlay::draw(const float delta_time) {
   this->game->game_window.setView(this->_gameView);
   this->game->game_window.clear(sf::Color::Black);
+ 
+  mew.draw(this->game->game_window, delta_time);
 }
 
 void GameStatePlay::update(const float delta_time) {
-
+  mew.draw(this->game->game_window, delta_time);
 }
 
 void GameStatePlay::handleInput() {
