@@ -11,6 +11,7 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <utils/Animation.h>
+#include <iostream>
 
 /** @brief Handles animations.
  */
@@ -51,6 +52,10 @@ class AnimationHandler {
      */
     void changeAnimation(unsigned int animation_index);
 
+    void setCurrentAnimation(float current_animation) {
+      this->current_animation = current_animation;
+    }
+
   private:
     /** @brief Array of animations.
      */
@@ -62,5 +67,5 @@ class AnimationHandler {
 
     /** @brief Current animation displayed.
      */
-    float current_animation;
+    int current_animation;
 };

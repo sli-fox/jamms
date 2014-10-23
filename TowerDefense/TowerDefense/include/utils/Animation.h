@@ -41,6 +41,6 @@ class Animation {
      *  @param Unsigned int representing the length of animation in frames
      */
     unsigned int getLength() {
-      return end_frame - start_frame + 1;
+      return end_frame - start_frame;
     }
 };

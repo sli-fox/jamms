@@ -17,6 +17,8 @@
  */
 class GameStatePlay : public GameState {
   public:
+    WhiteCat mew;
+
     /** @brief Constructor that takes in a pointer to the Game
      *  that created them.
      *  @param game Pointer to game.

@@ -25,12 +25,12 @@ void Critter::draw(sf::RenderWindow& game_window, float delta_time) {
   
   // Update the animation
   this->animation_handler.update(delta_time);
-       sf::IntRect r1(0, 0, 32, 32);
+       //sf::IntRect r1(0, 0, 32, 32);
        //std::cout << this->animation_handler.bounding_rect.height;
   // Set texture bounds for sprite
-  //this->sprite.setTextureRect(this->animation_handler.bounding_rect);
-  this->sprite.setTextureRect(r1);
-         std::cout << this->animation_handler.bounding_rect.height;
+  this->sprite.setTextureRect(this->animation_handler.bounding_rect);
+  //this->sprite.setTextureRect(r1);
+         //std::cout << "Bounding rect height" << this->animation_handler.bounding_rect.height;
 
 
   //Draw the sprite

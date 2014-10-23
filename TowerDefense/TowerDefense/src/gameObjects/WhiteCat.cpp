@@ -6,9 +6,10 @@
   */
 WhiteCat::WhiteCat() {
   // Set up animation
-  Animation static_animation(0, 3, 1.0f);
+  Animation animation1(0, 2, 0.5f), animation2(0, 3, 0.5f);
   std::vector<Animation> animations;
-  animations.push_back(static_animation);
+  animations.push_back(animation1);
+  animations.push_back(animation2);
   initializeCritter(animations);
 }
 
@@ -31,6 +32,8 @@ void WhiteCat::initializeCritter(const std::vector<Animation>& animations) {
   // Note, pixels are hardcoded for now for the frame size
   this->animation_handler.frame_size = sf::IntRect(0, 0, 32, 32);
   
+  //this->animation_handler.setCurrentAnimation(1); 
+
   //Add animations set in the constructor to handler
   for (auto animation : animations) {
     this->animation_handler.addAnimation(animation);

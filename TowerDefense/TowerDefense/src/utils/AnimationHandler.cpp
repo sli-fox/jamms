@@ -5,7 +5,7 @@
  */
 void AnimationHandler::update(const float delta_time) {
   // Don't update id the current_animation doesn't exist in the animations arrays
-  if (current_animation >= this->animations.size() || current_animation <0)
+  if (current_animation >= this->animations.size() || current_animation < 0)
     return;
 
   // Cache the duration of the animation
@@ -16,7 +16,6 @@ void AnimationHandler::update(const float delta_time) {
   if (int((current_time + delta_time) / duration) > int(current_time / duration)) {
     //Calculate frame number
     int frame_number = int((current_time + delta_time) / duration);
-
     // Make sure animation loops back to start and not beyond the animation length
     frame_number %= this->animations[current_animation].getLength();
 
@@ -47,9 +46,9 @@ void AnimationHandler::changeAnimation(unsigned int animation_index) {
   // Do not change the animation if new animation is currently active or or if 
   // the new animation does not exist
   if (this->current_animation == animation_index || animation_index >= this->animations.size()
-    || animation_index < 0) 
+    || animation_index < 0) {
     return;
-
+  }
   //Set current animation to the one at the index given and reset time
   this->current_animation = animation_index;
   sf::IntRect rect = this->frame_size;
