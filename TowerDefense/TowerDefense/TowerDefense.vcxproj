@@ -96,6 +96,7 @@
     <ClInclude Include="include\utils\AnimationHandler.h" />
     <ClInclude Include="include\views\MainMenu.h" />
     <ClInclude Include="include\views\Menu.h" />
+    <ClInclude Include="src\utils\Waypoint.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game.cpp" />
@@ -110,6 +111,7 @@
     <ClCompile Include="src\managers\GameObjectManager.cpp" />
     <ClCompile Include="src\managers\TextureManager.cpp" />
     <ClCompile Include="src\utils\AnimationHandler.cpp" />
+    <ClCompile Include="src\utils\Waypoint.cpp" />
     <ClCompile Include="src\views\MainMenu.cpp" />
     <ClCompile Include="src\views\Menu.cpp" />
     <ClCompile Include="test\TextureManagerTest.cpp" />
