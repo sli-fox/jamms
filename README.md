@@ -3,7 +3,7 @@ jamms
 
 For the new TowerDefense solution:
 - Sprites are drawn NOT in the gameLoop(), but in the GameState that the object should appear in. 
-- For example, to draw something in the playing state of the game, draw mush be called in the GameStatePlay class' draw function.
+- For example, to draw something in the playing state of the game, draw must be called in the GameStatePlay class' draw function.
 
 **Table of Contents** 
 
