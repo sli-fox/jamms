@@ -1,5 +1,5 @@
 ## Files not tracked by our project (usually libraries)
-#TowerDefense/cppunit
+TowerDefense/cppunit
 TowerDefense/SFML-2.1
 
 
