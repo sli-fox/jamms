@@ -94,9 +94,9 @@
     <ClInclude Include="include\test\TextureManagerTest.h" />
     <ClInclude Include="include\utils\Animation.h" />
     <ClInclude Include="include\utils\AnimationHandler.h" />
+    <ClInclude Include="include\utils\Waypoint.h" />
     <ClInclude Include="include\views\MainMenu.h" />
     <ClInclude Include="include\views\Menu.h" />
-    <ClInclude Include="src\utils\Waypoint.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game.cpp" />

@@ -11,6 +11,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/System/Vector2.hpp>
 #include <Game.h>
+#include <iostream>
 
 /** @brief Represents an Waypoint in the game.
  */
@@ -24,16 +25,14 @@ class Waypoint {
      */
     Waypoint* next_waypoint;
 
-    /** @brief Pointer to Game instance.
-     */
-    Game* game;
-
     /** @brief Waypoint constructor
      */
-    Waypoint(sf::Vector2f position) : position(position) {}
+    Waypoint(sf::Vector2f position) :
+      position(position) {}
     ~Waypoint() {}
 
     /** @brief Draws the Waypoint -- for testing purposes only 
+     *  @return Void.
      */
-    void draw(); 
+    void draw(sf::RenderWindow& game_window); 
 };
