@@ -12,6 +12,8 @@
 #include <gameStates/GameState.h>
 #include <managers/GameObjectManager.h>
 #include <gameObjects/WhiteCat.h>
+#include <utils/Waypoint.h>
+#include <iostream>
 
 /** @brief Game state that represents the gameplay.
  */
@@ -52,4 +54,15 @@ class GameStatePlay : public GameState {
      sf::View _guiView;
 
      static GameObjectManager _game_object_manager;
+
+     /** @brief Add waypoints 
+      *  @return Vector containing Waypoint pointers.
+      */
+     std::vector<Waypoint> addWaypoints(std::vector<sf::Vector2f> path_points);
+
+     /**  @brief Draw all waypoints
+      *   @return Void.
+      */
+     void drawWaypoints(std::vector<Waypoint> waypoints, sf::RenderWindow& game_window);
+
 };
