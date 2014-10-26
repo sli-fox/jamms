@@ -44,6 +44,8 @@ class GameObject {
       *   @return Void.
       */
     virtual void setPosition(float x, float y);
+	sf::Vector2f getPosition() const;
+	std::string getFileName() const;
 
   protected:
     /** @brief The Sprite instance of the GameObject. 

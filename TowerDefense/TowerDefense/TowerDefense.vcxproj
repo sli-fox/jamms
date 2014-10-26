@@ -81,9 +81,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\Game.h" />
     <ClInclude Include="include\gameObjects\Critter.h" />
     <ClInclude Include="include\gameObjects\CritterFactory.h" />
     <ClInclude Include="include\gameObjects\GameObject.h" />
+    <ClInclude Include="include\gameObjects\Tile.h" />
     <ClInclude Include="include\gameObjects\WhiteCat.h" />
     <ClInclude Include="include\gameStates\GameState.h" />
     <ClInclude Include="include\gameStates\GameStateMainMenu.h" />
@@ -91,9 +93,12 @@
     <ClInclude Include="include\gameStates\GameStateStart.h" />
     <ClInclude Include="include\managers\GameObjectManager.h" />
     <ClInclude Include="include\managers\TextureManager.h" />
+    <ClInclude Include="include\Map.h" />
     <ClInclude Include="include\test\TextureManagerTest.h" />
     <ClInclude Include="include\utils\Animation.h" />
     <ClInclude Include="include\utils\AnimationHandler.h" />
+    <ClInclude Include="include\utils\rapidxml.hpp" />
+    <ClInclude Include="include\utils\rapidxml_print.hpp" />
     <ClInclude Include="include\utils\Waypoint.h" />
     <ClInclude Include="include\views\MainMenu.h" />
     <ClInclude Include="include\views\Menu.h" />
@@ -103,6 +108,7 @@
     <ClCompile Include="src\gameObjects\Critter.cpp" />
     <ClCompile Include="src\gameObjects\CritterFactory.cpp" />
     <ClCompile Include="src\gameObjects\GameObject.cpp" />
+    <ClCompile Include="src\gameObjects\Tile.cpp" />
     <ClCompile Include="src\gameObjects\WhiteCat.cpp" />
     <ClCompile Include="src\gameStates\GameStateMainMenu.cpp" />
     <ClCompile Include="src\gameStates\GameStatePlay.cpp" />
@@ -110,6 +116,7 @@
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\managers\GameObjectManager.cpp" />
     <ClCompile Include="src\managers\TextureManager.cpp" />
+    <ClCompile Include="src\Map.cpp" />
     <ClCompile Include="src\utils\AnimationHandler.cpp" />
     <ClCompile Include="src\utils\Waypoint.cpp" />
     <ClCompile Include="src\views\MainMenu.cpp" />
