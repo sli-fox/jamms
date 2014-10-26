@@ -18,10 +18,9 @@ const sf::Texture& TextureManager::loadTexture(const std::string& file_name) {
   sf::Texture* texture = new sf::Texture;  
   if (!texture->loadFromFile(file_name)) {
     std::cout << "Error: unable to load image " + file_name;
-  } else {
+  } 
     _m_texture_map.insert(std::map<std::string, sf::Texture*>::value_type (file_name, texture));
     return *_m_texture_map[file_name];
-  }
 }
 
 /**  loadTexture() looks for the given file name string 

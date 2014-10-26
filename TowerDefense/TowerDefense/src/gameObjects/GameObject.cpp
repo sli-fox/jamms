@@ -34,3 +34,11 @@ void GameObject::setPosition(float x, float y) {
     sprite.setPosition(x, y);
   }
 }
+
+  sf::Vector2f GameObject::getPosition() const{
+	  return sprite.getPosition();
+  }
+
+  std::string GameObject::getFileName() const{
+	  return file_name;
+  }
