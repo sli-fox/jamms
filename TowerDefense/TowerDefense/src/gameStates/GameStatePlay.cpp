@@ -24,7 +24,7 @@ void GameStatePlay::draw(const float delta_time) {
   this->game->game_window.clear(sf::Color::Black);
 
   //Draw map
-  this->map.draw(this->game->game_window);
+  this->game->map->draw(this->game->game_window);
   
   //Draw Critter
   this->mew.draw(this->game->game_window, delta_time);
@@ -64,10 +64,10 @@ void GameStatePlay::handleInput() {
         break;
       }
 	  case sf::Event::KeyPressed: {
-       sf::Vector2i localPosition = sf::Mouse::getPosition(this->game->game_window);
-	   int tileX = localPosition.x/32;
-	   int tileY = localPosition.y/32;
-	   mapCommandLibrary(tileX, tileY, event.key.code);
+	   break;
+      }
+      case sf::Event::MouseButtonReleased: {
+       
 	   break;
       }
       default: break;
@@ -103,58 +103,4 @@ void GameStatePlay::drawWaypoints(std::vector<Waypoint> waypoints, sf::RenderWin
   }
 }
 
-void GameStatePlay::mapCommandLibrary(const int tileX, const int tileY, sf::Keyboard::Key thisKey){
-		try{
-			if(thisKey == sf::Keyboard::S){
-				map.addTile("resources/images/start.png", "start", tileX, tileY);	
-			}
-			if(thisKey == sf::Keyboard::E){
-				map.addTile("resources/images/end.png", "end", tileX, tileY);
-			}
-			if(thisKey == sf::Keyboard::P){
-				map.addTile("resources/images/path.png", "path", tileX, tileY);
-			}
-			if(thisKey == sf::Keyboard::A){
-				map.addTile("resources/images/scenery.png", "scenery", tileX, tileY);
-			}
-			if(thisKey == sf::Keyboard::D){
-				map.addTile("resources/images/dead.png", "dead", tileX, tileY);
-			}
-			if(thisKey == sf::Keyboard::R){
-				map.removeTile(tileX, tileY);
-			}
-			if(thisKey == sf::Keyboard::G){
-				map.removeGameObject(tileX, tileY);
-			}
-			if(thisKey == sf::Keyboard::F){
-				map.fillMap();
-			}
-			if(thisKey == sf::Keyboard::B){
-				map.blankMap();
-			}
-			if(thisKey == sf::Keyboard::C){
-				map.placeCritter("resources/images/critter.png", tileX, tileY);
-			}
-			if(thisKey == sf::Keyboard::T){
-				map.placeTower("resources/images/tower.png", tileX, tileY);
-			}
-			if(thisKey == sf::Keyboard::L){
-				map.load("testmap.xml");
-			}
-			if(thisKey == sf::Keyboard::K){
-				map.save("testmap.xml");
-			}
-			if(thisKey == sf::Keyboard::V){
-				if(map.isMapValid())
-					cout << "map is valid: true" << endl;
-				else
-					cout << "map is valid: false" <<endl;
-			}
-		}
-		catch(std::exception& e){
-			cout << e.what() << endl;
-		}
-}
-
 GameObjectManager GameStatePlay::_game_object_manager;
-Map GameStatePlay::map(20,20);

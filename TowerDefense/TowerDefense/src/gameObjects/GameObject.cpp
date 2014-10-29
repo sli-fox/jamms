@@ -42,3 +42,7 @@ void GameObject::setPosition(float x, float y) {
   std::string GameObject::getFileName() const{
 	  return file_name;
   }
+
+  sf::FloatRect GameObject::getSpriteBounds() const{
+	return sprite.getGlobalBounds();
+  }

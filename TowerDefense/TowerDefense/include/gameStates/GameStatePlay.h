@@ -14,7 +14,6 @@
 #include <gameObjects/WhiteCat.h>
 #include <utils/Waypoint.h>
 #include <iostream>
-#include "Map.h"
 
 /** @brief Game state that represents the gameplay.
  */
@@ -55,7 +54,6 @@ class GameStatePlay : public GameState {
      sf::View _guiView;
 
      static GameObjectManager _game_object_manager;
-	 static Map map;
 
      /** @brief Add waypoints 
       *  @return Vector containing Waypoint pointers.
@@ -66,6 +64,5 @@ class GameStatePlay : public GameState {
       *   @return Void.
       */
      void drawWaypoints(std::vector<Waypoint> waypoints, sf::RenderWindow& game_window);
-	 void mapCommandLibrary(const int tileX, const int tileY, sf::Keyboard::Key thisKey);
 
 };

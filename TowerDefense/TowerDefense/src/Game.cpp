@@ -7,6 +7,10 @@
 Game::Game() {
   this->game_window.create(sf::VideoMode(1024, 768, 32), "Tower Defense", sf::Style::Close);
   this->game_window.setFramerateLimit(60);
+  map.reset(new Map(32,12));
+  saveClicked = false;
+  loadClicked = false;
+  font.loadFromFile("resources/fonts/arial.ttf");
 }
 
 /** @brief Destructor of Game removes all GameStates from game states stack.

@@ -117,6 +117,18 @@
     <ClInclude Include="include\utils\rapidxml_print.hpp">
       <Filter>Header Files\Utils</Filter>
     </ClInclude>
+    <ClInclude Include="include\Command.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\EditorButtons.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameStates\GameStateEditor.h">
+      <Filter>Header Files\GameStates</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game.cpp">
@@ -171,6 +183,15 @@
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
     <ClCompile Include="src\Map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameStateEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EditorButtons.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Button.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

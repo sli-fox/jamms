@@ -46,6 +46,7 @@ class GameObject {
     virtual void setPosition(float x, float y);
 	sf::Vector2f getPosition() const;
 	std::string getFileName() const;
+	sf::FloatRect getSpriteBounds() const;
 
   protected:
     /** @brief The Sprite instance of the GameObject. 

@@ -11,6 +11,7 @@
 #include <SFML/Graphics.hpp>
 #include <gameStates/GameState.h>
 #include <gameStates/GameStatePlay.h>
+#include <gameStates/GameStateEditor.h>
 #include <managers/TextureManager.h>
 #include <views/MainMenu.h>
 
@@ -60,4 +61,5 @@ class GameStateMainMenu : public GameState {
       * @return Void.
       */
     void handleSelectedAction();
+
 };

@@ -11,6 +11,8 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <stack>
+#include <Map.h>
+#include <memory>
 
 class GameState;  //Allows Game to know about GameState
 
@@ -30,6 +32,13 @@ class Game {
     /** @brief Main window for game.
      */
     sf::RenderWindow game_window;
+	std::unique_ptr<Map> map;
+	Tile::TYPE tileSelect;
+	bool saveClicked, loadClicked;
+	std::map<std::string,sf::Text> textList;
+	std::string inputString;
+	sf::Font font;
+	
 
     /** @brief Helper push function for GameState stack.
      *  @return Void.

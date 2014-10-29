@@ -30,6 +30,8 @@ private:
 	vector<vector<unique_ptr<GameObject>>> mapObjects;
 
 	//map attributes
+	const int MAX_WIDTH = 32;
+	const int MAX_HEIGHT = 12;
 	int mapWidth, mapHeight;
 	bool hasStart, hasEnd;
 
@@ -42,6 +44,7 @@ private:
 	string convertType(Tile::TYPE type) const;
 
 public:
+	Map();
 	//loads map from filename
 	Map(string mapName);
 	//creates blank map of initial size specified by the user

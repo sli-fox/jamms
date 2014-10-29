@@ -1,6 +1,13 @@
 #pragma once
 #include "Map.h"
 
+Map::Map(){
+	hasStart = false;
+	hasEnd = false;
+	setMapSize(0, 0);
+	blankMap();
+}
+
 Map::Map(string mapName){
 	load(mapName);
 }
@@ -29,19 +36,23 @@ deque<const Tile* const> Map::getMapPath() const{
 }
 
 void Map::setMapSize(const int mapWidth, const int mapHeight){
-	this->mapWidth = mapWidth;
-	this->mapHeight = mapHeight;
+	if(mapWidth <= MAX_WIDTH &&  mapHeight <= MAX_HEIGHT){
+		this->mapWidth = mapWidth;
+		this->mapHeight = mapHeight;
 
-	//resize 1st dimension of vector to mapWidth (number of tiles width-wise)
-	tileMap.resize(mapWidth);
-	mapObjects.resize(mapWidth);
+		//resize 1st dimension of vector to mapWidth (number of tiles width-wise)
+		tileMap.resize(mapWidth);
+		mapObjects.resize(mapWidth);
 
-	//resize 2nd dimension of vector to mapHeight(number of tiles height-wise)
-	for(int i = 0; i < mapWidth; ++i)
-	{
-		tileMap.at(i).resize(mapHeight);
-		mapObjects.at(i).resize(mapHeight);
+		//resize 2nd dimension of vector to mapHeight(number of tiles height-wise)
+		for(int i = 0; i < mapWidth; ++i)
+		{
+			tileMap.at(i).resize(mapHeight);
+			mapObjects.at(i).resize(mapHeight);
+		}
 	}
+	else 
+		cout << "Invalid map, max size is 32 x 12" << endl;
 }
 
 void Map::resetMap(){
