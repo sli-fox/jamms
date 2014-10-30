@@ -19,6 +19,54 @@ int Critter::getLevel() const {
   return level;
 }
 
+sf::Vector2f Critter::getPosition() const {
+  return position;
+}
+
+Waypoint* Critter::getCurrentWaypoint() const {
+  return current_waypoint;
+}
+
+void Critter::setCurrentWaypoint(Waypoint* waypoint) {
+  this->current_waypoint = waypoint;
+}
+
+void Critter::setAnimationIndex(unsigned int index) {
+  this->animation_index = index;
+}
+
+
+bool Critter::isAtNextWaypoint() {
+  if (sf::Vector2f(int(position.x), int(position.y)) == current_waypoint->next_waypoint->position) {
+    return true;
+  }
+  return false;
+}
+
+
+void Critter::updatePosition(float x, float y) {
+  this->position.x += x; 
+  this->position.y += y;
+}
+
+Critter::MovementDirection Critter::getMovementDirection() {
+  sf::Vector2f start_position = this->current_waypoint->position;
+  sf::Vector2f end_position = this->current_waypoint->next_waypoint->position;
+  if (start_position.x == end_position.x
+      && start_position.y - end_position.y > 0)
+      return UP;
+  if (start_position.x == end_position.x
+      && start_position.y - end_position.y < 0)
+      return DOWN;
+  if (start_position.y == end_position.y
+    && start_position.x - end_position.x > 0)
+      return LEFT;
+  if (start_position.y == end_position.y
+    && start_position.x - end_position.x < 0)
+      return RIGHT;
+}
+
+
 void Critter::draw(sf::RenderWindow& game_window, float delta_time) {
   // Change the animation to reflect the current one
   this->animation_handler.changeAnimation(this->animation_index);
@@ -28,6 +76,12 @@ void Critter::draw(sf::RenderWindow& game_window, float delta_time) {
 
   // Set texture bounds for sprite
   this->sprite.setTextureRect(this->animation_handler.bounding_rect);
+
+  //Set position for drawn sprite
+  sprite.setPosition(position);
+
+  //Reset origin for drawn sprite
+  sprite.setOrigin(16, 16);
 
   //Draw the sprite
   game_window.draw(this->sprite);

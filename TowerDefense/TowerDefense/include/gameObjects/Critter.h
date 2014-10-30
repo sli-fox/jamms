@@ -9,6 +9,7 @@
 #pragma once
 #include <gameObjects/GameObject.h>
 #include <utils/AnimationHandler.h>
+#include <utils/Waypoint.h>
 
 /** @brief Abstract base class of all Critters
  *  Critter defines the attributes, accessors, and update function
@@ -17,7 +18,12 @@
 class Critter : public GameObject {
   public:
     enum CritterType { BLACK_CAT, WHITE_CAT };
+    enum MovementDirection { DOWN, LEFT, RIGHT, UP };
 
+   /** @brief Handles the animated object. 
+     */
+    AnimationHandler animation_handler;
+    
     Critter() {};
     virtual ~Critter() {};
 
@@ -27,6 +33,16 @@ class Critter : public GameObject {
     int getPlayerReward() const; 
     float getSpeed() const; 
     int getLevel() const;
+    sf::Vector2f getPosition() const;
+    Waypoint* getCurrentWaypoint() const;
+    void setCurrentWaypoint(Waypoint* waypoint);
+    void setAnimationIndex(unsigned int index);
+  
+  MovementDirection getMovementDirection();
+  
+  void updatePosition(float x, float y);
+
+  bool isAtNextWaypoint();
 
   /** @brief Draw a Critter.
   *  @param game_window Reference to the window, passed in so that Critters
@@ -42,9 +58,7 @@ class Critter : public GameObject {
   virtual void update() = 0;
 
   protected:
-    /** @brief Handles the animated object. 
-     */
-    AnimationHandler animation_handler;
+    Waypoint* current_waypoint;
 
     /** @brief Pure virtualized initialization function for Critter.
     *   @return Void.
@@ -54,6 +68,10 @@ class Critter : public GameObject {
     /** @brief Health of the Critter.
       */
     int hit_points;
+
+    /** @brief Position of the Critter.
+      */
+    sf::Vector2f position;
 
     /** @brief Rate at which the critter can steal coins from the player.
       */

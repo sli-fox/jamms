@@ -4,12 +4,19 @@
   *  Calls initializeCritter() to set attributes of the 
   *  WhiteCat object
   */
-WhiteCat::WhiteCat() {
+WhiteCat::WhiteCat(Waypoint* starting_waypoint) {
+  this->current_waypoint = starting_waypoint;
+  
+  //Set starting position
+  this->position = current_waypoint->position;
+  
   // Set up animation
-  Animation animation1(0, 2, 0.5f), animation2(0, 3, 0.5f);
+  Animation animation1(0, 2, 0.5f), animation2(0, 2, 0.5f), animation3(0, 2, 0.5f), animation4(0, 2, 0.5f);
   std::vector<Animation> animations;
   animations.push_back(animation1);
   animations.push_back(animation2);
+  animations.push_back(animation3);
+  animations.push_back(animation4);
   initializeCritter(animations);
 }
 
@@ -20,9 +27,9 @@ void WhiteCat::initializeCritter(const std::vector<Animation>& animations) {
   this->hit_points = 2;
   this->steal_strength = 4;
   this->player_reward = 5;
-  this->speed = 2.0f;
+  this->speed = 20.0f;
   this->level = 1;
-  this->animation_index = 1;   // initialized to 1 for first line in sprite sheet
+  this->animation_index = this->getMovementDirection();   
 
   // Set WhiteCat texture
   TextureManager& t_manager = TextureManager::getInstance();
@@ -30,9 +37,7 @@ void WhiteCat::initializeCritter(const std::vector<Animation>& animations) {
 
   /* Set up the initial animation */
   // Note, pixels are hardcoded for now for the frame size
-  this->animation_handler.frame_size = sf::IntRect(0, 0, 32, 32);
-  
-  //this->animation_handler.setCurrentAnimation(1); 
+  this->animation_handler.frame_size = sf::IntRect(0, 0, 32, 32); 
 
   //Add animations set in the constructor to handler
   for (auto animation : animations) {
