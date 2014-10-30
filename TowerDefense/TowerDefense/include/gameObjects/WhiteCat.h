@@ -7,17 +7,22 @@
  */
 
 #pragma once
+#include <SFML/Graphics.hpp>
 #include <gameObjects/Critter.h>
-#include <utils/animation.h>
+#include <utils/Animation.h>
+#include <utils/Waypoint.h>
+
+class GameStatePlay;  //Allows class to know about GameStatePlay
 
 /** @brief Class for WhiteCat.
  *  Subclass of Critter. 
  */
 class WhiteCat : public Critter {
   public:
-
-    WhiteCat();
-    ~WhiteCat() {};
+   
+    WhiteCat() {}
+    WhiteCat(sf::Vector2f starting_position);
+    ~WhiteCat() {}
 
     /** @brief Update changes in the WhiteCat.
       */

@@ -27,6 +27,9 @@ class Critter : public GameObject {
     int getPlayerReward() const; 
     float getSpeed() const; 
     int getLevel() const;
+    sf::Vector2f getPosition() const;
+
+  void updatePosition(float x, float y);
 
   /** @brief Draw a Critter.
   *  @param game_window Reference to the window, passed in so that Critters
@@ -54,6 +57,10 @@ class Critter : public GameObject {
     /** @brief Health of the Critter.
       */
     int hit_points;
+
+    /** @brief Position of the Critter.
+      */
+    sf::Vector2f position;
 
     /** @brief Rate at which the critter can steal coins from the player.
       */

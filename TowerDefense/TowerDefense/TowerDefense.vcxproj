@@ -124,6 +124,7 @@
     <ClCompile Include="test\TextureManagerTest.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="resources\images\WhiteCatSpriteSheet.png" />
     <Image Include="resources\MainMenuScreen.png" />
     <Image Include="resources\SplashScreen.png" />
   </ItemGroup>

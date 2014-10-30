@@ -4,6 +4,27 @@
   *  and centers the view on the center of the window.
   */
 GameStatePlay::GameStatePlay(Game* game) {
+  //Set up waypoints
+  sf::Vector2f v1(30.0f, 50.0f);
+  sf::Vector2f v2(200.0f, 50.0f);
+  sf::Vector2f v3(200.0f, 180.0f);
+  sf::Vector2f v4(300.0f, 180.0f);
+  sf::Vector2f v5(300.0f, 50.0f);
+  sf::Vector2f v6(500.0f, 50.0f);
+
+  std::vector<sf::Vector2f> path_points;
+  path_points.push_back(v1);
+  path_points.push_back(v2);
+  path_points.push_back(v3);
+  path_points.push_back(v4);
+  path_points.push_back(v5);
+  path_points.push_back(v6);
+
+  this->current_waypoints = addWaypoints(path_points);
+      std::cout << current_waypoints[1].next_waypoint->position.x << std::endl;
+
+
+  this->mew = new WhiteCat(getStartingWaypoint()->position);
   this->game = game;
   
   // getSize() returns a sf::Vector2i object and must be cast into a sf::Vector2f
@@ -25,32 +46,22 @@ void GameStatePlay::draw(const float delta_time) {
 
   //Draw map
   this->map.draw(this->game->game_window);
+
+  drawWaypoints(this->current_waypoints, this->game->game_window);
   
   //Draw Critter
-  this->mew.draw(this->game->game_window, delta_time);
-
-  //Set up waypoints
-  sf::Vector2f v1(30.0f, 50.0f);
-  sf::Vector2f v2(200.0f, 50.0f);
-  sf::Vector2f v3(200.0f, 180.0f);
-  sf::Vector2f v4(300.0f, 180.0f);
-  sf::Vector2f v5(300.0f, 50.0f);
-  sf::Vector2f v6(500.0f, 50.0f);
-
-  std::vector<sf::Vector2f> path_points;
-  path_points.push_back(v1);
-  path_points.push_back(v2);
-  path_points.push_back(v3);
-  path_points.push_back(v4);
-  path_points.push_back(v5);
-  path_points.push_back(v6);
-
-  std::vector<Waypoint> waypoints = addWaypoints(path_points);
-  drawWaypoints(waypoints, this->game->game_window);
+  this->mew->draw(this->game->game_window, delta_time);
+ 
 }
 
 void GameStatePlay::update(const float delta_time) {
-  this->mew.draw(this->game->game_window, delta_time);
+  this->mew->draw(this->game->game_window, delta_time);
+  
+  
+  
+  while (mew->getPosition().x < 200) {
+    mew->updatePosition(5*delta_time, 0);
+  }
 }
 
 void GameStatePlay::handleInput() {
@@ -80,7 +91,7 @@ void GameStatePlay::handleInput() {
  */
 std::vector<Waypoint> GameStatePlay::addWaypoints(std::vector<sf::Vector2f> path_points) {
   std::vector<Waypoint> waypoints;
-      
+
   //Initialize waypoints
   for (int i = 0; i < path_points.size(); ++i) {
     Waypoint waypoint(path_points[i]);
