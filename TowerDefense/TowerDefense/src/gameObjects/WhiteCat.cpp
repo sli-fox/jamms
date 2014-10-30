@@ -4,9 +4,11 @@
   *  Calls initializeCritter() to set attributes of the 
   *  WhiteCat object
   */
-WhiteCat::WhiteCat(sf::Vector2f starting_position) {
+WhiteCat::WhiteCat(Waypoint* starting_waypoint) {
+  this->current_waypoint = starting_waypoint;
+  
   //Set starting position
-  this->position = starting_position;
+  this->position = current_waypoint->position;
   
   // Set up animation
   Animation animation1(0, 2, 0.5f), animation2(0, 2, 0.5f), animation3(0, 2, 0.5f), animation4(0, 2, 0.5f);
@@ -25,9 +27,9 @@ void WhiteCat::initializeCritter(const std::vector<Animation>& animations) {
   this->hit_points = 2;
   this->steal_strength = 4;
   this->player_reward = 5;
-  this->speed = 2.0f;
+  this->speed = 20.0f;
   this->level = 1;
-  this->animation_index = 2;   // initialized to 1 for first line in sprite sheet
+  this->animation_index = this->getMovementDirection();   
 
   // Set WhiteCat texture
   TextureManager& t_manager = TextureManager::getInstance();

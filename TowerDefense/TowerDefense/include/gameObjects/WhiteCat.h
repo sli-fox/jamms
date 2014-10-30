@@ -21,8 +21,10 @@ class WhiteCat : public Critter {
   public:
    
     WhiteCat() {}
-    WhiteCat(sf::Vector2f starting_position);
+    WhiteCat(Waypoint* starting_waypoint);
     ~WhiteCat() {}
+
+
 
     /** @brief Update changes in the WhiteCat.
       */

@@ -21,13 +21,10 @@ GameStatePlay::GameStatePlay(Game* game) {
   path_points.push_back(v6);
 
   this->current_waypoints = addWaypoints(path_points);
-      std::cout << current_waypoints[1].next_waypoint->position.x << std::endl;
 
-
-  this->mew = new WhiteCat(getStartingWaypoint()->position);
+  this->mew = new WhiteCat(getStartingWaypoint());
   this->game = game;
   
-  // getSize() returns a sf::Vector2i object and must be cast into a sf::Vector2f
   sf::Vector2f position = sf::Vector2f(this->game->game_window.getSize());
   this->_gameView.setSize(position);
   this->_guiView.setSize(position);
@@ -57,11 +54,9 @@ void GameStatePlay::draw(const float delta_time) {
 void GameStatePlay::update(const float delta_time) {
   this->mew->draw(this->game->game_window, delta_time);
   
-  
-  
-  while (mew->getPosition().x < 200) {
-    mew->updatePosition(5*delta_time, 0);
-  }
+  moveCritter(mew, delta_time);
+
+
 }
 
 void GameStatePlay::handleInput() {
@@ -103,6 +98,9 @@ std::vector<Waypoint> GameStatePlay::addWaypoints(std::vector<sf::Vector2f> path
     if (i != waypoints.size() - 1) {
       waypoints[i].next_waypoint = &waypoints[i+1];
     }
+    if (i == waypoints.size() - 1){
+      waypoints[i].next_waypoint = NULL;
+    }
   }
 
   return waypoints;
@@ -111,6 +109,32 @@ std::vector<Waypoint> GameStatePlay::addWaypoints(std::vector<sf::Vector2f> path
 void GameStatePlay::drawWaypoints(std::vector<Waypoint> waypoints, sf::RenderWindow& game_window) {
   for (Waypoint waypoint: waypoints) {
     waypoint.draw(game_window);
+  }
+}
+
+void GameStatePlay::moveCritter(Critter* critter, const float delta_time) {
+ if (!critter->isAtNextWaypoint()) {
+   switch (critter->getMovementDirection()) {
+      case Critter::MovementDirection::RIGHT:
+        critter->updatePosition(critter->getSpeed()*delta_time, 0);
+        break;
+      case Critter::MovementDirection::LEFT:
+        critter->updatePosition(-(critter->getSpeed()*delta_time), 0);
+        break;
+      case Critter::MovementDirection::UP:
+        critter->updatePosition(0, -(critter->getSpeed()*delta_time));
+        break;
+      case Critter::MovementDirection::DOWN:
+        critter->updatePosition(0, critter->getSpeed()*delta_time);
+        break;
+    }
+  } else {
+    if (critter->getCurrentWaypoint()->next_waypoint->next_waypoint) {
+        critter->setCurrentWaypoint(critter->getCurrentWaypoint()->next_waypoint);
+       
+        Critter::MovementDirection direction = critter->getMovementDirection();
+        critter->setAnimationIndex(direction);
+       }
   }
 }
 

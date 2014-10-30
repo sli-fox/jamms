@@ -9,6 +9,7 @@
 
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <SFML/Graphics/Transformable.hpp>
 #include <gameStates/GameState.h>
 #include <gameStates/GameStatePlay.h>
 #include <managers/GameObjectManager.h>
@@ -79,6 +80,8 @@ class GameStatePlay : public GameState {
       */
      void drawWaypoints(std::vector<Waypoint> waypoints, sf::RenderWindow& game_window);
 	 
+     void moveCritter(Critter* critter, const float delta_time);
+     
      void mapCommandLibrary(const int tileX, const int tileY, sf::Keyboard::Key thisKey);
 
 };
