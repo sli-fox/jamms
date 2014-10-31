@@ -4,6 +4,10 @@
   *  and centers the view on the center of the window.
   */
 GameStatePlay::GameStatePlay(Game* game) {
+
+	//Initialize tower array with map's dimensions
+	tower_manager.setArraySize(map.getMapWidth(), map.getMapHeight());
+	
   //Set up waypoints
   sf::Vector2f v1(30.0f, 50.0f);
   sf::Vector2f v2(200.0f, 50.0f);
@@ -21,8 +25,9 @@ GameStatePlay::GameStatePlay(Game* game) {
   path_points.push_back(v6);
 
   this->current_waypoints = addWaypoints(path_points);
-
+  
   this->mew = new WhiteCat(getStartingWaypoint());
+  this->blacky = new BlackCat(getStartingWaypoint());
   this->game = game;
   
   sf::Vector2f position = sf::Vector2f(this->game->game_window.getSize());
@@ -43,26 +48,55 @@ void GameStatePlay::draw(const float delta_time) {
 
   //Draw map
   this->map.draw(this->game->game_window);
-
   drawWaypoints(this->current_waypoints, this->game->game_window);
   
   //Draw Critter
   this->mew->draw(this->game->game_window, delta_time);
- 
+  this->blacky->draw(this->game->game_window, delta_time);
+   
+  //Draw Towers
+  this->tower_manager.draw(this->game->game_window);
+  if(!tower_manager.outOfBound(tileX, tileY) && !tower_manager.isTileFree(tileX, tileY))
+		this->game->game_window.draw(tower_manager.getTower(tileX,tileY)->getRangeShape());
+
+  //Draw Money [TO BE IMPORTED INTO PLAYER CLASS]
+  //For some reason, encapsulating the below code into Tower::displayWallet() to call it with
+  // "this->game->game_window.draw(std::to_string(Tower::getWallet())" crashes the game...
+	sf::Font font;
+	font.loadFromFile("resources/helveticaneue-webfont.ttf");
+	sf::Text text(std::to_string(Tower::getWallet()), font);
+	text.setPosition(0, map.getMapHeight()*32);
+	this->game->game_window.draw(text);
+
 }
 
 void GameStatePlay::update(const float delta_time) {
   this->mew->draw(this->game->game_window, delta_time);
+  this->blacky->draw(this->game->game_window, delta_time);
   
   moveCritter(mew, delta_time);
 
-
 }
+
+
 
 void GameStatePlay::handleInput() {
   sf::Event event;
+  	localPosition = sf::Mouse::getPosition(this->game->game_window);
+	tileX = localPosition.x/32;
+	tileY = localPosition.y/32;
+	
+	//Checking if ANY tower on the map can attack Blacky (black cat...)
+	for(int i = 0; i < map.getMapWidth(); ++i) {
+		for(int j = 0; j < map.getMapHeight(); ++j) {
+			if(tower_manager.getTower(i,j)->attack(blacky)) {
+				std::cout << "ATTACKING!!! ";
+			}
+		}
+	}
 
   while(this->game->game_window.pollEvent(event)) {
+
     switch(event.type) {
       /** Close the window */
       case sf::Event::Closed: {
@@ -70,10 +104,10 @@ void GameStatePlay::handleInput() {
         break;
       }
 	  case sf::Event::KeyPressed: {
-       sf::Vector2i localPosition = sf::Mouse::getPosition(this->game->game_window);
-	   int tileX = localPosition.x/32;
-	   int tileY = localPosition.y/32;
+	   blacky->controlCat(event.key.code);	// for controlling blackcat
+	   //mew->controlCat(event.key.code);
 	   mapCommandLibrary(tileX, tileY, event.key.code);
+	   towerCommandLibrary(tileX, tileY, event.key.code);
 	   break;
       }
       default: break;
@@ -175,6 +209,7 @@ void GameStatePlay::mapCommandLibrary(const int tileX, const int tileY, sf::Keyb
 			}
 			if(thisKey == sf::Keyboard::L){
 				map.load("testmap.xml");
+
 			}
 			if(thisKey == sf::Keyboard::K){
 				map.save("testmap.xml");
@@ -191,5 +226,30 @@ void GameStatePlay::mapCommandLibrary(const int tileX, const int tileY, sf::Keyb
 		}
 }
 
+void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY, sf::Keyboard::Key thisKey){
+	if(!tower_manager.outOfBound(tileX, tileY) && map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY) {
+		if(thisKey == sf::Keyboard::Num1){
+			tower_manager.buyTower(Tower::TowerType::ShihTzu, tileX, tileY);	
+		}
+		if(thisKey == sf::Keyboard::Num2){
+			tower_manager.buyTower(Tower::TowerType::Dalmatian, tileX, tileY);
+		}
+		if(thisKey == sf::Keyboard::Num3){
+			tower_manager.buyTower(Tower::TowerType::Bulldog, tileX, tileY);
+		}
+		if(thisKey == sf::Keyboard::U && !tower_manager.isTileFree(tileX, tileY)){
+			tower_manager.getTower(tileX, tileY)->upgradeTower();
+		}
+		if(thisKey == sf::Keyboard::BackSpace){
+			tower_manager.sellTower(tileX, tileY);
+		}
+		if(thisKey == sf::Keyboard::M){
+			tower_manager.displayTowerArray();
+		}
+	}
+}
+
+
 GameObjectManager GameStatePlay::_game_object_manager;
 Map GameStatePlay::map(20,20);
+TowerManager& GameStatePlay::tower_manager = TowerManager::getInstance();

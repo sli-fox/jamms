@@ -6,6 +6,23 @@
 #include <gameStates/GameStateStart.h>
 
 int main(int argc, char** argv[]) {
+
+	std::cout << std::endl <<
+	"      ('`-'-/').___..--'''`-._\n" <<
+	"       `6_ 6  )   `-.  (     ).`-.__.')\n" <<
+	"  MEW! (_Y_.)'  ._   )  `._ `. ``-..-'\n" <<
+	"     _..`--'_..-_/  /--'_.' ,'\n" <<
+	"    (il),-''  (li),'  ((!.-'\n\n\n";
+
+	std::cout	<< "Game Controls:\n"
+				<< "L - Load map\n"
+				<< "Arrow Keys - Move cat\n"
+				<< "1, 2, 3 - Buy towers\n"
+				<< "U - Upgrade\n"
+				<< "Backspace - Sell tower\n\n";
+
+
+
   // Create the game state manager
   Game game;
 
