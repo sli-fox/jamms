@@ -494,4 +494,3 @@ void Map::draw(sf::RenderWindow& gameWindow){
 		}
 	}
 }
-
