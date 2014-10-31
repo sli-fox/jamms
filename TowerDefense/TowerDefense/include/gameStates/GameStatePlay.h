@@ -75,6 +75,11 @@ class GameStatePlay : public GameState {
       */
      std::vector<Waypoint> addWaypoints(std::vector<sf::Vector2f> path_points);
 
+     /** @brief Create waypoint vector from the map's path 
+      *  @return Vector containing positions.
+      */
+     std::vector<sf::Vector2f> getWaypointsFromMapPath();
+
      /**  @brief Draw all waypoints
       *   @return Void.
       */

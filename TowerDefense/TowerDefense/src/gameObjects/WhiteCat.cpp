@@ -24,6 +24,7 @@ WhiteCat::WhiteCat(Waypoint* starting_waypoint) {
   */
 void WhiteCat::initializeCritter(const std::vector<Animation>& animations) {
   // Attributes for a white cat
+  this->isActive = false;
   this->hit_points = 2;
   this->steal_strength = 4;
   this->player_reward = 5;
