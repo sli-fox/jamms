@@ -14,15 +14,18 @@
 #include <gameStates/GameStatePlay.h>
 #include <managers/GameObjectManager.h>
 #include <gameObjects/WhiteCat.h>
+#include <gameObjects/BlackCat.h>
 #include <utils/Waypoint.h>
 #include <iostream>
 #include <Map.h>
+#include <managers/TowerManager.h>
 
 /** @brief Game state that represents the gameplay.
  */
 class GameStatePlay : public GameState {
   public:
-    WhiteCat* mew; 
+    WhiteCat* mew;
+    BlackCat* blacky;
 
     /** @brief Constructor that takes in a pointer to the Game
      *  that created them.
@@ -56,6 +59,11 @@ class GameStatePlay : public GameState {
 
 
    private:
+
+	sf::Vector2i  localPosition;
+	int tileX, tileY;
+	sf::CircleShape range;
+		 
      /** @brief Camera view for the gameplay displayed to the window.
       */
      sf::View _gameView;
@@ -65,9 +73,9 @@ class GameStatePlay : public GameState {
      sf::View _guiView;
 
      std::vector<Waypoint> current_waypoints;
-
+	 
      static GameObjectManager _game_object_manager;
-	   
+     static TowerManager& tower_manager;
      static Map map;
 
      /** @brief Add waypoints 
@@ -83,5 +91,6 @@ class GameStatePlay : public GameState {
      void moveCritter(Critter* critter, const float delta_time);
      
      void mapCommandLibrary(const int tileX, const int tileY, sf::Keyboard::Key thisKey);
+     void towerCommandLibrary(const int tileX, const int tileY, sf::Keyboard::Key thisKey);
 
 };

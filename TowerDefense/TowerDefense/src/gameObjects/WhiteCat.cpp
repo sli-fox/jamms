@@ -4,6 +4,7 @@
   *  Calls initializeCritter() to set attributes of the 
   *  WhiteCat object
   */
+
 WhiteCat::WhiteCat(Waypoint* starting_waypoint) {
   this->current_waypoint = starting_waypoint;
   
@@ -33,7 +34,7 @@ void WhiteCat::initializeCritter(const std::vector<Animation>& animations) {
 
   // Set WhiteCat texture
   TextureManager& t_manager = TextureManager::getInstance();
-  this->sprite.setTexture(t_manager.loadTexture("resources/images/WhiteCatSpriteSheet.png"));
+  this->sprite.setTexture(t_manager.loadTexture("resources/images/critters/WhiteCatSpriteSheet.png"));
 
   /* Set up the initial animation */
   // Note, pixels are hardcoded for now for the frame size
@@ -49,4 +50,24 @@ void WhiteCat::initializeCritter(const std::vector<Animation>& animations) {
 
 void WhiteCat::update() {
 
+}
+
+//Controlling the cat with Arrow Keys
+void WhiteCat::controlCat(sf::Keyboard::Key arrowKey) {
+	if(arrowKey == sf::Keyboard::Up) {
+		this->updatePosition(0, -3);
+		this->animation_index = 3;
+	}
+	if(arrowKey == sf::Keyboard::Right) {
+		this->updatePosition(+3, 0);
+		this->animation_index = 2;
+	}
+	if(arrowKey == sf::Keyboard::Down) {
+		this->updatePosition(0, +3);
+		this->animation_index = 0;
+	}
+	if(arrowKey == sf::Keyboard::Left) {
+		this->updatePosition(-3, 0);
+		this->animation_index = 1;
+	}
 }
