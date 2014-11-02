@@ -25,6 +25,7 @@ class Critter : public GameObject {
     AnimationHandler animation_handler;
 
     bool isActive;
+    bool isAtEndTile;
     
     Critter() {};
     virtual ~Critter() {};

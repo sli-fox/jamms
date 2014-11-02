@@ -65,6 +65,11 @@ void GameStatePlay::update(const float delta_time) {
   
   if (mew->isActive)
     moveCritter(mew, delta_time);
+  
+  mew->isAtEndTile = checkIfAtEndTile(mew);
+  
+  if (mew->isAtEndTile)
+    std::cout << "Mew: I'm at the end tile!" << std::endl; 
 
 }
 
@@ -175,6 +180,15 @@ void GameStatePlay::drawWaypoints(std::vector<Waypoint> waypoints, sf::RenderWin
     waypoint.draw(game_window);
   }
 }
+
+bool GameStatePlay::checkIfAtEndTile(Critter* critter) {
+  if (int(critter->getPosition().x) == this->current_waypoints[current_waypoints.size() - 1].position.x 
+   && int(critter->getPosition().y) == this->current_waypoints[current_waypoints.size() - 1].position.y) 
+    return true;
+  else
+    return false;
+}
+
 
 void GameStatePlay::moveCritter(Critter* critter, const float delta_time) {
  if (!critter->isAtNextWaypoint()) {
