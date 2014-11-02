@@ -11,6 +11,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <stack>
+#include "Map.h"
 
 class GameState;  //Allows Game to know about GameState
 
@@ -19,9 +20,11 @@ class GameState;  //Allows Game to know about GameState
  *  of the states and info storage in every game state.
  */
 class Game {
-  public:
+public:  
     Game();
     ~Game();
+
+	static Map map;
 
    /** @brief Stack for storing the game states.
     */

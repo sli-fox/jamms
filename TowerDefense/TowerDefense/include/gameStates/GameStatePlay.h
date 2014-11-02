@@ -11,7 +11,6 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Transformable.hpp>
 #include <gameStates/GameState.h>
-#include <gameStates/GameStatePlay.h>
 #include <managers/GameObjectManager.h>
 #include <gameObjects/WhiteCat.h>
 #include <gameObjects/BlackCat.h>
@@ -76,7 +75,6 @@ class GameStatePlay : public GameState {
 	 
      static GameObjectManager _game_object_manager;
      static TowerManager& tower_manager;
-     static Map map;
 
      /** @brief Add waypoints 
       *  @return Vector containing Waypoint pointers.
@@ -90,7 +88,6 @@ class GameStatePlay : public GameState {
 	 
      void moveCritter(Critter* critter, const float delta_time);
      
-     void mapCommandLibrary(const int tileX, const int tileY, sf::Keyboard::Key thisKey);
      void towerCommandLibrary(const int tileX, const int tileY, sf::Keyboard::Key thisKey);
 
 };

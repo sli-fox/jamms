@@ -4,9 +4,9 @@
   *  and centers the view on the center of the window.
   */
 GameStatePlay::GameStatePlay(Game* game) {
-
+	this->game = game;
 	//Initialize tower array with map's dimensions
-	tower_manager.setArraySize(map.getMapWidth(), map.getMapHeight());
+	tower_manager.setArraySize(this->game->map.getMapWidth(), this->game->map.getMapHeight());
 	
   //Set up waypoints
   sf::Vector2f v1(30.0f, 50.0f);
@@ -28,7 +28,6 @@ GameStatePlay::GameStatePlay(Game* game) {
   
   this->mew = new WhiteCat(getStartingWaypoint());
   this->blacky = new BlackCat(getStartingWaypoint());
-  this->game = game;
   
   sf::Vector2f position = sf::Vector2f(this->game->game_window.getSize());
   this->_gameView.setSize(position);
@@ -47,7 +46,7 @@ void GameStatePlay::draw(const float delta_time) {
   this->game->game_window.clear(sf::Color::Black);
 
   //Draw map
-  this->map.draw(this->game->game_window);
+  this->game->map.draw(this->game->game_window);
   drawWaypoints(this->current_waypoints, this->game->game_window);
   
   //Draw Critter
@@ -65,7 +64,7 @@ void GameStatePlay::draw(const float delta_time) {
 	sf::Font font;
 	font.loadFromFile("resources/helveticaneue-webfont.ttf");
 	sf::Text text(std::to_string(Tower::getWallet()), font);
-	text.setPosition(0, map.getMapHeight()*32);
+	text.setPosition(0, this->game->map.getMapHeight()*32);
 	this->game->game_window.draw(text);
 
 }
@@ -78,8 +77,6 @@ void GameStatePlay::update(const float delta_time) {
 
 }
 
-
-
 void GameStatePlay::handleInput() {
   sf::Event event;
   	localPosition = sf::Mouse::getPosition(this->game->game_window);
@@ -87,8 +84,8 @@ void GameStatePlay::handleInput() {
 	tileY = localPosition.y/32;
 	
 	//Checking if ANY tower on the map can attack Blacky (black cat...)
-	for(int i = 0; i < map.getMapWidth(); ++i) {
-		for(int j = 0; j < map.getMapHeight(); ++j) {
+	for(int i = 0; i < this->game->map.getMapWidth(); ++i) {
+		for(int j = 0; j < this->game->map.getMapHeight(); ++j) {
 			if(tower_manager.getTower(i,j)->attack(blacky)) {
 				std::cout << "ATTACKING!!! ";
 			}
@@ -106,7 +103,6 @@ void GameStatePlay::handleInput() {
 	  case sf::Event::KeyPressed: {
 	   blacky->controlCat(event.key.code);	// for controlling blackcat
 	   //mew->controlCat(event.key.code);
-	   mapCommandLibrary(tileX, tileY, event.key.code);
 	   towerCommandLibrary(tileX, tileY, event.key.code);
 	   break;
       }
@@ -172,62 +168,8 @@ void GameStatePlay::moveCritter(Critter* critter, const float delta_time) {
   }
 }
 
-void GameStatePlay::mapCommandLibrary(const int tileX, const int tileY, sf::Keyboard::Key thisKey){
-		try{
-			if(thisKey == sf::Keyboard::S){
-				map.addTile("resources/images/start.png", "start", tileX, tileY);	
-			}
-			if(thisKey == sf::Keyboard::E){
-				map.addTile("resources/images/end.png", "end", tileX, tileY);
-			}
-			if(thisKey == sf::Keyboard::P){
-				map.addTile("resources/images/path.png", "path", tileX, tileY);
-			}
-			if(thisKey == sf::Keyboard::A){
-				map.addTile("resources/images/scenery.png", "scenery", tileX, tileY);
-			}
-			if(thisKey == sf::Keyboard::D){
-				map.addTile("resources/images/dead.png", "dead", tileX, tileY);
-			}
-			if(thisKey == sf::Keyboard::R){
-				map.removeTile(tileX, tileY);
-			}
-			if(thisKey == sf::Keyboard::G){
-				map.removeGameObject(tileX, tileY);
-			}
-			if(thisKey == sf::Keyboard::F){
-				map.fillMap();
-			}
-			if(thisKey == sf::Keyboard::B){
-				map.blankMap();
-			}
-			if(thisKey == sf::Keyboard::C){
-				map.placeCritter("resources/images/critter.png", tileX, tileY);
-			}
-			if(thisKey == sf::Keyboard::T){
-				map.placeTower("resources/images/tower.png", tileX, tileY);
-			}
-			if(thisKey == sf::Keyboard::L){
-				map.load("testmap.xml");
-
-			}
-			if(thisKey == sf::Keyboard::K){
-				map.save("testmap.xml");
-			}
-			if(thisKey == sf::Keyboard::V){
-				if(map.isMapValid())
-					cout << "map is valid: true" << endl;
-				else
-					cout << "map is valid: false" <<endl;
-			}
-		}
-		catch(std::exception& e){
-			cout << e.what() << endl;
-		}
-}
-
 void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY, sf::Keyboard::Key thisKey){
-	if(!tower_manager.outOfBound(tileX, tileY) && map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY) {
+	if(this->game->map.getTile(tileX, tileY) != nullptr && this->game->map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY) {
 		if(thisKey == sf::Keyboard::Num1){
 			tower_manager.buyTower(Tower::TowerType::ShihTzu, tileX, tileY);	
 		}
@@ -251,5 +193,4 @@ void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY, sf::Ke
 
 
 GameObjectManager GameStatePlay::_game_object_manager;
-Map GameStatePlay::map(20,20);
 TowerManager& GameStatePlay::tower_manager = TowerManager::getInstance();
