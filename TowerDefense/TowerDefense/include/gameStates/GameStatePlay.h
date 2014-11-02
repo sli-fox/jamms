@@ -60,9 +60,9 @@ class GameStatePlay : public GameState {
 
    private:
 
-	sf::Vector2i  localPosition;
-	int tileX, tileY;
-	sf::CircleShape range;
+	    sf::Vector2i  localPosition;
+	    int tileX, tileY;
+	    sf::CircleShape range;
 		 
      /** @brief Camera view for the gameplay displayed to the window.
       */
@@ -82,6 +82,11 @@ class GameStatePlay : public GameState {
       *  @return Vector containing Waypoint pointers.
       */
      std::vector<Waypoint> addWaypoints(std::vector<sf::Vector2f> path_points);
+
+     /** @brief Create waypoint vector from the map's path 
+      *  @return Vector containing positions.
+      */
+     std::vector<sf::Vector2f> getWaypointsFromMapPath();
 
      /**  @brief Draw all waypoints
       *   @return Void.
