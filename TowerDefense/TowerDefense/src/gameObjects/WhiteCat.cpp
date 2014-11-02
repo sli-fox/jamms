@@ -29,7 +29,7 @@ void WhiteCat::initializeCritter(const std::vector<Animation>& animations) {
   this->hit_points = 2;
   this->steal_strength = 4;
   this->player_reward = 5;
-  this->speed = 20.0f;
+  this->speed = 25.0f;
   this->level = 1;
   this->animation_index = this->getMovementDirection();   
 

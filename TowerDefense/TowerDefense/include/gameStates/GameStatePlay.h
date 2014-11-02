@@ -60,9 +60,9 @@ class GameStatePlay : public GameState {
 
    private:
 
-	sf::Vector2i  localPosition;
-	int tileX, tileY;
-	sf::CircleShape range;
+	    sf::Vector2i  localPosition;
+	    int tileX, tileY;
+	    sf::CircleShape range;
 		 
      /** @brief Camera view for the gameplay displayed to the window.
       */

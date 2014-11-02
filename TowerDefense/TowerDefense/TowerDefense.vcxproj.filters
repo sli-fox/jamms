@@ -223,9 +223,6 @@
     <Image Include="resources\SplashScreen.png">
       <Filter>Resource Files\Images</Filter>
     </Image>
-    <Image Include="resources\images\WhiteCatSpriteSheet.png">
-      <Filter>Resource Files\Images</Filter>
-    </Image>
     <Image Include="resources\images\towers\AntibacterialTower_0.png">
       <Filter>Resource Files\Images\Towers</Filter>
     </Image>
@@ -252,6 +249,9 @@
     </Image>
     <Image Include="resources\images\towers\WhiteBloodCellTower_2.png">
       <Filter>Resource Files\Images\Towers</Filter>
+    </Image>
+    <Image Include="resources\images\critters\WhiteCatSpriteSheet.png">
+      <Filter>Resource Files\Images</Filter>
     </Image>
   </ItemGroup>
 </Project>

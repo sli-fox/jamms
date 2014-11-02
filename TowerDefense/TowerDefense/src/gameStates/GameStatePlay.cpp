@@ -4,27 +4,13 @@
   *  and centers the view on the center of the window.
   */
 GameStatePlay::GameStatePlay(Game* game) {
+  //Load the test map
+  map.load("testmap.xml");
 
 	//Initialize tower array with map's dimensions
 	tower_manager.setArraySize(map.getMapWidth(), map.getMapHeight());
-	
-  //Set up waypoints
-  sf::Vector2f v1(30.0f, 50.0f);
-  sf::Vector2f v2(200.0f, 50.0f);
-  sf::Vector2f v3(200.0f, 180.0f);
-  sf::Vector2f v4(300.0f, 180.0f);
-  sf::Vector2f v5(300.0f, 50.0f);
-  sf::Vector2f v6(500.0f, 50.0f);
 
-  std::vector<sf::Vector2f> path_points;
-  path_points.push_back(v1);
-  path_points.push_back(v2);
-  path_points.push_back(v3);
-  path_points.push_back(v4);
-  path_points.push_back(v5);
-  path_points.push_back(v6);
-
-  this->current_waypoints = addWaypoints(path_points);
+  this->current_waypoints = addWaypoints(getWaypointsFromMapPath());
   
   this->mew = new WhiteCat(getStartingWaypoint());
   this->blacky = new BlackCat(getStartingWaypoint());
@@ -55,9 +41,6 @@ void GameStatePlay::draw(const float delta_time) {
   
   //Draw Critter
   this->mew->draw(this->game->game_window, delta_time);
-
-  //this->current_waypoints = addWaypoints(getWaypointsFromMapPath());
-
   this->blacky->draw(this->game->game_window, delta_time);
    
   //Draw Towers
@@ -82,10 +65,6 @@ void GameStatePlay::update(const float delta_time) {
   
   if (mew->isActive)
     moveCritter(mew, delta_time);
-
-  //getWaypointsFromMapPath();
-  moveCritter(mew, delta_time);
-
 
 }
 
@@ -153,46 +132,43 @@ std::vector<Waypoint> GameStatePlay::addWaypoints(std::vector<sf::Vector2f> path
 
 std::vector<sf::Vector2f> GameStatePlay::getWaypointsFromMapPath() {
   std::vector<sf::Vector2f> waypoint_positions;
-  std::vector<const Tile* const> path_tiles;
-  deque<const Tile* const> map_path = this->map.getMapPath();
-
-  // Put deque elements in a vector
-  for (std::deque<const Tile* const>::const_iterator it = map_path.begin(); it != map_path.end(); ++it) {
-  path_tiles.push_back(*it);
-  }
+  deque<const Tile* const> path_tiles = this->map.getMapPath();
 
   // Add starting waypoint position
-  waypoint_positions.push_back(sf::Vector2f(path_tiles[0]->getTileX()*32, path_tiles[0]->getTileY()*32));
+  waypoint_positions.push_back(sf::Vector2f(path_tiles[0]->getTileX()*32 + 16, path_tiles[0]->getTileY()*32 + 16));
   
-  for (int i = 0; i < path_tiles.size() - 1; ++i) {
-    int current_x = path_tiles[i]->getTileX()*32;
-    int current_y = path_tiles[i]->getTileY()*32;
-    int next_x = path_tiles[i+1]->getTileX()*32;
-    int next_y = path_tiles[i+1]->getTileY()*32;
+  // Any path with a direction change must have at least 4 tiles
+  if (path_tiles.size() > 3) {
+    // Set current tile
+    const Tile* current_tile = path_tiles[0];
 
-    if (next_x - current_x == 0) {
-      for (int j = i + 1; j < path_tiles.size() - 1; ++j) {
-        if (path_tiles[j + 1]->getTileX()*32 != next_x) {
-          waypoint_positions.push_back(sf::Vector2f(path_tiles[j + 1]->getTileX()*32, path_tiles[j + 1]->getTileY()*32));
-        }
-      }
-    }
+    for (int i = 0; i < path_tiles.size() - 1; ++i) {
+      if (i + 3 == path_tiles.size() - 1)   // No change of direction can happen in less than 4 tiles
+        break;
 
-    if (next_y - current_y == 0) {
-      for (int j = i + 1; j < path_tiles.size() - 1; ++j) {
-        if (path_tiles[j + 1]->getTileY()*32 != next_y) {
-          waypoint_positions.push_back(sf::Vector2f(path_tiles[j + 1]->getTileX()*32, path_tiles[j + 1]->getTileY()*32));
+      int next_x = path_tiles[i+1]->getTileX();
+      int next_y = path_tiles[i+1]->getTileY();
+
+      if (current_tile->getTileX() == next_x) {   // Path is vertical
+        // Check if the tile after the next tile changes direction
+        if (next_x != path_tiles[i+2]->getTileX()) {
+          waypoint_positions.push_back(sf::Vector2f(path_tiles[i+1]->getTileX()*32 + 16, path_tiles[i+1]->getTileY()*32 + 16));
         }
+        current_tile = path_tiles[i+1];
+      } 
+      else if (current_tile->getTileY() == next_y) { // Path is horizontal
+        // Check if the tile after the next tile changes direction
+        if (next_y != path_tiles[i+2]->getTileY()) {
+          waypoint_positions.push_back(sf::Vector2f(path_tiles[i+1]->getTileX()*32 + 16, path_tiles[i+1]->getTileY()*32 + 16));
+        }
+        current_tile = path_tiles[i+1];
       }
     }
   }
-
   // Add last waypoint position
-  waypoint_positions.push_back(sf::Vector2f(path_tiles[path_tiles.size() - 1]->getTileX()*32, path_tiles[path_tiles.size() - 1]->getTileY()*32));
-
+  waypoint_positions.push_back(sf::Vector2f(path_tiles[path_tiles.size() - 1]->getTileX()*32 + 16, path_tiles[path_tiles.size() - 1]->getTileY()*32 + 16));
   return waypoint_positions;
 }
-
 
 void GameStatePlay::drawWaypoints(std::vector<Waypoint> waypoints, sf::RenderWindow& game_window) {
   for (Waypoint waypoint: waypoints) {
@@ -265,7 +241,6 @@ void GameStatePlay::mapCommandLibrary(const int tileX, const int tileY, sf::Keyb
 			}
 			if(thisKey == sf::Keyboard::L){
 				map.load("testmap.xml");
-
 			}
 			if(thisKey == sf::Keyboard::K){
 				map.save("testmap.xml");
