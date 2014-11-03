@@ -141,6 +141,9 @@
     <ClInclude Include="include\gameObjects\BlackCat.h">
       <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
+    <ClInclude Include="include\gameStates\GameStateMapEditor.h">
+      <Filter>Header Files\GameStates</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game.cpp">
@@ -214,6 +217,9 @@
     </ClCompile>
     <ClCompile Include="src\gameObjects\BlackCat.cpp">
       <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameStates\GameStateMapEditor.cpp">
+      <Filter>Source Files\GameStates</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

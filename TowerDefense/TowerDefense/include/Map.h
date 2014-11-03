@@ -32,6 +32,7 @@ private:
 	//map attributes
 	int mapWidth, mapHeight;
 	bool hasStart, hasEnd;
+	string imagePath;
 
 	//returns true  if tile/object placement is outside map boundaries
 	bool outOfBounds(const int tileX, const int tileY) const;
@@ -42,6 +43,9 @@ private:
 	string convertType(Tile::TYPE type) const;
 
 public:
+	static const int MAX_MAP_WIDTH = 32;
+	static const int MAX_MAP_HEIGHT = 12;
+
 	//loads map from filename
 	Map(string mapName);
 	//creates blank map of initial size specified by the user
@@ -56,10 +60,11 @@ public:
 
 	//returns a constant tile pointer to the tile at position passed as a parameter. Throws std::bad_exception if OutOfBounds returns true
 	//WARNING: Do not delete any pointer to a tile or program will crash
+	//WARNING: Could return nullptr if out of map bounds
 	const Tile* const getTile(const int tileX, const int tileY) const;
 
 	//adds a tile with passed textureID, texturetype (as a string), and position
-	void addTile(const string textureID, const string tileTypeString, int tileX, int tileY);
+	void addTile(int tileX, int tileY, const Tile::TYPE tileType);
 
 	//removes a tile at passed position
 	void removeTile(const int tileX, const int tileY);
@@ -91,6 +96,7 @@ public:
 	void draw(sf::RenderWindow& gameWindow);
 
 	//collection of get, place, and remove functions for critter and tower objects (testing purposes)
+	//WARNING: Could return nullptr if out of map bounds
 	const GameObject* const getGameObject(const int tileX, const int tileY);
 	void removeGameObject(const int tileX, const int tileY);
 	void placeCritter(const string critterName, const int tileX, const int tileY);
