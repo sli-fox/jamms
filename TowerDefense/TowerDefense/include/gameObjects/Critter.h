@@ -23,6 +23,9 @@ class Critter : public GameObject {
    /** @brief Handles the animated object. 
      */
     AnimationHandler animation_handler;
+
+    bool isActive;
+    bool isAtEndTile;
     
     Critter() {};
     virtual ~Critter() {};

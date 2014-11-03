@@ -27,8 +27,8 @@ class Waypoint {
 
     /** @brief Waypoint constructor
      */
-    Waypoint(sf::Vector2f position) :
-      position(position) {}
+    Waypoint(sf::Vector2f position) : position(position) {}
+    
     ~Waypoint() {}
 
     /** @brief Draws the Waypoint -- for testing purposes only 

@@ -38,8 +38,10 @@ GameStatePlay::GameStatePlay(Game* game) {
   sf::Vector2f center_position = 0.5f * position;
   this->_gameView.setCenter(center_position);
   this->_guiView.setCenter(center_position);
-
   font.loadFromFile("resources/helveticaneue-webfont.ttf");
+
+  // Activate mew!
+  mew->isActive = true;
 }
 
 /**  This function sets the view to be drawn to the window,
@@ -78,8 +80,13 @@ void GameStatePlay::update(const float delta_time) {
   this->mew->draw(this->game->game_window, delta_time);
   this->blacky->draw(this->game->game_window, delta_time);
   
-  moveCritter(mew, delta_time);
-
+  if (mew->isActive)
+    moveCritter(mew, delta_time);
+  
+  mew->isAtEndTile = checkIfAtEndTile(mew);
+  
+  if (mew->isAtEndTile)
+    std::cout << "Mew: I'm at the end tile!" << std::endl; 
 }
 
 void GameStatePlay::handleInput() {
@@ -151,11 +158,60 @@ std::vector<Waypoint> GameStatePlay::addWaypoints(std::vector<sf::Vector2f> path
   return waypoints;
 }
 
+std::vector<sf::Vector2f> GameStatePlay::getWaypointsFromMapPath() {
+  std::vector<sf::Vector2f> waypoint_positions;
+  deque<const Tile* const> path_tiles = this->map.getMapPath();
+
+  // Add starting waypoint position
+  waypoint_positions.push_back(sf::Vector2f(path_tiles[0]->getTileX()*32 + 16, path_tiles[0]->getTileY()*32 + 16));
+  
+  // Any path with a direction change must have at least 4 tiles
+  if (path_tiles.size() > 3) {
+    // Set current tile
+    const Tile* current_tile = path_tiles[0];
+
+    for (int i = 0; i < path_tiles.size() - 1; ++i) {
+      if (i + 3 == path_tiles.size() - 1)   // No change of direction can happen in less than 4 tiles
+        break;
+
+      int next_x = path_tiles[i+1]->getTileX();
+      int next_y = path_tiles[i+1]->getTileY();
+
+      if (current_tile->getTileX() == next_x) {   // Path is vertical
+        // Check if the tile after the next tile changes direction
+        if (next_x != path_tiles[i+2]->getTileX()) {
+          waypoint_positions.push_back(sf::Vector2f(path_tiles[i+1]->getTileX()*32 + 16, path_tiles[i+1]->getTileY()*32 + 16));
+        }
+        current_tile = path_tiles[i+1];
+      } 
+      else if (current_tile->getTileY() == next_y) { // Path is horizontal
+        // Check if the tile after the next tile changes direction
+        if (next_y != path_tiles[i+2]->getTileY()) {
+          waypoint_positions.push_back(sf::Vector2f(path_tiles[i+1]->getTileX()*32 + 16, path_tiles[i+1]->getTileY()*32 + 16));
+        }
+        current_tile = path_tiles[i+1];
+      }
+    }
+  }
+  // Add last waypoint position
+  waypoint_positions.push_back(sf::Vector2f(path_tiles[path_tiles.size() - 1]->getTileX()*32 + 16, path_tiles[path_tiles.size() - 1]->getTileY()*32 + 16));
+  return waypoint_positions;
+}
+
 void GameStatePlay::drawWaypoints(std::vector<Waypoint> waypoints, sf::RenderWindow& game_window) {
   for (Waypoint waypoint: waypoints) {
     waypoint.draw(game_window);
   }
 }
+
+bool GameStatePlay::checkIfAtEndTile(Critter* critter) {
+  if (int(critter->getPosition().x) == this->current_waypoints[current_waypoints.size() - 1].position.x 
+   && int(critter->getPosition().y) == this->current_waypoints[current_waypoints.size() - 1].position.y) 
+    return true;
+  else
+    return false;
+}
+
 
 void GameStatePlay::moveCritter(Critter* critter, const float delta_time) {
  if (!critter->isAtNextWaypoint()) {

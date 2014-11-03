@@ -85,14 +85,19 @@ class GameStatePlay : public GameState {
       */
      std::vector<Waypoint> addWaypoints(std::vector<sf::Vector2f> path_points);
 
+     /** @brief Create waypoint vector from the map's path 
+      *  @return Vector containing positions.
+      */
+     std::vector<sf::Vector2f> getWaypointsFromMapPath();
+
      /**  @brief Draw all waypoints
       *   @return Void.
       */
      void drawWaypoints(std::vector<Waypoint> waypoints, sf::RenderWindow& game_window);
 	 
      void moveCritter(Critter* critter, const float delta_time);
-    
 	 void initializeButtonMap();
 	 void buttonCommandLibrary();
      void towerCommandLibrary(const int tileX, const int tileY);
+     bool checkIfAtEndTile(Critter* critter);
 };
