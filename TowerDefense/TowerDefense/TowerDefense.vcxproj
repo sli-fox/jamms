@@ -88,7 +88,6 @@
     <ClInclude Include="include\gameObjects\Critter.h" />
     <ClInclude Include="include\gameObjects\CritterFactory.h" />
     <ClInclude Include="include\gameObjects\GameObject.h" />
-    <ClInclude Include="include\gameObjects\Projectile.h" />
     <ClInclude Include="include\gameObjects\Tile.h" />
     <ClInclude Include="include\gameObjects\Tower.h" />
     <ClInclude Include="include\gameObjects\ShihTzu.h" />
@@ -102,7 +101,6 @@
     <ClInclude Include="include\managers\TextureManager.h" />
     <ClInclude Include="include\managers\TowerManager.h" />
     <ClInclude Include="include\Map.h" />
-    <ClInclude Include="include\Player.h" />
     <ClInclude Include="include\test\TextureManagerTest.h" />
     <ClInclude Include="include\utils\Animation.h" />
     <ClInclude Include="include\utils\AnimationHandler.h" />
@@ -121,7 +119,6 @@
     <ClCompile Include="src\gameObjects\Critter.cpp" />
     <ClCompile Include="src\gameObjects\CritterFactory.cpp" />
     <ClCompile Include="src\gameObjects\GameObject.cpp" />
-    <ClCompile Include="src\gameObjects\Projectile.cpp" />
     <ClCompile Include="src\gameObjects\Tile.cpp" />
     <ClCompile Include="src\gameObjects\Tower.cpp" />
     <ClCompile Include="src\gameObjects\ShihTzu.cpp" />
@@ -135,7 +132,6 @@
     <ClCompile Include="src\managers\TextureManager.cpp" />
     <ClCompile Include="src\managers\TowerManager.cpp" />
     <ClCompile Include="src\Map.cpp" />
-    <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\utils\AnimationHandler.cpp" />
     <ClCompile Include="src\utils\Waypoint.cpp" />
     <ClCompile Include="src\views\MainMenu.cpp" />
