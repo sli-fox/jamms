@@ -56,8 +56,11 @@ void GameStatePlay::draw(const float delta_time) {
   //For some reason, encapsulating the below code into Tower::displayWallet() to call it with
   // "this->game->game_window.draw(std::to_string(Tower::getWallet())" crashes the game...
 	sf::Text text(std::to_string(Tower::getWallet()), font);
-	text.setPosition(21*32, this->game->map.getMapHeight()*32);
+	text.setPosition(21*32, float(this->game->map.getMapHeight()*32));
 	this->game->game_window.draw(text);
+	this->game->game_window.draw(towerSpecs);
+	critterSpecs.setString(blacky->getCritterSpecs());
+	this->game->game_window.draw(critterSpecs);
 }
 
 void GameStatePlay::update(const float delta_time) {
@@ -102,7 +105,9 @@ void GameStatePlay::handleInput() {
 			break;
 											}
 		case sf::Event::MouseMoved: {
-
+			if(tower_manager.getTower(tileX, tileY) != NULL && tower_manager.getTower(tileX, tileY)->spriteContains(localPosition)){
+				towerSpecs.setString(tower_manager.getTower(tileX, tileY)->getTowerSpecs());
+			}
 			break;
 
 									}
@@ -225,13 +230,12 @@ void GameStatePlay::moveCritter(Critter* critter, const float delta_time) {
 
 void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 	if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-		if(this->game->map.getTile(tileX, tileY) != nullptr && this->game->map.getTile(tileX, tileY)->spriteContains(localPosition)
+		if(tower_manager.getTower(tileX, tileY) == nullptr && this->game->map.getTile(tileX, tileY) != nullptr
 			&& this->game->map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY)
 			tower_manager.buyTower(towerSelector, tileX, tileY);
 	}
 	else if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
-		if(this->game->map.getTile(tileX, tileY) != nullptr && this->game->map.getTile(tileX, tileY)->spriteContains(localPosition) 
-			&& this->game->map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY){
+		if(tower_manager.getTower(tileX, tileY) != nullptr && tower_manager.getTower(tileX, tileY)->spriteContains(localPosition)){
 				tower_manager.sellTower(tileX, tileY);
 		}
 	}		
@@ -292,6 +296,10 @@ void GameStatePlay::initializeButtonMap(){
 	displayCurrentWave.load(imagePath + "CritterDisplayBox.png");
 	displayCurrentWave.setPosition(0*32,12*32);
 	buttonMap.emplace("displayCurrentWave", displayCurrentWave);
+	critterSpecs.setFont(font);
+	critterSpecs.setPosition(0*32,12*32);
+	critterSpecs.setColor(sf::Color::Black);
+	critterSpecs.setCharacterSize(13);
 
 	GameObject displayNextWave;
 	displayNextWave.load(imagePath + "CritterDisplayBox.png");
@@ -302,6 +310,13 @@ void GameStatePlay::initializeButtonMap(){
 	towerDisplayBox.load(imagePath + "CritterDisplayBox.png");
 	towerDisplayBox.setPosition(24*32,14*32);
 	buttonMap.emplace("towerDisplayBox", towerDisplayBox);
+	towerSpecs.setFont(font);
+	towerSpecs.setPosition(24*32,14*32);
+	towerSpecs.setColor(sf::Color::Black);
+	towerSpecs.setCharacterSize(13);
+	
+
+
 
 	GameObject pauseBtn;
 	pauseBtn.load(imagePath + "PauseBtn.png");

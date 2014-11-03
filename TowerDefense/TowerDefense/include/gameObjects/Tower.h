@@ -55,7 +55,7 @@ class Tower: public GameObject {
 	void setSellCost(int _sell_cost);
 	void setUpgradeCost(int _upgrade_cost);
 	
-	void displayTowerSpecs();
+	std::string getTowerSpecs();
 
   protected:
     int _id;

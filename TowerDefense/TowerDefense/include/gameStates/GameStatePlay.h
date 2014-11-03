@@ -66,7 +66,9 @@ class GameStatePlay : public GameState {
 	sf::CircleShape range;
 	Tower::TowerType towerSelector;
 	sf::Font font;
-		 
+	sf::Text towerSpecs;
+	sf::Text critterSpecs;
+	
      /** @brief Camera view for the gameplay displayed to the window.
       */
      sf::View _gameView;

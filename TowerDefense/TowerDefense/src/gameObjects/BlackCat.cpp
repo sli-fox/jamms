@@ -26,8 +26,9 @@ BlackCat::BlackCat(Waypoint* starting_waypoint) {
 void BlackCat::initializeCritter(const std::vector<Animation>& animations) {
   // Attributes for a white cat
   this->hit_points = 2;
-  this->steal_strength = 4;
+  this->steal_coins = 4;
   this->player_reward = 5;
+  this->type = Critter::CritterType::BLACK_CAT;
   this->speed = 20.0f;
   this->level = 1;
   this->animation_index = this->getMovementDirection();   

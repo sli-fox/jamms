@@ -104,29 +104,28 @@ bool Tower::attack(Critter* crit) {
 	return false;
 }
 
-void Tower::displayTowerSpecs() {
+std::string Tower::getTowerSpecs() {
 	//Since we can't cout an enum in C++, we need this Array system as a workaround (optional, but prettier at output)
-	char *TowerTypeA[] = { "WhiteBloodCellTower", "AntibacterialTower", "ChemotherapyTower" };
+	char *TowerTypeA[] = { "ShihTzu", "Dalmatian", "Bulldog" };
 	char *UpgradeLevelA[] = { "Upgrade0", "Upgrade1", "Upgrade2" };
 	char *RangeA[] = { "Small", "Medium", "Large" };
 	char *RateOfFireA[] = { "Slow", "Normal", "Fast" };
 	char *SpecialEffectA[] = { "None", "Slowing", "Burning", "Freezing" };
-	char *BooleanA[] = { "False", "True" };
-	
-				// Changing console color to Blue, because.
-	std::cout	<< blue << "TOWER SPECIFICATIONS:" << std::endl
-				<< "-------------------------------------------------------" << std::endl
-				<< "Name: \t\t" << this->_name << std::endl
-				<< "Type: \t\t" << TowerTypeA[this->_type] << std::endl
-				<< "Upgrade: \t" << UpgradeLevelA[this->_upgrade_level] << std::endl
-				<< "Power: \t\t" << this->_power << std::endl
-				<< "Range: \t\t" << RangeA[this->_range-1] << std::endl
-				<< "Fire Rate: \t" << RateOfFireA[this->_rate_of_fire] << std::endl
-				<< "Special Effect: " << SpecialEffectA[this->_special_effect] << std::endl
-				<< "Upgrade Cost: \t" << this->_upgrade_cost << std::endl
-				<< "Sell Cost: \t" << this->_sell_cost << std::endl
-				<< "-------------------------------------------------------" << std::endl << std::endl;
+	std::stringstream output;
+	output << "TOWER SPECIFICATIONS:" << std::endl;
+	output << "Name: \t\t" << this->_name << std::endl;
+	output << "Type: \t\t" << TowerTypeA[this->_type] << std::endl;
+	output << "Upgrade: \t" << UpgradeLevelA[this->_upgrade_level] << std::endl;
+	output << "Power: \t\t" << this->_power << std::endl;
+	output << "Range: \t\t" << RangeA[this->_range-1] << std::endl;
+	output << "Fire Rate: \t" << RateOfFireA[this->_rate_of_fire] << std::endl;
+	output << "Special Effect: " << SpecialEffectA[this->_special_effect] << std::endl;
+	output << "Upgrade Cost: \t" << this->_upgrade_cost << " coins" << std::endl;
+	output << "Sell Cost: \t" << this->_sell_cost << " coins" << std::endl;
+
+	return output.str();
 }
+
 
 // TEMPORARY WALLET ATTRIBUTE FOR TESTING TOWERS' COST
 static int wallet = 5000;		// player money
