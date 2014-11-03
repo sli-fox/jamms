@@ -15,6 +15,7 @@
 #include <managers/GameObjectManager.h>
 #include <gameObjects/WhiteCat.h>
 #include <gameObjects/BlackCat.h>
+#include <gameObjects/Projectile.h>
 #include <utils/Waypoint.h>
 #include <iostream>
 #include <Map.h>

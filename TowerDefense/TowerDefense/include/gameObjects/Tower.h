@@ -3,6 +3,7 @@
 #include <GameObjects/GameObject.h>
 #include <GameObjects/Critter.h>
 #include <Utils/ConsoleColor.h>
+#include <GameObjects/Projectile.h>
 
 class Tower: public GameObject {
   public:
@@ -56,6 +57,10 @@ class Tower: public GameObject {
 	void setUpgradeCost(int _upgrade_cost);
 	
 	void displayTowerSpecs();
+
+	//virtual bool circleToCircleIntersection(GameObject* game_object);
+	void critterInRange(Critter* critter);
+	void spawnProjectiles();
 
   protected:
     int _id;
