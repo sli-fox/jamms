@@ -44,32 +44,9 @@ class GameObject {
       *   @return Void.
       */
     virtual void setPosition(float x, float y);
-
-	/**
-	  *
-	  */
 	sf::Vector2f getPosition() const;
-
 	std::string getFileName() const;
 	bool spriteContains(sf::Vector2i position) const;
-
-	virtual void move(float x, float y);
-	
-	virtual void move(const sf::Vector2f &offset);
-	
-	virtual sf::FloatRect getGlobalBounds() const;
-	
-	virtual	bool boxToBoxIntersection(GameObject* game_object);
-
-	virtual bool circleToCircleIntersection(GameObject* game_object);
-
-	virtual sf::Vector2f getSpriteCenter();
-
-	virtual sf::Vector2f getSpriteSize();
-
-	virtual float getRectangleSpriteRadius();
-
-	virtual	void setRotation(float angle); 
 
   protected:
     /** @brief The Sprite instance of the GameObject. 
