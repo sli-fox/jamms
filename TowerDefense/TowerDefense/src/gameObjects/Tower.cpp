@@ -145,6 +145,7 @@ sf::Text* Tower::displayWallet() {
 	sf::Text* text = new sf::Text(std::to_string(Tower::getWallet()), font);
 	return text;
 }
+<<<<<<< HEAD
 // END OF TEMPORARIES
 
 /*bool Tower::circleToCircleIntersection(GameObject* game_object){
@@ -164,3 +165,6 @@ void Tower::critterInRange(Critter* critter) {
 void Tower::spawnProjectiles() {
 
 }
+=======
+// END OF TEMPORARIES
+>>>>>>> 7dedc239add8d6b38fb35374b54b29747d067fdb

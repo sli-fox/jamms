@@ -25,8 +25,7 @@ GameStatePlay::GameStatePlay(Game* game) {
   font.loadFromFile("resources/helveticaneue-webfont.ttf");
 
   // Activate mew!
- // mew->isActive = true;
-  mew->setHitPoints(100);
+  mew->isActive = true;
 }
 
 /**  This function sets the view to be drawn to the window,
@@ -73,8 +72,6 @@ void GameStatePlay::update(const float delta_time) {
   
   mew->isAtEndTile = checkIfAtEndTile(mew);
   
-  mew->boxToBoxIntersection(blacky);
-
   if (mew->isAtEndTile)
     std::cout << "Mew: I'm at the end tile!" << std::endl; 
 }
