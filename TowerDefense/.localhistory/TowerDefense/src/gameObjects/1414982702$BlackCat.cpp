@@ -24,7 +24,7 @@ BlackCat::BlackCat(Waypoint* starting_waypoint) {
 /**  Initialization specific to a BlackCat object
   */
 void BlackCat::initializeCritter(const std::vector<Animation>& animations) {
-  // Attributes for a black cat
+  // Attributes for a white cat
   this->hit_points = 2;
   this->steal_strength = 4;
   this->player_reward = 5;
@@ -55,19 +55,19 @@ void BlackCat::update() {
 //Controlling the cat with Arrow Keys
 void BlackCat::controlCat(sf::Keyboard::Key arrowKey) {
 	if(arrowKey == sf::Keyboard::Up) {
-		this->updatePosition(0, -2);
+		this->updatePosition(0, -1);
 		this->animation_index = 3;
 	}
 	if(arrowKey == sf::Keyboard::Right) {
-		this->updatePosition(+2, 0);
+		this->updatePosition(+1, 0);
 		this->animation_index = 2;
 	}
 	if(arrowKey == sf::Keyboard::Down) {
-		this->updatePosition(0, +2);
+		this->updatePosition(0, +1);
 		this->animation_index = 0;
 	}
 	if(arrowKey == sf::Keyboard::Left) {
-		this->updatePosition(-2, 0);
+		this->updatePosition(-1, 0);
 		this->animation_index = 1;
 	}
 }

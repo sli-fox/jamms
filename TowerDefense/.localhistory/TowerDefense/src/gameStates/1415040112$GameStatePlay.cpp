@@ -9,8 +9,24 @@ GameStatePlay::GameStatePlay(Game* game) {
 	tower_manager.setArraySize(this->game->map.getMapWidth(), this->game->map.getMapHeight());
 	initializeButtonMap();
 	returnToMenu = false;
+	
+  //Set up waypoints
+  sf::Vector2f v1(30.0f, 50.0f);
+  sf::Vector2f v2(200.0f, 50.0f);
+  sf::Vector2f v3(200.0f, 180.0f);
+  sf::Vector2f v4(300.0f, 180.0f);
+  sf::Vector2f v5(300.0f, 50.0f);
+  sf::Vector2f v6(500.0f, 50.0f);
 
-  this->current_waypoints = addWaypoints(getWaypointsFromMapPath());
+  std::vector<sf::Vector2f> path_points;
+  path_points.push_back(v1);
+  path_points.push_back(v2);
+  path_points.push_back(v3);
+  path_points.push_back(v4);
+  path_points.push_back(v5);
+  path_points.push_back(v6);
+
+  this->current_waypoints = addWaypoints(path_points);
   
   this->mew = new WhiteCat(getStartingWaypoint());
   this->blacky = new BlackCat(getStartingWaypoint());
@@ -25,8 +41,7 @@ GameStatePlay::GameStatePlay(Game* game) {
   font.loadFromFile("resources/helveticaneue-webfont.ttf");
 
   // Activate mew!
- // mew->isActive = true;
-  mew->setHitPoints(100);
+  mew->isActive = true;
 }
 
 /**  This function sets the view to be drawn to the window,
@@ -70,8 +85,6 @@ void GameStatePlay::update(const float delta_time) {
   
   mew->isAtEndTile = checkIfAtEndTile(mew);
   
-  mew->boxToBoxIntersection(blacky);
-
   if (mew->isAtEndTile)
     std::cout << "Mew: I'm at the end tile!" << std::endl; 
 }
@@ -147,7 +160,7 @@ std::vector<Waypoint> GameStatePlay::addWaypoints(std::vector<sf::Vector2f> path
 
 std::vector<sf::Vector2f> GameStatePlay::getWaypointsFromMapPath() {
   std::vector<sf::Vector2f> waypoint_positions;
-  deque<const Tile* const> path_tiles = this->game->map.getMapPath();
+  deque<const Tile* const> path_tiles = this->map.getMapPath();
 
   // Add starting waypoint position
   waypoint_positions.push_back(sf::Vector2f(path_tiles[0]->getTileX()*32 + 16, path_tiles[0]->getTileY()*32 + 16));

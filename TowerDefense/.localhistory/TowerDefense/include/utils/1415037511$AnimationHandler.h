@@ -53,7 +53,7 @@ class AnimationHandler {
     void changeAnimation(unsigned int animation_index);
 
     void setCurrentAnimation(float current_animation) {
-      this->current_animation = (int)current_animation;
+      this->current_animation = (float)current_animation;
     }
 
   private:

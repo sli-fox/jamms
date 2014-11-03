@@ -51,6 +51,7 @@ class GameObject {
 	sf::Vector2f getPosition() const;
 
 	std::string getFileName() const;
+	bool spriteContains(sf::Vector2i position) const;
 
 	virtual void move(float x, float y);
 	

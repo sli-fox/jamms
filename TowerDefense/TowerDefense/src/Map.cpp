@@ -2,10 +2,12 @@
 #include "Map.h"
 
 Map::Map(string mapName){
+	imagePath = "resources/images/";
 	load(mapName);
 }
 
 Map::Map(int mapWidth, int mapHeight){
+	imagePath = "resources/images/";
 	hasStart = false;
 	hasEnd = false;
 	setMapSize(mapWidth, mapHeight);
@@ -24,24 +26,35 @@ int Map::getMapHeight() const{
 	return mapHeight;
 }
 
+const Tile* const Map::getTile(const int tileX, const int tileY) const{
+	if(!outOfBounds(tileX, tileY))
+		return tileMap[tileX][tileY].get();
+	else
+		return nullptr;
+}
+
 deque<const Tile* const> Map::getMapPath() const{
 	return mapPath;
 }
 
 void Map::setMapSize(const int mapWidth, const int mapHeight){
-	this->mapWidth = mapWidth;
-	this->mapHeight = mapHeight;
+	if(mapWidth <= MAX_MAP_WIDTH && mapHeight <= MAX_MAP_HEIGHT){
+		this->mapWidth = mapWidth;
+		this->mapHeight = mapHeight;
 
-	//resize 1st dimension of vector to mapWidth (number of tiles width-wise)
-	tileMap.resize(mapWidth);
-	mapObjects.resize(mapWidth);
+		//resize 1st dimension of vector to mapWidth (number of tiles width-wise)
+		tileMap.resize(mapWidth);
+		mapObjects.resize(mapWidth);
 
-	//resize 2nd dimension of vector to mapHeight(number of tiles height-wise)
-	for(int i = 0; i < mapWidth; ++i)
-	{
-		tileMap.at(i).resize(mapHeight);
-		mapObjects.at(i).resize(mapHeight);
+		//resize 2nd dimension of vector to mapHeight(number of tiles height-wise)
+		for(int i = 0; i < mapWidth; ++i)
+		{
+			tileMap.at(i).resize(mapHeight);
+			mapObjects.at(i).resize(mapHeight);
+		}
 	}
+	else
+		cout << "Invalid map size! Max size is: " << MAX_MAP_WIDTH << ", " << MAX_MAP_HEIGHT << endl;
 }
 
 void Map::resetMap(){
@@ -58,7 +71,7 @@ void Map::blankMap(){
 	for(int tileX = 0; tileX < mapWidth; ++tileX){
 		for(int tileY = 0 ; tileY < mapHeight; ++tileY){
 			if(tileMap[tileX][tileY] == nullptr)
-				tileMap[tileX][tileY].reset(new Tile("resources/images/blank.png", tileX, tileY));	
+				tileMap[tileX][tileY].reset(new Tile(imagePath + "blank.png", tileX, tileY));	
 			else
 				removeTile(tileX, tileY);
 		}
@@ -69,7 +82,7 @@ void Map::fillMap(){
 for(int tileX = 0 ; tileX < mapWidth ; ++tileX){
 		for(int tileY = 0 ; tileY < mapHeight ; ++tileY){
 			if(tileMap[tileX][tileY]->getType() == Tile::EMPTY)
-				tileMap[tileX][tileY].reset(new SceneryTile("resources/images/scenery.png", tileX, tileY));
+				tileMap[tileX][tileY].reset(new SceneryTile(imagePath + "scenery.png", tileX, tileY));
 		}
 	}
 }
@@ -154,12 +167,11 @@ string Map::convertType(Tile::TYPE type) const{
 }
 
 //creates tile and adds it according to its type. If path, start, or end; adds tile to mapPath queue accordingly
-void Map::addTile(const string textureID, const string tileTypeString, int tileX, int tileY){
+void Map::addTile(int tileX, int tileY, const Tile::TYPE tileType){
 	if(!outOfBounds(tileX, tileY) && getTile(tileX, tileY)->getType() != Tile::EMPTY){
 		cout << "Tile not empty" << endl;
 		return;
 	}
-	Tile::TYPE tileType = convertType(tileTypeString);	
 	if(!outOfBounds(tileX, tileY)){
 		switch(tileType){
 		case(Tile::START):{
@@ -171,7 +183,7 @@ void Map::addTile(const string textureID, const string tileTypeString, int tileX
 					cout << "Start tile already exists" << endl;
 					return;
 				}
-					tileMap[tileX][tileY].reset(new StartTile(textureID, tileX, tileY));
+					tileMap[tileX][tileY].reset(new StartTile(imagePath + "start.png", tileX, tileY));
 					mapPath.push_back(getTile(tileX, tileY));
 					hasStart = true;
 					break;
@@ -187,7 +199,7 @@ void Map::addTile(const string textureID, const string tileTypeString, int tileX
 			}
 
 			if(validPathPlacement(tileX, tileY)){
-				tileMap[tileX][tileY].reset(new EndTile(textureID, tileX, tileY));
+				tileMap[tileX][tileY].reset(new EndTile(imagePath + "end.png", tileX, tileY));
 				mapPath.push_back(getTile(tileX, tileY));
 				hasEnd = true;
 			}
@@ -206,7 +218,7 @@ void Map::addTile(const string textureID, const string tileTypeString, int tileX
 			}
 
 			if(validPathPlacement(tileX, tileY)){
-				tileMap[tileX][tileY].reset(new PathTile(textureID, tileX, tileY));
+				tileMap[tileX][tileY].reset(new PathTile(imagePath + "path.png", tileX, tileY));
 				mapPath.push_back(getTile(tileX, tileY));
 			}
 			else
@@ -214,11 +226,11 @@ void Map::addTile(const string textureID, const string tileTypeString, int tileX
 			break;
 						 }
 		case(Tile::DEAD):{
-			tileMap[tileX][tileY].reset(new DeadTile(textureID, tileX, tileY));
+			tileMap[tileX][tileY].reset(new DeadTile(imagePath + "dead.png", tileX, tileY));
 			break;
 						 }
 		case(Tile::SCENERY):{
-			tileMap[tileX][tileY].reset(new SceneryTile(textureID, tileX, tileY));
+			tileMap[tileX][tileY].reset(new SceneryTile(imagePath + "scenery.png", tileX, tileY));
 			break;
 							}
 		default:{
@@ -240,7 +252,7 @@ void Map::removeTile(const int tileX, const int tileY){
 			int thisX = mapPath.back()->getTileX();
 			int thisY = mapPath.back()->getTileY();
 			mapPath.pop_back();
-			tileMap[thisX][thisY].reset(new Tile("resources/images/blank.png", thisX, thisY));
+			tileMap[thisX][thisY].reset(new Tile(imagePath + "blank.png", thisX, thisY));
 			removeGameObject(thisX, thisY);
 		}
 		mapPath.shrink_to_fit();
@@ -252,7 +264,7 @@ void Map::removeTile(const int tileX, const int tileY){
 		int thisX = mapPath.back()->getTileX();
 		int thisY = mapPath.back()->getTileY();
 		mapPath.pop_back();
-		tileMap[thisX][thisY].reset(new Tile("resources/images/blank.png", thisX, thisY));
+		tileMap[thisX][thisY].reset(new Tile(imagePath + "blank.png", thisX, thisY));
 		removeGameObject(thisX, thisY);
 		mapPath.shrink_to_fit();
 		hasEnd = false;
@@ -265,7 +277,7 @@ void Map::removeTile(const int tileX, const int tileY){
 			if(getTile(thisX,thisY)->getType() == Tile::END)
 				hasEnd = false;
 			mapPath.pop_back();
-			tileMap[thisX][thisY].reset(new Tile("resources/images/blank.png", thisX, thisY));
+			tileMap[thisX][thisY].reset(new Tile(imagePath + "blank.png", thisX, thisY));
 			removeGameObject(thisX, thisY);
 		}
 		mapPath.shrink_to_fit();
@@ -273,24 +285,15 @@ void Map::removeTile(const int tileX, const int tileY){
 			int thisX = mapPath.back()->getTileX();
 			int thisY = mapPath.back()->getTileY();
 			mapPath.pop_back();
-			tileMap[thisX][thisY].reset(new Tile("resources/images/blank.png", thisX, thisY));
+			tileMap[thisX][thisY].reset(new Tile(imagePath + "blank.png", thisX, thisY));
 			removeGameObject(thisX, thisY);
 			mapPath.shrink_to_fit();
 			return;
 		}
 	}
 	if(!outOfBounds(tileX, tileY) && (getTile(tileX, tileY)->getType() == Tile::SCENERY || getTile(tileX, tileY)->getType() == Tile::DEAD)){
-		tileMap[tileX][tileY].reset(new Tile("resources/images/blank.png", tileX, tileY));
+		tileMap[tileX][tileY].reset(new Tile(imagePath + "blank.png", tileX, tileY));
 		removeGameObject(tileX, tileY);
-	}
-}
-
-const Tile* const Map::getTile(const int tileX, const int tileY) const{
-	if(!outOfBounds(tileX, tileY))
-		return tileMap[tileX][tileY].get();
-	else{
-		cout << "Attempted to get a tile outside the map!" << endl;
-		throw bad_exception("Out of bounds!");
 	}
 }
 
@@ -441,7 +444,9 @@ void Map::load(string filename){
 		string tileTypeString = tile->first_attribute("tileType")->value();
 		string textureID = tile->first_attribute("textureID")->value();
 
-		addTile(textureID, tileTypeString, tileX, tileY);
+		Tile::TYPE tileType = convertType(tileTypeString);
+
+		addTile(tileX, tileY, tileType);
 
 		tile = tile->next_sibling();
 	}
@@ -451,12 +456,10 @@ void Map::load(string filename){
 
 //implementations for game objects similar to implementation for tile objects
 const GameObject* const Map::getGameObject(const int tileX, const int tileY){
-	if(!outOfBounds(tileX, tileY) && mapObjects[tileX][tileY] != nullptr)
+	if(!outOfBounds(tileX, tileY))
 		return mapObjects[tileX][tileY].get();
-	else{
-		cout << "Attempted to get an object that wasn't there!" << endl;
-		throw bad_exception("No object here!");
-	}
+	else
+		return nullptr;
 }
 
 void Map::removeGameObject(const int tileX, const int tileY){

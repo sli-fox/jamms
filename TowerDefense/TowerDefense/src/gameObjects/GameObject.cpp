@@ -117,3 +117,10 @@ sf::Vector2f GameObject::getSpriteSize() {
 	sf::Vector2f scale = this->sprite.getScale();
 	return sf::Vector2f (size.width * scale.x, size.height * scale.y);
 }
+  std::string GameObject::getFileName() const{
+	  return file_name;
+  }
+
+  bool GameObject::spriteContains(sf::Vector2i position) const{
+	  return sprite.getGlobalBounds().contains(float(position.x), float(position.y));
+  }
