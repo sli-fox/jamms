@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
@@ -141,16 +141,8 @@
     <ClInclude Include="include\gameObjects\BlackCat.h">
       <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
-<<<<<<< HEAD
-    <ClInclude Include="include\gameObjects\Projectile.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Player.h">
-      <Filter>Header Files</Filter>
-=======
     <ClInclude Include="include\gameStates\GameStateMapEditor.h">
       <Filter>Header Files\GameStates</Filter>
->>>>>>> 493673ba581c3453f45c3ef3419b5e3e4ab392ba
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -226,16 +218,8 @@
     <ClCompile Include="src\gameObjects\BlackCat.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
-<<<<<<< HEAD
-    <ClCompile Include="src\gameObjects\Projectile.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Player.cpp">
-      <Filter>Source Files</Filter>
-=======
     <ClCompile Include="src\gameStates\GameStateMapEditor.cpp">
       <Filter>Source Files\GameStates</Filter>
->>>>>>> 493673ba581c3453f45c3ef3419b5e3e4ab392ba
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
