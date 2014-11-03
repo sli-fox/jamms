@@ -7,6 +7,8 @@ GameStatePlay::GameStatePlay(Game* game) {
 	this->game = game;
 	//Initialize tower array with map's dimensions
 	tower_manager.setArraySize(this->game->map.getMapWidth(), this->game->map.getMapHeight());
+	initializeButtonMap();
+	returnToMenu = false;
 	
   //Set up waypoints
   sf::Vector2f v1(30.0f, 50.0f);
@@ -36,6 +38,8 @@ GameStatePlay::GameStatePlay(Game* game) {
   sf::Vector2f center_position = 0.5f * position;
   this->_gameView.setCenter(center_position);
   this->_guiView.setCenter(center_position);
+
+  font.loadFromFile("resources/helveticaneue-webfont.ttf");
 }
 
 /**  This function sets the view to be drawn to the window,
@@ -58,15 +62,16 @@ void GameStatePlay::draw(const float delta_time) {
   if(!tower_manager.outOfBound(tileX, tileY) && !tower_manager.isTileFree(tileX, tileY))
 		this->game->game_window.draw(tower_manager.getTower(tileX,tileY)->getRangeShape());
 
+  //Draw buttons
+	for(std::map<std::string, GameObject>::iterator it = buttonMap.begin() ; it != buttonMap.end() ; ++it)
+		it->second.draw(this->game->game_window);
+
   //Draw Money [TO BE IMPORTED INTO PLAYER CLASS]
   //For some reason, encapsulating the below code into Tower::displayWallet() to call it with
   // "this->game->game_window.draw(std::to_string(Tower::getWallet())" crashes the game...
-	sf::Font font;
-	font.loadFromFile("resources/helveticaneue-webfont.ttf");
 	sf::Text text(std::to_string(Tower::getWallet()), font);
-	text.setPosition(0, this->game->map.getMapHeight()*32);
+	text.setPosition(21*32, this->game->map.getMapHeight()*32);
 	this->game->game_window.draw(text);
-
 }
 
 void GameStatePlay::update(const float delta_time) {
@@ -78,11 +83,8 @@ void GameStatePlay::update(const float delta_time) {
 }
 
 void GameStatePlay::handleInput() {
-  sf::Event event;
-  	localPosition = sf::Mouse::getPosition(this->game->game_window);
-	tileX = localPosition.x/32;
-	tileY = localPosition.y/32;
-	
+	sf::Event event;
+
 	//Checking if ANY tower on the map can attack Blacky (black cat...)
 	for(int i = 0; i < this->game->map.getMapWidth(); ++i) {
 		for(int j = 0; j < this->game->map.getMapHeight(); ++j) {
@@ -92,23 +94,36 @@ void GameStatePlay::handleInput() {
 		}
 	}
 
-  while(this->game->game_window.pollEvent(event)) {
+	while(!returnToMenu && this->game->game_window.pollEvent(event)) {
+		localPosition = sf::Mouse::getPosition(this->game->game_window);
+		tileX = localPosition.x/32;
+		tileY = localPosition.y/32;
 
-    switch(event.type) {
-      /** Close the window */
-      case sf::Event::Closed: {
-        game->game_window.close();
-        break;
-      }
-	  case sf::Event::KeyPressed: {
-	   blacky->controlCat(event.key.code);	// for controlling blackcat
-	   //mew->controlCat(event.key.code);
-	   towerCommandLibrary(tileX, tileY, event.key.code);
-	   break;
-      }
-      default: break;
-    }
-  }
+		switch(event.type) {
+			/** Close the window */
+		case sf::Event::Closed: {
+			game->game_window.close();
+			break;
+								}
+		case sf::Event::MouseButtonPressed: {
+			buttonCommandLibrary();
+			towerCommandLibrary(tileX, tileY);
+			break;
+											}
+		case sf::Event::MouseMoved: {
+
+			break;
+
+									}
+		case sf::Event::KeyPressed: {
+			blacky->controlCat(event.key.code);	// for controlling blackcat
+			//mew->controlCat(event.key.code);
+			towerCommandLibrary(tileX, tileY);
+			break;
+									}
+		default: break;
+		}
+	}
 }
 
 /** @brief This function initialize waypoints while setting
@@ -168,29 +183,147 @@ void GameStatePlay::moveCritter(Critter* critter, const float delta_time) {
   }
 }
 
-void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY, sf::Keyboard::Key thisKey){
-	if(this->game->map.getTile(tileX, tileY) != nullptr && this->game->map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY) {
-		if(thisKey == sf::Keyboard::Num1){
-			tower_manager.buyTower(Tower::TowerType::ShihTzu, tileX, tileY);	
+void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
+	if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+		if(this->game->map.getTile(tileX, tileY) != nullptr && this->game->map.getTile(tileX, tileY)->spriteContains(localPosition)
+			&& this->game->map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY)
+			tower_manager.buyTower(towerSelector, tileX, tileY);
+	}
+	else if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
+		if(this->game->map.getTile(tileX, tileY) != nullptr && this->game->map.getTile(tileX, tileY)->spriteContains(localPosition) 
+			&& this->game->map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY){
+				tower_manager.sellTower(tileX, tileY);
 		}
-		if(thisKey == sf::Keyboard::Num2){
-			tower_manager.buyTower(Tower::TowerType::Dalmatian, tileX, tileY);
+	}		
+	/*if(this->game->map.getTile(tileX, tileY) != nullptr && this->game->map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY) {
+	if(thisKey == sf::Keyboard::Num1){
+	tower_manager.buyTower(Tower::TowerType::ShihTzu, tileX, tileY);	
+	}
+	if(thisKey == sf::Keyboard::Num2){
+	tower_manager.buyTower(Tower::TowerType::Dalmatian, tileX, tileY);
+	}
+	if(thisKey == sf::Keyboard::Num3){
+	tower_manager.buyTower(Tower::TowerType::Bulldog, tileX, tileY);
+	}
+	*/
+	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::U) && !tower_manager.isTileFree(tileX, tileY)){
+		tower_manager.getTower(tileX, tileY)->upgradeTower();
+	}
+	/*
+	if(thisKey == sf::Keyboard::BackSpace){
+	tower_manager.sellTower(tileX, tileY);
+	}
+	*/
+	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::M)){
+		tower_manager.displayTowerArray();
+	}
+}
+
+void GameStatePlay::buttonCommandLibrary(){
+	if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+		if(buttonMap["returnToEditorBtn"].spriteContains(localPosition)){
+			returnToMenu = true;
+			this->game->popState();
 		}
-		if(thisKey == sf::Keyboard::Num3){
-			tower_manager.buyTower(Tower::TowerType::Bulldog, tileX, tileY);
+		else if(buttonMap["pauseBtn"].spriteContains(localPosition)){
+			//do something
 		}
-		if(thisKey == sf::Keyboard::U && !tower_manager.isTileFree(tileX, tileY)){
-			tower_manager.getTower(tileX, tileY)->upgradeTower();
+		else if(buttonMap["unpauseBtn"].spriteContains(localPosition)){
+			//do something
 		}
-		if(thisKey == sf::Keyboard::BackSpace){
-			tower_manager.sellTower(tileX, tileY);
+		else if(buttonMap["bulldog_0_Btn"].spriteContains(localPosition)){
+			towerSelector = Tower::Bulldog;
 		}
-		if(thisKey == sf::Keyboard::M){
-			tower_manager.displayTowerArray();
+		else if(buttonMap["dalmatian_0_Btn"].spriteContains(localPosition)){
+			towerSelector = Tower::Dalmatian;
+		}
+		else if(buttonMap["shihtzu_0_Btn"].spriteContains(localPosition)){
+			towerSelector = Tower::ShihTzu;
 		}
 	}
 }
 
+void GameStatePlay::initializeButtonMap(){
+	string imagePath = "resources/images/";
+	string towerPath = "resources/images/towers/";
+	string squaresPath = "resources/images/towers/squares";
+
+	GameObject displayCurrentWave;
+	displayCurrentWave.load(imagePath + "CritterDisplayBox.png");
+	displayCurrentWave.setPosition(0*32,12*32);
+	buttonMap.emplace("displayCurrentWave", displayCurrentWave);
+
+	GameObject displayNextWave;
+	displayNextWave.load(imagePath + "CritterDisplayBox.png");
+	displayNextWave.setPosition(0*32,17*32);
+	buttonMap.emplace("displayNextWave", displayNextWave);
+
+	GameObject towerDisplayBox;
+	towerDisplayBox.load(imagePath + "CritterDisplayBox.png");
+	towerDisplayBox.setPosition(24*32,14*32);
+	buttonMap.emplace("towerDisplayBox", towerDisplayBox);
+
+	GameObject pauseBtn;
+	pauseBtn.load(imagePath + "PauseBtn.png");
+	pauseBtn.setPosition(0*32,22*32);
+	buttonMap.emplace("pauseBtn", pauseBtn);
+
+	GameObject unpauseBtn;
+	unpauseBtn.load(imagePath + "UnpauseBtn.png");
+	unpauseBtn.setPosition(2*32,22*32);
+	buttonMap.emplace("unpauseBtn", unpauseBtn);
+
+	GameObject returnToEditorBtn;
+	returnToEditorBtn.load(imagePath + "ReturnToEditorBtn.png");
+	returnToEditorBtn.setPosition(4*32,22*32);
+	buttonMap.emplace("returnToEditorBtn", returnToEditorBtn);
+
+	GameObject bulldog_0_Btn;
+	bulldog_0_Btn.load(towerPath + "bulldog_0.png");
+	bulldog_0_Btn.setPosition(24*32,12*32);
+	buttonMap.emplace("bulldog_0_Btn", bulldog_0_Btn);
+
+	GameObject bulldog_1_Btn;
+	bulldog_1_Btn.load(towerPath + "bulldog_1.png");
+	bulldog_1_Btn.setPosition(25*32,12*32);
+	buttonMap.emplace("bulldog_1_Btn", bulldog_1_Btn);
+
+	GameObject bulldog_2_Btn;
+	bulldog_2_Btn.load(towerPath + "bulldog_2.png");
+	bulldog_2_Btn.setPosition(26*32,12*32);
+	buttonMap.emplace("bulldog_2_Btn", bulldog_2_Btn);
+
+	GameObject dalmatian_0_Btn;
+	dalmatian_0_Btn.load(towerPath + "dalmatian_0.png");
+	dalmatian_0_Btn.setPosition(27*32,12*32);
+	buttonMap.emplace("dalmatian_0_Btn", dalmatian_0_Btn);
+
+	GameObject dalmatian_1_Btn;
+	dalmatian_1_Btn.load(towerPath + "dalmatian_1.png");
+	dalmatian_1_Btn.setPosition(28*32,12*32);
+	buttonMap.emplace("dalmatian_1_Btn", dalmatian_1_Btn);
+
+	GameObject dalmatian_2_Btn;
+	dalmatian_2_Btn.load(towerPath + "dalmatian_2.png");
+	dalmatian_2_Btn.setPosition(29*32,12*32);
+	buttonMap.emplace("dalmatian_2_Btn", dalmatian_2_Btn);
+
+	GameObject shihtzu_0_Btn;
+	shihtzu_0_Btn.load(towerPath + "shihtzu_0.png");
+	shihtzu_0_Btn.setPosition(24*32,13*32);
+	buttonMap.emplace("shihtzu_0_Btn", shihtzu_0_Btn);
+
+	GameObject shihtzu_1_Btn;
+	shihtzu_1_Btn.load(towerPath + "shihtzu_1.png");
+	shihtzu_1_Btn.setPosition(25*32,13*32);
+	buttonMap.emplace("shihtzu_1_Btn", shihtzu_1_Btn);
+
+	GameObject shihtzu_2_Btn;
+	shihtzu_2_Btn.load(towerPath + "shihtzu_2.png");
+	shihtzu_2_Btn.setPosition(26*32,13*32);
+	buttonMap.emplace("shihtzu_2_Btn", shihtzu_2_Btn);
+
+}
 
 GameObjectManager GameStatePlay::_game_object_manager;
 TowerManager& GameStatePlay::tower_manager = TowerManager::getInstance();

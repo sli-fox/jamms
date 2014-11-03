@@ -74,7 +74,7 @@ void GameStateMapEditor::mapEditorCommandLibrary(){
 		if(this->game->map.getTile(tileX, tileY) != nullptr && this->game->map.getTile(tileX, tileY)->spriteContains(localPosition))
 			this->game->map.addTile(tileX, tileY, tileSelector);
 	}
-	if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
+	else if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
 		if(this->game->map.getTile(tileX, tileY) != nullptr && this->game->map.getTile(tileX, tileY)->spriteContains(localPosition)){
 			this->game->map.removeTile(tileX, tileY);
 			this->game->map.removeGameObject(tileX, tileY);
