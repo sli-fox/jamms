@@ -102,8 +102,12 @@ void GameStateMapEditor::buttonCommandLibrary(){
 			this->game->map.save("testmap2.xml");
 		else if(buttonMap["loadBtn"].spriteContains(localPosition))
 			this->game->map.load("testmap2.xml");
-		else if(buttonMap["playBtn"].spriteContains(localPosition))
-			this->game->pushState(new GameStatePlay(this->game));
+		else if(buttonMap["playBtn"].spriteContains(localPosition)){
+			if(game->map.isMapValid())
+				this->game->pushState(new GameStatePlay(this->game));
+			else
+				cout << "map is not valid, cannot play" << endl;
+		}
 		else if(buttonMap["menuBtn"].spriteContains(localPosition)){
 			returnToMenu = true;
 			this->game->popState();
