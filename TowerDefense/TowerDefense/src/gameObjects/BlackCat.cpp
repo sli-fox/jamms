@@ -55,19 +55,19 @@ void BlackCat::update() {
 //Controlling the cat with Arrow Keys
 void BlackCat::controlCat(sf::Keyboard::Key arrowKey) {
 	if(arrowKey == sf::Keyboard::Up) {
-		this->updatePosition(0, -3);
+		this->updatePosition(0, -2);
 		this->animation_index = 3;
 	}
 	if(arrowKey == sf::Keyboard::Right) {
-		this->updatePosition(+3, 0);
+		this->updatePosition(+2, 0);
 		this->animation_index = 2;
 	}
 	if(arrowKey == sf::Keyboard::Down) {
-		this->updatePosition(0, +3);
+		this->updatePosition(0, +2);
 		this->animation_index = 0;
 	}
 	if(arrowKey == sf::Keyboard::Left) {
-		this->updatePosition(-3, 0);
+		this->updatePosition(-2, 0);
 		this->animation_index = 1;
 	}
 }

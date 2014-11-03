@@ -4,6 +4,9 @@
 /** @brief Constructor of Game sets the game window properties
  *  and frame rate.
  */
+
+Map Game::map = Map(Map::MAX_MAP_WIDTH, Map::MAX_MAP_HEIGHT);
+
 Game::Game() {
   this->game_window.create(sf::VideoMode(1024, 768, 32), "Tower Defense", sf::Style::Close);
   this->game_window.setFramerateLimit(60);

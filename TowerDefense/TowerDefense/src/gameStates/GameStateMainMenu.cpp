@@ -42,7 +42,7 @@ void GameStateMainMenu::handleInput() {
 /**  Add the GameStatePlay state to the game
   */
 void GameStateMainMenu::loadGame() {
-  this->game->pushState(new GameStatePlay(this->game));
+  this->game->pushState(new GameStateMapEditor(this->game));
 }
 
 void GameStateMainMenu::handleSelectedAction() {

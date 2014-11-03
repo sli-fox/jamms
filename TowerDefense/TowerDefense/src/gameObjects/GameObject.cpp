@@ -42,3 +42,7 @@ void GameObject::setPosition(float x, float y) {
   std::string GameObject::getFileName() const{
 	  return file_name;
   }
+
+  bool GameObject::spriteContains(sf::Vector2i position) const{
+	  return sprite.getGlobalBounds().contains(float(position.x), float(position.y));
+  }

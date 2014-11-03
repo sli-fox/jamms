@@ -11,7 +11,6 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Transformable.hpp>
 #include <gameStates/GameState.h>
-#include <gameStates/GameStatePlay.h>
 #include <managers/GameObjectManager.h>
 #include <gameObjects/WhiteCat.h>
 #include <gameObjects/BlackCat.h>
@@ -60,9 +59,13 @@ class GameStatePlay : public GameState {
 
    private:
 
-	    sf::Vector2i  localPosition;
-	    int tileX, tileY;
-	    sf::CircleShape range;
+	sf::Vector2i  localPosition;
+	int tileX, tileY;
+	std::map<string,GameObject> buttonMap;
+	bool returnToMenu;
+	sf::CircleShape range;
+	Tower::TowerType towerSelector;
+	sf::Font font;
 		 
      /** @brief Camera view for the gameplay displayed to the window.
       */
@@ -76,7 +79,6 @@ class GameStatePlay : public GameState {
 	 
      static GameObjectManager _game_object_manager;
      static TowerManager& tower_manager;
-     static Map map;
 
      /** @brief Add waypoints 
       *  @return Vector containing Waypoint pointers.
@@ -94,10 +96,8 @@ class GameStatePlay : public GameState {
      void drawWaypoints(std::vector<Waypoint> waypoints, sf::RenderWindow& game_window);
 	 
      void moveCritter(Critter* critter, const float delta_time);
-
+	 void initializeButtonMap();
+	 void buttonCommandLibrary();
+     void towerCommandLibrary(const int tileX, const int tileY);
      bool checkIfAtEndTile(Critter* critter);
-     
-     void mapCommandLibrary(const int tileX, const int tileY, sf::Keyboard::Key thisKey);
-     void towerCommandLibrary(const int tileX, const int tileY, sf::Keyboard::Key thisKey);
-
 };

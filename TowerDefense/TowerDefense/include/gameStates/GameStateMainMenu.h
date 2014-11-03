@@ -10,7 +10,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <gameStates/GameState.h>
-#include <gameStates/GameStatePlay.h>
+#include <gameStates/GameStateMapEditor.h>
 #include <managers/TextureManager.h>
 #include <views/MainMenu.h>
 
