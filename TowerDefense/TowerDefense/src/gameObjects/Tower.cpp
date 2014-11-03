@@ -146,3 +146,21 @@ sf::Text* Tower::displayWallet() {
 	return text;
 }
 // END OF TEMPORARIES
+
+/*bool Tower::circleToCircleIntersection(GameObject* game_object){
+	float radius_1 = this->_range_shape.getRadius();
+	float radius_2 = game_object->getRectangleSpriteRadius();
+
+	sf::Vector2f distance = this->getSpriteCenter() - game_object->getSpriteCenter();
+	
+	return (distance.x * distance.x + distance.y * distance.y) <= (radius_1 + radius_2);
+}
+
+void Tower::critterInRange(Critter* critter) {
+	if(this->circleToCircleIntersection(critter))
+		this->spawnProjectiles();
+}*/
+
+void Tower::spawnProjectiles() {
+
+}
