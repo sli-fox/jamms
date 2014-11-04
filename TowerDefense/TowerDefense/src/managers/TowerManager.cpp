@@ -8,7 +8,7 @@ void TowerManager::clearAllTowers() {
 		for(int tileY = 0; tileY < tArrayCols ; ++tileY){
 			if(tArray[tileX][tileY] != NULL) {
 				delete tArray[tileX][tileY];
-				tArray[tileX][tileY] = nullptr;
+				tArray[tileX][tileY] = NULL;
 			}
 		}
 	}
