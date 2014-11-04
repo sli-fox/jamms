@@ -2,6 +2,15 @@
 #include <Managers/TowerManager.h>
 #include <Game.h>
 
+void TowerManager::clearAllTowers() {
+	for(int tileX = 0; tileX < tArrayRows ; ++tileX){
+		for(int tileY = 0; tileY < tArrayCols ; ++tileY){
+			if(tArray[tileX][tileY] != NULL) {
+				delete tArray[tileX][tileY];
+			}
+		}
+	}
+}
 
 void TowerManager::setArraySize(int mapWidth, int mapHeight) {
 	this->tArrayRows = mapWidth;
