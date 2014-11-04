@@ -17,9 +17,17 @@ GameStateMapEditor::GameStateMapEditor(Game* game) {
 	initializeButtonMap();
 	tileSelector = Tile::EMPTY;
 	returnToMenu = false;
+	pauseSave = false;
+	pauseLoad = false;
+	font.loadFromFile("resources/helveticaneue-webfont.ttf");
 
 	mapBackdrop.load("resources/images/MapBackdrop.png");
 	mapBackdrop.setPosition(0*32,0*32);
+	mapX = Map::MAX_MAP_WIDTH;
+	mapY = Map::MAX_MAP_HEIGHT;
+	displayXsize.setString(std::to_string(mapX));
+	displayYsize.setString(std::to_string(mapY));
+	mapFiles = getFilesInDir("resources/maps/");
 }
 
 /**  This function sets the view to be drawn to the window,
@@ -36,6 +44,12 @@ void GameStateMapEditor::draw(const float delta_time) {
 	//Draw buttons
 	for(std::map<std::string, GameObject>::iterator it = buttonMap.begin() ; it != buttonMap.end() ; ++it)
 		it->second.draw(this->game->game_window);
+
+	//Draw text
+	this->game->game_window.draw(displayXsize);
+	this->game->game_window.draw(displayYsize);
+	this->game->game_window.draw(systemOutput);
+	this->game->game_window.draw(userInputDisplay);
 }
 
 void GameStateMapEditor::update(const float delta_time) {
@@ -64,9 +78,50 @@ void GameStateMapEditor::handleInput() {
 			mapEditorCommandLibrary();
 			break;
 									}
+		case sf::Event::KeyPressed:{
+			if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
+				pauseSave = false;
+				pauseLoad = false;
+				systemOutput.setString("");
+			}
+			break;
+									}
+		case sf::Event::TextEntered:{
+			if(event.text.unicode == '\b'){
+				if(!userInput.empty())
+					userInput.pop_back();
+				userInputDisplay.setString(userInput);
+			}
+			else if (event.text.unicode < 128) {
+				userInput.push_back((char)event.text.unicode);
+				userInputDisplay.setString(userInput);
+			}
+			break;
+									}
 		default: break;
 		}
 	}
+}
+
+const vector<string> GameStateMapEditor::getFilesInDir(const string dir) {
+	DIR *open_dir = NULL;
+	struct dirent *dirp;
+	vector<string> files;
+
+	if ((open_dir = opendir(dir.c_str())) == NULL) {
+		files.push_back("There are no maps");
+	} else {
+		while ((dirp = readdir(open_dir)) != NULL) {
+			string filename = dirp->d_name;
+			size_t find_pos = filename.find_last_of('.');
+			if (filename.substr(find_pos) == ".xml" && filename != ".xml") {
+				files.push_back(filename);
+			}
+		}
+	}
+	closedir(open_dir);
+
+	return files;
 }
 
 void GameStateMapEditor::mapEditorCommandLibrary(){
@@ -98,10 +153,35 @@ void GameStateMapEditor::buttonCommandLibrary(){
 			this->game->map.fillMap();
 		else if(buttonMap["resetMapBtn"].spriteContains(localPosition))
 			this->game->map.blankMap();
-		else if(buttonMap["saveBtn"].spriteContains(localPosition))
-			this->game->map.save("testmap2.xml");
-		else if(buttonMap["loadBtn"].spriteContains(localPosition))
-			this->game->map.load("testmap2.xml");
+		else if(buttonMap["saveBtn"].spriteContains(localPosition)){
+			if(!pauseSave){
+				pauseSave = true;
+				pauseLoad = false;
+				systemOutput.setString("Please type in a name for the map (without the .xml extension) and then click save again:\n");
+			}
+			else if(pauseSave){
+				pauseSave = false;
+				this->game->map.save(userInput);
+				systemOutput.setString("");
+				mapFiles = getFilesInDir("resources/maps/");
+			}
+		}
+		else if(buttonMap["loadBtn"].spriteContains(localPosition)){
+			if(!pauseLoad){
+				pauseLoad = true;
+				pauseSave = false;
+				string tempString = "Here are the available map files, please type in the full extension of the map and click load again:\n";
+				for(int i = 0 ; i < int(mapFiles.size()) ; ++i){
+					tempString.append(mapFiles[i] + "\n");
+				}
+				systemOutput.setString(tempString);
+			}
+			else if (pauseLoad){
+				pauseLoad = false;
+				this->game->map.load(userInput);
+				systemOutput.setString("");
+			}
+		}
 		else if(buttonMap["playBtn"].spriteContains(localPosition)){
 			if(game->map.isMapValid())
 				this->game->pushState(new GameStatePlay(this->game));
@@ -114,6 +194,35 @@ void GameStateMapEditor::buttonCommandLibrary(){
 		}
 		else if(buttonMap["validateMapBtn"].spriteContains(localPosition))
 			cout << this->game->map.isMapValid() << endl;
+		else if(buttonMap["setMapSizeBtn"].spriteContains(localPosition)){
+			this->game->map.resetMap();
+			this->game->map.setMapSize(mapX, mapY);
+			this->game->map.blankMap();
+		}
+		else if(buttonMap["plusSizeBtnX"].spriteContains(localPosition)){
+			if(mapX < Map::MAX_MAP_WIDTH){
+				++mapX;
+				displayXsize.setString(std::to_string(mapX));
+			}
+		}
+		else if(buttonMap["minusSizeBtnX"].spriteContains(localPosition)){
+			if(mapX > 0){
+				--mapX;
+				displayXsize.setString(std::to_string(mapX));
+			}
+		}
+		else if(buttonMap["plusSizeBtnY"].spriteContains(localPosition)){
+			if(mapY < Map::MAX_MAP_HEIGHT){
+				++mapY;
+				displayYsize.setString(std::to_string(mapY));
+			}
+		}
+		else if(buttonMap["minusSizeBtnY"].spriteContains(localPosition)){
+			if(mapY > 0){
+				--mapY;
+				displayYsize.setString(std::to_string(mapY));
+			}
+		}
 	}
 }
 
@@ -190,13 +299,75 @@ void GameStateMapEditor::initializeButtonMap(){
 	validateMapBtn.setPosition(0*32,20*32);
 	buttonMap.emplace("validateMapBtn", validateMapBtn);
 
+	GameObject setMapSizeBtn;
+	setMapSizeBtn.load(imagePath + "SetMapSize.png");
+	setMapSizeBtn.setPosition(3*32,22*32);
+	buttonMap.emplace("setMapSizeBtn", setMapSizeBtn);
+
+	GameObject minusSizeBtnX;
+	minusSizeBtnX.load(imagePath + "MinusSizeBtn.png");
+	minusSizeBtnX.setPosition(3*32,20*32);
+	buttonMap.emplace("minusSizeBtnX", minusSizeBtnX);
+
+	GameObject plusSizeBtnX;
+	plusSizeBtnX.load(imagePath + "PlusSizeBtn.png");
+	plusSizeBtnX.setPosition(4.5*32,20*32);
+	buttonMap.emplace("plusSizeBtnX", plusSizeBtnX);
+
+	GameObject displayX;
+	displayX.load(imagePath + "blank.png");
+	displayX.setPosition(3.5*32,20*32);
+	buttonMap.emplace("displayX", displayX);
+	displayXsize.setFont(font);
+	displayXsize.setPosition(3.5*32+6,20*32+6);
+	displayXsize.setColor(sf::Color::Black);
+	displayXsize.setCharacterSize(16);
+
+	GameObject displayY;
+	displayY.load(imagePath + "blank.png");
+	displayY.setPosition(3.5*32,21*32);
+	buttonMap.emplace("displayY", displayY);
+	displayYsize.setFont(font);
+	displayYsize.setPosition(3.5*32+6,21*32+6);
+	displayYsize.setColor(sf::Color::Black);
+	displayYsize.setCharacterSize(16);
+
+	GameObject widthDisplay;
+	widthDisplay.load(imagePath + "width.png");
+	widthDisplay.setPosition(5*32,20*32);
+	buttonMap.emplace("widthDisplay", widthDisplay);
+
+	GameObject heightDisplay;
+	heightDisplay.load(imagePath + "height.png");
+	heightDisplay.setPosition(5*32,21*32);
+	buttonMap.emplace("heightDisplay", heightDisplay);
+
+	GameObject minusSizeBtnY;
+	minusSizeBtnY.load(imagePath + "MinusSizeBtn.png");
+	minusSizeBtnY.setPosition(3*32,21*32);
+	buttonMap.emplace("minusSizeBtnY", minusSizeBtnY);
+
+	GameObject plusSizeBtnY;
+	plusSizeBtnY.load(imagePath + "PlusSizeBtn.png");
+	plusSizeBtnY.setPosition(4.5*32,21*32);
+	buttonMap.emplace("plusSizeBtnY", plusSizeBtnY);
+
 	GameObject textBoxOutput;
 	textBoxOutput.load(imagePath + "TextBox.png");
 	textBoxOutput.setPosition(6*32,12*32);
 	buttonMap.emplace("textBoxOutput", textBoxOutput);
+	systemOutput.setFont(font);
+	systemOutput.setPosition(6*32+4,12*32);
+	systemOutput.setColor(sf::Color::Black);
+	systemOutput.setCharacterSize(14);
 
 	GameObject textBoxInput;
 	textBoxInput.load(imagePath + "TextBox.png");
 	textBoxInput.setPosition(6*32,18*32);
 	buttonMap.emplace("textBoxInput", textBoxInput);
+	userInputDisplay.setFont(font);
+	userInputDisplay.setPosition(6*32+4,18*32);
+	userInputDisplay.setColor(sf::Color::Black);
+	userInputDisplay.setCharacterSize(14);
+
 }

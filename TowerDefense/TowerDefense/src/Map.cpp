@@ -389,9 +389,13 @@ void Map::save(const string filename){
 	value = nullptr;
 	os.clear();
 	std::ofstream thisMap;
-	thisMap.open("resources/maps/" + filename, std::ofstream::out | std::ofstream::trunc);
-	if(!thisMap.is_open())
-		throw bad_exception("File could not be opened, nothing was saved");
+	if(int(filename.size()) > 0)
+		thisMap.open("resources/maps/" + filename + ".xml", std::ofstream::out | std::ofstream::trunc);
+	if(!thisMap.is_open()){
+		xmlDoc.clear();
+		cout << "Map could not be saved" << endl;
+		return;
+	}
 	thisMap << xmlDoc;
 	thisMap.close();
 	xmlDoc.clear();
@@ -403,7 +407,7 @@ void Map::load(string filename){
 	std::ifstream inFile;
 	inFile.open("resources/maps/" + filename);
 	if(!inFile.is_open())
-		throw bad_exception("Map could not be loaded/found!");
+		return;
 
 	//Dump contents of file into a string
 	string xmlString;
