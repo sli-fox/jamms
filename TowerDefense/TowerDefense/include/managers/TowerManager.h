@@ -17,6 +17,7 @@ class TowerManager {
     }
 	TowerManager() {};
 	~TowerManager() {};
+	void clearAllTowers();
 	Tower* getTower(int tileX, int tileY);
 	void displayTowerArray();
 	Tower* buyTower(Tower::TowerType type, int tileX, int tileY);
