@@ -12,6 +12,7 @@
 #include <SFML/Graphics.hpp>
 #include <stack>
 #include "Map.h"
+#include "Player.h"
 
 class GameState;  //Allows Game to know about GameState
 
@@ -25,6 +26,7 @@ public:
     ~Game();
 
 	static Map map;
+	static Player player;
 
    /** @brief Stack for storing the game states.
     */

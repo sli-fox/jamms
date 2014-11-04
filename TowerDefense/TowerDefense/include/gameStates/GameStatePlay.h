@@ -68,6 +68,7 @@ class GameStatePlay : public GameState {
 	sf::Font font;
 	sf::Text towerSpecs;
 	sf::Text critterSpecs;
+	sf::Text playerSpecs;
 	
      /** @brief Camera view for the gameplay displayed to the window.
       */

@@ -9,18 +9,12 @@ class Tower: public GameObject {
     Tower();
 	~Tower() { std::cout << red << _name << " has been deleted." << white << std::endl; };
 	virtual void upgradeTower() = 0;
-	bool attack(Critter* crit);
-
-	// TEMPORARY METHODS TO TEST PLAYER 
-	static int getWallet();
-	static void updateWallet(int amount);
-	static sf::Text* displayWallet();
-	// END OF TEMPORARY METHODS
+	bool canAttack(Critter* crit);
 
     enum TowerType { ShihTzu, Dalmatian, Bulldog };
 	enum UpgradeLevel { Upgrade0, Upgrade1, Upgrade2 };
 	enum Range { Small=1, Medium, Large };
-	enum RateOfFire { Slow, Normal, Fast };
+	enum RateOfFire { Slow = 1, Normal, Fast };
 	enum SpecialEffect { None, Slowing, Burning, Freezing };
 	
 	void attack();
@@ -39,7 +33,6 @@ class Tower: public GameObject {
 	int getBuyCost() const;
 	int getSellCost() const;
 	int getUpgradeCost() const;
-	bool getInPlayStatus() const;
 
 	//MUTATORS
     void setID(int _id);
@@ -71,5 +64,9 @@ class Tower: public GameObject {
 	int _upgrade_cost;
 	int _sell_cost;
 	bool _is_firing;
+
+  private:
+	  sf::Clock clock;
+	  sf::Time time;
 	
 };

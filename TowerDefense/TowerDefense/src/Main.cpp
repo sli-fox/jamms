@@ -16,11 +16,9 @@ int main(int argc, char** argv[]) {
 	"    (il),-''  (li),'  ((!.-'\n\n\n";
 
 	std::cout	<< "Game Controls:\n"
-				<< "L - Load map\n"
 				<< "Arrow Keys - Move cat\n"
-				<< "1, 2, 3 - Buy towers\n"
 				<< "U - Upgrade\n"
-				<< "Backspace - Sell tower\n\n";
+				<< "Right Click - Sell tower\n\n";
 
 
 

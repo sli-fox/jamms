@@ -52,15 +52,12 @@ void GameStatePlay::draw(const float delta_time) {
 	for(std::map<std::string, GameObject>::iterator it = buttonMap.begin() ; it != buttonMap.end() ; ++it)
 		it->second.draw(this->game->game_window);
 
-  //Draw Money [TO BE IMPORTED INTO PLAYER CLASS]
-  //For some reason, encapsulating the below code into Tower::displayWallet() to call it with
-  // "this->game->game_window.draw(std::to_string(Tower::getWallet())" crashes the game...
-	sf::Text text(std::to_string(Tower::getWallet()), font);
-	text.setPosition(21*32, float(this->game->map.getMapHeight()*32));
-	this->game->game_window.draw(text);
+  //Draw Specs of Towers, Critters and Player
 	this->game->game_window.draw(towerSpecs);
 	critterSpecs.setString(blacky->getCritterSpecs());
 	this->game->game_window.draw(critterSpecs);
+	playerSpecs.setString(Game::player.getPlayerSpecs());
+	this->game->game_window.draw(playerSpecs);
 }
 
 void GameStatePlay::update(const float delta_time) {
@@ -82,8 +79,8 @@ void GameStatePlay::handleInput() {
 	//Checking if ANY tower on the map can attack Blacky (black cat...)
 	for(int i = 0; i < this->game->map.getMapWidth(); ++i) {
 		for(int j = 0; j < this->game->map.getMapHeight(); ++j) {
-			if(tower_manager.getTower(i,j)->attack(blacky)) {
-				std::cout << "ATTACKING!!! ";
+			if(tower_manager.getTower(i,j)->canAttack(blacky)) {
+				tower_manager.getTower(i,j)->attack();
 			}
 		}
 	}
@@ -293,7 +290,7 @@ void GameStatePlay::initializeButtonMap(){
 	string squaresPath = "resources/images/towers/squares";
 
 	GameObject displayCurrentWave;
-	displayCurrentWave.load(imagePath + "CritterDisplayBox.png");
+	displayCurrentWave.load(imagePath + "DisplayBox.png");
 	displayCurrentWave.setPosition(0*32,12*32);
 	buttonMap.emplace("displayCurrentWave", displayCurrentWave);
 	critterSpecs.setFont(font);
@@ -302,12 +299,12 @@ void GameStatePlay::initializeButtonMap(){
 	critterSpecs.setCharacterSize(13);
 
 	GameObject displayNextWave;
-	displayNextWave.load(imagePath + "CritterDisplayBox.png");
+	displayNextWave.load(imagePath + "DisplayBox.png");
 	displayNextWave.setPosition(0*32,17*32);
 	buttonMap.emplace("displayNextWave", displayNextWave);
 
 	GameObject towerDisplayBox;
-	towerDisplayBox.load(imagePath + "CritterDisplayBox.png");
+	towerDisplayBox.load(imagePath + "DisplayBox.png");
 	towerDisplayBox.setPosition(24*32,14*32);
 	buttonMap.emplace("towerDisplayBox", towerDisplayBox);
 	towerSpecs.setFont(font);
@@ -315,6 +312,14 @@ void GameStatePlay::initializeButtonMap(){
 	towerSpecs.setColor(sf::Color::Black);
 	towerSpecs.setCharacterSize(13);
 	
+	GameObject playerDisplayBox;
+	playerDisplayBox.load(imagePath + "DisplayBox.png");
+	playerDisplayBox.setPosition(9*32,12*32);
+	buttonMap.emplace("playerDisplayBox", playerDisplayBox);
+	playerSpecs.setFont(font);
+	playerSpecs.setPosition(9*32,12*32);
+	playerSpecs.setColor(sf::Color::Black);
+	playerSpecs.setCharacterSize(13);
 
 
 

@@ -6,6 +6,7 @@
  */
 
 Map Game::map = Map(Map::MAX_MAP_WIDTH, Map::MAX_MAP_HEIGHT);
+Player Game::player = Player("Jamms", 500);
 
 Game::Game() {
   this->game_window.create(sf::VideoMode(1024, 768, 32), "Tower Defense", sf::Style::Close);
