@@ -37,9 +37,6 @@
     <Filter Include="Source Files\Test">
       <UniqueIdentifier>{e61f3a4d-86c1-4a0c-a866-98ce5eb4e24d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Views">
-      <UniqueIdentifier>{7db0e6fb-b5d3-4ae8-bdf7-75170e2f43bb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Managers">
       <UniqueIdentifier>{fdf84e00-954d-4dc2-b0f8-90f13cd17b1f}</UniqueIdentifier>
     </Filter>
@@ -55,16 +52,19 @@
     <Filter Include="Resource Files\Images\Towers">
       <UniqueIdentifier>{3568df63-1f76-46e4-b2ef-efb8a04f61f4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Utils\Views">
+      <UniqueIdentifier>{7db0e6fb-b5d3-4ae8-bdf7-75170e2f43bb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\test\TextureManagerTest.h">
       <Filter>Header Files\Test</Filter>
     </ClInclude>
     <ClInclude Include="include\views\MainMenu.h">
-      <Filter>Header Files\Views</Filter>
+      <Filter>Header Files\Utils\Views</Filter>
     </ClInclude>
     <ClInclude Include="include\views\Menu.h">
-      <Filter>Header Files\Views</Filter>
+      <Filter>Header Files\Utils\Views</Filter>
     </ClInclude>
     <ClInclude Include="include\gameObjects\GameObject.h">
       <Filter>Header Files\GameObjects</Filter>
@@ -144,6 +144,9 @@
     <ClInclude Include="include\gameStates\GameStateMapEditor.h">
       <Filter>Header Files\GameStates</Filter>
     </ClInclude>
+    <ClInclude Include="include\managers\CritterWave.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game.cpp">
@@ -220,6 +223,9 @@
     </ClCompile>
     <ClCompile Include="src\gameStates\GameStateMapEditor.cpp">
       <Filter>Source Files\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="src\managers\CritterWave.cpp">
+      <Filter>Source Files\Managers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

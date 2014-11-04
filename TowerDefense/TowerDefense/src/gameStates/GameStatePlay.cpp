@@ -11,7 +11,13 @@ GameStatePlay::GameStatePlay(Game* game) {
 	returnToMenu = false;
 
   this->current_waypoints = addWaypoints(getWaypointsFromMapPath());
-  
+ 
+  //Set up critter wave levels
+  this->setCritterWaveLevels();
+
+  //Set current wave to the first level
+  this->current_wave = wave_levels.top();
+
   this->mew = new WhiteCat(getStartingWaypoint());
   this->blacky = new BlackCat(getStartingWaypoint());
   
@@ -25,7 +31,7 @@ GameStatePlay::GameStatePlay(Game* game) {
   font.loadFromFile("resources/helveticaneue-webfont.ttf");
 
   // Activate mew!
-  mew->isActive = true;
+  //mew->isActive = true;
 }
 
 /**  This function sets the view to be drawn to the window,
@@ -38,9 +44,12 @@ void GameStatePlay::draw(const float delta_time) {
   //Draw map
   this->game->map.draw(this->game->game_window);
   drawWaypoints(this->current_waypoints, this->game->game_window);
-  
+
+  //Draw activated Critters within a wave
+  //<<<<<<STOPPED HERE
+
   //Draw Critter
-  this->mew->draw(this->game->game_window, delta_time);
+  //this->mew->draw(this->game->game_window, delta_time);
   this->blacky->draw(this->game->game_window, delta_time);
    
   //Draw Towers
@@ -222,6 +231,33 @@ void GameStatePlay::moveCritter(Critter* critter, const float delta_time) {
        }
   }
 }
+
+void GameStatePlay::setCritterWaveLevels() {
+  CritterWave wave1(5, CritterFactory::CritterType::WHITE_CAT);
+  CritterWave wave2(10, CritterFactory::CritterType::WHITE_CAT);
+  CritterWave wave3(5, CritterFactory::CritterType::BLACK_CAT);
+  CritterWave wave4(10, CritterFactory::CritterType::BLACK_CAT);
+
+  this->wave_levels.push(&wave1);
+  this->wave_levels.push(&wave2);
+  this->wave_levels.push(&wave3);  
+  this->wave_levels.push(&wave4);
+}
+
+void GameStatePlay::handleCritterActivationWithinWave() {
+  this->current_wave->findCritter(0)->isActive = true;
+}
+
+
+
+Waypoint* GameStatePlay::getStartingWaypoint() {
+  return &current_waypoints[0];
+}
+
+CritterWave* GameStatePlay::getCurrentCritterWave(){
+  return current_wave;
+}
+
 
 void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 	if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){

@@ -17,7 +17,6 @@
  */
 class Critter : public GameObject {
   public:
-    enum CritterType { BLACK_CAT, WHITE_CAT };
     enum MovementDirection { DOWN, LEFT, RIGHT, UP };
 
    /** @brief Handles the animated object. 
