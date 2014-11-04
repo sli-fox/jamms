@@ -61,6 +61,7 @@ class GameStatePlay : public GameState {
 
    private:
 
+<<<<<<< HEAD
 	  sf::Vector2i  localPosition;
 	  int tileX, tileY;
 	  std::map<string,GameObject> buttonMap;
@@ -68,7 +69,19 @@ class GameStatePlay : public GameState {
 	  sf::CircleShape range;
 	  Tower::TowerType towerSelector;
 	  sf::Font font;
-		 
+
+	  sf::Vector2i  localPosition;
+	  int tileX, tileY;
+	  GameObject mapBackdrop;
+	  std::map<string,GameObject> buttonMap;
+	  bool returnToMenu;
+	  sf::CircleShape range;
+	  Tower::TowerType towerSelector;
+	  sf::Font font;
+	  sf::Text towerSpecs;
+	  sf::Text critterSpecs;
+	  sf::Text playerSpecs;
+	
      /** @brief Camera view for the gameplay displayed to the window.
       */
      sf::View _gameView;

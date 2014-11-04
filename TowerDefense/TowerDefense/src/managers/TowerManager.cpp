@@ -1,9 +1,6 @@
 #pragma once
 #include <Managers/TowerManager.h>
 #include <Game.h>
-#include <GameObjects/ShihTzu.h>
-#include <GameObjects/Dalmatian.h>
-#include <GameObjects/Bulldog.h>
 
 
 void TowerManager::setArraySize(int mapWidth, int mapHeight) {
@@ -39,9 +36,9 @@ Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
 	if(!outOfBound(tileX, tileY) && isTileFree(tileX, tileY)) {
 		switch(type) {
 			case 0: {
-				if(ShihTzu::buy_cost <= Tower::getWallet()) {
+				if(ShihTzu::buy_cost <= Game::player.getCash()) {
 					TowerManager::tArray[tileX][tileY] = new ShihTzu(tileX, tileY);
-					Tower::updateWallet(- ShihTzu::buy_cost);
+					Game::player.spendCash(ShihTzu::buy_cost);
 					cout << blue << tArray[tileX][tileY]->getName() << " bought for "
 						<< ShihTzu::buy_cost
 						<< " coins!" << white << std::endl;
@@ -53,9 +50,9 @@ Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
 				break;
 			}
 			case 1: {
-				if(Dalmatian::buy_cost <= Tower::getWallet()) {
+				if(Dalmatian::buy_cost <= Game::player.getCash()) {
 					tArray[tileX][tileY] = new Dalmatian(tileX, tileY);
-					Tower::updateWallet(- Dalmatian::buy_cost);
+					Game::player.spendCash(Dalmatian::buy_cost);
 					cout << blue << tArray[tileX][tileY]->getName() << " bought for "
 						<< Dalmatian::buy_cost
 						<< " coins!" << white << std::endl;
@@ -67,9 +64,9 @@ Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
 				break;
 			}
 			case 2: {
-				if(Bulldog::buy_cost <= Tower::getWallet()) {
+				if(Bulldog::buy_cost <= Game::player.getCash()) {
 					tArray[tileX][tileY] = new Bulldog(tileX, tileY);
-					Tower::updateWallet(- Bulldog::buy_cost);
+					Game::player.spendCash(Bulldog::buy_cost);
 					cout << blue << tArray[tileX][tileY]->getName() << " bought for "
 						<< Bulldog::buy_cost
 						<< " coins!" << white << std::endl;
@@ -91,7 +88,7 @@ Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
 void TowerManager::sellTower(int tileX, int tileY)  {
 	if(!outOfBound(tileX, tileY) && isTileFree(tileX, tileY))
 		return;
-	Tower::updateWallet(+ tArray[tileX][tileY]->getSellCost());
+	Game::player.earnCash(tArray[tileX][tileY]->getSellCost());
 	std::cout << blue << tArray[tileX][tileY]->getName() << " sold for "
 		<< tArray[tileX][tileY]->getSellCost()
 		<< " coins!" << white << std::endl;

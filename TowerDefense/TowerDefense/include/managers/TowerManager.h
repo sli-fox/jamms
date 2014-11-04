@@ -16,7 +16,6 @@ class TowerManager {
       return instance;
     }
 	TowerManager() {};
-    //TowerManager(int mapWidth, int mapHeight);
 	~TowerManager() {};
 	Tower* getTower(int tileX, int tileY);
 	void displayTowerArray();

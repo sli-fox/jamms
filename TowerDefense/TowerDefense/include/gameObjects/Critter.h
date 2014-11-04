@@ -31,7 +31,7 @@ class Critter : public GameObject {
 
     int getHitPoints() const; 
     void setHitPoints(int points);
-    int getStealStrength() const; 
+    int getCoinsStrength() const; 
     int getPlayerReward() const; 
     float getSpeed() const; 
     int getLevel() const;
@@ -45,6 +45,9 @@ class Critter : public GameObject {
   void updatePosition(float x, float y);
 
   bool isAtNextWaypoint();
+
+  
+  std::string getCritterSpecs();
 
   /** @brief Draw a Critter.
   *  @param game_window Reference to the window, passed in so that Critters
@@ -62,6 +65,8 @@ class Critter : public GameObject {
   protected:
     Waypoint* current_waypoint;
 
+    CritterFactory::CritterType type;
+
     /** @brief Pure virtualized initialization function for Critter.
     *   @return Void.
     */
@@ -77,7 +82,11 @@ class Critter : public GameObject {
 
     /** @brief Rate at which the critter can steal coins from the player.
       */
-    int steal_strength;
+    int steal_coins;
+
+    /** @brief Rate at which the critter can steal lives from the player.
+      */
+    static const int STEAL_LIVES = 1;
 
     /** @brief Coin reward for the player when the Critter is killed 
       */
