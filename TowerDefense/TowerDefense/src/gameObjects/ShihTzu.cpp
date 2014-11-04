@@ -23,7 +23,7 @@ ShihTzu::ShihTzu(int tileX, int tileY) {
 }
 
 void ShihTzu::upgradeTower() {
-	if(this->_upgrade_cost <= getWallet()) {
+	if(this->_upgrade_cost <= Game::player.getCash()) {
 		int oldUpgradeCost = this->_upgrade_cost;
 		if(this->getUpgradeLevel() == 0) {
 			this->setPower(2);
@@ -48,7 +48,7 @@ void ShihTzu::upgradeTower() {
 			std::cout << red << "Error: Tower already fully upgraded." << std::endl;
 			return;
 		}
-		updateWallet(- oldUpgradeCost);
+		Game::player.spendCash(oldUpgradeCost);
 		std::cout << blue << "Tower successfully upgraded for " << oldUpgradeCost << " coins." << std::endl;
 	} else {
 		std::cout << red << "Insufficient funds" << std::endl;

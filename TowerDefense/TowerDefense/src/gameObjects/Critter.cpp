@@ -6,8 +6,8 @@ int Critter::getHitPoints() const {
 void Critter::setHitPoints(int points){
   this->hit_points = points;
 }
-int Critter::getStealStrength() const {
-  return steal_strength;
+int Critter::getCoinsStrength() const {
+  return steal_coins;
 } 
 int Critter::getPlayerReward() const {
   return player_reward;
@@ -66,6 +66,20 @@ Critter::MovementDirection Critter::getMovementDirection() {
       return RIGHT;
 }
 
+std::string Critter::getCritterSpecs() {
+	//Since we can't cout an enum in C++, we need this Array system as a workaround (optional, but prettier at output)
+	char *CritterTypeA[] = { "BLACK_CAT", "WHITE_CAT" };
+	std::stringstream output;
+	output << "CRITTER SPECIFICATIONS:" << std::endl;
+	output << "Hit Points: " << this->hit_points << std::endl;
+	output << "Type: " << CritterTypeA[this->type] << std::endl;
+	output << "Steal Coins: " << this->steal_coins << std::endl;
+	output << "Steal Lives: " << this->STEAL_LIVES << std::endl;
+	output << "Player Reward: " << this->player_reward << std::endl;
+	output << "Speed: " << this->speed << std::endl;
+
+	return output.str();
+}
 
 void Critter::draw(sf::RenderWindow& game_window, float delta_time) {
   // Change the animation to reflect the current one
