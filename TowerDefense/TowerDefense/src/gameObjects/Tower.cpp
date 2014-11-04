@@ -98,7 +98,6 @@ bool Tower::canAttack(Critter* crit) {
 
 	if(sqrt(pythagore) <= this->getRangeShape().getRadius() && time.asSeconds()*this->getRateOfFire() >= 1) {
 		_is_firing = true;
-		std::cout << "Time: " << time.asSeconds() << " seconds" << std::endl;
 		clock.restart();
 		return true;
 	}
@@ -106,6 +105,7 @@ bool Tower::canAttack(Critter* crit) {
 }
 
 void Tower::attack() {
+	std::cout << white << "Time: " << time.asSeconds() << " seconds" << std::endl;
 	std::cout << white << "WOUF WOUF!" << std::endl;
 }
 
@@ -123,7 +123,7 @@ std::string Tower::getTowerSpecs() {
 	output << "Upgrade: " << UpgradeLevelA[this->_upgrade_level] << std::endl;
 	output << "Power: " << this->_power << std::endl;
 	output << "Range:  " << RangeA[this->_range-1] << std::endl;
-	output << "Fire Rate: " << RateOfFireA[this->_rate_of_fire] << std::endl;
+	output << "Fire Rate: " << RateOfFireA[this->_rate_of_fire-1] << std::endl;
 	output << "Special Effect: " << SpecialEffectA[this->_special_effect] << std::endl;
 	output << "Upgrade Cost: " << this->_upgrade_cost << " coins" << std::endl;
 	output << "Sell Cost: " << this->_sell_cost << " coins" << std::endl;
