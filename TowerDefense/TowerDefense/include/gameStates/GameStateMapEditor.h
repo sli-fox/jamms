@@ -13,6 +13,7 @@
 #include <iostream>
 #include <gameStates/GameState.h>
 #include <gameStates/GameStatePlay.h>
+#include "dirent.h"
 
 /** @brief Game state that represents the gameplay.
  */
@@ -48,11 +49,15 @@ class GameStateMapEditor : public GameState {
 
    private:
 	sf::Vector2i  localPosition;
-	int tileX, tileY;
+	int tileX, tileY, mapX, mapY;
 	Tile::TYPE tileSelector;
 	GameObject mapBackdrop;
 	std::map<string,GameObject> buttonMap;
-	bool returnToMenu;
+	bool returnToMenu, pauseSave, pauseLoad;
+	string userInput;
+	sf::Text displayXsize, displayYsize, systemOutput, userInputDisplay;
+	sf::Font font;
+	vector<string> mapFiles;
 		 
      /** @brief Camera view for the gameplay displayed to the window.
       */
@@ -62,6 +67,7 @@ class GameStateMapEditor : public GameState {
       */
      sf::View _guiView;
 
+	 const vector<string> getFilesInDir(const string dir);
 	 void initializeButtonMap();
 	 void buttonCommandLibrary();
      void mapEditorCommandLibrary();

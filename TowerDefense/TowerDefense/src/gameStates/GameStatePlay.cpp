@@ -23,6 +23,8 @@ GameStatePlay::GameStatePlay(Game* game) {
   this->_gameView.setCenter(center_position);
   this->_guiView.setCenter(center_position);
   font.loadFromFile("resources/helveticaneue-webfont.ttf");
+  mapBackdrop.load("resources/images/MapBackdrop.png");
+  mapBackdrop.setPosition(0*32,0*32);
 
   // Activate mew!
   mew->isActive = true;
@@ -36,6 +38,7 @@ void GameStatePlay::draw(const float delta_time) {
   this->game->game_window.clear(sf::Color::Black);
 
   //Draw map
+  mapBackdrop.draw(this->game->game_window);
   this->game->map.draw(this->game->game_window);
   drawWaypoints(this->current_waypoints, this->game->game_window);
   
@@ -54,7 +57,7 @@ void GameStatePlay::draw(const float delta_time) {
 
   //Draw Specs of Towers, Critters and Player
 	this->game->game_window.draw(towerSpecs);
-	critterSpecs.setString(blacky->getCritterSpecs());
+	critterSpecs.setString("CURRENT WAVE: \n" + blacky->getCritterSpecs());
 	this->game->game_window.draw(critterSpecs);
 	playerSpecs.setString(Game::player.getPlayerSpecs());
 	this->game->game_window.draw(playerSpecs);
@@ -294,7 +297,7 @@ void GameStatePlay::initializeButtonMap(){
 	displayCurrentWave.setPosition(0*32,12*32);
 	buttonMap.emplace("displayCurrentWave", displayCurrentWave);
 	critterSpecs.setFont(font);
-	critterSpecs.setPosition(0*32,12*32);
+	critterSpecs.setPosition(0*32+8,12*32);
 	critterSpecs.setColor(sf::Color::Black);
 	critterSpecs.setCharacterSize(13);
 
@@ -308,7 +311,7 @@ void GameStatePlay::initializeButtonMap(){
 	towerDisplayBox.setPosition(24*32,14*32);
 	buttonMap.emplace("towerDisplayBox", towerDisplayBox);
 	towerSpecs.setFont(font);
-	towerSpecs.setPosition(24*32,14*32);
+	towerSpecs.setPosition(24*32+8,14*32);
 	towerSpecs.setColor(sf::Color::Black);
 	towerSpecs.setCharacterSize(13);
 	
@@ -317,11 +320,9 @@ void GameStatePlay::initializeButtonMap(){
 	playerDisplayBox.setPosition(9*32,12*32);
 	buttonMap.emplace("playerDisplayBox", playerDisplayBox);
 	playerSpecs.setFont(font);
-	playerSpecs.setPosition(9*32,12*32);
+	playerSpecs.setPosition(9*32+8,12*32);
 	playerSpecs.setColor(sf::Color::Black);
 	playerSpecs.setCharacterSize(13);
-
-
 
 	GameObject pauseBtn;
 	pauseBtn.load(imagePath + "PauseBtn.png");
