@@ -1,7 +1,6 @@
 #include <gameStates/GameStatePlay.h>
 
 
-bool showBlacky = false;
 
 /**  The constructor sets the view to the size of the window
   *  and centers the view on the center of the window.
@@ -29,6 +28,8 @@ GameStatePlay::GameStatePlay(Game* game) {
 
   this->mew = new WhiteCat(11, getStartingWaypoint());
   this->blacky = new BlackCat(12, getStartingWaypoint());
+  showBlacky = false;
+
   
   sf::Vector2f position = sf::Vector2f(this->game->game_window.getSize());
   this->_gameView.setSize(position);
@@ -61,8 +62,8 @@ void GameStatePlay::draw(const float delta_time) {
 
   //Draw Critter
   //this->mew->draw(this->game->game_window, delta_time);
-  if (!showBlacky)
-	this->blacky->draw(this->game->game_window, delta_time);
+  if (showBlacky)
+	  this->blacky->draw(this->game->game_window, delta_time);
 
   //Draw Critter wave
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
