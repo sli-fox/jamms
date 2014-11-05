@@ -9,8 +9,8 @@ int Critter::getHitPoints() const {
 void Critter::setHitPoints(int points){
   this->hit_points = points;
 }
-int Critter::getCoinsStrength() const {
-  return steal_coins;
+int Critter::getStealPointsStrength() const {
+  return steal_points;
 } 
 int Critter::getPlayerReward() const {
   return player_reward;
@@ -76,7 +76,7 @@ std::string Critter::getCritterSpecs() {
 	output << "CRITTER SPECIFICATIONS:" << std::endl;
 	output << "Hit Points: " << this->hit_points << std::endl;
 	output << "Type: " << CritterTypeA[this->type] << std::endl;
-	output << "Steal Coins: " << this->steal_coins << std::endl;
+	output << "Steal Coins: " << this->steal_points << std::endl;
 	output << "Steal Lives: " << this->STEAL_LIVES << std::endl;
 	output << "Player Reward: " << this->player_reward << std::endl;
 	output << "Speed: " << this->speed << std::endl;

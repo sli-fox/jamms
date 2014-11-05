@@ -29,7 +29,7 @@ void WhiteCat::initializeCritter(const std::vector<Animation>& animations) {
   this->isActive = false;
   this->isAtEndTile = false;
   this->hit_points = 2;
-  this->steal_coins = 4;
+  this->steal_points = 4;
   this->player_reward = 5;
   this->type = Critter::CritterType::WHITE_CAT;
   this->speed = 10.0f;
