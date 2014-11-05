@@ -253,6 +253,9 @@ void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::U) && !tower_manager.isTileFree(tileX, tileY)){
 		tower_manager.getTower(tileX, tileY)->upgradeTower();
 	}
+	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num0)){
+		tower_manager.clearAllTowers();
+	}
 	/*
 	if(thisKey == sf::Keyboard::BackSpace){
 	tower_manager.sellTower(tileX, tileY);
