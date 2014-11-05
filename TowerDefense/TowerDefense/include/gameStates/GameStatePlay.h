@@ -25,6 +25,7 @@ class GameStatePlay : public GameState {
   public:
     WhiteCat* mew;
     BlackCat* blacky;
+	//Projectile* projectile;
 
     /** @brief Constructor that takes in a pointer to the Game
      *  that created them.
@@ -59,6 +60,7 @@ class GameStatePlay : public GameState {
 
    private:
 
+	//bool towerIsFiring;
 	sf::Vector2i  localPosition;
 	int tileX, tileY;
 	GameObject mapBackdrop;

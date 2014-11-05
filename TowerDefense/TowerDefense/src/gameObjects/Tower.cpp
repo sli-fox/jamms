@@ -3,7 +3,6 @@
 
 Tower::Tower() {
 	this->_upgrade_level = Tower::UpgradeLevel::Upgrade0;
-	this->_is_firing = false;
 	this->time = clock.getElapsedTime();
 }
 
@@ -28,9 +27,6 @@ Tower::Range Tower::getRange() const {
 }
 Tower::RateOfFire Tower::getRateOfFire() const {
 	return _rate_of_fire;
-}
-bool Tower::getIsFiring() const {
-	return _is_firing;
 }
 Tower::SpecialEffect Tower::getSpecialEffet() const {
 	return _special_effect;
@@ -61,9 +57,6 @@ void Tower::setRange(Tower::Range _range) {
 void Tower::setRateOfFire(Tower::RateOfFire _rate_of_fire) {
 	this->_rate_of_fire = _rate_of_fire;
 }
-void Tower::setIsFiring(bool _is_firing) {
-	this->_is_firing = _is_firing;
-}
 void Tower::setSpecialEffet(Tower::SpecialEffect _special_effect) {
 	this->_special_effect = _special_effect;
 }
@@ -86,27 +79,131 @@ sf::CircleShape Tower::getRangeShape() const {
 	return _range_shape;
 }
 
-bool Tower::canAttack(Critter* crit) {
-	if(this == NULL) return false;
-
+/**
+  * @brief Determines whether the tower can deliver another attack based on its rate of fire
+  * @return bool
+  */
+bool Tower::canAttack() {
 	this->time = this->clock.getElapsedTime();
 
-	int distX = int(crit->getPosition().x - this->getPosition().x-16);
-	int distY = int(crit->getPosition().y - this->getPosition().y-16);
-	int pythagore = static_cast<int> (pow(static_cast<double> (distX), 2))
-	+ static_cast<int> (pow(static_cast<double> (distY), 2));
-
-	if(sqrt(pythagore) <= this->getRangeShape().getRadius() && time.asSeconds()*this->getRateOfFire() >= 1) {
-		_is_firing = true;
+	if(time.asSeconds() * this->getRateOfFire() >= 1) {
 		clock.restart();
 		return true;
 	}
 	return false;
 }
 
+/**
+  * @brief Inserts critter in queue to be attacked by tower
+  * @return void
+  */
+void Tower::insertCritterInQueue(Critter* critter){
+	this->_critters_in_range.insert(critter);
+	//priority queue solution
+	//if(_critters_in_range.empty() || _critters_in_range.top() != critter)
+	//		_critters_in_range.push(critter);
+}
+
+/**
+  * @brief Removes frontmost critter from the queue
+  * @return void
+  */
+void Tower::removeCritterInFront(){
+	if(!this->_critters_in_range.empty())
+		if(!this->critterIsWithinRange(*this->_critters_in_range.begin())){
+			cout << "CRITTERS IN SET: " << int(_critters_in_range.size()) << endl;
+			this->_critters_in_range.erase(this->_critters_in_range.begin());
+			cout << "CRITTERS IN SET: " << int(_critters_in_range.size()) << endl;
+		}
+	//priority queue solution
+	//if(!_critters_in_range.empty())
+	//	if(!critterIsWithinRange(_critters_in_range.top()))
+	//		_critters_in_range.pop();
+}
+
+/**
+  * @brief Determines whether critter falls within tower range
+  * @return bool
+  */
+bool Tower::critterIsWithinRange(Critter* critter) {
+	return this->circleToCircleIntersection(critter);
+	/*
+	priority queue solution
+	if(this->circleToCircleIntersection(critter)) {
+		if(_critters_in_range.empty())|| _critters_in_range.top() != critter)
+			_critters_in_range.push(critter);
+
+		cout << "CRITTERS IN QUEUE: " << int(_critters_in_range.size()) << endl;
+		
+		return true;
+	}
+	else {
+		if(!_critters_in_range.empty())
+			this->_critters_in_range.pop();
+		return false;
+	}
+	*/
+}
+
+/**
+  * @brief Tower attacks a critter in range. Attack aftermath may be critter death, player gaining points, etc.
+  * @return void
+  */
 void Tower::attack() {
-	std::cout << white << "Time: " << time.asSeconds() << " seconds" << std::endl;
-	std::cout << white << "WOUF WOUF!" << std::endl;
+	
+	//this->spawnProjectile(this->getPosition(), this->_power, this->_rate_of_fire, critter) {
+		//Projectile* projectile = new Projectile(this->getPosition(), this->_power);
+		//projectile->findCollisionPath(critter);
+		//projectile->animate() {
+		//  this->rotate(angle(_collision_path.x, _collision_path.y)
+		//	this->move(_collision_path);	
+		//}
+	//}
+	
+	if(!_critters_in_range.empty()){
+		Critter* thisCritter = *_critters_in_range.begin();
+
+		if(thisCritter->getHitPoints() > 0) {
+			std::cout << white << "Time: " << time.asSeconds() << " seconds" << std::endl;
+			std::cout << white << "WOUF WOUF!" << std::endl;
+	
+			std::cout << white << "Critter Hit!" << std::endl; //critter->getName()
+			std::cout << white << "Critter took " << this->_power << " damage from " << this->_name << std::endl;
+			thisCritter->setHitPoints(thisCritter->getHitPoints() - this->_power);
+		}
+		else if(thisCritter->getHitPoints() <= 0) {
+			std::cout << white << "Time: " << time.asSeconds() << " seconds" << std::endl;
+			std::cout << white << "WOUF WOUF!" << std::endl;
+	
+			std::cout << white << "CRITTER DEFEATED!" << std::endl;
+			std::cout << white << "Awarded " << thisCritter->getPlayerReward() << " points!" << std::endl;
+			Game::player.gainPoints(thisCritter->getPlayerReward());
+
+			int cash = 5; //should have the cash reward be specific to a wave. so wave 1 gives you 5 cash per kill, wave 2 gives you 10 cash etc etc. so we'd use CritterWave::getWave().coinReward
+			std::cout << white << "Gained " << cash << " coins!" << std::endl;
+			Game::player.earnCash(cash);
+			//critter->die();
+		}
+	}
+
+	//priority queue solution
+	//if(!_critters_in_range.empty()){
+	//	if(_critters_in_range.top()->getHitPoints() > 0) {
+	//		std::cout << white << "Critter Hit!" << std::endl; //critter->getName()
+	//		std::cout << white << "Critter took " << this->_power << " damage from " << this->_name << std::endl;
+	//		_critters_in_range.top()->setHitPoints(_critters_in_range.top()->getHitPoints() - this->_power);
+	//	}
+	//	else if(_critters_in_range.top()->getHitPoints() <= 0) {
+	//		std::cout << white << "CRITTER DEFEATED!" << std::endl;
+	//		std::cout << white << "Awarded " << _critters_in_range.top()->getPlayerReward() << " points!" << std::endl;
+	//		Game::player.gainPoints(_critters_in_range.top()->getPlayerReward());
+
+	//		int cash = 5; //should have the cash reward be specific to a wave. so wave 1 gives you 5 cash per kill, wave 2 gives you 10 cash etc etc. so we'd use CritterWave::getWave().coinReward
+	//		std::cout << white << "Gained " << cash << " coins!" << std::endl;
+	//		Game::player.earnCash(cash);
+	//		//critter->die();
+	//	}
+	//}
 }
 
 std::string Tower::getTowerSpecs() {
@@ -129,4 +226,16 @@ std::string Tower::getTowerSpecs() {
 	output << "Sell Cost: " << this->_sell_cost << " coins" << std::endl;
 
 	return output.str();
+}
+
+/**
+  * @brief Overrides method to apply to tower range sf::CircleShape object
+  * @return bool
+  */
+bool Tower::circleToCircleIntersection(GameObject* game_object){
+	float radius = this->_range_shape.getRadius();
+
+	sf::Vector2f distance = this->getSpriteCenter() - game_object->getSpriteCenter();
+	
+	return sqrt(distance.x * distance.x + distance.y * distance.y) <= radius;
 }

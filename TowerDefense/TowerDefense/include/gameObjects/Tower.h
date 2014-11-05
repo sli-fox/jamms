@@ -2,14 +2,19 @@
 #include <string>
 #include <GameObjects/GameObject.h>
 #include <GameObjects/Critter.h>
+#include <GameObjects/Projectile.h>
 #include <Utils/ConsoleColor.h>
+#include <queue>
+#include <vector>
+#include <set>
+#include "Utils/ClosestToEndTile.h"
 
 class Tower: public GameObject {
   public:
     Tower();
 	~Tower() { std::cout << red << _name << " has been deleted." << white << std::endl; };
 	virtual void upgradeTower() = 0;
-	bool canAttack(Critter* crit);
+	bool canAttack();
 
     enum TowerType { ShihTzu, Dalmatian, Bulldog };
 	enum UpgradeLevel { Upgrade0, Upgrade1, Upgrade2 };
@@ -33,7 +38,7 @@ class Tower: public GameObject {
 	int getBuyCost() const;
 	int getSellCost() const;
 	int getUpgradeCost() const;
-
+	
 	//MUTATORS
     void setID(int _id);
     void setType(Tower::TowerType _tower_type);
@@ -49,9 +54,12 @@ class Tower: public GameObject {
 	void setUpgradeCost(int _upgrade_cost);
 
 	std::string getTowerSpecs();
-
-
-  protected:
+	bool Tower::circleToCircleIntersection(GameObject* game_object);
+	bool critterIsWithinRange(Critter* critter);
+	void insertCritterInQueue(Critter* critter);
+	void removeCritterInFront();
+  
+protected:
     int _id;
 	std::string _name;
     TowerType _type;
@@ -63,10 +71,10 @@ class Tower: public GameObject {
 	SpecialEffect _special_effect;
 	int _upgrade_cost;
 	int _sell_cost;
-	bool _is_firing;
+	std::set<Critter*, ClosestToEndTile> _critters_in_range;
+	//std::priority_queue<Critter*, vector<Critter*>, ClosestToEndTile> _critters_in_range;
 
   private:
 	  sf::Clock clock;
 	  sf::Time time;
-	
 };

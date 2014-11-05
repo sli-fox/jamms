@@ -14,7 +14,7 @@ GameStatePlay::GameStatePlay(Game* game) {
   
   this->mew = new WhiteCat(getStartingWaypoint());
   this->blacky = new BlackCat(getStartingWaypoint());
-  
+
   sf::Vector2f position = sf::Vector2f(this->game->game_window.getSize());
   this->_gameView.setSize(position);
   this->_guiView.setSize(position);
@@ -28,6 +28,8 @@ GameStatePlay::GameStatePlay(Game* game) {
 
   // Activate mew!
   mew->isActive = true;
+
+  //this->towerIsFiring = false;
 }
 
 /**  This function sets the view to be drawn to the window,
@@ -61,11 +63,18 @@ void GameStatePlay::draw(const float delta_time) {
 	this->game->game_window.draw(critterSpecs);
 	playerSpecs.setString(Game::player.getPlayerSpecs());
 	this->game->game_window.draw(playerSpecs);
+
+  //Draw projectile
+	//if(this->towerIsFiring)
+	//	this->projectile->draw(this->game->game_window, delta_time);
+
 }
 
 void GameStatePlay::update(const float delta_time) {
   this->mew->draw(this->game->game_window, delta_time);
   this->blacky->draw(this->game->game_window, delta_time);
+  //if(this->towerIsFiring)
+	//this->projectile->draw(this->game->game_window, delta_time);
   
   if (mew->isActive)
     moveCritter(mew, delta_time);
@@ -82,11 +91,29 @@ void GameStatePlay::handleInput() {
 	//Checking if ANY tower on the map can attack Blacky (black cat...)
 	for(int i = 0; i < this->game->map.getMapWidth(); ++i) {
 		for(int j = 0; j < this->game->map.getMapHeight(); ++j) {
-			if(tower_manager.getTower(i,j)->canAttack(blacky)) {
-				tower_manager.getTower(i,j)->attack();
+
+			Tower* tower = tower_manager.getTower(i,j);
+
+			if(tower != nullptr) {
+				//this->projectile = new Projectile(this->mew->getPosition(), tower->getPower(), tower->getRateOfFire());
+
+				if(tower->critterIsWithinRange(mew))
+					tower->insertCritterInQueue(mew);
+				
+				if(tower->critterIsWithinRange(blacky))
+					tower->insertCritterInQueue(blacky);
+				
+				tower->removeCritterInFront();
+				
+				//(tower->critterIsWithinRange(mew) | tower->critterIsWithinRange(blacky))) {
+				if(tower->canAttack()) {
+					//this->towerIsFiring = true;
+					tower->attack();
+				}
 			}
 		}
 	}
+	//this->towerIsFiring = false;
 
 	while(!returnToMenu && this->game->game_window.pollEvent(event)) {
 		localPosition = sf::Mouse::getPosition(this->game->game_window);
