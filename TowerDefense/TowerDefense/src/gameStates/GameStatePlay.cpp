@@ -323,6 +323,13 @@ void GameStatePlay::handleCritterRemovalFromWave() {
     //Check if critters are at end tile
     critters[i]->isAtEndTile = checkIfAtEndTile(critters[i]);
     
+    if (critters[i]->isAtEndTile && critters[i]->isActive) {
+      //Take a life from the player
+      this->game->player.loseLives(1);
+      //Remove points from player
+      this->game->player.losePoints(critters[i]->getStealPointsStrength());
+    }
+
     if (critters[i]->isAtEndTile) {
       current_wave->findCritter(i)->isActive = false;
     }
