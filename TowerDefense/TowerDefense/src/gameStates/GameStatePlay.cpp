@@ -16,7 +16,7 @@ GameStatePlay::GameStatePlay(Game* game) {
   this->setCritterWaveLevels(getStartingWaypoint());
 
   //Set current wave to the first level
-  this->current_wave = wave_levels.top();
+  this->current_wave = wave_levels[0];
 
   //Set last activated critter to the first critter in the wave and activate it
   this->delay_count = 0;
@@ -57,6 +57,7 @@ void GameStatePlay::draw(const float delta_time) {
   //this->mew->draw(this->game->game_window, delta_time);
   this->blacky->draw(this->game->game_window, delta_time); 
 
+  //Draw Critter wave
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
 
   //Draw Towers
@@ -77,21 +78,24 @@ void GameStatePlay::draw(const float delta_time) {
 }
 
 void GameStatePlay::update(const float delta_time) {
-  //Draw activated Critters within a wave
+  //Draw  & move activated Critters within a wave
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
-  
   moveActivatedCritters(delta_time);
 
-  if (delay_count == 100 && last_activated_critter->next_critter) {
+  //Activate Critters within a wave based on number of update cycles
+  if (delay_count >= 175 && last_activated_critter->next_critter) {
     last_activated_critter->next_critter->isActive = true;
     std::cout << "ACTIVATE critter with id " << last_activated_critter->next_critter->getId() << std::endl;
     last_activated_critter = last_activated_critter->next_critter;
     delay_count = 0;
   } 
-
   delay_count += 1;
 
+  //Handle the removal of critters from the current wave
+  handleCritterRemovalFromWave();
 
+  //Handle level switching
+  handleCritterWaveLevelSwitching();
 
   //this->mew->draw(this->game->game_window, delta_time);
   this->blacky->draw(this->game->game_window, delta_time);
@@ -111,10 +115,14 @@ void GameStatePlay::setCritterWaveLevels(Waypoint* starting_waypoint) {
   CritterWave* wave3 = new CritterWave(5, Critter::CritterType::BLACK_CAT, getStartingWaypoint());
   CritterWave* wave4 = new CritterWave(10, Critter::CritterType::BLACK_CAT, getStartingWaypoint());
 
-  this->wave_levels.push(wave4);
-  this->wave_levels.push(wave3);
-  this->wave_levels.push(wave2);  
-  this->wave_levels.push(wave1);
+  this->wave_levels.push_back(wave1);
+  this->wave_levels.push_back(wave2);
+  this->wave_levels.push_back(wave3);  
+  this->wave_levels.push_back(wave4);
+
+  for (int i = 0; i < wave_levels.size() - 1; ++i) {
+    wave_levels[i]->next_wave = wave_levels[i+1];
+  }
 }
 
 
@@ -279,14 +287,32 @@ void GameStatePlay::moveCritter(Critter* critter, const float delta_time) {
   }
 }
 
-void GameStatePlay::handleCritterActivationWithinWave(float time_delay_ms) {
+void GameStatePlay::handleCritterRemovalFromWave() {
   std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
-  for (int i = 1; i < critters.size() - 1; ++i) {
-    critters[i]->isActive = true;
+  for (int i = 0; i < critters.size(); ++i) {
+    //Check if critters are at end tile
+    critters[i]->isAtEndTile = checkIfAtEndTile(critters[i]);
+    
+    if (critters[i]->isAtEndTile) {
+      current_wave->findCritter(i)->isActive = false;
+    }
   }
 }
 
-
+void GameStatePlay::handleCritterWaveLevelSwitching() {
+  std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
+  for (int i = 0; i < critters.size(); ++i) {
+    if (critters[i]->isActive)
+      return;
+  }
+  if (current_wave->next_wave) {
+    current_wave = current_wave->next_wave;
+    this->delay_count = 0;
+    std::cout << current_wave->next_wave->getCritterCount() << std::endl;
+    this->last_activated_critter = current_wave->findCritter(0);
+    last_activated_critter->isActive = true;
+  }
+}
 
 Waypoint* GameStatePlay::getStartingWaypoint() {
   return &current_waypoints[0];

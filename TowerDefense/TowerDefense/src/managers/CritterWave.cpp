@@ -6,12 +6,12 @@
 CritterWave::CritterWave(int numOfCritters, Critter::CritterType type, Waypoint* starting_waypoint) 
   : numOfCritters(numOfCritters), type(type) {
 
-  for (int i = 0; i <= this->numOfCritters - 1; ++i) {
+  for (int i = 0; i < this->numOfCritters; ++i) {
     this->addCritter(i, CritterFactory::createCritter(i, type, starting_waypoint));
   }
 
   //Set pointers for next critters
-  for (int i = 0; i <= this->numOfCritters - 2; ++i) {
+  for (int i = 0; i < this->numOfCritters - 1; ++i) {
     this->_m_critter_wave[i]->next_critter = _m_critter_wave[i+1];
   }
 }
