@@ -99,9 +99,6 @@ bool Tower::canAttack() {
   */
 void Tower::insertCritterInQueue(Critter* critter){
 	this->_critters_in_range.insert(critter);
-	//priority queue solution
-	//if(_critters_in_range.empty() || _critters_in_range.top() != critter)
-	//		_critters_in_range.push(critter);
 }
 
 /**
@@ -115,10 +112,6 @@ void Tower::removeCritterInFront(){
 			this->_critters_in_range.erase(this->_critters_in_range.begin());
 			cout << "CRITTERS IN SET: " << int(_critters_in_range.size()) << endl;
 		}
-	//priority queue solution
-	//if(!_critters_in_range.empty())
-	//	if(!critterIsWithinRange(_critters_in_range.top()))
-	//		_critters_in_range.pop();
 }
 
 /**
@@ -127,22 +120,6 @@ void Tower::removeCritterInFront(){
   */
 bool Tower::critterIsWithinRange(Critter* critter) {
 	return this->circleToCircleIntersection(critter);
-	/*
-	priority queue solution
-	if(this->circleToCircleIntersection(critter)) {
-		if(_critters_in_range.empty())|| _critters_in_range.top() != critter)
-			_critters_in_range.push(critter);
-
-		cout << "CRITTERS IN QUEUE: " << int(_critters_in_range.size()) << endl;
-		
-		return true;
-	}
-	else {
-		if(!_critters_in_range.empty())
-			this->_critters_in_range.pop();
-		return false;
-	}
-	*/
 }
 
 /**
@@ -185,25 +162,6 @@ void Tower::attack() {
 			//critter->die();
 		}
 	}
-
-	//priority queue solution
-	//if(!_critters_in_range.empty()){
-	//	if(_critters_in_range.top()->getHitPoints() > 0) {
-	//		std::cout << white << "Critter Hit!" << std::endl; //critter->getName()
-	//		std::cout << white << "Critter took " << this->_power << " damage from " << this->_name << std::endl;
-	//		_critters_in_range.top()->setHitPoints(_critters_in_range.top()->getHitPoints() - this->_power);
-	//	}
-	//	else if(_critters_in_range.top()->getHitPoints() <= 0) {
-	//		std::cout << white << "CRITTER DEFEATED!" << std::endl;
-	//		std::cout << white << "Awarded " << _critters_in_range.top()->getPlayerReward() << " points!" << std::endl;
-	//		Game::player.gainPoints(_critters_in_range.top()->getPlayerReward());
-
-	//		int cash = 5; //should have the cash reward be specific to a wave. so wave 1 gives you 5 cash per kill, wave 2 gives you 10 cash etc etc. so we'd use CritterWave::getWave().coinReward
-	//		std::cout << white << "Gained " << cash << " coins!" << std::endl;
-	//		Game::player.earnCash(cash);
-	//		//critter->die();
-	//	}
-	//}
 }
 
 std::string Tower::getTowerSpecs() {

@@ -32,6 +32,10 @@ GameStatePlay::GameStatePlay(Game* game) {
   //this->towerIsFiring = false;
 }
 
+GameStatePlay::~GameStatePlay() {
+	this->tower_manager.clearAllTowers();
+}
+
 /**  This function sets the view to be drawn to the window,
   *  and draws everything related to state. 
   */
@@ -81,8 +85,10 @@ void GameStatePlay::update(const float delta_time) {
   
   mew->isAtEndTile = checkIfAtEndTile(mew);
   
-  if (mew->isAtEndTile)
+  if (mew->isAtEndTile) {
     std::cout << "Mew: I'm at the end tile!" << std::endl; 
+	Game::player.loseLives(1);
+  }
 }
 
 void GameStatePlay::handleInput() {

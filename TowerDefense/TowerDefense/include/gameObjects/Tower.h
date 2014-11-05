@@ -72,7 +72,6 @@ protected:
 	int _upgrade_cost;
 	int _sell_cost;
 	std::set<Critter*, ClosestToEndTile> _critters_in_range;
-	//std::priority_queue<Critter*, vector<Critter*>, ClosestToEndTile> _critters_in_range;
 
   private:
 	  sf::Clock clock;

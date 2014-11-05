@@ -32,6 +32,8 @@ class GameStatePlay : public GameState {
      *  @param game Pointer to game.
      */
     GameStatePlay(Game* game);
+
+	virtual ~GameStatePlay();
     
     /** @brief Draws game to the render window. 
     *   @param delta_time Elapsed time during the game.
