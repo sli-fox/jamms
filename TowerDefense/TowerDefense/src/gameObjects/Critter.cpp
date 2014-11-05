@@ -84,6 +84,34 @@ std::string Critter::getCritterSpecs() {
 	return output.str();
 }
 
+//Controlling the cat with Arrow Keys
+void Critter::controlCat(sf::Keyboard::Key arrowKey) {
+	if(arrowKey == sf::Keyboard::Up) {
+		if(this->getPosition().y > 0) {
+			this->updatePosition(0, -2);
+			this->animation_index = 3;
+		}
+	}
+	if(arrowKey == sf::Keyboard::Right) {
+		if(this->getPosition().x < Game::map.getMapWidth()*32) {
+			this->updatePosition(+2, 0);
+			this->animation_index = 2;
+		}
+	}
+	if(arrowKey == sf::Keyboard::Down) {
+		if(this->getPosition().y < Game::map.getMapHeight()*32) {
+			this->updatePosition(0, +2);
+			this->animation_index = 0;
+		}
+	}
+	if(arrowKey == sf::Keyboard::Left) {
+		if(this->getPosition().x > 0) {
+			this->updatePosition(-2, 0);
+			this->animation_index = 1;
+		}
+	}
+}
+
 void Critter::draw(sf::RenderWindow& game_window, float delta_time) {
   // Change the animation to reflect the current one
   this->animation_handler.changeAnimation(this->animation_index);

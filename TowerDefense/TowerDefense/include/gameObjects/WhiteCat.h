@@ -22,8 +22,6 @@ class WhiteCat : public Critter {
        
     WhiteCat(int id, Waypoint* starting_waypoint);
     ~WhiteCat() {}
-
-	void controlCat(sf::Keyboard::Key arrowKey);
     
   private:
     /** @brief Initialization function for a WhiteCat.
