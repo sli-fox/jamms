@@ -15,6 +15,7 @@
 #include <gameObjects/WhiteCat.h>
 #include <gameObjects/BlackCat.h>
 #include <utils/Waypoint.h>
+#include <algorithm>
 #include <iostream>
 #include <stack>
 #include <Map.h>
@@ -28,6 +29,8 @@ class GameStatePlay : public GameState {
   public:
     WhiteCat* mew;
     BlackCat* blacky;
+    int delay_count;
+    Critter* last_activated_critter;
 
     /** @brief Constructor that takes in a pointer to the Game
      *  that created them.
@@ -59,16 +62,7 @@ class GameStatePlay : public GameState {
 
     CritterWave* getCurrentCritterWave();
 
-   private:
-
-<<<<<<< HEAD
-	  sf::Vector2i  localPosition;
-	  int tileX, tileY;
-	  std::map<string,GameObject> buttonMap;
-	  bool returnToMenu;
-	  sf::CircleShape range;
-	  Tower::TowerType towerSelector;
-	  sf::Font font;
+  private:
 
 	  sf::Vector2i  localPosition;
 	  int tileX, tileY;
@@ -112,18 +106,14 @@ class GameStatePlay : public GameState {
       *   @return Void.
       */
      void drawWaypoints(std::vector<Waypoint> waypoints, sf::RenderWindow& game_window);
-	 
+     void moveActivatedCritters(const float delta_time);
      void moveCritter(Critter* critter, const float delta_time);
 	   void initializeButtonMap();
 	   void buttonCommandLibrary();
      void towerCommandLibrary(const int tileX, const int tileY);
      bool checkIfAtEndTile(Critter* critter);
 
-     /**  @brief Initialize stack containing preset levels for critter waves
-      *   @return Void.
-      */
-     void setCritterWaveLevels();
-
-     void handleCritterActivationWithinWave();
+     void handleCritterActivationWithinWave(float time_delay_ms);
+     void setCritterWaveLevels(Waypoint* starting_waypoint);
 
 };

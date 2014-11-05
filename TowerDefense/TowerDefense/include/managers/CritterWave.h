@@ -22,14 +22,13 @@ class CritterWave {
     
     /** @brief Type of critter in a critter wave.
      */
-    CritterFactory::CritterType type;
+    Critter::CritterType type;
 
     /** @brief Pointer to the next CritterWave.
      */
     CritterWave* next_wave;
 
-    CritterWave(int numOfCritters, CritterFactory::CritterType type);
-    CritterWave() : numOfCritters(0), type(CritterFactory::CritterType::NONE) {};
+    CritterWave(int numOfCritters, Critter::CritterType type, Waypoint* starting_waypoint);
     ~CritterWave();
 
     /** @brief Overloaded cout operator to print out CritterWaves.
@@ -64,6 +63,9 @@ class CritterWave {
      */
     int getCritterCount() const;
 
+    std::map<int, Critter*> getContainerOfCritters();
+
+    void drawActivatedCrittersInWave(sf::RenderWindow& render_window, float delta_time); 
   private:
     /** @brief Map representing a critter wave.
      */

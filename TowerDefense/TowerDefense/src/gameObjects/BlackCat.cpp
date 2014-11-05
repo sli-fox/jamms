@@ -5,7 +5,8 @@
   *  BlackCat object
   */
 
-BlackCat::BlackCat(Waypoint* starting_waypoint) {
+BlackCat::BlackCat(int id, Waypoint* starting_waypoint) {
+  this->id = id;
   this->current_waypoint = starting_waypoint;
   
   //Set starting position
@@ -46,11 +47,6 @@ void BlackCat::initializeCritter(const std::vector<Animation>& animations) {
     this->animation_handler.addAnimation(animation);
   }
   this->animation_handler.update(0.0f);   //Initial delta_time is 0
-}
-
-
-void BlackCat::update() {
-
 }
 
 //Controlling the cat with Arrow Keys

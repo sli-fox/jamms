@@ -16,10 +16,9 @@
  */
 class CritterFactory {
   public:
-    enum CritterType { NONE, BLACK_CAT, WHITE_CAT };
 
     /** @brief Factory method for Critter class.
     *   @return Critter object (subclass of Critter).
     */
-    static Critter *createCritter(CritterType type, Waypoint* starting_waypoint);
+    static Critter *createCritter(int id, Critter::CritterType type, Waypoint* starting_waypoint);
 };

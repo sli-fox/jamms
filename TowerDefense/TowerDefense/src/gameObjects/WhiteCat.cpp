@@ -5,7 +5,8 @@
   *  WhiteCat object
   */
 
-WhiteCat::WhiteCat(Waypoint* starting_waypoint) {
+WhiteCat::WhiteCat(int id, Waypoint* starting_waypoint) {
+  this->id = id;
   this->current_waypoint = starting_waypoint;
   
   //Set starting position
@@ -50,10 +51,6 @@ void WhiteCat::initializeCritter(const std::vector<Animation>& animations) {
   this->animation_handler.update(0.0f);   //Initial delta_time is 0
 }
 
-
-void WhiteCat::update() {
-
-}
 
 //Controlling the cat with Arrow Keys
 void WhiteCat::controlCat(sf::Keyboard::Key arrowKey) {
