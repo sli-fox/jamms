@@ -18,8 +18,6 @@ void GameObjectManager::remove(std::string name) {
 
 GameObject* GameObjectManager::getGameObject(std::string name) const {
   std::map<std::string, GameObject*>::const_iterator results = _m_game_objects.find(name);
-  if (results == _m_game_objects.end()) 
-    return NULL;
   return results->second;
 }
 

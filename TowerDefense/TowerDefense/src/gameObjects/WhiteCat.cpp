@@ -5,7 +5,8 @@
   *  WhiteCat object
   */
 
-WhiteCat::WhiteCat(Waypoint* starting_waypoint) {
+WhiteCat::WhiteCat(int id, Waypoint* starting_waypoint) {
+  this->id = id;
   this->current_waypoint = starting_waypoint;
   
   //Set starting position
@@ -27,11 +28,12 @@ void WhiteCat::initializeCritter(const std::vector<Animation>& animations) {
   // Attributes for a white cat
   this->isActive = false;
   this->isAtEndTile = false;
+  this->isDefeated = false;
   this->hit_points = 2;
   this->steal_coins = 4;
   this->player_reward = 5;
   this->type = Critter::CritterType::WHITE_CAT;
-  this->speed = 25.0f;
+  this->speed = 10.0f;
   this->level = 1;
   this->animation_index = this->getMovementDirection();   
 
@@ -50,10 +52,6 @@ void WhiteCat::initializeCritter(const std::vector<Animation>& animations) {
   this->animation_handler.update(0.0f);   //Initial delta_time is 0
 }
 
-
-void WhiteCat::update() {
-
-}
 
 //Controlling the cat with Arrow Keys
 void WhiteCat::controlCat(sf::Keyboard::Key arrowKey) {

@@ -97,7 +97,8 @@ bool Tower::canAttack() {
   * @brief Inserts critter in queue to be attacked by tower
   * @return void
   */
-void Tower::insertCritterInQueue(Critter* critter){
+void Tower::insertCritterInQueue(Critter* critter) {
+	//if(this->_critters_in_range.find(
 	this->_critters_in_range.insert(critter);
 }
 
@@ -144,11 +145,12 @@ void Tower::attack() {
 			std::cout << white << "Time: " << time.asSeconds() << " seconds" << std::endl;
 			std::cout << white << "WOUF WOUF!" << std::endl;
 	
-			std::cout << white << "Critter Hit!" << std::endl; //critter->getName()
+			std::cout << white << "Critter " << thisCritter->getId() << " Hit!" << std::endl; 
 			std::cout << white << "Critter took " << this->_power << " damage from " << this->_name << std::endl;
 			thisCritter->setHitPoints(thisCritter->getHitPoints() - this->_power);
 		}
 		else if(thisCritter->getHitPoints() <= 0) {
+			thisCritter->isDefeated = true;
 			std::cout << white << "Time: " << time.asSeconds() << " seconds" << std::endl;
 			std::cout << white << "WOUF WOUF!" << std::endl;
 	
@@ -159,7 +161,6 @@ void Tower::attack() {
 			int cash = 5; //should have the cash reward be specific to a wave. so wave 1 gives you 5 cash per kill, wave 2 gives you 10 cash etc etc. so we'd use CritterWave::getWave().coinReward
 			std::cout << white << "Gained " << cash << " coins!" << std::endl;
 			Game::player.earnCash(cash);
-			//critter->die();
 		}
 	}
 }

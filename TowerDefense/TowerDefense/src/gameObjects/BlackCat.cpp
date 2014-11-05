@@ -5,7 +5,8 @@
   *  BlackCat object
   */
 
-BlackCat::BlackCat(Waypoint* starting_waypoint) {
+BlackCat::BlackCat(int id, Waypoint* starting_waypoint) {
+  this->id = id;
   this->current_waypoint = starting_waypoint;
   
   //Set starting position
@@ -24,12 +25,15 @@ BlackCat::BlackCat(Waypoint* starting_waypoint) {
 /**  Initialization specific to a BlackCat object
   */
 void BlackCat::initializeCritter(const std::vector<Animation>& animations) {
-  // Attributes for a white cat
+  // Attributes for a black cat
+  this->isActive = false;
+  this->isAtEndTile = false;
+  this->isDefeated = false;
   this->hit_points = 2;
   this->steal_coins = 4;
   this->player_reward = 5;
   this->type = Critter::CritterType::BLACK_CAT;
-  this->speed = 20.0f;
+  this->speed = 10.0f;
   this->level = 1;
   this->animation_index = this->getMovementDirection();   
 
@@ -46,11 +50,6 @@ void BlackCat::initializeCritter(const std::vector<Animation>& animations) {
     this->animation_handler.addAnimation(animation);
   }
   this->animation_handler.update(0.0f);   //Initial delta_time is 0
-}
-
-
-void BlackCat::update() {
-
 }
 
 //Controlling the cat with Arrow Keys

@@ -4,7 +4,7 @@
  *  It also keeps track of elapsed time.
  */
 void AnimationHandler::update(const float delta_time) {
-  // Don't update id the current_animation doesn't exist in the animations arrays
+  // Don't update if the current_animation doesn't exist in the animations arrays
   if (current_animation >= this->animations.size() || current_animation < 0)
     return;
 

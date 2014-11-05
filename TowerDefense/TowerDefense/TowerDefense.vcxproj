@@ -98,6 +98,7 @@
     <ClInclude Include="include\gameStates\GameStateMapEditor.h" />
     <ClInclude Include="include\gameStates\GameStatePlay.h" />
     <ClInclude Include="include\gameStates\GameStateStart.h" />
+    <ClInclude Include="include\managers\CritterWave.h" />
     <ClInclude Include="include\managers\GameObjectManager.h" />
     <ClInclude Include="include\managers\TextureManager.h" />
     <ClInclude Include="include\managers\TowerManager.h" />
@@ -132,6 +133,7 @@
     <ClCompile Include="src\gameStates\GameStatePlay.cpp" />
     <ClCompile Include="src\gameStates\GameStateStart.cpp" />
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\managers\CritterWave.cpp" />
     <ClCompile Include="src\managers\GameObjectManager.cpp" />
     <ClCompile Include="src\managers\TextureManager.cpp" />
     <ClCompile Include="src\managers\TowerManager.cpp" />

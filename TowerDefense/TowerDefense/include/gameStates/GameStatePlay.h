@@ -15,9 +15,12 @@
 #include <gameObjects/WhiteCat.h>
 #include <gameObjects/BlackCat.h>
 #include <utils/Waypoint.h>
+#include <algorithm>
 #include <iostream>
 #include <Map.h>
 #include <managers/TowerManager.h>
+#include <managers/CritterWave.h>
+
 
 /** @brief Game state that represents the gameplay.
  */
@@ -26,6 +29,9 @@ class GameStatePlay : public GameState {
     WhiteCat* mew;
     BlackCat* blacky;
 	//Projectile* projectile;
+    
+	int delay_count;
+    Critter* last_activated_critter;
 
     /** @brief Constructor that takes in a pointer to the Game
      *  that created them.
@@ -55,25 +61,23 @@ class GameStatePlay : public GameState {
      /** @brief Get starting waypoint 
       *  @return Vector containing Waypoint pointers.
       */
-    Waypoint* getStartingWaypoint() {
-      return &current_waypoints[0];
-    }
+    Waypoint* getStartingWaypoint();
 
+    CritterWave* getCurrentCritterWave();
 
-   private:
-
-	//bool towerIsFiring;
-	sf::Vector2i  localPosition;
-	int tileX, tileY;
-	GameObject mapBackdrop;
-	std::map<string,GameObject> buttonMap;
-	bool returnToMenu;
-	sf::CircleShape range;
-	Tower::TowerType towerSelector;
-	sf::Font font;
-	sf::Text towerSpecs;
-	sf::Text critterSpecs;
-	sf::Text playerSpecs;
+  private:
+	  //bool towerIsFiring;
+	  sf::Vector2i  localPosition;
+	  int tileX, tileY;
+	  GameObject mapBackdrop;
+	  std::map<string,GameObject> buttonMap;
+	  bool returnToMenu;
+	  sf::CircleShape range;
+	  Tower::TowerType towerSelector;
+	  sf::Font font;
+	  sf::Text towerSpecs;
+	  sf::Text critterSpecs;
+	  sf::Text playerSpecs;
 	
      /** @brief Camera view for the gameplay displayed to the window.
       */
@@ -82,6 +86,9 @@ class GameStatePlay : public GameState {
      /** @brief Camera view for the HUD displayed to the window.
       */
      sf::View _guiView;
+
+     CritterWave* current_wave; 
+     std::vector<CritterWave*> wave_levels;
 
      std::vector<Waypoint> current_waypoints;
 	 
@@ -102,10 +109,15 @@ class GameStatePlay : public GameState {
       *   @return Void.
       */
      void drawWaypoints(std::vector<Waypoint> waypoints, sf::RenderWindow& game_window);
-	 
+     void moveActivatedCritters(const float delta_time);
      void moveCritter(Critter* critter, const float delta_time);
-	 void initializeButtonMap();
-	 void buttonCommandLibrary();
+	   void initializeButtonMap();
+	   void buttonCommandLibrary();
      void towerCommandLibrary(const int tileX, const int tileY);
      bool checkIfAtEndTile(Critter* critter);
+
+     void handleCritterRemovalFromWave();
+     void handleCritterWaveLevelSwitching();
+     void setCritterWaveLevels(Waypoint* starting_waypoint);
+
 };
