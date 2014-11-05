@@ -14,7 +14,8 @@ GameStatePlay::GameStatePlay(Game* game) {
 	returnToMenu = false;
 
   this->current_waypoints = addWaypoints(getWaypointsFromMapPath());
- 
+  this->show_waypoints = false;
+
   //Set up critter wave levels
   this->setCritterWaveLevels(getStartingWaypoint());
 
@@ -54,7 +55,9 @@ void GameStatePlay::draw(const float delta_time) {
   //Draw map
   mapBackdrop.draw(this->game->game_window);
   this->game->map.draw(this->game->game_window);
-  drawWaypoints(this->current_waypoints, this->game->game_window);
+
+  if (show_waypoints)
+    drawWaypoints(this->current_waypoints, this->game->game_window);
 
   //Draw Critter
   //this->mew->draw(this->game->game_window, delta_time);
@@ -116,8 +119,8 @@ void GameStatePlay::update(const float delta_time) {
 
 void GameStatePlay::setCritterWaveLevels(Waypoint* starting_waypoint) {
   CritterWave* wave1 = new CritterWave(5, Critter::CritterType::WHITE_CAT, getStartingWaypoint());
-  CritterWave* wave2 = new CritterWave(10, Critter::CritterType::WHITE_CAT, getStartingWaypoint());
-  CritterWave* wave3 = new CritterWave(5, Critter::CritterType::BLACK_CAT, getStartingWaypoint());
+  CritterWave* wave2 = new CritterWave(5, Critter::CritterType::BLACK_CAT, getStartingWaypoint());
+  CritterWave* wave3 = new CritterWave(10, Critter::CritterType::WHITE_CAT, getStartingWaypoint());
   CritterWave* wave4 = new CritterWave(10, Critter::CritterType::BLACK_CAT, getStartingWaypoint());
 
   this->wave_levels.push_back(wave1);
@@ -167,6 +170,8 @@ void GameStatePlay::handleInput() {
 
 									}
 		case sf::Event::KeyPressed: {
+			
+			towerCommandLibrary(tileX, tileY);
 			if(event.key.code == sf::Keyboard::B) {
 				if(!showBlacky) {
 					std::cout << "Blacky Showed!" << std::endl;
@@ -179,7 +184,17 @@ void GameStatePlay::handleInput() {
 
 			}
 			blacky->controlCat(event.key.code);	// for controlling blackcat
-			towerCommandLibrary(tileX, tileY);
+
+
+      if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+        if (!show_waypoints)
+          show_waypoints = true;
+        else if (show_waypoints)
+          show_waypoints = false;
+      }
+	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::U) && !tower_manager.isTileFree(tileX, tileY)){
+		tower_manager.getTower(tileX, tileY)->upgradeTower();
+	}
 			break;
 									}
 		default: break;
@@ -323,7 +338,6 @@ void GameStatePlay::handleCritterWaveLevelSwitching() {
   if (current_wave->next_wave) {
     current_wave = current_wave->next_wave;
     this->delay_count = 0;
-    std::cout << current_wave->next_wave->getCritterCount() << std::endl;
     this->last_activated_critter = current_wave->findCritter(0);
     last_activated_critter->isActive = true;
   }

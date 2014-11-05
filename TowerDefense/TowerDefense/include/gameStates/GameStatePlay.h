@@ -30,6 +30,7 @@ class GameStatePlay : public GameState {
     BlackCat* blacky;
     int delay_count;
     Critter* last_activated_critter;
+    bool show_waypoints;
 
     /** @brief Constructor that takes in a pointer to the Game
      *  that created them.
