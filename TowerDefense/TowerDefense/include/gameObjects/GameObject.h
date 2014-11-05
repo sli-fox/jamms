@@ -44,7 +44,7 @@ class GameObject {
       *   @return Void.
       */
     virtual void setPosition(float x, float y);
-	sf::Vector2f getPosition() const;
+	virtual sf::Vector2f getPosition() const;
 	std::string getFileName() const;
 	bool spriteContains(sf::Vector2i position) const;
 

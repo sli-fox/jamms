@@ -11,9 +11,20 @@ GameStatePlay::GameStatePlay(Game* game) {
 	returnToMenu = false;
 
   this->current_waypoints = addWaypoints(getWaypointsFromMapPath());
-  
-  this->mew = new WhiteCat(getStartingWaypoint());
-  this->blacky = new BlackCat(getStartingWaypoint());
+ 
+  //Set up critter wave levels
+  this->setCritterWaveLevels(getStartingWaypoint());
+
+  //Set current wave to the first level
+  this->current_wave = wave_levels.top();
+
+  //Set last activated critter to the first critter in the wave and activate it
+  this->delay_count = 0;
+  this->last_activated_critter = current_wave->findCritter(0);
+  last_activated_critter->isActive = true;
+
+  this->mew = new WhiteCat(11, getStartingWaypoint());
+  this->blacky = new BlackCat(12, getStartingWaypoint());
   
   sf::Vector2f position = sf::Vector2f(this->game->game_window.getSize());
   this->_gameView.setSize(position);
@@ -27,7 +38,7 @@ GameStatePlay::GameStatePlay(Game* game) {
   mapBackdrop.setPosition(0*32,0*32);
 
   // Activate mew!
-  mew->isActive = true;
+  //mew->isActive = true;
 }
 
 /**  This function sets the view to be drawn to the window,
@@ -41,11 +52,13 @@ void GameStatePlay::draw(const float delta_time) {
   mapBackdrop.draw(this->game->game_window);
   this->game->map.draw(this->game->game_window);
   drawWaypoints(this->current_waypoints, this->game->game_window);
-  
+
   //Draw Critter
-  this->mew->draw(this->game->game_window, delta_time);
-  this->blacky->draw(this->game->game_window, delta_time);
-   
+  //this->mew->draw(this->game->game_window, delta_time);
+  this->blacky->draw(this->game->game_window, delta_time); 
+
+  this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
+
   //Draw Towers
   this->tower_manager.draw(this->game->game_window);
   if(!tower_manager.outOfBound(tileX, tileY) && !tower_manager.isTileFree(tileX, tileY))
@@ -64,17 +77,46 @@ void GameStatePlay::draw(const float delta_time) {
 }
 
 void GameStatePlay::update(const float delta_time) {
-  this->mew->draw(this->game->game_window, delta_time);
+  //Draw activated Critters within a wave
+  this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
+  
+  moveActivatedCritters(delta_time);
+
+  if (delay_count == 100 && last_activated_critter->next_critter) {
+    last_activated_critter->next_critter->isActive = true;
+    std::cout << "ACTIVATE critter with id " << last_activated_critter->next_critter->getId() << std::endl;
+    last_activated_critter = last_activated_critter->next_critter;
+    delay_count = 0;
+  } 
+
+  delay_count += 1;
+
+
+
+  //this->mew->draw(this->game->game_window, delta_time);
   this->blacky->draw(this->game->game_window, delta_time);
   
-  if (mew->isActive)
-    moveCritter(mew, delta_time);
+  //if (mew->isActive)
+    //moveCritter(mew, delta_time);
   
-  mew->isAtEndTile = checkIfAtEndTile(mew);
+  //mew->isAtEndTile = checkIfAtEndTile(mew);
   
-  if (mew->isAtEndTile)
-    std::cout << "Mew: I'm at the end tile!" << std::endl; 
+  //if (mew->isAtEndTile)
+    //std::cout << "Mew: I'm at the end tile!" << std::endl; 
 }
+
+void GameStatePlay::setCritterWaveLevels(Waypoint* starting_waypoint) {
+  CritterWave* wave1 = new CritterWave(5, Critter::CritterType::WHITE_CAT, getStartingWaypoint());
+  CritterWave* wave2 = new CritterWave(10, Critter::CritterType::WHITE_CAT, getStartingWaypoint());
+  CritterWave* wave3 = new CritterWave(5, Critter::CritterType::BLACK_CAT, getStartingWaypoint());
+  CritterWave* wave4 = new CritterWave(10, Critter::CritterType::BLACK_CAT, getStartingWaypoint());
+
+  this->wave_levels.push(wave4);
+  this->wave_levels.push(wave3);
+  this->wave_levels.push(wave2);  
+  this->wave_levels.push(wave1);
+}
+
 
 void GameStatePlay::handleInput() {
 	sf::Event event;
@@ -147,6 +189,8 @@ std::vector<Waypoint> GameStatePlay::addWaypoints(std::vector<sf::Vector2f> path
   return waypoints;
 }
 
+
+
 std::vector<sf::Vector2f> GameStatePlay::getWaypointsFromMapPath() {
   std::vector<sf::Vector2f> waypoint_positions;
   deque<const Tile* const> path_tiles = this->game->map.getMapPath();
@@ -160,7 +204,7 @@ std::vector<sf::Vector2f> GameStatePlay::getWaypointsFromMapPath() {
     const Tile* current_tile = path_tiles[0];
 
     for (int i = 0; i < path_tiles.size() - 1; ++i) {
-      if (i + 3 == path_tiles.size() - 1)   // No change of direction can happen in less than 4 tiles
+      if (i + 2 == path_tiles.size() - 1)   // No change of direction can happen in less than 4 tiles
         break;
 
       int next_x = path_tiles[i+1]->getTileX();
@@ -201,6 +245,13 @@ bool GameStatePlay::checkIfAtEndTile(Critter* critter) {
     return false;
 }
 
+void GameStatePlay::moveActivatedCritters(const float delta_time) {
+  std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
+  for (int i = 0; i < critters.size(); ++i) {
+    if (critters[i]->isActive)
+      moveCritter(critters[i], delta_time);
+  }
+}
 
 void GameStatePlay::moveCritter(Critter* critter, const float delta_time) {
  if (!critter->isAtNextWaypoint()) {
@@ -227,6 +278,24 @@ void GameStatePlay::moveCritter(Critter* critter, const float delta_time) {
        }
   }
 }
+
+void GameStatePlay::handleCritterActivationWithinWave(float time_delay_ms) {
+  std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
+  for (int i = 1; i < critters.size() - 1; ++i) {
+    critters[i]->isActive = true;
+  }
+}
+
+
+
+Waypoint* GameStatePlay::getStartingWaypoint() {
+  return &current_waypoints[0];
+}
+
+CritterWave* GameStatePlay::getCurrentCritterWave(){
+  return current_wave;
+}
+
 
 void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 	if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){

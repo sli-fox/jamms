@@ -1,5 +1,8 @@
 #include <gameObjects/Critter.h>
 
+int Critter::getId() const {
+  return id;
+}
 int Critter::getHitPoints() const {
   return hit_points;
 }

@@ -17,8 +17,8 @@
  */
 class Critter : public GameObject {
   public:
-    enum CritterType { BLACK_CAT, WHITE_CAT };
     enum MovementDirection { DOWN, LEFT, RIGHT, UP };
+    enum CritterType { NONE, BLACK_CAT, WHITE_CAT };
 
    /** @brief Handles the animated object. 
      */
@@ -26,10 +26,12 @@ class Critter : public GameObject {
 
     bool isActive;
     bool isAtEndTile;
+    Critter* next_critter;
     
     Critter() {};
     virtual ~Critter() {};
 
+    int getId() const;
     int getHitPoints() const; 
     void setHitPoints(int points);
     int getCoinsStrength() const; 
@@ -58,15 +60,11 @@ class Critter : public GameObject {
   */
   void draw(sf::RenderWindow& game_window, float delta_time);
 
-  /** @brief Pure virtualized update function for Critter.
-  *   @return Void.
-  */
-  virtual void update() = 0;
-
   protected:
     Waypoint* current_waypoint;
 
     CritterType type;
+    int id;
 
     /** @brief Pure virtualized initialization function for Critter.
     *   @return Void.

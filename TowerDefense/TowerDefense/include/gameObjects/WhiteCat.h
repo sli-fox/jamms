@@ -19,16 +19,11 @@ class GameStatePlay;  //Allows class to know about GameStatePlay
  */
 class WhiteCat : public Critter {
   public:
-   
-	WhiteCat() {}
-    WhiteCat(Waypoint* starting_waypoint);
+       
+    WhiteCat(int id, Waypoint* starting_waypoint);
     ~WhiteCat() {}
 
 	void controlCat(sf::Keyboard::Key arrowKey);
-
-    /** @brief Update changes in the WhiteCat.
-      */
-    virtual void update();
     
   private:
     /** @brief Initialization function for a WhiteCat.
