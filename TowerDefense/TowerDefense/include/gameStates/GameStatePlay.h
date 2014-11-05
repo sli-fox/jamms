@@ -113,7 +113,7 @@ class GameStatePlay : public GameState {
      void towerCommandLibrary(const int tileX, const int tileY);
      bool checkIfAtEndTile(Critter* critter);
 
-     void handleCritterActivationWithinWave(float time_delay_ms);
+     void handleCritterRemovalFromWave();
      void setCritterWaveLevels(Waypoint* starting_waypoint);
 
 };

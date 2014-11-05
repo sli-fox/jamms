@@ -57,6 +57,7 @@ void GameStatePlay::draw(const float delta_time) {
   //this->mew->draw(this->game->game_window, delta_time);
   this->blacky->draw(this->game->game_window, delta_time); 
 
+  //Draw Critter wave
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
 
   //Draw Towers
@@ -77,21 +78,21 @@ void GameStatePlay::draw(const float delta_time) {
 }
 
 void GameStatePlay::update(const float delta_time) {
-  //Draw activated Critters within a wave
+  //Draw  & move activated Critters within a wave
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
-  
   moveActivatedCritters(delta_time);
 
-  if (delay_count == 100 && last_activated_critter->next_critter) {
+  //Activate Critters within a wave based on number of update cycles
+  if (delay_count == 175 && last_activated_critter->next_critter) {
     last_activated_critter->next_critter->isActive = true;
     std::cout << "ACTIVATE critter with id " << last_activated_critter->next_critter->getId() << std::endl;
     last_activated_critter = last_activated_critter->next_critter;
     delay_count = 0;
   } 
-
   delay_count += 1;
 
-
+  //Handle the removal of critters from the current wave
+  handleCritterRemovalFromWave();
 
   //this->mew->draw(this->game->game_window, delta_time);
   this->blacky->draw(this->game->game_window, delta_time);
@@ -279,11 +280,17 @@ void GameStatePlay::moveCritter(Critter* critter, const float delta_time) {
   }
 }
 
-void GameStatePlay::handleCritterActivationWithinWave(float time_delay_ms) {
+void GameStatePlay::handleCritterRemovalFromWave() {
   std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
-  for (int i = 1; i < critters.size() - 1; ++i) {
-    critters[i]->isActive = true;
+  for (int i = 0; i < critters.size(); ++i) {
+    //Check if critters are at end tile
+    critters[i]->isAtEndTile = checkIfAtEndTile(critters[i]);
+    
+    if (critters[i]->isAtEndTile) {
+      current_wave->findCritter(i)->isActive = false;
+    }
   }
+
 }
 
 
