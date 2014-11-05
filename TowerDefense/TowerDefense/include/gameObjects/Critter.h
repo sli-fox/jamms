@@ -20,6 +20,8 @@ class Critter : public GameObject {
     enum MovementDirection { DOWN, LEFT, RIGHT, UP };
     enum CritterType { NONE, BLACK_CAT, WHITE_CAT };
 
+	void controlCat(sf::Keyboard::Key arrowKey);
+
    /** @brief Handles the animated object. 
      */
     AnimationHandler animation_handler;

@@ -1,5 +1,8 @@
 #include <gameStates/GameStatePlay.h>
 
+
+bool showBlacky = false;
+
 /**  The constructor sets the view to the size of the window
   *  and centers the view on the center of the window.
   */
@@ -55,7 +58,8 @@ void GameStatePlay::draw(const float delta_time) {
 
   //Draw Critter
   //this->mew->draw(this->game->game_window, delta_time);
-  this->blacky->draw(this->game->game_window, delta_time); 
+  if (!showBlacky)
+	this->blacky->draw(this->game->game_window, delta_time);
 
   //Draw Critter wave
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
@@ -98,7 +102,8 @@ void GameStatePlay::update(const float delta_time) {
   handleCritterWaveLevelSwitching();
 
   //this->mew->draw(this->game->game_window, delta_time);
-  this->blacky->draw(this->game->game_window, delta_time);
+ 
+	this->blacky->draw(this->game->game_window, delta_time);
   
   //if (mew->isActive)
     //moveCritter(mew, delta_time);
@@ -162,8 +167,18 @@ void GameStatePlay::handleInput() {
 
 									}
 		case sf::Event::KeyPressed: {
+			if(event.key.code == sf::Keyboard::B) {
+				if(!showBlacky) {
+					std::cout << "Blacky Showed!" << std::endl;
+					showBlacky = true;
+				}
+				else {
+					std::cout << "Blacky Hidden!" << std::endl;
+					showBlacky = false;
+				}
+
+			}
 			blacky->controlCat(event.key.code);	// for controlling blackcat
-			//mew->controlCat(event.key.code);
 			towerCommandLibrary(tileX, tileY);
 			break;
 									}

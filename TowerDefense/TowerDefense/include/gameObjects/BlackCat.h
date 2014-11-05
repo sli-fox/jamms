@@ -23,8 +23,6 @@ class BlackCat : public Critter {
 	BlackCat() {}
     BlackCat(int id, Waypoint* starting_waypoint);
     ~BlackCat() {}
-
-	void controlCat(sf::Keyboard::Key arrowKey);
     
   private:
     /** @brief Initialization function for a BlackCat.
