@@ -17,7 +17,6 @@
 #include <utils/Waypoint.h>
 #include <algorithm>
 #include <iostream>
-#include <stack>
 #include <Map.h>
 #include <managers/TowerManager.h>
 #include <managers/CritterWave.h>
@@ -85,7 +84,7 @@ class GameStatePlay : public GameState {
      sf::View _guiView;
 
      CritterWave* current_wave; 
-     std::stack<CritterWave*> wave_levels;
+     std::vector<CritterWave*> wave_levels;
 
      std::vector<Waypoint> current_waypoints;
 	 
@@ -114,6 +113,7 @@ class GameStatePlay : public GameState {
      bool checkIfAtEndTile(Critter* critter);
 
      void handleCritterRemovalFromWave();
+     void handleCritterWaveLevelSwitching();
      void setCritterWaveLevels(Waypoint* starting_waypoint);
 
 };
