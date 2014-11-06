@@ -90,25 +90,25 @@ std::string Critter::getCritterSpecs() {
 //Controlling the cat with Arrow Keys
 void Critter::controlCat(sf::Keyboard::Key arrowKey) {
 	if(arrowKey == sf::Keyboard::Up) {
-		if(this->getPosition().y > 0) {
+		if(this->getPosition().y > (0 + this->getSpriteSize().y / 3.0)) {
 			this->updatePosition(0, -2);
 			this->animation_index = 3;
 		}
 	}
 	if(arrowKey == sf::Keyboard::Right) {
-		if(this->getPosition().x < Game::map.getMapWidth()*32) {
+		if(this->getPosition().x < (Game::map.getMapWidth()*32 - this->getSpriteSize().x / 2.0)) {
 			this->updatePosition(+2, 0);
 			this->animation_index = 2;
 		}
 	}
 	if(arrowKey == sf::Keyboard::Down) {
-		if(this->getPosition().y < Game::map.getMapHeight()*32) {
+		if(this->getPosition().y < (Game::map.getMapHeight()*32 - this->getSpriteSize().y / 2.0)) {
 			this->updatePosition(0, +2);
 			this->animation_index = 0;
 		}
 	}
 	if(arrowKey == sf::Keyboard::Left) {
-		if(this->getPosition().x > 0) {
+		if(this->getPosition().x > (0 + this->getSpriteSize().x / 2.0)) {
 			this->updatePosition(-2, 0);
 			this->animation_index = 1;
 		}
