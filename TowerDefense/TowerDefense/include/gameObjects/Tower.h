@@ -3,13 +3,16 @@
 #include <GameObjects/GameObject.h>
 #include <GameObjects/Critter.h>
 #include <Utils/ConsoleColor.h>
+#include <GameObjects/IObserver.h>
 
-class Tower: public GameObject {
+class Tower: public GameObject, public IObserver {
   public:
     Tower();
 	~Tower() { std::cout << red << _name << " has been deleted." << white << std::endl; };
 	virtual void upgradeTower() = 0;
 	bool canAttack(Critter* crit);
+	void attack();
+	void update();
 
     enum TowerType { ShihTzu, Dalmatian, Bulldog };
 	enum UpgradeLevel { Upgrade0, Upgrade1, Upgrade2 };
@@ -17,7 +20,6 @@ class Tower: public GameObject {
 	enum RateOfFire { Slow = 1, Normal, Fast };
 	enum SpecialEffect { None, Slowing, Burning, Freezing };
 	
-	void attack();
 
 	//ACCESSORS
     int getID() const;
@@ -33,6 +35,7 @@ class Tower: public GameObject {
 	int getBuyCost() const;
 	int getSellCost() const;
 	int getUpgradeCost() const;
+	Critter* getTarget() const;
 
 	//MUTATORS
     void setID(int _id);
@@ -47,6 +50,7 @@ class Tower: public GameObject {
 	void setBuyCost(int _buy_cost);
 	void setSellCost(int _sell_cost);
 	void setUpgradeCost(int _upgrade_cost);
+	void setTarget(Critter* crit);
 
 	std::string getTowerSpecs();
 
@@ -63,7 +67,7 @@ class Tower: public GameObject {
 	SpecialEffect _special_effect;
 	int _upgrade_cost;
 	int _sell_cost;
-	bool _is_firing;
+	Critter* _target;
 
   private:
 	  sf::Clock clock;

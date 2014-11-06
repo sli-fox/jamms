@@ -78,7 +78,10 @@ void GameStatePlay::draw(const float delta_time) {
 		it->second.draw(this->game->game_window);
 
   //Draw Specs of Towers, Critters and Player
-	this->game->game_window.draw(towerSpecs);
+	if(tower_manager.getTower(tileX, tileY) != NULL && tower_manager.getTower(tileX, tileY)->spriteContains(localPosition)){
+		towerSpecs.setString(tower_manager.getTower(tileX, tileY)->getTowerSpecs());
+		this->game->game_window.draw(towerSpecs);
+	}
 	critterSpecs.setString("CURRENT WAVE: \n" + blacky->getCritterSpecs());
 	this->game->game_window.draw(critterSpecs);
 	playerSpecs.setString(Game::player.getPlayerSpecs());
@@ -131,18 +134,35 @@ void GameStatePlay::setCritterWaveLevels(Waypoint* starting_waypoint) {
 
   for (int i = 0; i < wave_levels.size() - 1; ++i) {
     wave_levels[i]->next_wave = wave_levels[i+1];
+	std::cout << wave_levels[i]->getCritterCount() << std::cout;
   }
+
 }
 
 
 void GameStatePlay::handleInput() {
 	sf::Event event;
 
-	//Checking if ANY tower on the map can attack Blacky (black cat...)
-	for(int i = 0; i < this->game->map.getMapWidth(); ++i) {
+	//// Checking if ANY tower on the map can attack Blacky (black cat...)
+	//for(int i = 0; i < this->game->map.getMapWidth(); ++i) {
+	//	for(int j = 0; j < this->game->map.getMapHeight(); ++j) {
+	//		if(tower_manager.getTower(i,j)->canAttack(blacky)) {
+	//			tower_manager.getTower(i,j)->attack();
+	//		}
+	//	}
+	//}
+
+	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
+  	for(int i = 0; i < this->game->map.getMapWidth(); ++i) {
 		for(int j = 0; j < this->game->map.getMapHeight(); ++j) {
-			if(tower_manager.getTower(i,j)->canAttack(blacky)) {
-				tower_manager.getTower(i,j)->attack();
+			Tower* tower = tower_manager.getTower(i,j);
+			if(tower != NULL) {
+				for (int i = 0; i < critters.size(); ++i) {
+					while(critters[i]->isActive  && tower->canAttack(critters[i])) {
+						tower->attack();
+					}
+					//tower->setTarget(NULL);
+				}
 			}
 		}
 	}
@@ -154,54 +174,58 @@ void GameStatePlay::handleInput() {
 
 		switch(event.type) {
 			/** Close the window */
-		case sf::Event::Closed: {
-			game->game_window.close();
-			break;
-								}
-		case sf::Event::MouseButtonPressed: {
-			buttonCommandLibrary();
-			towerCommandLibrary(tileX, tileY);
-			break;
-											}
-		case sf::Event::MouseMoved: {
-			if(tower_manager.getTower(tileX, tileY) != NULL && tower_manager.getTower(tileX, tileY)->spriteContains(localPosition)){
-				towerSpecs.setString(tower_manager.getTower(tileX, tileY)->getTowerSpecs());
+			case sf::Event::Closed: {
+				game->game_window.close();
+				break;
 			}
-			break;
-
-									}
-		case sf::Event::KeyPressed: {
-			
-			towerCommandLibrary(tileX, tileY);
-			if(event.key.code == sf::Keyboard::B) {
-				if(!showBlacky) {
-					std::cout << "Blacky Showed!" << std::endl;
-					showBlacky = true;
-				}
-				else {
-					std::cout << "Blacky Hidden!" << std::endl;
-					showBlacky = false;
-				}
-
+			case sf::Event::MouseButtonPressed: {
+				buttonCommandLibrary();
+				towerCommandLibrary(tileX, tileY);
+				break;
 			}
-			blacky->controlCat(event.key.code);	// for controlling blackcat
-
-
-      if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-        if (!show_waypoints)
-          show_waypoints = true;
-        else if (show_waypoints)
-          show_waypoints = false;
-      }
-	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::U) && !tower_manager.isTileFree(tileX, tileY)){
-		tower_manager.getTower(tileX, tileY)->upgradeTower();
-	}
-			break;
-									}
-		default: break;
+			case sf::Event::KeyPressed: {
+				towerCommandLibrary(tileX, tileY);
+				if(event.key.code == sf::Keyboard::B)
+					(!showBlacky) ? showBlacky = true : showBlacky = false;
+				if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+					(!show_waypoints) ? show_waypoints = true : show_waypoints = false;
+				blacky->controlCat(event.key.code);	// for controlling blackcat
+				break;
+			}
+			default: break;
 		}
 	}
 }
+
+// Attach ONE tower to every active critter
+void GameStatePlay::registerObserver(Tower* tower) {
+	if(tower != NULL) {
+		std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
+		for (int i = 0; i < critters.size(); ++i) {
+			if(critters[i]->isActive) {
+				critters[i]->attach(tower);
+			}
+		}
+	}
+}
+
+// Attach EVERY tower to every active critter
+void GameStatePlay::registerObservers() {
+  std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
+  	for(int i = 0; i < this->game->map.getMapWidth(); ++i) {
+		for(int j = 0; j < this->game->map.getMapHeight(); ++j) {
+			if(tower_manager.getTower(i,j) != NULL) {
+				for (int i = 0; i < critters.size(); ++i) {
+					if(critters[i]->isActive) {
+						critters[i]->attach(tower_manager.getTower(i,j));
+						critters[i]->notify();
+					}
+				}
+			}
+		}
+	}
+}
+
 
 /** @brief This function initialize waypoints while setting
  *  the next waypoints.
@@ -348,6 +372,7 @@ void GameStatePlay::handleCritterWaveLevelSwitching() {
     this->delay_count = 0;
     this->last_activated_critter = current_wave->findCritter(0);
     last_activated_critter->isActive = true;
+	//GameStatePlay::registerObservers();
   }
 }
 
@@ -363,36 +388,22 @@ CritterWave* GameStatePlay::getCurrentCritterWave(){
 void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 	if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
 		if(tower_manager.getTower(tileX, tileY) == nullptr && this->game->map.getTile(tileX, tileY) != nullptr
-			&& this->game->map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY)
+			&& this->game->map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY) {
 			tower_manager.buyTower(towerSelector, tileX, tileY);
+			GameStatePlay::registerObserver(tower_manager.getTower(tileX, tileY));
+		}
 	}
 	else if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
 		if(tower_manager.getTower(tileX, tileY) != nullptr && tower_manager.getTower(tileX, tileY)->spriteContains(localPosition)){
 				tower_manager.sellTower(tileX, tileY);
 		}
-	}		
-	/*if(this->game->map.getTile(tileX, tileY) != nullptr && this->game->map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY) {
-	if(thisKey == sf::Keyboard::Num1){
-	tower_manager.buyTower(Tower::TowerType::ShihTzu, tileX, tileY);	
 	}
-	if(thisKey == sf::Keyboard::Num2){
-	tower_manager.buyTower(Tower::TowerType::Dalmatian, tileX, tileY);
-	}
-	if(thisKey == sf::Keyboard::Num3){
-	tower_manager.buyTower(Tower::TowerType::Bulldog, tileX, tileY);
-	}
-	*/
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::U) && !tower_manager.isTileFree(tileX, tileY)){
 		tower_manager.getTower(tileX, tileY)->upgradeTower();
 	}
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num0)){
 		tower_manager.clearAllTowers();
 	}
-	/*
-	if(thisKey == sf::Keyboard::BackSpace){
-	tower_manager.sellTower(tileX, tileY);
-	}
-	*/
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::M)){
 		tower_manager.displayTowerArray();
 	}

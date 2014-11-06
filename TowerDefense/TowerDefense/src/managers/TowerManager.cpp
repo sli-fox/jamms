@@ -3,7 +3,6 @@
 #include <Game.h>
 
 void TowerManager::clearAllTowers() {
-	std::cout << "CLEARALLTOWERS() CALLED" << std::endl;
 	for(int tileX = 0; tileX < tArrayRows ; ++tileX){
 		for(int tileY = 0; tileY < tArrayCols ; ++tileY){
 			if(tArray[tileX][tileY] != NULL) {
