@@ -69,6 +69,8 @@ class GameStatePlay : public GameState {
    
 
   private:
+	  std::map<std::pair<int,int>, Tower*> towers;
+
 	  sf::Vector2i  localPosition;
 	  int tileX, tileY;
 	  GameObject mapBackdrop;

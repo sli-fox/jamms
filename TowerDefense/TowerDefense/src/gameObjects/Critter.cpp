@@ -40,10 +40,6 @@ void Critter::setAnimationIndex(unsigned int index) {
 
 void Critter::inflictDamage(int dmg) {
 	this->hit_points -= dmg;
-	if(this->hit_points <= 0) {
-		this->isActive = false;
-		std::cout << red << "Cat " << this->id << " fled away!" << std::endl;
-	}
 }
 
 bool Critter::isAtNextWaypoint() {
