@@ -11,6 +11,7 @@ GameStatePlay::GameStatePlay(Game* game) {
 	initializeButtonMap();
   firstStart = true;
 	returnToMenu = false;
+  endOfWaves = false;
 
   this->current_waypoints = addWaypoints(getWaypointsFromMapPath());
   this->show_waypoints = false;
@@ -96,6 +97,8 @@ void GameStatePlay::draw(const float delta_time) {
 }
 
 void GameStatePlay::update(const float delta_time) {
+  handleGameOver();
+
   //Draw  & move activated Critters within a wave
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
   moveActivatedCritters(delta_time);
@@ -381,6 +384,20 @@ CritterWave* GameStatePlay::getCurrentCritterWave(){
   return current_wave;
 }
 
+void GameStatePlay::handleGameOver() {
+  std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
+  if (current_wave == wave_levels[wave_levels.size() - 1]) {
+    for (int i = 0; i < critters.size(); ++i) {
+      if (critters[i]->isActive)
+        return;
+      else
+        endOfWaves = true;
+    }
+  }
+
+  if (this->game->player.getLives() <= 0 || endOfWaves)
+    this->game->pushState(new GameStateGameOver(this->game));
+}
 
 void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 	if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && towerSelector >= 0 && towerSelector < 3){
