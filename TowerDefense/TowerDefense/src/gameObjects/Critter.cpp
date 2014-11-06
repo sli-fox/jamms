@@ -76,13 +76,11 @@ std::string Critter::getCritterSpecs() {
 	//Since we can't cout an enum in C++, we need this Array system as a workaround (optional, but prettier at output)
 	char *CritterTypeA[] = { "BLACK_CAT", "WHITE_CAT" };
 	std::stringstream output;
-	output << "CRITTER SPECIFICATIONS:" << std::endl;
 	output << "Hit Points: " << this->hit_points << std::endl;
 	output << "Type: " << CritterTypeA[this->type] << std::endl;
 	output << "Steal Coins: " << this->steal_points << std::endl;
-	output << "Steal Lives: " << this->STEAL_LIVES << std::endl;
-	output << "Player Reward: " << this->player_reward << std::endl;
-	output << "Speed: " << this->speed << std::endl;
+	output << "player reward: " << this->player_reward << std::endl;
+	output << "speed: " << this->speed << std::endl;
 
 	return output.str();
 }
@@ -90,25 +88,25 @@ std::string Critter::getCritterSpecs() {
 //Controlling the cat with Arrow Keys
 void Critter::controlCat(sf::Keyboard::Key arrowKey) {
 	if(arrowKey == sf::Keyboard::Up) {
-		if(this->getPosition().y > 0) {
+		if(this->getPosition().y > (0 + this->getSpriteSize().y / 3.0)) {
 			this->updatePosition(0, -2);
 			this->animation_index = 3;
 		}
 	}
 	if(arrowKey == sf::Keyboard::Right) {
-		if(this->getPosition().x < Game::map.getMapWidth()*32) {
+		if(this->getPosition().x < (Game::map.getMapWidth()*32 - this->getSpriteSize().x / 2.0)) {
 			this->updatePosition(+2, 0);
 			this->animation_index = 2;
 		}
 	}
 	if(arrowKey == sf::Keyboard::Down) {
-		if(this->getPosition().y < Game::map.getMapHeight()*32) {
+		if(this->getPosition().y < (Game::map.getMapHeight()*32 - this->getSpriteSize().y / 2.0)) {
 			this->updatePosition(0, +2);
 			this->animation_index = 0;
 		}
 	}
 	if(arrowKey == sf::Keyboard::Left) {
-		if(this->getPosition().x > 0) {
+		if(this->getPosition().x > (0 + this->getSpriteSize().x / 2.0)) {
 			this->updatePosition(-2, 0);
 			this->animation_index = 1;
 		}

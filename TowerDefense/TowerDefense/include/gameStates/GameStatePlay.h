@@ -90,7 +90,8 @@ class GameStatePlay : public GameState {
 	  Tower::TowerType towerSelector;
 	  sf::Font font;
 	  sf::Text towerSpecs;
-	  sf::Text critterSpecs;
+	  sf::Text waveSpecs;
+	  sf::Text nextWaveSpecs;
 	  sf::Text playerSpecs;
 	
      /** @brief Camera view for the gameplay displayed to the window.

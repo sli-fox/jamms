@@ -11,7 +11,6 @@ GameStatePlay::GameStatePlay(Game* game) {
 	initializeButtonMap();
   firstStart = true;
 	returnToMenu = false;
-  endOfWaves = false;
 
   this->current_waypoints = addWaypoints(getWaypointsFromMapPath());
   this->show_waypoints = false;
@@ -97,8 +96,6 @@ void GameStatePlay::draw(const float delta_time) {
 }
 
 void GameStatePlay::update(const float delta_time) {
-  handleGameOver();
-
   //Draw  & move activated Critters within a wave
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
   moveActivatedCritters(delta_time);
@@ -384,20 +381,6 @@ CritterWave* GameStatePlay::getCurrentCritterWave(){
   return current_wave;
 }
 
-void GameStatePlay::handleGameOver() {
-  std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
-  if (current_wave == wave_levels[wave_levels.size() - 1]) {
-    for (int i = 0; i < critters.size(); ++i) {
-      if (critters[i]->isActive)
-        return;
-      else
-        endOfWaves = true;
-    }
-  }
-
-  if (this->game->player.getLives() <= 0 || endOfWaves)
-    this->game->pushState(new GameStateGameOver(this->game));
-}
 
 void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 	if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && towerSelector >= 0 && towerSelector < 3){
@@ -470,6 +453,7 @@ void GameStatePlay::initializeButtonMap(){
 	displayCurrentWave.load(imagePath + "DisplayBox.png");
 	displayCurrentWave.setPosition(0*32,12*32);
 	buttonMap.emplace("displayCurrentWave", displayCurrentWave);
+<<<<<<< HEAD
 	waveSpecs.setFont(font);
 	waveSpecs.setPosition(0*32+8,12*32);
 	waveSpecs.setColor(sf::Color::Black);
@@ -483,11 +467,17 @@ void GameStatePlay::initializeButtonMap(){
 	nextWaveSpecs.setPosition(0*32+8,17*32);
 	nextWaveSpecs.setColor(sf::Color::Black);
 	nextWaveSpecs.setCharacterSize(13);
+=======
+	critterSpecs.setFont(font);
+  critterSpecs.setPosition(0*32+8,12*32);
+	critterSpecs.setColor(sf::Color::Black);
+	critterSpecs.setCharacterSize(13);
 
 	GameObject displayStartWave;
 	displayStartWave.load(imagePath + "DisplayBox.png");
 	displayStartWave.setPosition(0*32,17*32);
 	buttonMap.emplace("displayStartWave", displayStartWave);
+>>>>>>> 8076a3ef6939f3a3d58cbf9ccc353cc624d4b407
 
 	GameObject towerDisplayBox;
 	towerDisplayBox.load(imagePath + "DisplayBox.png");

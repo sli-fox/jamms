@@ -36,7 +36,7 @@ bool TowerManager::outOfBound(int tileX, int tileY) const {
 }
 
 Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
-	if(isTileFree(tileX, tileY)) {
+	if(isTileFree(tileX, tileY) && type <= 2) {
 		switch(type) {
 			case 0: {
 				if(ShihTzu::buy_cost <= Game::player.getCash())

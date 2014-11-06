@@ -89,23 +89,21 @@ sf::CircleShape Tower::getRangeShape() const {
 	return _range_shape;
 }
 
-bool Tower::canAttack(Critter* crit) {
-	if(this == NULL) return false;
+/**
+  * @brief Determines whether tower can attack a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay
+  * @return bool
+  */
+bool Tower::canAttack(Critter* critter) {
+	if(this == NULL)
+		return false;
 
 	this->time = this->clock.getElapsedTime();
+	
+	if(this->_target != NULL && this->_target->getId() < critter->getId())
+		_target = critter;
 
-	int distX = int(crit->getPosition().x - this->getPosition().x-16);
-	int distY = int(crit->getPosition().y - this->getPosition().y-16);
-	int pythagore = static_cast<int> (pow(static_cast<double> (distX), 2))
-	+ static_cast<int> (pow(static_cast<double> (distY), 2));
-
-	if(this->_target != NULL && this->_target->getId() < crit->getId())
-		_target = crit;
-
-	if(sqrt(pythagore) <= this->getRangeShape().getRadius()
-		&& time.asSeconds()*this->getRateOfFire() >= 1
-		&& this->_target == NULL) {
-		_target = crit;
+	if(this->circleToCircleIntersection(critter) && time.asSeconds()*this->getRateOfFire() >= 1 && this->_target == NULL) {
+		_target = critter;
 		clock.restart();
 		return true;
 	}
@@ -143,4 +141,16 @@ std::string Tower::getTowerSpecs() {
 	output << "Sell Cost: " << this->_sell_cost << " coins" << std::endl;
 
 	return output.str();
+}
+
+/**
+  * @brief Overrides method to apply to tower range sf::CircleShape object
+  * @return bool
+  */
+bool Tower::circleToCircleIntersection(GameObject* game_object){
+	float radius = this->_range_shape.getRadius();
+
+	sf::Vector2f distance = this->getSpriteCenter() - game_object->getSpriteCenter();
+	
+	return sqrt(distance.x * distance.x + distance.y * distance.y) <= radius;
 }

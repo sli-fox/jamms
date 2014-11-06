@@ -52,6 +52,7 @@ class Tower: public GameObject, public IObserver {
 	void setTarget(Critter* crit);
 
 	std::string getTowerSpecs();
+	virtual bool circleToCircleIntersection(GameObject* game_object);
 
 
   protected:
