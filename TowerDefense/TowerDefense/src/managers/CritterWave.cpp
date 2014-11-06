@@ -53,6 +53,15 @@ int CritterWave::getCritterCount() const {
   return _m_critter_wave.size();
 }
 
+int CritterWave::getId() const {
+	return this->id;
+}
+
+void CritterWave::setId(int id) {
+	this->id = id;
+}
+
+
 std::map<int, Critter*> CritterWave::getContainerOfCritters() {
   return this->_m_critter_wave;
 }
@@ -63,4 +72,3 @@ void CritterWave::drawActivatedCrittersInWave(sf::RenderWindow& render_window, f
      _m_critter_wave[i]->draw(render_window, delta_time);
   }
 }
-

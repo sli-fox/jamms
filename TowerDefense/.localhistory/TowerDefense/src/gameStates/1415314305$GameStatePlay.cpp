@@ -453,6 +453,7 @@ void GameStatePlay::initializeButtonMap(){
 	displayCurrentWave.load(imagePath + "DisplayBox.png");
 	displayCurrentWave.setPosition(0*32,12*32);
 	buttonMap.emplace("displayCurrentWave", displayCurrentWave);
+<<<<<<< HEAD
 	waveSpecs.setFont(font);
 	waveSpecs.setPosition(0*32+8,12*32);
 	waveSpecs.setColor(sf::Color::Black);
@@ -466,11 +467,17 @@ void GameStatePlay::initializeButtonMap(){
 	nextWaveSpecs.setPosition(0*32+8,17*32);
 	nextWaveSpecs.setColor(sf::Color::Black);
 	nextWaveSpecs.setCharacterSize(13);
+=======
+	critterSpecs.setFont(font);
+  critterSpecs.setPosition(0*32+8,12*32);
+	critterSpecs.setColor(sf::Color::Black);
+	critterSpecs.setCharacterSize(13);
 
 	GameObject displayStartWave;
 	displayStartWave.load(imagePath + "DisplayBox.png");
 	displayStartWave.setPosition(0*32,17*32);
 	buttonMap.emplace("displayStartWave", displayStartWave);
+>>>>>>> 8076a3ef6939f3a3d58cbf9ccc353cc624d4b407
 
 	GameObject towerDisplayBox;
 	towerDisplayBox.load(imagePath + "DisplayBox.png");

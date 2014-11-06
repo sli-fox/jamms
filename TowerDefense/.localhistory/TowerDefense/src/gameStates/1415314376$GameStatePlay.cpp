@@ -467,6 +467,7 @@ void GameStatePlay::initializeButtonMap(){
 	nextWaveSpecs.setColor(sf::Color::Black);
 	nextWaveSpecs.setCharacterSize(13);
 
+
 	GameObject displayStartWave;
 	displayStartWave.load(imagePath + "DisplayBox.png");
 	displayStartWave.setPosition(0*32,17*32);
