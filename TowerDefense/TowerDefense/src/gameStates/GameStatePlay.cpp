@@ -9,6 +9,7 @@ GameStatePlay::GameStatePlay(Game* game) {
   this->game = game;
 
 	initializeButtonMap();
+  firstStart = true;
 	returnToMenu = false;
 
   this->current_waypoints = addWaypoints(getWaypointsFromMapPath());
@@ -23,11 +24,9 @@ GameStatePlay::GameStatePlay(Game* game) {
   //Set last activated critter to the first critter in the wave and activate it
   this->delay_count = 0;
   this->last_activated_critter = current_wave->findCritter(0);
-  last_activated_critter->isActive = true;
 
   this->mew = new WhiteCat(11, getStartingWaypoint());
   this->blacky = new BlackCat(12, getStartingWaypoint());
-  showBlacky = false;
 
   
   sf::Vector2f position = sf::Vector2f(this->game->game_window.getSize());
@@ -45,10 +44,19 @@ GameStatePlay::GameStatePlay(Game* game) {
   //mew->isActive = true;
 }
 
+void GameStatePlay::runThreads() {
+  drawThread = std::thread(&GameStatePlay::draw, this, game->delta_time);
+
+        if (drawThread.joinable())
+        drawThread.join();
+}
+
 /**  This function sets the view to be drawn to the window,
   *  and draws everything related to state. 
   */
-void GameStatePlay::draw(const float delta_time) {
+void GameStatePlay::draw(const float delta_time) {  
+  //sf::Context context;
+
   this->game->game_window.setView(this->_gameView);
   this->game->game_window.clear(sf::Color::Black);
 
@@ -61,7 +69,7 @@ void GameStatePlay::draw(const float delta_time) {
 
   //Draw Critter
   //this->mew->draw(this->game->game_window, delta_time);
-  if (showBlacky)
+  if (blacky->isActive)
 	  this->blacky->draw(this->game->game_window, delta_time);
 
   //Draw Critter wave
@@ -92,20 +100,22 @@ void GameStatePlay::update(const float delta_time) {
   moveActivatedCritters(delta_time);
 
   //Activate Critters within a wave based on number of update cycles
-  if (delay_count >= 175 && last_activated_critter->next_critter) {
-    last_activated_critter->next_critter->isActive = true;
-    std::cout << green << "ACTIVATE critter with id " << last_activated_critter->next_critter->getId() << std::endl;
-    last_activated_critter = last_activated_critter->next_critter;
-    delay_count = 0;
-  } 
-  delay_count += 1;
+  if (last_activated_critter->isActive) {
+    if (delay_count >= 175 && last_activated_critter->next_critter) {
+      last_activated_critter->next_critter->isActive = true;
+      std::cout << green << "ACTIVATE critter with id " << last_activated_critter->next_critter->getId() << std::endl;
+      last_activated_critter = last_activated_critter->next_critter;
+      delay_count = 0;
+    } 
+    delay_count += 1;
+  }
 
   //Handle the removal of critters from the current wave
   handleCritterRemovalFromWave();
 
   //this->mew->draw(this->game->game_window, delta_time);
- 
-	this->blacky->draw(this->game->game_window, delta_time);
+ if (blacky->isActive)
+	  this->blacky->draw(this->game->game_window, delta_time);
   
   //if (mew->isActive)
     //moveCritter(mew, delta_time);
@@ -138,14 +148,6 @@ void GameStatePlay::setCritterWaveLevels(Waypoint* starting_waypoint) {
 void GameStatePlay::handleInput() {
 	sf::Event event;
 
-	// Checking if ANY tower on the map can attack Blacky (black cat...)
-	for(std::map<std::pair<int,int>, Tower*>::iterator it = tower_manager.getTowerMap()->begin() ; it != tower_manager.getTowerMap()->end() ; ++it) {
-		Tower* tower = it->second;
-		if(tower->canAttack(blacky)) {
-			tower->attack();
-		}
-	}
-
 	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
 	for(std::map<std::pair<int,int>, Tower*>::iterator it = tower_manager.getTowerMap()->begin() ; it != tower_manager.getTowerMap()->end() ; ++it) {
 		Tower* tower = it->second;
@@ -169,25 +171,41 @@ void GameStatePlay::handleInput() {
 
 		switch(event.type) {
 			/** Close the window */
-			case sf::Event::Closed: {
-				game->game_window.close();
-				break;
-			}
-			case sf::Event::MouseButtonPressed: {
-				buttonCommandLibrary();
-				towerCommandLibrary(tileX, tileY);
-				break;
-			}
-			case sf::Event::KeyPressed: {
-				towerCommandLibrary(tileX, tileY);
-				blacky->controlCat(event.key.code);	// for controlling blackcat
-				if(event.key.code == sf::Keyboard::B)
-					(!showBlacky) ? showBlacky = true : showBlacky = false;
-				if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-					(!show_waypoints) ? show_waypoints = true : show_waypoints = false;
-				break;
-			}
-			default: break;
+		case sf::Event::Closed: {
+			game->game_window.close();
+			break;
+		}
+    case sf::Event::LostFocus: {
+			if (!this->game->isGamePaused)
+        this->game->isGamePaused = true;
+      break;
+    }
+    case sf::Event::GainedFocus: {
+      std::cout << "test" << std::endl;
+			if (this->game->isGamePaused)
+        this->game->isGamePaused = false;
+      break;
+    }
+		case sf::Event::MouseButtonPressed: {
+			buttonCommandLibrary();
+			towerCommandLibrary(tileX, tileY);
+			break;
+		}
+		case sf::Event::MouseMoved: {
+			if(tower_manager.getTower(tileX, tileY) != NULL && tower_manager.getTower(tileX, tileY)->spriteContains(localPosition))
+				towerSpecs.setString(tower_manager.getTower(tileX, tileY)->getTowerSpecs());
+      break;
+    }
+		case sf::Event::KeyPressed: {
+			towerCommandLibrary(tileX, tileY);
+			blacky->controlCat(event.key.code);	// for controlling blackcat
+			if(event.key.code == sf::Keyboard::B)
+				(!blacky->isActive) ? blacky->isActive = true : blacky->isActive = false;
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+				(!show_waypoints) ? show_waypoints = true : show_waypoints = false;
+			break;
+		}
+		default: break;
 		}
 	}
 }
@@ -330,7 +348,7 @@ void GameStatePlay::handleCritterRemovalFromWave() {
       this->game->player.losePoints(critters[i]->getStealPointsStrength());
     }
 
-    if (critters[i]->isAtEndTile) {
+    if (critters[i]->isAtEndTile || critters[i]->getHitPoints() <= 0) {
       current_wave->findCritter(i)->isActive = false;
     }
   }
@@ -394,8 +412,11 @@ void GameStatePlay::buttonCommandLibrary(){
 			returnToMenu = true;
 			this->game->popState();
 		}
-		else if(buttonMap["nextWaveBtn"].spriteContains(localPosition)){
-			//Handle level switching
+		else if(buttonMap["startWaveBtn"].spriteContains(localPosition)){
+      if (firstStart) {
+        last_activated_critter->isActive = true;
+        firstStart = false;
+      }
       handleCritterWaveLevelSwitching();
 		}
 		else if(buttonMap["pauseBtn"].spriteContains(localPosition)){
@@ -428,14 +449,14 @@ void GameStatePlay::initializeButtonMap(){
 	displayCurrentWave.setPosition(0*32,12*32);
 	buttonMap.emplace("displayCurrentWave", displayCurrentWave);
 	critterSpecs.setFont(font);
-	critterSpecs.setPosition(0*32+8,12*32);
+  critterSpecs.setPosition(0*32+8,12*32);
 	critterSpecs.setColor(sf::Color::Black);
 	critterSpecs.setCharacterSize(13);
 
-	GameObject displayNextWave;
-	displayNextWave.load(imagePath + "DisplayBox.png");
-	displayNextWave.setPosition(0*32,17*32);
-	buttonMap.emplace("displayNextWave", displayNextWave);
+	GameObject displayStartWave;
+	displayStartWave.load(imagePath + "DisplayBox.png");
+	displayStartWave.setPosition(0*32,17*32);
+	buttonMap.emplace("displayStartWave", displayStartWave);
 
 	GameObject towerDisplayBox;
 	towerDisplayBox.load(imagePath + "DisplayBox.png");
@@ -471,10 +492,10 @@ void GameStatePlay::initializeButtonMap(){
 	returnToEditorBtn.setPosition(4*32,22*32);
 	buttonMap.emplace("returnToEditorBtn", returnToEditorBtn);
 
-	GameObject nextWaveBtn;
-	nextWaveBtn.load(imagePath + "NextWaveBtn.png");
-	nextWaveBtn.setPosition(6*32,22*32);
-	buttonMap.emplace("nextWaveBtn", nextWaveBtn);
+	GameObject startWaveBtn;
+	startWaveBtn.load(imagePath + "StartWaveBtn.png");
+	startWaveBtn.setPosition(6*32,22*32);
+	buttonMap.emplace("startWaveBtn", startWaveBtn);
 
 	GameObject bulldog_0_Btn;
 	bulldog_0_Btn.load(towerPath + "bulldog_0.png");

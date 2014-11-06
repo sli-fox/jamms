@@ -66,6 +66,8 @@ void Game::gameLoop() {
     /** Draw updates to render window */
     peekState()->handleInput();
     
+    //peekState()->runThreads();
+
     if (!this->isGamePaused)
       peekState()->update(delta_time);
 
