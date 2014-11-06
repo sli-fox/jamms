@@ -38,6 +38,9 @@ void Critter::setAnimationIndex(unsigned int index) {
   this->animation_index = index;
 }
 
+void Critter::inflictDamage(int dmg) {
+	this->hit_points -= dmg;
+}
 
 bool Critter::isAtNextWaypoint() {
   if (sf::Vector2f(int(position.x), int(position.y)) == current_waypoint->next_waypoint->position) {

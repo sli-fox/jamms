@@ -2,58 +2,45 @@
 #include <Managers/TowerManager.h>
 #include <Game.h>
 
-void TowerManager::clearAllTowers() {
-	std::cout << "CLEARALLTOWERS() CALLED" << std::endl;
-	for(int tileX = 0; tileX < tArrayRows ; ++tileX){
-		for(int tileY = 0; tileY < tArrayCols ; ++tileY){
-			if(tArray[tileX][tileY] != NULL) {
-				delete tArray[tileX][tileY];
-				tArray[tileX][tileY] = NULL;
-			}
-		}
-	}
+TowerManager::TowerManager(int mapWidth, int mapHeight) {
+	tArrayRows = mapWidth;
+	tArrayCols = mapHeight;
 }
 
-void TowerManager::setArraySize(int mapWidth, int mapHeight) {
-	this->tArrayRows = mapWidth;
-	this->tArrayCols = mapHeight;
-
-	//resize 1st dimension of vector to mapWidth (number of tiles width-wise)
-	tArray.resize(mapWidth);
-
-	//resize 2nd dimension of vector to mapHeight(number of tiles height-wise)
-	for(int i = 0; i < tArrayRows; ++i)
-		tArray.at(i).resize(tArrayCols);
+void TowerManager::clearAllTowers() {
+	while(!towers.empty()) {
+		delete towers.begin()->second;
+		towers.erase(towers.begin()->first);
+	}
 }
 
 bool TowerManager::isTileFree(int tileX, int tileY) {
-	if(!outOfBound(tileX, tileY) && tArray[tileX][tileY] == NULL) {
+	if(towers[std::make_pair(tileX,tileY)] == NULL)
 		return true;
-	}
 	return false;
 }
 
+
+map<pair<int,int>, Tower*> * TowerManager::getTowerMap() {
+	return &towers;
+}
+
 Tower* TowerManager::getTower(int tileX, int tileY) {
-	if(!outOfBound(tileX, tileY) && tArray[tileX][tileY] != NULL)
-		return tArray[tileX][tileY];
+	if(towers[make_pair(tileX, tileY)] != NULL)
+		return towers[make_pair(tileX, tileY)];
 	return NULL;	// this line should never be reached
 }
 
-bool TowerManager::outOfBound(int tileX, int tileY) {
+bool TowerManager::outOfBound(int tileX, int tileY) const {
 	return (!(-1 < tileX && tileX < tArrayRows) || !(-1 < tileY && tileY < tArrayCols));
 }
 
 Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
-	if(!outOfBound(tileX, tileY) && isTileFree(tileX, tileY)) {
+	if(isTileFree(tileX, tileY)) {
 		switch(type) {
 			case 0: {
-				if(ShihTzu::buy_cost <= Game::player.getCash()) {
-					TowerManager::tArray[tileX][tileY] = new ShihTzu(tileX, tileY);
-					Game::player.spendCash(ShihTzu::buy_cost);
-					cout << blue << tArray[tileX][tileY]->getName() << " bought for "
-						<< ShihTzu::buy_cost
-						<< " coins!" << white << std::endl;
-				}
+				if(ShihTzu::buy_cost <= Game::player.getCash())
+					towers[make_pair(tileX, tileY)] = new ShihTzu(tileX, tileY);
 				else {
 					cout << red << "Insufficient funds." << std::endl;
 					return NULL;
@@ -61,13 +48,8 @@ Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
 				break;
 			}
 			case 1: {
-				if(Dalmatian::buy_cost <= Game::player.getCash()) {
-					tArray[tileX][tileY] = new Dalmatian(tileX, tileY);
-					Game::player.spendCash(Dalmatian::buy_cost);
-					cout << blue << tArray[tileX][tileY]->getName() << " bought for "
-						<< Dalmatian::buy_cost
-						<< " coins!" << white << std::endl;
-				}
+				if(Dalmatian::buy_cost <= Game::player.getCash())
+					towers[make_pair(tileX, tileY)] = new Dalmatian(tileX, tileY);
 				else {
 					cout << red << "Insufficient funds." << std::endl;
 					return NULL;
@@ -75,13 +57,8 @@ Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
 				break;
 			}
 			case 2: {
-				if(Bulldog::buy_cost <= Game::player.getCash()) {
-					tArray[tileX][tileY] = new Bulldog(tileX, tileY);
-					Game::player.spendCash(Bulldog::buy_cost);
-					cout << blue << tArray[tileX][tileY]->getName() << " bought for "
-						<< Bulldog::buy_cost
-						<< " coins!" << white << std::endl;
-				}
+				if(Bulldog::buy_cost <= Game::player.getCash())
+					towers[make_pair(tileX, tileY)] = new Bulldog(tileX, tileY);
 				else {
 					cout << red << "Insufficient funds." << std::endl;
 					return NULL;
@@ -89,7 +66,9 @@ Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
 				break;
 			}
 		}
-		return tArray[tileX][tileY];
+		Game::player.spendCash(towers[make_pair(tileX, tileY)]->getBuyCost());
+		cout << blue << "Tower bought for " << towers[make_pair(tileX, tileY)]->getBuyCost() << " XXX  coins!" << std::endl;
+		return towers[make_pair(tileX, tileY)];
 	} else {
 		std::cerr << red << "Error: There is already a tower on this cell." << std::endl;
 	}
@@ -99,49 +78,18 @@ Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
 void TowerManager::sellTower(int tileX, int tileY)  {
 	if(!outOfBound(tileX, tileY) && isTileFree(tileX, tileY))
 		return;
-	Game::player.earnCash(tArray[tileX][tileY]->getSellCost());
-	std::cout << blue << tArray[tileX][tileY]->getName() << " sold for "
-		<< tArray[tileX][tileY]->getSellCost()
-		<< " coins!" << white << std::endl;
-	delete tArray[tileX][tileY];
-	tArray[tileX][tileY] = NULL;
-}
-
-void TowerManager::displayTowerArray() {
-	cout << white;
-	for(int i = 0; i < tArrayCols; i++) {
-		for(int j = 0; j < tArrayRows; j++) {
-			if(isTileFree(j, i))
-				cout << white << "O" << " ";
-			else {
-				switch(tArray[j][i]->getType()) {
-					case 0:
-						cout << blue << "W" << " ";
-						break;
-					case 1:
-						cout << green << "A" << " ";
-						break;
-					case 2:
-						cout << red << "C" << " ";
-						break;
-					default:
-						cout << white << "X" << " ";
-				}
-			}
-			
-		}
-		cout << std::endl;
-	}
-	cout << std::endl;
+	Game::player.earnCash(towers[make_pair(tileX, tileY)]->getSellCost());
+	std::cout << blue << towers[make_pair(tileX, tileY)]->getName() << " sold for "
+		<< towers[make_pair(tileX, tileY)]->getSellCost()
+		<< " coins!" << std::endl;
+	delete towers[make_pair(tileX, tileY)];
+	towers.erase(make_pair(tileX, tileY));
 }
 
 //draws tower to game window
 void TowerManager::draw(sf::RenderWindow& gameWindow){
-	for(int tileX = 0; tileX < tArrayRows ; ++tileX){
-		for(int tileY = 0; tileY < tArrayCols ; ++tileY){
-			if(tArray[tileX][tileY] != NULL) {
-				tArray[tileX][tileY]->draw(gameWindow);
-			}
-		}
+	for(std::map<std::pair<int,int>, Tower*>::iterator it = towers.begin() ; it != towers.end() ; ++it) {
+		if(it->second != NULL)
+			it->second->draw(gameWindow);
 	}
 }

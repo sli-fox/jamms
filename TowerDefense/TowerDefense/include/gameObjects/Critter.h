@@ -10,12 +10,13 @@
 #include <gameObjects/GameObject.h>
 #include <utils/AnimationHandler.h>
 #include <utils/Waypoint.h>
+#include <gameObjects/ISubject.h>
 
 /** @brief Abstract base class of all Critters
  *  Critter defines the attributes, accessors, and update function
  *  for its subclass instances. 
  */
-class Critter : public GameObject {
+class Critter : public GameObject, public ISubject {
   public:
     enum MovementDirection { DOWN, LEFT, RIGHT, UP };
     enum CritterType { NONE, BLACK_CAT, WHITE_CAT };
@@ -44,6 +45,8 @@ class Critter : public GameObject {
     Waypoint* getCurrentWaypoint() const;
     void setCurrentWaypoint(Waypoint* waypoint);
     void setAnimationIndex(unsigned int index);
+
+	void inflictDamage(int dmg);
   
   MovementDirection getMovementDirection();
   

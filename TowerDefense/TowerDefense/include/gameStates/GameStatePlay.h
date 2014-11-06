@@ -32,8 +32,8 @@ class GameStatePlay : public GameState {
     BlackCat* blacky;
     int delay_count;
     Critter* last_activated_critter;
+    bool firstStart;
     bool show_waypoints;
-    bool showBlacky;
     
     std::thread drawThread;
     virtual void runThreads();
@@ -43,11 +43,15 @@ class GameStatePlay : public GameState {
      *  @param game Pointer to game.
      */
     GameStatePlay(Game* game);
+
     ~GameStatePlay() {
       if (drawThread.joinable())
         drawThread.join();
     }
-        
+
+    
+	void registerObserver(Tower* tower);
+
     /** @brief Draws game to the render window. 
     *   @param delta_time Elapsed time during the game.
     *   @return Void.
