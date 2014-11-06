@@ -89,12 +89,20 @@ sf::CircleShape Tower::getRangeShape() const {
 	return _range_shape;
 }
 
+/**
+  * @brief Determines whether tower can attack a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay
+  * @return bool
+  */
 bool Tower::canAttack(Critter* critter) {
-	if(this == NULL) return false;
+	if(this == NULL)
+		return false;
 
 	this->time = this->clock.getElapsedTime();
 	
-	if(circleToCircleIntersection(critter) && time.asSeconds()*this->getRateOfFire() >= 1 && this->_target == NULL) {
+	if(this->_target != NULL && this->_target->getId() < critter->getId())
+		_target = critter;
+
+	if(this->circleToCircleIntersection(critter) && time.asSeconds()*this->getRateOfFire() >= 1 && this->_target == NULL) {
 		_target = critter;
 		clock.restart();
 		return true;
