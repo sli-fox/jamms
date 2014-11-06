@@ -11,6 +11,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Transformable.hpp>
 #include <gameStates/GameState.h>
+#include <gameStates/GameStateGameOver.h>
 #include <managers/GameObjectManager.h>
 #include <gameObjects/WhiteCat.h>
 #include <gameObjects/BlackCat.h>
@@ -34,6 +35,7 @@ class GameStatePlay : public GameState {
     Critter* last_activated_critter;
     bool firstStart;
     bool show_waypoints;
+    bool endOfWaves;
     
     std::thread drawThread;
     virtual void runThreads();
@@ -49,8 +51,9 @@ class GameStatePlay : public GameState {
         drawThread.join();
     }
 
+    void handleGameOver();
     
-	void registerObserver(Tower* tower);
+	  void registerObserver(Tower* tower);
 
     /** @brief Draws game to the render window. 
     *   @param delta_time Elapsed time during the game.
