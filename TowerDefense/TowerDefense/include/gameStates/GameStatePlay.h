@@ -18,6 +18,7 @@
 #include <algorithm>
 #include <iostream>
 #include <thread>
+#include <thread>
 #include <Map.h>
 #include <managers/TowerManager.h>
 #include <managers/CritterWave.h>
@@ -31,24 +32,32 @@ class GameStatePlay : public GameState {
     BlackCat* blacky;
     int delay_count;
     Critter* last_activated_critter;
+    bool firstStart;
     bool show_waypoints;
-    bool showBlacky;
+    
+    std::thread drawThread;
+    virtual void runThreads();
 
     /** @brief Constructor that takes in a pointer to the Game
      *  that created them.
      *  @param game Pointer to game.
      */
     GameStatePlay(Game* game);
+
+    ~GameStatePlay() {
+      if (drawThread.joinable())
+        drawThread.join();
+    }
+
     
 	void registerObserver(Tower* tower);
-	void registerObservers();
 
     /** @brief Draws game to the render window. 
     *   @param delta_time Elapsed time during the game.
     *   @return Void.
     */
     virtual void draw(const float delta_time);
-    
+
     /** @brief Updates game changes. 
     *   @param delta_time Elapsed time during the game.
     *   @return Void.
@@ -122,7 +131,4 @@ class GameStatePlay : public GameState {
      void handleCritterRemovalFromWave();
      void handleCritterWaveLevelSwitching();
      void setCritterWaveLevels(Waypoint* starting_waypoint);
-
 };
-
-

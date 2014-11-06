@@ -20,6 +20,10 @@ int Player::getCash() const {
 	return this->_cash;
 }
 
+int Player::getPoints() const {
+	return this->_points;
+}
+
 int Player::getHighScore() const {
 	return this->_high_score;
 }
@@ -52,13 +56,8 @@ void Player::losePoints(int points) {
 	this->_points = (this->_points - points < 0 ? 0 : this->_points - points);
 }
 
-/**
-  * @brief Sets new high score if greater than old one
-  * @return void
-  */
 void Player::setHighScore(int score) {
-	if(score > this->_high_score)
-		this->_high_score = score; 
+	this->_high_score = score; 
 }
 
 void Player::earnLives(int lives) {
@@ -78,6 +77,6 @@ std::string Player::getPlayerSpecs() {
 	output << "Cash: " << this->_cash << std::endl;
 	output << "Lives: " << this->_lives << std::endl;
 	output << "Points: " << this->_points << std::endl;
-	output << "High Score: " << this->_high_score << std::endl;
+	//output << "High Score: " << this->_high_score << std::endl;
 	return output.str();
 }

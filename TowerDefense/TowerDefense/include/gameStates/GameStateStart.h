@@ -41,6 +41,8 @@ class GameStateStart : public GameState {
     */
     virtual void handleInput();
 
+    virtual void runThreads() {};
+
   private:
     /** @brief Camera view for the GameState displayed to the window.
     */

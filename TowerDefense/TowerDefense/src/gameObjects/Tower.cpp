@@ -115,7 +115,7 @@ bool Tower::canAttack(Critter* crit) {
 
 void Tower::attack() {
 	std::cout << yellow << "WOUF WOUF! Scared cat " << this->_target->getId() << std::endl;
-	this->_target->inflictDamage(this->getPower());
+    this->_target->inflictDamage(this->getPower());
 	std::cout << yellow << "Cat " << this->_target->getId() << " now has " << this->_target->getHitPoints() << " HP" << std::endl;
 }
 

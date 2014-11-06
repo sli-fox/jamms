@@ -4,7 +4,8 @@
 *  and centers the view on the center of the window.
 */
 GameStateMapEditor::GameStateMapEditor(Game* game) {
-	this->game = game;
+
+  this->game = game;
 
 	sf::Vector2f position = sf::Vector2f(this->game->game_window.getSize());
 	this->_gameView.setSize(position);
