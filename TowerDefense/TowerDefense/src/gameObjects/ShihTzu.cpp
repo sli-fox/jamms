@@ -13,6 +13,7 @@ ShihTzu::ShihTzu(int tileX, int tileY) {
 	this->_range_shape.setPosition((tileX*32)-16, (tileY*32)-16);
 	this->_rate_of_fire = Tower::RateOfFire::Slow;
 	this->_special_effect = Tower::SpecialEffect::None;
+	this->_buy_cost = buy_cost;
 	this->_upgrade_cost = 20;
 	this->_sell_cost = 10;
 

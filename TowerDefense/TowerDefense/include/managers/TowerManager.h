@@ -7,7 +7,10 @@
 #include <gameObjects/Dalmatian.h>
 #include <gameObjects/Bulldog.h>
 using std::vector;
+using std::map;
 using std::cout;
+using std::pair;
+using std::make_pair;
 
 class TowerManager {
   public:
@@ -16,16 +19,19 @@ class TowerManager {
       return instance;
     }
 	TowerManager() {};
+	TowerManager(int mapWidth, int mapHeight);
 	~TowerManager() {};
-	void clearAllTowers();
+
+	map<pair<int,int>, Tower*>* getTowerMap();
 	Tower* getTower(int tileX, int tileY);
-	void displayTowerArray();
+
 	Tower* buyTower(Tower::TowerType type, int tileX, int tileY);
 	void sellTower(int tileX, int tileY);
-	bool isTileFree(int tileX, int tileY);
-	bool TowerManager::outOfBound(int tileX, int tileY);
 
-	void setArraySize(int mapWidth, int mapHeight);
+	bool isTileFree(int tileX, int tileY);
+	bool outOfBound(int tileX, int tileY) const;
+
+	void clearAllTowers();
 	void draw(sf::RenderWindow& gameWindow);
 
 	int tArrayRows;
@@ -33,6 +39,6 @@ class TowerManager {
 
 	
   private:
-	 vector<vector<Tower*> > tArray;
+	map<pair<int,int>, Tower*> towers;
 	 
 };
