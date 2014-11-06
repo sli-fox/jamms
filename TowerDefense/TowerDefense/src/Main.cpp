@@ -5,6 +5,8 @@
 #include <SFML/Graphics.hpp>
 #include <Game.h>
 #include <gameStates/GameStateStart.h>
+#include <gameStates/GameStatePlay.h>
+#include <thread>
 
 int main(int argc, char** argv[]) {
 

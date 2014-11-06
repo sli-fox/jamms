@@ -35,7 +35,7 @@ class GameStateMainMenu : public GameState {
     *   @param delta_time Elapsed time during the game.
     *   @return Void.
     */
-    virtual void update(const float delta_time);
+    virtual void update(const float delta_time) {};
     
     /** @brief Handles player input. 
     *   @return Void.

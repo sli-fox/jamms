@@ -24,10 +24,6 @@ void GameStateMainMenu::draw(const float delta_time) {
   selected_action = main_menu.show(this->game->game_window);
 }
 
-void GameStateMainMenu::update(const float delta_time) {
-
-}
-
 void GameStateMainMenu::handleInput() {
   switch(selected_action) {
   case::MainMenu::EXIT:

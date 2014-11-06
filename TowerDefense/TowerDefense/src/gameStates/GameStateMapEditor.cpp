@@ -52,10 +52,6 @@ void GameStateMapEditor::draw(const float delta_time) {
 	this->game->game_window.draw(userInputDisplay);
 }
 
-void GameStateMapEditor::update(const float delta_time) {
-
-}
-
 void GameStateMapEditor::handleInput() {
 	sf::Event event;
 	while(!returnToMenu && this->game->game_window.pollEvent(event)) {

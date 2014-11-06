@@ -12,6 +12,7 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 #include <managers/TextureManager.h>
+#include <utils/ConsoleColor.h>
 
 /** @brief Creates a GameObject.
  *  GameObject is a class that creates all objects seen in the

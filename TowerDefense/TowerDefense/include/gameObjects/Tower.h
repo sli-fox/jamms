@@ -2,7 +2,6 @@
 #include <string>
 #include <GameObjects/GameObject.h>
 #include <GameObjects/Critter.h>
-#include <Utils/ConsoleColor.h>
 #include <GameObjects/IObserver.h>
 
 class Tower: public GameObject, public IObserver {

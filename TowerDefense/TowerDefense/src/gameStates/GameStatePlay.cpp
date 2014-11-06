@@ -6,7 +6,8 @@
   *  and centers the view on the center of the window.
   */
 GameStatePlay::GameStatePlay(Game* game) {
-	this->game = game;
+  this->game = game;
+
 	//Initialize tower array with map's dimensions
 	tower_manager.setArraySize(this->game->map.getMapWidth(), this->game->map.getMapHeight());
 	initializeButtonMap();
@@ -104,9 +105,6 @@ void GameStatePlay::update(const float delta_time) {
 
   //Handle the removal of critters from the current wave
   handleCritterRemovalFromWave();
-
-  //Handle level switching
-  handleCritterWaveLevelSwitching();
 
   //this->mew->draw(this->game->game_window, delta_time);
  
@@ -416,14 +414,17 @@ void GameStatePlay::buttonCommandLibrary(){
 			this->game->popState();
 		}
 		else if(buttonMap["nextWaveBtn"].spriteContains(localPosition)){
-			//steph place function here
+			//Handle level switching
+      handleCritterWaveLevelSwitching();
 		}
 		else if(buttonMap["pauseBtn"].spriteContains(localPosition)){
-			//do something
+			if (!this->game->isGamePaused)
+        this->game->isGamePaused = true;
 		}
 		else if(buttonMap["unpauseBtn"].spriteContains(localPosition)){
-			//do something
-		}
+			if (this->game->isGamePaused)
+        this->game->isGamePaused = false;
+    }
 		else if(buttonMap["bulldog_0_Btn"].spriteContains(localPosition)){
 			towerSelector = Tower::Bulldog;
 		}

@@ -23,10 +23,6 @@ void GameStateStart::draw(const float delta_time) {
   this->game->game_window.draw(this->getSplashScreenSprite());
 }
 
-void GameStateStart::update(const float delta_time) {
-
-}
-
 void GameStateStart::handleInput() {
   sf::Event event;
 
