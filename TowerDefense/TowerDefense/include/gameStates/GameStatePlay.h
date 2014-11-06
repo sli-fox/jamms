@@ -117,5 +117,6 @@ class GameStatePlay : public GameState {
      void handleCritterRemovalFromWave();
      void handleCritterWaveLevelSwitching();
      void setCritterWaveLevels(Waypoint* starting_waypoint);
-
 };
+
+

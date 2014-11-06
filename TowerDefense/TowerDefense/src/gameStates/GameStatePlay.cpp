@@ -6,7 +6,7 @@
   *  and centers the view on the center of the window.
   */
 GameStatePlay::GameStatePlay(Game* game) {
-	this->game = game;
+  this->game = game;
 	//Initialize tower array with map's dimensions
 	tower_manager.setArraySize(this->game->map.getMapWidth(), this->game->map.getMapHeight());
 	initializeButtonMap();
