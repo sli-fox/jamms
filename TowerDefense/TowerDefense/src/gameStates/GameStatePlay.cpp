@@ -102,9 +102,6 @@ void GameStatePlay::update(const float delta_time) {
   //Handle the removal of critters from the current wave
   handleCritterRemovalFromWave();
 
-  //Handle level switching
-  handleCritterWaveLevelSwitching();
-
   //this->mew->draw(this->game->game_window, delta_time);
  
 	this->blacky->draw(this->game->game_window, delta_time);
@@ -405,7 +402,8 @@ void GameStatePlay::buttonCommandLibrary(){
 			this->game->popState();
 		}
 		else if(buttonMap["nextWaveBtn"].spriteContains(localPosition)){
-			//steph place function here
+			//Handle level switching
+      handleCritterWaveLevelSwitching();
 		}
 		else if(buttonMap["pauseBtn"].spriteContains(localPosition)){
 			//do something
