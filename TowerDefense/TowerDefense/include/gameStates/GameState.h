@@ -23,4 +23,5 @@ class GameState {
     virtual void draw(const float delta_time) = 0;
     virtual void update(const float delta_time) = 0;
     virtual void handleInput() = 0;
+    virtual void runThreads() = 0;
 };

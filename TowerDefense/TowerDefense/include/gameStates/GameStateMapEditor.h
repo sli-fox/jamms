@@ -19,6 +19,7 @@
  */
 class GameStateMapEditor : public GameState {
   public:
+
     /** @brief Constructor that takes in a pointer to the Game
      *  that created them.
      *  @param game Pointer to game.
@@ -43,9 +44,8 @@ class GameStateMapEditor : public GameState {
      */
     virtual void handleInput();
 
-     /** @brief Get starting waypoint 
-      *  @return Vector containing Waypoint pointers.
-      */
+    virtual void runThreads() {};
+
 
    private:
 	   sf::Vector2i  localPosition;

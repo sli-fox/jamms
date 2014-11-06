@@ -47,10 +47,19 @@ GameStatePlay::GameStatePlay(Game* game) {
   //mew->isActive = true;
 }
 
+void GameStatePlay::runThreads() {
+  drawThread = std::thread(&GameStatePlay::draw, this, game->delta_time);
+
+        if (drawThread.joinable())
+        drawThread.join();
+}
+
 /**  This function sets the view to be drawn to the window,
   *  and draws everything related to state. 
   */
-void GameStatePlay::draw(const float delta_time) {
+void GameStatePlay::draw(const float delta_time) {  
+  //sf::Context context;
+
   this->game->game_window.setView(this->_gameView);
   this->game->game_window.clear(sf::Color::Black);
 
@@ -156,6 +165,15 @@ void GameStatePlay::handleInput() {
 			game->game_window.close();
 			break;
 		}
+    case sf::Event::LostFocus: {
+			if (!this->game->isGamePaused)
+        this->game->isGamePaused = true;
+    }
+    case sf::Event::GainedFocus: {
+      std::cout << "test" << std::endl;
+			if (this->game->isGamePaused)
+        this->game->isGamePaused = false;
+    }
 		case sf::Event::MouseButtonPressed: {
 			buttonCommandLibrary();
 			towerCommandLibrary(tileX, tileY);
