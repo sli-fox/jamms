@@ -19,8 +19,7 @@ class GameStatePlay;  //Allows class to know about GameStatePlay
  */
 class BlackCat : public Critter {
   public:
-   
-	BlackCat() {}
+       
     BlackCat(int id, Waypoint* starting_waypoint);
     ~BlackCat() {}
     
