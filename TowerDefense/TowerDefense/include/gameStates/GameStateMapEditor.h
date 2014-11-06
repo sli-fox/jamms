@@ -36,7 +36,7 @@ class GameStateMapEditor : public GameState {
     *   @param delta_time Elapsed time during the game.
     *   @return Void.
     */
-    virtual void update(const float delta_time);
+    virtual void update(const float delta_time) {};
     
     /** @brief Handles player input. 
      *   @return Void.
@@ -48,16 +48,16 @@ class GameStateMapEditor : public GameState {
       */
 
    private:
-	sf::Vector2i  localPosition;
-	int tileX, tileY, mapX, mapY;
-	Tile::TYPE tileSelector;
-	GameObject mapBackdrop;
-	std::map<string,GameObject> buttonMap;
-	bool returnToMenu, pauseSave, pauseLoad;
-	string userInput;
-	sf::Text displayXsize, displayYsize, systemOutput, userInputDisplay;
-	sf::Font font;
-	vector<string> mapFiles;
+	   sf::Vector2i  localPosition;
+	   int tileX, tileY, mapX, mapY;
+	   Tile::TYPE tileSelector;
+	   GameObject mapBackdrop;
+	   std::map<string,GameObject> buttonMap;
+	   bool returnToMenu, pauseSave, pauseLoad;
+	   string userInput;
+	   sf::Text displayXsize, displayYsize, systemOutput, userInputDisplay;
+	   sf::Font font;
+	  vector<string> mapFiles;
 		 
      /** @brief Camera view for the gameplay displayed to the window.
       */

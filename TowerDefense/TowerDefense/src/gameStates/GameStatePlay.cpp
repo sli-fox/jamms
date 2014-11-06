@@ -7,6 +7,7 @@
   */
 GameStatePlay::GameStatePlay(Game* game) {
   this->game = game;
+
 	//Initialize tower array with map's dimensions
 	tower_manager.setArraySize(this->game->map.getMapWidth(), this->game->map.getMapHeight());
 	initializeButtonMap();
@@ -406,11 +407,13 @@ void GameStatePlay::buttonCommandLibrary(){
       handleCritterWaveLevelSwitching();
 		}
 		else if(buttonMap["pauseBtn"].spriteContains(localPosition)){
-			//do something
+			if (!this->game->isGamePaused)
+        this->game->isGamePaused = true;
 		}
 		else if(buttonMap["unpauseBtn"].spriteContains(localPosition)){
-			//do something
-		}
+			if (this->game->isGamePaused)
+        this->game->isGamePaused = false;
+    }
 		else if(buttonMap["bulldog_0_Btn"].spriteContains(localPosition)){
 			towerSelector = Tower::Bulldog;
 		}
