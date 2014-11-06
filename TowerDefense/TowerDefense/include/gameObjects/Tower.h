@@ -64,6 +64,7 @@ class Tower: public GameObject, public IObserver {
 	sf::CircleShape _range_shape;
 	RateOfFire _rate_of_fire;
 	SpecialEffect _special_effect;
+	int _buy_cost;
 	int _upgrade_cost;
 	int _sell_cost;
 	Critter* _target;

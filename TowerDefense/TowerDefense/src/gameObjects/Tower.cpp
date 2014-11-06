@@ -32,6 +32,9 @@ Tower::RateOfFire Tower::getRateOfFire() const {
 Tower::SpecialEffect Tower::getSpecialEffet() const {
 	return _special_effect;
 }
+int Tower::getBuyCost() const {
+	return _buy_cost;
+}
 int Tower::getSellCost() const {
 	return _sell_cost;
 }

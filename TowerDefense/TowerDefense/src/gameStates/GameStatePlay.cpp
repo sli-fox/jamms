@@ -8,8 +8,6 @@
 GameStatePlay::GameStatePlay(Game* game) {
   this->game = game;
 
-	//Initialize tower array with map's dimensions
-	tower_manager.setArraySize(this->game->map.getMapWidth(), this->game->map.getMapHeight());
 	initializeButtonMap();
 	returnToMenu = false;
 
@@ -69,20 +67,19 @@ void GameStatePlay::draw(const float delta_time) {
   //Draw Critter wave
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
 
-  //Draw Towers
+  //Draw Towers and their Specs
   this->tower_manager.draw(this->game->game_window);
-  if(!tower_manager.outOfBound(tileX, tileY) && !tower_manager.isTileFree(tileX, tileY))
-		this->game->game_window.draw(tower_manager.getTower(tileX,tileY)->getRangeShape());
+  if(!tower_manager.isTileFree(tileX, tileY)) {
+	this->game->game_window.draw(tower_manager.getTower(tileX,tileY)->getRangeShape());
+	towerSpecs.setString(tower_manager.getTower(tileX, tileY)->getTowerSpecs());
+	this->game->game_window.draw(towerSpecs);
+  }
 
   //Draw buttons
 	for(std::map<std::string, GameObject>::iterator it = buttonMap.begin() ; it != buttonMap.end() ; ++it)
 		it->second.draw(this->game->game_window);
 
-  //Draw Specs of Towers, Critters and Player
-	if(tower_manager.getTower(tileX, tileY) != NULL && tower_manager.getTower(tileX, tileY)->spriteContains(localPosition)){
-		towerSpecs.setString(tower_manager.getTower(tileX, tileY)->getTowerSpecs());
-		this->game->game_window.draw(towerSpecs);
-	}
+  //Draw Specs of Critters and Player
 	critterSpecs.setString("CURRENT WAVE: \n" + blacky->getCritterSpecs());
 	this->game->game_window.draw(critterSpecs);
 	playerSpecs.setString(Game::player.getPlayerSpecs());
@@ -142,7 +139,7 @@ void GameStatePlay::handleInput() {
 	sf::Event event;
 
 	// Checking if ANY tower on the map can attack Blacky (black cat...)
-	for(std::map<std::pair<int,int>, Tower*>::iterator it = towers.begin() ; it != towers.end() ; ++it) {
+	for(std::map<std::pair<int,int>, Tower*>::iterator it = tower_manager.getTowerMap()->begin() ; it != tower_manager.getTowerMap()->end() ; ++it) {
 		Tower* tower = it->second;
 		if(tower->canAttack(blacky)) {
 			tower->attack();
@@ -150,7 +147,7 @@ void GameStatePlay::handleInput() {
 	}
 
 	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
-	for(std::map<std::pair<int,int>, Tower*>::iterator it = towers.begin() ; it != towers.end() ; ++it) {
+	for(std::map<std::pair<int,int>, Tower*>::iterator it = tower_manager.getTowerMap()->begin() ; it != tower_manager.getTowerMap()->end() ; ++it) {
 		Tower* tower = it->second;
 			for (int i = 0; i < critters.size(); ++i) {
 				while(critters[i]->isActive  && tower->canAttack(critters[i])) {
@@ -369,14 +366,12 @@ void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 			tower_manager.buyTower(towerSelector, tileX, tileY);
 			if(tower_manager.getTower(tileX, tileY) != nullptr) {
 				registerObserver(tower_manager.getTower(tileX, tileY));
-				towers[std::make_pair(tileX,tileY)] = tower_manager.getTower(tileX, tileY);
 			}
 		}
 	}
 	else if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
 		if(tower_manager.getTower(tileX, tileY) != nullptr && tower_manager.getTower(tileX, tileY)->spriteContains(localPosition)){
 				tower_manager.sellTower(tileX, tileY);
-				towers.erase(std::make_pair(tileX,tileY));
 		}
 	}
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::U) && !tower_manager.isTileFree(tileX, tileY)){
@@ -385,8 +380,11 @@ void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num0)){
 		tower_manager.clearAllTowers();
 	}
-	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::M)){
-		tower_manager.displayTowerArray();
+	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::T)){
+			for (map<pair<int,int>, Tower*>::iterator it = tower_manager.getTowerMap()->begin() ; it != tower_manager.getTowerMap()->end() ; ++it) {
+				if(it->second != nullptr)
+					std::cout << white << "=> " << it->second->getName() << '\n';
+			}
 	}
 }
 
