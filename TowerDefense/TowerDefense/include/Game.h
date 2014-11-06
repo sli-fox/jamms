@@ -27,6 +27,7 @@ public:
 
 	static Map map;
 	static Player player;
+  float delta_time; 
 
    /** @brief Stack for storing the game states.
     */
@@ -61,4 +62,6 @@ public:
      *  @return Void.
      */
     void gameLoop();
+
+    bool isGamePaused;
 };

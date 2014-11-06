@@ -1,5 +1,6 @@
 #include <Game.h>
 #include <gameStates/GameState.h>
+#include <gameStates/GameStatePlay.h>
 
 /** @brief Constructor of Game sets the game window properties
  *  and frame rate.
@@ -9,8 +10,9 @@ Map Game::map = Map(Map::MAX_MAP_WIDTH, Map::MAX_MAP_HEIGHT);
 Player Game::player = Player("Jamms", 500);
 
 Game::Game() {
-  this->game_window.create(sf::VideoMode(1024, 768, 32), "Tower Defense", sf::Style::Close);
+  this->game_window.create(sf::VideoMode(1024, 768, 32), "Tower Defense", sf::Style::Close); //| sf::Style::Fullscreen);
   this->game_window.setFramerateLimit(60);
+  this->isGamePaused = false;
 }
 
 /** @brief Destructor of Game removes all GameStates from game states stack.
@@ -56,14 +58,17 @@ void Game::gameLoop() {
 
   while (this->game_window.isOpen()) {
     sf::Time elapsed_time = clock.restart();  //Resets clock and returns elapsed time since clock was started
-    float delta_time = elapsed_time.asSeconds();
+    this->delta_time = elapsed_time.asSeconds();
 
     if (peekState() == nullptr) 
       continue;   //If there is no next state, skip the rest of the statements in the while
 
     /** Draw updates to render window */
     peekState()->handleInput();
-    peekState()->update(delta_time);
+    
+    if (!this->isGamePaused)
+      peekState()->update(delta_time);
+
     this->game_window.clear(sf::Color::Black);  //Make sure window is cleared before drawing updates.
     peekState()->draw(delta_time);
     this->game_window.display();

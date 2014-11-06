@@ -17,6 +17,7 @@
 #include <utils/Waypoint.h>
 #include <algorithm>
 #include <iostream>
+#include <thread>
 #include <Map.h>
 #include <managers/TowerManager.h>
 #include <managers/CritterWave.h>
@@ -62,9 +63,9 @@ class GameStatePlay : public GameState {
     Waypoint* getStartingWaypoint();
 
     CritterWave* getCurrentCritterWave();
+   
 
   private:
-
 	  sf::Vector2i  localPosition;
 	  int tileX, tileY;
 	  GameObject mapBackdrop;
@@ -117,6 +118,7 @@ class GameStatePlay : public GameState {
      void handleCritterRemovalFromWave();
      void handleCritterWaveLevelSwitching();
      void setCritterWaveLevels(Waypoint* starting_waypoint);
+
 };
 
 

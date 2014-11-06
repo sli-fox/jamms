@@ -7,6 +7,7 @@
   */
 GameStatePlay::GameStatePlay(Game* game) {
   this->game = game;
+
 	//Initialize tower array with map's dimensions
 	tower_manager.setArraySize(this->game->map.getMapWidth(), this->game->map.getMapHeight());
 	initializeButtonMap();
@@ -154,21 +155,19 @@ void GameStatePlay::handleInput() {
 		case sf::Event::Closed: {
 			game->game_window.close();
 			break;
-								}
+		}
 		case sf::Event::MouseButtonPressed: {
 			buttonCommandLibrary();
 			towerCommandLibrary(tileX, tileY);
 			break;
-											}
+		}
 		case sf::Event::MouseMoved: {
 			if(tower_manager.getTower(tileX, tileY) != NULL && tower_manager.getTower(tileX, tileY)->spriteContains(localPosition)){
 				towerSpecs.setString(tower_manager.getTower(tileX, tileY)->getTowerSpecs());
 			}
 			break;
-
-									}
+		}
 		case sf::Event::KeyPressed: {
-			
 			towerCommandLibrary(tileX, tileY);
 			if(event.key.code == sf::Keyboard::B) {
 				if(!showBlacky) {
@@ -179,23 +178,20 @@ void GameStatePlay::handleInput() {
 					std::cout << "Blacky Hidden!" << std::endl;
 					showBlacky = false;
 				}
-
 			}
-			blacky->controlCat(event.key.code);	// for controlling blackcat
-
-
-      if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-        if (!show_waypoints)
-          show_waypoints = true;
-        else if (show_waypoints)
-          show_waypoints = false;
-      }
-	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::U) && !tower_manager.isTileFree(tileX, tileY)){
-		tower_manager.getTower(tileX, tileY)->upgradeTower();
-	}
-			break;
-									}
-		default: break;
+			  blacky->controlCat(event.key.code);	// for controlling blackcat
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+          if (!show_waypoints)
+            show_waypoints = true;
+          else if (show_waypoints)
+            show_waypoints = false;
+        }
+	      if(sf::Keyboard::isKeyPressed(sf::Keyboard::U) && !tower_manager.isTileFree(tileX, tileY)){
+		      tower_manager.getTower(tileX, tileY)->upgradeTower();
+	      }
+			    break;
+		  }
+		  default: break;
 		}
 	}
 }
@@ -406,11 +402,13 @@ void GameStatePlay::buttonCommandLibrary(){
       handleCritterWaveLevelSwitching();
 		}
 		else if(buttonMap["pauseBtn"].spriteContains(localPosition)){
-			//do something
+			if (!this->game->isGamePaused)
+        this->game->isGamePaused = true;
 		}
 		else if(buttonMap["unpauseBtn"].spriteContains(localPosition)){
-			//do something
-		}
+			if (this->game->isGamePaused)
+        this->game->isGamePaused = false;
+    }
 		else if(buttonMap["bulldog_0_Btn"].spriteContains(localPosition)){
 			towerSelector = Tower::Bulldog;
 		}
