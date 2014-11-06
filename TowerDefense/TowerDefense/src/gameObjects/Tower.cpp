@@ -3,7 +3,7 @@
 
 Tower::Tower() {
 	this->_upgrade_level = Tower::UpgradeLevel::Upgrade0;
-	this->_is_firing = false;
+	this->_target = NULL;
 	this->time = clock.getElapsedTime();
 }
 
@@ -29,9 +29,6 @@ Tower::Range Tower::getRange() const {
 Tower::RateOfFire Tower::getRateOfFire() const {
 	return _rate_of_fire;
 }
-bool Tower::getIsFiring() const {
-	return _is_firing;
-}
 Tower::SpecialEffect Tower::getSpecialEffet() const {
 	return _special_effect;
 }
@@ -40,6 +37,9 @@ int Tower::getSellCost() const {
 }
 int Tower::getUpgradeCost() const {
 	return _upgrade_cost;
+}
+Critter* Tower::getTarget() const {
+	return _target;
 }
 
 //MUTATORS
@@ -61,9 +61,6 @@ void Tower::setRange(Tower::Range _range) {
 void Tower::setRateOfFire(Tower::RateOfFire _rate_of_fire) {
 	this->_rate_of_fire = _rate_of_fire;
 }
-void Tower::setIsFiring(bool _is_firing) {
-	this->_is_firing = _is_firing;
-}
 void Tower::setSpecialEffet(Tower::SpecialEffect _special_effect) {
 	this->_special_effect = _special_effect;
 }
@@ -72,6 +69,9 @@ void Tower::setSellCost(int _sell_cost) {
 }
 void Tower::setUpgradeCost(int _upgrade_cost) {
 	this->_upgrade_cost = _upgrade_cost;
+}
+void Tower::setTarget(Critter* crit) {
+	this->_target = crit;
 }
 
 void Tower::setRangeShape(Tower::Range range) {
@@ -96,17 +96,28 @@ bool Tower::canAttack(Critter* crit) {
 	int pythagore = static_cast<int> (pow(static_cast<double> (distX), 2))
 	+ static_cast<int> (pow(static_cast<double> (distY), 2));
 
-	if(sqrt(pythagore) <= this->getRangeShape().getRadius() && time.asSeconds()*this->getRateOfFire() >= 1) {
-		_is_firing = true;
+	if(this->_target != NULL && this->_target->getId() < crit->getId())
+		_target = crit;
+
+	if(sqrt(pythagore) <= this->getRangeShape().getRadius()
+		&& time.asSeconds()*this->getRateOfFire() >= 1
+		&& this->_target == NULL) {
+		_target = crit;
 		clock.restart();
 		return true;
 	}
+	this->_target = NULL;
 	return false;
 }
 
 void Tower::attack() {
-	std::cout << white << "Time: " << time.asSeconds() << " seconds" << std::endl;
-	std::cout << white << "WOUF WOUF!" << std::endl;
+	std::cout << yellow << "WOUF WOUF! Scared cat " << this->_target->getId() << std::endl;
+	this->_target->inflictDamage(this->getPower());
+	std::cout << yellow << "Cat " << this->_target->getId() << " now has " << this->_target->getHitPoints() << " HP" << std::endl;
+}
+
+void Tower::update() {
+	std::cout << "TOWER UPDATED!" << std::endl;
 }
 
 std::string Tower::getTowerSpecs() {

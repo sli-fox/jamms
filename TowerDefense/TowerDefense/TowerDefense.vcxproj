@@ -88,6 +88,8 @@
     <ClInclude Include="include\gameObjects\Critter.h" />
     <ClInclude Include="include\gameObjects\CritterFactory.h" />
     <ClInclude Include="include\gameObjects\GameObject.h" />
+    <ClInclude Include="include\gameObjects\IObserver.h" />
+    <ClInclude Include="include\gameObjects\ISubject.h" />
     <ClInclude Include="include\gameObjects\Tile.h" />
     <ClInclude Include="include\gameObjects\Tower.h" />
     <ClInclude Include="include\gameObjects\ShihTzu.h" />

@@ -28,7 +28,7 @@ void WhiteCat::initializeCritter(const std::vector<Animation>& animations) {
   // Attributes for a white cat
   this->isActive = false;
   this->isAtEndTile = false;
-  this->hit_points = 2;
+  this->hit_points = 9;
   this->steal_points = 4;
   this->player_reward = 5;
   this->type = Critter::CritterType::WHITE_CAT;

@@ -40,6 +40,9 @@ class GameStatePlay : public GameState {
      */
     GameStatePlay(Game* game);
     
+	void registerObserver(Tower* tower);
+	void registerObservers();
+
     /** @brief Draws game to the render window. 
     *   @param delta_time Elapsed time during the game.
     *   @return Void.
