@@ -66,30 +66,36 @@ void GameStatePlay::draw(const float delta_time) {
 
   //Draw Critter wave
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
-
-  //Draw Towers and their Specs
   this->tower_manager.draw(this->game->game_window);
-  if(!tower_manager.isTileFree(tileX, tileY)) {
-	this->game->game_window.draw(tower_manager.getTower(tileX,tileY)->getRangeShape());
-	towerSpecs.setString(tower_manager.getTower(tileX, tileY)->getTowerSpecs());
-	this->game->game_window.draw(towerSpecs);
-  }
+
 
   //Draw buttons
 	for(std::map<std::string, GameObject>::iterator it = buttonMap.begin() ; it != buttonMap.end() ; ++it)
 		it->second.draw(this->game->game_window);
 
   //Draw Specs of Critters and Player
-	critterSpecs.setString("CURRENT WAVE: \n" + blacky->getCritterSpecs());
-	this->game->game_window.draw(critterSpecs);
+	this->game->game_window.draw(waveSpecs);
+	this->game->game_window.draw(nextWaveSpecs);
 	playerSpecs.setString(Game::player.getPlayerSpecs());
 	this->game->game_window.draw(playerSpecs);
+	//Draw Towers and their Specs
+    if(tower_manager.getTower(tileX, tileY) != nullptr) {
+	  this->game->game_window.draw(tower_manager.getTower(tileX,tileY)->getRangeShape());
+	  towerSpecs.setString(tower_manager.getTower(tileX, tileY)->getTowerSpecs());
+	  this->game->game_window.draw(towerSpecs);
+    }
+
 }
 
 void GameStatePlay::update(const float delta_time) {
   //Draw  & move activated Critters within a wave
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
   moveActivatedCritters(delta_time);
+  
+  waveSpecs.setString("CURRENT WAVE: \nNumber of cats: " + std::to_string(current_wave->getContainerOfCritters().size()) + "\n"
+	  + current_wave->findCritter(0)->getCritterSpecs());
+  nextWaveSpecs.setString("NEXT WAVE (" + std::to_string(current_wave->getId()+1) + "/" + std::to_string(wave_levels.size()) + "):\n"
+	  + current_wave->next_wave->findCritter(0)->getCritterSpecs());
 
   //Activate Critters within a wave based on number of update cycles
   if (delay_count >= 175 && last_activated_critter->next_critter) {
@@ -128,10 +134,9 @@ void GameStatePlay::setCritterWaveLevels(Waypoint* starting_waypoint) {
   this->wave_levels.push_back(wave4);
 
   for (int i = 0; i < wave_levels.size() - 1; ++i) {
+	wave_levels[i]->setId(i);
     wave_levels[i]->next_wave = wave_levels[i+1];
-	std::cout << wave_levels[i]->getCritterCount() << std::cout;
   }
-
 }
 
 
@@ -360,7 +365,7 @@ CritterWave* GameStatePlay::getCurrentCritterWave(){
 
 
 void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
-	if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+	if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && towerSelector >= 0 && towerSelector < 3){
 		if(tower_manager.getTower(tileX, tileY) == nullptr && this->game->map.getTile(tileX, tileY) != nullptr
 			&& this->game->map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY) {
 			tower_manager.buyTower(towerSelector, tileX, tileY);
@@ -427,15 +432,19 @@ void GameStatePlay::initializeButtonMap(){
 	displayCurrentWave.load(imagePath + "DisplayBox.png");
 	displayCurrentWave.setPosition(0*32,12*32);
 	buttonMap.emplace("displayCurrentWave", displayCurrentWave);
-	critterSpecs.setFont(font);
-	critterSpecs.setPosition(0*32+8,12*32);
-	critterSpecs.setColor(sf::Color::Black);
-	critterSpecs.setCharacterSize(13);
+	waveSpecs.setFont(font);
+	waveSpecs.setPosition(0*32+8,12*32);
+	waveSpecs.setColor(sf::Color::Black);
+	waveSpecs.setCharacterSize(13);
 
 	GameObject displayNextWave;
 	displayNextWave.load(imagePath + "DisplayBox.png");
 	displayNextWave.setPosition(0*32,17*32);
 	buttonMap.emplace("displayNextWave", displayNextWave);
+	nextWaveSpecs.setFont(font);
+	nextWaveSpecs.setPosition(0*32+8,17*32);
+	nextWaveSpecs.setColor(sf::Color::Black);
+	nextWaveSpecs.setCharacterSize(13);
 
 	GameObject towerDisplayBox;
 	towerDisplayBox.load(imagePath + "DisplayBox.png");
@@ -445,7 +454,7 @@ void GameStatePlay::initializeButtonMap(){
 	towerSpecs.setPosition(24*32+8,14*32);
 	towerSpecs.setColor(sf::Color::Black);
 	towerSpecs.setCharacterSize(13);
-	
+
 	GameObject playerDisplayBox;
 	playerDisplayBox.load(imagePath + "DisplayBox.png");
 	playerDisplayBox.setPosition(9*32,12*32);
