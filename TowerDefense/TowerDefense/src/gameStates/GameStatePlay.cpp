@@ -97,7 +97,7 @@ void GameStatePlay::update(const float delta_time) {
   //Activate Critters within a wave based on number of update cycles
   if (delay_count >= 175 && last_activated_critter->next_critter) {
     last_activated_critter->next_critter->isActive = true;
-    std::cout << "ACTIVATE critter with id " << last_activated_critter->next_critter->getId() << std::endl;
+    std::cout << green << "ACTIVATE critter with id " << last_activated_critter->next_critter->getId() << std::endl;
     last_activated_critter = last_activated_critter->next_critter;
     delay_count = 0;
   } 
@@ -141,27 +141,27 @@ void GameStatePlay::setCritterWaveLevels(Waypoint* starting_waypoint) {
 void GameStatePlay::handleInput() {
 	sf::Event event;
 
-	//// Checking if ANY tower on the map can attack Blacky (black cat...)
-	//for(int i = 0; i < this->game->map.getMapWidth(); ++i) {
-	//	for(int j = 0; j < this->game->map.getMapHeight(); ++j) {
-	//		if(tower_manager.getTower(i,j)->canAttack(blacky)) {
-	//			tower_manager.getTower(i,j)->attack();
-	//		}
-	//	}
-	//}
+	// Checking if ANY tower on the map can attack Blacky (black cat...)
+	for(std::map<std::pair<int,int>, Tower*>::iterator it = towers.begin() ; it != towers.end() ; ++it) {
+		Tower* tower = it->second;
+		if(tower->canAttack(blacky)) {
+			tower->attack();
+		}
+	}
 
 	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
-  	for(int i = 0; i < this->game->map.getMapWidth(); ++i) {
-		for(int j = 0; j < this->game->map.getMapHeight(); ++j) {
-			Tower* tower = tower_manager.getTower(i,j);
-			if(tower != NULL) {
-				for (int i = 0; i < critters.size(); ++i) {
-					while(critters[i]->isActive  && tower->canAttack(critters[i])) {
-						tower->attack();
+	for(std::map<std::pair<int,int>, Tower*>::iterator it = towers.begin() ; it != towers.end() ; ++it) {
+		Tower* tower = it->second;
+			for (int i = 0; i < critters.size(); ++i) {
+				while(critters[i]->isActive  && tower->canAttack(critters[i])) {
+					tower->attack();
+					if(critters[i]->getHitPoints() <= 0) {
+						critters[i]->isActive = false;
+						std::cout << red << "Cat " << critters[i]->getId() << " fled away!" << std::endl;
+						Game::player.earnCash(critters[i]->getPlayerReward()*5);
+						Game::player.gainPoints(critters[i]->getPlayerReward()*2);
 					}
-					//tower->setTarget(NULL);
 				}
-			}
 		}
 	}
 
@@ -183,11 +183,11 @@ void GameStatePlay::handleInput() {
 			}
 			case sf::Event::KeyPressed: {
 				towerCommandLibrary(tileX, tileY);
+				blacky->controlCat(event.key.code);	// for controlling blackcat
 				if(event.key.code == sf::Keyboard::B)
 					(!showBlacky) ? showBlacky = true : showBlacky = false;
 				if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 					(!show_waypoints) ? show_waypoints = true : show_waypoints = false;
-				blacky->controlCat(event.key.code);	// for controlling blackcat
 				break;
 			}
 			default: break;
@@ -197,33 +197,13 @@ void GameStatePlay::handleInput() {
 
 // Attach ONE tower to every active critter
 void GameStatePlay::registerObserver(Tower* tower) {
-	if(tower != NULL) {
-		std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
-		for (int i = 0; i < critters.size(); ++i) {
-			if(critters[i]->isActive) {
-				critters[i]->attach(tower);
-			}
+	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
+	for (int i = 0; i < critters.size(); ++i) {
+		if(critters[i]->isActive) {
+			critters[i]->attach(tower);
 		}
 	}
 }
-
-// Attach EVERY tower to every active critter
-void GameStatePlay::registerObservers() {
-  std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
-  	for(int i = 0; i < this->game->map.getMapWidth(); ++i) {
-		for(int j = 0; j < this->game->map.getMapHeight(); ++j) {
-			if(tower_manager.getTower(i,j) != NULL) {
-				for (int i = 0; i < critters.size(); ++i) {
-					if(critters[i]->isActive) {
-						critters[i]->attach(tower_manager.getTower(i,j));
-						critters[i]->notify();
-					}
-				}
-			}
-		}
-	}
-}
-
 
 /** @brief This function initialize waypoints while setting
  *  the next waypoints.
@@ -370,7 +350,6 @@ void GameStatePlay::handleCritterWaveLevelSwitching() {
     this->delay_count = 0;
     this->last_activated_critter = current_wave->findCritter(0);
     last_activated_critter->isActive = true;
-	//GameStatePlay::registerObservers();
   }
 }
 
@@ -388,12 +367,16 @@ void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 		if(tower_manager.getTower(tileX, tileY) == nullptr && this->game->map.getTile(tileX, tileY) != nullptr
 			&& this->game->map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY) {
 			tower_manager.buyTower(towerSelector, tileX, tileY);
-			GameStatePlay::registerObserver(tower_manager.getTower(tileX, tileY));
+			if(tower_manager.getTower(tileX, tileY) != nullptr) {
+				registerObserver(tower_manager.getTower(tileX, tileY));
+				towers[std::make_pair(tileX,tileY)] = tower_manager.getTower(tileX, tileY);
+			}
 		}
 	}
 	else if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
 		if(tower_manager.getTower(tileX, tileY) != nullptr && tower_manager.getTower(tileX, tileY)->spriteContains(localPosition)){
 				tower_manager.sellTower(tileX, tileY);
+				towers.erase(std::make_pair(tileX,tileY));
 		}
 	}
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::U) && !tower_manager.isTileFree(tileX, tileY)){
