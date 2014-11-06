@@ -9,8 +9,8 @@ int Critter::getHitPoints() const {
 void Critter::setHitPoints(int points){
   this->hit_points = points;
 }
-int Critter::getCoinsStrength() const {
-  return steal_coins;
+int Critter::getStealPointsStrength() const {
+  return steal_points;
 } 
 int Critter::getPlayerReward() const {
   return player_reward;
@@ -76,12 +76,40 @@ std::string Critter::getCritterSpecs() {
 	output << "CRITTER SPECIFICATIONS:" << std::endl;
 	output << "Hit Points: " << this->hit_points << std::endl;
 	output << "Type: " << CritterTypeA[this->type] << std::endl;
-	output << "Steal Coins: " << this->steal_coins << std::endl;
+	output << "Steal Coins: " << this->steal_points << std::endl;
 	output << "Steal Lives: " << this->STEAL_LIVES << std::endl;
 	output << "Player Reward: " << this->player_reward << std::endl;
 	output << "Speed: " << this->speed << std::endl;
 
 	return output.str();
+}
+
+//Controlling the cat with Arrow Keys
+void Critter::controlCat(sf::Keyboard::Key arrowKey) {
+	if(arrowKey == sf::Keyboard::Up) {
+		if(this->getPosition().y > (0 + this->getSpriteSize().y / 2.5)) {
+			this->updatePosition(0, -2);
+			this->animation_index = 3;
+		}
+	}
+	if(arrowKey == sf::Keyboard::Right) {
+		if(this->getPosition().x < (Game::map.getMapWidth()*32 - this->getSpriteSize().x / 2.0)) {
+			this->updatePosition(+2, 0);
+			this->animation_index = 2;
+		}
+	}
+	if(arrowKey == sf::Keyboard::Down) {
+		if(this->getPosition().y < (Game::map.getMapHeight()*32 - this->getSpriteSize().y / 2.0)) {
+			this->updatePosition(0, +2);
+			this->animation_index = 0;
+		}
+	}
+	if(arrowKey == sf::Keyboard::Left) {
+		if(this->getPosition().x > (0 + this->getSpriteSize().x / 2.0)) {
+			this->updatePosition(-2, 0);
+			this->animation_index = 1;
+		}
+	}
 }
 
 void Critter::draw(sf::RenderWindow& game_window, float delta_time) {

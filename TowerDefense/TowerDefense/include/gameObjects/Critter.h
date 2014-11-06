@@ -20,6 +20,8 @@ class Critter : public GameObject {
     enum MovementDirection { DOWN, LEFT, RIGHT, UP };
     enum CritterType { NONE, BLACK_CAT, WHITE_CAT };
 
+	void controlCat(sf::Keyboard::Key arrowKey);
+
    /** @brief Handles the animated object. 
      */
     AnimationHandler animation_handler;
@@ -35,7 +37,7 @@ class Critter : public GameObject {
     int getId() const;
     int getHitPoints() const; 
     void setHitPoints(int points);
-    int getCoinsStrength() const; 
+    int getStealPointsStrength() const; 
     int getPlayerReward() const; 
     float getSpeed() const; 
     int getLevel() const;
@@ -80,9 +82,9 @@ class Critter : public GameObject {
       */
     sf::Vector2f position;
 
-    /** @brief Rate at which the critter can steal coins from the player.
+    /** @brief Rate at which the critter can steal points from the player.
       */
-    int steal_coins;
+    int steal_points;
 
     /** @brief Rate at which the critter can steal lives from the player.
       */
@@ -100,7 +102,7 @@ class Critter : public GameObject {
       */
     int level;
 
-    /** @brief Indicates which animation in a sprite sheet
-     */
+    /** @brief Indicates which animation in a sprite sheet 
+	  */
     int animation_index;
 };

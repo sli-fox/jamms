@@ -30,7 +30,7 @@ void WhiteCat::initializeCritter(const std::vector<Animation>& animations) {
   this->isAtEndTile = false;
   this->isDefeated = false;
   this->hit_points = 2;
-  this->steal_coins = 4;
+  this->steal_points = 4;
   this->player_reward = 5;
   this->type = Critter::CritterType::WHITE_CAT;
   this->speed = 10.0f;
@@ -50,25 +50,4 @@ void WhiteCat::initializeCritter(const std::vector<Animation>& animations) {
     this->animation_handler.addAnimation(animation);
   }
   this->animation_handler.update(0.0f);   //Initial delta_time is 0
-}
-
-
-//Controlling the cat with Arrow Keys
-void WhiteCat::controlCat(sf::Keyboard::Key arrowKey) {
-	if(arrowKey == sf::Keyboard::Up) {
-		this->updatePosition(0, -3);
-		this->animation_index = 3;
-	}
-	if(arrowKey == sf::Keyboard::Right) {
-		this->updatePosition(+3, 0);
-		this->animation_index = 2;
-	}
-	if(arrowKey == sf::Keyboard::Down) {
-		this->updatePosition(0, +3);
-		this->animation_index = 0;
-	}
-	if(arrowKey == sf::Keyboard::Left) {
-		this->updatePosition(-3, 0);
-		this->animation_index = 1;
-	}
 }

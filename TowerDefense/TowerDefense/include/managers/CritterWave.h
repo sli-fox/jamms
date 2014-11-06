@@ -79,7 +79,7 @@ class CritterWave {
        *  @return Void.
        */
       void operator()(const std::pair<int, Critter*>& item) {
-        delete item.second;   // Delete the map pair's value (Critter*) 
+        delete item.second;   // Delete the map pair's value (Critter*)
       }
     };
 };

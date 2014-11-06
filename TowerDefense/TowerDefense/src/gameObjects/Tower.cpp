@@ -98,8 +98,8 @@ bool Tower::canAttack() {
   * @return void
   */
 void Tower::insertCritterInQueue(Critter* critter) {
-	//if(this->_critters_in_range.find(
-	this->_critters_in_range.insert(critter);
+	if(critter->isActive)
+		this->_critters_in_range.insert(critter);
 }
 
 /**
@@ -107,12 +107,15 @@ void Tower::insertCritterInQueue(Critter* critter) {
   * @return void
   */
 void Tower::removeCritterInFront(){
-	if(!this->_critters_in_range.empty())
-		if(!this->critterIsWithinRange(*this->_critters_in_range.begin())){
+	if(!this->_critters_in_range.empty()) {
+		
+		Critter* critter = *this->_critters_in_range.begin();
+		
+		if(!this->critterIsWithinRange(critter) || !critter->isActive) {
 			cout << "CRITTERS IN SET: " << int(_critters_in_range.size()) << endl;
-			this->_critters_in_range.erase(this->_critters_in_range.begin());
-			cout << "CRITTERS IN SET: " << int(_critters_in_range.size()) << endl;
+			this->_critters_in_range.erase(critter);
 		}
+	}
 }
 
 /**
@@ -139,26 +142,24 @@ void Tower::attack() {
 	//}
 	
 	if(!_critters_in_range.empty()){
-		Critter* thisCritter = *_critters_in_range.begin();
+		Critter* critter = *_critters_in_range.begin();
 
-		if(thisCritter->getHitPoints() > 0) {
+		if(critter->getHitPoints() > 0) {
 			std::cout << white << "Time: " << time.asSeconds() << " seconds" << std::endl;
-			std::cout << white << "WOUF WOUF!" << std::endl;
 	
-			std::cout << white << "Critter " << thisCritter->getId() << " Hit!" << std::endl; 
+			std::cout << white << "Critter " << critter->getId() << " Hit!" << std::endl; 
 			std::cout << white << "Critter took " << this->_power << " damage from " << this->_name << std::endl;
-			thisCritter->setHitPoints(thisCritter->getHitPoints() - this->_power);
+			critter->setHitPoints(critter->getHitPoints() - this->_power);
 		}
-		else if(thisCritter->getHitPoints() <= 0) {
-			thisCritter->isDefeated = true;
+		else if(critter->getHitPoints() <= 0) {
+			critter->isActive = false;
 			std::cout << white << "Time: " << time.asSeconds() << " seconds" << std::endl;
-			std::cout << white << "WOUF WOUF!" << std::endl;
 	
 			std::cout << white << "CRITTER DEFEATED!" << std::endl;
-			std::cout << white << "Awarded " << thisCritter->getPlayerReward() << " points!" << std::endl;
-			Game::player.gainPoints(thisCritter->getPlayerReward());
+			std::cout << white << "Awarded " << critter->getPlayerReward() << " points!" << std::endl;
+			Game::player.gainPoints(critter->getPlayerReward());
 
-			int cash = 5; //should have the cash reward be specific to a wave. so wave 1 gives you 5 cash per kill, wave 2 gives you 10 cash etc etc. so we'd use CritterWave::getWave().coinReward
+			int cash = 5;
 			std::cout << white << "Gained " << cash << " coins!" << std::endl;
 			Game::player.earnCash(cash);
 		}

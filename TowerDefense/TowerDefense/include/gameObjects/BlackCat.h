@@ -19,12 +19,9 @@ class GameStatePlay;  //Allows class to know about GameStatePlay
  */
 class BlackCat : public Critter {
   public:
-   
-	BlackCat() {}
+       
     BlackCat(int id, Waypoint* starting_waypoint);
     ~BlackCat() {}
-
-	void controlCat(sf::Keyboard::Key arrowKey);
     
   private:
     /** @brief Initialization function for a BlackCat.

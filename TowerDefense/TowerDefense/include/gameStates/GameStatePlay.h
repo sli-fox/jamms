@@ -32,6 +32,8 @@ class GameStatePlay : public GameState {
     
 	int delay_count;
     Critter* last_activated_critter;
+    bool show_waypoints;
+    bool showBlacky;
 
     /** @brief Constructor that takes in a pointer to the Game
      *  that created them.
@@ -119,5 +121,6 @@ class GameStatePlay : public GameState {
      void handleCritterRemovalFromWave();
      void handleCritterWaveLevelSwitching();
      void setCritterWaveLevels(Waypoint* starting_waypoint);
-
 };
+
+

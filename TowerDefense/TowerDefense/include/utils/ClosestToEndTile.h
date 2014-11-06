@@ -31,6 +31,6 @@ struct ClosestToEndTile {
 				critter2Index = std::distance(mapPath.crbegin(), it);
 		}
 		//compares which critter is closest to the end tile
-		return int(critter1Index) < int(critter2Index);
+		return int(critter1Index) < int(critter2Index) && critter1 != critter2;
     }
 };
