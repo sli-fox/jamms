@@ -19,7 +19,7 @@
 class Critter : public GameObject, public ISubject {
   public:
     enum MovementDirection { DOWN, LEFT, RIGHT, UP };
-    enum CritterType { NONE, BLACK_CAT, WHITE_CAT };
+    enum CritterType { BLACK_CAT, WHITE_CAT };
 
 	void controlCat(sf::Keyboard::Key arrowKey);
 

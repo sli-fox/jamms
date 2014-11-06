@@ -43,6 +43,9 @@ class CritterWave {
       return output;
     }
 
+	int getId() const;
+	void setId(int id);
+
     /** @brief Returns a reference to a Critter in the map.
      *  @param critter_id Id of the Critter to be found
      *  @return Pointer to a Critter in the map.
@@ -67,6 +70,9 @@ class CritterWave {
 
     void drawActivatedCrittersInWave(sf::RenderWindow& render_window, float delta_time); 
   private:
+
+	int id;
+
     /** @brief Map representing a critter wave.
      */
     std::map<int, Critter*> _m_critter_wave;
