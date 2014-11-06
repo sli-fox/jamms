@@ -396,6 +396,9 @@ void GameStatePlay::buttonCommandLibrary(){
 			returnToMenu = true;
 			this->game->popState();
 		}
+		else if(buttonMap["nextWaveBtn"].spriteContains(localPosition)){
+			//steph place function here
+		}
 		else if(buttonMap["pauseBtn"].spriteContains(localPosition)){
 			//do something
 		}
@@ -454,6 +457,7 @@ void GameStatePlay::initializeButtonMap(){
 	GameObject pauseBtn;
 	pauseBtn.load(imagePath + "PauseBtn.png");
 	pauseBtn.setPosition(0*32,22*32);
+
 	buttonMap.emplace("pauseBtn", pauseBtn);
 
 	GameObject unpauseBtn;
@@ -465,6 +469,11 @@ void GameStatePlay::initializeButtonMap(){
 	returnToEditorBtn.load(imagePath + "ReturnToEditorBtn.png");
 	returnToEditorBtn.setPosition(4*32,22*32);
 	buttonMap.emplace("returnToEditorBtn", returnToEditorBtn);
+
+	GameObject nextWaveBtn;
+	nextWaveBtn.load(imagePath + "NextWaveBtn.png");
+	nextWaveBtn.setPosition(6*32,22*32);
+	buttonMap.emplace("nextWaveBtn", nextWaveBtn);
 
 	GameObject bulldog_0_Btn;
 	bulldog_0_Btn.load(towerPath + "bulldog_0.png");
