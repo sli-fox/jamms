@@ -1,5 +1,7 @@
 #pragma once
 #include <GameObjects/Tower.h>
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 Tower::Tower() {
 	this->_upgrade_level = Tower::UpgradeLevel::Upgrade0;
@@ -101,6 +103,7 @@ bool Tower::canAttack(Critter* critter) {
 
 	if(this->circleToCircleIntersection(critter) && time.asSeconds()*this->getRateOfFire() >= 1 && this->_target == NULL) {
 		_target = critter;
+		//this->rotateTowardsTarget();
 		clock.restart();
 		return true;
 	}
@@ -112,6 +115,35 @@ void Tower::attack() {
 	std::cout << yellow << "WOUF WOUF! Scared cat " << this->_target->getId() << "!" << std::endl;
 	this->_target->inflictDamage(this->getPower());
 	std::cout << yellow << "Cat " << this->_target->getId() << " now has " << this->_target->getHitPoints() << " HP" << std::endl;
+}
+
+/** 
+  * @brief Determines collision path based on position of tower object and the distance in a straight line towards critter 
+  * @return sf::Vector2f
+  */
+sf::Vector2f Tower::findCollisionPath(Critter* critter) {
+	return sf::Vector2f (this->getPosition() - critter->getPosition());
+}
+
+/**
+  * @brief Calculates angle between an x and y component in degrees from the horizontal
+  * @return float
+  */
+float Tower::angle(float x, float y) {
+	return std::atan2(x, y) * 180 / M_PI;
+}
+
+/**
+  * @brief Rotates the tower to face the critter it is attacking
+  * @return void
+  */
+void Tower::rotateTowardsTarget() {
+	sf::Vector2f collisionPath = findCollisionPath(this->_target);
+
+	float facingCritterAngle = angle(collisionPath.x, collisionPath.y);
+	
+	cout << "CollisionPath ("<< collisionPath.x << ", " << collisionPath.y << ")";
+	this->setRotation(facingCritterAngle);
 }
 
 /**
@@ -159,7 +191,7 @@ void Tower::applySpecialEffect(Critter* critter) {
 	case SpecialEffect::Slowing:
 		cout << red << "Applying slowing" << endl;
 		cout << red << "Initial speed: " << critter->getSpeed() << endl;
-		critter->reduceSpeed(5.0f);
+		critter->reduceSpeed(5.0f + 2.5f * this->getUpgradeLevel());
 		cout << red << "Final speed: " << critter->getSpeed() << endl;
 		break;
 	

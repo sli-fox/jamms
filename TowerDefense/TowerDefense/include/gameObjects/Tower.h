@@ -13,6 +13,9 @@ class Tower: public GameObject, public IObserver {
 	bool canApplySpecialAfterEffects(Critter* critter);
 	void attack();
 	void update();
+	sf::Vector2f findCollisionPath(Critter* critter);
+	void rotateTowardsTarget();
+	float angle(float x, float y);
 
     enum TowerType { ShihTzu, Dalmatian, Bulldog };
 	enum UpgradeLevel { Upgrade0, Upgrade1, Upgrade2 };
