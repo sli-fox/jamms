@@ -29,7 +29,7 @@ Tower::Range Tower::getRange() const {
 Tower::RateOfFire Tower::getRateOfFire() const {
 	return _rate_of_fire;
 }
-Tower::SpecialEffect Tower::getSpecialEffet() const {
+Tower::SpecialEffect Tower::getSpecialEffect() const {
 	return _special_effect;
 }
 int Tower::getBuyCost() const {
@@ -94,13 +94,10 @@ sf::CircleShape Tower::getRangeShape() const {
   * @return bool
   */
 bool Tower::canAttack(Critter* critter) {
-	if(this == NULL)
-		return false;
-
 	this->time = this->clock.getElapsedTime();
 	
-	if(this->_target != NULL && this->_target->getId() < critter->getId())
-		_target = critter;
+	if(this->_target != NULL && this->_target->getId() < critter->getId()) 
+		_target = critter;//@MARK why is this if condition different from the one below?
 
 	if(this->circleToCircleIntersection(critter) && time.asSeconds()*this->getRateOfFire() >= 1 && this->_target == NULL) {
 		_target = critter;
@@ -112,9 +109,64 @@ bool Tower::canAttack(Critter* critter) {
 }
 
 void Tower::attack() {
-	std::cout << yellow << "WOUF WOUF! Scared cat " << this->_target->getId() << std::endl;
-    this->_target->inflictDamage(this->getPower());
+	std::cout << yellow << "WOUF WOUF! Scared cat " << this->_target->getId() << "!" << std::endl;
+	this->_target->inflictDamage(this->getPower());
 	std::cout << yellow << "Cat " << this->_target->getId() << " now has " << this->_target->getHitPoints() << " HP" << std::endl;
+}
+
+/**
+  * @brief Determines whether tower can apply a special effect on a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay
+  * @return bool
+  */
+bool Tower::canApplySpecialAfterEffects(Critter* critter) {
+	this->time = this->clock.getElapsedTime();
+	
+	if(this->circleToCircleIntersection(critter) && time.asSeconds()*this->getRateOfFire() >= 1) {
+		clock.restart();
+		return true;
+	}
+	return false;
+}
+
+void Tower::applySpecialEffect(Critter* critter) {
+	switch(this->_special_effect) {
+	/*
+	case SpecialEffect::Bomb:
+		cout << red << "Applying bomb" << endl;
+		break;
+	*/
+	/*
+	case SpecialEffect::Electrocute:
+		cout << red << "Applying electrocute" << endl;
+		break;
+	*/
+	case SpecialEffect::Burning:
+		cout << red << "Applying burning" << endl;
+		break;
+
+	case SpecialEffect::Freezing:
+		cout << red << "Applying freezing" << endl;
+		
+		
+		//if(time.asSeconds()) {
+		//	//time.asSeconds()*this->getRateOfFire() >= 1;
+		//	clock.restart();
+		//}
+		//cout << red << "Unfreezing freezing" << endl;
+		//	if freeze then slow speed of critter temporarily
+		break;
+	
+	case SpecialEffect::Slowing:
+		cout << red << "Applying slowing" << endl;
+		cout << red << "Initial speed: " << critter->getSpeed() << endl;
+		critter->reduceSpeed(5.0f);
+		cout << red << "Final speed: " << critter->getSpeed() << endl;
+		break;
+	
+	case SpecialEffect::None:
+		cout << red << "Applying no effect" << endl;
+		break;
+	}
 }
 
 void Tower::update() {

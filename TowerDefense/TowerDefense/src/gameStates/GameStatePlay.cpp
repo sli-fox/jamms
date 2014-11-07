@@ -155,17 +155,28 @@ void GameStatePlay::handleInput() {
 
 	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
 	for(std::map<std::pair<int,int>, Tower*>::iterator it = tower_manager.getTowerMap()->begin() ; it != tower_manager.getTowerMap()->end() ; ++it) {
+		
 		Tower* tower = it->second;
+		if(tower != NULL) {
+		
 			for (int i = 0; i < critters.size(); ++i) {
-				while(critters[i]->isActive  && tower->canAttack(critters[i])) {
+
+				while(critters[i]->isActive && tower->canAttack(critters[i])) {
+
 					tower->attack();
+					
+					if(!critters[i]->getSpecialEffectApplied()) {
+						tower->applySpecialEffect(critters[i]);
+						critters[i]->setSpecialEffectApplied(true);
+					}
 					if(critters[i]->getHitPoints() <= 0) {
 						critters[i]->isActive = false;
 						std::cout << red << "Cat " << critters[i]->getId() << " fled away!" << std::endl;
-						Game::player.earnCash(critters[i]->getPlayerReward()*5);
-						Game::player.gainPoints(critters[i]->getPlayerReward()*2);
+						Game::player.earnCash(critters[i]->getPlayerReward() * 5);
+						Game::player.gainPoints(critters[i]->getPlayerReward() * 2);
 					}
 				}
+			}
 		}
 	}
 
@@ -186,7 +197,7 @@ void GameStatePlay::handleInput() {
       break;
     }
     case sf::Event::GainedFocus: {
-      std::cout << "test" << std::endl;
+      std::cout << "test" << std::endl; //WHAT IS THIS I DONT EVEN
 			if (this->game->isGamePaused)
         this->game->isGamePaused = false;
       break;

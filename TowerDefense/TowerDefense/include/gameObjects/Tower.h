@@ -9,7 +9,8 @@ class Tower: public GameObject, public IObserver {
     Tower();
 	~Tower() { std::cout << red << _name << " has been deleted." << white << std::endl; };
 	virtual void upgradeTower() = 0;
-	bool canAttack(Critter* crit);
+	bool canAttack(Critter* critter);
+	bool canApplySpecialAfterEffects(Critter* critter);
 	void attack();
 	void update();
 
@@ -19,7 +20,6 @@ class Tower: public GameObject, public IObserver {
 	enum RateOfFire { Slow = 1, Normal, Fast };
 	enum SpecialEffect { None, Slowing, Burning, Freezing };
 	
-
 	//ACCESSORS
     int getID() const;
 	std::string getName() const;
@@ -30,7 +30,7 @@ class Tower: public GameObject, public IObserver {
 	sf::CircleShape getRangeShape() const;
 	Tower::RateOfFire getRateOfFire() const;
 	bool getIsFiring() const;
-	Tower::SpecialEffect getSpecialEffet() const;
+	Tower::SpecialEffect getSpecialEffect() const;
 	int getBuyCost() const;
 	int getSellCost() const;
 	int getUpgradeCost() const;
@@ -53,7 +53,7 @@ class Tower: public GameObject, public IObserver {
 
 	std::string getTowerSpecs();
 	virtual bool circleToCircleIntersection(GameObject* game_object);
-
+	void applySpecialEffect(Critter* critter);
 
   protected:
     int _id;
@@ -73,5 +73,4 @@ class Tower: public GameObject, public IObserver {
   private:
 	  sf::Clock clock;
 	  sf::Time time;
-	
 };
