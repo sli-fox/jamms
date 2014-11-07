@@ -156,6 +156,9 @@
     <ClInclude Include="include\gameObjects\IObserver.h">
       <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
+    <ClInclude Include="include\gameStates\GameStateGameOver.h">
+      <Filter>Header Files\GameStates</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game.cpp">
@@ -238,6 +241,9 @@
     </ClCompile>
     <ClCompile Include="src\Player.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameStates\GameStateGameOver.cpp">
+      <Filter>Source Files\GameStates</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

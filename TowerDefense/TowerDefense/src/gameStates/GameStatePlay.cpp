@@ -11,6 +11,7 @@ GameStatePlay::GameStatePlay(Game* game) {
 	initializeButtonMap();
   firstStart = true;
 	returnToMenu = false;
+  endOfWaves = false;
 
   this->current_waypoints = addWaypoints(getWaypointsFromMapPath());
   this->show_waypoints = false;
@@ -96,6 +97,8 @@ void GameStatePlay::draw(const float delta_time) {
 }
 
 void GameStatePlay::update(const float delta_time) {
+  handleGameOver();
+
   //Draw  & move activated Critters within a wave
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
   moveActivatedCritters(delta_time);
@@ -270,13 +273,13 @@ std::vector<sf::Vector2f> GameStatePlay::getWaypointsFromMapPath() {
   // Add starting waypoint position
   waypoint_positions.push_back(sf::Vector2f(path_tiles[0]->getTileX()*32 + 16, path_tiles[0]->getTileY()*32 + 16));
   
-  // Any path with a direction change must have at least 4 tiles
-  if (path_tiles.size() > 3) {
+  // Any path with a direction change must have at least 3 tiles
+  if (path_tiles.size() > 2) {
     // Set current tile
     const Tile* current_tile = path_tiles[0];
 
     for (int i = 0; i < path_tiles.size() - 1; ++i) {
-      if (i + 2 == path_tiles.size() - 1)   // No change of direction can happen in less than 4 tiles
+      if (i + 2 == path_tiles.size())   // No change of direction can happen in less than 3 tiles
         break;
 
       int next_x = path_tiles[i+1]->getTileX();
@@ -392,6 +395,20 @@ CritterWave* GameStatePlay::getCurrentCritterWave(){
   return current_wave;
 }
 
+void GameStatePlay::handleGameOver() {
+  std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
+  if (current_wave == wave_levels[wave_levels.size() - 1]) {
+    for (int i = 0; i < critters.size(); ++i) {
+      if (critters[i]->isActive)
+        return;
+      else
+        endOfWaves = true;
+    }
+  }
+
+  if (this->game->player.getLives() <= 0 || endOfWaves)
+    this->game->pushState(new GameStateGameOver(this->game));
+}
 
 void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 	if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && towerSelector >= 0 && towerSelector < 3){
