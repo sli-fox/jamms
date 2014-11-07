@@ -32,8 +32,9 @@ void BlackCat::initializeCritter(const std::vector<Animation>& animations) {
   this->isAtEndTile = false;
   this->hit_points = this->max_health;
   this->steal_points = 10;
-  this->player_reward = 12;
+  this->player_reward = 6;
   this->type = Critter::CritterType::BLACK_CAT;
+  this->specialEffectApplied = false;
   this->speed = 25.0f;
   this->level = 2;
   this->animation_index = this->getMovementDirection();   

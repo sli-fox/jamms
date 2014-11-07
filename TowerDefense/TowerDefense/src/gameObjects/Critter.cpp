@@ -21,6 +21,12 @@ float Critter::getSpeed() const {
 int Critter::getLevel() const {
   return level;
 }
+bool Critter::getSpecialEffectApplied() const {
+	return this->specialEffectApplied;
+}
+void Critter::setSpecialEffectApplied(bool specialEffectsApplied) {
+	this->specialEffectApplied = specialEffectsApplied;
+}
 
 sf::Vector2f Critter::getPosition() const {
   return position;
@@ -38,8 +44,8 @@ void Critter::setAnimationIndex(unsigned int index) {
   this->animation_index = index;
 }
 
-void Critter::inflictDamage(int dmg) {
-	this->hit_points -= dmg;
+void Critter::inflictDamage(int damage) {
+	this->hit_points = (this->hit_points - damage <= 0 ? 0 : this->hit_points - damage);
 }
 
 bool Critter::isAtNextWaypoint() {
@@ -49,6 +55,9 @@ bool Critter::isAtNextWaypoint() {
   return false;
 }
 
+void Critter::reduceSpeed(float speed) {
+	this->speed = (this->speed - speed >= 10.0f ? this->speed - speed : 10.0f);
+}
 
 void Critter::updatePosition(float x, float y) {
   this->position.x += x; 
