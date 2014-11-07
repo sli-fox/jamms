@@ -87,11 +87,11 @@ void GameStatePlay::draw(const float delta_time) {
 	this->game->game_window.draw(nextWaveSpecs);
 	playerSpecs.setString(Game::player.getPlayerSpecs());
 	this->game->game_window.draw(playerSpecs);
+	this->game->game_window.draw(towerSpecs);
 	//Draw Towers and their Specs
     if(tower_manager.getTower(tileX, tileY) != nullptr) {
 	  this->game->game_window.draw(tower_manager.getTower(tileX,tileY)->getRangeShape());
-	  towerSpecs.setString(tower_manager.getTower(tileX, tileY)->getTowerSpecs());
-	  this->game->game_window.draw(towerSpecs);
+	 // towerSpecs.setString(tower_manager.getTower(tileX, tileY)->getTowerSpecs());
     }
 
 }
@@ -103,26 +103,39 @@ void GameStatePlay::update(const float delta_time) {
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
   moveActivatedCritters(delta_time);
   
-  waveSpecs.setString("CURRENT WAVE: \nNumber of cats: " + std::to_string(current_wave->getContainerOfCritters().size()) + "\n"
-	  + current_wave->findCritter(0)->getCritterSpecs());
-  nextWaveSpecs.setString("NEXT WAVE (" + std::to_string(current_wave->getId()+1) + "/" + std::to_string(wave_levels.size()) + "):\n"
-	  + current_wave->next_wave->findCritter(0)->getCritterSpecs());
+  waveSpecs.setString("CURRENT WAVE (" 
+	  + std::to_string(current_wave->getId()+1) + "/"
+	  + std::to_string(wave_levels.size()) + "):\n"
+	  + "Number of cats: " 
+	  + std::to_string(current_wave->getCrittersRemaining()) + "/"
+	  + std::to_string(current_wave->getContainerOfCritters().size()) + "\n"
+	  + current_wave->findCritter(current_wave->getContainerOfCritters().size()-1)->getCritterSpecs());
+
+  if(current_wave->next_wave != nullptr) {
+	  nextWaveSpecs.setString("NEXT WAVE ("
+		  + std::to_string(current_wave->getId()+2) + "/"
+		  + std::to_string(wave_levels.size()) + "):\n"+ "Number of cats: "
+		  + std::to_string(current_wave->next_wave->getContainerOfCritters().size()) + "\n"
+		  + current_wave->next_wave->findCritter(0)->getCritterSpecs());
+  } else {
+	  nextWaveSpecs.setString("No more waves!");
+  }
 
   //Activate Critters within a wave based on number of update cycles
 
   /* Bug: If we kill the last_activated_critter BEFORE the next one gets activated,
   then the if(last_activated_critter->isActive) is ALWAYS false,
   thus next critters never get activated.
-  Solution: We should only activate critters based on the delay_count */
+  Solution: We should only activate critters based on the delay_count,
+  or on another boolean, e.g. hasSpawned */
 
-  //if (last_activated_critter->isActive) {
-  if(true) {
+  if (last_activated_critter->isActive) {
     if (delay_count >= 175 && last_activated_critter->next_critter) {
       last_activated_critter->next_critter->isActive = true;
       std::cout << green << "ACTIVATE critter with id " << last_activated_critter->next_critter->getId() << std::endl;
       last_activated_critter = last_activated_critter->next_critter;
       delay_count = 0;
-    } 
+    }
     delay_count += 1;
   }
 
@@ -171,6 +184,7 @@ void GameStatePlay::handleInput() {
 					tower->attack();
 					if(critters[i]->getHitPoints() <= 0) {
 						critters[i]->isActive = false;
+						current_wave->decrementCrittersRemaining();
 						std::cout << red << "Cat " << critters[i]->getId() << " fled away!" << std::endl;
 						Game::player.earnCash(critters[i]->getPlayerReward()*5);
 						Game::player.gainPoints(critters[i]->getPlayerReward()*2);
@@ -196,7 +210,7 @@ void GameStatePlay::handleInput() {
       break;
     }
     case sf::Event::GainedFocus: {
-      std::cout << "test" << std::endl;
+      std::cout << "Game Gained Focus" << std::endl;
 			if (this->game->isGamePaused)
         this->game->isGamePaused = false;
       break;

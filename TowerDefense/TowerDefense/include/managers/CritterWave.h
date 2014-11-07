@@ -66,12 +66,16 @@ class CritterWave {
      */
     int getCritterCount() const;
 
+	int getCrittersRemaining() const;
+	void decrementCrittersRemaining();
+
     std::map<int, Critter*> getContainerOfCritters();
 
     void drawActivatedCrittersInWave(sf::RenderWindow& render_window, float delta_time); 
   private:
 
 	int id;
+	int critters_remaining;
 
     /** @brief Map representing a critter wave.
      */

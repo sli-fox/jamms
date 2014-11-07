@@ -67,7 +67,7 @@ Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
 			}
 		}
 		Game::player.spendCash(towers[make_pair(tileX, tileY)]->getBuyCost());
-		cout << blue << "Tower bought for " << towers[make_pair(tileX, tileY)]->getBuyCost() << " XXX  coins!" << std::endl;
+		cout << blue << "Tower bought for " << towers[make_pair(tileX, tileY)]->getBuyCost() << "  coins!" << std::endl;
 		return towers[make_pair(tileX, tileY)];
 	} else {
 		std::cerr << red << "Error: There is already a tower on this cell." << std::endl;
