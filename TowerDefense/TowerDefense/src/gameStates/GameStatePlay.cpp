@@ -262,13 +262,13 @@ std::vector<sf::Vector2f> GameStatePlay::getWaypointsFromMapPath() {
   // Add starting waypoint position
   waypoint_positions.push_back(sf::Vector2f(path_tiles[0]->getTileX()*32 + 16, path_tiles[0]->getTileY()*32 + 16));
   
-  // Any path with a direction change must have at least 4 tiles
-  if (path_tiles.size() > 3) {
+  // Any path with a direction change must have at least 3 tiles
+  if (path_tiles.size() > 2) {
     // Set current tile
     const Tile* current_tile = path_tiles[0];
 
     for (int i = 0; i < path_tiles.size() - 1; ++i) {
-      if (i + 2 == path_tiles.size() - 1)   // No change of direction can happen in less than 4 tiles
+      if (i + 2 == path_tiles.size())   // No change of direction can happen in less than 3 tiles
         break;
 
       int next_x = path_tiles[i+1]->getTileX();
