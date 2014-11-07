@@ -40,16 +40,12 @@ class Critter : public GameObject, public ISubject {
     void setHitPoints(int points);
     int getStealPointsStrength() const; 
     int getPlayerReward() const; 
-    float getSpeed() const;
-	void reduceSpeed(float speed);
+    float getSpeed() const; 
     int getLevel() const;
     sf::Vector2f getPosition() const;
     Waypoint* getCurrentWaypoint() const;
     void setCurrentWaypoint(Waypoint* waypoint);
     void setAnimationIndex(unsigned int index);
-	bool getSpecialEffectApplied() const;
-	void setSpecialEffectApplied(bool specialEffectApplied);
-
 
 	void inflictDamage(int dmg);
   
@@ -113,9 +109,4 @@ class Critter : public GameObject, public ISubject {
     /** @brief Indicates which animation in a sprite sheet
      */
     int animation_index;
-
-	/**
-	  * @brief
-	  */
-	bool specialEffectApplied;
 };
