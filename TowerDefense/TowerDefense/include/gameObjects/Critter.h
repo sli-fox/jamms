@@ -71,6 +71,7 @@ class Critter : public GameObject, public ISubject {
 
     CritterType type;
     int id;
+    int max_health;
 
     /** @brief Pure virtualized initialization function for Critter.
     *   @return Void.

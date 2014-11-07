@@ -7,6 +7,7 @@
 
 WhiteCat::WhiteCat(int id, Waypoint* starting_waypoint) {
   this->id = id;
+  max_health = 15;
   this->current_waypoint = starting_waypoint;
   
   //Set starting position
@@ -29,7 +30,7 @@ void WhiteCat::initializeCritter(const std::vector<Animation>& animations) {
   this->isActive = false;
   this->hasSpawned = false;
   this->isAtEndTile = false;
-  this->hit_points = 9;
+  this->hit_points = this->max_health;
   this->steal_points = 4;
   this->player_reward = 5;
   this->type = Critter::CritterType::WHITE_CAT;
