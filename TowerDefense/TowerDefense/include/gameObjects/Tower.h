@@ -9,9 +9,13 @@ class Tower: public GameObject, public IObserver {
     Tower();
 	~Tower() { std::cout << red << _name << " has been deleted." << white << std::endl; };
 	virtual void upgradeTower() = 0;
-	bool canAttack(Critter* crit);
+	bool canAttack(Critter* critter);
+	bool canApplySpecialAfterEffects(Critter* critter);
 	void attack();
 	void update();
+	sf::Vector2f findCollisionPath(Critter* critter);
+	void rotateTowardsTarget();
+	float angle(float x, float y);
 
     enum TowerType { ShihTzu, Dalmatian, Bulldog };
 	enum UpgradeLevel { Upgrade0, Upgrade1, Upgrade2 };
@@ -19,7 +23,6 @@ class Tower: public GameObject, public IObserver {
 	enum RateOfFire { Slow = 1, Normal, Fast };
 	enum SpecialEffect { None, Slowing, Burning, Freezing };
 	
-
 	//ACCESSORS
     int getID() const;
 	std::string getName() const;
@@ -30,7 +33,7 @@ class Tower: public GameObject, public IObserver {
 	sf::CircleShape getRangeShape() const;
 	Tower::RateOfFire getRateOfFire() const;
 	bool getIsFiring() const;
-	Tower::SpecialEffect getSpecialEffet() const;
+	Tower::SpecialEffect getSpecialEffect() const;
 	int getBuyCost() const;
 	int getSellCost() const;
 	int getUpgradeCost() const;
@@ -45,7 +48,7 @@ class Tower: public GameObject, public IObserver {
 	void setRangeShape(Tower::Range range);
 	void setRateOfFire(Tower::RateOfFire _rate_of_fire);
 	void setIsFiring(bool b);
-	void setSpecialEffet(Tower::SpecialEffect _special_effect);
+	void setSpecialEffect(Tower::SpecialEffect _special_effect);
 	void setBuyCost(int _buy_cost);
 	void setSellCost(int _sell_cost);
 	void setUpgradeCost(int _upgrade_cost);
@@ -53,7 +56,7 @@ class Tower: public GameObject, public IObserver {
 
 	std::string getTowerSpecs();
 	virtual bool circleToCircleIntersection(GameObject* game_object);
-
+	void applySpecialEffect(Critter* critter);
 
   protected:
     int _id;
@@ -73,5 +76,4 @@ class Tower: public GameObject, public IObserver {
   private:
 	  sf::Clock clock;
 	  sf::Time time;
-	
 };
