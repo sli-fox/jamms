@@ -194,7 +194,7 @@ void Tower::applySpecialEffect(Critter* critter) {
 	case SpecialEffect::Slowing:
 		cout << red << "Applying slowing" << endl;
 		cout << red << "Initial speed: " << critter->getSpeed() << endl;
-		critter->reduceSpeed(5.0f + 2.5f * this->getUpgradeLevel());
+		critter->reduceSpeed(5.0f);
 		cout << red << "Final speed: " << critter->getSpeed() << endl;
 		break;
 	
