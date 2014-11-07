@@ -30,7 +30,7 @@ void BlackCat::initializeCritter(const std::vector<Animation>& animations) {
   this->isAtEndTile = false;
   this->hit_points = 18;
   this->steal_points = 10;
-  this->player_reward = 12;
+  this->player_reward = 6;
   this->type = Critter::CritterType::BLACK_CAT;
   this->specialEffectApplied = false;
   this->speed = 15.0f;

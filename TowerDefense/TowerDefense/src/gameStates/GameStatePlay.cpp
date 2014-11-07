@@ -1,7 +1,5 @@
 #include <gameStates/GameStatePlay.h>
 
-
-
 /**  The constructor sets the view to the size of the window
   *  and centers the view on the center of the window.
   */
@@ -91,9 +89,10 @@ void GameStatePlay::draw(const float delta_time) {
     if(tower_manager.getTower(tileX, tileY) != nullptr) {
 	  this->game->game_window.draw(tower_manager.getTower(tileX,tileY)->getRangeShape());
 	  towerSpecs.setString(tower_manager.getTower(tileX, tileY)->getTowerSpecs());
+	  //upgradeTowerSpecs.setString(tower_manager.getTower(tileX, tileY)->getUpgradeTowerSpecs());
 	  this->game->game_window.draw(towerSpecs);
+	  //this->game->game_window.draw(upgradeTowerSpecs);
     }
-
 }
 
 void GameStatePlay::update(const float delta_time) {
@@ -103,7 +102,7 @@ void GameStatePlay::update(const float delta_time) {
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
   moveActivatedCritters(delta_time);
 
-  waveSpecs.setString("CURRENT WAVE: \nNumber of cats: " + std::to_string(current_wave->getContainerOfCritters().size()) + "\n"
+  waveSpecs.setString("CURRENT WAVE: \nNumber of cats left: " + std::to_string(current_wave->getContainerOfCritters().size()) + "\n"
 	  + current_wave->findCritter(0)->getCritterSpecs());
   if(current_wave->next_wave != nullptr){
   nextWaveSpecs.setString("NEXT WAVE (" + std::to_string(current_wave->getId()+1) + "/" + std::to_string(wave_levels.size()) + "):\n"
@@ -169,7 +168,7 @@ void GameStatePlay::handleInput() {
 				while(critters[i]->isActive && tower->canAttack(critters[i])) {
 
 					tower->attack();
-					
+
 					if(!critters[i]->getSpecialEffectApplied()) {
 						tower->applySpecialEffect(critters[i]);
 						critters[i]->setSpecialEffectApplied(true);
@@ -177,8 +176,8 @@ void GameStatePlay::handleInput() {
 					if(critters[i]->getHitPoints() <= 0) {
 						critters[i]->isActive = false;
 						std::cout << red << "Cat " << critters[i]->getId() << " fled away!" << std::endl;
-						Game::player.earnCash(critters[i]->getPlayerReward() * 5);
-						Game::player.gainPoints(critters[i]->getPlayerReward() * 2);
+						Game::player.earnCash(critters[i]->getPlayerReward() * 2);
+						Game::player.gainPoints(critters[i]->getPlayerReward() * 3);
 					}
 				}
 			}
@@ -213,8 +212,10 @@ void GameStatePlay::handleInput() {
 			break;
 		}
 		case sf::Event::MouseMoved: {
-			if(tower_manager.getTower(tileX, tileY) != NULL && tower_manager.getTower(tileX, tileY)->spriteContains(localPosition))
+			if(tower_manager.getTower(tileX, tileY) != NULL && tower_manager.getTower(tileX, tileY)->spriteContains(localPosition)) {
 				towerSpecs.setString(tower_manager.getTower(tileX, tileY)->getTowerSpecs());
+				//upgradeTowerSpecs.setString(tower_manager.getTower(tileX, tileY)->getUpgradeTowerSpecs());
+			}
       break;
     }
 		case sf::Event::KeyPressed: {
@@ -511,6 +512,17 @@ void GameStatePlay::initializeButtonMap(){
 	towerSpecs.setColor(sf::Color::Black);
 	towerSpecs.setCharacterSize(13);
 
+	/*
+	GameObject upgradeTowerDisplayBox;
+	upgradeTowerDisplayBox.load(imagePath + "DisplayBox.png");
+	upgradeTowerDisplayBox.setPosition(24*32,19*32);
+	buttonMap.emplace("upgradeTowerDisplayBox", upgradeTowerDisplayBox);
+	upgradeTowerSpecs.setFont(font);
+	upgradeTowerSpecs.setPosition(24*32+8,19*32);
+	upgradeTowerSpecs.setColor(sf::Color::Black);
+	upgradeTowerSpecs.setCharacterSize(13);
+	*/
+	
 	GameObject playerDisplayBox;
 	playerDisplayBox.load(imagePath + "DisplayBox.png");
 	playerDisplayBox.setPosition(9*32,12*32);
@@ -523,7 +535,6 @@ void GameStatePlay::initializeButtonMap(){
 	GameObject pauseBtn;
 	pauseBtn.load(imagePath + "PauseBtn.png");
 	pauseBtn.setPosition(0*32,22*32);
-
 	buttonMap.emplace("pauseBtn", pauseBtn);
 
 	GameObject unpauseBtn;

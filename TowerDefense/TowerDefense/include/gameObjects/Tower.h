@@ -48,7 +48,7 @@ class Tower: public GameObject, public IObserver {
 	void setRangeShape(Tower::Range range);
 	void setRateOfFire(Tower::RateOfFire _rate_of_fire);
 	void setIsFiring(bool b);
-	void setSpecialEffet(Tower::SpecialEffect _special_effect);
+	void setSpecialEffect(Tower::SpecialEffect _special_effect);
 	void setBuyCost(int _buy_cost);
 	void setSellCost(int _sell_cost);
 	void setUpgradeCost(int _upgrade_cost);

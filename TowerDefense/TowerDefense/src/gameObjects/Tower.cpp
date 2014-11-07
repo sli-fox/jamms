@@ -66,7 +66,7 @@ void Tower::setRange(Tower::Range _range) {
 void Tower::setRateOfFire(Tower::RateOfFire _rate_of_fire) {
 	this->_rate_of_fire = _rate_of_fire;
 }
-void Tower::setSpecialEffet(Tower::SpecialEffect _special_effect) {
+void Tower::setSpecialEffect(Tower::SpecialEffect _special_effect) {
 	this->_special_effect = _special_effect;
 }
 void Tower::setSellCost(int _sell_cost) {
@@ -144,6 +144,7 @@ void Tower::rotateTowardsTarget() {
 	
 	cout << "CollisionPath ("<< collisionPath.x << ", " << collisionPath.y << ")";
 	this->setRotation(facingCritterAngle);
+	//this->move(this->getPosition().x + this->getSpriteSize().x/2, this->getPosition().y + this->getSpriteSize().y/2); 
 }
 
 /**
@@ -186,6 +187,8 @@ void Tower::applySpecialEffect(Critter* critter) {
 		//}
 		//cout << red << "Unfreezing freezing" << endl;
 		//	if freeze then slow speed of critter temporarily
+
+
 		break;
 	
 	case SpecialEffect::Slowing:
@@ -213,14 +216,15 @@ std::string Tower::getTowerSpecs() {
 	char *RateOfFireA[] = { "Slow", "Normal", "Fast" };
 	char *SpecialEffectA[] = { "None", "Slowing", "Burning", "Freezing" };
 	std::stringstream output;
-	output << "TOWER SPECIFICATIONS:" << std::endl;
+	output << "CURRENT TOWER SPECIFICATIONS:" << std::endl;
 	output << "Name: " << this->_name << std::endl;
 	output << "Type: " << TowerTypeA[this->_type] << std::endl;
 	output << "Upgrade: " << UpgradeLevelA[this->_upgrade_level] << std::endl;
 	output << "Power: " << this->_power << std::endl;
 	output << "Range:  " << RangeA[this->_range-1] << std::endl;
 	output << "Fire Rate: " << RateOfFireA[this->_rate_of_fire-1] << std::endl;
-	output << "Special Effect: " << SpecialEffectA[this->_special_effect] << std::endl;
+	if(this->_special_effect != SpecialEffect::None)
+		output << "Special Effect: " << SpecialEffectA[this->_special_effect] << std::endl;
 	output << "Upgrade Cost: " << this->_upgrade_cost << " coins" << std::endl;
 	output << "Sell Cost: " << this->_sell_cost << " coins" << std::endl;
 
