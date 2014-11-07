@@ -31,6 +31,9 @@ GameStatePlay::GameStatePlay(Game* game) {
 
   
   sf::Vector2f position = sf::Vector2f(this->game->game_window.getSize());
+  //JEREMY LOOK HERE FOR VIEWS
+  // Link to more info: http://sfml-dev.org/tutorials/2.0/graphics-view.php
+  // You can do split screen and just keep the view camera unmoving
   this->_gameView.setSize(position);
   this->_guiView.setSize(position);
 
@@ -404,15 +407,19 @@ void GameStatePlay::handleGameOver() {
   std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
   if (current_wave == wave_levels[wave_levels.size() - 1]) {
     for (int i = 0; i < critters.size(); ++i) {
-      if (critters[i]->isActive)
-        return;
-      else
-        endOfWaves = true;
+      if (critters[i]->hasSpawned) {
+        if (critters[i]->isActive)
+          return;
+        else
+          endOfWaves = true;
+      }
     }
   }
 
-  if (this->game->player.getLives() <= 0 || endOfWaves)
+  if (this->game->player.getLives() <= 0)
     this->game->pushState(new GameStateGameOver(this->game));
+  if (endOfWaves)
+    this->game->pushState(new GameStateWin(this->game));
 }
 
 void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
