@@ -122,15 +122,9 @@ void GameStatePlay::update(const float delta_time) {
   }
 
   //Activate Critters within a wave based on number of update cycles
-
-  /* Bug: If we kill the last_activated_critter BEFORE the next one gets activated,
-  then the if(last_activated_critter->isActive) is ALWAYS false,
-  thus next critters never get activated.
-  Solution: We should only activate critters based on the delay_count,
-  or on another boolean, e.g. hasSpawned */
-
-  if (last_activated_critter->isActive) {
+  if (last_activated_critter->hasSpawned) {
     if (delay_count >= 175 && last_activated_critter->next_critter) {
+      last_activated_critter->next_critter->hasSpawned = true;
       last_activated_critter->next_critter->isActive = true;
       std::cout << green << "ACTIVATE critter with id " << last_activated_critter->next_critter->getId() << std::endl;
       last_activated_critter = last_activated_critter->next_critter;
@@ -457,6 +451,7 @@ void GameStatePlay::buttonCommandLibrary(){
 		}
 		else if(buttonMap["startWaveBtn"].spriteContains(localPosition)){
       if (firstStart) {
+        last_activated_critter->hasSpawned = true;
         last_activated_critter->isActive = true;
         firstStart = false;
       }

@@ -28,6 +28,7 @@ class Critter : public GameObject, public ISubject {
     AnimationHandler animation_handler;
 
     bool isActive;
+    bool hasSpawned;
     bool isAtEndTile;
     Critter* next_critter;
     

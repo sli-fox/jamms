@@ -27,6 +27,7 @@ WhiteCat::WhiteCat(int id, Waypoint* starting_waypoint) {
 void WhiteCat::initializeCritter(const std::vector<Animation>& animations) {
   // Attributes for a white cat
   this->isActive = false;
+  this->hasSpawned = false;
   this->isAtEndTile = false;
   this->hit_points = 9;
   this->steal_points = 4;

@@ -27,6 +27,7 @@ BlackCat::BlackCat(int id, Waypoint* starting_waypoint) {
 void BlackCat::initializeCritter(const std::vector<Animation>& animations) {
   // Attributes for a black cat
   this->isActive = false;
+  this->hasSpawned = false;
   this->isAtEndTile = false;
   this->hit_points = 18;
   this->steal_points = 10;
