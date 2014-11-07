@@ -29,6 +29,9 @@ GameStatePlay::GameStatePlay(Game* game) {
 
   
   sf::Vector2f position = sf::Vector2f(this->game->game_window.getSize());
+  //JEREMY LOOK HERE FOR VIEWS
+  // Link to more info: http://sfml-dev.org/tutorials/2.0/graphics-view.php
+  // You can do split screen and just keep the view camera unmoving
   this->_gameView.setSize(position);
   this->_guiView.setSize(position);
 
@@ -85,6 +88,7 @@ void GameStatePlay::draw(const float delta_time) {
 	this->game->game_window.draw(nextWaveSpecs);
 	playerSpecs.setString(Game::player.getPlayerSpecs());
 	this->game->game_window.draw(playerSpecs);
+	this->game->game_window.draw(towerSpecs);
 	//Draw Towers and their Specs
     if(tower_manager.getTower(tileX, tileY) != nullptr) {
 	  this->game->game_window.draw(tower_manager.getTower(tileX,tileY)->getRangeShape());
@@ -101,22 +105,34 @@ void GameStatePlay::update(const float delta_time) {
   //Draw  & move activated Critters within a wave
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
   moveActivatedCritters(delta_time);
+  
+  waveSpecs.setString("CURRENT WAVE (" 
+	  + std::to_string(current_wave->getId()+1) + "/"
+	  + std::to_string(wave_levels.size()) + "):\n"
+	  + "Number of cats left: " 
+	  + std::to_string(current_wave->getCrittersRemaining()) + "/"
+	  + std::to_string(current_wave->getContainerOfCritters().size()) + "\n"
+	  + current_wave->findCritter(current_wave->getContainerOfCritters().size()-1)->getCritterSpecs());
 
-  waveSpecs.setString("CURRENT WAVE: \nNumber of cats left: " + std::to_string(current_wave->getContainerOfCritters().size()) + "\n"
-	  + current_wave->findCritter(0)->getCritterSpecs());
-  if(current_wave->next_wave != nullptr){
-  nextWaveSpecs.setString("NEXT WAVE (" + std::to_string(current_wave->getId()+1) + "/" + std::to_string(wave_levels.size()) + "):\n"
-	  + current_wave->next_wave->findCritter(0)->getCritterSpecs());
+  if(current_wave->next_wave != nullptr) {
+	  nextWaveSpecs.setString("NEXT WAVE ("
+		  + std::to_string(current_wave->getId()+2) + "/"
+		  + std::to_string(wave_levels.size()) + "):\n"+ "Number of cats: "
+		  + std::to_string(current_wave->next_wave->getContainerOfCritters().size()) + "\n"
+		  + current_wave->next_wave->findCritter(0)->getCritterSpecs());
+  } else {
+	  nextWaveSpecs.setString("No more waves!");
   }
 
   //Activate Critters within a wave based on number of update cycles
-  if (last_activated_critter->isActive) {
+  if (last_activated_critter->hasSpawned) {
     if (delay_count >= 175 && last_activated_critter->next_critter) {
+      last_activated_critter->next_critter->hasSpawned = true;
       last_activated_critter->next_critter->isActive = true;
       std::cout << green << "ACTIVATE critter with id " << last_activated_critter->next_critter->getId() << std::endl;
       last_activated_critter = last_activated_critter->next_critter;
       delay_count = 0;
-    } 
+    }
     delay_count += 1;
   }
 
@@ -175,6 +191,7 @@ void GameStatePlay::handleInput() {
 					}
 					if(critters[i]->getHitPoints() <= 0) {
 						critters[i]->isActive = false;
+						current_wave->decrementCrittersRemaining();
 						std::cout << red << "Cat " << critters[i]->getId() << " fled away!" << std::endl;
 						Game::player.earnCash(critters[i]->getPlayerReward() * 2);
 						Game::player.gainPoints(critters[i]->getPlayerReward() * 3);
@@ -201,7 +218,7 @@ void GameStatePlay::handleInput() {
       break;
     }
     case sf::Event::GainedFocus: {
-      std::cout << "test" << std::endl; //WHAT IS THIS I DONT EVEN
+      std::cout << "Game Gained Focus" << std::endl;
 			if (this->game->isGamePaused)
         this->game->isGamePaused = false;
       break;
@@ -387,6 +404,7 @@ void GameStatePlay::handleCritterWaveLevelSwitching() {
     this->delay_count = 0;
     this->last_activated_critter = current_wave->findCritter(0);
     last_activated_critter->isActive = true;
+    last_activated_critter->hasSpawned = true;
   }
 }
 
@@ -402,15 +420,19 @@ void GameStatePlay::handleGameOver() {
   std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
   if (current_wave == wave_levels[wave_levels.size() - 1]) {
     for (int i = 0; i < critters.size(); ++i) {
-      if (critters[i]->isActive)
-        return;
-      else
-        endOfWaves = true;
+      if (critters[i]->hasSpawned) {
+        if (critters[i]->isActive)
+          return;
+        else
+          endOfWaves = true;
+      }
     }
   }
 
-  if (this->game->player.getLives() <= 0 || endOfWaves)
+  if (this->game->player.getLives() <= 0)
     this->game->pushState(new GameStateGameOver(this->game));
+  if (endOfWaves)
+    this->game->pushState(new GameStateWin(this->game));
 }
 
 void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
@@ -450,6 +472,7 @@ void GameStatePlay::buttonCommandLibrary(){
 		}
 		else if(buttonMap["startWaveBtn"].spriteContains(localPosition)){
       if (firstStart) {
+        last_activated_critter->hasSpawned = true;
         last_activated_critter->isActive = true;
         firstStart = false;
       }

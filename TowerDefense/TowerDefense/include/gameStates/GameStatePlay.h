@@ -12,6 +12,7 @@
 #include <SFML/Graphics/Transformable.hpp>
 #include <gameStates/GameState.h>
 #include <gameStates/GameStateGameOver.h>
+#include <gameStates/GameStateWin.h>
 #include <managers/GameObjectManager.h>
 #include <gameObjects/WhiteCat.h>
 #include <gameObjects/BlackCat.h>

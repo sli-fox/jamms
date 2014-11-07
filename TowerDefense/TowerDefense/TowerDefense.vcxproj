@@ -96,6 +96,7 @@
     <ClInclude Include="include\gameObjects\WhiteCat.h" />
     <ClInclude Include="include\gameStates\GameState.h" />
     <ClInclude Include="include\gameStates\GameStateGameOver.h" />
+    <ClInclude Include="include\gameStates\GameStateWin.h" />
     <ClInclude Include="include\gameStates\GameStateMainMenu.h" />
     <ClInclude Include="include\gameStates\GameStateMapEditor.h" />
     <ClInclude Include="include\gameStates\GameStatePlay.h" />
@@ -129,6 +130,7 @@
     <ClCompile Include="src\gameObjects\ShihTzu.cpp" />
     <ClCompile Include="src\gameObjects\WhiteCat.cpp" />
     <ClCompile Include="src\gameStates\GameStateGameOver.cpp" />
+    <ClCompile Include="src\gameStates\GameStateGameWin.cpp" />
     <ClCompile Include="src\gameStates\GameStateMainMenu.cpp" />
     <ClCompile Include="src\gameStates\GameStateMapEditor.cpp" />
     <ClCompile Include="src\gameStates\GameStatePlay.cpp" />
