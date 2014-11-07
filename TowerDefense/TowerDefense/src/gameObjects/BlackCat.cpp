@@ -28,13 +28,13 @@ void BlackCat::initializeCritter(const std::vector<Animation>& animations) {
   // Attributes for a black cat
   this->isActive = false;
   this->isAtEndTile = false;
-  this->hit_points = 9;
-  this->steal_points = 4;
-  this->player_reward = 5;
+  this->hit_points = 18;
+  this->steal_points = 10;
+  this->player_reward = 12;
   this->type = Critter::CritterType::BLACK_CAT;
-  this->speed = 20.0f;
   this->specialEffectApplied = false;
-  this->level = 1;
+  this->speed = 15.0f;
+  this->level = 2;
   this->animation_index = this->getMovementDirection();   
 
   // Set BlackCat texture

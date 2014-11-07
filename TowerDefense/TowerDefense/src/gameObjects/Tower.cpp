@@ -83,7 +83,7 @@ void Tower::setRangeShape(Tower::Range range) {
 	_range_shape.setRadius(float((range+1) * 32));
 	_range_shape.setFillColor(sf::Color::Transparent);
 	_range_shape.setOutlineThickness(2);
-	_range_shape.setOutlineColor(sf::Color(100, 100, 100));
+	_range_shape.setOutlineColor(sf::Color::Red);
 	_range_shape.setOrigin(float(this->getRange()*32), float(this->getRange()*32));
 }
 

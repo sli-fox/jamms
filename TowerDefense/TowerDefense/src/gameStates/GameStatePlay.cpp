@@ -102,11 +102,13 @@ void GameStatePlay::update(const float delta_time) {
   //Draw  & move activated Critters within a wave
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
   moveActivatedCritters(delta_time);
-  
+
   waveSpecs.setString("CURRENT WAVE: \nNumber of cats: " + std::to_string(current_wave->getContainerOfCritters().size()) + "\n"
 	  + current_wave->findCritter(0)->getCritterSpecs());
+  if(current_wave->next_wave != nullptr){
   nextWaveSpecs.setString("NEXT WAVE (" + std::to_string(current_wave->getId()+1) + "/" + std::to_string(wave_levels.size()) + "):\n"
 	  + current_wave->next_wave->findCritter(0)->getCritterSpecs());
+  }
 
   //Activate Critters within a wave based on number of update cycles
   if (last_activated_critter->isActive) {
