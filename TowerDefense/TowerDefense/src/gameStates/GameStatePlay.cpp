@@ -388,6 +388,7 @@ void GameStatePlay::handleCritterWaveLevelSwitching() {
     this->delay_count = 0;
     this->last_activated_critter = current_wave->findCritter(0);
     last_activated_critter->isActive = true;
+    last_activated_critter->hasSpawned = true;
   }
 }
 
