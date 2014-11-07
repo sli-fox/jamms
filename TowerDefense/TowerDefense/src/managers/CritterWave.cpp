@@ -6,6 +6,8 @@
 CritterWave::CritterWave(int numOfCritters, Critter::CritterType type, Waypoint* starting_waypoint) 
   : numOfCritters(numOfCritters), type(type) {
 
+  critters_remaining = numOfCritters;
+
   for (int i = 0; i < this->numOfCritters; ++i) {
     this->addCritter(i, CritterFactory::createCritter(i, type, starting_waypoint));
   }
@@ -57,10 +59,17 @@ int CritterWave::getId() const {
 	return this->id;
 }
 
+int CritterWave::getCrittersRemaining() const {
+	return critters_remaining;	
+}
+
 void CritterWave::setId(int id) {
 	this->id = id;
 }
 
+void CritterWave::decrementCrittersRemaining() {
+	--critters_remaining;
+}
 
 std::map<int, Critter*> CritterWave::getContainerOfCritters() {
   return this->_m_critter_wave;
