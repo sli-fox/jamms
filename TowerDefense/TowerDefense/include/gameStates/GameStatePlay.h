@@ -91,6 +91,7 @@ class GameStatePlay : public GameState {
 	  Tower::TowerType towerSelector;
 	  sf::Font font;
 	  sf::Text towerSpecs;
+	  //sf::Text upgradeTowerSpecs;
 	  sf::Text waveSpecs;
 	  sf::Text nextWaveSpecs;
 	  sf::Text playerSpecs;
