@@ -7,6 +7,7 @@
 
 BlackCat::BlackCat(int id, Waypoint* starting_waypoint) {
   this->id = id;
+  this->max_health = 25;
   this->current_waypoint = starting_waypoint;
   
   //Set starting position
@@ -29,7 +30,7 @@ void BlackCat::initializeCritter(const std::vector<Animation>& animations) {
   this->isActive = false;
   this->hasSpawned = false;
   this->isAtEndTile = false;
-  this->hit_points = 18;
+  this->hit_points = this->max_health;
   this->steal_points = 10;
   this->player_reward = 12;
   this->type = Critter::CritterType::BLACK_CAT;
