@@ -251,6 +251,7 @@ void GameStatePlay::handleInput() {
 				(!blacky->isActive) ? blacky->isActive = true : blacky->isActive = false;
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 				(!show_waypoints) ? show_waypoints = true : show_waypoints = false;
+				//show_waypoints = !show_waypoints;
 			break;
 		}
 		default: break;
