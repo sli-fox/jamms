@@ -4,7 +4,6 @@
 *  and centers the view on the center of the window.
 */
 GameStateMapEditor::GameStateMapEditor(Game* game) {
-
   this->game = game;
 
 	sf::Vector2f position = sf::Vector2f(this->game->game_window.getSize());
@@ -201,8 +200,12 @@ void GameStateMapEditor::buttonCommandLibrary(){
 			returnToMenu = true;
 			this->game->popState();
 		}
-		else if(buttonMap["validateMapBtn"].spriteContains(localPosition))
-			cout << this->game->map.isMapValid() << endl;
+		else if(buttonMap["validateMapBtn"].spriteContains(localPosition)){
+			if(this->game->map.isMapValid())
+				cout << "map is valid" << endl;
+			else
+				cout << "map not valid" << endl;
+		}
 		else if(buttonMap["setMapSizeBtn"].spriteContains(localPosition)){
 			this->game->map.resetMap();
 			this->game->map.setMapSize(mapX, mapY);
