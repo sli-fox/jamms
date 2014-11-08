@@ -81,6 +81,18 @@ void GameStateMapEditor::handleInput() {
 				pauseLoad = false;
 				systemOutput.setString("");
 			}
+			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Return)) {
+				if(pauseLoad){
+					this->game->map.load(userInput);
+					systemOutput.setString("");
+					pauseLoad = false;
+				}
+				else if(pauseSave){
+					this->game->map.save(userInput);
+					systemOutput.setString("");
+					pauseSave = false;
+				}
+			}
 			break;
 									}
 		case sf::Event::TextEntered:{
@@ -89,7 +101,7 @@ void GameStateMapEditor::handleInput() {
 					userInput.pop_back();
 				userInputDisplay.setString(userInput);
 			}
-			else if (event.text.unicode < 128) {
+			else if (event.text.unicode < 128 && !sf::Keyboard::isKeyPressed(sf::Keyboard::Return) ) {
 				userInput.push_back((char)event.text.unicode);
 				userInputDisplay.setString(userInput);
 			}
