@@ -18,8 +18,8 @@ int main(int argc, char** argv[]) {
 	"    (il),-''  (li),'  ((!.-'\n\n\n";
 
 	std::cout	<< "Game Controls:\n"
-				<< "Arrow Keys - Move cat\n"
-				<< "U - Upgrade\n"
+				<< "W - Show/Hide Path Waypoints\n"
+				<< "U - Upgrade Tower\n"
 				<< "Right Click - Sell tower\n\n";
 
 
