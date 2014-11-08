@@ -105,8 +105,7 @@ void GameStatePlay::update(const float delta_time) {
   //Draw  & move activated Critters within a wave
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
   moveActivatedCritters(delta_time);
-  
-  waveSpecs.setString("CURRENT WAVE (" 
+  waveSpecs.setString("CURRENT WAVE ("
 	  + std::to_string(current_wave->getId()+1) + "/"
 	  + std::to_string(wave_levels.size()) + "):\n"
 	  + "Number of cats left: " 
@@ -163,8 +162,9 @@ void GameStatePlay::setCritterWaveLevels(Waypoint* starting_waypoint) {
   this->wave_levels.push_back(wave3);  
   this->wave_levels.push_back(wave4);
 
-  for (int i = 0; i < wave_levels.size() - 1; ++i) {
+  for (int i = 0; i < wave_levels.size(); ++i) {
 	wave_levels[i]->setId(i);
+  if (wave_levels[i]->next_wave)
     wave_levels[i]->next_wave = wave_levels[i+1];
   }
 }
@@ -419,16 +419,9 @@ CritterWave* GameStatePlay::getCurrentCritterWave(){
 void GameStatePlay::handleGameOver() {
   std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
   if (current_wave == wave_levels[wave_levels.size() - 1]) {
-    for (int i = 0; i < critters.size(); ++i) {
-      if (critters[i]->hasSpawned) {
-        if (critters[i]->isActive)
-          return;
-        else
-          endOfWaves = true;
-      }
-    }
+    if (critters[critters.size() - 1]->hasSpawned && !critters[critters.size() - 1]->isActive)
+      endOfWaves = true;
   }
-
   if (this->game->player.getLives() <= 0)
     this->game->pushState(new GameStateGameOver(this->game));
   if (endOfWaves)

@@ -34,7 +34,7 @@ void WhiteCat::initializeCritter(const std::vector<Animation>& animations) {
   this->steal_points = 4;
   this->player_reward = 5;
   this->type = Critter::CritterType::WHITE_CAT;
-  this->speed = 25.0f;
+  this->speed = 20.0f;
   this->specialEffectApplied = false;
   this->level = 1;
   this->animation_index = this->getMovementDirection();   
