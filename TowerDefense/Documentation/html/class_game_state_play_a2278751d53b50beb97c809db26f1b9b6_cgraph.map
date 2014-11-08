@@ -1,0 +1,8 @@
+<map id="GameStatePlay::handleCritterRemovalFromWave" name="GameStatePlay::handleCritterRemovalFromWave">
+<area shape="rect" id="node2" href="$class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="251,5,421,47"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#ac82134049ed6dd0aaa929e200f7185d5" title="GameStatePlay::checkIfAt\lEndTile" alt="" coords="248,71,424,112"/>
+<area shape="rect" id="node5" href="$class_player.html#a5bb1f83134c899add66053bb08786fb0" title="Player::loseLives" alt="" coords="276,137,396,163"/>
+<area shape="rect" id="node6" href="$class_player.html#a861005738bf21093c79383a3494f2ca8" title="Maintains non&#45;negative points value. " alt="" coords="272,187,400,214"/>
+<area shape="rect" id="node7" href="$class_critter_wave.html#a1244e59ebd702edd2530e6256779ace0" title="Returns a reference to a Critter in the map. " alt="" coords="260,238,412,265"/>
+<area shape="rect" id="node4" href="$class_critter.html#a8fdba06ecb582e8b542e2e73a76f455d" title="Critter::getPosition" alt="" coords="472,78,603,105"/>
+</map>

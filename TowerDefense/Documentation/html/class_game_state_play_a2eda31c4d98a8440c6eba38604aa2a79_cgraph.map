@@ -1,0 +1,4 @@
+<map id="GameStatePlay::handleCritterWaveLevelSwitching" name="GameStatePlay::handleCritterWaveLevelSwitching">
+<area shape="rect" id="node2" href="$class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="248,5,419,47"/>
+<area shape="rect" id="node3" href="$class_critter_wave.html#a1244e59ebd702edd2530e6256779ace0" title="Returns a reference to a Critter in the map. " alt="" coords="257,71,409,98"/>
+</map>

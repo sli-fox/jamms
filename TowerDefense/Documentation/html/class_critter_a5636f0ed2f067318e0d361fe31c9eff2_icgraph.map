@@ -1,0 +1,6 @@
+<map id="Critter::getId" name="Critter::getId">
+<area shape="rect" id="node2" href="$class_tower.html#a3bc66411a614f108ceaefd255bdb4179" title="Determines whether tower can attack a critter based on whether the critter falls within its range whi..." alt="" coords="166,5,289,32"/>
+<area shape="rect" id="node4" href="$class_tower.html#a9f067c2b9e5e6987f341704b8b098606" title="Tower::attack" alt="" coords="177,56,277,83"/>
+<area shape="rect" id="node5" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="147,107,308,133"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="356,31,544,57"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="rapidxml::xml_document::parse" name="rapidxml::xml_document::parse">
+<area shape="rect" id="node2" href="$singletonrapidxml_1_1xml__node.html#a95735358b079ae0adcfbbac69aa1fbc3" title="Removes all child nodes (but not attributes). " alt="" coords="226,71,361,112"/>
+<area shape="rect" id="node7" href="$singletonrapidxml_1_1xml__node.html#aa8d5d9484aa1eb5ff1841a073c84c1aa" title="Removes all attributes of node. " alt="" coords="217,5,369,47"/>
+<area shape="rect" id="node9" href="$singletonrapidxml_1_1xml__node.html#a8696d098ecc9c4d2a646b43e91d58e31" title="rapidxml::xml_node\l::append_node" alt="" coords="226,136,361,177"/>
+<area shape="rect" id="node3" href="$singletonrapidxml_1_1xml__node.html#a2dedeb4e04bb35e06a9a7bddf6ba652d" title="rapidxml::xml_node\l::first_node" alt="" coords="417,71,552,112"/>
+<area shape="rect" id="node4" href="$classrapidxml_1_1xml__base.html#a9a09739310469995db078ebd0da3ed45" title="rapidxml::xml_base\l::name" alt="" coords="600,5,735,47"/>
+<area shape="rect" id="node6" href="$classrapidxml_1_1xml__base.html#a7e7f98b3d01e1eab8dc1ca69aad9af84" title="rapidxml::xml_base\l::name_size" alt="" coords="600,71,735,112"/>
+<area shape="rect" id="node5" href="$classrapidxml_1_1xml__base.html#ad96ff6b1e41dab3ff60b9bc4df769a75" title="rapidxml::xml_base\l::nullstr" alt="" coords="783,5,917,47"/>
+<area shape="rect" id="node8" href="$singletonrapidxml_1_1xml__node.html#ae426802be58114ffc41bf30ac6b8c37d" title="rapidxml::xml_node\l::first_attribute" alt="" coords="417,5,552,47"/>
+<area shape="rect" id="node10" href="$classrapidxml_1_1xml__base.html#a7f31ae930f93852830234db1ae59c4c4" title="rapidxml::xml_base\l::parent" alt="" coords="417,136,552,177"/>
+<area shape="rect" id="node11" href="$singletonrapidxml_1_1xml__node.html#a2c6a4315b98bcfa2e04fed3fa1b22c36" title="rapidxml::xml_node\l::type" alt="" coords="417,201,552,243"/>
+</map>

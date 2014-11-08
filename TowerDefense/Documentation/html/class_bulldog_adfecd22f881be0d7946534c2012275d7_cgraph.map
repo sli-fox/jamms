@@ -1,0 +1,18 @@
+<map id="Bulldog::upgradeTower" name="Bulldog::upgradeTower">
+<area shape="rect" id="node2" href="$class_tower.html#ae8236cf1fac3f2fd791312e3dc59d904" title="Tower::getUpgradeLevel" alt="" coords="207,5,365,32"/>
+<area shape="rect" id="node3" href="$class_tower.html#a1770164e2620e27413a05cf6adad1287" title="Tower::setRangeShape" alt="" coords="208,56,364,83"/>
+<area shape="rect" id="node5" href="$class_tower.html#ac31643b1a10e1821d90583dc9ff03943" title="Tower::setUpgradeLevel" alt="" coords="207,107,365,133"/>
+<area shape="rect" id="node6" href="$class_game_object.html#acc593e5b75a58c4a59ad59da654ce807" title="Loads a texture using the TextureManager class and creates a sprite. " alt="" coords="223,157,349,184"/>
+<area shape="rect" id="node9" href="$class_tower.html#a89f3c815849be59057c2bcdeb1bb097f" title="Tower::setPower" alt="" coords="227,208,345,235"/>
+<area shape="rect" id="node10" href="$class_tower.html#a3490999581d98e1e99e4cfaf328e1155" title="Tower::setRange" alt="" coords="227,259,345,285"/>
+<area shape="rect" id="node11" href="$class_tower.html#a954b831038f6fe86e40d0dcd398bd239" title="Tower::setRateOfFire" alt="" coords="214,309,358,336"/>
+<area shape="rect" id="node12" href="$class_tower.html#ac2b7becdd52924a8787cf7de2a62fff5" title="Tower::setSpecialEffect" alt="" coords="207,360,365,387"/>
+<area shape="rect" id="node13" href="$class_tower.html#af0366aa989249fc2d8254b967dd2f9aa" title="Tower::setUpgradeCost" alt="" coords="207,411,365,437"/>
+<area shape="rect" id="node14" href="$class_tower.html#ade5f41558a0240b5596a017a23334336" title="Tower::setSellCost" alt="" coords="221,461,351,488"/>
+<area shape="rect" id="node15" href="$_console_color_8h.html#abfbb0c9e0e5ee33dd1026c23381b78c5" title="red" alt="" coords="266,512,306,539"/>
+<area shape="rect" id="node16" href="$class_player.html#abb709d55c86f703fbd6cc5b90d31fc39" title="Maintains non&#45;negative cash value. " alt="" coords="220,563,352,589"/>
+<area shape="rect" id="node17" href="$_console_color_8h.html#a9a5da37d743c609ea42e11b710812de2" title="blue" alt="" coords="263,613,309,640"/>
+<area shape="rect" id="node4" href="$class_tower.html#ab33ee35d8f02b8961a8fb7697e5e9cea" title="Tower::getRange" alt="" coords="449,56,568,83"/>
+<area shape="rect" id="node7" href="$class_texture_manager.html#a0a6bc63e2f6fa7e1d0aee5b24cfa089a" title="Returns the only instance of a TextureManager object. " alt="" coords="413,132,604,159"/>
+<area shape="rect" id="node8" href="$class_texture_manager.html#aa631660b783d448a29b1096c64fe65e4" title="Returns the instance of a texture loaded by the file name. " alt="" coords="413,183,604,209"/>
+</map>

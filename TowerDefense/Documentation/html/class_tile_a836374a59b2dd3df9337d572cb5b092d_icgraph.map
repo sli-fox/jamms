@@ -1,0 +1,7 @@
+<map id="Tile::setType" name="Tile::setType">
+<area shape="rect" id="node2" href="$class_path_tile.html#aa420fa20285bfd87374b78952aa38769" title="PathTile::PathTile" alt="" coords="171,5,295,32"/>
+<area shape="rect" id="node3" href="$class_start_tile.html#ae74b32771490b76e5b679ec578eb73d7" title="StartTile::StartTile" alt="" coords="169,56,296,83"/>
+<area shape="rect" id="node4" href="$class_end_tile.html#a9818c2f740546dfe5abdefa9cc8b4a32" title="EndTile::EndTile" alt="" coords="175,107,291,133"/>
+<area shape="rect" id="node5" href="$class_scenery_tile.html#a2318697afef5adf9f2170d6da68f2806" title="SceneryTile::SceneryTile" alt="" coords="149,157,316,184"/>
+<area shape="rect" id="node6" href="$class_dead_tile.html#a02f167ebcda600d8a05ce2c643b30739" title="DeadTile::DeadTile" alt="" coords="167,208,298,235"/>
+</map>

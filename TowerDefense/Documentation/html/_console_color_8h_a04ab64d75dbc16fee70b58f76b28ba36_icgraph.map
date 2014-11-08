@@ -1,0 +1,6 @@
+<map id="green" name="green">
+<area shape="rect" id="node2" href="$class_bulldog.html#a21e6065a0e9cfa5aa862c8b7a5e1b88c" title="Bulldog::Bulldog" alt="" coords="131,5,247,32"/>
+<area shape="rect" id="node3" href="$class_dalmatian.html#ab4ce8123d58ef775d1bc80b72485a77d" title="Dalmatian::Dalmatian" alt="" coords="115,56,262,83"/>
+<area shape="rect" id="node4" href="$class_shih_tzu.html#a623911469b4f9763666f43b2df48d91a" title="ShihTzu::ShihTzu" alt="" coords="127,107,251,133"/>
+<area shape="rect" id="node5" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="108,157,269,184"/>
+</map>

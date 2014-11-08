@@ -1,0 +1,378 @@
+\hypertarget{class_critter_wave}{\section{Critter\+Wave Class Reference}
+\label{class_critter_wave}\index{Critter\+Wave@{Critter\+Wave}}
+}
+
+
+Represents a wave of Critters. Class that has holds Critters in a map data structure, which represents a wave of Critters.  
+
+
+
+
+{\ttfamily \#include $<$Critter\+Wave.\+h$>$}
+
+
+
+Collaboration diagram for Critter\+Wave\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{class_critter_wave__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_critter_wave_1_1_critter_wave_deallocator}{Critter\+Wave\+Deallocator}
+\begin{DoxyCompactList}\small\item\em Struct deallocating resources used in a \hyperlink{class_critter_wave}{Critter\+Wave} map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_critter_wave_a1364e3a7f9f4ab379847fe558b1fb233}{Critter\+Wave} (int \hyperlink{class_critter_wave_a6c8edb08492ed068c5e4c5323695c29d}{num\+Of\+Critters}, \hyperlink{class_critter_acda8a5c3234b66101e0546d75d6f90f1}{Critter\+::\+Critter\+Type} \hyperlink{class_critter_wave_aaf7c97d4f340ffa811ca452745ef6b24}{type}, \hyperlink{class_waypoint}{Waypoint} $\ast$starting\+\_\+waypoint)
+\begin{DoxyCompactList}\small\item\em This constructor sets the type and number of critters for the wave. \end{DoxyCompactList}\item 
+\hyperlink{class_critter_wave_a89e6acba97071ff44a9493315a8f073b}{$\sim$\+Critter\+Wave} ()
+\begin{DoxyCompactList}\small\item\em This destructor iterates through the map, calling a deallocator which deletes Critter$\ast$ references in a wave. \end{DoxyCompactList}\item 
+int \hyperlink{class_critter_wave_a127a4cc493bb6c6afcee3f394715b90d}{get\+Id} () const 
+\item 
+void \hyperlink{class_critter_wave_afcd7e16f4363b4be3be5649ef8325f55}{set\+Id} (int \hyperlink{class_critter_wave_aa476fc7af49dfb42fce07da5e726bbb2}{id})
+\item 
+\hyperlink{class_critter}{Critter} $\ast$ \hyperlink{class_critter_wave_a1244e59ebd702edd2530e6256779ace0}{find\+Critter} (int \hyperlink{class_critter_wave_aa476fc7af49dfb42fce07da5e726bbb2}{id}) const 
+\begin{DoxyCompactList}\small\item\em Returns a reference to a \hyperlink{class_critter}{Critter} in the map. \end{DoxyCompactList}\item 
+void \hyperlink{class_critter_wave_a3c6dcf79b57cb7e208471c5bc387f22d}{add\+Critter} (int \hyperlink{class_critter_wave_aa476fc7af49dfb42fce07da5e726bbb2}{id}, \hyperlink{class_critter}{Critter} $\ast$critter)
+\begin{DoxyCompactList}\small\item\em Adding a \hyperlink{class_critter}{Critter} to the wave. \end{DoxyCompactList}\item 
+void \hyperlink{class_critter_wave_aa7761b522b8774ef9b319861ae6ab844}{remove\+Critter} (int \hyperlink{class_critter_wave_aa476fc7af49dfb42fce07da5e726bbb2}{id})
+\begin{DoxyCompactList}\small\item\em Remove a critter from the \hyperlink{class_critter_wave}{Critter\+Wave} map. \end{DoxyCompactList}\item 
+int \hyperlink{class_critter_wave_a3c782475b9f1a73ddb658449592b8a33}{get\+Critter\+Count} () const 
+\begin{DoxyCompactList}\small\item\em Returns how many critters are in a \hyperlink{class_critter_wave}{Critter\+Wave} map. \end{DoxyCompactList}\item 
+int \hyperlink{class_critter_wave_af3879610de9f106cc80be0d7b4c1b1df}{get\+Critters\+Remaining} () const 
+\item 
+void \hyperlink{class_critter_wave_a14d2b9703371e82278c5fa3c4a2cbbd9}{decrement\+Critters\+Remaining} ()
+\item 
+std\+::map$<$ int, \hyperlink{class_critter}{Critter} $\ast$ $>$ \hyperlink{class_critter_wave_a00afecb75c04a7e0cd5073e20b11cce2}{get\+Container\+Of\+Critters} ()
+\item 
+void \hyperlink{class_critter_wave_a858c5934f74ac3148218e2f5a6a6e0b6}{draw\+Activated\+Critters\+In\+Wave} (sf\+::\+Render\+Window \&render\+\_\+window, float delta\+\_\+time)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{class_critter_wave_a6c8edb08492ed068c5e4c5323695c29d}{num\+Of\+Critters}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_map}{Map} representing a critter wave. \end{DoxyCompactList}\item 
+\hyperlink{class_critter_acda8a5c3234b66101e0546d75d6f90f1}{Critter\+::\+Critter\+Type} \hyperlink{class_critter_wave_aaf7c97d4f340ffa811ca452745ef6b24}{type}
+\begin{DoxyCompactList}\small\item\em Type of critter in a critter wave. \end{DoxyCompactList}\item 
+\hyperlink{class_critter_wave}{Critter\+Wave} $\ast$ \hyperlink{class_critter_wave_a86ca5704a4a52a135fda195097dc4dd9}{next\+\_\+wave}
+\begin{DoxyCompactList}\small\item\em Pointer to the next \hyperlink{class_critter_wave}{Critter\+Wave}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_critter_wave_aa476fc7af49dfb42fce07da5e726bbb2}{id}
+\item 
+int \hyperlink{class_critter_wave_a6fea77f30895b8ac455dd25a4287abd6}{critters\+\_\+remaining}
+\item 
+std\+::map$<$ int, \hyperlink{class_critter}{Critter} $\ast$ $>$ \hyperlink{class_critter_wave_a82475869f718062181e545afb8277217}{\+\_\+m\+\_\+critter\+\_\+wave}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_map}{Map} representing a critter wave. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{class_critter_wave_a06016c30b019307c3fd6e11c447ffbe0}{operator$<$$<$} (std\+::ostream \&output, const \hyperlink{class_critter_wave}{Critter\+Wave} \&critter\+\_\+wave)
+\begin{DoxyCompactList}\small\item\em Overloaded cout operator to print out Critter\+Waves. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a wave of Critters. Class that has holds Critters in a map data structure, which represents a wave of Critters. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_critter_wave_a1364e3a7f9f4ab379847fe558b1fb233}{\index{Critter\+Wave@{Critter\+Wave}!Critter\+Wave@{Critter\+Wave}}
+\index{Critter\+Wave@{Critter\+Wave}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{Critter\+Wave}]{\setlength{\rightskip}{0pt plus 5cm}Critter\+Wave\+::\+Critter\+Wave (
+\begin{DoxyParamCaption}
+\item[{int}]{num\+Of\+Critters, }
+\item[{{\bf Critter\+::\+Critter\+Type}}]{type, }
+\item[{{\bf Waypoint} $\ast$}]{starting\+\_\+waypoint}
+\end{DoxyParamCaption}
+)}}\label{class_critter_wave_a1364e3a7f9f4ab379847fe558b1fb233}
+
+
+This constructor sets the type and number of critters for the wave. 
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_wave_a1364e3a7f9f4ab379847fe558b1fb233_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_critter_wave_a89e6acba97071ff44a9493315a8f073b}{\index{Critter\+Wave@{Critter\+Wave}!````~Critter\+Wave@{$\sim$\+Critter\+Wave}}
+\index{````~Critter\+Wave@{$\sim$\+Critter\+Wave}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{$\sim$\+Critter\+Wave}]{\setlength{\rightskip}{0pt plus 5cm}Critter\+Wave\+::$\sim$\+Critter\+Wave (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_critter_wave_a89e6acba97071ff44a9493315a8f073b}
+
+
+This destructor iterates through the map, calling a deallocator which deletes Critter$\ast$ references in a wave. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_critter_wave_a3c6dcf79b57cb7e208471c5bc387f22d}{\index{Critter\+Wave@{Critter\+Wave}!add\+Critter@{add\+Critter}}
+\index{add\+Critter@{add\+Critter}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{add\+Critter}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+Wave\+::add\+Critter (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{{\bf Critter} $\ast$}]{critter}
+\end{DoxyParamCaption}
+)}}\label{class_critter_wave_a3c6dcf79b57cb7e208471c5bc387f22d}
+
+
+Adding a \hyperlink{class_critter}{Critter} to the wave. 
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_wave_a3c6dcf79b57cb7e208471c5bc387f22d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_critter_wave_a14d2b9703371e82278c5fa3c4a2cbbd9}{\index{Critter\+Wave@{Critter\+Wave}!decrement\+Critters\+Remaining@{decrement\+Critters\+Remaining}}
+\index{decrement\+Critters\+Remaining@{decrement\+Critters\+Remaining}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{decrement\+Critters\+Remaining}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+Wave\+::decrement\+Critters\+Remaining (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_critter_wave_a14d2b9703371e82278c5fa3c4a2cbbd9}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_wave_a14d2b9703371e82278c5fa3c4a2cbbd9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_critter_wave_a858c5934f74ac3148218e2f5a6a6e0b6}{\index{Critter\+Wave@{Critter\+Wave}!draw\+Activated\+Critters\+In\+Wave@{draw\+Activated\+Critters\+In\+Wave}}
+\index{draw\+Activated\+Critters\+In\+Wave@{draw\+Activated\+Critters\+In\+Wave}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{draw\+Activated\+Critters\+In\+Wave}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+Wave\+::draw\+Activated\+Critters\+In\+Wave (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{render\+\_\+window, }
+\item[{float}]{delta\+\_\+time}
+\end{DoxyParamCaption}
+)}}\label{class_critter_wave_a858c5934f74ac3148218e2f5a6a6e0b6}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_wave_a858c5934f74ac3148218e2f5a6a6e0b6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_critter_wave_a1244e59ebd702edd2530e6256779ace0}{\index{Critter\+Wave@{Critter\+Wave}!find\+Critter@{find\+Critter}}
+\index{find\+Critter@{find\+Critter}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{find\+Critter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Critter} $\ast$ Critter\+Wave\+::find\+Critter (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+) const}}\label{class_critter_wave_a1244e59ebd702edd2530e6256779ace0}
+
+
+Returns a reference to a \hyperlink{class_critter}{Critter} in the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em critter\+\_\+id} & Id of the \hyperlink{class_critter}{Critter} to be found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a \hyperlink{class_critter}{Critter} in the map.
+\end{DoxyReturn}
+Iterate through the map, looking for the given \hyperlink{class_critter}{Critter} id. If end of map is reached, return null, else return the Critter$\ast$. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_wave_a1244e59ebd702edd2530e6256779ace0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_critter_wave_a00afecb75c04a7e0cd5073e20b11cce2}{\index{Critter\+Wave@{Critter\+Wave}!get\+Container\+Of\+Critters@{get\+Container\+Of\+Critters}}
+\index{get\+Container\+Of\+Critters@{get\+Container\+Of\+Critters}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{get\+Container\+Of\+Critters}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ int, {\bf Critter} $\ast$ $>$ Critter\+Wave\+::get\+Container\+Of\+Critters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_critter_wave_a00afecb75c04a7e0cd5073e20b11cce2}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_wave_a00afecb75c04a7e0cd5073e20b11cce2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_critter_wave_a3c782475b9f1a73ddb658449592b8a33}{\index{Critter\+Wave@{Critter\+Wave}!get\+Critter\+Count@{get\+Critter\+Count}}
+\index{get\+Critter\+Count@{get\+Critter\+Count}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{get\+Critter\+Count}]{\setlength{\rightskip}{0pt plus 5cm}int Critter\+Wave\+::get\+Critter\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_critter_wave_a3c782475b9f1a73ddb658449592b8a33}
+
+
+Returns how many critters are in a \hyperlink{class_critter_wave}{Critter\+Wave} map. 
+
+\begin{DoxyReturn}{Returns}
+Count of number of Critters in a wave. 
+\end{DoxyReturn}
+\hypertarget{class_critter_wave_af3879610de9f106cc80be0d7b4c1b1df}{\index{Critter\+Wave@{Critter\+Wave}!get\+Critters\+Remaining@{get\+Critters\+Remaining}}
+\index{get\+Critters\+Remaining@{get\+Critters\+Remaining}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{get\+Critters\+Remaining}]{\setlength{\rightskip}{0pt plus 5cm}int Critter\+Wave\+::get\+Critters\+Remaining (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_critter_wave_af3879610de9f106cc80be0d7b4c1b1df}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_wave_af3879610de9f106cc80be0d7b4c1b1df_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_critter_wave_a127a4cc493bb6c6afcee3f394715b90d}{\index{Critter\+Wave@{Critter\+Wave}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{get\+Id}]{\setlength{\rightskip}{0pt plus 5cm}int Critter\+Wave\+::get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_critter_wave_a127a4cc493bb6c6afcee3f394715b90d}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{class_critter_wave_a127a4cc493bb6c6afcee3f394715b90d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_critter_wave_aa7761b522b8774ef9b319861ae6ab844}{\index{Critter\+Wave@{Critter\+Wave}!remove\+Critter@{remove\+Critter}}
+\index{remove\+Critter@{remove\+Critter}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{remove\+Critter}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+Wave\+::remove\+Critter (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_critter_wave_aa7761b522b8774ef9b319861ae6ab844}
+
+
+Remove a critter from the \hyperlink{class_critter_wave}{Critter\+Wave} map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em critter\+\_\+id} & Id of the \hyperlink{class_critter}{Critter} to be removed\\
+\hline
+\end{DoxyParams}
+Iterate through the map, looking for the given \hyperlink{class_critter}{Critter} id, if found, delete the pointer and remove the Critter$\ast$ from the map. \hypertarget{class_critter_wave_afcd7e16f4363b4be3be5649ef8325f55}{\index{Critter\+Wave@{Critter\+Wave}!set\+Id@{set\+Id}}
+\index{set\+Id@{set\+Id}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{set\+Id}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+Wave\+::set\+Id (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_critter_wave_afcd7e16f4363b4be3be5649ef8325f55}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_critter_wave_a06016c30b019307c3fd6e11c447ffbe0}{\index{Critter\+Wave@{Critter\+Wave}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{output, }
+\item[{const {\bf Critter\+Wave} \&}]{critter\+\_\+wave}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_critter_wave_a06016c30b019307c3fd6e11c447ffbe0}
+
+
+Overloaded cout operator to print out Critter\+Waves. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & Output stream address \\
+\hline
+{\em critter} & Const address to \hyperlink{class_critter_wave}{Critter\+Wave} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Address to output stream 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_critter_wave_a82475869f718062181e545afb8277217}{\index{Critter\+Wave@{Critter\+Wave}!\+\_\+m\+\_\+critter\+\_\+wave@{\+\_\+m\+\_\+critter\+\_\+wave}}
+\index{\+\_\+m\+\_\+critter\+\_\+wave@{\+\_\+m\+\_\+critter\+\_\+wave}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{\+\_\+m\+\_\+critter\+\_\+wave}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$int, {\bf Critter}$\ast$$>$ Critter\+Wave\+::\+\_\+m\+\_\+critter\+\_\+wave\hspace{0.3cm}{\ttfamily [private]}}}\label{class_critter_wave_a82475869f718062181e545afb8277217}
+
+
+\hyperlink{class_map}{Map} representing a critter wave. 
+
+\hypertarget{class_critter_wave_a6fea77f30895b8ac455dd25a4287abd6}{\index{Critter\+Wave@{Critter\+Wave}!critters\+\_\+remaining@{critters\+\_\+remaining}}
+\index{critters\+\_\+remaining@{critters\+\_\+remaining}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{critters\+\_\+remaining}]{\setlength{\rightskip}{0pt plus 5cm}int Critter\+Wave\+::critters\+\_\+remaining\hspace{0.3cm}{\ttfamily [private]}}}\label{class_critter_wave_a6fea77f30895b8ac455dd25a4287abd6}
+\hypertarget{class_critter_wave_aa476fc7af49dfb42fce07da5e726bbb2}{\index{Critter\+Wave@{Critter\+Wave}!id@{id}}
+\index{id@{id}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int Critter\+Wave\+::id\hspace{0.3cm}{\ttfamily [private]}}}\label{class_critter_wave_aa476fc7af49dfb42fce07da5e726bbb2}
+\hypertarget{class_critter_wave_a86ca5704a4a52a135fda195097dc4dd9}{\index{Critter\+Wave@{Critter\+Wave}!next\+\_\+wave@{next\+\_\+wave}}
+\index{next\+\_\+wave@{next\+\_\+wave}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{next\+\_\+wave}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Critter\+Wave}$\ast$ Critter\+Wave\+::next\+\_\+wave}}\label{class_critter_wave_a86ca5704a4a52a135fda195097dc4dd9}
+
+
+Pointer to the next \hyperlink{class_critter_wave}{Critter\+Wave}. 
+
+\hypertarget{class_critter_wave_a6c8edb08492ed068c5e4c5323695c29d}{\index{Critter\+Wave@{Critter\+Wave}!num\+Of\+Critters@{num\+Of\+Critters}}
+\index{num\+Of\+Critters@{num\+Of\+Critters}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{num\+Of\+Critters}]{\setlength{\rightskip}{0pt plus 5cm}const int Critter\+Wave\+::num\+Of\+Critters}}\label{class_critter_wave_a6c8edb08492ed068c5e4c5323695c29d}
+
+
+\hyperlink{class_map}{Map} representing a critter wave. 
+
+\hypertarget{class_critter_wave_aaf7c97d4f340ffa811ca452745ef6b24}{\index{Critter\+Wave@{Critter\+Wave}!type@{type}}
+\index{type@{type}!Critter\+Wave@{Critter\+Wave}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Critter\+::\+Critter\+Type} Critter\+Wave\+::type}}\label{class_critter_wave_aaf7c97d4f340ffa811ca452745ef6b24}
+
+
+Type of critter in a critter wave. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/managers/\hyperlink{_critter_wave_8h}{Critter\+Wave.\+h}\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/src/managers/\hyperlink{_critter_wave_8cpp}{Critter\+Wave.\+cpp}\end{DoxyCompactItemize}

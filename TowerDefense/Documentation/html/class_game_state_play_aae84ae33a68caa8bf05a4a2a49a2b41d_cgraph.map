@@ -1,0 +1,5 @@
+<map id="GameStatePlay::getWaypointsFromMapPath" name="GameStatePlay::getWaypointsFromMapPath">
+<area shape="rect" id="node2" href="$class_map.html#a0fb29a18390a3008cab71f602aa4209b" title="Map::getMapPath" alt="" coords="256,5,381,32"/>
+<area shape="rect" id="node3" href="$class_tile.html#ac292026c5bfa9181f221bf8a7844ee89" title="Tile::getTileX" alt="" coords="271,56,366,83"/>
+<area shape="rect" id="node4" href="$class_tile.html#aecb8774e1eadb370cc0e350cec68e472" title="Tile::getTileY" alt="" coords="270,107,367,133"/>
+</map>

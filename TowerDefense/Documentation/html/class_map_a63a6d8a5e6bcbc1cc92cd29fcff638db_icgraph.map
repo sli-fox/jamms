@@ -1,0 +1,8 @@
+<map id="Map::validPathPlacement" name="Map::validPathPlacement">
+<area shape="rect" id="node2" href="$class_map.html#ab9561f11877716cf4687ed4dab54d7db" title="Map::addTile" alt="" coords="223,42,319,69"/>
+<area shape="rect" id="node3" href="$class_game_state_map_editor.html#aab39f5d619995539f39f9cd217130653" title="GameStateMapEditor\l::mapEditorCommandLibrary" alt="" coords="367,5,553,47"/>
+<area shape="rect" id="node5" href="$class_map.html#a2b6b1ca722620f097ea044f1c41e411e" title="Map::load" alt="" coords="421,71,499,98"/>
+<area shape="rect" id="node4" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="813,35,960,76"/>
+<area shape="rect" id="node6" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="601,64,765,105"/>
+<area shape="rect" id="node7" href="$class_map.html#a11a8645ff656f9efeb5a6758b36d1264" title="Map::Map" alt="" coords="643,130,723,157"/>
+</map>

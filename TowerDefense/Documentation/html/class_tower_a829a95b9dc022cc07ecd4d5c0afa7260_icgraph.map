@@ -1,0 +1,4 @@
+<map id="Tower::getRangeShape" name="Tower::getRangeShape">
+<area shape="rect" id="node2" href="$class_game_state_play.html#a63a3ba0c891afd8ec126806bab4f315a" title="Draws game to the render window. " alt="" coords="209,5,359,32"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#ab41594c10b04429a3126d4a8085de82d" title="GameStatePlay::runThreads" alt="" coords="407,5,593,32"/>
+</map>

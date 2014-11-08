@@ -1,0 +1,7 @@
+<map id="Tower" name="Tower">
+<area shape="rect" id="node4" href="$class_bulldog.html" title="{Bulldog\n||+ Bulldog()\l+ upgradeTower()\l}" alt="" coords="5,784,128,876"/>
+<area shape="rect" id="node5" href="$class_dalmatian.html" title="{Dalmatian\n||+ Dalmatian()\l+ upgradeTower()\l}" alt="" coords="152,784,275,876"/>
+<area shape="rect" id="node6" href="$class_shih_tzu.html" title="{ShihTzu\n||+ ShihTzu()\l+ upgradeTower()\l}" alt="" coords="299,784,421,876"/>
+<area shape="rect" id="node2" href="$class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="87,5,212,259"/>
+<area shape="rect" id="node3" href="$class_i_observer.html" title="{IObserver\n||+ update()\l}" alt="" coords="237,93,318,171"/>
+</map>

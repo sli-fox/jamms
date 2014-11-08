@@ -1,0 +1,4 @@
+<map id="Player::getLives" name="Player::getLives">
+<area shape="rect" id="node2" href="$class_game_state_play.html#aec5f72cea0e80d1d83b9cbe155a65ce9" title="GameStatePlay::handleGameOver" alt="" coords="168,5,389,32"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="437,5,599,32"/>
+</map>

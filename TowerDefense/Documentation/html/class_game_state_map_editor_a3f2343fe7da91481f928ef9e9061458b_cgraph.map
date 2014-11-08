@@ -1,0 +1,51 @@
+<map id="GameStateMapEditor::buttonCommandLibrary" name="GameStateMapEditor::buttonCommandLibrary">
+<area shape="rect" id="node2" href="$class_map.html#a9e82077ad5054dbbe6434cf89738dbf5" title="Map::fillMap" alt="" coords="245,257,337,283"/>
+<area shape="rect" id="node3" href="$class_map.html#afa8798ebce5315b393755d8656fa6038" title="Map::blankMap" alt="" coords="439,819,549,846"/>
+<area shape="rect" id="node8" href="$class_map.html#a7c8e0a56747581e1b9f5248ceb043275" title="Map::save" alt="" coords="250,358,331,385"/>
+<area shape="rect" id="node9" href="$class_map.html#a915168b8ce4bb812c591e34d17163a75" title="Map::isMapValid" alt="" coords="435,130,553,157"/>
+<area shape="rect" id="node32" href="$class_game_state_map_editor.html#aa809c2e4d27cc2028f98790278459ae2" title="GameStateMapEditor\l::getFilesInDir" alt="" coords="217,975,364,1016"/>
+<area shape="rect" id="node42" href="$class_map.html#a2b6b1ca722620f097ea044f1c41e411e" title="Map::load" alt="" coords="251,718,330,745"/>
+<area shape="rect" id="node44" href="$class_map.html#a79a7d2715d8face71c5f16be9e14ac0a" title="Map::resetMap" alt="" coords="439,870,549,897"/>
+<area shape="rect" id="node45" href="$class_map.html#a3079c08faaa2fd3984bed5471488a790" title="Map::setMapSize" alt="" coords="432,921,556,947"/>
+<area shape="rect" id="node49" href="$class_game.html#a5898f1edb6e3bc1700b2ffb1943bc609" title="Helper push function for GameState stack. " alt="" coords="229,1041,353,1067"/>
+<area shape="rect" id="node50" href="$class_game.html#a4b33dd67adef59bebadba8a234282c88" title="Helper pop function for GameState stack. " alt="" coords="232,1091,349,1118"/>
+<area shape="rect" id="node4" href="$class_map.html#a69be425dd99011951d8c4f08b598703b" title="Map::removeTile" alt="" coords="645,827,761,854"/>
+<area shape="rect" id="node5" href="$class_map.html#a6995c0de6fe380ffa652990490b867c8" title="Map::outOfBounds" alt="" coords="1060,783,1191,810"/>
+<area shape="rect" id="node6" href="$class_map.html#aa8e57f0e6d665def93ad7b33413e98a7" title="Map::getTile" alt="" coords="867,783,961,810"/>
+<area shape="rect" id="node7" href="$class_map.html#ab12fa393f25fbbd4ad2fa183a033162b" title="Map::removeGameObject" alt="" coords="829,834,999,861"/>
+<area shape="rect" id="node10" href="$classrapidxml_1_1memory__pool.html#a4118581c29ee9a2f6b55ebf7dac185f8" title="rapidxml::memory_pool\l::allocate_node" alt="" coords="624,169,781,211"/>
+<area shape="rect" id="node17" href="$singletonrapidxml_1_1xml__node.html#a33ce3386f8c42dd4db658b75cbb6e6c4" title="rapidxml::xml_node\l::append_attribute" alt="" coords="635,355,770,396"/>
+<area shape="rect" id="node21" href="$classrapidxml_1_1memory__pool.html#a3de2a66c983336e006ea3844e244ed30" title="rapidxml::memory_pool\l::allocate_attribute" alt="" coords="624,83,781,124"/>
+<area shape="rect" id="node22" href="$singletonrapidxml_1_1xml__node.html#a8696d098ecc9c4d2a646b43e91d58e31" title="rapidxml::xml_node\l::append_node" alt="" coords="635,420,770,461"/>
+<area shape="rect" id="node25" href="$class_map.html#a0fb29a18390a3008cab71f602aa4209b" title="Map::getMapPath" alt="" coords="431,282,557,309"/>
+<area shape="rect" id="node26" href="$class_map.html#aae1f3e3de0581ba792b58290c164920f" title="Map::convertType" alt="" coords="432,434,556,461"/>
+<area shape="rect" id="node27" href="$singletonrapidxml_1_1xml__document.html#a826929ff54242532198701f19ff5f83f" title="rapidxml::xml_document\l::clear" alt="" coords="412,485,576,527"/>
+<area shape="rect" id="node11" href="$classrapidxml_1_1memory__pool.html#a4e9cf53fa5f9da3a8f31b754bd94b4ec" title="rapidxml::memory_pool\l::allocate_aligned" alt="" coords="835,71,993,112"/>
+<area shape="rect" id="node14" href="$classrapidxml_1_1xml__base.html#a9a09739310469995db078ebd0da3ed45" title="rapidxml::xml_base\l::name" alt="" coords="1058,391,1193,432"/>
+<area shape="rect" id="node16" href="$classrapidxml_1_1xml__base.html#adcdaccff61c665f039d9344e447b7445" title="rapidxml::xml_base\l::value" alt="" coords="847,5,981,47"/>
+<area shape="rect" id="node12" href="$classrapidxml_1_1memory__pool.html#a317396afc1812f08b64a1dd9cde4039b" title="rapidxml::memory_pool\l::align" alt="" coords="1047,231,1204,272"/>
+<area shape="rect" id="node13" href="$classrapidxml_1_1memory__pool.html#a1aed504a747303352e05f61c6ccbbebb" title="rapidxml::memory_pool\l::allocate_raw" alt="" coords="1047,71,1204,112"/>
+<area shape="rect" id="node15" href="$classrapidxml_1_1xml__base.html#ad96ff6b1e41dab3ff60b9bc4df769a75" title="rapidxml::xml_base\l::nullstr" alt="" coords="1252,200,1387,241"/>
+<area shape="rect" id="node18" href="$classrapidxml_1_1xml__base.html#a7f31ae930f93852830234db1ae59c4c4" title="rapidxml::xml_base\l::parent" alt="" coords="847,355,981,396"/>
+<area shape="rect" id="node19" href="$singletonrapidxml_1_1xml__node.html#ae426802be58114ffc41bf30ac6b8c37d" title="rapidxml::xml_node\l::first_attribute" alt="" coords="847,485,981,527"/>
+<area shape="rect" id="node20" href="$classrapidxml_1_1xml__base.html#a7e7f98b3d01e1eab8dc1ca69aad9af84" title="rapidxml::xml_base\l::name_size" alt="" coords="1058,551,1193,592"/>
+<area shape="rect" id="node23" href="$singletonrapidxml_1_1xml__node.html#a2c6a4315b98bcfa2e04fed3fa1b22c36" title="rapidxml::xml_node\l::type" alt="" coords="847,420,981,461"/>
+<area shape="rect" id="node24" href="$singletonrapidxml_1_1xml__node.html#a2dedeb4e04bb35e06a9a7bddf6ba652d" title="rapidxml::xml_node\l::first_node" alt="" coords="847,551,981,592"/>
+<area shape="rect" id="node28" href="$singletonrapidxml_1_1xml__node.html#a95735358b079ae0adcfbbac69aa1fbc3" title="Removes all child nodes (but not attributes). " alt="" coords="635,551,770,592"/>
+<area shape="rect" id="node29" href="$singletonrapidxml_1_1xml__node.html#aa8d5d9484aa1eb5ff1841a073c84c1aa" title="Removes all attributes of node. " alt="" coords="627,485,779,527"/>
+<area shape="rect" id="node30" href="$classrapidxml_1_1memory__pool.html#aad377c835fdaed1cb2cc9df194cf84e4" title="rapidxml::memory_pool\l::clear" alt="" coords="624,289,781,331"/>
+<area shape="rect" id="node31" href="$classrapidxml_1_1memory__pool.html#a1076043ef092e327e59dd988c1ba82fb" title="rapidxml::memory_pool\l::init" alt="" coords="835,289,993,331"/>
+<area shape="rect" id="node33" href="$dirent_8h.html#a56af8d3cfb4a2b2f44e20b276db71f2a" title="opendir" alt="" coords="462,985,526,1011"/>
+<area shape="rect" id="node38" href="$dirent_8h.html#aff48ec2514bda89769c968c66db181f3" title="readdir" alt="" coords="463,1138,525,1165"/>
+<area shape="rect" id="node41" href="$dirent_8h.html#a748b9bd26c040c2ad9107c9d8c1aab42" title="closedir" alt="" coords="669,1087,736,1114"/>
+<area shape="rect" id="node34" href="$dirent_8h.html#a1d22e9bf392cecbd177224e626d3ad98" title="dirent_set_errno" alt="" coords="1068,1011,1183,1038"/>
+<area shape="rect" id="node35" href="$dirent_8h.html#aead3f72cc4062f3d0a4a613c5cd29794" title="dirent_mbstowcs_s" alt="" coords="635,1037,770,1063"/>
+<area shape="rect" id="node36" href="$dirent_8h.html#a930234a4d128076584ce384e7807c22e" title="_wopendir" alt="" coords="663,986,743,1013"/>
+<area shape="rect" id="node37" href="$dirent_8h.html#ad94806a93f9e8280fb5c7f692d6542bb" title="_wclosedir" alt="" coords="873,1037,955,1063"/>
+<area shape="rect" id="node39" href="$dirent_8h.html#a8f083cf02d7debbcafb78d276948e99b" title="dirent_next" alt="" coords="659,1138,746,1165"/>
+<area shape="rect" id="node40" href="$dirent_8h.html#af3e03a80974ee384ff3c529fef08d751" title="dirent_wcstombs_s" alt="" coords="635,1189,770,1215"/>
+<area shape="rect" id="node43" href="$singletonrapidxml_1_1xml__document.html#ac6e73ff9ac323bf5a370c38feb03a6b1" title="rapidxml::xml_document\l::parse" alt="" coords="412,551,576,592"/>
+<area shape="rect" id="node46" href="$class_map.html#ab9561f11877716cf4687ed4dab54d7db" title="Map::addTile" alt="" coords="655,769,751,795"/>
+<area shape="rect" id="node48" href="$singletonrapidxml_1_1xml__node.html#ac59af4dd5f0ec715753e42467dff6aed" title="rapidxml::xml_node\l::next_sibling" alt="" coords="847,616,981,657"/>
+<area shape="rect" id="node47" href="$class_map.html#a63a6d8a5e6bcbc1cc92cd29fcff638db" title="Map::validPathPlacement" alt="" coords="829,733,999,759"/>
+</map>

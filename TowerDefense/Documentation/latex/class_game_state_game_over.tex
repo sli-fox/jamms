@@ -1,0 +1,276 @@
+\hypertarget{class_game_state_game_over}{\section{Game\+State\+Game\+Over Class Reference}
+\label{class_game_state_game_over}\index{Game\+State\+Game\+Over@{Game\+State\+Game\+Over}}
+}
+
+
+\hyperlink{class_game}{Game} state that represents the game start, including the main game menu.  
+
+
+
+
+{\ttfamily \#include $<$Game\+State\+Game\+Over.\+h$>$}
+
+
+
+Inheritance diagram for Game\+State\+Game\+Over\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{class_game_state_game_over__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+State\+Game\+Over\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_game_state_game_over__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_game_state_game_over_ac04ea29d97aade1e47fa1f25aa04f4c3}{Game\+State\+Game\+Over} (\hyperlink{class_game}{Game} $\ast$\hyperlink{class_game_state_a355a79415b9ef63c2aec1448a99f6e71}{game})
+\begin{DoxyCompactList}\small\item\em Constructor that takes in a pointer to the \hyperlink{class_game}{Game} that created them. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_state_game_over_a1e88ff4cbd7d608858604efdb16e2adc}{draw} (const float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Draws game to the render window. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_state_game_over_a11d874c60455411c70a9ebaab2db6a17}{update} (const float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Updates game changes. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_state_game_over_a10777cb963bba4f1c80edd6112888585}{handle\+Input} ()
+\begin{DoxyCompactList}\small\item\em Handles player input. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_state_game_over_a7a9b37edd4132ee9b500a05aecfe57fb}{run\+Threads} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_game_state_game_over_aca1764af639f0e1ca817d93a2a19d45a}{return\+To\+Main\+Menu} ()
+\begin{DoxyCompactList}\small\item\em Function that transitions to the \hyperlink{class_game_state_main_menu}{Game\+State\+Main\+Menu} state. \end{DoxyCompactList}\item 
+sf\+::\+Sprite \hyperlink{class_game_state_game_over_ae89ff3f534ad24e6cf9482b2089c6fcf}{get\+Game\+Over\+Screen\+Sprite} ()
+\begin{DoxyCompactList}\small\item\em Load texture and create Start\+Screen sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+View \hyperlink{class_game_state_game_over_ab8b8af4c5a4c6b6e6be3c8f8ff53f1de}{\+\_\+view}
+\begin{DoxyCompactList}\small\item\em Camera view for the \hyperlink{class_game_state}{Game\+State} displayed to the window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_game}{Game} state that represents the game start, including the main game menu. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_game_state_game_over_ac04ea29d97aade1e47fa1f25aa04f4c3}{\index{Game\+State\+Game\+Over@{Game\+State\+Game\+Over}!Game\+State\+Game\+Over@{Game\+State\+Game\+Over}}
+\index{Game\+State\+Game\+Over@{Game\+State\+Game\+Over}!Game\+State\+Game\+Over@{Game\+State\+Game\+Over}}
+\subsubsection[{Game\+State\+Game\+Over}]{\setlength{\rightskip}{0pt plus 5cm}Game\+State\+Game\+Over\+::\+Game\+State\+Game\+Over (
+\begin{DoxyParamCaption}
+\item[{{\bf Game} $\ast$}]{game}
+\end{DoxyParamCaption}
+)}}\label{class_game_state_game_over_ac04ea29d97aade1e47fa1f25aa04f4c3}
+
+
+Constructor that takes in a pointer to the \hyperlink{class_game}{Game} that created them. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Pointer to game.\\
+\hline
+\end{DoxyParams}
+The constructor sets the view to the size of the window and centers the view on the center of the window. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_state_game_over_a1e88ff4cbd7d608858604efdb16e2adc}{\index{Game\+State\+Game\+Over@{Game\+State\+Game\+Over}!draw@{draw}}
+\index{draw@{draw}!Game\+State\+Game\+Over@{Game\+State\+Game\+Over}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Game\+Over\+::draw (
+\begin{DoxyParamCaption}
+\item[{const float}]{delta\+\_\+time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_state_game_over_a1e88ff4cbd7d608858604efdb16e2adc}
+
+
+Draws game to the render window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & Elapsed time during the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void.
+\end{DoxyReturn}
+This function sets the view to be drawn to the window and also calls a function to draw the splash screen. 
+
+Implements \hyperlink{class_game_state_a55a6a68aabdf7054ea0e6ddbf24902df}{Game\+State}.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_game_over_a1e88ff4cbd7d608858604efdb16e2adc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_game_over_ae89ff3f534ad24e6cf9482b2089c6fcf}{\index{Game\+State\+Game\+Over@{Game\+State\+Game\+Over}!get\+Game\+Over\+Screen\+Sprite@{get\+Game\+Over\+Screen\+Sprite}}
+\index{get\+Game\+Over\+Screen\+Sprite@{get\+Game\+Over\+Screen\+Sprite}!Game\+State\+Game\+Over@{Game\+State\+Game\+Over}}
+\subsubsection[{get\+Game\+Over\+Screen\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Sprite Game\+State\+Game\+Over\+::get\+Game\+Over\+Screen\+Sprite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_game_over_ae89ff3f534ad24e6cf9482b2089c6fcf}
+
+
+Load texture and create Start\+Screen sprite. 
+
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_game_over_ae89ff3f534ad24e6cf9482b2089c6fcf_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_game_over_ae89ff3f534ad24e6cf9482b2089c6fcf_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_game_over_a10777cb963bba4f1c80edd6112888585}{\index{Game\+State\+Game\+Over@{Game\+State\+Game\+Over}!handle\+Input@{handle\+Input}}
+\index{handle\+Input@{handle\+Input}!Game\+State\+Game\+Over@{Game\+State\+Game\+Over}}
+\subsubsection[{handle\+Input}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Game\+Over\+::handle\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_state_game_over_a10777cb963bba4f1c80edd6112888585}
+
+
+Handles player input. 
+
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+Close the window
+
+Go to main menu 
+
+Implements \hyperlink{class_game_state_a970b55edd5a1da31ea0f7113e2c1f85a}{Game\+State}.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_game_over_a10777cb963bba4f1c80edd6112888585_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_game_over_aca1764af639f0e1ca817d93a2a19d45a}{\index{Game\+State\+Game\+Over@{Game\+State\+Game\+Over}!return\+To\+Main\+Menu@{return\+To\+Main\+Menu}}
+\index{return\+To\+Main\+Menu@{return\+To\+Main\+Menu}!Game\+State\+Game\+Over@{Game\+State\+Game\+Over}}
+\subsubsection[{return\+To\+Main\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Game\+Over\+::return\+To\+Main\+Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_game_over_aca1764af639f0e1ca817d93a2a19d45a}
+
+
+Function that transitions to the \hyperlink{class_game_state_main_menu}{Game\+State\+Main\+Menu} state. 
+
+\begin{DoxyReturn}{Returns}
+Void.
+\end{DoxyReturn}
+Add the \hyperlink{class_game_state_main_menu}{Game\+State\+Main\+Menu} state to the game 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{class_game_state_game_over_aca1764af639f0e1ca817d93a2a19d45a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_game_over_aca1764af639f0e1ca817d93a2a19d45a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_game_over_a7a9b37edd4132ee9b500a05aecfe57fb}{\index{Game\+State\+Game\+Over@{Game\+State\+Game\+Over}!run\+Threads@{run\+Threads}}
+\index{run\+Threads@{run\+Threads}!Game\+State\+Game\+Over@{Game\+State\+Game\+Over}}
+\subsubsection[{run\+Threads}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Game\+State\+Game\+Over\+::run\+Threads (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_game_state_game_over_a7a9b37edd4132ee9b500a05aecfe57fb}
+
+
+Implements \hyperlink{class_game_state_a98cd49f1d8fd9fc3e79d607a238ba518}{Game\+State}.
+
+\hypertarget{class_game_state_game_over_a11d874c60455411c70a9ebaab2db6a17}{\index{Game\+State\+Game\+Over@{Game\+State\+Game\+Over}!update@{update}}
+\index{update@{update}!Game\+State\+Game\+Over@{Game\+State\+Game\+Over}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Game\+State\+Game\+Over\+::update (
+\begin{DoxyParamCaption}
+\item[{const float}]{delta\+\_\+time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_game_state_game_over_a11d874c60455411c70a9ebaab2db6a17}
+
+
+Updates game changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & Elapsed time during the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_game_state_ad331d02d3989271b8cbc88fcb1448959}{Game\+State}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_game_state_game_over_ab8b8af4c5a4c6b6e6be3c8f8ff53f1de}{\index{Game\+State\+Game\+Over@{Game\+State\+Game\+Over}!\+\_\+view@{\+\_\+view}}
+\index{\+\_\+view@{\+\_\+view}!Game\+State\+Game\+Over@{Game\+State\+Game\+Over}}
+\subsubsection[{\+\_\+view}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+View Game\+State\+Game\+Over\+::\+\_\+view\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_game_over_ab8b8af4c5a4c6b6e6be3c8f8ff53f1de}
+
+
+Camera view for the \hyperlink{class_game_state}{Game\+State} displayed to the window. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/game\+States/\hyperlink{_game_state_game_over_8h}{Game\+State\+Game\+Over.\+h}\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/src/game\+States/\hyperlink{_game_state_game_over_8cpp}{Game\+State\+Game\+Over.\+cpp}\end{DoxyCompactItemize}

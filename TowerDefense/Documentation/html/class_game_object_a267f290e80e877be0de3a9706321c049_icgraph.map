@@ -1,0 +1,6 @@
+<map id="GameObject::getSpriteSize" name="GameObject::getSpriteSize">
+<area shape="rect" id="node2" href="$class_critter.html#a628b203e25050a085786d3993a660ab9" title="Critter::controlCat" alt="" coords="262,5,386,32"/>
+<area shape="rect" id="node4" href="$class_game_object.html#a8220201988f2aaea8a6f748872e188a9" title="Measures the radius of the rectangle sprite. " alt="" coords="235,57,413,98"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="461,5,649,32"/>
+<area shape="rect" id="node5" href="$class_game_object.html#a3a9fd4ee6157fcf61fd8f7d7318598c5" title="Measures the distance between the centers of each object to each other and compare that with their ra..." alt="" coords="465,57,646,98"/>
+</map>

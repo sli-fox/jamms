@@ -1,0 +1,4 @@
+<map id="Map::placeTower" name="Map::placeTower">
+<area shape="rect" id="node2" href="$class_map.html#a6995c0de6fe380ffa652990490b867c8" title="Map::outOfBounds" alt="" coords="315,5,445,32"/>
+<area shape="rect" id="node3" href="$class_map.html#aa8e57f0e6d665def93ad7b33413e98a7" title="Map::getTile" alt="" coords="173,31,267,57"/>
+</map>

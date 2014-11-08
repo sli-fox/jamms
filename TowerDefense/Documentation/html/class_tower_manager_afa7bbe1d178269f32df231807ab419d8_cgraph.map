@@ -1,0 +1,6 @@
+<map id="TowerManager::sellTower" name="TowerManager::sellTower">
+<area shape="rect" id="node2" href="$class_tower_manager.html#a0158f9210b43ea166977e01768849c3a" title="TowerManager::outOfBound" alt="" coords="221,5,404,32"/>
+<area shape="rect" id="node3" href="$class_tower_manager.html#afd9c7b3113dd4d02b0ee875d705cdf39" title="TowerManager::isTileFree" alt="" coords="227,56,398,83"/>
+<area shape="rect" id="node4" href="$class_player.html#af3bdca44c57bee211d1d0ea53c11f9b3" title="Player::earnCash" alt="" coords="251,107,374,133"/>
+<area shape="rect" id="node5" href="$_console_color_8h.html#a9a5da37d743c609ea42e11b710812de2" title="blue" alt="" coords="289,157,336,184"/>
+</map>

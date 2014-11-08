@@ -1,0 +1,25 @@
+<map id="Map::save" name="Map::save">
+<area shape="rect" id="node2" href="$class_map.html#a915168b8ce4bb812c591e34d17163a75" title="Map::isMapValid" alt="" coords="157,158,276,185"/>
+<area shape="rect" id="node3" href="$classrapidxml_1_1memory__pool.html#a4118581c29ee9a2f6b55ebf7dac185f8" title="rapidxml::memory_pool\l::allocate_node" alt="" coords="347,125,504,167"/>
+<area shape="rect" id="node10" href="$singletonrapidxml_1_1xml__node.html#a33ce3386f8c42dd4db658b75cbb6e6c4" title="rapidxml::xml_node\l::append_attribute" alt="" coords="149,376,284,417"/>
+<area shape="rect" id="node14" href="$classrapidxml_1_1memory__pool.html#a3de2a66c983336e006ea3844e244ed30" title="rapidxml::memory_pool\l::allocate_attribute" alt="" coords="347,60,504,101"/>
+<area shape="rect" id="node15" href="$singletonrapidxml_1_1xml__node.html#a8696d098ecc9c4d2a646b43e91d58e31" title="rapidxml::xml_node\l::append_node" alt="" coords="149,441,284,483"/>
+<area shape="rect" id="node18" href="$class_map.html#a0fb29a18390a3008cab71f602aa4209b" title="Map::getMapPath" alt="" coords="154,507,279,534"/>
+<area shape="rect" id="node19" href="$class_map.html#aae1f3e3de0581ba792b58290c164920f" title="Map::convertType" alt="" coords="155,558,279,585"/>
+<area shape="rect" id="node20" href="$singletonrapidxml_1_1xml__document.html#a826929ff54242532198701f19ff5f83f" title="rapidxml::xml_document\l::clear" alt="" coords="135,311,299,352"/>
+<area shape="rect" id="node4" href="$classrapidxml_1_1memory__pool.html#a4e9cf53fa5f9da3a8f31b754bd94b4ec" title="rapidxml::memory_pool\l::allocate_aligned" alt="" coords="552,71,709,112"/>
+<area shape="rect" id="node7" href="$classrapidxml_1_1xml__base.html#a9a09739310469995db078ebd0da3ed45" title="rapidxml::xml_base\l::name" alt="" coords="769,297,903,339"/>
+<area shape="rect" id="node9" href="$classrapidxml_1_1xml__base.html#adcdaccff61c665f039d9344e447b7445" title="rapidxml::xml_base\l::value" alt="" coords="563,5,698,47"/>
+<area shape="rect" id="node5" href="$classrapidxml_1_1memory__pool.html#a317396afc1812f08b64a1dd9cde4039b" title="rapidxml::memory_pool\l::align" alt="" coords="757,180,915,221"/>
+<area shape="rect" id="node6" href="$classrapidxml_1_1memory__pool.html#a1aed504a747303352e05f61c6ccbbebb" title="rapidxml::memory_pool\l::allocate_raw" alt="" coords="757,71,915,112"/>
+<area shape="rect" id="node8" href="$classrapidxml_1_1xml__base.html#ad96ff6b1e41dab3ff60b9bc4df769a75" title="rapidxml::xml_base\l::nullstr" alt="" coords="963,153,1097,195"/>
+<area shape="rect" id="node11" href="$classrapidxml_1_1xml__base.html#a7f31ae930f93852830234db1ae59c4c4" title="rapidxml::xml_base\l::parent" alt="" coords="358,439,493,480"/>
+<area shape="rect" id="node12" href="$singletonrapidxml_1_1xml__node.html#ae426802be58114ffc41bf30ac6b8c37d" title="rapidxml::xml_node\l::first_attribute" alt="" coords="563,356,698,397"/>
+<area shape="rect" id="node13" href="$classrapidxml_1_1xml__base.html#a7e7f98b3d01e1eab8dc1ca69aad9af84" title="rapidxml::xml_base\l::name_size" alt="" coords="769,392,903,433"/>
+<area shape="rect" id="node16" href="$singletonrapidxml_1_1xml__node.html#a2c6a4315b98bcfa2e04fed3fa1b22c36" title="rapidxml::xml_node\l::type" alt="" coords="358,504,493,545"/>
+<area shape="rect" id="node17" href="$singletonrapidxml_1_1xml__node.html#a2dedeb4e04bb35e06a9a7bddf6ba652d" title="rapidxml::xml_node\l::first_node" alt="" coords="563,421,698,463"/>
+<area shape="rect" id="node21" href="$singletonrapidxml_1_1xml__node.html#a95735358b079ae0adcfbbac69aa1fbc3" title="Removes all child nodes (but not attributes). " alt="" coords="358,321,493,363"/>
+<area shape="rect" id="node22" href="$singletonrapidxml_1_1xml__node.html#aa8d5d9484aa1eb5ff1841a073c84c1aa" title="Removes all attributes of node. " alt="" coords="349,256,501,297"/>
+<area shape="rect" id="node23" href="$classrapidxml_1_1memory__pool.html#aad377c835fdaed1cb2cc9df194cf84e4" title="rapidxml::memory_pool\l::clear" alt="" coords="347,191,504,232"/>
+<area shape="rect" id="node24" href="$classrapidxml_1_1memory__pool.html#a1076043ef092e327e59dd988c1ba82fb" title="rapidxml::memory_pool\l::init" alt="" coords="552,239,709,280"/>
+</map>

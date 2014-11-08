@@ -1,0 +1,21 @@
+<map id="jamms/TowerDefense/TowerDefense/include/managers/TowerManager.h" name="jamms/TowerDefense/TowerDefense/include/managers/TowerManager.h">
+<area shape="rect" id="node5" href="$_tower_8h.html" title="gameObjects/Tower.h" alt="" coords="275,184,423,211"/>
+<area shape="rect" id="node37" href="$_shih_tzu_8h.html" title="gameObjects/ShihTzu.h" alt="" coords="78,109,239,136"/>
+<area shape="rect" id="node38" href="$_dalmatian_8h.html" title="gameObjects/Dalmatian.h" alt="" coords="263,109,435,136"/>
+<area shape="rect" id="node39" href="$_bulldog_8h.html" title="gameObjects/Bulldog.h" alt="" coords="460,109,617,136"/>
+<area shape="rect" id="node7" href="$_game_object_8h.html" title="File containing the GameObject class. " alt="" coords="585,632,775,659"/>
+<area shape="rect" id="node13" href="$_critter_8h.html" title="Representation of critter object. " alt="" coords="387,259,539,285"/>
+<area shape="rect" id="node36" href="$_i_observer_8h.html" title="gameObjects/IObserver.h" alt="" coords="93,408,261,435"/>
+<area shape="rect" id="node9" href="$_texture_manager_8h.html" title="File containing the TextureManager class. " alt="" coords="695,707,881,733"/>
+<area shape="rect" id="node11" href="$_console_color_8h.html" title="utils/ConsoleColor.h" alt="" coords="532,707,671,733"/>
+<area shape="rect" id="node14" href="$_animation_handler_8h.html" title="File containing the AnimationHandler class. " alt="" coords="1723,483,1885,509"/>
+<area shape="rect" id="node16" href="$_waypoint_8h.html" title="File containing the Waypoint class. " alt="" coords="1321,333,1437,360"/>
+<area shape="rect" id="node35" href="$_i_subject_8h.html" title="gameObjects/ISubject.h" alt="" coords="150,333,311,360"/>
+<area shape="rect" id="node15" href="$_animation_8h.html" title="File containing the Animation class. " alt="" coords="1817,632,1935,659"/>
+<area shape="rect" id="node18" href="$_game_8h.html" title="File containing the Game class. " alt="" coords="1105,408,1173,435"/>
+<area shape="rect" id="node20" href="$_map_8h.html" title="Map.h" alt="" coords="1003,483,1061,509"/>
+<area shape="rect" id="node34" href="$_player_8h.html" title="Player.h" alt="" coords="502,483,573,509"/>
+<area shape="rect" id="node24" href="$_tile_8h.html" title="gameObjects/Tile.h" alt="" coords="1029,557,1163,584"/>
+<area shape="rect" id="node25" href="$rapidxml_8hpp.html" title="This file contains rapidxml parser and DOM implementation. " alt="" coords="1321,632,1445,659"/>
+<area shape="rect" id="node30" href="$rapidxml__print_8hpp.html" title="This file contains rapidxml printer implementation. " alt="" coords="1187,557,1343,584"/>
+</map>

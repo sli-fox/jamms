@@ -1,0 +1,6 @@
+<map id="Critter" name="Critter">
+<area shape="rect" id="node4" href="$class_black_cat.html" title="Class for BlackCat. Subclass of Critter. " alt="" coords="5,843,125,949"/>
+<area shape="rect" id="node5" href="$class_white_cat.html" title="Class for WhiteCat. Subclass of Critter. " alt="" coords="149,843,269,949"/>
+<area shape="rect" id="node2" href="$class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="11,5,136,259"/>
+<area shape="rect" id="node3" href="$class_i_subject.html" title="{ISubject\n|&#45; observers\l|+ attach()\l+ detach()\l+ notify()\l}" alt="" coords="160,79,245,185"/>
+</map>

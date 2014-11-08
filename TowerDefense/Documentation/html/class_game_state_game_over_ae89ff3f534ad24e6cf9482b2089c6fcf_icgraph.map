@@ -1,0 +1,3 @@
+<map id="GameStateGameOver::getGameOverScreenSprite" name="GameStateGameOver::getGameOverScreenSprite">
+<area shape="rect" id="node2" href="$class_game_state_game_over.html#a1e88ff4cbd7d608858604efdb16e2adc" title="Draws game to the render window. " alt="" coords="229,13,413,39"/>
+</map>

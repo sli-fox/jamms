@@ -1,0 +1,5 @@
+<map id="Critter::controlCat" name="Critter::controlCat">
+<area shape="rect" id="node2" href="$class_critter.html#a8fdba06ecb582e8b542e2e73a76f455d" title="Critter::getPosition" alt="" coords="203,5,333,32"/>
+<area shape="rect" id="node3" href="$class_game_object.html#a267f290e80e877be0de3a9706321c049" title="Gets the size of a sprite. " alt="" coords="177,56,359,83"/>
+<area shape="rect" id="node4" href="$class_critter.html#a96462bdb554e60ee1c3bb76d7cde3da6" title="Critter::updatePosition" alt="" coords="193,107,343,133"/>
+</map>

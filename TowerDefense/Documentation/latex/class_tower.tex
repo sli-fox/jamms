@@ -1,0 +1,1005 @@
+\hypertarget{class_tower}{\section{Tower Class Reference}
+\label{class_tower}\index{Tower@{Tower}}
+}
+
+
+{\ttfamily \#include $<$Tower.\+h$>$}
+
+
+
+Inheritance diagram for Tower\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_tower__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tower\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_tower__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_tower_a110a21c18d4ec095c6234bd17f004b3e}{Tower\+Type} \{ \hyperlink{class_tower_a110a21c18d4ec095c6234bd17f004b3eafc7b29cc9464c60eccaf32bfbe9bcaa5}{Shih\+Tzu}, 
+\hyperlink{class_tower_a110a21c18d4ec095c6234bd17f004b3ea4c4f3bb9f46dae3c4007388964d70918}{Dalmatian}, 
+\hyperlink{class_tower_a110a21c18d4ec095c6234bd17f004b3eab8e7a477424b107e0e8e39401c757e03}{Bulldog}
+ \}
+\item 
+enum \hyperlink{class_tower_a23889cd9ee2fbae0420c97105fd6ebc8}{Upgrade\+Level} \{ \hyperlink{class_tower_a23889cd9ee2fbae0420c97105fd6ebc8abe0f7ad4cff5a00b5f28a08d31ac2e36}{Upgrade0}, 
+\hyperlink{class_tower_a23889cd9ee2fbae0420c97105fd6ebc8a964336205476003154ee384bd0b22618}{Upgrade1}, 
+\hyperlink{class_tower_a23889cd9ee2fbae0420c97105fd6ebc8a8af5b96db8bb80cdad0397d0661f7bd7}{Upgrade2}
+ \}
+\item 
+enum \hyperlink{class_tower_a52bcc3e7f85c01b3105e919717503169}{Range} \{ \hyperlink{class_tower_a52bcc3e7f85c01b3105e919717503169a37e331c5e16c2d6f0efbd1ee6f070379}{Small} =1, 
+\hyperlink{class_tower_a52bcc3e7f85c01b3105e919717503169a32cf7d7ba017d0b4b5de67b8361debb5}{Medium}, 
+\hyperlink{class_tower_a52bcc3e7f85c01b3105e919717503169a14da209d684845bb2a30f0ceb007368a}{Large}
+ \}
+\item 
+enum \hyperlink{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2}{Rate\+Of\+Fire} \{ \hyperlink{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2a389259b288c5e1e55229bc31de93c04e}{Slow} = 1, 
+\hyperlink{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2acf86f1d4ed7c8db9c2177baf929b152c}{Normal}, 
+\hyperlink{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2aa62913c3081700b5c283d075f9f6240a}{Fast}
+ \}
+\item 
+enum \hyperlink{class_tower_a355ab1cbcfd8c4d037ccf8937f784445}{Special\+Effect} \{ \hyperlink{class_tower_a355ab1cbcfd8c4d037ccf8937f784445a6cc15d5458e0ec17ed737a46a8580f29}{None}, 
+\hyperlink{class_tower_a355ab1cbcfd8c4d037ccf8937f784445aa395d83c58910dc4e8f2927ff2102a1f}{Slowing}, 
+\hyperlink{class_tower_a355ab1cbcfd8c4d037ccf8937f784445a278a02e93c587ce4032eed7176b9c5b6}{Burning}, 
+\hyperlink{class_tower_a355ab1cbcfd8c4d037ccf8937f784445a95fcdb81c44a65a2513b49f37515c0c5}{Freezing}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tower_a1b785dc1e9fb979a10620ca183b5761d}{Tower} ()
+\item 
+\hyperlink{class_tower_a96972da33c287758c036c944eccdc5fe}{$\sim$\+Tower} ()
+\item 
+virtual void \hyperlink{class_tower_a06801dd47796aaa9942fb3d890d2196a}{upgrade\+Tower} ()=0
+\item 
+bool \hyperlink{class_tower_a3bc66411a614f108ceaefd255bdb4179}{can\+Attack} (\hyperlink{class_critter}{Critter} $\ast$critter)
+\begin{DoxyCompactList}\small\item\em Determines whether tower can attack a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tower_aa4d0884a1fc45d6b47e8ed4a3cd23b34}{can\+Apply\+Special\+After\+Effects} (\hyperlink{class_critter}{Critter} $\ast$critter)
+\begin{DoxyCompactList}\small\item\em Determines whether tower can apply a special effect on a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay. \end{DoxyCompactList}\item 
+void \hyperlink{class_tower_a9f067c2b9e5e6987f341704b8b098606}{attack} ()
+\item 
+void \hyperlink{class_tower_a127550c2fb83a1b51b10f13bbba18707}{update} ()
+\item 
+sf\+::\+Vector2f \hyperlink{class_tower_acfb9cb7c1b2c1573929ff7d618aa996b}{find\+Collision\+Path} (\hyperlink{class_critter}{Critter} $\ast$critter)
+\begin{DoxyCompactList}\small\item\em Determines collision path based on position of tower object and the distance in a straight line towards critter. \end{DoxyCompactList}\item 
+void \hyperlink{class_tower_a7deaf3f9565d32468d3056fa5bcc43b0}{rotate\+Towards\+Target} ()
+\begin{DoxyCompactList}\small\item\em Rotates the tower to face the critter it is attacking. \end{DoxyCompactList}\item 
+float \hyperlink{class_tower_ac73968b76cfd64ae3d5c7d3300ec9935}{angle} (float x, float y)
+\begin{DoxyCompactList}\small\item\em Calculates angle between an x and y component in degrees from the horizontal. \end{DoxyCompactList}\item 
+int \hyperlink{class_tower_abe79d42828ca9c8ba4b60263e566697f}{get\+I\+D} () const 
+\item 
+std\+::string \hyperlink{class_tower_ad830cdd9f1870479b5763b7ee9c33c8d}{get\+Name} () const 
+\item 
+\hyperlink{class_tower_a110a21c18d4ec095c6234bd17f004b3e}{Tower\+::\+Tower\+Type} \hyperlink{class_tower_a87db306927fd4022cae1369b88688ed7}{get\+Type} () const 
+\item 
+\hyperlink{class_tower_a23889cd9ee2fbae0420c97105fd6ebc8}{Tower\+::\+Upgrade\+Level} \hyperlink{class_tower_ae8236cf1fac3f2fd791312e3dc59d904}{get\+Upgrade\+Level} () const 
+\item 
+int \hyperlink{class_tower_a198af6f04dad766d019b72fc667b90a7}{get\+Power} () const 
+\item 
+\hyperlink{class_tower_a52bcc3e7f85c01b3105e919717503169}{Tower\+::\+Range} \hyperlink{class_tower_ab33ee35d8f02b8961a8fb7697e5e9cea}{get\+Range} () const 
+\item 
+sf\+::\+Circle\+Shape \hyperlink{class_tower_a829a95b9dc022cc07ecd4d5c0afa7260}{get\+Range\+Shape} () const 
+\item 
+\hyperlink{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2}{Tower\+::\+Rate\+Of\+Fire} \hyperlink{class_tower_acf53d0a9123761730bd3e737a5b5a854}{get\+Rate\+Of\+Fire} () const 
+\item 
+bool \hyperlink{class_tower_a488db197289e0850f573310a13cfecef}{get\+Is\+Firing} () const 
+\item 
+\hyperlink{class_tower_a355ab1cbcfd8c4d037ccf8937f784445}{Tower\+::\+Special\+Effect} \hyperlink{class_tower_a9ef4f0f087f1bc09fe0e4e30e44ca6a5}{get\+Special\+Effect} () const 
+\item 
+int \hyperlink{class_tower_af2bb341e8011c2526ad5c58e11d79b28}{get\+Buy\+Cost} () const 
+\item 
+int \hyperlink{class_tower_adae75d4203ca7c3a92da1fe367d64bac}{get\+Sell\+Cost} () const 
+\item 
+int \hyperlink{class_tower_a6211c9d5d2718c1d65efb0b636e74d77}{get\+Upgrade\+Cost} () const 
+\item 
+\hyperlink{class_critter}{Critter} $\ast$ \hyperlink{class_tower_ad5d042b8ab67fdcae27ecbd82fb27b0c}{get\+Target} () const 
+\item 
+void \hyperlink{class_tower_a2ad5e52d8c8e3c5783b1c3499f19ceca}{set\+I\+D} (int \hyperlink{class_tower_a02ec2f8d1c4dea2f7fc002d8626c8b28}{\+\_\+id})
+\item 
+void \hyperlink{class_tower_a47ee9428118e95e689950ad605f90cb3}{set\+Type} (\hyperlink{class_tower_a110a21c18d4ec095c6234bd17f004b3e}{Tower\+::\+Tower\+Type} \+\_\+tower\+\_\+type)
+\item 
+void \hyperlink{class_tower_ac31643b1a10e1821d90583dc9ff03943}{set\+Upgrade\+Level} (\hyperlink{class_tower_a23889cd9ee2fbae0420c97105fd6ebc8}{Tower\+::\+Upgrade\+Level} \hyperlink{class_tower_a0172731487da6a0480901e031e2aecbe}{\+\_\+upgrade\+\_\+level})
+\item 
+void \hyperlink{class_tower_a89f3c815849be59057c2bcdeb1bb097f}{set\+Power} (int \hyperlink{class_tower_af9e223c165f5632944868df3dfc70bee}{\+\_\+power})
+\item 
+void \hyperlink{class_tower_a3490999581d98e1e99e4cfaf328e1155}{set\+Range} (\hyperlink{class_tower_a52bcc3e7f85c01b3105e919717503169}{Tower\+::\+Range} \hyperlink{class_tower_a71ece6661af3529aaa2da1bf30a53fd5}{\+\_\+range})
+\item 
+void \hyperlink{class_tower_a1770164e2620e27413a05cf6adad1287}{set\+Range\+Shape} (\hyperlink{class_tower_a52bcc3e7f85c01b3105e919717503169}{Tower\+::\+Range} range)
+\item 
+void \hyperlink{class_tower_a954b831038f6fe86e40d0dcd398bd239}{set\+Rate\+Of\+Fire} (\hyperlink{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2}{Tower\+::\+Rate\+Of\+Fire} \hyperlink{class_tower_a746898a9884a60cf09c5b4d0f1fdac2a}{\+\_\+rate\+\_\+of\+\_\+fire})
+\item 
+void \hyperlink{class_tower_af1ca7002ff17d468f7b9b3b5e4f99348}{set\+Is\+Firing} (bool b)
+\item 
+void \hyperlink{class_tower_ac2b7becdd52924a8787cf7de2a62fff5}{set\+Special\+Effect} (\hyperlink{class_tower_a355ab1cbcfd8c4d037ccf8937f784445}{Tower\+::\+Special\+Effect} \hyperlink{class_tower_ad6a84071c2e7f48386443c469961116c}{\+\_\+special\+\_\+effect})
+\item 
+void \hyperlink{class_tower_ad103dd810daf5865560a9a8df0e9a783}{set\+Buy\+Cost} (int \hyperlink{class_tower_a102680a58c45f98a79609ce8961a7bed}{\+\_\+buy\+\_\+cost})
+\item 
+void \hyperlink{class_tower_ade5f41558a0240b5596a017a23334336}{set\+Sell\+Cost} (int \hyperlink{class_tower_a7f50414500ec524ccc6ffb7069328d1e}{\+\_\+sell\+\_\+cost})
+\item 
+void \hyperlink{class_tower_af0366aa989249fc2d8254b967dd2f9aa}{set\+Upgrade\+Cost} (int \hyperlink{class_tower_ade771f89ab1aecb165efb74592e71261}{\+\_\+upgrade\+\_\+cost})
+\item 
+void \hyperlink{class_tower_ac8251f835bd2a94690d1c6e4f1e18d93}{set\+Target} (\hyperlink{class_critter}{Critter} $\ast$crit)
+\item 
+std\+::string \hyperlink{class_tower_a2427fab36824f8ec98273cb5e563e0c9}{get\+Tower\+Specs} ()
+\item 
+virtual bool \hyperlink{class_tower_a518ff249dec05cdd026a830d845abfd2}{circle\+To\+Circle\+Intersection} (\hyperlink{class_game_object}{Game\+Object} $\ast$game\+\_\+object)
+\begin{DoxyCompactList}\small\item\em Overrides method to apply to tower range sf\+::\+Circle\+Shape object. \end{DoxyCompactList}\item 
+void \hyperlink{class_tower_a7df1e896cdd5cdf7cc2169d6d4f9a6cf}{apply\+Special\+Effect} (\hyperlink{class_critter}{Critter} $\ast$critter)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_tower_a02ec2f8d1c4dea2f7fc002d8626c8b28}{\+\_\+id}
+\item 
+std\+::string \hyperlink{class_tower_ac29247d1ed8c97c105f5f1e05fb1f92c}{\+\_\+name}
+\item 
+\hyperlink{class_tower_a110a21c18d4ec095c6234bd17f004b3e}{Tower\+Type} \hyperlink{class_tower_adebb7de2d38284d29e3ca6b37c4a2be9}{\+\_\+type}
+\item 
+\hyperlink{class_tower_a23889cd9ee2fbae0420c97105fd6ebc8}{Upgrade\+Level} \hyperlink{class_tower_a0172731487da6a0480901e031e2aecbe}{\+\_\+upgrade\+\_\+level}
+\item 
+int \hyperlink{class_tower_af9e223c165f5632944868df3dfc70bee}{\+\_\+power}
+\item 
+\hyperlink{class_tower_a52bcc3e7f85c01b3105e919717503169}{Range} \hyperlink{class_tower_a71ece6661af3529aaa2da1bf30a53fd5}{\+\_\+range}
+\item 
+sf\+::\+Circle\+Shape \hyperlink{class_tower_ae1c75d802145f4b64d6a42820557e708}{\+\_\+range\+\_\+shape}
+\item 
+\hyperlink{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2}{Rate\+Of\+Fire} \hyperlink{class_tower_a746898a9884a60cf09c5b4d0f1fdac2a}{\+\_\+rate\+\_\+of\+\_\+fire}
+\item 
+\hyperlink{class_tower_a355ab1cbcfd8c4d037ccf8937f784445}{Special\+Effect} \hyperlink{class_tower_ad6a84071c2e7f48386443c469961116c}{\+\_\+special\+\_\+effect}
+\item 
+int \hyperlink{class_tower_a102680a58c45f98a79609ce8961a7bed}{\+\_\+buy\+\_\+cost}
+\item 
+int \hyperlink{class_tower_ade771f89ab1aecb165efb74592e71261}{\+\_\+upgrade\+\_\+cost}
+\item 
+int \hyperlink{class_tower_a7f50414500ec524ccc6ffb7069328d1e}{\+\_\+sell\+\_\+cost}
+\item 
+\hyperlink{class_critter}{Critter} $\ast$ \hyperlink{class_tower_a8ce9a2da58e6b3563ffddf1ff70826e4}{\+\_\+target}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Clock \hyperlink{class_tower_a3b6e91ecba4f6dadb4e5ed3514f970e9}{clock}
+\item 
+sf\+::\+Time \hyperlink{class_tower_a2536099ae99cd22eef6d84259dab5ed7}{time}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_tower_a52bcc3e7f85c01b3105e919717503169}{\index{Tower@{Tower}!Range@{Range}}
+\index{Range@{Range}!Tower@{Tower}}
+\subsubsection[{Range}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Tower\+::\+Range}}}\label{class_tower_a52bcc3e7f85c01b3105e919717503169}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Small@{Small}!Tower@{Tower}}\index{Tower@{Tower}!Small@{Small}}\item[{\em 
+\hypertarget{class_tower_a52bcc3e7f85c01b3105e919717503169a37e331c5e16c2d6f0efbd1ee6f070379}{Small}\label{class_tower_a52bcc3e7f85c01b3105e919717503169a37e331c5e16c2d6f0efbd1ee6f070379}
+}]\index{Medium@{Medium}!Tower@{Tower}}\index{Tower@{Tower}!Medium@{Medium}}\item[{\em 
+\hypertarget{class_tower_a52bcc3e7f85c01b3105e919717503169a32cf7d7ba017d0b4b5de67b8361debb5}{Medium}\label{class_tower_a52bcc3e7f85c01b3105e919717503169a32cf7d7ba017d0b4b5de67b8361debb5}
+}]\index{Large@{Large}!Tower@{Tower}}\index{Tower@{Tower}!Large@{Large}}\item[{\em 
+\hypertarget{class_tower_a52bcc3e7f85c01b3105e919717503169a14da209d684845bb2a30f0ceb007368a}{Large}\label{class_tower_a52bcc3e7f85c01b3105e919717503169a14da209d684845bb2a30f0ceb007368a}
+}]\end{description}
+\end{Desc}
+\hypertarget{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2}{\index{Tower@{Tower}!Rate\+Of\+Fire@{Rate\+Of\+Fire}}
+\index{Rate\+Of\+Fire@{Rate\+Of\+Fire}!Tower@{Tower}}
+\subsubsection[{Rate\+Of\+Fire}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Tower\+::\+Rate\+Of\+Fire}}}\label{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Slow@{Slow}!Tower@{Tower}}\index{Tower@{Tower}!Slow@{Slow}}\item[{\em 
+\hypertarget{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2a389259b288c5e1e55229bc31de93c04e}{Slow}\label{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2a389259b288c5e1e55229bc31de93c04e}
+}]\index{Normal@{Normal}!Tower@{Tower}}\index{Tower@{Tower}!Normal@{Normal}}\item[{\em 
+\hypertarget{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2acf86f1d4ed7c8db9c2177baf929b152c}{Normal}\label{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2acf86f1d4ed7c8db9c2177baf929b152c}
+}]\index{Fast@{Fast}!Tower@{Tower}}\index{Tower@{Tower}!Fast@{Fast}}\item[{\em 
+\hypertarget{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2aa62913c3081700b5c283d075f9f6240a}{Fast}\label{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2aa62913c3081700b5c283d075f9f6240a}
+}]\end{description}
+\end{Desc}
+\hypertarget{class_tower_a355ab1cbcfd8c4d037ccf8937f784445}{\index{Tower@{Tower}!Special\+Effect@{Special\+Effect}}
+\index{Special\+Effect@{Special\+Effect}!Tower@{Tower}}
+\subsubsection[{Special\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Tower\+::\+Special\+Effect}}}\label{class_tower_a355ab1cbcfd8c4d037ccf8937f784445}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{None@{None}!Tower@{Tower}}\index{Tower@{Tower}!None@{None}}\item[{\em 
+\hypertarget{class_tower_a355ab1cbcfd8c4d037ccf8937f784445a6cc15d5458e0ec17ed737a46a8580f29}{None}\label{class_tower_a355ab1cbcfd8c4d037ccf8937f784445a6cc15d5458e0ec17ed737a46a8580f29}
+}]\index{Slowing@{Slowing}!Tower@{Tower}}\index{Tower@{Tower}!Slowing@{Slowing}}\item[{\em 
+\hypertarget{class_tower_a355ab1cbcfd8c4d037ccf8937f784445aa395d83c58910dc4e8f2927ff2102a1f}{Slowing}\label{class_tower_a355ab1cbcfd8c4d037ccf8937f784445aa395d83c58910dc4e8f2927ff2102a1f}
+}]\index{Burning@{Burning}!Tower@{Tower}}\index{Tower@{Tower}!Burning@{Burning}}\item[{\em 
+\hypertarget{class_tower_a355ab1cbcfd8c4d037ccf8937f784445a278a02e93c587ce4032eed7176b9c5b6}{Burning}\label{class_tower_a355ab1cbcfd8c4d037ccf8937f784445a278a02e93c587ce4032eed7176b9c5b6}
+}]\index{Freezing@{Freezing}!Tower@{Tower}}\index{Tower@{Tower}!Freezing@{Freezing}}\item[{\em 
+\hypertarget{class_tower_a355ab1cbcfd8c4d037ccf8937f784445a95fcdb81c44a65a2513b49f37515c0c5}{Freezing}\label{class_tower_a355ab1cbcfd8c4d037ccf8937f784445a95fcdb81c44a65a2513b49f37515c0c5}
+}]\end{description}
+\end{Desc}
+\hypertarget{class_tower_a110a21c18d4ec095c6234bd17f004b3e}{\index{Tower@{Tower}!Tower\+Type@{Tower\+Type}}
+\index{Tower\+Type@{Tower\+Type}!Tower@{Tower}}
+\subsubsection[{Tower\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Tower\+::\+Tower\+Type}}}\label{class_tower_a110a21c18d4ec095c6234bd17f004b3e}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Shih\+Tzu@{Shih\+Tzu}!Tower@{Tower}}\index{Tower@{Tower}!Shih\+Tzu@{Shih\+Tzu}}\item[{\em 
+\hypertarget{class_tower_a110a21c18d4ec095c6234bd17f004b3eafc7b29cc9464c60eccaf32bfbe9bcaa5}{Shih\+Tzu}\label{class_tower_a110a21c18d4ec095c6234bd17f004b3eafc7b29cc9464c60eccaf32bfbe9bcaa5}
+}]\index{Dalmatian@{Dalmatian}!Tower@{Tower}}\index{Tower@{Tower}!Dalmatian@{Dalmatian}}\item[{\em 
+\hypertarget{class_tower_a110a21c18d4ec095c6234bd17f004b3ea4c4f3bb9f46dae3c4007388964d70918}{Dalmatian}\label{class_tower_a110a21c18d4ec095c6234bd17f004b3ea4c4f3bb9f46dae3c4007388964d70918}
+}]\index{Bulldog@{Bulldog}!Tower@{Tower}}\index{Tower@{Tower}!Bulldog@{Bulldog}}\item[{\em 
+\hypertarget{class_tower_a110a21c18d4ec095c6234bd17f004b3eab8e7a477424b107e0e8e39401c757e03}{Bulldog}\label{class_tower_a110a21c18d4ec095c6234bd17f004b3eab8e7a477424b107e0e8e39401c757e03}
+}]\end{description}
+\end{Desc}
+\hypertarget{class_tower_a23889cd9ee2fbae0420c97105fd6ebc8}{\index{Tower@{Tower}!Upgrade\+Level@{Upgrade\+Level}}
+\index{Upgrade\+Level@{Upgrade\+Level}!Tower@{Tower}}
+\subsubsection[{Upgrade\+Level}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Tower\+::\+Upgrade\+Level}}}\label{class_tower_a23889cd9ee2fbae0420c97105fd6ebc8}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Upgrade0@{Upgrade0}!Tower@{Tower}}\index{Tower@{Tower}!Upgrade0@{Upgrade0}}\item[{\em 
+\hypertarget{class_tower_a23889cd9ee2fbae0420c97105fd6ebc8abe0f7ad4cff5a00b5f28a08d31ac2e36}{Upgrade0}\label{class_tower_a23889cd9ee2fbae0420c97105fd6ebc8abe0f7ad4cff5a00b5f28a08d31ac2e36}
+}]\index{Upgrade1@{Upgrade1}!Tower@{Tower}}\index{Tower@{Tower}!Upgrade1@{Upgrade1}}\item[{\em 
+\hypertarget{class_tower_a23889cd9ee2fbae0420c97105fd6ebc8a964336205476003154ee384bd0b22618}{Upgrade1}\label{class_tower_a23889cd9ee2fbae0420c97105fd6ebc8a964336205476003154ee384bd0b22618}
+}]\index{Upgrade2@{Upgrade2}!Tower@{Tower}}\index{Tower@{Tower}!Upgrade2@{Upgrade2}}\item[{\em 
+\hypertarget{class_tower_a23889cd9ee2fbae0420c97105fd6ebc8a8af5b96db8bb80cdad0397d0661f7bd7}{Upgrade2}\label{class_tower_a23889cd9ee2fbae0420c97105fd6ebc8a8af5b96db8bb80cdad0397d0661f7bd7}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tower_a1b785dc1e9fb979a10620ca183b5761d}{\index{Tower@{Tower}!Tower@{Tower}}
+\index{Tower@{Tower}!Tower@{Tower}}
+\subsubsection[{Tower}]{\setlength{\rightskip}{0pt plus 5cm}Tower\+::\+Tower (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tower_a1b785dc1e9fb979a10620ca183b5761d}
+\hypertarget{class_tower_a96972da33c287758c036c944eccdc5fe}{\index{Tower@{Tower}!````~Tower@{$\sim$\+Tower}}
+\index{````~Tower@{$\sim$\+Tower}!Tower@{Tower}}
+\subsubsection[{$\sim$\+Tower}]{\setlength{\rightskip}{0pt plus 5cm}Tower\+::$\sim$\+Tower (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_tower_a96972da33c287758c036c944eccdc5fe}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{class_tower_a96972da33c287758c036c944eccdc5fe_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tower_ac73968b76cfd64ae3d5c7d3300ec9935}{\index{Tower@{Tower}!angle@{angle}}
+\index{angle@{angle}!Tower@{Tower}}
+\subsubsection[{angle}]{\setlength{\rightskip}{0pt plus 5cm}float Tower\+::angle (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_tower_ac73968b76cfd64ae3d5c7d3300ec9935}
+
+
+Calculates angle between an x and y component in degrees from the horizontal. 
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{class_tower_ac73968b76cfd64ae3d5c7d3300ec9935_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_a7df1e896cdd5cdf7cc2169d6d4f9a6cf}{\index{Tower@{Tower}!apply\+Special\+Effect@{apply\+Special\+Effect}}
+\index{apply\+Special\+Effect@{apply\+Special\+Effect}!Tower@{Tower}}
+\subsubsection[{apply\+Special\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::apply\+Special\+Effect (
+\begin{DoxyParamCaption}
+\item[{{\bf Critter} $\ast$}]{critter}
+\end{DoxyParamCaption}
+)}}\label{class_tower_a7df1e896cdd5cdf7cc2169d6d4f9a6cf}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_a7df1e896cdd5cdf7cc2169d6d4f9a6cf_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_a7df1e896cdd5cdf7cc2169d6d4f9a6cf_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_a9f067c2b9e5e6987f341704b8b098606}{\index{Tower@{Tower}!attack@{attack}}
+\index{attack@{attack}!Tower@{Tower}}
+\subsubsection[{attack}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::attack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tower_a9f067c2b9e5e6987f341704b8b098606}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{class_tower_a9f067c2b9e5e6987f341704b8b098606_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{class_tower_a9f067c2b9e5e6987f341704b8b098606_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_aa4d0884a1fc45d6b47e8ed4a3cd23b34}{\index{Tower@{Tower}!can\+Apply\+Special\+After\+Effects@{can\+Apply\+Special\+After\+Effects}}
+\index{can\+Apply\+Special\+After\+Effects@{can\+Apply\+Special\+After\+Effects}!Tower@{Tower}}
+\subsubsection[{can\+Apply\+Special\+After\+Effects}]{\setlength{\rightskip}{0pt plus 5cm}bool Tower\+::can\+Apply\+Special\+After\+Effects (
+\begin{DoxyParamCaption}
+\item[{{\bf Critter} $\ast$}]{critter}
+\end{DoxyParamCaption}
+)}}\label{class_tower_aa4d0884a1fc45d6b47e8ed4a3cd23b34}
+
+
+Determines whether tower can apply a special effect on a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_aa4d0884a1fc45d6b47e8ed4a3cd23b34_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_a3bc66411a614f108ceaefd255bdb4179}{\index{Tower@{Tower}!can\+Attack@{can\+Attack}}
+\index{can\+Attack@{can\+Attack}!Tower@{Tower}}
+\subsubsection[{can\+Attack}]{\setlength{\rightskip}{0pt plus 5cm}bool Tower\+::can\+Attack (
+\begin{DoxyParamCaption}
+\item[{{\bf Critter} $\ast$}]{critter}
+\end{DoxyParamCaption}
+)}}\label{class_tower_a3bc66411a614f108ceaefd255bdb4179}
+
+
+Determines whether tower can attack a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_a3bc66411a614f108ceaefd255bdb4179_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{class_tower_a3bc66411a614f108ceaefd255bdb4179_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_a518ff249dec05cdd026a830d845abfd2}{\index{Tower@{Tower}!circle\+To\+Circle\+Intersection@{circle\+To\+Circle\+Intersection}}
+\index{circle\+To\+Circle\+Intersection@{circle\+To\+Circle\+Intersection}!Tower@{Tower}}
+\subsubsection[{circle\+To\+Circle\+Intersection}]{\setlength{\rightskip}{0pt plus 5cm}bool Tower\+::circle\+To\+Circle\+Intersection (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Object} $\ast$}]{game\+\_\+object}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tower_a518ff249dec05cdd026a830d845abfd2}
+
+
+Overrides method to apply to tower range sf\+::\+Circle\+Shape object. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_object_a3a9fd4ee6157fcf61fd8f7d7318598c5}{Game\+Object}.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_a518ff249dec05cdd026a830d845abfd2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_a518ff249dec05cdd026a830d845abfd2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_acfb9cb7c1b2c1573929ff7d618aa996b}{\index{Tower@{Tower}!find\+Collision\+Path@{find\+Collision\+Path}}
+\index{find\+Collision\+Path@{find\+Collision\+Path}!Tower@{Tower}}
+\subsubsection[{find\+Collision\+Path}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f Tower\+::find\+Collision\+Path (
+\begin{DoxyParamCaption}
+\item[{{\bf Critter} $\ast$}]{critter}
+\end{DoxyParamCaption}
+)}}\label{class_tower_acfb9cb7c1b2c1573929ff7d618aa996b}
+
+
+Determines collision path based on position of tower object and the distance in a straight line towards critter. 
+
+\begin{DoxyReturn}{Returns}
+sf\+::\+Vector2f 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_acfb9cb7c1b2c1573929ff7d618aa996b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_acfb9cb7c1b2c1573929ff7d618aa996b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_af2bb341e8011c2526ad5c58e11d79b28}{\index{Tower@{Tower}!get\+Buy\+Cost@{get\+Buy\+Cost}}
+\index{get\+Buy\+Cost@{get\+Buy\+Cost}!Tower@{Tower}}
+\subsubsection[{get\+Buy\+Cost}]{\setlength{\rightskip}{0pt plus 5cm}int Tower\+::get\+Buy\+Cost (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tower_af2bb341e8011c2526ad5c58e11d79b28}
+\hypertarget{class_tower_abe79d42828ca9c8ba4b60263e566697f}{\index{Tower@{Tower}!get\+I\+D@{get\+I\+D}}
+\index{get\+I\+D@{get\+I\+D}!Tower@{Tower}}
+\subsubsection[{get\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}int Tower\+::get\+I\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tower_abe79d42828ca9c8ba4b60263e566697f}
+\hypertarget{class_tower_a488db197289e0850f573310a13cfecef}{\index{Tower@{Tower}!get\+Is\+Firing@{get\+Is\+Firing}}
+\index{get\+Is\+Firing@{get\+Is\+Firing}!Tower@{Tower}}
+\subsubsection[{get\+Is\+Firing}]{\setlength{\rightskip}{0pt plus 5cm}bool Tower\+::get\+Is\+Firing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tower_a488db197289e0850f573310a13cfecef}
+\hypertarget{class_tower_ad830cdd9f1870479b5763b7ee9c33c8d}{\index{Tower@{Tower}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Tower@{Tower}}
+\subsubsection[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Tower\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tower_ad830cdd9f1870479b5763b7ee9c33c8d}
+\hypertarget{class_tower_a198af6f04dad766d019b72fc667b90a7}{\index{Tower@{Tower}!get\+Power@{get\+Power}}
+\index{get\+Power@{get\+Power}!Tower@{Tower}}
+\subsubsection[{get\+Power}]{\setlength{\rightskip}{0pt plus 5cm}int Tower\+::get\+Power (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tower_a198af6f04dad766d019b72fc667b90a7}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_a198af6f04dad766d019b72fc667b90a7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_ab33ee35d8f02b8961a8fb7697e5e9cea}{\index{Tower@{Tower}!get\+Range@{get\+Range}}
+\index{get\+Range@{get\+Range}!Tower@{Tower}}
+\subsubsection[{get\+Range}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower\+::\+Range} Tower\+::get\+Range (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tower_ab33ee35d8f02b8961a8fb7697e5e9cea}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_ab33ee35d8f02b8961a8fb7697e5e9cea_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_a829a95b9dc022cc07ecd4d5c0afa7260}{\index{Tower@{Tower}!get\+Range\+Shape@{get\+Range\+Shape}}
+\index{get\+Range\+Shape@{get\+Range\+Shape}!Tower@{Tower}}
+\subsubsection[{get\+Range\+Shape}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Circle\+Shape Tower\+::get\+Range\+Shape (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tower_a829a95b9dc022cc07ecd4d5c0afa7260}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_a829a95b9dc022cc07ecd4d5c0afa7260_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_acf53d0a9123761730bd3e737a5b5a854}{\index{Tower@{Tower}!get\+Rate\+Of\+Fire@{get\+Rate\+Of\+Fire}}
+\index{get\+Rate\+Of\+Fire@{get\+Rate\+Of\+Fire}!Tower@{Tower}}
+\subsubsection[{get\+Rate\+Of\+Fire}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower\+::\+Rate\+Of\+Fire} Tower\+::get\+Rate\+Of\+Fire (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tower_acf53d0a9123761730bd3e737a5b5a854}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_acf53d0a9123761730bd3e737a5b5a854_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_adae75d4203ca7c3a92da1fe367d64bac}{\index{Tower@{Tower}!get\+Sell\+Cost@{get\+Sell\+Cost}}
+\index{get\+Sell\+Cost@{get\+Sell\+Cost}!Tower@{Tower}}
+\subsubsection[{get\+Sell\+Cost}]{\setlength{\rightskip}{0pt plus 5cm}int Tower\+::get\+Sell\+Cost (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tower_adae75d4203ca7c3a92da1fe367d64bac}
+\hypertarget{class_tower_a9ef4f0f087f1bc09fe0e4e30e44ca6a5}{\index{Tower@{Tower}!get\+Special\+Effect@{get\+Special\+Effect}}
+\index{get\+Special\+Effect@{get\+Special\+Effect}!Tower@{Tower}}
+\subsubsection[{get\+Special\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower\+::\+Special\+Effect} Tower\+::get\+Special\+Effect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tower_a9ef4f0f087f1bc09fe0e4e30e44ca6a5}
+\hypertarget{class_tower_ad5d042b8ab67fdcae27ecbd82fb27b0c}{\index{Tower@{Tower}!get\+Target@{get\+Target}}
+\index{get\+Target@{get\+Target}!Tower@{Tower}}
+\subsubsection[{get\+Target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Critter} $\ast$ Tower\+::get\+Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tower_ad5d042b8ab67fdcae27ecbd82fb27b0c}
+\hypertarget{class_tower_a2427fab36824f8ec98273cb5e563e0c9}{\index{Tower@{Tower}!get\+Tower\+Specs@{get\+Tower\+Specs}}
+\index{get\+Tower\+Specs@{get\+Tower\+Specs}!Tower@{Tower}}
+\subsubsection[{get\+Tower\+Specs}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Tower\+::get\+Tower\+Specs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tower_a2427fab36824f8ec98273cb5e563e0c9}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_a2427fab36824f8ec98273cb5e563e0c9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_a87db306927fd4022cae1369b88688ed7}{\index{Tower@{Tower}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Tower@{Tower}}
+\subsubsection[{get\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower\+::\+Tower\+Type} Tower\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tower_a87db306927fd4022cae1369b88688ed7}
+\hypertarget{class_tower_a6211c9d5d2718c1d65efb0b636e74d77}{\index{Tower@{Tower}!get\+Upgrade\+Cost@{get\+Upgrade\+Cost}}
+\index{get\+Upgrade\+Cost@{get\+Upgrade\+Cost}!Tower@{Tower}}
+\subsubsection[{get\+Upgrade\+Cost}]{\setlength{\rightskip}{0pt plus 5cm}int Tower\+::get\+Upgrade\+Cost (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tower_a6211c9d5d2718c1d65efb0b636e74d77}
+\hypertarget{class_tower_ae8236cf1fac3f2fd791312e3dc59d904}{\index{Tower@{Tower}!get\+Upgrade\+Level@{get\+Upgrade\+Level}}
+\index{get\+Upgrade\+Level@{get\+Upgrade\+Level}!Tower@{Tower}}
+\subsubsection[{get\+Upgrade\+Level}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower\+::\+Upgrade\+Level} Tower\+::get\+Upgrade\+Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tower_ae8236cf1fac3f2fd791312e3dc59d904}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_ae8236cf1fac3f2fd791312e3dc59d904_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_a7deaf3f9565d32468d3056fa5bcc43b0}{\index{Tower@{Tower}!rotate\+Towards\+Target@{rotate\+Towards\+Target}}
+\index{rotate\+Towards\+Target@{rotate\+Towards\+Target}!Tower@{Tower}}
+\subsubsection[{rotate\+Towards\+Target}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::rotate\+Towards\+Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tower_a7deaf3f9565d32468d3056fa5bcc43b0}
+
+
+Rotates the tower to face the critter it is attacking. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_a7deaf3f9565d32468d3056fa5bcc43b0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_ad103dd810daf5865560a9a8df0e9a783}{\index{Tower@{Tower}!set\+Buy\+Cost@{set\+Buy\+Cost}}
+\index{set\+Buy\+Cost@{set\+Buy\+Cost}!Tower@{Tower}}
+\subsubsection[{set\+Buy\+Cost}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::set\+Buy\+Cost (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+buy\+\_\+cost}
+\end{DoxyParamCaption}
+)}}\label{class_tower_ad103dd810daf5865560a9a8df0e9a783}
+\hypertarget{class_tower_a2ad5e52d8c8e3c5783b1c3499f19ceca}{\index{Tower@{Tower}!set\+I\+D@{set\+I\+D}}
+\index{set\+I\+D@{set\+I\+D}!Tower@{Tower}}
+\subsubsection[{set\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::set\+I\+D (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{class_tower_a2ad5e52d8c8e3c5783b1c3499f19ceca}
+\hypertarget{class_tower_af1ca7002ff17d468f7b9b3b5e4f99348}{\index{Tower@{Tower}!set\+Is\+Firing@{set\+Is\+Firing}}
+\index{set\+Is\+Firing@{set\+Is\+Firing}!Tower@{Tower}}
+\subsubsection[{set\+Is\+Firing}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::set\+Is\+Firing (
+\begin{DoxyParamCaption}
+\item[{bool}]{b}
+\end{DoxyParamCaption}
+)}}\label{class_tower_af1ca7002ff17d468f7b9b3b5e4f99348}
+\hypertarget{class_tower_a89f3c815849be59057c2bcdeb1bb097f}{\index{Tower@{Tower}!set\+Power@{set\+Power}}
+\index{set\+Power@{set\+Power}!Tower@{Tower}}
+\subsubsection[{set\+Power}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::set\+Power (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+power}
+\end{DoxyParamCaption}
+)}}\label{class_tower_a89f3c815849be59057c2bcdeb1bb097f}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{class_tower_a89f3c815849be59057c2bcdeb1bb097f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_a3490999581d98e1e99e4cfaf328e1155}{\index{Tower@{Tower}!set\+Range@{set\+Range}}
+\index{set\+Range@{set\+Range}!Tower@{Tower}}
+\subsubsection[{set\+Range}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::set\+Range (
+\begin{DoxyParamCaption}
+\item[{{\bf Tower\+::\+Range}}]{\+\_\+range}
+\end{DoxyParamCaption}
+)}}\label{class_tower_a3490999581d98e1e99e4cfaf328e1155}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{class_tower_a3490999581d98e1e99e4cfaf328e1155_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_a1770164e2620e27413a05cf6adad1287}{\index{Tower@{Tower}!set\+Range\+Shape@{set\+Range\+Shape}}
+\index{set\+Range\+Shape@{set\+Range\+Shape}!Tower@{Tower}}
+\subsubsection[{set\+Range\+Shape}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::set\+Range\+Shape (
+\begin{DoxyParamCaption}
+\item[{{\bf Tower\+::\+Range}}]{range}
+\end{DoxyParamCaption}
+)}}\label{class_tower_a1770164e2620e27413a05cf6adad1287}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{class_tower_a1770164e2620e27413a05cf6adad1287_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_a1770164e2620e27413a05cf6adad1287_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_a954b831038f6fe86e40d0dcd398bd239}{\index{Tower@{Tower}!set\+Rate\+Of\+Fire@{set\+Rate\+Of\+Fire}}
+\index{set\+Rate\+Of\+Fire@{set\+Rate\+Of\+Fire}!Tower@{Tower}}
+\subsubsection[{set\+Rate\+Of\+Fire}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::set\+Rate\+Of\+Fire (
+\begin{DoxyParamCaption}
+\item[{{\bf Tower\+::\+Rate\+Of\+Fire}}]{\+\_\+rate\+\_\+of\+\_\+fire}
+\end{DoxyParamCaption}
+)}}\label{class_tower_a954b831038f6fe86e40d0dcd398bd239}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_a954b831038f6fe86e40d0dcd398bd239_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_ade5f41558a0240b5596a017a23334336}{\index{Tower@{Tower}!set\+Sell\+Cost@{set\+Sell\+Cost}}
+\index{set\+Sell\+Cost@{set\+Sell\+Cost}!Tower@{Tower}}
+\subsubsection[{set\+Sell\+Cost}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::set\+Sell\+Cost (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+sell\+\_\+cost}
+\end{DoxyParamCaption}
+)}}\label{class_tower_ade5f41558a0240b5596a017a23334336}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{class_tower_ade5f41558a0240b5596a017a23334336_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_ac2b7becdd52924a8787cf7de2a62fff5}{\index{Tower@{Tower}!set\+Special\+Effect@{set\+Special\+Effect}}
+\index{set\+Special\+Effect@{set\+Special\+Effect}!Tower@{Tower}}
+\subsubsection[{set\+Special\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::set\+Special\+Effect (
+\begin{DoxyParamCaption}
+\item[{{\bf Tower\+::\+Special\+Effect}}]{\+\_\+special\+\_\+effect}
+\end{DoxyParamCaption}
+)}}\label{class_tower_ac2b7becdd52924a8787cf7de2a62fff5}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_ac2b7becdd52924a8787cf7de2a62fff5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_ac8251f835bd2a94690d1c6e4f1e18d93}{\index{Tower@{Tower}!set\+Target@{set\+Target}}
+\index{set\+Target@{set\+Target}!Tower@{Tower}}
+\subsubsection[{set\+Target}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::set\+Target (
+\begin{DoxyParamCaption}
+\item[{{\bf Critter} $\ast$}]{crit}
+\end{DoxyParamCaption}
+)}}\label{class_tower_ac8251f835bd2a94690d1c6e4f1e18d93}
+\hypertarget{class_tower_a47ee9428118e95e689950ad605f90cb3}{\index{Tower@{Tower}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!Tower@{Tower}}
+\subsubsection[{set\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::set\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Tower\+::\+Tower\+Type}}]{\+\_\+tower\+\_\+type}
+\end{DoxyParamCaption}
+)}}\label{class_tower_a47ee9428118e95e689950ad605f90cb3}
+\hypertarget{class_tower_af0366aa989249fc2d8254b967dd2f9aa}{\index{Tower@{Tower}!set\+Upgrade\+Cost@{set\+Upgrade\+Cost}}
+\index{set\+Upgrade\+Cost@{set\+Upgrade\+Cost}!Tower@{Tower}}
+\subsubsection[{set\+Upgrade\+Cost}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::set\+Upgrade\+Cost (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+upgrade\+\_\+cost}
+\end{DoxyParamCaption}
+)}}\label{class_tower_af0366aa989249fc2d8254b967dd2f9aa}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_af0366aa989249fc2d8254b967dd2f9aa_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_ac31643b1a10e1821d90583dc9ff03943}{\index{Tower@{Tower}!set\+Upgrade\+Level@{set\+Upgrade\+Level}}
+\index{set\+Upgrade\+Level@{set\+Upgrade\+Level}!Tower@{Tower}}
+\subsubsection[{set\+Upgrade\+Level}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::set\+Upgrade\+Level (
+\begin{DoxyParamCaption}
+\item[{{\bf Tower\+::\+Upgrade\+Level}}]{\+\_\+upgrade\+\_\+level}
+\end{DoxyParamCaption}
+)}}\label{class_tower_ac31643b1a10e1821d90583dc9ff03943}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_ac31643b1a10e1821d90583dc9ff03943_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_a127550c2fb83a1b51b10f13bbba18707}{\index{Tower@{Tower}!update@{update}}
+\index{update@{update}!Tower@{Tower}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tower_a127550c2fb83a1b51b10f13bbba18707}
+
+
+Implements \hyperlink{class_i_observer_a91a4770cbec97439f2faba69a1ed72e0}{I\+Observer}.
+
+\hypertarget{class_tower_a06801dd47796aaa9942fb3d890d2196a}{\index{Tower@{Tower}!upgrade\+Tower@{upgrade\+Tower}}
+\index{upgrade\+Tower@{upgrade\+Tower}!Tower@{Tower}}
+\subsubsection[{upgrade\+Tower}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Tower\+::upgrade\+Tower (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_tower_a06801dd47796aaa9942fb3d890d2196a}
+
+
+Implemented in \hyperlink{class_bulldog_adfecd22f881be0d7946534c2012275d7}{Bulldog}, \hyperlink{class_dalmatian_aa87cd8b4c763d84d24964024bde2fc9b}{Dalmatian}, and \hyperlink{class_shih_tzu_a9d8d599edbc19d2a16a65646d0cbc485}{Shih\+Tzu}.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_a06801dd47796aaa9942fb3d890d2196a_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_tower_a102680a58c45f98a79609ce8961a7bed}{\index{Tower@{Tower}!\+\_\+buy\+\_\+cost@{\+\_\+buy\+\_\+cost}}
+\index{\+\_\+buy\+\_\+cost@{\+\_\+buy\+\_\+cost}!Tower@{Tower}}
+\subsubsection[{\+\_\+buy\+\_\+cost}]{\setlength{\rightskip}{0pt plus 5cm}int Tower\+::\+\_\+buy\+\_\+cost\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_a102680a58c45f98a79609ce8961a7bed}
+\hypertarget{class_tower_a02ec2f8d1c4dea2f7fc002d8626c8b28}{\index{Tower@{Tower}!\+\_\+id@{\+\_\+id}}
+\index{\+\_\+id@{\+\_\+id}!Tower@{Tower}}
+\subsubsection[{\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}int Tower\+::\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_a02ec2f8d1c4dea2f7fc002d8626c8b28}
+\hypertarget{class_tower_ac29247d1ed8c97c105f5f1e05fb1f92c}{\index{Tower@{Tower}!\+\_\+name@{\+\_\+name}}
+\index{\+\_\+name@{\+\_\+name}!Tower@{Tower}}
+\subsubsection[{\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Tower\+::\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_ac29247d1ed8c97c105f5f1e05fb1f92c}
+\hypertarget{class_tower_af9e223c165f5632944868df3dfc70bee}{\index{Tower@{Tower}!\+\_\+power@{\+\_\+power}}
+\index{\+\_\+power@{\+\_\+power}!Tower@{Tower}}
+\subsubsection[{\+\_\+power}]{\setlength{\rightskip}{0pt plus 5cm}int Tower\+::\+\_\+power\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_af9e223c165f5632944868df3dfc70bee}
+\hypertarget{class_tower_a71ece6661af3529aaa2da1bf30a53fd5}{\index{Tower@{Tower}!\+\_\+range@{\+\_\+range}}
+\index{\+\_\+range@{\+\_\+range}!Tower@{Tower}}
+\subsubsection[{\+\_\+range}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Range} Tower\+::\+\_\+range\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_a71ece6661af3529aaa2da1bf30a53fd5}
+\hypertarget{class_tower_ae1c75d802145f4b64d6a42820557e708}{\index{Tower@{Tower}!\+\_\+range\+\_\+shape@{\+\_\+range\+\_\+shape}}
+\index{\+\_\+range\+\_\+shape@{\+\_\+range\+\_\+shape}!Tower@{Tower}}
+\subsubsection[{\+\_\+range\+\_\+shape}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Circle\+Shape Tower\+::\+\_\+range\+\_\+shape\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_ae1c75d802145f4b64d6a42820557e708}
+\hypertarget{class_tower_a746898a9884a60cf09c5b4d0f1fdac2a}{\index{Tower@{Tower}!\+\_\+rate\+\_\+of\+\_\+fire@{\+\_\+rate\+\_\+of\+\_\+fire}}
+\index{\+\_\+rate\+\_\+of\+\_\+fire@{\+\_\+rate\+\_\+of\+\_\+fire}!Tower@{Tower}}
+\subsubsection[{\+\_\+rate\+\_\+of\+\_\+fire}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rate\+Of\+Fire} Tower\+::\+\_\+rate\+\_\+of\+\_\+fire\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_a746898a9884a60cf09c5b4d0f1fdac2a}
+\hypertarget{class_tower_a7f50414500ec524ccc6ffb7069328d1e}{\index{Tower@{Tower}!\+\_\+sell\+\_\+cost@{\+\_\+sell\+\_\+cost}}
+\index{\+\_\+sell\+\_\+cost@{\+\_\+sell\+\_\+cost}!Tower@{Tower}}
+\subsubsection[{\+\_\+sell\+\_\+cost}]{\setlength{\rightskip}{0pt plus 5cm}int Tower\+::\+\_\+sell\+\_\+cost\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_a7f50414500ec524ccc6ffb7069328d1e}
+\hypertarget{class_tower_ad6a84071c2e7f48386443c469961116c}{\index{Tower@{Tower}!\+\_\+special\+\_\+effect@{\+\_\+special\+\_\+effect}}
+\index{\+\_\+special\+\_\+effect@{\+\_\+special\+\_\+effect}!Tower@{Tower}}
+\subsubsection[{\+\_\+special\+\_\+effect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Special\+Effect} Tower\+::\+\_\+special\+\_\+effect\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_ad6a84071c2e7f48386443c469961116c}
+\hypertarget{class_tower_a8ce9a2da58e6b3563ffddf1ff70826e4}{\index{Tower@{Tower}!\+\_\+target@{\+\_\+target}}
+\index{\+\_\+target@{\+\_\+target}!Tower@{Tower}}
+\subsubsection[{\+\_\+target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Critter}$\ast$ Tower\+::\+\_\+target\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_a8ce9a2da58e6b3563ffddf1ff70826e4}
+\hypertarget{class_tower_adebb7de2d38284d29e3ca6b37c4a2be9}{\index{Tower@{Tower}!\+\_\+type@{\+\_\+type}}
+\index{\+\_\+type@{\+\_\+type}!Tower@{Tower}}
+\subsubsection[{\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower\+Type} Tower\+::\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_adebb7de2d38284d29e3ca6b37c4a2be9}
+\hypertarget{class_tower_ade771f89ab1aecb165efb74592e71261}{\index{Tower@{Tower}!\+\_\+upgrade\+\_\+cost@{\+\_\+upgrade\+\_\+cost}}
+\index{\+\_\+upgrade\+\_\+cost@{\+\_\+upgrade\+\_\+cost}!Tower@{Tower}}
+\subsubsection[{\+\_\+upgrade\+\_\+cost}]{\setlength{\rightskip}{0pt plus 5cm}int Tower\+::\+\_\+upgrade\+\_\+cost\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_ade771f89ab1aecb165efb74592e71261}
+\hypertarget{class_tower_a0172731487da6a0480901e031e2aecbe}{\index{Tower@{Tower}!\+\_\+upgrade\+\_\+level@{\+\_\+upgrade\+\_\+level}}
+\index{\+\_\+upgrade\+\_\+level@{\+\_\+upgrade\+\_\+level}!Tower@{Tower}}
+\subsubsection[{\+\_\+upgrade\+\_\+level}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Upgrade\+Level} Tower\+::\+\_\+upgrade\+\_\+level\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_a0172731487da6a0480901e031e2aecbe}
+\hypertarget{class_tower_a3b6e91ecba4f6dadb4e5ed3514f970e9}{\index{Tower@{Tower}!clock@{clock}}
+\index{clock@{clock}!Tower@{Tower}}
+\subsubsection[{clock}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Clock Tower\+::clock\hspace{0.3cm}{\ttfamily [private]}}}\label{class_tower_a3b6e91ecba4f6dadb4e5ed3514f970e9}
+\hypertarget{class_tower_a2536099ae99cd22eef6d84259dab5ed7}{\index{Tower@{Tower}!time@{time}}
+\index{time@{time}!Tower@{Tower}}
+\subsubsection[{time}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Time Tower\+::time\hspace{0.3cm}{\ttfamily [private]}}}\label{class_tower_a2536099ae99cd22eef6d84259dab5ed7}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/game\+Objects/\hyperlink{_tower_8h}{Tower.\+h}\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/src/game\+Objects/\hyperlink{_tower_8cpp}{Tower.\+cpp}\end{DoxyCompactItemize}

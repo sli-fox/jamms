@@ -1,0 +1,7 @@
+<map id="Tower::rotateTowardsTarget" name="Tower::rotateTowardsTarget">
+<area shape="rect" id="node2" href="$class_tower.html#acfb9cb7c1b2c1573929ff7d618aa996b" title="Determines collision path based on position of tower object and the distance in a straight line towar..." alt="" coords="239,31,399,57"/>
+<area shape="rect" id="node5" href="$class_tower.html#ac73968b76cfd64ae3d5c7d3300ec9935" title="Calculates angle between an x and y component in degrees from the horizontal. " alt="" coords="272,81,367,108"/>
+<area shape="rect" id="node6" href="$class_game_object.html#a320a94559557834d53bffa538d8349c9" title="GameObject::setRotation" alt="" coords="235,132,404,159"/>
+<area shape="rect" id="node3" href="$class_game_object.html#a380c5cec0ed79277359dbbb9935f1ffe" title="GameObject::getPosition" alt="" coords="452,5,620,32"/>
+<area shape="rect" id="node4" href="$class_critter.html#a8fdba06ecb582e8b542e2e73a76f455d" title="Critter::getPosition" alt="" coords="471,56,601,83"/>
+</map>

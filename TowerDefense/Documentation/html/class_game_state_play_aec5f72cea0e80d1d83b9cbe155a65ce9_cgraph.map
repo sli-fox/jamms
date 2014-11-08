@@ -1,0 +1,5 @@
+<map id="GameStatePlay::handleGameOver" name="GameStatePlay::handleGameOver">
+<area shape="rect" id="node2" href="$class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="275,5,445,47"/>
+<area shape="rect" id="node3" href="$class_player.html#a1cd893cbffe289dd821a5df984c8a2de" title="Player::getLives" alt="" coords="303,71,417,98"/>
+<area shape="rect" id="node4" href="$class_game.html#a5898f1edb6e3bc1700b2ffb1943bc609" title="Helper push function for GameState stack. " alt="" coords="298,122,422,149"/>
+</map>

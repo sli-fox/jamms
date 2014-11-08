@@ -1,0 +1,223 @@
+\hypertarget{class_animation_handler}{\section{Animation\+Handler Class Reference}
+\label{class_animation_handler}\index{Animation\+Handler@{Animation\+Handler}}
+}
+
+
+Handles animations.  
+
+
+
+
+{\ttfamily \#include $<$Animation\+Handler.\+h$>$}
+
+
+
+Collaboration diagram for Animation\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_animation_handler__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_animation_handler_ae10c29a1cb88b70f31034da4b863098c}{Animation\+Handler} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_animation_handler}{Animation\+Handler} constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_animation_handler_a4d7522e516b77aa5ebd9340561156369}{Animation\+Handler} (const sf\+::\+Int\+Rect \&\hyperlink{class_animation_handler_a8615fd6169591c5788c9f6a83cdf0ec7}{frame\+\_\+size})
+\begin{DoxyCompactList}\small\item\em Overloading \hyperlink{class_animation_handler}{Animation\+Handler} constructor with frame size. \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_handler_ae517a14ed199418ccbc8d71db5ad5955}{add\+Animation} (\hyperlink{class_animation}{Animation} \&animation)
+\begin{DoxyCompactList}\small\item\em Add a new animation. \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_handler_a74c541905109998e971c578c4aa3e3de}{update} (const float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Updates the current frame of animation. \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_handler_a93f1509e5eccdf13a07ba1eb2256c6d0}{change\+Animation} (unsigned int animation\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Changes the animation. \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_handler_ae9cc10dd30d2c48eedb400d32b6eb4b6}{set\+Current\+Animation} (float \hyperlink{class_animation_handler_ad03db9fa9c9589a72b438033b283a9cb}{current\+\_\+animation})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Int\+Rect \hyperlink{class_animation_handler_ae38964052ccbdd44d92c8d23eb0b880d}{bounding\+\_\+rect}
+\begin{DoxyCompactList}\small\item\em Current section of the texture to be displayed. \end{DoxyCompactList}\item 
+sf\+::\+Int\+Rect \hyperlink{class_animation_handler_a8615fd6169591c5788c9f6a83cdf0ec7}{frame\+\_\+size}
+\begin{DoxyCompactList}\small\item\em Pixel dimensions of each animation frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{class_animation}{Animation} $>$ \hyperlink{class_animation_handler_ab04e2b457325095c264dba4a067690cd}{animations}
+\begin{DoxyCompactList}\small\item\em Array of animations. \end{DoxyCompactList}\item 
+float \hyperlink{class_animation_handler_a91dd0c9aeb1b824a2ddef6b6867a0245}{current\+\_\+time}
+\begin{DoxyCompactList}\small\item\em Time since the animation loop started. \end{DoxyCompactList}\item 
+int \hyperlink{class_animation_handler_ad03db9fa9c9589a72b438033b283a9cb}{current\+\_\+animation}
+\begin{DoxyCompactList}\small\item\em Current animation displayed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles animations. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_animation_handler_ae10c29a1cb88b70f31034da4b863098c}{\index{Animation\+Handler@{Animation\+Handler}!Animation\+Handler@{Animation\+Handler}}
+\index{Animation\+Handler@{Animation\+Handler}!Animation\+Handler@{Animation\+Handler}}
+\subsubsection[{Animation\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}Animation\+Handler\+::\+Animation\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_animation_handler_ae10c29a1cb88b70f31034da4b863098c}
+
+
+\hyperlink{class_animation_handler}{Animation\+Handler} constructor. 
+
+\hypertarget{class_animation_handler_a4d7522e516b77aa5ebd9340561156369}{\index{Animation\+Handler@{Animation\+Handler}!Animation\+Handler@{Animation\+Handler}}
+\index{Animation\+Handler@{Animation\+Handler}!Animation\+Handler@{Animation\+Handler}}
+\subsubsection[{Animation\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}Animation\+Handler\+::\+Animation\+Handler (
+\begin{DoxyParamCaption}
+\item[{const sf\+::\+Int\+Rect \&}]{frame\+\_\+size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_animation_handler_a4d7522e516b77aa5ebd9340561156369}
+
+
+Overloading \hyperlink{class_animation_handler}{Animation\+Handler} constructor with frame size. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_animation_handler_ae517a14ed199418ccbc8d71db5ad5955}{\index{Animation\+Handler@{Animation\+Handler}!add\+Animation@{add\+Animation}}
+\index{add\+Animation@{add\+Animation}!Animation\+Handler@{Animation\+Handler}}
+\subsubsection[{add\+Animation}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\+Handler\+::add\+Animation (
+\begin{DoxyParamCaption}
+\item[{{\bf Animation} \&}]{animation}
+\end{DoxyParamCaption}
+)}}\label{class_animation_handler_ae517a14ed199418ccbc8d71db5ad5955}
+
+
+Add a new animation. 
+
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_animation_handler_ae517a14ed199418ccbc8d71db5ad5955_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_animation_handler_a93f1509e5eccdf13a07ba1eb2256c6d0}{\index{Animation\+Handler@{Animation\+Handler}!change\+Animation@{change\+Animation}}
+\index{change\+Animation@{change\+Animation}!Animation\+Handler@{Animation\+Handler}}
+\subsubsection[{change\+Animation}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\+Handler\+::change\+Animation (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{animation\+\_\+index}
+\end{DoxyParamCaption}
+)}}\label{class_animation_handler_a93f1509e5eccdf13a07ba1eb2256c6d0}
+
+
+Changes the animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em animation\+\_\+index} & Index of new animation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void.
+\end{DoxyReturn}
+The \hyperlink{class_animation_handler_a93f1509e5eccdf13a07ba1eb2256c6d0}{change\+Animation()} function sets the current animation to the new animation if the new animation is valid. If the new animation is set, elapsed time is reset. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_animation_handler_a93f1509e5eccdf13a07ba1eb2256c6d0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_animation_handler_ae9cc10dd30d2c48eedb400d32b6eb4b6}{\index{Animation\+Handler@{Animation\+Handler}!set\+Current\+Animation@{set\+Current\+Animation}}
+\index{set\+Current\+Animation@{set\+Current\+Animation}!Animation\+Handler@{Animation\+Handler}}
+\subsubsection[{set\+Current\+Animation}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\+Handler\+::set\+Current\+Animation (
+\begin{DoxyParamCaption}
+\item[{float}]{current\+\_\+animation}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_animation_handler_ae9cc10dd30d2c48eedb400d32b6eb4b6}
+\hypertarget{class_animation_handler_a74c541905109998e971c578c4aa3e3de}{\index{Animation\+Handler@{Animation\+Handler}!update@{update}}
+\index{update@{update}!Animation\+Handler@{Animation\+Handler}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\+Handler\+::update (
+\begin{DoxyParamCaption}
+\item[{const float}]{delta\+\_\+time}
+\end{DoxyParamCaption}
+)}}\label{class_animation_handler_a74c541905109998e971c578c4aa3e3de}
+
+
+Updates the current frame of animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & Time since the update was last called (i.\+e. time for one frame to be executed). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void.
+\end{DoxyReturn}
+The \hyperlink{class_animation_handler_a74c541905109998e971c578c4aa3e3de}{update()} function calculates and sets up the next frame for the animation. It also keeps track of elapsed time. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_animation_handler_a74c541905109998e971c578c4aa3e3de_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_animation_handler_ab04e2b457325095c264dba4a067690cd}{\index{Animation\+Handler@{Animation\+Handler}!animations@{animations}}
+\index{animations@{animations}!Animation\+Handler@{Animation\+Handler}}
+\subsubsection[{animations}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Animation}$>$ Animation\+Handler\+::animations\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_handler_ab04e2b457325095c264dba4a067690cd}
+
+
+Array of animations. 
+
+\hypertarget{class_animation_handler_ae38964052ccbdd44d92c8d23eb0b880d}{\index{Animation\+Handler@{Animation\+Handler}!bounding\+\_\+rect@{bounding\+\_\+rect}}
+\index{bounding\+\_\+rect@{bounding\+\_\+rect}!Animation\+Handler@{Animation\+Handler}}
+\subsubsection[{bounding\+\_\+rect}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Int\+Rect Animation\+Handler\+::bounding\+\_\+rect}}\label{class_animation_handler_ae38964052ccbdd44d92c8d23eb0b880d}
+
+
+Current section of the texture to be displayed. 
+
+\hypertarget{class_animation_handler_ad03db9fa9c9589a72b438033b283a9cb}{\index{Animation\+Handler@{Animation\+Handler}!current\+\_\+animation@{current\+\_\+animation}}
+\index{current\+\_\+animation@{current\+\_\+animation}!Animation\+Handler@{Animation\+Handler}}
+\subsubsection[{current\+\_\+animation}]{\setlength{\rightskip}{0pt plus 5cm}int Animation\+Handler\+::current\+\_\+animation\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_handler_ad03db9fa9c9589a72b438033b283a9cb}
+
+
+Current animation displayed. 
+
+\hypertarget{class_animation_handler_a91dd0c9aeb1b824a2ddef6b6867a0245}{\index{Animation\+Handler@{Animation\+Handler}!current\+\_\+time@{current\+\_\+time}}
+\index{current\+\_\+time@{current\+\_\+time}!Animation\+Handler@{Animation\+Handler}}
+\subsubsection[{current\+\_\+time}]{\setlength{\rightskip}{0pt plus 5cm}float Animation\+Handler\+::current\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_handler_a91dd0c9aeb1b824a2ddef6b6867a0245}
+
+
+Time since the animation loop started. 
+
+\hypertarget{class_animation_handler_a8615fd6169591c5788c9f6a83cdf0ec7}{\index{Animation\+Handler@{Animation\+Handler}!frame\+\_\+size@{frame\+\_\+size}}
+\index{frame\+\_\+size@{frame\+\_\+size}!Animation\+Handler@{Animation\+Handler}}
+\subsubsection[{frame\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Int\+Rect Animation\+Handler\+::frame\+\_\+size}}\label{class_animation_handler_a8615fd6169591c5788c9f6a83cdf0ec7}
+
+
+Pixel dimensions of each animation frame. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/utils/\hyperlink{_animation_handler_8h}{Animation\+Handler.\+h}\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/src/utils/\hyperlink{_animation_handler_8cpp}{Animation\+Handler.\+cpp}\end{DoxyCompactItemize}

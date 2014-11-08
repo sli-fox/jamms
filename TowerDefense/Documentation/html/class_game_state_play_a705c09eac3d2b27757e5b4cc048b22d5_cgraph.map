@@ -1,0 +1,15 @@
+<map id="GameStatePlay::GameStatePlay" name="GameStatePlay::GameStatePlay">
+<area shape="rect" id="node2" href="$class_game_state_play.html#a3a6947bfe8be3d1974094acb8362eda9" title="GameStatePlay::initialize\lButtonMap" alt="" coords="286,53,455,94"/>
+<area shape="rect" id="node3" href="$class_game_object.html#acc593e5b75a58c4a59ad59da654ce807" title="Loads a texture using the TextureManager class and creates a sprite. " alt="" coords="551,31,677,57"/>
+<area shape="rect" id="node6" href="$class_game_object.html#a180d6e9e7afa44b30ca678a95c6f4dad" title="Sets the initial draw position of a GameObject instance. " alt="" coords="530,100,698,127"/>
+<area shape="rect" id="node7" href="$class_game_state_play.html#aee1a80f02dd69d8f06c041020eb4447e" title="Add waypoints. " alt="" coords="268,169,473,196"/>
+<area shape="rect" id="node8" href="$class_game_state_play.html#aae84ae33a68caa8bf05a4a2a49a2b41d" title="Create waypoint vector from the map&#39;s path. " alt="" coords="269,221,472,262"/>
+<area shape="rect" id="node12" href="$class_game_state_play.html#a6047cbdce7daa2092d95bf786db5267a" title="GameStatePlay::setCritter\lWaveLevels" alt="" coords="283,286,458,327"/>
+<area shape="rect" id="node13" href="$class_game_state_play.html#a6ebd21112217871afe2e0160f6eb0753" title="Get starting waypoint. " alt="" coords="521,337,707,378"/>
+<area shape="rect" id="node14" href="$class_critter_wave.html#a1244e59ebd702edd2530e6256779ace0" title="Returns a reference to a Critter in the map. " alt="" coords="295,403,447,429"/>
+<area shape="rect" id="node4" href="$class_texture_manager.html#a0a6bc63e2f6fa7e1d0aee5b24cfa089a" title="Returns the only instance of a TextureManager object. " alt="" coords="755,5,945,32"/>
+<area shape="rect" id="node5" href="$class_texture_manager.html#aa631660b783d448a29b1096c64fe65e4" title="Returns the instance of a texture loaded by the file name. " alt="" coords="755,56,945,83"/>
+<area shape="rect" id="node9" href="$class_map.html#a0fb29a18390a3008cab71f602aa4209b" title="Map::getMapPath" alt="" coords="551,177,677,204"/>
+<area shape="rect" id="node10" href="$class_tile.html#ac292026c5bfa9181f221bf8a7844ee89" title="Tile::getTileX" alt="" coords="567,228,661,255"/>
+<area shape="rect" id="node11" href="$class_tile.html#aecb8774e1eadb370cc0e350cec68e472" title="Tile::getTileY" alt="" coords="565,279,663,305"/>
+</map>

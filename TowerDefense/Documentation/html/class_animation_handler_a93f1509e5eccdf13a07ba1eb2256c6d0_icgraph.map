@@ -1,0 +1,6 @@
+<map id="AnimationHandler::changeAnimation" name="AnimationHandler::changeAnimation">
+<area shape="rect" id="node2" href="$class_critter.html#afe6dafa77006e5b6b7f3f905447af3fb" title="Draw a Critter. " alt="" coords="228,31,320,57"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#a63a3ba0c891afd8ec126806bab4f315a" title="Draws game to the render window. " alt="" coords="374,5,523,32"/>
+<area shape="rect" id="node5" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="368,56,529,83"/>
+<area shape="rect" id="node4" href="$class_game_state_play.html#ab41594c10b04429a3126d4a8085de82d" title="GameStatePlay::runThreads" alt="" coords="577,5,764,32"/>
+</map>

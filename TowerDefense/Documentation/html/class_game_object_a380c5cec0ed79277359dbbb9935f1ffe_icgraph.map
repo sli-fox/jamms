@@ -1,0 +1,4 @@
+<map id="GameObject::getPosition" name="GameObject::getPosition">
+<area shape="rect" id="node2" href="$class_tower.html#acfb9cb7c1b2c1573929ff7d618aa996b" title="Determines collision path based on position of tower object and the distance in a straight line towar..." alt="" coords="221,5,381,32"/>
+<area shape="rect" id="node3" href="$class_tower.html#a7deaf3f9565d32468d3056fa5bcc43b0" title="Rotates the tower to face the critter it is attacking. " alt="" coords="429,5,611,32"/>
+</map>

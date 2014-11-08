@@ -1,0 +1,5 @@
+<map id="Tower::getRateOfFire" name="Tower::getRateOfFire">
+<area shape="rect" id="node2" href="$class_tower.html#a3bc66411a614f108ceaefd255bdb4179" title="Determines whether tower can attack a critter based on whether the critter falls within its range whi..." alt="" coords="230,5,353,32"/>
+<area shape="rect" id="node4" href="$class_tower.html#aa4d0884a1fc45d6b47e8ed4a3cd23b34" title="Determines whether tower can apply a special effect on a critter based on whether the critter falls w..." alt="" coords="197,57,385,98"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="433,5,621,32"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="opendir" name="opendir">
+<area shape="rect" id="node2" href="$dirent_8h.html#a1d22e9bf392cecbd177224e626d3ad98" title="dirent_set_errno" alt="" coords="431,25,545,52"/>
+<area shape="rect" id="node3" href="$dirent_8h.html#aead3f72cc4062f3d0a4a613c5cd29794" title="dirent_mbstowcs_s" alt="" coords="117,25,252,52"/>
+<area shape="rect" id="node4" href="$dirent_8h.html#a930234a4d128076584ce384e7807c22e" title="_wopendir" alt="" coords="145,76,225,102"/>
+<area shape="rect" id="node5" href="$dirent_8h.html#a11433e0800895fb8a56df9b410bdea29" title="dirent_first" alt="" coords="300,76,383,102"/>
+<area shape="rect" id="node6" href="$dirent_8h.html#ad94806a93f9e8280fb5c7f692d6542bb" title="_wclosedir" alt="" coords="300,126,383,153"/>
+</map>

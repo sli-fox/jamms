@@ -1,0 +1,4 @@
+<map id="CritterWave::CritterWave" name="CritterWave::CritterWave">
+<area shape="rect" id="node2" href="$class_critter_wave.html#a3c6dcf79b57cb7e208471c5bc387f22d" title="Adding a Critter to the wave. " alt="" coords="231,5,384,32"/>
+<area shape="rect" id="node3" href="$class_critter_factory.html#a3195f421d348fe4ee5c7e49e605745c1" title="Factory method for Critter class. " alt="" coords="217,56,397,83"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="GameStatePlay::registerObserver" name="GameStatePlay::registerObserver">
+<area shape="rect" id="node2" href="$class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="269,5,481,47"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="529,13,717,39"/>
+</map>

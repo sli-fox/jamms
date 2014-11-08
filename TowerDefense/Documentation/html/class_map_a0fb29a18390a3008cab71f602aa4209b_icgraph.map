@@ -1,0 +1,7 @@
+<map id="Map::getMapPath" name="Map::getMapPath">
+<area shape="rect" id="node2" href="$class_game_state_play.html#aae84ae33a68caa8bf05a4a2a49a2b41d" title="Create waypoint vector from the map&#39;s path. " alt="" coords="179,5,381,47"/>
+<area shape="rect" id="node4" href="$class_map.html#a7c8e0a56747581e1b9f5248ceb043275" title="Map::save" alt="" coords="239,71,321,98"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#a705c09eac3d2b27757e5b4cc048b22d5" title="Constructor that takes in a pointer to the Game that created them. " alt="" coords="429,13,644,39"/>
+<area shape="rect" id="node5" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="455,64,619,105"/>
+<area shape="rect" id="node6" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="692,64,839,105"/>
+</map>

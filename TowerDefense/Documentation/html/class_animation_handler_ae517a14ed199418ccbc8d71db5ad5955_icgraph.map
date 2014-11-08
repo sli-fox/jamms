@@ -1,0 +1,6 @@
+<map id="AnimationHandler::addAnimation" name="AnimationHandler::addAnimation">
+<area shape="rect" id="node2" href="$class_black_cat.html#a2ae946e05f754f7d7bdbc753946425eb" title="Initialization function for a BlackCat. " alt="" coords="265,5,430,32"/>
+<area shape="rect" id="node4" href="$class_white_cat.html#a0a3c801e7a6b451b2b1caef9da137585" title="Initialization function for a WhiteCat. " alt="" coords="264,56,431,83"/>
+<area shape="rect" id="node3" href="$class_black_cat.html#a7974aa98721932e53102c10484af1abe" title="The BlackCat constructor. Calls initializeCritter() to set attributes of the BlackCat object..." alt="" coords="480,5,616,32"/>
+<area shape="rect" id="node5" href="$class_white_cat.html#a1af91c1252fac9ac94a9334bff97f6df" title="The WhiteCat constructor. Calls initializeCritter() to set attributes of the WhiteCat object..." alt="" coords="479,56,617,83"/>
+</map>

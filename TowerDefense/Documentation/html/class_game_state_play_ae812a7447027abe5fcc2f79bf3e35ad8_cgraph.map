@@ -1,0 +1,11 @@
+<map id="GameStatePlay::moveActivatedCritters" name="GameStatePlay::moveActivatedCritters">
+<area shape="rect" id="node2" href="$class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="267,91,437,133"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#a0d6ff2e65992c5fb29f180c6b1eb9435" title="GameStatePlay::moveCritter" alt="" coords="259,157,445,184"/>
+<area shape="rect" id="node4" href="$class_critter.html#ac2d188c14e482de7e28a9520d6f62a16" title="Critter::isAtNextWaypoint" alt="" coords="505,5,675,32"/>
+<area shape="rect" id="node5" href="$class_critter.html#affcdf706975d5a761acec7e5effea7b1" title="Critter::getMovementDirection" alt="" coords="493,56,687,83"/>
+<area shape="rect" id="node6" href="$class_critter.html#a96462bdb554e60ee1c3bb76d7cde3da6" title="Critter::updatePosition" alt="" coords="515,107,665,133"/>
+<area shape="rect" id="node7" href="$class_critter.html#a3785ffa05cec86b30264fbdbf613e4f8" title="Critter::getSpeed" alt="" coords="530,157,650,184"/>
+<area shape="rect" id="node8" href="$class_critter.html#a8a95119a0531e9372aa6a2a95b61edde" title="Critter::getCurrentWaypoint" alt="" coords="500,208,680,235"/>
+<area shape="rect" id="node9" href="$class_critter.html#a394069b23bdd1fd4f8caeab41b23c83d" title="Critter::setCurrentWaypoint" alt="" coords="500,259,680,285"/>
+<area shape="rect" id="node10" href="$class_critter.html#abe76d86eb653909910ee956195a16aec" title="Critter::setAnimationIndex" alt="" coords="504,309,676,336"/>
+</map>

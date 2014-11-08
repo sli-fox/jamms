@@ -1,0 +1,9 @@
+<map id="GameStateMapEditor::mapEditorCommandLibrary" name="GameStateMapEditor::mapEditorCommandLibrary">
+<area shape="rect" id="node2" href="$class_map.html#aa8e57f0e6d665def93ad7b33413e98a7" title="Map::getTile" alt="" coords="513,107,606,133"/>
+<area shape="rect" id="node4" href="$class_game_object.html#adf7e04407f7c2a5bd487b459efe9fd79" title="GameObject::spriteContains" alt="" coords="240,56,427,83"/>
+<area shape="rect" id="node5" href="$class_map.html#ab9561f11877716cf4687ed4dab54d7db" title="Map::addTile" alt="" coords="285,5,381,32"/>
+<area shape="rect" id="node7" href="$class_map.html#a69be425dd99011951d8c4f08b598703b" title="Map::removeTile" alt="" coords="275,157,391,184"/>
+<area shape="rect" id="node8" href="$class_map.html#ab12fa393f25fbbd4ad2fa183a033162b" title="Map::removeGameObject" alt="" coords="475,208,644,235"/>
+<area shape="rect" id="node3" href="$class_map.html#a6995c0de6fe380ffa652990490b867c8" title="Map::outOfBounds" alt="" coords="692,107,823,133"/>
+<area shape="rect" id="node6" href="$class_map.html#a63a6d8a5e6bcbc1cc92cd29fcff638db" title="Map::validPathPlacement" alt="" coords="475,56,644,83"/>
+</map>
