@@ -1,0 +1,7 @@
+<map id="Critter::updatePosition" name="Critter::updatePosition">
+<area shape="rect" id="node2" href="$class_critter.html#a628b203e25050a085786d3993a660ab9" title="Critter::controlCat" alt="" coords="235,8,359,35"/>
+<area shape="rect" id="node4" href="$class_game_state_play.html#a0d6ff2e65992c5fb29f180c6b1eb9435" title="GameStatePlay::moveCritter" alt="" coords="204,60,391,87"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="447,5,635,32"/>
+<area shape="rect" id="node5" href="$class_game_state_play.html#ae812a7447027abe5fcc2f79bf3e35ad8" title="GameStatePlay::moveActivated\lCritters" alt="" coords="439,57,644,98"/>
+<area shape="rect" id="node6" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="692,64,853,91"/>
+</map>

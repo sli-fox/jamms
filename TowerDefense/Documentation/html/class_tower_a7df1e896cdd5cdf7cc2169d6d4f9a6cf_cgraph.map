@@ -1,0 +1,6 @@
+<map id="Tower::applySpecialEffect" name="Tower::applySpecialEffect">
+<area shape="rect" id="node2" href="$_console_color_8h.html#abfbb0c9e0e5ee33dd1026c23381b78c5" title="red" alt="" coords="283,5,323,32"/>
+<area shape="rect" id="node3" href="$class_critter.html#a3785ffa05cec86b30264fbdbf613e4f8" title="Critter::getSpeed" alt="" coords="243,56,363,83"/>
+<area shape="rect" id="node4" href="$class_critter.html#ae843395fb1106cd2c550cd9be9f14df0" title="Critter::reduceSpeed" alt="" coords="233,107,374,133"/>
+<area shape="rect" id="node5" href="$class_tower.html#ae8236cf1fac3f2fd791312e3dc59d904" title="Tower::getUpgradeLevel" alt="" coords="224,157,383,184"/>
+</map>

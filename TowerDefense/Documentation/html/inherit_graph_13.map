@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_game_state.html" title="GameState virtual base class. GameState is an interface for states within the game. " alt="" coords="5,132,93,159"/>
+<area shape="rect" id="node2" href="$class_game_state_game_over.html" title="Game state that represents the game start, including the main game menu. " alt="" coords="141,5,291,32"/>
+<area shape="rect" id="node3" href="$class_game_state_main_menu.html" title="Game state that represents the game start, including the main game menu. " alt="" coords="142,56,290,83"/>
+<area shape="rect" id="node4" href="$class_game_state_map_editor.html" title="Game state that represents the gameplay. " alt="" coords="143,107,289,133"/>
+<area shape="rect" id="node5" href="$class_game_state_play.html" title="Game state that represents the gameplay. " alt="" coords="159,157,273,184"/>
+<area shape="rect" id="node6" href="$class_game_state_start.html" title="Game state that represents the game start, including the main game menu. " alt="" coords="158,208,274,235"/>
+<area shape="rect" id="node7" href="$class_game_state_win.html" title="Game state that represents the game start, including the main game menu. " alt="" coords="161,259,271,285"/>
+</map>

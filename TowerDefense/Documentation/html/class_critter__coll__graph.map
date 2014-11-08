@@ -1,0 +1,6 @@
+<map id="Critter" name="Critter">
+<area shape="rect" id="node2" href="$class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="5,285,131,524"/>
+<area shape="rect" id="node4" href="$class_i_subject.html" title="{ISubject\n||+ attach()\l+ detach()\l+ notify()\l}" alt="" coords="162,351,243,458"/>
+<area shape="rect" id="node7" href="$class_waypoint.html" title="Represents an Waypoint in the game. " alt="" coords="267,351,373,458"/>
+<area shape="rect" id="node8" href="$class_animation_handler.html" title="Handles animations. " alt="" coords="517,300,677,509"/>
+</map>

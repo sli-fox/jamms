@@ -1,0 +1,17 @@
+<map id="rapidxml::xml_base::value" name="rapidxml::xml_base::value">
+<area shape="rect" id="node2" href="$classrapidxml_1_1memory__pool.html#a4118581c29ee9a2f6b55ebf7dac185f8" title="rapidxml::memory_pool\l::allocate_node" alt="" coords="188,319,345,360"/>
+<area shape="rect" id="node3" href="$classrapidxml_1_1memory__pool.html#a0a10679fc17597d339a0dc107f8a94ac" title="rapidxml::memory_pool\l::clone_node" alt="" coords="400,123,557,164"/>
+<area shape="rect" id="node5" href="$singletonrapidxml_1_1xml__document.html#abc287ce83bcb2dc8519e300236004591" title="rapidxml::xml_document\l::parse_comment" alt="" coords="397,188,561,229"/>
+<area shape="rect" id="node6" href="$singletonrapidxml_1_1xml__document.html#a4c613f3a928f763b4c788422edda5860" title="rapidxml::xml_document\l::parse_doctype" alt="" coords="397,384,561,425"/>
+<area shape="rect" id="node7" href="$singletonrapidxml_1_1xml__document.html#a09e12a4233a07387d4b5a5ad239388aa" title="rapidxml::xml_document\l::parse_pi" alt="" coords="397,449,561,491"/>
+<area shape="rect" id="node8" href="$singletonrapidxml_1_1xml__document.html#aec6cedf45179b6378c670bc3ea509e61" title="rapidxml::xml_document\l::parse_and_append_data" alt="" coords="393,515,564,556"/>
+<area shape="rect" id="node9" href="$singletonrapidxml_1_1xml__document.html#ab94daeb25e8a1609e31210a45b2afa6c" title="rapidxml::xml_document\l::parse_cdata" alt="" coords="397,580,561,621"/>
+<area shape="rect" id="node14" href="$classrapidxml_1_1memory__pool.html#a3de2a66c983336e006ea3844e244ed30" title="rapidxml::memory_pool\l::allocate_attribute" alt="" coords="188,108,345,149"/>
+<area shape="rect" id="node15" href="$singletonrapidxml_1_1xml__document.html#ac0b3cd07b3d5cbaa83762a196c681519" title="rapidxml::xml_document\l::parse_node_attributes" alt="" coords="397,5,561,47"/>
+<area shape="rect" id="node16" href="$classrapidxml_1_1xml__base.html#a3b183c2db7022a6d30494dd2f0ac11e9" title="rapidxml::xml_base\l::value" alt="" coords="199,588,334,629"/>
+<area shape="rect" id="node4" href="$singletonrapidxml_1_1xml__document.html#a0151c52c82ba79ea0605c2facf39c534" title="rapidxml::xml_document\l::parse_xml_declaration" alt="" coords="397,253,561,295"/>
+<area shape="rect" id="node10" href="$singletonrapidxml_1_1xml__document.html#aea385acd096ab200d63a777d53435ada" title="rapidxml::xml_document\l::parse_element" alt="" coords="397,319,561,360"/>
+<area shape="rect" id="node11" href="$class_map.html#a7c8e0a56747581e1b9f5248ceb043275" title="Map::save" alt="" coords="438,71,519,98"/>
+<area shape="rect" id="node12" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="612,64,776,105"/>
+<area shape="rect" id="node13" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="824,64,971,105"/>
+</map>

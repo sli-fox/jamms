@@ -1,0 +1,26 @@
+<map id="rapidxml::memory_pool::align" name="rapidxml::memory_pool::align">
+<area shape="rect" id="node2" href="$classrapidxml_1_1memory__pool.html#aad377c835fdaed1cb2cc9df194cf84e4" title="rapidxml::memory_pool\l::clear" alt="" coords="416,71,573,112"/>
+<area shape="rect" id="node10" href="$classrapidxml_1_1memory__pool.html#a84d3d8d2cdfc00501e1dcf26d889ae03" title="rapidxml::memory_pool\l::set_allocator" alt="" coords="211,251,368,292"/>
+<area shape="rect" id="node11" href="$classrapidxml_1_1memory__pool.html#a1076043ef092e327e59dd988c1ba82fb" title="rapidxml::memory_pool\l::init" alt="" coords="211,133,368,175"/>
+<area shape="rect" id="node13" href="$classrapidxml_1_1memory__pool.html#a4e9cf53fa5f9da3a8f31b754bd94b4ec" title="rapidxml::memory_pool\l::allocate_aligned" alt="" coords="416,201,573,243"/>
+<area shape="rect" id="node3" href="$classrapidxml_1_1memory__pool.html#a0a3e82126e59e4077f41e933130bb5a0" title="rapidxml::memory_pool\l::~memory_pool" alt="" coords="625,5,782,47"/>
+<area shape="rect" id="node4" href="$singletonrapidxml_1_1xml__document.html#a826929ff54242532198701f19ff5f83f" title="rapidxml::xml_document\l::clear" alt="" coords="621,71,785,112"/>
+<area shape="rect" id="node5" href="$class_map.html#a7c8e0a56747581e1b9f5248ceb043275" title="Map::save" alt="" coords="878,173,959,199"/>
+<area shape="rect" id="node8" href="$class_map.html#a2b6b1ca722620f097ea044f1c41e411e" title="Map::load" alt="" coords="879,55,958,82"/>
+<area shape="rect" id="node6" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="1052,136,1216,177"/>
+<area shape="rect" id="node7" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="1264,136,1411,177"/>
+<area shape="rect" id="node9" href="$class_map.html#a11a8645ff656f9efeb5a6758b36d1264" title="Map::Map" alt="" coords="1094,55,1174,82"/>
+<area shape="rect" id="node12" href="$classrapidxml_1_1memory__pool.html#a0b609da81dff28a19ebd704400788429" title="Constructs empty pool with default allocator functions. " alt="" coords="416,136,573,177"/>
+<area shape="rect" id="node14" href="$classrapidxml_1_1memory__pool.html#a4118581c29ee9a2f6b55ebf7dac185f8" title="rapidxml::memory_pool\l::allocate_node" alt="" coords="625,387,782,428"/>
+<area shape="rect" id="node23" href="$classrapidxml_1_1memory__pool.html#a3de2a66c983336e006ea3844e244ed30" title="rapidxml::memory_pool\l::allocate_attribute" alt="" coords="625,201,782,243"/>
+<area shape="rect" id="node25" href="$classrapidxml_1_1memory__pool.html#a171941b39d55b868358da97462185f58" title="rapidxml::memory_pool\l::allocate_string" alt="" coords="625,136,782,177"/>
+<area shape="rect" id="node15" href="$classrapidxml_1_1memory__pool.html#a0a10679fc17597d339a0dc107f8a94ac" title="rapidxml::memory_pool\l::clone_node" alt="" coords="840,224,997,265"/>
+<area shape="rect" id="node16" href="$singletonrapidxml_1_1xml__document.html#a0151c52c82ba79ea0605c2facf39c534" title="rapidxml::xml_document\l::parse_xml_declaration" alt="" coords="837,551,1001,592"/>
+<area shape="rect" id="node17" href="$singletonrapidxml_1_1xml__document.html#abc287ce83bcb2dc8519e300236004591" title="rapidxml::xml_document\l::parse_comment" alt="" coords="837,616,1001,657"/>
+<area shape="rect" id="node18" href="$singletonrapidxml_1_1xml__document.html#a4c613f3a928f763b4c788422edda5860" title="rapidxml::xml_document\l::parse_doctype" alt="" coords="837,289,1001,331"/>
+<area shape="rect" id="node19" href="$singletonrapidxml_1_1xml__document.html#a09e12a4233a07387d4b5a5ad239388aa" title="rapidxml::xml_document\l::parse_pi" alt="" coords="837,681,1001,723"/>
+<area shape="rect" id="node20" href="$singletonrapidxml_1_1xml__document.html#aec6cedf45179b6378c670bc3ea509e61" title="rapidxml::xml_document\l::parse_and_append_data" alt="" coords="833,355,1004,396"/>
+<area shape="rect" id="node21" href="$singletonrapidxml_1_1xml__document.html#ab94daeb25e8a1609e31210a45b2afa6c" title="rapidxml::xml_document\l::parse_cdata" alt="" coords="837,420,1001,461"/>
+<area shape="rect" id="node22" href="$singletonrapidxml_1_1xml__document.html#aea385acd096ab200d63a777d53435ada" title="rapidxml::xml_document\l::parse_element" alt="" coords="837,485,1001,527"/>
+<area shape="rect" id="node24" href="$singletonrapidxml_1_1xml__document.html#ac0b3cd07b3d5cbaa83762a196c681519" title="rapidxml::xml_document\l::parse_node_attributes" alt="" coords="837,107,1001,148"/>
+</map>

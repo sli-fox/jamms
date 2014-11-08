@@ -1,0 +1,9 @@
+<map id="Dalmatian::Dalmatian" name="Dalmatian::Dalmatian">
+<area shape="rect" id="node2" href="$class_tower.html#a1770164e2620e27413a05cf6adad1287" title="Tower::setRangeShape" alt="" coords="206,5,362,32"/>
+<area shape="rect" id="node4" href="$class_game_object.html#acc593e5b75a58c4a59ad59da654ce807" title="Loads a texture using the TextureManager class and creates a sprite. " alt="" coords="221,56,347,83"/>
+<area shape="rect" id="node7" href="$class_game_object.html#a180d6e9e7afa44b30ca678a95c6f4dad" title="Sets the initial draw position of a GameObject instance. " alt="" coords="200,107,368,133"/>
+<area shape="rect" id="node8" href="$_console_color_8h.html#a04ab64d75dbc16fee70b58f76b28ba36" title="green" alt="" coords="257,157,311,184"/>
+<area shape="rect" id="node3" href="$class_tower.html#ab33ee35d8f02b8961a8fb7697e5e9cea" title="Tower::getRange" alt="" coords="452,5,571,32"/>
+<area shape="rect" id="node5" href="$class_texture_manager.html#a0a6bc63e2f6fa7e1d0aee5b24cfa089a" title="Returns the only instance of a TextureManager object. " alt="" coords="416,56,607,83"/>
+<area shape="rect" id="node6" href="$class_texture_manager.html#aa631660b783d448a29b1096c64fe65e4" title="Returns the instance of a texture loaded by the file name. " alt="" coords="416,107,607,133"/>
+</map>

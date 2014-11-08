@@ -1,0 +1,383 @@
+\hypertarget{classrapidxml_1_1xml__base}{\section{rapidxml\+:\+:xml\+\_\+base$<$ Ch $>$ Class Template Reference}
+\label{classrapidxml_1_1xml__base}\index{rapidxml\+::xml\+\_\+base$<$ Ch $>$@{rapidxml\+::xml\+\_\+base$<$ Ch $>$}}
+}
+
+
+{\ttfamily \#include $<$rapidxml.\+hpp$>$}
+
+
+
+Inheritance diagram for rapidxml\+:\+:xml\+\_\+base$<$ Ch $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classrapidxml_1_1xml__base__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rapidxml\+:\+:xml\+\_\+base$<$ Ch $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classrapidxml_1_1xml__base__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classrapidxml_1_1xml__base_a23e7f7aac02d17a0a01afb597e4b966b}{xml\+\_\+base} ()
+\item 
+Ch $\ast$ \hyperlink{classrapidxml_1_1xml__base_a9a09739310469995db078ebd0da3ed45}{name} () const 
+\item 
+std\+::size\+\_\+t \hyperlink{classrapidxml_1_1xml__base_a7e7f98b3d01e1eab8dc1ca69aad9af84}{name\+\_\+size} () const 
+\item 
+Ch $\ast$ \hyperlink{classrapidxml_1_1xml__base_adcdaccff61c665f039d9344e447b7445}{value} () const 
+\item 
+std\+::size\+\_\+t \hyperlink{classrapidxml_1_1xml__base_a9fcf201ed0915ac18dd43b0b5dcfaf32}{value\+\_\+size} () const 
+\item 
+void \hyperlink{classrapidxml_1_1xml__base_ae55060ae958c6e6465d6c8db852ec6ce}{name} (const Ch $\ast$name, std\+::size\+\_\+t size)
+\item 
+void \hyperlink{classrapidxml_1_1xml__base_a4611ddc82ac83a527c65606600eb2a0d}{name} (const Ch $\ast$name)
+\item 
+void \hyperlink{classrapidxml_1_1xml__base_a3b183c2db7022a6d30494dd2f0ac11e9}{value} (const Ch $\ast$value, std\+::size\+\_\+t size)
+\item 
+void \hyperlink{classrapidxml_1_1xml__base_a81e63ec4bfd2d7ef0a6c2ed49be6e623}{value} (const Ch $\ast$value)
+\item 
+\hyperlink{singletonrapidxml_1_1xml__node}{xml\+\_\+node}$<$ Ch $>$ $\ast$ \hyperlink{classrapidxml_1_1xml__base_a7f31ae930f93852830234db1ae59c4c4}{parent} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Ch $\ast$ \hyperlink{classrapidxml_1_1xml__base_ad96ff6b1e41dab3ff60b9bc4df769a75}{nullstr} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ch $\ast$ \hyperlink{classrapidxml_1_1xml__base_afd9851ed43e14619db0d7075ef8e9e8a}{m\+\_\+name}
+\item 
+Ch $\ast$ \hyperlink{classrapidxml_1_1xml__base_a278a1ea63b0b70219b946cec47fa00ea}{m\+\_\+value}
+\item 
+std\+::size\+\_\+t \hyperlink{classrapidxml_1_1xml__base_a5a8c76a7274b4180213796422c4df76f}{m\+\_\+name\+\_\+size}
+\item 
+std\+::size\+\_\+t \hyperlink{classrapidxml_1_1xml__base_aa3a49d8ceddb8a8d7edb773a2226b89c}{m\+\_\+value\+\_\+size}
+\item 
+\hyperlink{singletonrapidxml_1_1xml__node}{xml\+\_\+node}$<$ Ch $>$ $\ast$ \hyperlink{classrapidxml_1_1xml__base_a90d5f660f078f66563fd7b2d8387ccb0}{m\+\_\+parent}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Ch = char$>$class rapidxml\+::xml\+\_\+base$<$ Ch $>$}
+
+Base class for \hyperlink{singletonrapidxml_1_1xml__node}{xml\+\_\+node} and \hyperlink{singletonrapidxml_1_1xml__attribute}{xml\+\_\+attribute} implementing common functions\+: \hyperlink{classrapidxml_1_1xml__base_a9a09739310469995db078ebd0da3ed45}{name()}, \hyperlink{classrapidxml_1_1xml__base_a7e7f98b3d01e1eab8dc1ca69aad9af84}{name\+\_\+size()}, \hyperlink{classrapidxml_1_1xml__base_adcdaccff61c665f039d9344e447b7445}{value()}, \hyperlink{classrapidxml_1_1xml__base_a9fcf201ed0915ac18dd43b0b5dcfaf32}{value\+\_\+size()} and \hyperlink{classrapidxml_1_1xml__base_a7f31ae930f93852830234db1ae59c4c4}{parent()}. 
+\begin{DoxyParams}{Parameters}
+{\em Ch} & Character type to use \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classrapidxml_1_1xml__base_a23e7f7aac02d17a0a01afb597e4b966b}{\index{rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}!xml\+\_\+base@{xml\+\_\+base}}
+\index{xml\+\_\+base@{xml\+\_\+base}!rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}}
+\subsubsection[{xml\+\_\+base}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ {\bf rapidxml\+::xml\+\_\+base}$<$ Ch $>$\+::{\bf xml\+\_\+base} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classrapidxml_1_1xml__base_a23e7f7aac02d17a0a01afb597e4b966b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classrapidxml_1_1xml__base_a9a09739310469995db078ebd0da3ed45}{\index{rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}!name@{name}}
+\index{name@{name}!rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ Ch$\ast$ {\bf rapidxml\+::xml\+\_\+base}$<$ Ch $>$\+::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classrapidxml_1_1xml__base_a9a09739310469995db078ebd0da3ed45}
+Gets name of the node. Interpretation of name depends on type of node. Note that name will not be zero-\/terminated if \hyperlink{namespacerapidxml_af3fc88ba6bee33482a2db81b1da36ea1}{rapidxml\+::parse\+\_\+no\+\_\+string\+\_\+terminators} option was selected during parse. ~\newline
+~\newline
+ Use \hyperlink{classrapidxml_1_1xml__base_a7e7f98b3d01e1eab8dc1ca69aad9af84}{name\+\_\+size()} function to determine length of the name. \begin{DoxyReturn}{Returns}
+Name of node, or empty string if node has no name. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classrapidxml_1_1xml__base_a9a09739310469995db078ebd0da3ed45_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1xml__base_a9a09739310469995db078ebd0da3ed45_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1xml__base_ae55060ae958c6e6465d6c8db852ec6ce}{\index{rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}!name@{name}}
+\index{name@{name}!rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ void {\bf rapidxml\+::xml\+\_\+base}$<$ Ch $>$\+::name (
+\begin{DoxyParamCaption}
+\item[{const Ch $\ast$}]{name, }
+\item[{std\+::size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classrapidxml_1_1xml__base_ae55060ae958c6e6465d6c8db852ec6ce}
+Sets name of node to a non zero-\/terminated string. See ownership\+\_\+of\+\_\+strings. ~\newline
+~\newline
+ Note that node does not own its name or value, it only stores a pointer to it. It will not delete or otherwise free the pointer on destruction. It is reponsibility of the user to properly manage lifetime of the string. The easiest way to achieve it is to use \hyperlink{classrapidxml_1_1memory__pool}{memory\+\_\+pool} of the document to allocate the string -\/ on destruction of the document the string will be automatically freed. ~\newline
+~\newline
+ Size of name must be specified separately, because name does not have to be zero terminated. Use \hyperlink{classrapidxml_1_1xml__base_a4611ddc82ac83a527c65606600eb2a0d}{name(const Ch $\ast$)} function to have the length automatically calculated (string must be zero terminated). 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of node to set. Does not have to be zero terminated. \\
+\hline
+{\em size} & Size of name, in characters. This does not include zero terminator, if one is present. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1xml__base_ae55060ae958c6e6465d6c8db852ec6ce_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1xml__base_a4611ddc82ac83a527c65606600eb2a0d}{\index{rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}!name@{name}}
+\index{name@{name}!rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ void {\bf rapidxml\+::xml\+\_\+base}$<$ Ch $>$\+::name (
+\begin{DoxyParamCaption}
+\item[{const Ch $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classrapidxml_1_1xml__base_a4611ddc82ac83a527c65606600eb2a0d}
+Sets name of node to a zero-\/terminated string. See also ownership\+\_\+of\+\_\+strings and \hyperlink{classrapidxml_1_1xml__base_ae55060ae958c6e6465d6c8db852ec6ce}{xml\+\_\+node\+::name(const Ch $\ast$, std\+::size\+\_\+t)}. 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of node to set. Must be zero terminated. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1xml__base_a4611ddc82ac83a527c65606600eb2a0d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1xml__base_a7e7f98b3d01e1eab8dc1ca69aad9af84}{\index{rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}!name\+\_\+size@{name\+\_\+size}}
+\index{name\+\_\+size@{name\+\_\+size}!rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}}
+\subsubsection[{name\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ std\+::size\+\_\+t {\bf rapidxml\+::xml\+\_\+base}$<$ Ch $>$\+::name\+\_\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classrapidxml_1_1xml__base_a7e7f98b3d01e1eab8dc1ca69aad9af84}
+Gets size of node name, not including terminator character. This function works correctly irrespective of whether name is or is not zero terminated. \begin{DoxyReturn}{Returns}
+Size of node name, in characters. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1xml__base_a7e7f98b3d01e1eab8dc1ca69aad9af84_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1xml__base_ad96ff6b1e41dab3ff60b9bc4df769a75}{\index{rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}!nullstr@{nullstr}}
+\index{nullstr@{nullstr}!rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}}
+\subsubsection[{nullstr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ static Ch$\ast$ {\bf rapidxml\+::xml\+\_\+base}$<$ Ch $>$\+::nullstr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}}\label{classrapidxml_1_1xml__base_ad96ff6b1e41dab3ff60b9bc4df769a75}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1xml__base_ad96ff6b1e41dab3ff60b9bc4df769a75_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1xml__base_a7f31ae930f93852830234db1ae59c4c4}{\index{rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}!parent@{parent}}
+\index{parent@{parent}!rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}}
+\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ {\bf xml\+\_\+node}$<$Ch$>$$\ast$ {\bf rapidxml\+::xml\+\_\+base}$<$ Ch $>$\+::parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classrapidxml_1_1xml__base_a7f31ae930f93852830234db1ae59c4c4}
+Gets node parent. \begin{DoxyReturn}{Returns}
+Pointer to parent node, or 0 if there is no parent. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1xml__base_a7f31ae930f93852830234db1ae59c4c4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1xml__base_adcdaccff61c665f039d9344e447b7445}{\index{rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}!value@{value}}
+\index{value@{value}!rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ Ch$\ast$ {\bf rapidxml\+::xml\+\_\+base}$<$ Ch $>$\+::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classrapidxml_1_1xml__base_adcdaccff61c665f039d9344e447b7445}
+Gets value of node. Interpretation of value depends on type of node. Note that value will not be zero-\/terminated if \hyperlink{namespacerapidxml_af3fc88ba6bee33482a2db81b1da36ea1}{rapidxml\+::parse\+\_\+no\+\_\+string\+\_\+terminators} option was selected during parse. ~\newline
+~\newline
+ Use \hyperlink{classrapidxml_1_1xml__base_a9fcf201ed0915ac18dd43b0b5dcfaf32}{value\+\_\+size()} function to determine length of the value. \begin{DoxyReturn}{Returns}
+Value of node, or empty string if node has no value. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classrapidxml_1_1xml__base_adcdaccff61c665f039d9344e447b7445_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1xml__base_adcdaccff61c665f039d9344e447b7445_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1xml__base_a3b183c2db7022a6d30494dd2f0ac11e9}{\index{rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}!value@{value}}
+\index{value@{value}!rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ void {\bf rapidxml\+::xml\+\_\+base}$<$ Ch $>$\+::value (
+\begin{DoxyParamCaption}
+\item[{const Ch $\ast$}]{value, }
+\item[{std\+::size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classrapidxml_1_1xml__base_a3b183c2db7022a6d30494dd2f0ac11e9}
+Sets value of node to a non zero-\/terminated string. See ownership\+\_\+of\+\_\+strings. ~\newline
+~\newline
+ Note that node does not own its name or value, it only stores a pointer to it. It will not delete or otherwise free the pointer on destruction. It is reponsibility of the user to properly manage lifetime of the string. The easiest way to achieve it is to use \hyperlink{classrapidxml_1_1memory__pool}{memory\+\_\+pool} of the document to allocate the string -\/ on destruction of the document the string will be automatically freed. ~\newline
+~\newline
+ Size of value must be specified separately, because it does not have to be zero terminated. Use \hyperlink{classrapidxml_1_1xml__base_a81e63ec4bfd2d7ef0a6c2ed49be6e623}{value(const Ch $\ast$)} function to have the length automatically calculated (string must be zero terminated). ~\newline
+~\newline
+ If an element has a child node of type node\+\_\+data, it will take precedence over element value when printing. If you want to manipulate data of elements using values, use parser flag \hyperlink{namespacerapidxml_ac2d21ef14a4e8936b94aca5d38b1a74d}{rapidxml\+::parse\+\_\+no\+\_\+data\+\_\+nodes} to prevent creation of data nodes by the parser. 
+\begin{DoxyParams}{Parameters}
+{\em value} & value of node to set. Does not have to be zero terminated. \\
+\hline
+{\em size} & Size of value, in characters. This does not include zero terminator, if one is present. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1xml__base_a3b183c2db7022a6d30494dd2f0ac11e9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1xml__base_a81e63ec4bfd2d7ef0a6c2ed49be6e623}{\index{rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}!value@{value}}
+\index{value@{value}!rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ void {\bf rapidxml\+::xml\+\_\+base}$<$ Ch $>$\+::value (
+\begin{DoxyParamCaption}
+\item[{const Ch $\ast$}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classrapidxml_1_1xml__base_a81e63ec4bfd2d7ef0a6c2ed49be6e623}
+Sets value of node to a zero-\/terminated string. See also ownership\+\_\+of\+\_\+strings and \hyperlink{classrapidxml_1_1xml__base_a3b183c2db7022a6d30494dd2f0ac11e9}{xml\+\_\+node\+::value(const Ch $\ast$, std\+::size\+\_\+t)}. 
+\begin{DoxyParams}{Parameters}
+{\em value} & Vame of node to set. Must be zero terminated. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1xml__base_a81e63ec4bfd2d7ef0a6c2ed49be6e623_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1xml__base_a9fcf201ed0915ac18dd43b0b5dcfaf32}{\index{rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}!value\+\_\+size@{value\+\_\+size}}
+\index{value\+\_\+size@{value\+\_\+size}!rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}}
+\subsubsection[{value\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ std\+::size\+\_\+t {\bf rapidxml\+::xml\+\_\+base}$<$ Ch $>$\+::value\+\_\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classrapidxml_1_1xml__base_a9fcf201ed0915ac18dd43b0b5dcfaf32}
+Gets size of node value, not including terminator character. This function works correctly irrespective of whether value is or is not zero terminated. \begin{DoxyReturn}{Returns}
+Size of node value, in characters. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classrapidxml_1_1xml__base_a9fcf201ed0915ac18dd43b0b5dcfaf32_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classrapidxml_1_1xml__base_afd9851ed43e14619db0d7075ef8e9e8a}{\index{rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}!m\+\_\+name@{m\+\_\+name}}
+\index{m\+\_\+name@{m\+\_\+name}!rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}}
+\subsubsection[{m\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ Ch$\ast$ {\bf rapidxml\+::xml\+\_\+base}$<$ Ch $>$\+::m\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classrapidxml_1_1xml__base_afd9851ed43e14619db0d7075ef8e9e8a}
+\hypertarget{classrapidxml_1_1xml__base_a5a8c76a7274b4180213796422c4df76f}{\index{rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}!m\+\_\+name\+\_\+size@{m\+\_\+name\+\_\+size}}
+\index{m\+\_\+name\+\_\+size@{m\+\_\+name\+\_\+size}!rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}}
+\subsubsection[{m\+\_\+name\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ std\+::size\+\_\+t {\bf rapidxml\+::xml\+\_\+base}$<$ Ch $>$\+::m\+\_\+name\+\_\+size\hspace{0.3cm}{\ttfamily [protected]}}}\label{classrapidxml_1_1xml__base_a5a8c76a7274b4180213796422c4df76f}
+\hypertarget{classrapidxml_1_1xml__base_a90d5f660f078f66563fd7b2d8387ccb0}{\index{rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}!m\+\_\+parent@{m\+\_\+parent}}
+\index{m\+\_\+parent@{m\+\_\+parent}!rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}}
+\subsubsection[{m\+\_\+parent}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ {\bf xml\+\_\+node}$<$Ch$>$$\ast$ {\bf rapidxml\+::xml\+\_\+base}$<$ Ch $>$\+::m\+\_\+parent\hspace{0.3cm}{\ttfamily [protected]}}}\label{classrapidxml_1_1xml__base_a90d5f660f078f66563fd7b2d8387ccb0}
+\hypertarget{classrapidxml_1_1xml__base_a278a1ea63b0b70219b946cec47fa00ea}{\index{rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}!m\+\_\+value@{m\+\_\+value}}
+\index{m\+\_\+value@{m\+\_\+value}!rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}}
+\subsubsection[{m\+\_\+value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ Ch$\ast$ {\bf rapidxml\+::xml\+\_\+base}$<$ Ch $>$\+::m\+\_\+value\hspace{0.3cm}{\ttfamily [protected]}}}\label{classrapidxml_1_1xml__base_a278a1ea63b0b70219b946cec47fa00ea}
+\hypertarget{classrapidxml_1_1xml__base_aa3a49d8ceddb8a8d7edb773a2226b89c}{\index{rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}!m\+\_\+value\+\_\+size@{m\+\_\+value\+\_\+size}}
+\index{m\+\_\+value\+\_\+size@{m\+\_\+value\+\_\+size}!rapidxml\+::xml\+\_\+base@{rapidxml\+::xml\+\_\+base}}
+\subsubsection[{m\+\_\+value\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ std\+::size\+\_\+t {\bf rapidxml\+::xml\+\_\+base}$<$ Ch $>$\+::m\+\_\+value\+\_\+size\hspace{0.3cm}{\ttfamily [protected]}}}\label{classrapidxml_1_1xml__base_aa3a49d8ceddb8a8d7edb773a2226b89c}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/utils/\hyperlink{rapidxml_8hpp}{rapidxml.\+hpp}\end{DoxyCompactItemize}

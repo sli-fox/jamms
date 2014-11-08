@@ -1,0 +1,4 @@
+<map id="Critter::reduceSpeed" name="Critter::reduceSpeed">
+<area shape="rect" id="node2" href="$class_tower.html#a7df1e896cdd5cdf7cc2169d6d4f9a6cf" title="Tower::applySpecialEffect" alt="" coords="195,5,365,32"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="413,5,601,32"/>
+</map>

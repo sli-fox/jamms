@@ -1,0 +1,5 @@
+<map id="CritterWave::drawActivatedCrittersInWave" name="CritterWave::drawActivatedCrittersInWave">
+<area shape="rect" id="node2" href="$class_game_state_play.html#a63a3ba0c891afd8ec126806bab4f315a" title="Draws game to the render window. " alt="" coords="237,5,386,32"/>
+<area shape="rect" id="node4" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="231,56,392,83"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#ab41594c10b04429a3126d4a8085de82d" title="GameStatePlay::runThreads" alt="" coords="440,5,627,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="GameStatePlay::checkIfAtEndTile" name="GameStatePlay::checkIfAtEndTile">
+<area shape="rect" id="node2" href="$class_game_state_play.html#a2278751d53b50beb97c809db26f1b9b6" title="GameStatePlay::handleCritter\lRemovalFromWave" alt="" coords="229,5,424,47"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="472,13,633,39"/>
+</map>

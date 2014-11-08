@@ -1,0 +1,19 @@
+<map id="rapidxml::xml_node::first_node" name="rapidxml::xml_node::first_node">
+<area shape="rect" id="node2" href="$classrapidxml_1_1memory__pool.html#a0a10679fc17597d339a0dc107f8a94ac" title="rapidxml::memory_pool\l::clone_node" alt="" coords="188,64,345,105"/>
+<area shape="rect" id="node3" href="$singletonrapidxml_1_1xml__node.html#ae86e92908c3eab40bbed8216e4f3f3cb" title="rapidxml::xml_node\l::prepend_node" alt="" coords="199,129,334,171"/>
+<area shape="rect" id="node5" href="$singletonrapidxml_1_1xml__node.html#a8696d098ecc9c4d2a646b43e91d58e31" title="rapidxml::xml_node\l::append_node" alt="" coords="199,195,334,236"/>
+<area shape="rect" id="node7" href="$class_map.html#a2b6b1ca722620f097ea044f1c41e411e" title="Map::load" alt="" coords="613,326,692,353"/>
+<area shape="rect" id="node14" href="$singletonrapidxml_1_1xml__node.html#a62bf7b276cf7a651a3337f5e0a0ef6ac" title="rapidxml::xml_node\l::remove_first_node" alt="" coords="199,501,334,543"/>
+<area shape="rect" id="node15" href="$singletonrapidxml_1_1xml__node.html#a98289923eb9e8889418a9eb0207ea35c" title="Removes specified child from the node. " alt="" coords="411,501,546,543"/>
+<area shape="rect" id="node16" href="$singletonrapidxml_1_1xml__node.html#a9182512e948ec451a83f116cce7c7674" title="rapidxml::xml_node\l::remove_last_node" alt="" coords="199,436,334,477"/>
+<area shape="rect" id="node17" href="$singletonrapidxml_1_1xml__node.html#a95735358b079ae0adcfbbac69aa1fbc3" title="Removes all child nodes (but not attributes). " alt="" coords="199,319,334,360"/>
+<area shape="rect" id="node4" href="$singletonrapidxml_1_1xml__node.html#a666880f42a7e486d78cc45ed51c7c46d" title="rapidxml::xml_node\l::insert_node" alt="" coords="411,5,546,47"/>
+<area shape="rect" id="node6" href="$singletonrapidxml_1_1xml__document.html#ac6e73ff9ac323bf5a370c38feb03a6b1" title="rapidxml::xml_document\l::parse" alt="" coords="397,253,561,295"/>
+<area shape="rect" id="node11" href="$singletonrapidxml_1_1xml__document.html#aec6cedf45179b6378c670bc3ea509e61" title="rapidxml::xml_document\l::parse_and_append_data" alt="" coords="393,71,564,112"/>
+<area shape="rect" id="node12" href="$singletonrapidxml_1_1xml__document.html#aae0a4c2e1972ab9a9e0ce91cf1166ac9" title="rapidxml::xml_document\l::parse_node_contents" alt="" coords="397,136,561,177"/>
+<area shape="rect" id="node13" href="$class_map.html#a7c8e0a56747581e1b9f5248ceb043275" title="Map::save" alt="" coords="612,271,693,298"/>
+<area shape="rect" id="node8" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="741,264,905,305"/>
+<area shape="rect" id="node10" href="$class_map.html#a11a8645ff656f9efeb5a6758b36d1264" title="Map::Map" alt="" coords="783,330,863,357"/>
+<area shape="rect" id="node9" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="953,264,1100,305"/>
+<area shape="rect" id="node18" href="$singletonrapidxml_1_1xml__document.html#a826929ff54242532198701f19ff5f83f" title="rapidxml::xml_document\l::clear" alt="" coords="397,319,561,360"/>
+</map>

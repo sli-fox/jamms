@@ -1,0 +1,294 @@
+\hypertarget{class_tower_manager}{\section{Tower\+Manager Class Reference}
+\label{class_tower_manager}\index{Tower\+Manager@{Tower\+Manager}}
+}
+
+
+{\ttfamily \#include $<$Tower\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Tower\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{class_tower_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tower_manager_ae42500401ee01f89fc2ac583f167af3b}{Tower\+Manager} ()
+\item 
+\hyperlink{class_tower_manager_ab8e7bf7431e7e9aeb105ee7f63841035}{Tower\+Manager} (int map\+Width, int map\+Height)
+\item 
+\hyperlink{class_tower_manager_aa2c2765238a8747803334c164e767e41}{$\sim$\+Tower\+Manager} ()
+\item 
+map$<$ pair$<$ int, int $>$, \hyperlink{class_tower}{Tower} $\ast$ $>$ $\ast$ \hyperlink{class_tower_manager_a3c54cdf57006efbcd9fc074f156d5360}{get\+Tower\+Map} ()
+\item 
+\hyperlink{class_tower}{Tower} $\ast$ \hyperlink{class_tower_manager_ae2cf2fc1dd19ced5d64ec74042673055}{get\+Tower} (int tile\+X, int tile\+Y)
+\item 
+\hyperlink{class_tower}{Tower} $\ast$ \hyperlink{class_tower_manager_ac057ea8072b060d0fad71fa218e219af}{buy\+Tower} (\hyperlink{class_tower_a110a21c18d4ec095c6234bd17f004b3e}{Tower\+::\+Tower\+Type} type, int tile\+X, int tile\+Y)
+\item 
+void \hyperlink{class_tower_manager_afa7bbe1d178269f32df231807ab419d8}{sell\+Tower} (int tile\+X, int tile\+Y)
+\item 
+bool \hyperlink{class_tower_manager_afd9c7b3113dd4d02b0ee875d705cdf39}{is\+Tile\+Free} (int tile\+X, int tile\+Y)
+\item 
+bool \hyperlink{class_tower_manager_a0158f9210b43ea166977e01768849c3a}{out\+Of\+Bound} (int tile\+X, int tile\+Y) const 
+\item 
+void \hyperlink{class_tower_manager_ae71fc7c55f92477846760b122d0f60b9}{clear\+All\+Towers} ()
+\item 
+void \hyperlink{class_tower_manager_aa795de46937cdcb51d7a885d79c069b3}{draw} (sf\+::\+Render\+Window \&game\+Window)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_tower_manager}{Tower\+Manager} \& \hyperlink{class_tower_manager_ad23044e56ca84962064cfcb9bee3adaf}{get\+Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_tower_manager_a11ff48fe3d8fbaaeb2b0380893c35990}{t\+Array\+Rows}
+\item 
+int \hyperlink{class_tower_manager_a5c5df568b2ea8dd7220fed1d850c4050}{t\+Array\+Cols}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ pair$<$ int, int $>$, \hyperlink{class_tower}{Tower} $\ast$ $>$ \hyperlink{class_tower_manager_aff1fd2b7123af1d48255ee4dfe19c637}{towers}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tower_manager_ae42500401ee01f89fc2ac583f167af3b}{\index{Tower\+Manager@{Tower\+Manager}!Tower\+Manager@{Tower\+Manager}}
+\index{Tower\+Manager@{Tower\+Manager}!Tower\+Manager@{Tower\+Manager}}
+\subsubsection[{Tower\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Tower\+Manager\+::\+Tower\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_tower_manager_ae42500401ee01f89fc2ac583f167af3b}
+\hypertarget{class_tower_manager_ab8e7bf7431e7e9aeb105ee7f63841035}{\index{Tower\+Manager@{Tower\+Manager}!Tower\+Manager@{Tower\+Manager}}
+\index{Tower\+Manager@{Tower\+Manager}!Tower\+Manager@{Tower\+Manager}}
+\subsubsection[{Tower\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Tower\+Manager\+::\+Tower\+Manager (
+\begin{DoxyParamCaption}
+\item[{int}]{map\+Width, }
+\item[{int}]{map\+Height}
+\end{DoxyParamCaption}
+)}}\label{class_tower_manager_ab8e7bf7431e7e9aeb105ee7f63841035}
+\hypertarget{class_tower_manager_aa2c2765238a8747803334c164e767e41}{\index{Tower\+Manager@{Tower\+Manager}!````~Tower\+Manager@{$\sim$\+Tower\+Manager}}
+\index{````~Tower\+Manager@{$\sim$\+Tower\+Manager}!Tower\+Manager@{Tower\+Manager}}
+\subsubsection[{$\sim$\+Tower\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Tower\+Manager\+::$\sim$\+Tower\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_tower_manager_aa2c2765238a8747803334c164e767e41}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tower_manager_ac057ea8072b060d0fad71fa218e219af}{\index{Tower\+Manager@{Tower\+Manager}!buy\+Tower@{buy\+Tower}}
+\index{buy\+Tower@{buy\+Tower}!Tower\+Manager@{Tower\+Manager}}
+\subsubsection[{buy\+Tower}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower} $\ast$ Tower\+Manager\+::buy\+Tower (
+\begin{DoxyParamCaption}
+\item[{{\bf Tower\+::\+Tower\+Type}}]{type, }
+\item[{int}]{tile\+X, }
+\item[{int}]{tile\+Y}
+\end{DoxyParamCaption}
+)}}\label{class_tower_manager_ac057ea8072b060d0fad71fa218e219af}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_manager_ac057ea8072b060d0fad71fa218e219af_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_manager_ac057ea8072b060d0fad71fa218e219af_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_manager_ae71fc7c55f92477846760b122d0f60b9}{\index{Tower\+Manager@{Tower\+Manager}!clear\+All\+Towers@{clear\+All\+Towers}}
+\index{clear\+All\+Towers@{clear\+All\+Towers}!Tower\+Manager@{Tower\+Manager}}
+\subsubsection[{clear\+All\+Towers}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+Manager\+::clear\+All\+Towers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tower_manager_ae71fc7c55f92477846760b122d0f60b9}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_manager_ae71fc7c55f92477846760b122d0f60b9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_manager_aa795de46937cdcb51d7a885d79c069b3}{\index{Tower\+Manager@{Tower\+Manager}!draw@{draw}}
+\index{draw@{draw}!Tower\+Manager@{Tower\+Manager}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+Manager\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{game\+Window}
+\end{DoxyParamCaption}
+)}}\label{class_tower_manager_aa795de46937cdcb51d7a885d79c069b3}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_manager_aa795de46937cdcb51d7a885d79c069b3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_manager_ad23044e56ca84962064cfcb9bee3adaf}{\index{Tower\+Manager@{Tower\+Manager}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Tower\+Manager@{Tower\+Manager}}
+\subsubsection[{get\+Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Tower\+Manager}\& Tower\+Manager\+::get\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_tower_manager_ad23044e56ca84962064cfcb9bee3adaf}
+\hypertarget{class_tower_manager_ae2cf2fc1dd19ced5d64ec74042673055}{\index{Tower\+Manager@{Tower\+Manager}!get\+Tower@{get\+Tower}}
+\index{get\+Tower@{get\+Tower}!Tower\+Manager@{Tower\+Manager}}
+\subsubsection[{get\+Tower}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower} $\ast$ Tower\+Manager\+::get\+Tower (
+\begin{DoxyParamCaption}
+\item[{int}]{tile\+X, }
+\item[{int}]{tile\+Y}
+\end{DoxyParamCaption}
+)}}\label{class_tower_manager_ae2cf2fc1dd19ced5d64ec74042673055}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_manager_ae2cf2fc1dd19ced5d64ec74042673055_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_manager_a3c54cdf57006efbcd9fc074f156d5360}{\index{Tower\+Manager@{Tower\+Manager}!get\+Tower\+Map@{get\+Tower\+Map}}
+\index{get\+Tower\+Map@{get\+Tower\+Map}!Tower\+Manager@{Tower\+Manager}}
+\subsubsection[{get\+Tower\+Map}]{\setlength{\rightskip}{0pt plus 5cm}map$<$ pair$<$ int, int $>$, {\bf Tower} $\ast$ $>$ $\ast$ Tower\+Manager\+::get\+Tower\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tower_manager_a3c54cdf57006efbcd9fc074f156d5360}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_manager_a3c54cdf57006efbcd9fc074f156d5360_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_manager_afd9c7b3113dd4d02b0ee875d705cdf39}{\index{Tower\+Manager@{Tower\+Manager}!is\+Tile\+Free@{is\+Tile\+Free}}
+\index{is\+Tile\+Free@{is\+Tile\+Free}!Tower\+Manager@{Tower\+Manager}}
+\subsubsection[{is\+Tile\+Free}]{\setlength{\rightskip}{0pt plus 5cm}bool Tower\+Manager\+::is\+Tile\+Free (
+\begin{DoxyParamCaption}
+\item[{int}]{tile\+X, }
+\item[{int}]{tile\+Y}
+\end{DoxyParamCaption}
+)}}\label{class_tower_manager_afd9c7b3113dd4d02b0ee875d705cdf39}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_manager_afd9c7b3113dd4d02b0ee875d705cdf39_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_manager_a0158f9210b43ea166977e01768849c3a}{\index{Tower\+Manager@{Tower\+Manager}!out\+Of\+Bound@{out\+Of\+Bound}}
+\index{out\+Of\+Bound@{out\+Of\+Bound}!Tower\+Manager@{Tower\+Manager}}
+\subsubsection[{out\+Of\+Bound}]{\setlength{\rightskip}{0pt plus 5cm}bool Tower\+Manager\+::out\+Of\+Bound (
+\begin{DoxyParamCaption}
+\item[{int}]{tile\+X, }
+\item[{int}]{tile\+Y}
+\end{DoxyParamCaption}
+) const}}\label{class_tower_manager_a0158f9210b43ea166977e01768849c3a}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_manager_a0158f9210b43ea166977e01768849c3a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_manager_afa7bbe1d178269f32df231807ab419d8}{\index{Tower\+Manager@{Tower\+Manager}!sell\+Tower@{sell\+Tower}}
+\index{sell\+Tower@{sell\+Tower}!Tower\+Manager@{Tower\+Manager}}
+\subsubsection[{sell\+Tower}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+Manager\+::sell\+Tower (
+\begin{DoxyParamCaption}
+\item[{int}]{tile\+X, }
+\item[{int}]{tile\+Y}
+\end{DoxyParamCaption}
+)}}\label{class_tower_manager_afa7bbe1d178269f32df231807ab419d8}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_manager_afa7bbe1d178269f32df231807ab419d8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_manager_afa7bbe1d178269f32df231807ab419d8_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_tower_manager_a5c5df568b2ea8dd7220fed1d850c4050}{\index{Tower\+Manager@{Tower\+Manager}!t\+Array\+Cols@{t\+Array\+Cols}}
+\index{t\+Array\+Cols@{t\+Array\+Cols}!Tower\+Manager@{Tower\+Manager}}
+\subsubsection[{t\+Array\+Cols}]{\setlength{\rightskip}{0pt plus 5cm}int Tower\+Manager\+::t\+Array\+Cols}}\label{class_tower_manager_a5c5df568b2ea8dd7220fed1d850c4050}
+\hypertarget{class_tower_manager_a11ff48fe3d8fbaaeb2b0380893c35990}{\index{Tower\+Manager@{Tower\+Manager}!t\+Array\+Rows@{t\+Array\+Rows}}
+\index{t\+Array\+Rows@{t\+Array\+Rows}!Tower\+Manager@{Tower\+Manager}}
+\subsubsection[{t\+Array\+Rows}]{\setlength{\rightskip}{0pt plus 5cm}int Tower\+Manager\+::t\+Array\+Rows}}\label{class_tower_manager_a11ff48fe3d8fbaaeb2b0380893c35990}
+\hypertarget{class_tower_manager_aff1fd2b7123af1d48255ee4dfe19c637}{\index{Tower\+Manager@{Tower\+Manager}!towers@{towers}}
+\index{towers@{towers}!Tower\+Manager@{Tower\+Manager}}
+\subsubsection[{towers}]{\setlength{\rightskip}{0pt plus 5cm}map$<$pair$<$int,int$>$, {\bf Tower}$\ast$$>$ Tower\+Manager\+::towers\hspace{0.3cm}{\ttfamily [private]}}}\label{class_tower_manager_aff1fd2b7123af1d48255ee4dfe19c637}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/managers/\hyperlink{_tower_manager_8h}{Tower\+Manager.\+h}\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/src/managers/\hyperlink{_tower_manager_8cpp}{Tower\+Manager.\+cpp}\end{DoxyCompactItemize}

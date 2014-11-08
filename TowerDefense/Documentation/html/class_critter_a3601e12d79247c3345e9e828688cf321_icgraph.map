@@ -1,0 +1,4 @@
+<map id="Critter::inflictDamage" name="Critter::inflictDamage">
+<area shape="rect" id="node2" href="$class_tower.html#a9f067c2b9e5e6987f341704b8b098606" title="Tower::attack" alt="" coords="196,5,296,32"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="344,5,532,32"/>
+</map>

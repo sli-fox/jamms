@@ -1,0 +1,67 @@
+\hypertarget{class_critter_factory}{\section{Critter\+Factory Class Reference}
+\label{class_critter_factory}\index{Critter\+Factory@{Critter\+Factory}}
+}
+
+
+Creates objects derived from \hyperlink{class_critter}{Critter}. Utility class that creates instance of a \hyperlink{class_critter}{Critter} subclass from a family of derived \hyperlink{class_critter}{Critter} classes.  
+
+
+
+
+{\ttfamily \#include $<$Critter\+Factory.\+h$>$}
+
+
+
+Collaboration diagram for Critter\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{class_critter_factory__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_critter}{Critter} $\ast$ \hyperlink{class_critter_factory_a3195f421d348fe4ee5c7e49e605745c1}{create\+Critter} (int id, \hyperlink{class_critter_acda8a5c3234b66101e0546d75d6f90f1}{Critter\+::\+Critter\+Type} type, \hyperlink{class_waypoint}{Waypoint} $\ast$starting\+\_\+waypoint)
+\begin{DoxyCompactList}\small\item\em Factory method for \hyperlink{class_critter}{Critter} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Creates objects derived from \hyperlink{class_critter}{Critter}. Utility class that creates instance of a \hyperlink{class_critter}{Critter} subclass from a family of derived \hyperlink{class_critter}{Critter} classes. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_critter_factory_a3195f421d348fe4ee5c7e49e605745c1}{\index{Critter\+Factory@{Critter\+Factory}!create\+Critter@{create\+Critter}}
+\index{create\+Critter@{create\+Critter}!Critter\+Factory@{Critter\+Factory}}
+\subsubsection[{create\+Critter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Critter} $\ast$ Critter\+Factory\+::create\+Critter (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{{\bf Critter\+::\+Critter\+Type}}]{type, }
+\item[{{\bf Waypoint} $\ast$}]{starting\+\_\+waypoint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_critter_factory_a3195f421d348fe4ee5c7e49e605745c1}
+
+
+Factory method for \hyperlink{class_critter}{Critter} class. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_critter}{Critter} object (subclass of \hyperlink{class_critter}{Critter}).
+\end{DoxyReturn}
+The only method in \hyperlink{class_critter_factory}{Critter\+Factory}, \hyperlink{class_critter_factory_a3195f421d348fe4ee5c7e49e605745c1}{create\+Critter()} cranks out \hyperlink{class_critter}{Critter} objects based on the enum parameter. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_factory_a3195f421d348fe4ee5c7e49e605745c1_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/game\+Objects/\hyperlink{_critter_factory_8h}{Critter\+Factory.\+h}\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/src/game\+Objects/\hyperlink{_critter_factory_8cpp}{Critter\+Factory.\+cpp}\end{DoxyCompactItemize}

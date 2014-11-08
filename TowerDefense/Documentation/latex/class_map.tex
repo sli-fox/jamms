@@ -1,0 +1,683 @@
+\hypertarget{class_map}{\section{Map Class Reference}
+\label{class_map}\index{Map@{Map}}
+}
+
+
+{\ttfamily \#include $<$Map.\+h$>$}
+
+
+
+Collaboration diagram for Map\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_map_a11a8645ff656f9efeb5a6758b36d1264}{Map} (string map\+Name)
+\item 
+\hyperlink{class_map_af3e300404b4bdacb2761300cb3cc1eda}{Map} (int \hyperlink{class_map_a9660b072c56d69d3639e364835f0188d}{map\+Width}, int \hyperlink{class_map_a4674385319ae4f0c6672f4fe69f97b5c}{map\+Height})
+\item 
+virtual \hyperlink{class_map_aa403fbe09394ccf39747588f5168e3b2}{$\sim$\+Map} ()
+\item 
+int \hyperlink{class_map_a59b1f7d135d6a62ba210585951f4f419}{get\+Map\+Width} () const 
+\item 
+int \hyperlink{class_map_a076782bd4ca4a53eb57a894b336f5090}{get\+Map\+Height} () const 
+\item 
+void \hyperlink{class_map_a3079c08faaa2fd3984bed5471488a790}{set\+Map\+Size} (const int \hyperlink{class_map_a9660b072c56d69d3639e364835f0188d}{map\+Width}, const int \hyperlink{class_map_a4674385319ae4f0c6672f4fe69f97b5c}{map\+Height})
+\item 
+const \hyperlink{class_tile}{Tile} $\ast$const \hyperlink{class_map_aa8e57f0e6d665def93ad7b33413e98a7}{get\+Tile} (const int tile\+X, const int tile\+Y) const 
+\item 
+void \hyperlink{class_map_ab9561f11877716cf4687ed4dab54d7db}{add\+Tile} (int tile\+X, int tile\+Y, const \hyperlink{class_tile_acb53d82f9dacff45a98acc63276928eb}{Tile\+::\+T\+Y\+P\+E} tile\+Type)
+\item 
+void \hyperlink{class_map_a69be425dd99011951d8c4f08b598703b}{remove\+Tile} (const int tile\+X, const int tile\+Y)
+\item 
+deque$<$ const \hyperlink{class_tile}{Tile} $\ast$const  $>$ \hyperlink{class_map_a0fb29a18390a3008cab71f602aa4209b}{get\+Map\+Path} () const 
+\item 
+bool \hyperlink{class_map_a915168b8ce4bb812c591e34d17163a75}{is\+Map\+Valid} ()
+\item 
+void \hyperlink{class_map_afa8798ebce5315b393755d8656fa6038}{blank\+Map} ()
+\item 
+void \hyperlink{class_map_a79a7d2715d8face71c5f16be9e14ac0a}{reset\+Map} ()
+\item 
+void \hyperlink{class_map_a9e82077ad5054dbbe6434cf89738dbf5}{fill\+Map} ()
+\item 
+void \hyperlink{class_map_a2b6b1ca722620f097ea044f1c41e411e}{load} (const string filename)
+\item 
+void \hyperlink{class_map_a7c8e0a56747581e1b9f5248ceb043275}{save} (const string filename)
+\item 
+void \hyperlink{class_map_a84c0e37119c02d7c81071271e004041d}{draw} (sf\+::\+Render\+Window \&game\+Window)
+\item 
+const \hyperlink{class_game_object}{Game\+Object} $\ast$const \hyperlink{class_map_ac6851c4a19daaafd76eb5bcd9be23f1b}{get\+Game\+Object} (const int tile\+X, const int tile\+Y)
+\item 
+void \hyperlink{class_map_ab12fa393f25fbbd4ad2fa183a033162b}{remove\+Game\+Object} (const int tile\+X, const int tile\+Y)
+\item 
+void \hyperlink{class_map_afba6396c482b9af9671bc33d7ffdb8dd}{place\+Critter} (const string critter\+Name, const int tile\+X, const int tile\+Y)
+\item 
+void \hyperlink{class_map_a7f1f7f192ff9f48806d5d192fb38d3aa}{place\+Tower} (const string tower\+Name, const int tile\+X, const int tile\+Y)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_map_ae9582bc1e99bdf1ecc5413f81cc95f69}{M\+A\+X\+\_\+\+M\+A\+P\+\_\+\+W\+I\+D\+T\+H} = 32
+\item 
+static const int \hyperlink{class_map_aef313313ef5bbeafeae1f6b66073bace}{M\+A\+X\+\_\+\+M\+A\+P\+\_\+\+H\+E\+I\+G\+H\+T} = 12
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_map_a6995c0de6fe380ffa652990490b867c8}{out\+Of\+Bounds} (const int tile\+X, const int tile\+Y) const 
+\item 
+bool \hyperlink{class_map_a63a6d8a5e6bcbc1cc92cd29fcff638db}{valid\+Path\+Placement} (const int tile\+X, const int tile\+Y)
+\item 
+\hyperlink{class_tile_acb53d82f9dacff45a98acc63276928eb}{Tile\+::\+T\+Y\+P\+E} \hyperlink{class_map_aae1f3e3de0581ba792b58290c164920f}{convert\+Type} (const string tile\+Type\+String) const 
+\item 
+string \hyperlink{class_map_a21333928f184469ef09d42112cd8f0a1}{convert\+Type} (\hyperlink{class_tile_acb53d82f9dacff45a98acc63276928eb}{Tile\+::\+T\+Y\+P\+E} type) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ vector$<$ unique\+\_\+ptr\\*
+$<$ \hyperlink{class_tile}{Tile} $>$ $>$ $>$ \hyperlink{class_map_acfc07b37ba2f49d3183dfca67ea42ecb}{tile\+Map}
+\item 
+deque$<$ const \hyperlink{class_tile}{Tile} $\ast$const  $>$ \hyperlink{class_map_a83b72b69647b50c6c7c7c5bee1ccbc5b}{map\+Path}
+\item 
+vector$<$ vector$<$ unique\+\_\+ptr\\*
+$<$ \hyperlink{class_game_object}{Game\+Object} $>$ $>$ $>$ \hyperlink{class_map_ac2295b10052b4e68dcbdb8c37d6535b8}{map\+Objects}
+\item 
+int \hyperlink{class_map_a9660b072c56d69d3639e364835f0188d}{map\+Width}
+\item 
+int \hyperlink{class_map_a4674385319ae4f0c6672f4fe69f97b5c}{map\+Height}
+\item 
+bool \hyperlink{class_map_ab796b34a605f32873f72c9c348f38da0}{has\+Start}
+\item 
+bool \hyperlink{class_map_acffbd1a9311b093f875753b802e966af}{has\+End}
+\item 
+string \hyperlink{class_map_a87051704cf631b77d7a230361942081b}{image\+Path}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_map_a11a8645ff656f9efeb5a6758b36d1264}{\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\subsubsection[{Map}]{\setlength{\rightskip}{0pt plus 5cm}Map\+::\+Map (
+\begin{DoxyParamCaption}
+\item[{string}]{map\+Name}
+\end{DoxyParamCaption}
+)}}\label{class_map_a11a8645ff656f9efeb5a6758b36d1264}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_a11a8645ff656f9efeb5a6758b36d1264_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_af3e300404b4bdacb2761300cb3cc1eda}{\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\subsubsection[{Map}]{\setlength{\rightskip}{0pt plus 5cm}Map\+::\+Map (
+\begin{DoxyParamCaption}
+\item[{int}]{map\+Width, }
+\item[{int}]{map\+Height}
+\end{DoxyParamCaption}
+)}}\label{class_map_af3e300404b4bdacb2761300cb3cc1eda}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_af3e300404b4bdacb2761300cb3cc1eda_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_aa403fbe09394ccf39747588f5168e3b2}{\index{Map@{Map}!````~Map@{$\sim$\+Map}}
+\index{````~Map@{$\sim$\+Map}!Map@{Map}}
+\subsubsection[{$\sim$\+Map}]{\setlength{\rightskip}{0pt plus 5cm}Map\+::$\sim$\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_map_aa403fbe09394ccf39747588f5168e3b2}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_map_ab9561f11877716cf4687ed4dab54d7db}{\index{Map@{Map}!add\+Tile@{add\+Tile}}
+\index{add\+Tile@{add\+Tile}!Map@{Map}}
+\subsubsection[{add\+Tile}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::add\+Tile (
+\begin{DoxyParamCaption}
+\item[{int}]{tile\+X, }
+\item[{int}]{tile\+Y, }
+\item[{const {\bf Tile\+::\+T\+Y\+P\+E}}]{tile\+Type}
+\end{DoxyParamCaption}
+)}}\label{class_map_ab9561f11877716cf4687ed4dab54d7db}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_ab9561f11877716cf4687ed4dab54d7db_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_ab9561f11877716cf4687ed4dab54d7db_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_afa8798ebce5315b393755d8656fa6038}{\index{Map@{Map}!blank\+Map@{blank\+Map}}
+\index{blank\+Map@{blank\+Map}!Map@{Map}}
+\subsubsection[{blank\+Map}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::blank\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_afa8798ebce5315b393755d8656fa6038}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_afa8798ebce5315b393755d8656fa6038_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_afa8798ebce5315b393755d8656fa6038_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_aae1f3e3de0581ba792b58290c164920f}{\index{Map@{Map}!convert\+Type@{convert\+Type}}
+\index{convert\+Type@{convert\+Type}!Map@{Map}}
+\subsubsection[{convert\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tile\+::\+T\+Y\+P\+E} Map\+::convert\+Type (
+\begin{DoxyParamCaption}
+\item[{const string}]{tile\+Type\+String}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_aae1f3e3de0581ba792b58290c164920f}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_aae1f3e3de0581ba792b58290c164920f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_a21333928f184469ef09d42112cd8f0a1}{\index{Map@{Map}!convert\+Type@{convert\+Type}}
+\index{convert\+Type@{convert\+Type}!Map@{Map}}
+\subsubsection[{convert\+Type}]{\setlength{\rightskip}{0pt plus 5cm}string Map\+::convert\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Tile\+::\+T\+Y\+P\+E}}]{type}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_a21333928f184469ef09d42112cd8f0a1}
+\hypertarget{class_map_a84c0e37119c02d7c81071271e004041d}{\index{Map@{Map}!draw@{draw}}
+\index{draw@{draw}!Map@{Map}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{game\+Window}
+\end{DoxyParamCaption}
+)}}\label{class_map_a84c0e37119c02d7c81071271e004041d}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_a84c0e37119c02d7c81071271e004041d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_a9e82077ad5054dbbe6434cf89738dbf5}{\index{Map@{Map}!fill\+Map@{fill\+Map}}
+\index{fill\+Map@{fill\+Map}!Map@{Map}}
+\subsubsection[{fill\+Map}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::fill\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_a9e82077ad5054dbbe6434cf89738dbf5}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_a9e82077ad5054dbbe6434cf89738dbf5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_ac6851c4a19daaafd76eb5bcd9be23f1b}{\index{Map@{Map}!get\+Game\+Object@{get\+Game\+Object}}
+\index{get\+Game\+Object@{get\+Game\+Object}!Map@{Map}}
+\subsubsection[{get\+Game\+Object}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Game\+Object} $\ast$const Map\+::get\+Game\+Object (
+\begin{DoxyParamCaption}
+\item[{const int}]{tile\+X, }
+\item[{const int}]{tile\+Y}
+\end{DoxyParamCaption}
+)}}\label{class_map_ac6851c4a19daaafd76eb5bcd9be23f1b}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_map_ac6851c4a19daaafd76eb5bcd9be23f1b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_a076782bd4ca4a53eb57a894b336f5090}{\index{Map@{Map}!get\+Map\+Height@{get\+Map\+Height}}
+\index{get\+Map\+Height@{get\+Map\+Height}!Map@{Map}}
+\subsubsection[{get\+Map\+Height}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+::get\+Map\+Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_map_a076782bd4ca4a53eb57a894b336f5090}
+\hypertarget{class_map_a0fb29a18390a3008cab71f602aa4209b}{\index{Map@{Map}!get\+Map\+Path@{get\+Map\+Path}}
+\index{get\+Map\+Path@{get\+Map\+Path}!Map@{Map}}
+\subsubsection[{get\+Map\+Path}]{\setlength{\rightskip}{0pt plus 5cm}deque$<$ const {\bf Tile} $\ast$const  $>$ Map\+::get\+Map\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_map_a0fb29a18390a3008cab71f602aa4209b}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_a0fb29a18390a3008cab71f602aa4209b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_a59b1f7d135d6a62ba210585951f4f419}{\index{Map@{Map}!get\+Map\+Width@{get\+Map\+Width}}
+\index{get\+Map\+Width@{get\+Map\+Width}!Map@{Map}}
+\subsubsection[{get\+Map\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+::get\+Map\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_map_a59b1f7d135d6a62ba210585951f4f419}
+\hypertarget{class_map_aa8e57f0e6d665def93ad7b33413e98a7}{\index{Map@{Map}!get\+Tile@{get\+Tile}}
+\index{get\+Tile@{get\+Tile}!Map@{Map}}
+\subsubsection[{get\+Tile}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Tile} $\ast$const Map\+::get\+Tile (
+\begin{DoxyParamCaption}
+\item[{const int}]{tile\+X, }
+\item[{const int}]{tile\+Y}
+\end{DoxyParamCaption}
+) const}}\label{class_map_aa8e57f0e6d665def93ad7b33413e98a7}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{class_map_aa8e57f0e6d665def93ad7b33413e98a7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_aa8e57f0e6d665def93ad7b33413e98a7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_a915168b8ce4bb812c591e34d17163a75}{\index{Map@{Map}!is\+Map\+Valid@{is\+Map\+Valid}}
+\index{is\+Map\+Valid@{is\+Map\+Valid}!Map@{Map}}
+\subsubsection[{is\+Map\+Valid}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+::is\+Map\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_a915168b8ce4bb812c591e34d17163a75}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_a915168b8ce4bb812c591e34d17163a75_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_a2b6b1ca722620f097ea044f1c41e411e}{\index{Map@{Map}!load@{load}}
+\index{load@{load}!Map@{Map}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::load (
+\begin{DoxyParamCaption}
+\item[{const string}]{filename}
+\end{DoxyParamCaption}
+)}}\label{class_map_a2b6b1ca722620f097ea044f1c41e411e}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_a2b6b1ca722620f097ea044f1c41e411e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_a2b6b1ca722620f097ea044f1c41e411e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_a6995c0de6fe380ffa652990490b867c8}{\index{Map@{Map}!out\+Of\+Bounds@{out\+Of\+Bounds}}
+\index{out\+Of\+Bounds@{out\+Of\+Bounds}!Map@{Map}}
+\subsubsection[{out\+Of\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+::out\+Of\+Bounds (
+\begin{DoxyParamCaption}
+\item[{const int}]{tile\+X, }
+\item[{const int}]{tile\+Y}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_a6995c0de6fe380ffa652990490b867c8}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_a6995c0de6fe380ffa652990490b867c8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_afba6396c482b9af9671bc33d7ffdb8dd}{\index{Map@{Map}!place\+Critter@{place\+Critter}}
+\index{place\+Critter@{place\+Critter}!Map@{Map}}
+\subsubsection[{place\+Critter}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::place\+Critter (
+\begin{DoxyParamCaption}
+\item[{const string}]{critter\+Name, }
+\item[{const int}]{tile\+X, }
+\item[{const int}]{tile\+Y}
+\end{DoxyParamCaption}
+)}}\label{class_map_afba6396c482b9af9671bc33d7ffdb8dd}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_afba6396c482b9af9671bc33d7ffdb8dd_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_a7f1f7f192ff9f48806d5d192fb38d3aa}{\index{Map@{Map}!place\+Tower@{place\+Tower}}
+\index{place\+Tower@{place\+Tower}!Map@{Map}}
+\subsubsection[{place\+Tower}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::place\+Tower (
+\begin{DoxyParamCaption}
+\item[{const string}]{tower\+Name, }
+\item[{const int}]{tile\+X, }
+\item[{const int}]{tile\+Y}
+\end{DoxyParamCaption}
+)}}\label{class_map_a7f1f7f192ff9f48806d5d192fb38d3aa}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_a7f1f7f192ff9f48806d5d192fb38d3aa_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_ab12fa393f25fbbd4ad2fa183a033162b}{\index{Map@{Map}!remove\+Game\+Object@{remove\+Game\+Object}}
+\index{remove\+Game\+Object@{remove\+Game\+Object}!Map@{Map}}
+\subsubsection[{remove\+Game\+Object}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::remove\+Game\+Object (
+\begin{DoxyParamCaption}
+\item[{const int}]{tile\+X, }
+\item[{const int}]{tile\+Y}
+\end{DoxyParamCaption}
+)}}\label{class_map_ab12fa393f25fbbd4ad2fa183a033162b}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{class_map_ab12fa393f25fbbd4ad2fa183a033162b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_ab12fa393f25fbbd4ad2fa183a033162b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_a69be425dd99011951d8c4f08b598703b}{\index{Map@{Map}!remove\+Tile@{remove\+Tile}}
+\index{remove\+Tile@{remove\+Tile}!Map@{Map}}
+\subsubsection[{remove\+Tile}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::remove\+Tile (
+\begin{DoxyParamCaption}
+\item[{const int}]{tile\+X, }
+\item[{const int}]{tile\+Y}
+\end{DoxyParamCaption}
+)}}\label{class_map_a69be425dd99011951d8c4f08b598703b}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_a69be425dd99011951d8c4f08b598703b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_a69be425dd99011951d8c4f08b598703b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_a79a7d2715d8face71c5f16be9e14ac0a}{\index{Map@{Map}!reset\+Map@{reset\+Map}}
+\index{reset\+Map@{reset\+Map}!Map@{Map}}
+\subsubsection[{reset\+Map}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::reset\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_a79a7d2715d8face71c5f16be9e14ac0a}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_a79a7d2715d8face71c5f16be9e14ac0a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_a7c8e0a56747581e1b9f5248ceb043275}{\index{Map@{Map}!save@{save}}
+\index{save@{save}!Map@{Map}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::save (
+\begin{DoxyParamCaption}
+\item[{const string}]{filename}
+\end{DoxyParamCaption}
+)}}\label{class_map_a7c8e0a56747581e1b9f5248ceb043275}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_a7c8e0a56747581e1b9f5248ceb043275_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_a7c8e0a56747581e1b9f5248ceb043275_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_a3079c08faaa2fd3984bed5471488a790}{\index{Map@{Map}!set\+Map\+Size@{set\+Map\+Size}}
+\index{set\+Map\+Size@{set\+Map\+Size}!Map@{Map}}
+\subsubsection[{set\+Map\+Size}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::set\+Map\+Size (
+\begin{DoxyParamCaption}
+\item[{const int}]{map\+Width, }
+\item[{const int}]{map\+Height}
+\end{DoxyParamCaption}
+)}}\label{class_map_a3079c08faaa2fd3984bed5471488a790}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_a3079c08faaa2fd3984bed5471488a790_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_map_a63a6d8a5e6bcbc1cc92cd29fcff638db}{\index{Map@{Map}!valid\+Path\+Placement@{valid\+Path\+Placement}}
+\index{valid\+Path\+Placement@{valid\+Path\+Placement}!Map@{Map}}
+\subsubsection[{valid\+Path\+Placement}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+::valid\+Path\+Placement (
+\begin{DoxyParamCaption}
+\item[{const int}]{tile\+X, }
+\item[{const int}]{tile\+Y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_a63a6d8a5e6bcbc1cc92cd29fcff638db}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{class_map_a63a6d8a5e6bcbc1cc92cd29fcff638db_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_a63a6d8a5e6bcbc1cc92cd29fcff638db_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_map_acffbd1a9311b093f875753b802e966af}{\index{Map@{Map}!has\+End@{has\+End}}
+\index{has\+End@{has\+End}!Map@{Map}}
+\subsubsection[{has\+End}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+::has\+End\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_acffbd1a9311b093f875753b802e966af}
+\hypertarget{class_map_ab796b34a605f32873f72c9c348f38da0}{\index{Map@{Map}!has\+Start@{has\+Start}}
+\index{has\+Start@{has\+Start}!Map@{Map}}
+\subsubsection[{has\+Start}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+::has\+Start\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_ab796b34a605f32873f72c9c348f38da0}
+\hypertarget{class_map_a87051704cf631b77d7a230361942081b}{\index{Map@{Map}!image\+Path@{image\+Path}}
+\index{image\+Path@{image\+Path}!Map@{Map}}
+\subsubsection[{image\+Path}]{\setlength{\rightskip}{0pt plus 5cm}string Map\+::image\+Path\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_a87051704cf631b77d7a230361942081b}
+\hypertarget{class_map_a4674385319ae4f0c6672f4fe69f97b5c}{\index{Map@{Map}!map\+Height@{map\+Height}}
+\index{map\+Height@{map\+Height}!Map@{Map}}
+\subsubsection[{map\+Height}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+::map\+Height\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_a4674385319ae4f0c6672f4fe69f97b5c}
+\hypertarget{class_map_ac2295b10052b4e68dcbdb8c37d6535b8}{\index{Map@{Map}!map\+Objects@{map\+Objects}}
+\index{map\+Objects@{map\+Objects}!Map@{Map}}
+\subsubsection[{map\+Objects}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$vector$<$unique\+\_\+ptr$<${\bf Game\+Object}$>$ $>$ $>$ Map\+::map\+Objects\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_ac2295b10052b4e68dcbdb8c37d6535b8}
+\hypertarget{class_map_a83b72b69647b50c6c7c7c5bee1ccbc5b}{\index{Map@{Map}!map\+Path@{map\+Path}}
+\index{map\+Path@{map\+Path}!Map@{Map}}
+\subsubsection[{map\+Path}]{\setlength{\rightskip}{0pt plus 5cm}deque$<$const {\bf Tile}$\ast$ const$>$ Map\+::map\+Path\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_a83b72b69647b50c6c7c7c5bee1ccbc5b}
+\hypertarget{class_map_a9660b072c56d69d3639e364835f0188d}{\index{Map@{Map}!map\+Width@{map\+Width}}
+\index{map\+Width@{map\+Width}!Map@{Map}}
+\subsubsection[{map\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+::map\+Width\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_a9660b072c56d69d3639e364835f0188d}
+\hypertarget{class_map_aef313313ef5bbeafeae1f6b66073bace}{\index{Map@{Map}!M\+A\+X\+\_\+\+M\+A\+P\+\_\+\+H\+E\+I\+G\+H\+T@{M\+A\+X\+\_\+\+M\+A\+P\+\_\+\+H\+E\+I\+G\+H\+T}}
+\index{M\+A\+X\+\_\+\+M\+A\+P\+\_\+\+H\+E\+I\+G\+H\+T@{M\+A\+X\+\_\+\+M\+A\+P\+\_\+\+H\+E\+I\+G\+H\+T}!Map@{Map}}
+\subsubsection[{M\+A\+X\+\_\+\+M\+A\+P\+\_\+\+H\+E\+I\+G\+H\+T}]{\setlength{\rightskip}{0pt plus 5cm}const int Map\+::\+M\+A\+X\+\_\+\+M\+A\+P\+\_\+\+H\+E\+I\+G\+H\+T = 12\hspace{0.3cm}{\ttfamily [static]}}}\label{class_map_aef313313ef5bbeafeae1f6b66073bace}
+\hypertarget{class_map_ae9582bc1e99bdf1ecc5413f81cc95f69}{\index{Map@{Map}!M\+A\+X\+\_\+\+M\+A\+P\+\_\+\+W\+I\+D\+T\+H@{M\+A\+X\+\_\+\+M\+A\+P\+\_\+\+W\+I\+D\+T\+H}}
+\index{M\+A\+X\+\_\+\+M\+A\+P\+\_\+\+W\+I\+D\+T\+H@{M\+A\+X\+\_\+\+M\+A\+P\+\_\+\+W\+I\+D\+T\+H}!Map@{Map}}
+\subsubsection[{M\+A\+X\+\_\+\+M\+A\+P\+\_\+\+W\+I\+D\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}const int Map\+::\+M\+A\+X\+\_\+\+M\+A\+P\+\_\+\+W\+I\+D\+T\+H = 32\hspace{0.3cm}{\ttfamily [static]}}}\label{class_map_ae9582bc1e99bdf1ecc5413f81cc95f69}
+\hypertarget{class_map_acfc07b37ba2f49d3183dfca67ea42ecb}{\index{Map@{Map}!tile\+Map@{tile\+Map}}
+\index{tile\+Map@{tile\+Map}!Map@{Map}}
+\subsubsection[{tile\+Map}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$vector$<$unique\+\_\+ptr$<${\bf Tile}$>$ $>$ $>$ Map\+::tile\+Map\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_acfc07b37ba2f49d3183dfca67ea42ecb}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/\hyperlink{_map_8h}{Map.\+h}\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/src/\hyperlink{_map_8cpp}{Map.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+<map id="GameStateMapEditor::initializeButtonMap" name="GameStateMapEditor::initializeButtonMap">
+<area shape="rect" id="node2" href="$class_game_object.html#acc593e5b75a58c4a59ad59da654ce807" title="Loads a texture using the TextureManager class and creates a sprite. " alt="" coords="221,31,347,57"/>
+<area shape="rect" id="node5" href="$class_game_object.html#a180d6e9e7afa44b30ca678a95c6f4dad" title="Sets the initial draw position of a GameObject instance. " alt="" coords="200,81,368,108"/>
+<area shape="rect" id="node3" href="$class_texture_manager.html#a0a6bc63e2f6fa7e1d0aee5b24cfa089a" title="Returns the only instance of a TextureManager object. " alt="" coords="416,5,607,32"/>
+<area shape="rect" id="node4" href="$class_texture_manager.html#aa631660b783d448a29b1096c64fe65e4" title="Returns the instance of a texture loaded by the file name. " alt="" coords="416,56,607,83"/>
+</map>

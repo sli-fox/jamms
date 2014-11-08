@@ -1,0 +1,8 @@
+<map id="WhiteCat::WhiteCat" name="WhiteCat::WhiteCat">
+<area shape="rect" id="node2" href="$class_white_cat.html#a0a3c801e7a6b451b2b1caef9da137585" title="Initialization function for a WhiteCat. " alt="" coords="192,107,359,133"/>
+<area shape="rect" id="node3" href="$class_critter.html#affcdf706975d5a761acec7e5effea7b1" title="Critter::getMovementDirection" alt="" coords="415,5,609,32"/>
+<area shape="rect" id="node4" href="$class_texture_manager.html#a0a6bc63e2f6fa7e1d0aee5b24cfa089a" title="Returns the only instance of a TextureManager object. " alt="" coords="417,56,607,83"/>
+<area shape="rect" id="node5" href="$class_texture_manager.html#aa631660b783d448a29b1096c64fe65e4" title="Returns the instance of a texture loaded by the file name. " alt="" coords="417,107,607,133"/>
+<area shape="rect" id="node6" href="$class_animation_handler.html#ae517a14ed199418ccbc8d71db5ad5955" title="Add a new animation. " alt="" coords="407,157,617,184"/>
+<area shape="rect" id="node7" href="$class_animation_handler.html#a74c541905109998e971c578c4aa3e3de" title="Updates the current frame of animation. " alt="" coords="427,208,597,235"/>
+</map>

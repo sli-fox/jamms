@@ -1,0 +1,9 @@
+<map id="Bulldog" name="Bulldog">
+<area shape="rect" id="node2" href="$class_tower.html" title="{Tower\n|# _id\l# _type\l# _upgrade_level\l# _power\l# _range\l# _range_shape\l# _rate_of_fire\l# _special_effect\l# _buy_cost\l# _upgrade_cost\l# _sell_cost\l&#45; clock\l&#45; time\l|+ Tower()\l+ ~Tower()\l+ upgradeTower()\l+ canAttack()\l+ canApplySpecialAfterEffects()\l+ attack()\l+ update()\l+ findCollisionPath()\l+ rotateTowardsTarget()\l+ angle()\land 30 more...\l}" alt="" coords="627,1093,834,1493"/>
+<area shape="rect" id="node3" href="$class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="593,285,719,524"/>
+<area shape="rect" id="node6" href="$class_critter.html" title="Abstract base class of all Critters Critter defines the attributes, accessors, and update function fo..." alt="" coords="391,587,567,1031"/>
+<area shape="rect" id="node5" href="$class_i_observer.html" title="{IObserver\n||+ update()\l}" alt="" coords="794,770,875,847"/>
+<area shape="rect" id="node7" href="$class_i_subject.html" title="{ISubject\n||+ attach()\l+ detach()\l+ notify()\l}" alt="" coords="54,351,135,458"/>
+<area shape="rect" id="node10" href="$class_waypoint.html" title="Represents an Waypoint in the game. " alt="" coords="159,351,265,458"/>
+<area shape="rect" id="node11" href="$class_animation_handler.html" title="Handles animations. " alt="" coords="409,300,569,509"/>
+</map>

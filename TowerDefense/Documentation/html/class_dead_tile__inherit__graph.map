@@ -1,0 +1,4 @@
+<map id="DeadTile" name="DeadTile">
+<area shape="rect" id="node2" href="$class_tile.html" title="{Tile\n|&#45; tileX\l&#45; tileY\l&#45; type\l|+ Tile()\l+ Tile()\l+ ~Tile()\l+ getTileX()\l+ getTileY()\l+ getType()\l+ setType()\l}" alt="" coords="23,307,113,501"/>
+<area shape="rect" id="node3" href="$class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="5,5,131,259"/>
+</map>

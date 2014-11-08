@@ -1,0 +1,5 @@
+<map id="Map::isMapValid" name="Map::isMapValid">
+<area shape="rect" id="node2" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="301,5,465,47"/>
+<area shape="rect" id="node4" href="$class_map.html#a7c8e0a56747581e1b9f5248ceb043275" title="Map::save" alt="" coords="172,38,253,65"/>
+<area shape="rect" id="node3" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="513,5,660,47"/>
+</map>

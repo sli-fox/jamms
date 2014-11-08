@@ -1,0 +1,7 @@
+<map id="Tower::attack" name="Tower::attack">
+<area shape="rect" id="node2" href="$_console_color_8h.html#a90575bb670cda4e9ae9da0847e05bd1c" title="yellow" alt="" coords="195,5,254,32"/>
+<area shape="rect" id="node3" href="$class_critter.html#a5636f0ed2f067318e0d361fe31c9eff2" title="Critter::getId" alt="" coords="178,56,271,83"/>
+<area shape="rect" id="node4" href="$class_critter.html#a3601e12d79247c3345e9e828688cf321" title="Critter::inflictDamage" alt="" coords="153,107,296,133"/>
+<area shape="rect" id="node5" href="$class_tower.html#a198af6f04dad766d019b72fc667b90a7" title="Tower::getPower" alt="" coords="165,157,284,184"/>
+<area shape="rect" id="node6" href="$class_critter.html#a1e98c05f5a41102cc37eb7a4396b90cf" title="Critter::getHitPoints" alt="" coords="157,208,293,235"/>
+</map>

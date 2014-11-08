@@ -1,0 +1,494 @@
+\hypertarget{classrapidxml_1_1memory__pool}{\section{rapidxml\+:\+:memory\+\_\+pool$<$ Ch $>$ Class Template Reference}
+\label{classrapidxml_1_1memory__pool}\index{rapidxml\+::memory\+\_\+pool$<$ Ch $>$@{rapidxml\+::memory\+\_\+pool$<$ Ch $>$}}
+}
+
+
+{\ttfamily \#include $<$rapidxml.\+hpp$>$}
+
+
+
+Inheritance diagram for rapidxml\+:\+:memory\+\_\+pool$<$ Ch $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classrapidxml_1_1memory__pool__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rapidxml\+:\+:memory\+\_\+pool$<$ Ch $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classrapidxml_1_1memory__pool__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structrapidxml_1_1memory__pool_1_1header}{header}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classrapidxml_1_1memory__pool_a0b609da81dff28a19ebd704400788429}{memory\+\_\+pool} ()
+\begin{DoxyCompactList}\small\item\em Constructs empty pool with default allocator functions. \end{DoxyCompactList}\item 
+\hyperlink{classrapidxml_1_1memory__pool_a0a3e82126e59e4077f41e933130bb5a0}{$\sim$memory\+\_\+pool} ()
+\item 
+\hyperlink{singletonrapidxml_1_1xml__node}{xml\+\_\+node}$<$ Ch $>$ $\ast$ \hyperlink{classrapidxml_1_1memory__pool_a4118581c29ee9a2f6b55ebf7dac185f8}{allocate\+\_\+node} (\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7c}{node\+\_\+type} type, const Ch $\ast$name=0, const Ch $\ast$value=0, std\+::size\+\_\+t name\+\_\+size=0, std\+::size\+\_\+t value\+\_\+size=0)
+\item 
+\hyperlink{singletonrapidxml_1_1xml__attribute}{xml\+\_\+attribute}$<$ Ch $>$ $\ast$ \hyperlink{classrapidxml_1_1memory__pool_a3de2a66c983336e006ea3844e244ed30}{allocate\+\_\+attribute} (const Ch $\ast$name=0, const Ch $\ast$value=0, std\+::size\+\_\+t name\+\_\+size=0, std\+::size\+\_\+t value\+\_\+size=0)
+\item 
+Ch $\ast$ \hyperlink{classrapidxml_1_1memory__pool_a171941b39d55b868358da97462185f58}{allocate\+\_\+string} (const Ch $\ast$source=0, std\+::size\+\_\+t size=0)
+\item 
+\hyperlink{singletonrapidxml_1_1xml__node}{xml\+\_\+node}$<$ Ch $>$ $\ast$ \hyperlink{classrapidxml_1_1memory__pool_a0a10679fc17597d339a0dc107f8a94ac}{clone\+\_\+node} (const \hyperlink{singletonrapidxml_1_1xml__node}{xml\+\_\+node}$<$ Ch $>$ $\ast$source, \hyperlink{singletonrapidxml_1_1xml__node}{xml\+\_\+node}$<$ Ch $>$ $\ast$result=0)
+\item 
+void \hyperlink{classrapidxml_1_1memory__pool_aad377c835fdaed1cb2cc9df194cf84e4}{clear} ()
+\item 
+void \hyperlink{classrapidxml_1_1memory__pool_a84d3d8d2cdfc00501e1dcf26d889ae03}{set\+\_\+allocator} (alloc\+\_\+func $\ast$af, free\+\_\+func $\ast$ff)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classrapidxml_1_1memory__pool_a1076043ef092e327e59dd988c1ba82fb}{init} ()
+\item 
+char $\ast$ \hyperlink{classrapidxml_1_1memory__pool_a317396afc1812f08b64a1dd9cde4039b}{align} (char $\ast$ptr)
+\item 
+char $\ast$ \hyperlink{classrapidxml_1_1memory__pool_a1aed504a747303352e05f61c6ccbbebb}{allocate\+\_\+raw} (std\+::size\+\_\+t size)
+\item 
+void $\ast$ \hyperlink{classrapidxml_1_1memory__pool_a4e9cf53fa5f9da3a8f31b754bd94b4ec}{allocate\+\_\+aligned} (std\+::size\+\_\+t size)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{classrapidxml_1_1memory__pool_a775205c5faa60b63385c24368d26d4e1}{m\+\_\+begin}
+\item 
+char $\ast$ \hyperlink{classrapidxml_1_1memory__pool_a4a89ff677c72afc163d1855cefc28013}{m\+\_\+ptr}
+\item 
+char $\ast$ \hyperlink{classrapidxml_1_1memory__pool_a6c9a83514446842518c9ffb7a38b76eb}{m\+\_\+end}
+\item 
+char \hyperlink{classrapidxml_1_1memory__pool_aacc5ca734ebfbef7f42251764eb396f4}{m\+\_\+static\+\_\+memory} \mbox{[}\hyperlink{rapidxml_8hpp_a001304844ab478e3b213749fc8d72ca2}{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+Z\+E}\mbox{]}
+\item 
+alloc\+\_\+func $\ast$ \hyperlink{classrapidxml_1_1memory__pool_ae8964773675d24f77a808356be773c1d}{m\+\_\+alloc\+\_\+func}
+\item 
+free\+\_\+func $\ast$ \hyperlink{classrapidxml_1_1memory__pool_af8f41565f4de167eb2f40ca20695f24d}{m\+\_\+free\+\_\+func}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Ch = char$>$class rapidxml\+::memory\+\_\+pool$<$ Ch $>$}
+
+This class is used by the parser to create new nodes and attributes, without overheads of dynamic memory allocation. In most cases, you will not need to use this class directly. However, if you need to create nodes manually or modify names/values of nodes, you are encouraged to use \hyperlink{classrapidxml_1_1memory__pool}{memory\+\_\+pool} of relevant \hyperlink{singletonrapidxml_1_1xml__document}{xml\+\_\+document} to allocate the memory. Not only is this faster than allocating them by using {\ttfamily new} operator, but also their lifetime will be tied to the lifetime of document, possibly simplyfing memory management. ~\newline
+~\newline
+ Call \hyperlink{classrapidxml_1_1memory__pool_a4118581c29ee9a2f6b55ebf7dac185f8}{allocate\+\_\+node()} or \hyperlink{classrapidxml_1_1memory__pool_a3de2a66c983336e006ea3844e244ed30}{allocate\+\_\+attribute()} functions to obtain new nodes or attributes from the pool. You can also call \hyperlink{classrapidxml_1_1memory__pool_a171941b39d55b868358da97462185f58}{allocate\+\_\+string()} function to allocate strings. Such strings can then be used as names or values of nodes without worrying about their lifetime. Note that there is no {\ttfamily free()} function -- all allocations are freed at once when \hyperlink{classrapidxml_1_1memory__pool_aad377c835fdaed1cb2cc9df194cf84e4}{clear()} function is called, or when the pool is destroyed. ~\newline
+~\newline
+ It is also possible to create a standalone \hyperlink{classrapidxml_1_1memory__pool}{memory\+\_\+pool}, and use it to allocate nodes, whose lifetime will not be tied to any document. ~\newline
+~\newline
+ Pool maintains {\ttfamily R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+Z\+E} bytes of statically allocated memory. Until static memory is exhausted, no dynamic memory allocations are done. When static memory is exhausted, pool allocates additional blocks of memory of size {\ttfamily R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+Z\+E} each, by using global {\ttfamily new\mbox{[}\mbox{]}} and {\ttfamily delete\mbox{[}\mbox{]}} operators. This behaviour can be changed by setting custom allocation routines. Use \hyperlink{classrapidxml_1_1memory__pool_a84d3d8d2cdfc00501e1dcf26d889ae03}{set\+\_\+allocator()} function to set them. ~\newline
+~\newline
+ Allocations for nodes, attributes and strings are aligned at {\ttfamily R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T} bytes. This value defaults to the size of pointer on target architecture. ~\newline
+~\newline
+ To obtain absolutely top performance from the parser, it is important that all nodes are allocated from a single, contiguous block of memory. Otherwise, cache misses when jumping between two (or more) disjoint blocks of memory can slow down parsing quite considerably. If required, you can tweak {\ttfamily R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+Z\+E}, {\ttfamily R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+Z\+E} and {\ttfamily R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T} to obtain best wasted memory to performance compromise. To do it, define their values before \hyperlink{rapidxml_8hpp}{rapidxml.\+hpp} file is included. 
+\begin{DoxyParams}{Parameters}
+{\em Ch} & Character type of created nodes. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classrapidxml_1_1memory__pool_a0b609da81dff28a19ebd704400788429}{\index{rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}!memory\+\_\+pool@{memory\+\_\+pool}}
+\index{memory\+\_\+pool@{memory\+\_\+pool}!rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}}
+\subsubsection[{memory\+\_\+pool}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ {\bf rapidxml\+::memory\+\_\+pool}$<$ Ch $>$\+::{\bf memory\+\_\+pool} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classrapidxml_1_1memory__pool_a0b609da81dff28a19ebd704400788429}
+
+
+Constructs empty pool with default allocator functions. 
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1memory__pool_a0b609da81dff28a19ebd704400788429_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1memory__pool_a0a3e82126e59e4077f41e933130bb5a0}{\index{rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}!````~memory\+\_\+pool@{$\sim$memory\+\_\+pool}}
+\index{````~memory\+\_\+pool@{$\sim$memory\+\_\+pool}!rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}}
+\subsubsection[{$\sim$memory\+\_\+pool}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ {\bf rapidxml\+::memory\+\_\+pool}$<$ Ch $>$\+::$\sim${\bf memory\+\_\+pool} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classrapidxml_1_1memory__pool_a0a3e82126e59e4077f41e933130bb5a0}
+Destroys pool and frees all the memory. This causes memory occupied by nodes allocated by the pool to be freed. Nodes allocated from the pool are no longer valid. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1memory__pool_a0a3e82126e59e4077f41e933130bb5a0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classrapidxml_1_1memory__pool_a317396afc1812f08b64a1dd9cde4039b}{\index{rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}!align@{align}}
+\index{align@{align}!rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}}
+\subsubsection[{align}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ char$\ast$ {\bf rapidxml\+::memory\+\_\+pool}$<$ Ch $>$\+::align (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classrapidxml_1_1memory__pool_a317396afc1812f08b64a1dd9cde4039b}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1memory__pool_a317396afc1812f08b64a1dd9cde4039b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1memory__pool_a4e9cf53fa5f9da3a8f31b754bd94b4ec}{\index{rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}!allocate\+\_\+aligned@{allocate\+\_\+aligned}}
+\index{allocate\+\_\+aligned@{allocate\+\_\+aligned}!rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}}
+\subsubsection[{allocate\+\_\+aligned}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ void$\ast$ {\bf rapidxml\+::memory\+\_\+pool}$<$ Ch $>$\+::allocate\+\_\+aligned (
+\begin{DoxyParamCaption}
+\item[{std\+::size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classrapidxml_1_1memory__pool_a4e9cf53fa5f9da3a8f31b754bd94b4ec}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1memory__pool_a4e9cf53fa5f9da3a8f31b754bd94b4ec_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1memory__pool_a4e9cf53fa5f9da3a8f31b754bd94b4ec_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1memory__pool_a3de2a66c983336e006ea3844e244ed30}{\index{rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}!allocate\+\_\+attribute@{allocate\+\_\+attribute}}
+\index{allocate\+\_\+attribute@{allocate\+\_\+attribute}!rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}}
+\subsubsection[{allocate\+\_\+attribute}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ {\bf xml\+\_\+attribute}$<$Ch$>$$\ast$ {\bf rapidxml\+::memory\+\_\+pool}$<$ Ch $>$\+::allocate\+\_\+attribute (
+\begin{DoxyParamCaption}
+\item[{const Ch $\ast$}]{name = {\ttfamily 0}, }
+\item[{const Ch $\ast$}]{value = {\ttfamily 0}, }
+\item[{std\+::size\+\_\+t}]{name\+\_\+size = {\ttfamily 0}, }
+\item[{std\+::size\+\_\+t}]{value\+\_\+size = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classrapidxml_1_1memory__pool_a3de2a66c983336e006ea3844e244ed30}
+Allocates a new attribute from the pool, and optionally assigns name and value to it. If the allocation request cannot be accomodated, this function will throw {\ttfamily std\+::bad\+\_\+alloc}. If exceptions are disabled by defining R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+N\+O\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+S, this function will call rapidxml\+::parse\+\_\+error\+\_\+handler() function. 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name to assign to the attribute, or 0 to assign no name. \\
+\hline
+{\em value} & Value to assign to the attribute, or 0 to assign no value. \\
+\hline
+{\em name\+\_\+size} & Size of name to assign, or 0 to automatically calculate size from name string. \\
+\hline
+{\em value\+\_\+size} & Size of value to assign, or 0 to automatically calculate size from value string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to allocated attribute. This pointer will never be N\+U\+L\+L. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1memory__pool_a3de2a66c983336e006ea3844e244ed30_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1memory__pool_a3de2a66c983336e006ea3844e244ed30_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1memory__pool_a4118581c29ee9a2f6b55ebf7dac185f8}{\index{rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}!allocate\+\_\+node@{allocate\+\_\+node}}
+\index{allocate\+\_\+node@{allocate\+\_\+node}!rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}}
+\subsubsection[{allocate\+\_\+node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ {\bf xml\+\_\+node}$<$Ch$>$$\ast$ {\bf rapidxml\+::memory\+\_\+pool}$<$ Ch $>$\+::allocate\+\_\+node (
+\begin{DoxyParamCaption}
+\item[{{\bf node\+\_\+type}}]{type, }
+\item[{const Ch $\ast$}]{name = {\ttfamily 0}, }
+\item[{const Ch $\ast$}]{value = {\ttfamily 0}, }
+\item[{std\+::size\+\_\+t}]{name\+\_\+size = {\ttfamily 0}, }
+\item[{std\+::size\+\_\+t}]{value\+\_\+size = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classrapidxml_1_1memory__pool_a4118581c29ee9a2f6b55ebf7dac185f8}
+Allocates a new node from the pool, and optionally assigns name and value to it. If the allocation request cannot be accomodated, this function will throw {\ttfamily std\+::bad\+\_\+alloc}. If exceptions are disabled by defining R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+N\+O\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+S, this function will call rapidxml\+::parse\+\_\+error\+\_\+handler() function. 
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of node to create. \\
+\hline
+{\em name} & Name to assign to the node, or 0 to assign no name. \\
+\hline
+{\em value} & Value to assign to the node, or 0 to assign no value. \\
+\hline
+{\em name\+\_\+size} & Size of name to assign, or 0 to automatically calculate size from name string. \\
+\hline
+{\em value\+\_\+size} & Size of value to assign, or 0 to automatically calculate size from value string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to allocated node. This pointer will never be N\+U\+L\+L. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1memory__pool_a4118581c29ee9a2f6b55ebf7dac185f8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1memory__pool_a4118581c29ee9a2f6b55ebf7dac185f8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1memory__pool_a1aed504a747303352e05f61c6ccbbebb}{\index{rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}!allocate\+\_\+raw@{allocate\+\_\+raw}}
+\index{allocate\+\_\+raw@{allocate\+\_\+raw}!rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}}
+\subsubsection[{allocate\+\_\+raw}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ char$\ast$ {\bf rapidxml\+::memory\+\_\+pool}$<$ Ch $>$\+::allocate\+\_\+raw (
+\begin{DoxyParamCaption}
+\item[{std\+::size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classrapidxml_1_1memory__pool_a1aed504a747303352e05f61c6ccbbebb}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1memory__pool_a1aed504a747303352e05f61c6ccbbebb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1memory__pool_a171941b39d55b868358da97462185f58}{\index{rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}!allocate\+\_\+string@{allocate\+\_\+string}}
+\index{allocate\+\_\+string@{allocate\+\_\+string}!rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}}
+\subsubsection[{allocate\+\_\+string}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ Ch$\ast$ {\bf rapidxml\+::memory\+\_\+pool}$<$ Ch $>$\+::allocate\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{const Ch $\ast$}]{source = {\ttfamily 0}, }
+\item[{std\+::size\+\_\+t}]{size = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classrapidxml_1_1memory__pool_a171941b39d55b868358da97462185f58}
+Allocates a char array of given size from the pool, and optionally copies a given string to it. If the allocation request cannot be accomodated, this function will throw {\ttfamily std\+::bad\+\_\+alloc}. If exceptions are disabled by defining R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+N\+O\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+S, this function will call rapidxml\+::parse\+\_\+error\+\_\+handler() function. 
+\begin{DoxyParams}{Parameters}
+{\em source} & String to initialize the allocated memory with, or 0 to not initialize it. \\
+\hline
+{\em size} & Number of characters to allocate, or zero to calculate it automatically from source string length; if size is 0, source string must be specified and null terminated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to allocated char array. This pointer will never be N\+U\+L\+L. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1memory__pool_a171941b39d55b868358da97462185f58_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1memory__pool_aad377c835fdaed1cb2cc9df194cf84e4}{\index{rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}!clear@{clear}}
+\index{clear@{clear}!rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ void {\bf rapidxml\+::memory\+\_\+pool}$<$ Ch $>$\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classrapidxml_1_1memory__pool_aad377c835fdaed1cb2cc9df194cf84e4}
+Clears the pool. This causes memory occupied by nodes allocated by the pool to be freed. Any nodes or strings allocated from the pool will no longer be valid. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1memory__pool_aad377c835fdaed1cb2cc9df194cf84e4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1memory__pool_aad377c835fdaed1cb2cc9df194cf84e4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1memory__pool_a0a10679fc17597d339a0dc107f8a94ac}{\index{rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}!clone\+\_\+node@{clone\+\_\+node}}
+\index{clone\+\_\+node@{clone\+\_\+node}!rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}}
+\subsubsection[{clone\+\_\+node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ {\bf xml\+\_\+node}$<$Ch$>$$\ast$ {\bf rapidxml\+::memory\+\_\+pool}$<$ Ch $>$\+::clone\+\_\+node (
+\begin{DoxyParamCaption}
+\item[{const {\bf xml\+\_\+node}$<$ Ch $>$ $\ast$}]{source, }
+\item[{{\bf xml\+\_\+node}$<$ Ch $>$ $\ast$}]{result = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classrapidxml_1_1memory__pool_a0a10679fc17597d339a0dc107f8a94ac}
+Clones an \hyperlink{singletonrapidxml_1_1xml__node}{xml\+\_\+node} and its hierarchy of child nodes and attributes. Nodes and attributes are allocated from this memory pool. Names and values are not cloned, they are shared between the clone and the source. Result node can be optionally specified as a second parameter, in which case its contents will be replaced with cloned source node. This is useful when you want to clone entire document. 
+\begin{DoxyParams}{Parameters}
+{\em source} & Node to clone. \\
+\hline
+{\em result} & Node to put results in, or 0 to automatically allocate result node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to cloned node. This pointer will never be N\+U\+L\+L. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1memory__pool_a0a10679fc17597d339a0dc107f8a94ac_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1memory__pool_a1076043ef092e327e59dd988c1ba82fb}{\index{rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}!init@{init}}
+\index{init@{init}!rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ void {\bf rapidxml\+::memory\+\_\+pool}$<$ Ch $>$\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classrapidxml_1_1memory__pool_a1076043ef092e327e59dd988c1ba82fb}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1memory__pool_a1076043ef092e327e59dd988c1ba82fb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1memory__pool_a1076043ef092e327e59dd988c1ba82fb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classrapidxml_1_1memory__pool_a84d3d8d2cdfc00501e1dcf26d889ae03}{\index{rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}!set\+\_\+allocator@{set\+\_\+allocator}}
+\index{set\+\_\+allocator@{set\+\_\+allocator}!rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}}
+\subsubsection[{set\+\_\+allocator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ void {\bf rapidxml\+::memory\+\_\+pool}$<$ Ch $>$\+::set\+\_\+allocator (
+\begin{DoxyParamCaption}
+\item[{alloc\+\_\+func $\ast$}]{af, }
+\item[{free\+\_\+func $\ast$}]{ff}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classrapidxml_1_1memory__pool_a84d3d8d2cdfc00501e1dcf26d889ae03}
+Sets or resets the user-\/defined memory allocation functions for the pool. This can only be called when no memory is allocated from the pool yet, otherwise results are undefined. Allocation function must not return invalid pointer on failure. It should either throw, stop the program, or use {\ttfamily longjmp()} function to pass control to other place of program. If it returns invalid pointer, results are undefined. ~\newline
+~\newline
+ User defined allocation functions must have the following forms\+: ~\newline
+{\ttfamily  ~\newline
+void $\ast$allocate(std\+::size\+\_\+t size); ~\newline
+void free(void $\ast$pointer); }~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em af} & Allocation function, or 0 to restore default function \\
+\hline
+{\em ff} & Free function, or 0 to restore default function \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrapidxml_1_1memory__pool_a84d3d8d2cdfc00501e1dcf26d889ae03_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classrapidxml_1_1memory__pool_ae8964773675d24f77a808356be773c1d}{\index{rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}!m\+\_\+alloc\+\_\+func@{m\+\_\+alloc\+\_\+func}}
+\index{m\+\_\+alloc\+\_\+func@{m\+\_\+alloc\+\_\+func}!rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}}
+\subsubsection[{m\+\_\+alloc\+\_\+func}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ alloc\+\_\+func$\ast$ {\bf rapidxml\+::memory\+\_\+pool}$<$ Ch $>$\+::m\+\_\+alloc\+\_\+func\hspace{0.3cm}{\ttfamily [private]}}}\label{classrapidxml_1_1memory__pool_ae8964773675d24f77a808356be773c1d}
+\hypertarget{classrapidxml_1_1memory__pool_a775205c5faa60b63385c24368d26d4e1}{\index{rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}!m\+\_\+begin@{m\+\_\+begin}}
+\index{m\+\_\+begin@{m\+\_\+begin}!rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}}
+\subsubsection[{m\+\_\+begin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ char$\ast$ {\bf rapidxml\+::memory\+\_\+pool}$<$ Ch $>$\+::m\+\_\+begin\hspace{0.3cm}{\ttfamily [private]}}}\label{classrapidxml_1_1memory__pool_a775205c5faa60b63385c24368d26d4e1}
+\hypertarget{classrapidxml_1_1memory__pool_a6c9a83514446842518c9ffb7a38b76eb}{\index{rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}!m\+\_\+end@{m\+\_\+end}}
+\index{m\+\_\+end@{m\+\_\+end}!rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}}
+\subsubsection[{m\+\_\+end}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ char$\ast$ {\bf rapidxml\+::memory\+\_\+pool}$<$ Ch $>$\+::m\+\_\+end\hspace{0.3cm}{\ttfamily [private]}}}\label{classrapidxml_1_1memory__pool_a6c9a83514446842518c9ffb7a38b76eb}
+\hypertarget{classrapidxml_1_1memory__pool_af8f41565f4de167eb2f40ca20695f24d}{\index{rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}!m\+\_\+free\+\_\+func@{m\+\_\+free\+\_\+func}}
+\index{m\+\_\+free\+\_\+func@{m\+\_\+free\+\_\+func}!rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}}
+\subsubsection[{m\+\_\+free\+\_\+func}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ free\+\_\+func$\ast$ {\bf rapidxml\+::memory\+\_\+pool}$<$ Ch $>$\+::m\+\_\+free\+\_\+func\hspace{0.3cm}{\ttfamily [private]}}}\label{classrapidxml_1_1memory__pool_af8f41565f4de167eb2f40ca20695f24d}
+\hypertarget{classrapidxml_1_1memory__pool_a4a89ff677c72afc163d1855cefc28013}{\index{rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}!m\+\_\+ptr@{m\+\_\+ptr}}
+\index{m\+\_\+ptr@{m\+\_\+ptr}!rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}}
+\subsubsection[{m\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ char$\ast$ {\bf rapidxml\+::memory\+\_\+pool}$<$ Ch $>$\+::m\+\_\+ptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classrapidxml_1_1memory__pool_a4a89ff677c72afc163d1855cefc28013}
+\hypertarget{classrapidxml_1_1memory__pool_aacc5ca734ebfbef7f42251764eb396f4}{\index{rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}!m\+\_\+static\+\_\+memory@{m\+\_\+static\+\_\+memory}}
+\index{m\+\_\+static\+\_\+memory@{m\+\_\+static\+\_\+memory}!rapidxml\+::memory\+\_\+pool@{rapidxml\+::memory\+\_\+pool}}
+\subsubsection[{m\+\_\+static\+\_\+memory}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch  = char$>$ char {\bf rapidxml\+::memory\+\_\+pool}$<$ Ch $>$\+::m\+\_\+static\+\_\+memory\mbox{[}{\bf R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+Z\+E}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}}\label{classrapidxml_1_1memory__pool_aacc5ca734ebfbef7f42251764eb396f4}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/utils/\hyperlink{rapidxml_8hpp}{rapidxml.\+hpp}\end{DoxyCompactItemize}

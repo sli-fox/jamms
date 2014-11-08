@@ -1,0 +1,6 @@
+<map id="IObserver" name="IObserver">
+<area shape="rect" id="node2" href="$class_tower.html" title="{Tower\n|# _id\l# _name\l# _type\l# _upgrade_level\l# _power\l# _range\l# _range_shape\l# _rate_of_fire\l# _special_effect\l# _buy_cost\l# _upgrade_cost\l# _sell_cost\l# _target\l&#45; clock\l&#45; time\l|+ Tower()\l+ ~Tower()\l+ upgradeTower()\l+ canAttack()\l+ canApplySpecialAfterEffects()\l+ attack()\l+ update()\l+ findCollisionPath()\l+ rotateTowardsTarget()\l+ angle()\land 30 more...\l}" alt="" coords="110,131,317,560"/>
+<area shape="rect" id="node3" href="$class_bulldog.html" title="{Bulldog\n||+ Bulldog()\l+ upgradeTower()\l}" alt="" coords="5,608,128,700"/>
+<area shape="rect" id="node4" href="$class_dalmatian.html" title="{Dalmatian\n||+ Dalmatian()\l+ upgradeTower()\l}" alt="" coords="152,608,275,700"/>
+<area shape="rect" id="node5" href="$class_shih_tzu.html" title="{ShihTzu\n||+ ShihTzu()\l+ upgradeTower()\l}" alt="" coords="299,608,421,700"/>
+</map>

@@ -1,0 +1,298 @@
+\hypertarget{namespacerapidxml}{\section{rapidxml Namespace Reference}
+\label{namespacerapidxml}\index{rapidxml@{rapidxml}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classrapidxml_1_1memory__pool}{memory\+\_\+pool}
+\item 
+class \hyperlink{classrapidxml_1_1parse__error}{parse\+\_\+error}
+\item 
+class \hyperlink{singletonrapidxml_1_1xml__attribute}{xml\+\_\+attribute}
+\item 
+class \hyperlink{classrapidxml_1_1xml__base}{xml\+\_\+base}
+\item 
+class \hyperlink{singletonrapidxml_1_1xml__document}{xml\+\_\+document}
+\item 
+class \hyperlink{singletonrapidxml_1_1xml__node}{xml\+\_\+node}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7c}{node\+\_\+type} \{ \\*
+\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca4023b6a1c7059fd8fbec2112d5c35424}{node\+\_\+document}, 
+\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca89cbeb4d28046326e4ee953d3c4047ff}{node\+\_\+element}, 
+\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca9d669d8e1f4ba9c7eeada4c14a11ad1d}{node\+\_\+data}, 
+\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7caccf0b363d3876a3f83ff9b1bcdaaa536}{node\+\_\+cdata}, 
+\\*
+\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca1a695e1384ec3bd4df3eff65ec609a96}{node\+\_\+comment}, 
+\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7cafe4ca44261e5fbedf0eab43131751212}{node\+\_\+declaration}, 
+\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7cadf5002f2efabe231bed01d16f08f832c}{node\+\_\+doctype}, 
+\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7caeb73b472e77347b9aa89525f16493b87}{node\+\_\+pi}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Out\+It , class Ch $>$ }\\Out\+It \hyperlink{namespacerapidxml_a0fb0be6eba49fb2e2646d5a72a0dc355}{print} (Out\+It out, const \hyperlink{singletonrapidxml_1_1xml__node}{xml\+\_\+node}$<$ Ch $>$ \&node, int flags=0)
+\item 
+{\footnotesize template$<$class Ch $>$ }\\std\+::basic\+\_\+ostream$<$ Ch $>$ \& \hyperlink{namespacerapidxml_a0d2e114d5dd85e13c23b8dab600720fe}{print} (std\+::basic\+\_\+ostream$<$ Ch $>$ \&out, const \hyperlink{singletonrapidxml_1_1xml__node}{xml\+\_\+node}$<$ Ch $>$ \&node, int flags=0)
+\item 
+{\footnotesize template$<$class Ch $>$ }\\std\+::basic\+\_\+ostream$<$ Ch $>$ \& \hyperlink{namespacerapidxml_a9ed8e626dd81348caede1f92a6c8418a}{operator$<$$<$} (std\+::basic\+\_\+ostream$<$ Ch $>$ \&out, const \hyperlink{singletonrapidxml_1_1xml__node}{xml\+\_\+node}$<$ Ch $>$ \&node)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{namespacerapidxml_ac2d21ef14a4e8936b94aca5d38b1a74d}{parse\+\_\+no\+\_\+data\+\_\+nodes} = 0x1
+\item 
+const int \hyperlink{namespacerapidxml_a00e6fea134b786ea6efeed1c8bc4a668}{parse\+\_\+no\+\_\+element\+\_\+values} = 0x2
+\item 
+const int \hyperlink{namespacerapidxml_af3fc88ba6bee33482a2db81b1da36ea1}{parse\+\_\+no\+\_\+string\+\_\+terminators} = 0x4
+\item 
+const int \hyperlink{namespacerapidxml_a89113c103ffaf77615d1aa330c8dcca8}{parse\+\_\+no\+\_\+entity\+\_\+translation} = 0x8
+\item 
+const int \hyperlink{namespacerapidxml_a22d4aefaceb00d7afabfef7107b108da}{parse\+\_\+no\+\_\+utf8} = 0x10
+\item 
+const int \hyperlink{namespacerapidxml_a999d782659513f8015ea4236e3204c42}{parse\+\_\+declaration\+\_\+node} = 0x20
+\item 
+const int \hyperlink{namespacerapidxml_ae093dd49e2f59fa39eee95f1a6568e32}{parse\+\_\+comment\+\_\+nodes} = 0x40
+\item 
+const int \hyperlink{namespacerapidxml_a41002b49780a90a0bbcc28ce8b895fe4}{parse\+\_\+doctype\+\_\+node} = 0x80
+\item 
+const int \hyperlink{namespacerapidxml_a03fe68fcf5d28f38476e0fd31adecc4c}{parse\+\_\+pi\+\_\+nodes} = 0x100
+\item 
+const int \hyperlink{namespacerapidxml_a7ce8f40fda68338e20b56f41e48e49f3}{parse\+\_\+validate\+\_\+closing\+\_\+tags} = 0x200
+\item 
+const int \hyperlink{namespacerapidxml_a61912424b47db5038e726d4e1c22417f}{parse\+\_\+trim\+\_\+whitespace} = 0x400
+\item 
+const int \hyperlink{namespacerapidxml_a31f33885defb5176a7d99e524c35d386}{parse\+\_\+normalize\+\_\+whitespace} = 0x800
+\item 
+const int \hyperlink{namespacerapidxml_acf4edf952f59eb1b6124ea37ad7da3ab}{parse\+\_\+default} = 0
+\item 
+const int \hyperlink{namespacerapidxml_a45d4d8fef551beaaba23a83b847fd6a3}{parse\+\_\+non\+\_\+destructive} = \hyperlink{namespacerapidxml_af3fc88ba6bee33482a2db81b1da36ea1}{parse\+\_\+no\+\_\+string\+\_\+terminators} $\vert$ \hyperlink{namespacerapidxml_a89113c103ffaf77615d1aa330c8dcca8}{parse\+\_\+no\+\_\+entity\+\_\+translation}
+\item 
+const int \hyperlink{namespacerapidxml_a64da06dfdab7c86ca954bda4fecb978f}{parse\+\_\+fastest} = \hyperlink{namespacerapidxml_a45d4d8fef551beaaba23a83b847fd6a3}{parse\+\_\+non\+\_\+destructive} $\vert$ \hyperlink{namespacerapidxml_ac2d21ef14a4e8936b94aca5d38b1a74d}{parse\+\_\+no\+\_\+data\+\_\+nodes}
+\item 
+const int \hyperlink{namespacerapidxml_abb48dc65db75d9e49734bc5bd2fabbfc}{parse\+\_\+full} = \hyperlink{namespacerapidxml_a999d782659513f8015ea4236e3204c42}{parse\+\_\+declaration\+\_\+node} $\vert$ \hyperlink{namespacerapidxml_ae093dd49e2f59fa39eee95f1a6568e32}{parse\+\_\+comment\+\_\+nodes} $\vert$ \hyperlink{namespacerapidxml_a41002b49780a90a0bbcc28ce8b895fe4}{parse\+\_\+doctype\+\_\+node} $\vert$ \hyperlink{namespacerapidxml_a03fe68fcf5d28f38476e0fd31adecc4c}{parse\+\_\+pi\+\_\+nodes} $\vert$ \hyperlink{namespacerapidxml_a7ce8f40fda68338e20b56f41e48e49f3}{parse\+\_\+validate\+\_\+closing\+\_\+tags}
+\item 
+const int \hyperlink{namespacerapidxml_a65477b812a80f5bda693ec57e57de064}{print\+\_\+no\+\_\+indenting} = 0x1
+\begin{DoxyCompactList}\small\item\em Printer flag instructing the printer to suppress indenting of X\+M\+L. See \hyperlink{namespacerapidxml_a0fb0be6eba49fb2e2646d5a72a0dc355}{print()} function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespacerapidxml_abb456db38f7efb746c4330eed6072a7c}{\index{rapidxml@{rapidxml}!node\+\_\+type@{node\+\_\+type}}
+\index{node\+\_\+type@{node\+\_\+type}!rapidxml@{rapidxml}}
+\subsubsection[{node\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf rapidxml\+::node\+\_\+type}}}\label{namespacerapidxml_abb456db38f7efb746c4330eed6072a7c}
+Enumeration listing all node types produced by the parser. Use \hyperlink{singletonrapidxml_1_1xml__node_a2c6a4315b98bcfa2e04fed3fa1b22c36}{xml\+\_\+node\+::type()} function to query node type. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{node\+\_\+document@{node\+\_\+document}!rapidxml@{rapidxml}}\index{rapidxml@{rapidxml}!node\+\_\+document@{node\+\_\+document}}\item[{\em 
+\hypertarget{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca4023b6a1c7059fd8fbec2112d5c35424}{node\+\_\+document}\label{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca4023b6a1c7059fd8fbec2112d5c35424}
+}]A document node. Name and value are empty. \index{node\+\_\+element@{node\+\_\+element}!rapidxml@{rapidxml}}\index{rapidxml@{rapidxml}!node\+\_\+element@{node\+\_\+element}}\item[{\em 
+\hypertarget{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca89cbeb4d28046326e4ee953d3c4047ff}{node\+\_\+element}\label{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca89cbeb4d28046326e4ee953d3c4047ff}
+}]An element node. Name contains element name. Value contains text of first data node. \index{node\+\_\+data@{node\+\_\+data}!rapidxml@{rapidxml}}\index{rapidxml@{rapidxml}!node\+\_\+data@{node\+\_\+data}}\item[{\em 
+\hypertarget{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca9d669d8e1f4ba9c7eeada4c14a11ad1d}{node\+\_\+data}\label{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca9d669d8e1f4ba9c7eeada4c14a11ad1d}
+}]A data node. Name is empty. Value contains data text. \index{node\+\_\+cdata@{node\+\_\+cdata}!rapidxml@{rapidxml}}\index{rapidxml@{rapidxml}!node\+\_\+cdata@{node\+\_\+cdata}}\item[{\em 
+\hypertarget{namespacerapidxml_abb456db38f7efb746c4330eed6072a7caccf0b363d3876a3f83ff9b1bcdaaa536}{node\+\_\+cdata}\label{namespacerapidxml_abb456db38f7efb746c4330eed6072a7caccf0b363d3876a3f83ff9b1bcdaaa536}
+}]A C\+D\+A\+T\+A node. Name is empty. Value contains data text. \index{node\+\_\+comment@{node\+\_\+comment}!rapidxml@{rapidxml}}\index{rapidxml@{rapidxml}!node\+\_\+comment@{node\+\_\+comment}}\item[{\em 
+\hypertarget{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca1a695e1384ec3bd4df3eff65ec609a96}{node\+\_\+comment}\label{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca1a695e1384ec3bd4df3eff65ec609a96}
+}]A comment node. Name is empty. Value contains comment text. \index{node\+\_\+declaration@{node\+\_\+declaration}!rapidxml@{rapidxml}}\index{rapidxml@{rapidxml}!node\+\_\+declaration@{node\+\_\+declaration}}\item[{\em 
+\hypertarget{namespacerapidxml_abb456db38f7efb746c4330eed6072a7cafe4ca44261e5fbedf0eab43131751212}{node\+\_\+declaration}\label{namespacerapidxml_abb456db38f7efb746c4330eed6072a7cafe4ca44261e5fbedf0eab43131751212}
+}]A declaration node. Name and value are empty. Declaration parameters (version, encoding and standalone) are in node attributes. \index{node\+\_\+doctype@{node\+\_\+doctype}!rapidxml@{rapidxml}}\index{rapidxml@{rapidxml}!node\+\_\+doctype@{node\+\_\+doctype}}\item[{\em 
+\hypertarget{namespacerapidxml_abb456db38f7efb746c4330eed6072a7cadf5002f2efabe231bed01d16f08f832c}{node\+\_\+doctype}\label{namespacerapidxml_abb456db38f7efb746c4330eed6072a7cadf5002f2efabe231bed01d16f08f832c}
+}]A D\+O\+C\+T\+Y\+P\+E node. Name is empty. Value contains D\+O\+C\+T\+Y\+P\+E text. \index{node\+\_\+pi@{node\+\_\+pi}!rapidxml@{rapidxml}}\index{rapidxml@{rapidxml}!node\+\_\+pi@{node\+\_\+pi}}\item[{\em 
+\hypertarget{namespacerapidxml_abb456db38f7efb746c4330eed6072a7caeb73b472e77347b9aa89525f16493b87}{node\+\_\+pi}\label{namespacerapidxml_abb456db38f7efb746c4330eed6072a7caeb73b472e77347b9aa89525f16493b87}
+}]A P\+I node. Name contains target. Value contains instructions. \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacerapidxml_a9ed8e626dd81348caede1f92a6c8418a}{\index{rapidxml@{rapidxml}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!rapidxml@{rapidxml}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch $>$ std\+::basic\+\_\+ostream$<$Ch$>$\& rapidxml\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::basic\+\_\+ostream$<$ Ch $>$ \&}]{out, }
+\item[{const xml\+\_\+node$<$ Ch $>$ \&}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacerapidxml_a9ed8e626dd81348caede1f92a6c8418a}
+Prints formatted X\+M\+L to given output stream. Uses default printing flags. Use \hyperlink{namespacerapidxml_a0fb0be6eba49fb2e2646d5a72a0dc355}{print()} function to customize printing process. 
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream to print to. \\
+\hline
+{\em node} & Node to be printed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Output stream. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{namespacerapidxml_a9ed8e626dd81348caede1f92a6c8418a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacerapidxml_a0fb0be6eba49fb2e2646d5a72a0dc355}{\index{rapidxml@{rapidxml}!print@{print}}
+\index{print@{print}!rapidxml@{rapidxml}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Out\+It , class Ch $>$ Out\+It rapidxml\+::print (
+\begin{DoxyParamCaption}
+\item[{Out\+It}]{out, }
+\item[{const xml\+\_\+node$<$ Ch $>$ \&}]{node, }
+\item[{int}]{flags = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacerapidxml_a0fb0be6eba49fb2e2646d5a72a0dc355}
+Prints X\+M\+L to given output iterator. 
+\begin{DoxyParams}{Parameters}
+{\em out} & Output iterator to print to. \\
+\hline
+{\em node} & Node to be printed. Pass \hyperlink{singletonrapidxml_1_1xml__document}{xml\+\_\+document} to print entire document. \\
+\hline
+{\em flags} & Flags controlling how X\+M\+L is printed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Output iterator pointing to position immediately after last character of printed text. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{namespacerapidxml_a0fb0be6eba49fb2e2646d5a72a0dc355_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacerapidxml_a0d2e114d5dd85e13c23b8dab600720fe}{\index{rapidxml@{rapidxml}!print@{print}}
+\index{print@{print}!rapidxml@{rapidxml}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch $>$ std\+::basic\+\_\+ostream$<$Ch$>$\& rapidxml\+::print (
+\begin{DoxyParamCaption}
+\item[{std\+::basic\+\_\+ostream$<$ Ch $>$ \&}]{out, }
+\item[{const xml\+\_\+node$<$ Ch $>$ \&}]{node, }
+\item[{int}]{flags = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacerapidxml_a0d2e114d5dd85e13c23b8dab600720fe}
+Prints X\+M\+L to given output stream. 
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream to print to. \\
+\hline
+{\em node} & Node to be printed. Pass \hyperlink{singletonrapidxml_1_1xml__document}{xml\+\_\+document} to print entire document. \\
+\hline
+{\em flags} & Flags controlling how X\+M\+L is printed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Output stream. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{namespacerapidxml_a0d2e114d5dd85e13c23b8dab600720fe_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacerapidxml_ae093dd49e2f59fa39eee95f1a6568e32}{\index{rapidxml@{rapidxml}!parse\+\_\+comment\+\_\+nodes@{parse\+\_\+comment\+\_\+nodes}}
+\index{parse\+\_\+comment\+\_\+nodes@{parse\+\_\+comment\+\_\+nodes}!rapidxml@{rapidxml}}
+\subsubsection[{parse\+\_\+comment\+\_\+nodes}]{\setlength{\rightskip}{0pt plus 5cm}const int rapidxml\+::parse\+\_\+comment\+\_\+nodes = 0x40}}\label{namespacerapidxml_ae093dd49e2f59fa39eee95f1a6568e32}
+Parse flag instructing the parser to create comments nodes. By default, comment nodes are not created. Can be combined with other flags by use of $\vert$ operator. ~\newline
+~\newline
+ See \hyperlink{singletonrapidxml_1_1xml__document_ac6e73ff9ac323bf5a370c38feb03a6b1}{xml\+\_\+document\+::parse()} function. \hypertarget{namespacerapidxml_a999d782659513f8015ea4236e3204c42}{\index{rapidxml@{rapidxml}!parse\+\_\+declaration\+\_\+node@{parse\+\_\+declaration\+\_\+node}}
+\index{parse\+\_\+declaration\+\_\+node@{parse\+\_\+declaration\+\_\+node}!rapidxml@{rapidxml}}
+\subsubsection[{parse\+\_\+declaration\+\_\+node}]{\setlength{\rightskip}{0pt plus 5cm}const int rapidxml\+::parse\+\_\+declaration\+\_\+node = 0x20}}\label{namespacerapidxml_a999d782659513f8015ea4236e3204c42}
+Parse flag instructing the parser to create X\+M\+L declaration node. By default, declaration node is not created. Can be combined with other flags by use of $\vert$ operator. ~\newline
+~\newline
+ See \hyperlink{singletonrapidxml_1_1xml__document_ac6e73ff9ac323bf5a370c38feb03a6b1}{xml\+\_\+document\+::parse()} function. \hypertarget{namespacerapidxml_acf4edf952f59eb1b6124ea37ad7da3ab}{\index{rapidxml@{rapidxml}!parse\+\_\+default@{parse\+\_\+default}}
+\index{parse\+\_\+default@{parse\+\_\+default}!rapidxml@{rapidxml}}
+\subsubsection[{parse\+\_\+default}]{\setlength{\rightskip}{0pt plus 5cm}const int rapidxml\+::parse\+\_\+default = 0}}\label{namespacerapidxml_acf4edf952f59eb1b6124ea37ad7da3ab}
+Parse flags which represent default behaviour of the parser. This is always equal to 0, so that all other flags can be simply ored together. Normally there is no need to inconveniently disable flags by anding with their negated ($\sim$) values. This also means that meaning of each flag is a {\itshape negation} of the default setting. For example, if flag name is \hyperlink{namespacerapidxml_a22d4aefaceb00d7afabfef7107b108da}{rapidxml\+::parse\+\_\+no\+\_\+utf8}, it means that utf-\/8 is {\itshape enabled} by default, and using the flag will disable it. ~\newline
+~\newline
+ See \hyperlink{singletonrapidxml_1_1xml__document_ac6e73ff9ac323bf5a370c38feb03a6b1}{xml\+\_\+document\+::parse()} function. \hypertarget{namespacerapidxml_a41002b49780a90a0bbcc28ce8b895fe4}{\index{rapidxml@{rapidxml}!parse\+\_\+doctype\+\_\+node@{parse\+\_\+doctype\+\_\+node}}
+\index{parse\+\_\+doctype\+\_\+node@{parse\+\_\+doctype\+\_\+node}!rapidxml@{rapidxml}}
+\subsubsection[{parse\+\_\+doctype\+\_\+node}]{\setlength{\rightskip}{0pt plus 5cm}const int rapidxml\+::parse\+\_\+doctype\+\_\+node = 0x80}}\label{namespacerapidxml_a41002b49780a90a0bbcc28ce8b895fe4}
+Parse flag instructing the parser to create D\+O\+C\+T\+Y\+P\+E node. By default, doctype node is not created. Although W3\+C specification allows at most one D\+O\+C\+T\+Y\+P\+E node, Rapid\+Xml will silently accept documents with more than one. Can be combined with other flags by use of $\vert$ operator. ~\newline
+~\newline
+ See \hyperlink{singletonrapidxml_1_1xml__document_ac6e73ff9ac323bf5a370c38feb03a6b1}{xml\+\_\+document\+::parse()} function. \hypertarget{namespacerapidxml_a64da06dfdab7c86ca954bda4fecb978f}{\index{rapidxml@{rapidxml}!parse\+\_\+fastest@{parse\+\_\+fastest}}
+\index{parse\+\_\+fastest@{parse\+\_\+fastest}!rapidxml@{rapidxml}}
+\subsubsection[{parse\+\_\+fastest}]{\setlength{\rightskip}{0pt plus 5cm}const int rapidxml\+::parse\+\_\+fastest = {\bf parse\+\_\+non\+\_\+destructive} $\vert$ {\bf parse\+\_\+no\+\_\+data\+\_\+nodes}}}\label{namespacerapidxml_a64da06dfdab7c86ca954bda4fecb978f}
+A combination of parse flags resulting in fastest possible parsing, without sacrificing important data. ~\newline
+~\newline
+ See \hyperlink{singletonrapidxml_1_1xml__document_ac6e73ff9ac323bf5a370c38feb03a6b1}{xml\+\_\+document\+::parse()} function. \hypertarget{namespacerapidxml_abb48dc65db75d9e49734bc5bd2fabbfc}{\index{rapidxml@{rapidxml}!parse\+\_\+full@{parse\+\_\+full}}
+\index{parse\+\_\+full@{parse\+\_\+full}!rapidxml@{rapidxml}}
+\subsubsection[{parse\+\_\+full}]{\setlength{\rightskip}{0pt plus 5cm}const int rapidxml\+::parse\+\_\+full = {\bf parse\+\_\+declaration\+\_\+node} $\vert$ {\bf parse\+\_\+comment\+\_\+nodes} $\vert$ {\bf parse\+\_\+doctype\+\_\+node} $\vert$ {\bf parse\+\_\+pi\+\_\+nodes} $\vert$ {\bf parse\+\_\+validate\+\_\+closing\+\_\+tags}}}\label{namespacerapidxml_abb48dc65db75d9e49734bc5bd2fabbfc}
+A combination of parse flags resulting in largest amount of data being extracted. This usually results in slowest parsing. ~\newline
+~\newline
+ See \hyperlink{singletonrapidxml_1_1xml__document_ac6e73ff9ac323bf5a370c38feb03a6b1}{xml\+\_\+document\+::parse()} function. \hypertarget{namespacerapidxml_ac2d21ef14a4e8936b94aca5d38b1a74d}{\index{rapidxml@{rapidxml}!parse\+\_\+no\+\_\+data\+\_\+nodes@{parse\+\_\+no\+\_\+data\+\_\+nodes}}
+\index{parse\+\_\+no\+\_\+data\+\_\+nodes@{parse\+\_\+no\+\_\+data\+\_\+nodes}!rapidxml@{rapidxml}}
+\subsubsection[{parse\+\_\+no\+\_\+data\+\_\+nodes}]{\setlength{\rightskip}{0pt plus 5cm}const int rapidxml\+::parse\+\_\+no\+\_\+data\+\_\+nodes = 0x1}}\label{namespacerapidxml_ac2d21ef14a4e8936b94aca5d38b1a74d}
+Parse flag instructing the parser to not create data nodes. Text of first data node will still be placed in value of parent element, unless \hyperlink{namespacerapidxml_a00e6fea134b786ea6efeed1c8bc4a668}{rapidxml\+::parse\+\_\+no\+\_\+element\+\_\+values} flag is also specified. Can be combined with other flags by use of $\vert$ operator. ~\newline
+~\newline
+ See \hyperlink{singletonrapidxml_1_1xml__document_ac6e73ff9ac323bf5a370c38feb03a6b1}{xml\+\_\+document\+::parse()} function. \hypertarget{namespacerapidxml_a00e6fea134b786ea6efeed1c8bc4a668}{\index{rapidxml@{rapidxml}!parse\+\_\+no\+\_\+element\+\_\+values@{parse\+\_\+no\+\_\+element\+\_\+values}}
+\index{parse\+\_\+no\+\_\+element\+\_\+values@{parse\+\_\+no\+\_\+element\+\_\+values}!rapidxml@{rapidxml}}
+\subsubsection[{parse\+\_\+no\+\_\+element\+\_\+values}]{\setlength{\rightskip}{0pt plus 5cm}const int rapidxml\+::parse\+\_\+no\+\_\+element\+\_\+values = 0x2}}\label{namespacerapidxml_a00e6fea134b786ea6efeed1c8bc4a668}
+Parse flag instructing the parser to not use text of first data node as a value of parent element. Can be combined with other flags by use of $\vert$ operator. Note that child data nodes of element node take precendence over its value when printing. That is, if element has one or more child data nodes {\itshape and} a value, the value will be ignored. Use \hyperlink{namespacerapidxml_ac2d21ef14a4e8936b94aca5d38b1a74d}{rapidxml\+::parse\+\_\+no\+\_\+data\+\_\+nodes} flag to prevent creation of data nodes if you want to manipulate data using values of elements. ~\newline
+~\newline
+ See \hyperlink{singletonrapidxml_1_1xml__document_ac6e73ff9ac323bf5a370c38feb03a6b1}{xml\+\_\+document\+::parse()} function. \hypertarget{namespacerapidxml_a89113c103ffaf77615d1aa330c8dcca8}{\index{rapidxml@{rapidxml}!parse\+\_\+no\+\_\+entity\+\_\+translation@{parse\+\_\+no\+\_\+entity\+\_\+translation}}
+\index{parse\+\_\+no\+\_\+entity\+\_\+translation@{parse\+\_\+no\+\_\+entity\+\_\+translation}!rapidxml@{rapidxml}}
+\subsubsection[{parse\+\_\+no\+\_\+entity\+\_\+translation}]{\setlength{\rightskip}{0pt plus 5cm}const int rapidxml\+::parse\+\_\+no\+\_\+entity\+\_\+translation = 0x8}}\label{namespacerapidxml_a89113c103ffaf77615d1aa330c8dcca8}
+Parse flag instructing the parser to not translate entities in the source text. By default entities are translated, modifying source text. Can be combined with other flags by use of $\vert$ operator. ~\newline
+~\newline
+ See \hyperlink{singletonrapidxml_1_1xml__document_ac6e73ff9ac323bf5a370c38feb03a6b1}{xml\+\_\+document\+::parse()} function. \hypertarget{namespacerapidxml_af3fc88ba6bee33482a2db81b1da36ea1}{\index{rapidxml@{rapidxml}!parse\+\_\+no\+\_\+string\+\_\+terminators@{parse\+\_\+no\+\_\+string\+\_\+terminators}}
+\index{parse\+\_\+no\+\_\+string\+\_\+terminators@{parse\+\_\+no\+\_\+string\+\_\+terminators}!rapidxml@{rapidxml}}
+\subsubsection[{parse\+\_\+no\+\_\+string\+\_\+terminators}]{\setlength{\rightskip}{0pt plus 5cm}const int rapidxml\+::parse\+\_\+no\+\_\+string\+\_\+terminators = 0x4}}\label{namespacerapidxml_af3fc88ba6bee33482a2db81b1da36ea1}
+Parse flag instructing the parser to not place zero terminators after strings in the source text. By default zero terminators are placed, modifying source text. Can be combined with other flags by use of $\vert$ operator. ~\newline
+~\newline
+ See \hyperlink{singletonrapidxml_1_1xml__document_ac6e73ff9ac323bf5a370c38feb03a6b1}{xml\+\_\+document\+::parse()} function. \hypertarget{namespacerapidxml_a22d4aefaceb00d7afabfef7107b108da}{\index{rapidxml@{rapidxml}!parse\+\_\+no\+\_\+utf8@{parse\+\_\+no\+\_\+utf8}}
+\index{parse\+\_\+no\+\_\+utf8@{parse\+\_\+no\+\_\+utf8}!rapidxml@{rapidxml}}
+\subsubsection[{parse\+\_\+no\+\_\+utf8}]{\setlength{\rightskip}{0pt plus 5cm}const int rapidxml\+::parse\+\_\+no\+\_\+utf8 = 0x10}}\label{namespacerapidxml_a22d4aefaceb00d7afabfef7107b108da}
+Parse flag instructing the parser to disable U\+T\+F-\/8 handling and assume plain 8 bit characters. By default, U\+T\+F-\/8 handling is enabled. Can be combined with other flags by use of $\vert$ operator. ~\newline
+~\newline
+ See \hyperlink{singletonrapidxml_1_1xml__document_ac6e73ff9ac323bf5a370c38feb03a6b1}{xml\+\_\+document\+::parse()} function. \hypertarget{namespacerapidxml_a45d4d8fef551beaaba23a83b847fd6a3}{\index{rapidxml@{rapidxml}!parse\+\_\+non\+\_\+destructive@{parse\+\_\+non\+\_\+destructive}}
+\index{parse\+\_\+non\+\_\+destructive@{parse\+\_\+non\+\_\+destructive}!rapidxml@{rapidxml}}
+\subsubsection[{parse\+\_\+non\+\_\+destructive}]{\setlength{\rightskip}{0pt plus 5cm}const int rapidxml\+::parse\+\_\+non\+\_\+destructive = {\bf parse\+\_\+no\+\_\+string\+\_\+terminators} $\vert$ {\bf parse\+\_\+no\+\_\+entity\+\_\+translation}}}\label{namespacerapidxml_a45d4d8fef551beaaba23a83b847fd6a3}
+A combination of parse flags that forbids any modifications of the source text. This also results in faster parsing. However, note that the following will occur\+: 
+\begin{DoxyItemize}
+\item names and values of nodes will not be zero terminated, you have to use \hyperlink{classrapidxml_1_1xml__base_a7e7f98b3d01e1eab8dc1ca69aad9af84}{xml\+\_\+base\+::name\+\_\+size()} and \hyperlink{classrapidxml_1_1xml__base_a9fcf201ed0915ac18dd43b0b5dcfaf32}{xml\+\_\+base\+::value\+\_\+size()} functions to determine where name and value ends 
+\item entities will not be translated 
+\item whitespace will not be normalized 
+\end{DoxyItemize}See \hyperlink{singletonrapidxml_1_1xml__document_ac6e73ff9ac323bf5a370c38feb03a6b1}{xml\+\_\+document\+::parse()} function. \hypertarget{namespacerapidxml_a31f33885defb5176a7d99e524c35d386}{\index{rapidxml@{rapidxml}!parse\+\_\+normalize\+\_\+whitespace@{parse\+\_\+normalize\+\_\+whitespace}}
+\index{parse\+\_\+normalize\+\_\+whitespace@{parse\+\_\+normalize\+\_\+whitespace}!rapidxml@{rapidxml}}
+\subsubsection[{parse\+\_\+normalize\+\_\+whitespace}]{\setlength{\rightskip}{0pt plus 5cm}const int rapidxml\+::parse\+\_\+normalize\+\_\+whitespace = 0x800}}\label{namespacerapidxml_a31f33885defb5176a7d99e524c35d386}
+Parse flag instructing the parser to condense all whitespace runs of data nodes to a single space character. Trimming of leading and trailing whitespace of data is controlled by \hyperlink{namespacerapidxml_a61912424b47db5038e726d4e1c22417f}{rapidxml\+::parse\+\_\+trim\+\_\+whitespace} flag. By default, whitespace is not normalized. If this flag is specified, source text will be modified. Can be combined with other flags by use of $\vert$ operator. ~\newline
+~\newline
+ See \hyperlink{singletonrapidxml_1_1xml__document_ac6e73ff9ac323bf5a370c38feb03a6b1}{xml\+\_\+document\+::parse()} function. \hypertarget{namespacerapidxml_a03fe68fcf5d28f38476e0fd31adecc4c}{\index{rapidxml@{rapidxml}!parse\+\_\+pi\+\_\+nodes@{parse\+\_\+pi\+\_\+nodes}}
+\index{parse\+\_\+pi\+\_\+nodes@{parse\+\_\+pi\+\_\+nodes}!rapidxml@{rapidxml}}
+\subsubsection[{parse\+\_\+pi\+\_\+nodes}]{\setlength{\rightskip}{0pt plus 5cm}const int rapidxml\+::parse\+\_\+pi\+\_\+nodes = 0x100}}\label{namespacerapidxml_a03fe68fcf5d28f38476e0fd31adecc4c}
+Parse flag instructing the parser to create P\+I nodes. By default, P\+I nodes are not created. Can be combined with other flags by use of $\vert$ operator. ~\newline
+~\newline
+ See \hyperlink{singletonrapidxml_1_1xml__document_ac6e73ff9ac323bf5a370c38feb03a6b1}{xml\+\_\+document\+::parse()} function. \hypertarget{namespacerapidxml_a61912424b47db5038e726d4e1c22417f}{\index{rapidxml@{rapidxml}!parse\+\_\+trim\+\_\+whitespace@{parse\+\_\+trim\+\_\+whitespace}}
+\index{parse\+\_\+trim\+\_\+whitespace@{parse\+\_\+trim\+\_\+whitespace}!rapidxml@{rapidxml}}
+\subsubsection[{parse\+\_\+trim\+\_\+whitespace}]{\setlength{\rightskip}{0pt plus 5cm}const int rapidxml\+::parse\+\_\+trim\+\_\+whitespace = 0x400}}\label{namespacerapidxml_a61912424b47db5038e726d4e1c22417f}
+Parse flag instructing the parser to trim all leading and trailing whitespace of data nodes. By default, whitespace is not trimmed. This flag does not cause the parser to modify source text. Can be combined with other flags by use of $\vert$ operator. ~\newline
+~\newline
+ See \hyperlink{singletonrapidxml_1_1xml__document_ac6e73ff9ac323bf5a370c38feb03a6b1}{xml\+\_\+document\+::parse()} function. \hypertarget{namespacerapidxml_a7ce8f40fda68338e20b56f41e48e49f3}{\index{rapidxml@{rapidxml}!parse\+\_\+validate\+\_\+closing\+\_\+tags@{parse\+\_\+validate\+\_\+closing\+\_\+tags}}
+\index{parse\+\_\+validate\+\_\+closing\+\_\+tags@{parse\+\_\+validate\+\_\+closing\+\_\+tags}!rapidxml@{rapidxml}}
+\subsubsection[{parse\+\_\+validate\+\_\+closing\+\_\+tags}]{\setlength{\rightskip}{0pt plus 5cm}const int rapidxml\+::parse\+\_\+validate\+\_\+closing\+\_\+tags = 0x200}}\label{namespacerapidxml_a7ce8f40fda68338e20b56f41e48e49f3}
+Parse flag instructing the parser to validate closing tag names. If not set, name inside closing tag is irrelevant to the parser. By default, closing tags are not validated. Can be combined with other flags by use of $\vert$ operator. ~\newline
+~\newline
+ See \hyperlink{singletonrapidxml_1_1xml__document_ac6e73ff9ac323bf5a370c38feb03a6b1}{xml\+\_\+document\+::parse()} function. \hypertarget{namespacerapidxml_a65477b812a80f5bda693ec57e57de064}{\index{rapidxml@{rapidxml}!print\+\_\+no\+\_\+indenting@{print\+\_\+no\+\_\+indenting}}
+\index{print\+\_\+no\+\_\+indenting@{print\+\_\+no\+\_\+indenting}!rapidxml@{rapidxml}}
+\subsubsection[{print\+\_\+no\+\_\+indenting}]{\setlength{\rightskip}{0pt plus 5cm}const int rapidxml\+::print\+\_\+no\+\_\+indenting = 0x1}}\label{namespacerapidxml_a65477b812a80f5bda693ec57e57de064}
+
+
+Printer flag instructing the printer to suppress indenting of X\+M\+L. See \hyperlink{namespacerapidxml_a0fb0be6eba49fb2e2646d5a72a0dc355}{print()} function. 
+

@@ -1,0 +1,182 @@
+\hypertarget{singletonrapidxml_1_1xml__attribute}{\section{rapidxml\+:\+:xml\+\_\+attribute$<$ Ch $>$ Class Template Reference}
+\label{singletonrapidxml_1_1xml__attribute}\index{rapidxml\+::xml\+\_\+attribute$<$ Ch $>$@{rapidxml\+::xml\+\_\+attribute$<$ Ch $>$}}
+}
+
+
+{\ttfamily \#include $<$rapidxml.\+hpp$>$}
+
+
+
+Inheritance diagram for rapidxml\+:\+:xml\+\_\+attribute$<$ Ch $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{singletonrapidxml_1_1xml__attribute__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rapidxml\+:\+:xml\+\_\+attribute$<$ Ch $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{singletonrapidxml_1_1xml__attribute__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{singletonrapidxml_1_1xml__attribute_a26be291103917d3e8de110d46dd83816}{xml\+\_\+attribute} ()
+\item 
+\hyperlink{singletonrapidxml_1_1xml__document}{xml\+\_\+document}$<$ Ch $>$ $\ast$ \hyperlink{singletonrapidxml_1_1xml__attribute_a8b6d31d899e27f01bde35b53d98496ec}{document} () const 
+\item 
+\hyperlink{singletonrapidxml_1_1xml__attribute}{xml\+\_\+attribute}$<$ Ch $>$ $\ast$ \hyperlink{singletonrapidxml_1_1xml__attribute_ae3547cc30b201fd6d7b98c04dda26f89}{previous\+\_\+attribute} (const Ch $\ast$\hyperlink{classrapidxml_1_1xml__base_a9a09739310469995db078ebd0da3ed45}{name}=0, std\+::size\+\_\+t \hyperlink{classrapidxml_1_1xml__base_a7e7f98b3d01e1eab8dc1ca69aad9af84}{name\+\_\+size}=0, bool case\+\_\+sensitive=true) const 
+\item 
+\hyperlink{singletonrapidxml_1_1xml__attribute}{xml\+\_\+attribute}$<$ Ch $>$ $\ast$ \hyperlink{singletonrapidxml_1_1xml__attribute_a56c08d7c96203286c889a43849328a86}{next\+\_\+attribute} (const Ch $\ast$\hyperlink{classrapidxml_1_1xml__base_a9a09739310469995db078ebd0da3ed45}{name}=0, std\+::size\+\_\+t \hyperlink{classrapidxml_1_1xml__base_a7e7f98b3d01e1eab8dc1ca69aad9af84}{name\+\_\+size}=0, bool case\+\_\+sensitive=true) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{singletonrapidxml_1_1xml__attribute}{xml\+\_\+attribute}$<$ Ch $>$ $\ast$ \hyperlink{singletonrapidxml_1_1xml__attribute_a204438287a5ad384405584726a1d8559}{m\+\_\+prev\+\_\+attribute}
+\item 
+\hyperlink{singletonrapidxml_1_1xml__attribute}{xml\+\_\+attribute}$<$ Ch $>$ $\ast$ \hyperlink{singletonrapidxml_1_1xml__attribute_a3254e4b040a9b71c6b6d1c27ec03352a}{m\+\_\+next\+\_\+attribute}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{singletonrapidxml_1_1xml__attribute_aa7e464ce3fe512598ff8dda47291941f}{xml\+\_\+node$<$ Ch $>$}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Ch = char$>$class rapidxml\+::xml\+\_\+attribute$<$ Ch $>$}
+
+Class representing attribute node of X\+M\+L document. Each attribute has name and value strings, which are available through \hyperlink{classrapidxml_1_1xml__base_a9a09739310469995db078ebd0da3ed45}{name()} and \hyperlink{classrapidxml_1_1xml__base_adcdaccff61c665f039d9344e447b7445}{value()} functions (inherited from \hyperlink{classrapidxml_1_1xml__base}{xml\+\_\+base}). Note that after parse, both name and value of attribute will point to interior of source text used for parsing. Thus, this text must persist in memory for the lifetime of attribute. 
+\begin{DoxyParams}{Parameters}
+{\em Ch} & Character type to use. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{singletonrapidxml_1_1xml__attribute_a26be291103917d3e8de110d46dd83816}{\index{rapidxml\+::xml\+\_\+attribute@{rapidxml\+::xml\+\_\+attribute}!xml\+\_\+attribute@{xml\+\_\+attribute}}
+\index{xml\+\_\+attribute@{xml\+\_\+attribute}!rapidxml\+::xml\+\_\+attribute@{rapidxml\+::xml\+\_\+attribute}}
+\subsubsection[{xml\+\_\+attribute}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch = char$>$ {\bf rapidxml\+::xml\+\_\+attribute}$<$ Ch $>$\+::{\bf xml\+\_\+attribute} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{singletonrapidxml_1_1xml__attribute_a26be291103917d3e8de110d46dd83816}
+Constructs an empty attribute with the specified type. Consider using \hyperlink{classrapidxml_1_1memory__pool}{memory\+\_\+pool} of appropriate \hyperlink{singletonrapidxml_1_1xml__document}{xml\+\_\+document} if allocating attributes manually. 
+
+\subsection{Member Function Documentation}
+\hypertarget{singletonrapidxml_1_1xml__attribute_a8b6d31d899e27f01bde35b53d98496ec}{\index{rapidxml\+::xml\+\_\+attribute@{rapidxml\+::xml\+\_\+attribute}!document@{document}}
+\index{document@{document}!rapidxml\+::xml\+\_\+attribute@{rapidxml\+::xml\+\_\+attribute}}
+\subsubsection[{document}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch = char$>$ {\bf xml\+\_\+document}$<$Ch$>$$\ast$ {\bf rapidxml\+::xml\+\_\+attribute}$<$ Ch $>$\+::document (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{singletonrapidxml_1_1xml__attribute_a8b6d31d899e27f01bde35b53d98496ec}
+Gets document of which attribute is a child. \begin{DoxyReturn}{Returns}
+Pointer to document that contains this attribute, or 0 if there is no parent document. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{singletonrapidxml_1_1xml__attribute_a8b6d31d899e27f01bde35b53d98496ec_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{singletonrapidxml_1_1xml__attribute_a56c08d7c96203286c889a43849328a86}{\index{rapidxml\+::xml\+\_\+attribute@{rapidxml\+::xml\+\_\+attribute}!next\+\_\+attribute@{next\+\_\+attribute}}
+\index{next\+\_\+attribute@{next\+\_\+attribute}!rapidxml\+::xml\+\_\+attribute@{rapidxml\+::xml\+\_\+attribute}}
+\subsubsection[{next\+\_\+attribute}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch = char$>$ {\bf xml\+\_\+attribute}$<$Ch$>$$\ast$ {\bf rapidxml\+::xml\+\_\+attribute}$<$ Ch $>$\+::next\+\_\+attribute (
+\begin{DoxyParamCaption}
+\item[{const Ch $\ast$}]{name = {\ttfamily 0}, }
+\item[{std\+::size\+\_\+t}]{name\+\_\+size = {\ttfamily 0}, }
+\item[{bool}]{case\+\_\+sensitive = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{singletonrapidxml_1_1xml__attribute_a56c08d7c96203286c889a43849328a86}
+Gets next attribute, optionally matching attribute name. 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of attribute to find, or 0 to return next attribute regardless of its name; this string doesn't have to be zero-\/terminated if name\+\_\+size is non-\/zero \\
+\hline
+{\em name\+\_\+size} & Size of name, in characters, or 0 to have size calculated automatically from string \\
+\hline
+{\em case\+\_\+sensitive} & Should name comparison be case-\/sensitive; non case-\/sensitive comparison works properly only for A\+S\+C\+I\+I characters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to found attribute, or 0 if not found. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{singletonrapidxml_1_1xml__attribute_a56c08d7c96203286c889a43849328a86_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{singletonrapidxml_1_1xml__attribute_ae3547cc30b201fd6d7b98c04dda26f89}{\index{rapidxml\+::xml\+\_\+attribute@{rapidxml\+::xml\+\_\+attribute}!previous\+\_\+attribute@{previous\+\_\+attribute}}
+\index{previous\+\_\+attribute@{previous\+\_\+attribute}!rapidxml\+::xml\+\_\+attribute@{rapidxml\+::xml\+\_\+attribute}}
+\subsubsection[{previous\+\_\+attribute}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch = char$>$ {\bf xml\+\_\+attribute}$<$Ch$>$$\ast$ {\bf rapidxml\+::xml\+\_\+attribute}$<$ Ch $>$\+::previous\+\_\+attribute (
+\begin{DoxyParamCaption}
+\item[{const Ch $\ast$}]{name = {\ttfamily 0}, }
+\item[{std\+::size\+\_\+t}]{name\+\_\+size = {\ttfamily 0}, }
+\item[{bool}]{case\+\_\+sensitive = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{singletonrapidxml_1_1xml__attribute_ae3547cc30b201fd6d7b98c04dda26f89}
+Gets previous attribute, optionally matching attribute name. 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of attribute to find, or 0 to return previous attribute regardless of its name; this string doesn't have to be zero-\/terminated if name\+\_\+size is non-\/zero \\
+\hline
+{\em name\+\_\+size} & Size of name, in characters, or 0 to have size calculated automatically from string \\
+\hline
+{\em case\+\_\+sensitive} & Should name comparison be case-\/sensitive; non case-\/sensitive comparison works properly only for A\+S\+C\+I\+I characters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to found attribute, or 0 if not found. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{singletonrapidxml_1_1xml__attribute_ae3547cc30b201fd6d7b98c04dda26f89_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{singletonrapidxml_1_1xml__attribute_aa7e464ce3fe512598ff8dda47291941f}{\index{rapidxml\+::xml\+\_\+attribute@{rapidxml\+::xml\+\_\+attribute}!xml\+\_\+node$<$ Ch $>$@{xml\+\_\+node$<$ Ch $>$}}
+\index{xml\+\_\+node$<$ Ch $>$@{xml\+\_\+node$<$ Ch $>$}!rapidxml\+::xml\+\_\+attribute@{rapidxml\+::xml\+\_\+attribute}}
+\subsubsection[{xml\+\_\+node$<$ Ch $>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch = char$>$ friend class {\bf xml\+\_\+node}$<$ Ch $>$\hspace{0.3cm}{\ttfamily [friend]}}}\label{singletonrapidxml_1_1xml__attribute_aa7e464ce3fe512598ff8dda47291941f}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{singletonrapidxml_1_1xml__attribute_a3254e4b040a9b71c6b6d1c27ec03352a}{\index{rapidxml\+::xml\+\_\+attribute@{rapidxml\+::xml\+\_\+attribute}!m\+\_\+next\+\_\+attribute@{m\+\_\+next\+\_\+attribute}}
+\index{m\+\_\+next\+\_\+attribute@{m\+\_\+next\+\_\+attribute}!rapidxml\+::xml\+\_\+attribute@{rapidxml\+::xml\+\_\+attribute}}
+\subsubsection[{m\+\_\+next\+\_\+attribute}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch = char$>$ {\bf xml\+\_\+attribute}$<$Ch$>$$\ast$ {\bf rapidxml\+::xml\+\_\+attribute}$<$ Ch $>$\+::m\+\_\+next\+\_\+attribute\hspace{0.3cm}{\ttfamily [private]}}}\label{singletonrapidxml_1_1xml__attribute_a3254e4b040a9b71c6b6d1c27ec03352a}
+\hypertarget{singletonrapidxml_1_1xml__attribute_a204438287a5ad384405584726a1d8559}{\index{rapidxml\+::xml\+\_\+attribute@{rapidxml\+::xml\+\_\+attribute}!m\+\_\+prev\+\_\+attribute@{m\+\_\+prev\+\_\+attribute}}
+\index{m\+\_\+prev\+\_\+attribute@{m\+\_\+prev\+\_\+attribute}!rapidxml\+::xml\+\_\+attribute@{rapidxml\+::xml\+\_\+attribute}}
+\subsubsection[{m\+\_\+prev\+\_\+attribute}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ch = char$>$ {\bf xml\+\_\+attribute}$<$Ch$>$$\ast$ {\bf rapidxml\+::xml\+\_\+attribute}$<$ Ch $>$\+::m\+\_\+prev\+\_\+attribute\hspace{0.3cm}{\ttfamily [private]}}}\label{singletonrapidxml_1_1xml__attribute_a204438287a5ad384405584726a1d8559}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/utils/\hyperlink{rapidxml_8hpp}{rapidxml.\+hpp}\end{DoxyCompactItemize}

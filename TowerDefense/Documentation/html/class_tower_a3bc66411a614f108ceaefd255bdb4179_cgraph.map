@@ -1,0 +1,6 @@
+<map id="Tower::canAttack" name="Tower::canAttack">
+<area shape="rect" id="node2" href="$class_critter.html#a5636f0ed2f067318e0d361fe31c9eff2" title="Critter::getId" alt="" coords="234,5,327,32"/>
+<area shape="rect" id="node3" href="$class_tower.html#a518ff249dec05cdd026a830d845abfd2" title="Overrides method to apply to tower range sf::CircleShape object. " alt="" coords="176,56,385,83"/>
+<area shape="rect" id="node5" href="$class_tower.html#acf53d0a9123761730bd3e737a5b5a854" title="Tower::getRateOfFire" alt="" coords="209,107,353,133"/>
+<area shape="rect" id="node4" href="$class_game_object.html#afe3b2585b3615868c64b62bb1cb40adb" title="Gets the center of a sprite. " alt="" coords="433,56,627,83"/>
+</map>

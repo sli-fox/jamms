@@ -1,0 +1,17 @@
+<map id="rapidxml::xml_document::parse_node_attributes" name="rapidxml::xml_document::parse_node_attributes">
+<area shape="rect" id="node2" href="$structrapidxml_1_1xml__document_1_1attribute__name__pred.html#a2cf003483847dfabcf0c83877818a4c5" title="rapidxml::xml_document\l::attribute_name_pred::test" alt="" coords="238,5,417,47"/>
+<area shape="rect" id="node3" href="$classrapidxml_1_1xml__base.html#a9a09739310469995db078ebd0da3ed45" title="rapidxml::xml_base\l::name" alt="" coords="709,189,843,231"/>
+<area shape="rect" id="node5" href="$classrapidxml_1_1memory__pool.html#a3de2a66c983336e006ea3844e244ed30" title="rapidxml::memory_pool\l::allocate_attribute" alt="" coords="249,123,406,164"/>
+<area shape="rect" id="node9" href="$classrapidxml_1_1xml__base.html#adcdaccff61c665f039d9344e447b7445" title="rapidxml::xml_base\l::value" alt="" coords="500,7,635,48"/>
+<area shape="rect" id="node10" href="$singletonrapidxml_1_1xml__node.html#a33ce3386f8c42dd4db658b75cbb6e6c4" title="rapidxml::xml_node\l::append_attribute" alt="" coords="260,240,395,281"/>
+<area shape="rect" id="node13" href="$classrapidxml_1_1xml__base.html#a7e7f98b3d01e1eab8dc1ca69aad9af84" title="rapidxml::xml_base\l::name_size" alt="" coords="709,335,843,376"/>
+<area shape="rect" id="node14" href="$singletonrapidxml_1_1xml__document.html#af86781975cdfff2105fa8c0b49ab4507" title="rapidxml::xml_document\l::skip_and_expand_character_refs" alt="" coords="217,423,437,464"/>
+<area shape="rect" id="node16" href="$classrapidxml_1_1xml__base.html#a9fcf201ed0915ac18dd43b0b5dcfaf32" title="rapidxml::xml_base\l::value_size" alt="" coords="260,488,395,529"/>
+<area shape="rect" id="node4" href="$classrapidxml_1_1xml__base.html#ad96ff6b1e41dab3ff60b9bc4df769a75" title="rapidxml::xml_base\l::nullstr" alt="" coords="903,95,1037,136"/>
+<area shape="rect" id="node6" href="$classrapidxml_1_1memory__pool.html#a4e9cf53fa5f9da3a8f31b754bd94b4ec" title="rapidxml::memory_pool\l::allocate_aligned" alt="" coords="489,72,646,113"/>
+<area shape="rect" id="node7" href="$classrapidxml_1_1memory__pool.html#a317396afc1812f08b64a1dd9cde4039b" title="rapidxml::memory_pool\l::align" alt="" coords="697,124,855,165"/>
+<area shape="rect" id="node8" href="$classrapidxml_1_1memory__pool.html#a1aed504a747303352e05f61c6ccbbebb" title="rapidxml::memory_pool\l::allocate_raw" alt="" coords="697,59,855,100"/>
+<area shape="rect" id="node11" href="$classrapidxml_1_1xml__base.html#a7f31ae930f93852830234db1ae59c4c4" title="rapidxml::xml_base\l::parent" alt="" coords="500,240,635,281"/>
+<area shape="rect" id="node12" href="$singletonrapidxml_1_1xml__node.html#ae426802be58114ffc41bf30ac6b8c37d" title="rapidxml::xml_node\l::first_attribute" alt="" coords="500,305,635,347"/>
+<area shape="rect" id="node15" href="$structrapidxml_1_1xml__document_1_1whitespace__pred.html#a1dca1a175c784b2ef0b83f3957e820eb" title="rapidxml::xml_document\l::whitespace_pred::test" alt="" coords="485,423,649,464"/>
+</map>

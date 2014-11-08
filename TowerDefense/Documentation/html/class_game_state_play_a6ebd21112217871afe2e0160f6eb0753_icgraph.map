@@ -1,0 +1,4 @@
+<map id="GameStatePlay::getStartingWaypoint" name="GameStatePlay::getStartingWaypoint">
+<area shape="rect" id="node2" href="$class_game_state_play.html#a705c09eac3d2b27757e5b4cc048b22d5" title="Constructor that takes in a pointer to the Game that created them. " alt="" coords="461,13,676,39"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#a6047cbdce7daa2092d95bf786db5267a" title="GameStatePlay::setCritter\lWaveLevels" alt="" coords="239,35,413,76"/>
+</map>

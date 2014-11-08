@@ -1,0 +1,10 @@
+<map id="AnimationHandler::update" name="AnimationHandler::update">
+<area shape="rect" id="node2" href="$class_black_cat.html#a2ae946e05f754f7d7bdbc753946425eb" title="Initialization function for a BlackCat. " alt="" coords="225,12,390,39"/>
+<area shape="rect" id="node4" href="$class_critter.html#afe6dafa77006e5b6b7f3f905447af3fb" title="Draw a Critter. " alt="" coords="261,69,353,96"/>
+<area shape="rect" id="node8" href="$class_white_cat.html#a0a3c801e7a6b451b2b1caef9da137585" title="Initialization function for a WhiteCat. " alt="" coords="224,132,391,159"/>
+<area shape="rect" id="node3" href="$class_black_cat.html#a7974aa98721932e53102c10484af1abe" title="The BlackCat constructor. Calls initializeCritter() to set attributes of the BlackCat object..." alt="" coords="451,5,587,32"/>
+<area shape="rect" id="node5" href="$class_game_state_play.html#a63a3ba0c891afd8ec126806bab4f315a" title="Draws game to the render window. " alt="" coords="445,56,594,83"/>
+<area shape="rect" id="node7" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="439,107,600,133"/>
+<area shape="rect" id="node6" href="$class_game_state_play.html#ab41594c10b04429a3126d4a8085de82d" title="GameStatePlay::runThreads" alt="" coords="648,56,835,83"/>
+<area shape="rect" id="node9" href="$class_white_cat.html#a1af91c1252fac9ac94a9334bff97f6df" title="The WhiteCat constructor. Calls initializeCritter() to set attributes of the WhiteCat object..." alt="" coords="450,157,589,184"/>
+</map>

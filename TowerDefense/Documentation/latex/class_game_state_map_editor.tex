@@ -1,0 +1,437 @@
+\hypertarget{class_game_state_map_editor}{\section{Game\+State\+Map\+Editor Class Reference}
+\label{class_game_state_map_editor}\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+}
+
+
+\hyperlink{class_game}{Game} state that represents the gameplay.  
+
+
+
+
+{\ttfamily \#include $<$Game\+State\+Map\+Editor.\+h$>$}
+
+
+
+Inheritance diagram for Game\+State\+Map\+Editor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{class_game_state_map_editor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+State\+Map\+Editor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_game_state_map_editor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_game_state_map_editor_a621caf097a99b645b29729ac5bff3426}{Game\+State\+Map\+Editor} (\hyperlink{class_game}{Game} $\ast$\hyperlink{class_game_state_a355a79415b9ef63c2aec1448a99f6e71}{game})
+\begin{DoxyCompactList}\small\item\em Constructor that takes in a pointer to the \hyperlink{class_game}{Game} that created them. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_state_map_editor_a37c87643309459ac32d0b5f608bc93b0}{draw} (const float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Draws game to the render window. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_state_map_editor_afc6fb92c082c138e86f295b99aad2ddf}{update} (const float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Updates game changes. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_state_map_editor_ad8bd50d8a9823c26a57d315a6b303b88}{handle\+Input} ()
+\begin{DoxyCompactList}\small\item\em Handles player input. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_state_map_editor_a82ca3024c962b254ebdedcaa6ce5c1a8}{run\+Threads} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const vector$<$ string $>$ \hyperlink{class_game_state_map_editor_aa809c2e4d27cc2028f98790278459ae2}{get\+Files\+In\+Dir} (const string dir)
+\item 
+void \hyperlink{class_game_state_map_editor_ae144185a0fb6138d8381ea6a70c94dcd}{initialize\+Button\+Map} ()
+\item 
+void \hyperlink{class_game_state_map_editor_a3f2343fe7da91481f928ef9e9061458b}{button\+Command\+Library} ()
+\item 
+void \hyperlink{class_game_state_map_editor_aab39f5d619995539f39f9cd217130653}{map\+Editor\+Command\+Library} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Vector2i \hyperlink{class_game_state_map_editor_ae08d2b6a646ef5a012e037e34a6ec614}{local\+Position}
+\item 
+int \hyperlink{class_game_state_map_editor_ac02a7afdf3ca713627322460561a6c17}{tile\+X}
+\item 
+int \hyperlink{class_game_state_map_editor_a9b45f464739e1bab13b680165ff4058c}{tile\+Y}
+\item 
+int \hyperlink{class_game_state_map_editor_a0faeb397ec456d4caf9f01f7a185ab38}{map\+X}
+\item 
+int \hyperlink{class_game_state_map_editor_a41805472ec52466a2ae2eedf5fc1c960}{map\+Y}
+\item 
+\hyperlink{class_tile_acb53d82f9dacff45a98acc63276928eb}{Tile\+::\+T\+Y\+P\+E} \hyperlink{class_game_state_map_editor_a391093f0b5f275c408efe6e9646bedd0}{tile\+Selector}
+\item 
+\hyperlink{class_game_object}{Game\+Object} \hyperlink{class_game_state_map_editor_aad804976be5b8bb4a1aa0a8e5f63863c}{map\+Backdrop}
+\item 
+std\+::map$<$ string, \hyperlink{class_game_object}{Game\+Object} $>$ \hyperlink{class_game_state_map_editor_adda219b4fc3202046be4e861db0971c8}{button\+Map}
+\item 
+bool \hyperlink{class_game_state_map_editor_a3a2c317aa0be29c33e95c37455048cbd}{return\+To\+Menu}
+\item 
+bool \hyperlink{class_game_state_map_editor_a084696f8b56a5e785e6c44dfb7a78f72}{pause\+Save}
+\item 
+bool \hyperlink{class_game_state_map_editor_aaef9765b9f8d61e596d5e43eaca37802}{pause\+Load}
+\item 
+string \hyperlink{class_game_state_map_editor_aa3fc0514a4faa043d6789fd830d2c5ef}{user\+Input}
+\item 
+sf\+::\+Text \hyperlink{class_game_state_map_editor_a4c832c3e0e1ce9de41e7393d57ac736a}{display\+Xsize}
+\item 
+sf\+::\+Text \hyperlink{class_game_state_map_editor_af1cea885d9fb3c8023b5c7bb9d7e6ee0}{display\+Ysize}
+\item 
+sf\+::\+Text \hyperlink{class_game_state_map_editor_ae9103d07effafe086fb2a808be7fac81}{system\+Output}
+\item 
+sf\+::\+Text \hyperlink{class_game_state_map_editor_aa28847e54111b5131e3825fc6e6c32b2}{user\+Input\+Display}
+\item 
+sf\+::\+Font \hyperlink{class_game_state_map_editor_a13450eaaed091e11e2ad7598c3e83996}{font}
+\item 
+vector$<$ string $>$ \hyperlink{class_game_state_map_editor_a115a23afd99f2153541a4b1444b6fbd5}{map\+Files}
+\item 
+sf\+::\+View \hyperlink{class_game_state_map_editor_a68a7fb49c61cbc66844775cd70243ae4}{\+\_\+game\+View}
+\begin{DoxyCompactList}\small\item\em Camera view for the gameplay displayed to the window. \end{DoxyCompactList}\item 
+sf\+::\+View \hyperlink{class_game_state_map_editor_a9677013fca9851f15737457edcf96e82}{\+\_\+gui\+View}
+\begin{DoxyCompactList}\small\item\em Camera view for the H\+U\+D displayed to the window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_game}{Game} state that represents the gameplay. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_game_state_map_editor_a621caf097a99b645b29729ac5bff3426}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{Game\+State\+Map\+Editor}]{\setlength{\rightskip}{0pt plus 5cm}Game\+State\+Map\+Editor\+::\+Game\+State\+Map\+Editor (
+\begin{DoxyParamCaption}
+\item[{{\bf Game} $\ast$}]{game}
+\end{DoxyParamCaption}
+)}}\label{class_game_state_map_editor_a621caf097a99b645b29729ac5bff3426}
+
+
+Constructor that takes in a pointer to the \hyperlink{class_game}{Game} that created them. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Pointer to game.\\
+\hline
+\end{DoxyParams}
+The constructor sets the view to the size of the window and centers the view on the center of the window. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_map_editor_a621caf097a99b645b29729ac5bff3426_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_state_map_editor_a3f2343fe7da91481f928ef9e9061458b}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!button\+Command\+Library@{button\+Command\+Library}}
+\index{button\+Command\+Library@{button\+Command\+Library}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{button\+Command\+Library}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Map\+Editor\+::button\+Command\+Library (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_a3f2343fe7da91481f928ef9e9061458b}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_map_editor_a3f2343fe7da91481f928ef9e9061458b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{class_game_state_map_editor_a3f2343fe7da91481f928ef9e9061458b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_map_editor_a37c87643309459ac32d0b5f608bc93b0}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!draw@{draw}}
+\index{draw@{draw}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Map\+Editor\+::draw (
+\begin{DoxyParamCaption}
+\item[{const float}]{delta\+\_\+time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_state_map_editor_a37c87643309459ac32d0b5f608bc93b0}
+
+
+Draws game to the render window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & Elapsed time during the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void.
+\end{DoxyReturn}
+This function sets the view to be drawn to the window, and draws everything related to state. 
+
+Implements \hyperlink{class_game_state_a55a6a68aabdf7054ea0e6ddbf24902df}{Game\+State}.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_game_state_map_editor_a37c87643309459ac32d0b5f608bc93b0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_map_editor_aa809c2e4d27cc2028f98790278459ae2}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!get\+Files\+In\+Dir@{get\+Files\+In\+Dir}}
+\index{get\+Files\+In\+Dir@{get\+Files\+In\+Dir}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{get\+Files\+In\+Dir}]{\setlength{\rightskip}{0pt plus 5cm}const vector$<$ string $>$ Game\+State\+Map\+Editor\+::get\+Files\+In\+Dir (
+\begin{DoxyParamCaption}
+\item[{const string}]{dir}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_aa809c2e4d27cc2028f98790278459ae2}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_map_editor_aa809c2e4d27cc2028f98790278459ae2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_map_editor_aa809c2e4d27cc2028f98790278459ae2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_map_editor_ad8bd50d8a9823c26a57d315a6b303b88}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!handle\+Input@{handle\+Input}}
+\index{handle\+Input@{handle\+Input}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{handle\+Input}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Map\+Editor\+::handle\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_state_map_editor_ad8bd50d8a9823c26a57d315a6b303b88}
+
+
+Handles player input. 
+
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+Close the window 
+
+Implements \hyperlink{class_game_state_a970b55edd5a1da31ea0f7113e2c1f85a}{Game\+State}.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_map_editor_ad8bd50d8a9823c26a57d315a6b303b88_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_map_editor_ae144185a0fb6138d8381ea6a70c94dcd}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!initialize\+Button\+Map@{initialize\+Button\+Map}}
+\index{initialize\+Button\+Map@{initialize\+Button\+Map}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{initialize\+Button\+Map}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Map\+Editor\+::initialize\+Button\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_ae144185a0fb6138d8381ea6a70c94dcd}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_map_editor_ae144185a0fb6138d8381ea6a70c94dcd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_game_state_map_editor_ae144185a0fb6138d8381ea6a70c94dcd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_map_editor_aab39f5d619995539f39f9cd217130653}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!map\+Editor\+Command\+Library@{map\+Editor\+Command\+Library}}
+\index{map\+Editor\+Command\+Library@{map\+Editor\+Command\+Library}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{map\+Editor\+Command\+Library}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Map\+Editor\+::map\+Editor\+Command\+Library (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_aab39f5d619995539f39f9cd217130653}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_map_editor_aab39f5d619995539f39f9cd217130653_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_map_editor_aab39f5d619995539f39f9cd217130653_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_map_editor_a82ca3024c962b254ebdedcaa6ce5c1a8}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!run\+Threads@{run\+Threads}}
+\index{run\+Threads@{run\+Threads}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{run\+Threads}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Game\+State\+Map\+Editor\+::run\+Threads (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_game_state_map_editor_a82ca3024c962b254ebdedcaa6ce5c1a8}
+
+
+Implements \hyperlink{class_game_state_a98cd49f1d8fd9fc3e79d607a238ba518}{Game\+State}.
+
+\hypertarget{class_game_state_map_editor_afc6fb92c082c138e86f295b99aad2ddf}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!update@{update}}
+\index{update@{update}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Game\+State\+Map\+Editor\+::update (
+\begin{DoxyParamCaption}
+\item[{const float}]{delta\+\_\+time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_game_state_map_editor_afc6fb92c082c138e86f295b99aad2ddf}
+
+
+Updates game changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & Elapsed time during the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_game_state_ad331d02d3989271b8cbc88fcb1448959}{Game\+State}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_game_state_map_editor_a68a7fb49c61cbc66844775cd70243ae4}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!\+\_\+game\+View@{\+\_\+game\+View}}
+\index{\+\_\+game\+View@{\+\_\+game\+View}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{\+\_\+game\+View}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+View Game\+State\+Map\+Editor\+::\+\_\+game\+View\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_a68a7fb49c61cbc66844775cd70243ae4}
+
+
+Camera view for the gameplay displayed to the window. 
+
+\hypertarget{class_game_state_map_editor_a9677013fca9851f15737457edcf96e82}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!\+\_\+gui\+View@{\+\_\+gui\+View}}
+\index{\+\_\+gui\+View@{\+\_\+gui\+View}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{\+\_\+gui\+View}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+View Game\+State\+Map\+Editor\+::\+\_\+gui\+View\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_a9677013fca9851f15737457edcf96e82}
+
+
+Camera view for the H\+U\+D displayed to the window. 
+
+\hypertarget{class_game_state_map_editor_adda219b4fc3202046be4e861db0971c8}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!button\+Map@{button\+Map}}
+\index{button\+Map@{button\+Map}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{button\+Map}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$string,{\bf Game\+Object}$>$ Game\+State\+Map\+Editor\+::button\+Map\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_adda219b4fc3202046be4e861db0971c8}
+\hypertarget{class_game_state_map_editor_a4c832c3e0e1ce9de41e7393d57ac736a}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!display\+Xsize@{display\+Xsize}}
+\index{display\+Xsize@{display\+Xsize}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{display\+Xsize}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Text Game\+State\+Map\+Editor\+::display\+Xsize\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_a4c832c3e0e1ce9de41e7393d57ac736a}
+\hypertarget{class_game_state_map_editor_af1cea885d9fb3c8023b5c7bb9d7e6ee0}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!display\+Ysize@{display\+Ysize}}
+\index{display\+Ysize@{display\+Ysize}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{display\+Ysize}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Text Game\+State\+Map\+Editor\+::display\+Ysize\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_af1cea885d9fb3c8023b5c7bb9d7e6ee0}
+\hypertarget{class_game_state_map_editor_a13450eaaed091e11e2ad7598c3e83996}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!font@{font}}
+\index{font@{font}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{font}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Font Game\+State\+Map\+Editor\+::font\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_a13450eaaed091e11e2ad7598c3e83996}
+\hypertarget{class_game_state_map_editor_ae08d2b6a646ef5a012e037e34a6ec614}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!local\+Position@{local\+Position}}
+\index{local\+Position@{local\+Position}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{local\+Position}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2i Game\+State\+Map\+Editor\+::local\+Position\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_ae08d2b6a646ef5a012e037e34a6ec614}
+\hypertarget{class_game_state_map_editor_aad804976be5b8bb4a1aa0a8e5f63863c}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!map\+Backdrop@{map\+Backdrop}}
+\index{map\+Backdrop@{map\+Backdrop}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{map\+Backdrop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Object} Game\+State\+Map\+Editor\+::map\+Backdrop\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_aad804976be5b8bb4a1aa0a8e5f63863c}
+\hypertarget{class_game_state_map_editor_a115a23afd99f2153541a4b1444b6fbd5}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!map\+Files@{map\+Files}}
+\index{map\+Files@{map\+Files}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{map\+Files}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Game\+State\+Map\+Editor\+::map\+Files\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_a115a23afd99f2153541a4b1444b6fbd5}
+\hypertarget{class_game_state_map_editor_a0faeb397ec456d4caf9f01f7a185ab38}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!map\+X@{map\+X}}
+\index{map\+X@{map\+X}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{map\+X}]{\setlength{\rightskip}{0pt plus 5cm}int Game\+State\+Map\+Editor\+::map\+X\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_a0faeb397ec456d4caf9f01f7a185ab38}
+\hypertarget{class_game_state_map_editor_a41805472ec52466a2ae2eedf5fc1c960}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!map\+Y@{map\+Y}}
+\index{map\+Y@{map\+Y}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{map\+Y}]{\setlength{\rightskip}{0pt plus 5cm}int Game\+State\+Map\+Editor\+::map\+Y\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_a41805472ec52466a2ae2eedf5fc1c960}
+\hypertarget{class_game_state_map_editor_aaef9765b9f8d61e596d5e43eaca37802}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!pause\+Load@{pause\+Load}}
+\index{pause\+Load@{pause\+Load}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{pause\+Load}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+State\+Map\+Editor\+::pause\+Load\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_aaef9765b9f8d61e596d5e43eaca37802}
+\hypertarget{class_game_state_map_editor_a084696f8b56a5e785e6c44dfb7a78f72}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!pause\+Save@{pause\+Save}}
+\index{pause\+Save@{pause\+Save}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{pause\+Save}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+State\+Map\+Editor\+::pause\+Save\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_a084696f8b56a5e785e6c44dfb7a78f72}
+\hypertarget{class_game_state_map_editor_a3a2c317aa0be29c33e95c37455048cbd}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!return\+To\+Menu@{return\+To\+Menu}}
+\index{return\+To\+Menu@{return\+To\+Menu}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{return\+To\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+State\+Map\+Editor\+::return\+To\+Menu\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_a3a2c317aa0be29c33e95c37455048cbd}
+\hypertarget{class_game_state_map_editor_ae9103d07effafe086fb2a808be7fac81}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!system\+Output@{system\+Output}}
+\index{system\+Output@{system\+Output}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{system\+Output}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Text Game\+State\+Map\+Editor\+::system\+Output\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_ae9103d07effafe086fb2a808be7fac81}
+\hypertarget{class_game_state_map_editor_a391093f0b5f275c408efe6e9646bedd0}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!tile\+Selector@{tile\+Selector}}
+\index{tile\+Selector@{tile\+Selector}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{tile\+Selector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tile\+::\+T\+Y\+P\+E} Game\+State\+Map\+Editor\+::tile\+Selector\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_a391093f0b5f275c408efe6e9646bedd0}
+\hypertarget{class_game_state_map_editor_ac02a7afdf3ca713627322460561a6c17}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!tile\+X@{tile\+X}}
+\index{tile\+X@{tile\+X}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{tile\+X}]{\setlength{\rightskip}{0pt plus 5cm}int Game\+State\+Map\+Editor\+::tile\+X\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_ac02a7afdf3ca713627322460561a6c17}
+\hypertarget{class_game_state_map_editor_a9b45f464739e1bab13b680165ff4058c}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!tile\+Y@{tile\+Y}}
+\index{tile\+Y@{tile\+Y}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{tile\+Y}]{\setlength{\rightskip}{0pt plus 5cm}int Game\+State\+Map\+Editor\+::tile\+Y\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_a9b45f464739e1bab13b680165ff4058c}
+\hypertarget{class_game_state_map_editor_aa3fc0514a4faa043d6789fd830d2c5ef}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!user\+Input@{user\+Input}}
+\index{user\+Input@{user\+Input}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{user\+Input}]{\setlength{\rightskip}{0pt plus 5cm}string Game\+State\+Map\+Editor\+::user\+Input\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_aa3fc0514a4faa043d6789fd830d2c5ef}
+\hypertarget{class_game_state_map_editor_aa28847e54111b5131e3825fc6e6c32b2}{\index{Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}!user\+Input\+Display@{user\+Input\+Display}}
+\index{user\+Input\+Display@{user\+Input\+Display}!Game\+State\+Map\+Editor@{Game\+State\+Map\+Editor}}
+\subsubsection[{user\+Input\+Display}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Text Game\+State\+Map\+Editor\+::user\+Input\+Display\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_map_editor_aa28847e54111b5131e3825fc6e6c32b2}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/game\+States/\hyperlink{_game_state_map_editor_8h}{Game\+State\+Map\+Editor.\+h}\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/src/game\+States/\hyperlink{_game_state_map_editor_8cpp}{Game\+State\+Map\+Editor.\+cpp}\end{DoxyCompactItemize}
