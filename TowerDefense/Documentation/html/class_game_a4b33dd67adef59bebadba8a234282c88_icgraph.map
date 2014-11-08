@@ -1,4 +1,8 @@
 <map id="Game::popState" name="Game::popState">
-<area shape="rect" id="node2" href="$class_game.html#ae3d112ca6e0e55150d2fdbc704474530" title="Destructor of Game removes all GameStates from game states stack. " alt="" coords="186,5,294,32"/>
-<area shape="rect" id="node3" href="$class_game.html#a8683b16995200bd11d95efc372e6722a" title="Helper function for GameState stack to change previous state into given state. " alt="" coords="171,56,309,83"/>
+<area shape="rect" id="node2" href="$class_game.html#ae3d112ca6e0e55150d2fdbc704474530" title="Destructor of Game removes all GameStates from game states stack. " alt="" coords="225,5,333,32"/>
+<area shape="rect" id="node3" href="$class_game.html#a8683b16995200bd11d95efc372e6722a" title="Helper function for GameState stack to change previous state into given state. " alt="" coords="210,56,349,83"/>
+<area shape="rect" id="node4" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="197,107,361,149"/>
+<area shape="rect" id="node6" href="$class_game_state_play.html#a79237473ceeb26b94f641d0bf66c1ec0" title="GameStatePlay::buttonCommand\lLibrary" alt="" coords="171,173,388,214"/>
+<area shape="rect" id="node5" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="457,107,603,149"/>
+<area shape="rect" id="node7" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="436,180,624,207"/>
 </map>

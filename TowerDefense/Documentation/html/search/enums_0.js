@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['menuaction',['MenuAction',['../class_menu.html#a2d708ce8df47ab5feaea1ba559a938d3',1,'Menu']]]
+  ['crittertype',['CritterType',['../class_critter.html#acda8a5c3234b66101e0546d75d6f90f1',1,'Critter']]]
 ];

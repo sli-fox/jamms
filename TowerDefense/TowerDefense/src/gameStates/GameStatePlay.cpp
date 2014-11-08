@@ -163,9 +163,9 @@ void GameStatePlay::setCritterWaveLevels(Waypoint* starting_waypoint) {
   this->wave_levels.push_back(wave4);
 
   for (int i = 0; i < wave_levels.size(); ++i) {
-	wave_levels[i]->setId(i);
-  if (wave_levels[i]->next_wave)
-    wave_levels[i]->next_wave = wave_levels[i+1];
+	  wave_levels[i]->setId(i);
+    if (i < wave_levels.size() - 1)
+      wave_levels[i]->next_wave = wave_levels[i+1];
   }
 }
 

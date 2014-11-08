@@ -1,15 +1,20 @@
 var searchData=
 [
-  ['game',['Game',['../class_game.html#ad59df6562a58a614fda24622d3715b65',1,'Game']]],
-  ['gameloop',['gameLoop',['../class_game.html#aede5f46c8c7bbbaf8459eeec397a11e7',1,'Game']]],
-  ['gameobject',['GameObject',['../class_game_object.html#a0348e3ee2e83d56eafca7a3547f432c4',1,'GameObject']]],
-  ['gameobjectmanager',['GameObjectManager',['../class_game_object_manager.html#a58cbaec4182cda7c6d48eef7b14885e8',1,'GameObjectManager']]],
-  ['gamestatemainmenu',['GameStateMainMenu',['../class_game_state_main_menu.html#a7d7b3f28e70701ec9af22098b4220ec1',1,'GameStateMainMenu']]],
-  ['gamestateplay',['GameStatePlay',['../class_game_state_play.html#a705c09eac3d2b27757e5b4cc048b22d5',1,'GameStatePlay']]],
-  ['gamestatestart',['GameStateStart',['../class_game_state_start.html#a2477272c214e48d260bda72150c21ef8',1,'GameStateStart']]],
-  ['getgameobject',['getGameObject',['../class_game_object_manager.html#a9711a8874ef5581db4832fc28dc0e87c',1,'GameObjectManager']]],
-  ['getinstance',['getInstance',['../class_texture_manager.html#a0a6bc63e2f6fa7e1d0aee5b24cfa089a',1,'TextureManager']]],
-  ['getmenuresponse',['getMenuResponse',['../class_menu.html#a445fe4244dc401a85ab8bbaf61373443',1,'Menu']]],
-  ['getobjectcount',['getObjectCount',['../class_game_object_manager.html#aea3ab827dd015aae7a8e8d53fdd6d2b5',1,'GameObjectManager']]],
-  ['getsplashscreensprite',['getSplashScreenSprite',['../class_game_state_start.html#aca967324121e7e404a2f411102f186ac',1,'GameStateStart']]]
+  ['canapplyspecialaftereffects',['canApplySpecialAfterEffects',['../class_tower.html#aa4d0884a1fc45d6b47e8ed4a3cd23b34',1,'Tower']]],
+  ['canattack',['canAttack',['../class_tower.html#a3bc66411a614f108ceaefd255bdb4179',1,'Tower']]],
+  ['changeanimation',['changeAnimation',['../class_animation_handler.html#a93f1509e5eccdf13a07ba1eb2256c6d0',1,'AnimationHandler']]],
+  ['changestate',['changeState',['../class_game.html#a8683b16995200bd11d95efc372e6722a',1,'Game']]],
+  ['checkifatendtile',['checkIfAtEndTile',['../class_game_state_play.html#ac82134049ed6dd0aaa929e200f7185d5',1,'GameStatePlay']]],
+  ['circletocircleintersection',['circleToCircleIntersection',['../class_game_object.html#a3a9fd4ee6157fcf61fd8f7d7318598c5',1,'GameObject::circleToCircleIntersection()'],['../class_tower.html#a518ff249dec05cdd026a830d845abfd2',1,'Tower::circleToCircleIntersection()']]],
+  ['clear',['clear',['../classrapidxml_1_1memory__pool.html#aad377c835fdaed1cb2cc9df194cf84e4',1,'rapidxml::memory_pool::clear()'],['../singletonrapidxml_1_1xml__document.html#a826929ff54242532198701f19ff5f83f',1,'rapidxml::xml_document::clear()']]],
+  ['clearalltowers',['clearAllTowers',['../class_tower_manager.html#ae71fc7c55f92477846760b122d0f60b9',1,'TowerManager']]],
+  ['clone_5fnode',['clone_node',['../classrapidxml_1_1memory__pool.html#a0a10679fc17597d339a0dc107f8a94ac',1,'rapidxml::memory_pool']]],
+  ['closedir',['closedir',['../dirent_8h.html#a748b9bd26c040c2ad9107c9d8c1aab42',1,'dirent.h']]],
+  ['color',['color',['../structcolor.html#a691c0cd0bd4daa4674d2f7ef901c9c6c',1,'color']]],
+  ['controlcat',['controlCat',['../class_critter.html#a628b203e25050a085786d3993a660ab9',1,'Critter']]],
+  ['converttype',['convertType',['../class_map.html#aae1f3e3de0581ba792b58290c164920f',1,'Map::convertType(const string tileTypeString) const '],['../class_map.html#a21333928f184469ef09d42112cd8f0a1',1,'Map::convertType(Tile::TYPE type) const ']]],
+  ['cppunit_5ftest_5fsuite_5fregistration',['CPPUNIT_TEST_SUITE_REGISTRATION',['../_texture_manager_test_8cpp.html#abb0834fb542fe9632ccdb734c14a4b06',1,'TextureManagerTest.cpp']]],
+  ['createcritter',['createCritter',['../class_critter_factory.html#a3195f421d348fe4ee5c7e49e605745c1',1,'CritterFactory']]],
+  ['critter',['Critter',['../class_critter.html#a05aa21e3b570d7380f3ead47c99442ef',1,'Critter']]],
+  ['critterwave',['CritterWave',['../class_critter_wave.html#a1364e3a7f9f4ab379847fe558b1fb233',1,'CritterWave']]]
 ];

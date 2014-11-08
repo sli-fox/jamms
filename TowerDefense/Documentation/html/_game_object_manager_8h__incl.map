@@ -1,4 +1,5 @@
 <map id="jamms/TowerDefense/TowerDefense/include/managers/GameObjectManager.h" name="jamms/TowerDefense/TowerDefense/include/managers/GameObjectManager.h">
-<area shape="rect" id="node2" href="$_game_object_8h.html" title="File containing the GameObject class. " alt="" coords="107,109,294,136"/>
+<area shape="rect" id="node2" href="$_game_object_8h.html" title="File containing the GameObject class. " alt="" coords="133,109,319,136"/>
 <area shape="rect" id="node6" href="$_texture_manager_8h.html" title="File containing the TextureManager class. " alt="" coords="263,184,450,211"/>
+<area shape="rect" id="node9" href="$_console_color_8h.html" title="utils/ConsoleColor.h" alt="" coords="474,184,613,211"/>
 </map>

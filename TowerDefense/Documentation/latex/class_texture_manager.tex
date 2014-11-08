@@ -12,8 +12,7 @@ Manages all the textures in the application.
 
 
 
-Collaboration diagram for Texture\+Manager\+:
-\nopagebreak
+Collaboration diagram for Texture\+Manager\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -50,7 +49,7 @@ void \hyperlink{class_texture_manager_ac39a48038aa63007dd02f0c53ecc77eb}{operato
 \item 
 std\+::map$<$ std\+::string, \\*
 sf\+::\+Texture $\ast$ $>$ \hyperlink{class_texture_manager_a78bfaa7b400c1229762b49af63913752}{\+\_\+m\+\_\+texture\+\_\+map}
-\begin{DoxyCompactList}\small\item\em Map of textures belonging to the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_map}{Map} of textures belonging to the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -142,8 +141,7 @@ A boolean that indicates whether the texture was previously loaded into the \hyp
 \end{DoxyReturn}
 \hyperlink{class_texture_manager_a8ec1c28bde7e07f64d3e155add36c0df}{is\+Previously\+Loaded()} looks for the given file name in the map of textures shared across the application. If the file name is found, that means the texture has been previously loaded and the function returns true. If the texture has not previously loaded, it returns false. 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -218,8 +216,7 @@ A boolean that indicates whether the texture is unloaded.
 \end{DoxyReturn}
 \hyperlink{class_texture_manager_aa631660b783d448a29b1096c64fe65e4}{load\+Texture()} looks for the given file name string in the map of textures shared across the application. If the file name is found, the texture reference is removed from the map and the function returns true. If the file name is not found or can't be removed, the function returns false. 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -236,7 +233,7 @@ Here is the caller graph for this function\+:
 \subsubsection[{\+\_\+m\+\_\+texture\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string, sf\+::\+Texture$\ast$$>$ Texture\+Manager\+::\+\_\+m\+\_\+texture\+\_\+map\hspace{0.3cm}{\ttfamily [private]}}}\label{class_texture_manager_a78bfaa7b400c1229762b49af63913752}
 
 
-Map of textures belonging to the class. 
+\hyperlink{class_map}{Map} of textures belonging to the class. 
 
 
 

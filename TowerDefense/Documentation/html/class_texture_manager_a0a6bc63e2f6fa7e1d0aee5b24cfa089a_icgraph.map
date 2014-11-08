@@ -1,9 +1,28 @@
 <map id="TextureManager::getInstance" name="TextureManager::getInstance">
-<area shape="rect" id="node2" href="$class_game_object.html#acc593e5b75a58c4a59ad59da654ce807" title="Loads a texture using the TextureManager class and creates a sprite. " alt="" coords="272,5,399,32"/>
-<area shape="rect" id="node3" href="$class_game_state_start.html#aca967324121e7e404a2f411102f186ac" title="Load texture and create StartScreen sprite. " alt="" coords="244,57,427,98"/>
-<area shape="rect" id="node5" href="$class_main_menu.html#a4d84c0a0b817cbff4faf67274dadcc1c" title="MainMenu::show" alt="" coords="275,123,395,149"/>
-<area shape="rect" id="node7" href="$class_texture_manager_test.html#a5078a038ffcab670837423f08cee3a64" title="Test for loadTexture() to see if a texture was correctly added to the TextureManager map..." alt="" coords="265,174,405,215"/>
-<area shape="rect" id="node8" href="$class_texture_manager_test.html#adcea36cb8961f391b772da37416a3c76" title="Test for unloadTexture() to see if a texture was correctly removed to the TextureManager map..." alt="" coords="265,239,405,281"/>
-<area shape="rect" id="node4" href="$class_game_state_start.html#a0969e5227b6f2eaabd53ee69f32a37e7" title="Draws game to the render window. " alt="" coords="491,64,641,91"/>
-<area shape="rect" id="node6" href="$class_game_state_main_menu.html#ad34efc1ade7193ce765d00ac60f019ed" title="Draws game to the render window. " alt="" coords="475,123,657,149"/>
+<area shape="rect" id="node2" href="$class_black_cat.html#a2ae946e05f754f7d7bdbc753946425eb" title="Initialization function for a BlackCat. " alt="" coords="259,157,424,184"/>
+<area shape="rect" id="node4" href="$class_game_object.html#acc593e5b75a58c4a59ad59da654ce807" title="Loads a texture using the TextureManager class and creates a sprite. " alt="" coords="278,335,405,361"/>
+<area shape="rect" id="node16" href="$class_white_cat.html#a0a3c801e7a6b451b2b1caef9da137585" title="Initialization function for a WhiteCat. " alt="" coords="258,629,425,656"/>
+<area shape="rect" id="node18" href="$class_game_state_game_over.html#ae89ff3f534ad24e6cf9482b2089c6fcf" title="Load texture and create StartScreen sprite. " alt="" coords="253,681,429,722"/>
+<area shape="rect" id="node20" href="$class_game_state_win.html#ac132224bbd5fc1aa35e5940c49f33cdc" title="Load texture and create StartScreen sprite. " alt="" coords="244,746,439,787"/>
+<area shape="rect" id="node22" href="$class_game_state_start.html#aca967324121e7e404a2f411102f186ac" title="Load texture and create StartScreen sprite. " alt="" coords="250,811,433,853"/>
+<area shape="rect" id="node24" href="$class_main_menu.html#a4d84c0a0b817cbff4faf67274dadcc1c" title="MainMenu::show" alt="" coords="281,877,401,904"/>
+<area shape="rect" id="node26" href="$class_texture_manager_test.html#a5078a038ffcab670837423f08cee3a64" title="Test for loadTexture() to see if a texture was correctly added to the TextureManager map..." alt="" coords="271,929,411,970"/>
+<area shape="rect" id="node27" href="$class_texture_manager_test.html#adcea36cb8961f391b772da37416a3c76" title="Test for unloadTexture() to see if a texture was correctly removed to the TextureManager map..." alt="" coords="271,994,411,1035"/>
+<area shape="rect" id="node3" href="$class_black_cat.html#a7974aa98721932e53102c10484af1abe" title="The BlackCat constructor. Calls initializeCritter() to set attributes of the BlackCat object..." alt="" coords="511,5,647,32"/>
+<area shape="rect" id="node5" href="$class_bulldog.html#a21e6065a0e9cfa5aa862c8b7a5e1b88c" title="Bulldog::Bulldog" alt="" coords="521,56,637,83"/>
+<area shape="rect" id="node6" href="$class_bulldog.html#adfecd22f881be0d7946534c2012275d7" title="Bulldog::upgradeTower" alt="" coords="502,107,655,133"/>
+<area shape="rect" id="node7" href="$class_dalmatian.html#ab4ce8123d58ef775d1bc80b72485a77d" title="Dalmatian::Dalmatian" alt="" coords="505,157,652,184"/>
+<area shape="rect" id="node8" href="$class_dalmatian.html#aa87cd8b4c763d84d24964024bde2fc9b" title="Dalmatian::upgradeTower" alt="" coords="495,208,663,235"/>
+<area shape="rect" id="node9" href="$class_shih_tzu.html#a623911469b4f9763666f43b2df48d91a" title="ShihTzu::ShihTzu" alt="" coords="517,259,641,285"/>
+<area shape="rect" id="node10" href="$class_shih_tzu.html#a9d8d599edbc19d2a16a65646d0cbc485" title="ShihTzu::upgradeTower" alt="" coords="500,309,657,336"/>
+<area shape="rect" id="node11" href="$class_tile.html#a21f16fb59b8fe5c47b0a0b070673786e" title="Tile::Tile" alt="" coords="543,360,614,387"/>
+<area shape="rect" id="node12" href="$class_game_state_map_editor.html#a621caf097a99b645b29729ac5bff3426" title="Constructor that takes in a pointer to the Game that created them. " alt="" coords="749,447,903,489"/>
+<area shape="rect" id="node13" href="$class_game_state_map_editor.html#ae144185a0fb6138d8381ea6a70c94dcd" title="GameStateMapEditor\l::initializeButtonMap" alt="" coords="505,462,652,503"/>
+<area shape="rect" id="node14" href="$class_game_state_play.html#a705c09eac3d2b27757e5b4cc048b22d5" title="Constructor that takes in a pointer to the Game that created them. " alt="" coords="719,543,933,569"/>
+<area shape="rect" id="node15" href="$class_game_state_play.html#a3a6947bfe8be3d1974094acb8362eda9" title="GameStatePlay::initialize\lButtonMap" alt="" coords="494,579,663,621"/>
+<area shape="rect" id="node17" href="$class_white_cat.html#a1af91c1252fac9ac94a9334bff97f6df" title="The WhiteCat constructor. Calls initializeCritter() to set attributes of the WhiteCat object..." alt="" coords="509,645,648,672"/>
+<area shape="rect" id="node19" href="$class_game_state_game_over.html#a1e88ff4cbd7d608858604efdb16e2adc" title="Draws game to the render window. " alt="" coords="487,696,671,723"/>
+<area shape="rect" id="node21" href="$class_game_state_win.html#aa5d3bc751d492439016f8d42fce2110a" title="Draws game to the render window. " alt="" coords="505,753,652,780"/>
+<area shape="rect" id="node23" href="$class_game_state_start.html#a0969e5227b6f2eaabd53ee69f32a37e7" title="Draws game to the render window. " alt="" coords="503,819,654,845"/>
+<area shape="rect" id="node25" href="$class_game_state_main_menu.html#ad34efc1ade7193ce765d00ac60f019ed" title="Draws game to the render window. " alt="" coords="487,877,670,904"/>
 </map>
