@@ -39,8 +39,12 @@ GameStatePlay::GameStatePlay(Game* game) {
   this->_gameView.setCenter(center_position);
   this->_guiView.setCenter(center_position);
   font.loadFromFile("resources/helveticaneue-webfont.ttf");
+
   mapBackdrop.load("resources/images/MapBackdrop.png");
   mapBackdrop.setPosition(0*32,0*32);
+
+  interfaceBackdrop.load("resources/images/InterfaceBackdrop.png");
+  interfaceBackdrop.setPosition(0*32,12*32);
 
   // Activate mew!
   //mew->isActive = true;
@@ -78,8 +82,14 @@ void GameStatePlay::draw(const float delta_time) {
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
   this->tower_manager.draw(this->game->game_window);
 
+  if(tower_manager.getTower(tileX, tileY) != nullptr) {
+	  this->game->game_window.draw(tower_manager.getTower(tileX,tileY)->getRangeShape());
+    }
 
-  //Draw buttons
+  //Draw backdrop for interface
+  interfaceBackdrop.draw(this->game->game_window);
+
+    //Draw buttons
 	for(std::map<std::string, GameObject>::iterator it = buttonMap.begin() ; it != buttonMap.end() ; ++it)
 		it->second.draw(this->game->game_window);
 
@@ -91,7 +101,6 @@ void GameStatePlay::draw(const float delta_time) {
 	this->game->game_window.draw(towerSpecs);
 	//Draw Towers and their Specs
     if(tower_manager.getTower(tileX, tileY) != nullptr) {
-	  this->game->game_window.draw(tower_manager.getTower(tileX,tileY)->getRangeShape());
 	  towerSpecs.setString(tower_manager.getTower(tileX, tileY)->getTowerSpecs());
 	  //upgradeTowerSpecs.setString(tower_manager.getTower(tileX, tileY)->getUpgradeTowerSpecs());
 	  this->game->game_window.draw(towerSpecs);
@@ -573,6 +582,7 @@ void GameStatePlay::initializeButtonMap(){
 	bulldog_0_Btn.setPosition(24*32,12*32);
 	buttonMap.emplace("bulldog_0_Btn", bulldog_0_Btn);
 
+	/*
 	GameObject bulldog_1_Btn;
 	bulldog_1_Btn.load(towerPath + "bulldog_1.png");
 	bulldog_1_Btn.setPosition(25*32,12*32);
@@ -582,12 +592,14 @@ void GameStatePlay::initializeButtonMap(){
 	bulldog_2_Btn.load(towerPath + "bulldog_2.png");
 	bulldog_2_Btn.setPosition(26*32,12*32);
 	buttonMap.emplace("bulldog_2_Btn", bulldog_2_Btn);
+	*/
 
 	GameObject dalmatian_0_Btn;
 	dalmatian_0_Btn.load(towerPath + "dalmatian_0.png");
-	dalmatian_0_Btn.setPosition(27*32,12*32);
+	dalmatian_0_Btn.setPosition(25*32,12*32);
 	buttonMap.emplace("dalmatian_0_Btn", dalmatian_0_Btn);
 
+	/*
 	GameObject dalmatian_1_Btn;
 	dalmatian_1_Btn.load(towerPath + "dalmatian_1.png");
 	dalmatian_1_Btn.setPosition(28*32,12*32);
@@ -597,12 +609,14 @@ void GameStatePlay::initializeButtonMap(){
 	dalmatian_2_Btn.load(towerPath + "dalmatian_2.png");
 	dalmatian_2_Btn.setPosition(29*32,12*32);
 	buttonMap.emplace("dalmatian_2_Btn", dalmatian_2_Btn);
+	*/
 
 	GameObject shihtzu_0_Btn;
 	shihtzu_0_Btn.load(towerPath + "shihtzu_0.png");
-	shihtzu_0_Btn.setPosition(24*32,13*32);
+	shihtzu_0_Btn.setPosition(26*32,12*32);
 	buttonMap.emplace("shihtzu_0_Btn", shihtzu_0_Btn);
 
+	/*
 	GameObject shihtzu_1_Btn;
 	shihtzu_1_Btn.load(towerPath + "shihtzu_1.png");
 	shihtzu_1_Btn.setPosition(25*32,13*32);
@@ -612,6 +626,7 @@ void GameStatePlay::initializeButtonMap(){
 	shihtzu_2_Btn.load(towerPath + "shihtzu_2.png");
 	shihtzu_2_Btn.setPosition(26*32,13*32);
 	buttonMap.emplace("shihtzu_2_Btn", shihtzu_2_Btn);
+	*/
 
 }
 

@@ -84,7 +84,7 @@ class GameStatePlay : public GameState {
   private:
 	  sf::Vector2i  localPosition;
 	  int tileX, tileY;
-	  GameObject mapBackdrop;
+	  GameObject mapBackdrop, interfaceBackdrop;
 	  std::map<string,GameObject> buttonMap;
 	  bool returnToMenu;
 	  sf::CircleShape range;
