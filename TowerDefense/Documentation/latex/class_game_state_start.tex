@@ -27,7 +27,7 @@ Collaboration diagram for Game\+State\+Start\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=208pt]{class_game_state_start__coll__graph}
+\includegraphics[height=550pt]{class_game_state_start__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -37,10 +37,12 @@ Collaboration diagram for Game\+State\+Start\+:
 \begin{DoxyCompactList}\small\item\em Constructor that takes in a pointer to the \hyperlink{class_game}{Game} that created them. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_game_state_start_a0969e5227b6f2eaabd53ee69f32a37e7}{draw} (const float delta\+\_\+time)
 \begin{DoxyCompactList}\small\item\em Draws game to the render window. \end{DoxyCompactList}\item 
-virtual void \hyperlink{class_game_state_start_afbfe6831f8f9a14456840a98c7b5ef9c}{update} (const float delta\+\_\+time)
+virtual void \hyperlink{class_game_state_start_a6a57f1c6f34ea789cb9ebf8935350627}{update} (const float delta\+\_\+time)
 \begin{DoxyCompactList}\small\item\em Updates game changes. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_game_state_start_afa9da08e1a51b4914ee436e7f1c4f6e6}{handle\+Input} ()
-\begin{DoxyCompactList}\small\item\em Handles player input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Handles player input. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_state_start_ac9514695cbd6366c721e9057aca970fe}{run\+Threads} ()
+\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -104,8 +106,7 @@ Implements \hyperlink{class_game_state_a55a6a68aabdf7054ea0e6ddbf24902df}{Game\+
 
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -130,8 +131,7 @@ Void.
 \end{DoxyReturn}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -142,8 +142,7 @@ Here is the call graph for this function\+:
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -174,8 +173,7 @@ Implements \hyperlink{class_game_state_a970b55edd5a1da31ea0f7113e2c1f85a}{Game\+
 
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -200,8 +198,7 @@ Void.
 \end{DoxyReturn}
 Add the \hyperlink{class_game_state_main_menu}{Game\+State\+Main\+Menu} state to the game 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -212,8 +209,7 @@ Here is the call graph for this function\+:
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -222,13 +218,24 @@ Here is the caller graph for this function\+:
 \end{figure}
 
 
-\hypertarget{class_game_state_start_afbfe6831f8f9a14456840a98c7b5ef9c}{\index{Game\+State\+Start@{Game\+State\+Start}!update@{update}}
+\hypertarget{class_game_state_start_ac9514695cbd6366c721e9057aca970fe}{\index{Game\+State\+Start@{Game\+State\+Start}!run\+Threads@{run\+Threads}}
+\index{run\+Threads@{run\+Threads}!Game\+State\+Start@{Game\+State\+Start}}
+\subsubsection[{run\+Threads}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Game\+State\+Start\+::run\+Threads (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_game_state_start_ac9514695cbd6366c721e9057aca970fe}
+
+
+Implements \hyperlink{class_game_state_a98cd49f1d8fd9fc3e79d607a238ba518}{Game\+State}.
+
+\hypertarget{class_game_state_start_a6a57f1c6f34ea789cb9ebf8935350627}{\index{Game\+State\+Start@{Game\+State\+Start}!update@{update}}
 \index{update@{update}!Game\+State\+Start@{Game\+State\+Start}}
-\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Start\+::update (
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Game\+State\+Start\+::update (
 \begin{DoxyParamCaption}
 \item[{const float}]{delta\+\_\+time}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_state_start_afbfe6831f8f9a14456840a98c7b5ef9c}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_game_state_start_a6a57f1c6f34ea789cb9ebf8935350627}
 
 
 Updates game changes. 

@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -95,6 +96,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><code>#include &lt;<a class="el" href="_game_object_8h_source.html">GameObject.h</a>&gt;</code></p>
 <div class="dynheader">
+Inheritance diagram for GameObject:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_object__inherit__graph.png" border="0" usemap="#_game_object_inherit__map" alt="Inheritance graph"/></div>
+<map name="_game_object_inherit__map" id="_game_object_inherit__map">
+<area shape="rect" id="node2" href="class_critter.html" title="Abstract base class of all Critters Critter defines the attributes, accessors, and update function fo..." alt="" coords="121,307,297,795"/><area shape="rect" id="node5" href="class_tile.html" title="{Tile\n|&#45; tileX\l&#45; tileY\l&#45; type\l|+ Tile()\l+ Tile()\l+ ~Tile()\l+ getTileX()\l+ getTileY()\l+ getType()\l+ setType()\l}" alt="" coords="422,453,511,648"/><area shape="rect" id="node11" href="class_tower.html" title="{Tower\n|# _id\l# _name\l# _type\l# _upgrade_level\l# _power\l# _range\l# _range_shape\l# _rate_of_fire\l# _special_effect\l# _buy_cost\l# _upgrade_cost\l# _sell_cost\l# _target\l&#45; clock\l&#45; time\l|+ Tower()\l+ ~Tower()\l+ upgradeTower()\l+ canAttack()\l+ canApplySpecialAfterEffects()\l+ attack()\l+ update()\l+ findCollisionPath()\l+ rotateTowardsTarget()\l+ angle()\land 30 more...\l}" alt="" coords="714,336,921,765"/><area shape="rect" id="node3" href="class_black_cat.html" title="Class for BlackCat. Subclass of Critter. " alt="" coords="5,843,125,949"/><area shape="rect" id="node4" href="class_white_cat.html" title="Class for WhiteCat. Subclass of Critter. " alt="" coords="149,843,269,949"/><area shape="rect" id="node6" href="class_dead_tile.html" title="{DeadTile\n||+ DeadTile()\l+ ~DeadTile()\l}" alt="" coords="294,850,394,942"/><area shape="rect" id="node7" href="class_path_tile.html" title="{PathTile\n||+ PathTile()\l+ ~PathTile()\l}" alt="" coords="418,850,515,942"/><area shape="rect" id="node10" href="class_scenery_tile.html" title="{SceneryTile\n||+ SceneryTile()\l+ ~SceneryTile()\l}" alt="" coords="539,850,658,942"/><area shape="rect" id="node8" href="class_end_tile.html" title="{EndTile\n||+ EndTile()\l+ ~EndTile()\l}" alt="" coords="360,997,453,1089"/><area shape="rect" id="node9" href="class_start_tile.html" title="{StartTile\n||+ StartTile()\l+ ~StartTile()\l}" alt="" coords="477,997,576,1089"/><area shape="rect" id="node12" href="class_bulldog.html" title="{Bulldog\n||+ Bulldog()\l+ upgradeTower()\l}" alt="" coords="683,850,805,942"/><area shape="rect" id="node13" href="class_dalmatian.html" title="{Dalmatian\n||+ Dalmatian()\l+ upgradeTower()\l}" alt="" coords="829,850,952,942"/><area shape="rect" id="node14" href="class_shih_tzu.html" title="{ShihTzu\n||+ ShihTzu()\l+ upgradeTower()\l}" alt="" coords="976,850,1099,942"/></map>
+</div>
+<div class="dynheader">
 Collaboration diagram for GameObject:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_object__coll__graph.png" border="0" usemap="#_game_object_coll__map" alt="Collaboration graph"/></div>
@@ -118,6 +126,36 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a180d6e9e7afa44b30ca678a95c6f4dad"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a180d6e9e7afa44b30ca678a95c6f4dad">setPosition</a> (float x, float y)</td></tr>
 <tr class="memdesc:a180d6e9e7afa44b30ca678a95c6f4dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the initial draw position of a <a class="el" href="class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. ">GameObject</a> instance.  <a href="#a180d6e9e7afa44b30ca678a95c6f4dad">More...</a><br /></td></tr>
 <tr class="separator:a180d6e9e7afa44b30ca678a95c6f4dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a380c5cec0ed79277359dbbb9935f1ffe"><td class="memItemLeft" align="right" valign="top">virtual sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a380c5cec0ed79277359dbbb9935f1ffe">getPosition</a> () const </td></tr>
+<tr class="separator:a380c5cec0ed79277359dbbb9935f1ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a387e235ced0f778e58d5f4a39f58a220"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a387e235ced0f778e58d5f4a39f58a220">getFileName</a> () const </td></tr>
+<tr class="separator:a387e235ced0f778e58d5f4a39f58a220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7e04407f7c2a5bd487b459efe9fd79"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#adf7e04407f7c2a5bd487b459efe9fd79">spriteContains</a> (sf::Vector2i position) const </td></tr>
+<tr class="separator:adf7e04407f7c2a5bd487b459efe9fd79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa0d948eccbd0345cda6bdea5b5196a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a6fa0d948eccbd0345cda6bdea5b5196a">move</a> (float x, float y)</td></tr>
+<tr class="separator:a6fa0d948eccbd0345cda6bdea5b5196a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ad77a6b8bc1adfb8ea463f12c022b1e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a3ad77a6b8bc1adfb8ea463f12c022b1e">move</a> (const sf::Vector2f &amp;offset)</td></tr>
+<tr class="separator:a3ad77a6b8bc1adfb8ea463f12c022b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a1df73c1ffc15d9bb616aebc3e477fd"><td class="memItemLeft" align="right" valign="top">virtual sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a3a1df73c1ffc15d9bb616aebc3e477fd">getGlobalBounds</a> () const </td></tr>
+<tr class="memdesc:a3a1df73c1ffc15d9bb616aebc3e477fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the floating recantle encompassing a sprite (after the result of transormations)  <a href="#a3a1df73c1ffc15d9bb616aebc3e477fd">More...</a><br /></td></tr>
+<tr class="separator:a3a1df73c1ffc15d9bb616aebc3e477fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18a09c750e617f7e3188bda15a7d5fd7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a18a09c750e617f7e3188bda15a7d5fd7">boxToBoxIntersection</a> (<a class="el" href="class_game_object.html">GameObject</a> *game_object)</td></tr>
+<tr class="memdesc:a18a09c750e617f7e3188bda15a7d5fd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bouding box intersection between GameObjects.  <a href="#a18a09c750e617f7e3188bda15a7d5fd7">More...</a><br /></td></tr>
+<tr class="separator:a18a09c750e617f7e3188bda15a7d5fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a9fd4ee6157fcf61fd8f7d7318598c5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a3a9fd4ee6157fcf61fd8f7d7318598c5">circleToCircleIntersection</a> (<a class="el" href="class_game_object.html">GameObject</a> *game_object)</td></tr>
+<tr class="memdesc:a3a9fd4ee6157fcf61fd8f7d7318598c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures the distance between the centers of each object to each other and compare that with their radii.  <a href="#a3a9fd4ee6157fcf61fd8f7d7318598c5">More...</a><br /></td></tr>
+<tr class="separator:a3a9fd4ee6157fcf61fd8f7d7318598c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe3b2585b3615868c64b62bb1cb40adb"><td class="memItemLeft" align="right" valign="top">virtual sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#afe3b2585b3615868c64b62bb1cb40adb">getSpriteCenter</a> ()</td></tr>
+<tr class="memdesc:afe3b2585b3615868c64b62bb1cb40adb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the center of a sprite.  <a href="#afe3b2585b3615868c64b62bb1cb40adb">More...</a><br /></td></tr>
+<tr class="separator:afe3b2585b3615868c64b62bb1cb40adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a267f290e80e877be0de3a9706321c049"><td class="memItemLeft" align="right" valign="top">virtual sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a267f290e80e877be0de3a9706321c049">getSpriteSize</a> ()</td></tr>
+<tr class="memdesc:a267f290e80e877be0de3a9706321c049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the size of a sprite.  <a href="#a267f290e80e877be0de3a9706321c049">More...</a><br /></td></tr>
+<tr class="separator:a267f290e80e877be0de3a9706321c049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8220201988f2aaea8a6f748872e188a9"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a8220201988f2aaea8a6f748872e188a9">getRectangleSpriteRadius</a> ()</td></tr>
+<tr class="memdesc:a8220201988f2aaea8a6f748872e188a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures the radius of the rectangle sprite.  <a href="#a8220201988f2aaea8a6f748872e188a9">More...</a><br /></td></tr>
+<tr class="separator:a8220201988f2aaea8a6f748872e188a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a320a94559557834d53bffa538d8349c9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a320a94559557834d53bffa538d8349c9">setRotation</a> (float angle)</td></tr>
+<tr class="separator:a320a94559557834d53bffa538d8349c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -175,6 +213,80 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a18a09c750e617f7e3188bda15a7d5fd7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameObject::boxToBoxIntersection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_game_object.html">GameObject</a> *&#160;</td>
+          <td class="paramname"><em>game_object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bouding box intersection between GameObjects. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_object_a18a09c750e617f7e3188bda15a7d5fd7_cgraph.png" border="0" usemap="#class_game_object_a18a09c750e617f7e3188bda15a7d5fd7_cgraph" alt=""/></div>
+<map name="class_game_object_a18a09c750e617f7e3188bda15a7d5fd7_cgraph" id="class_game_object_a18a09c750e617f7e3188bda15a7d5fd7_cgraph">
+<area shape="rect" id="node2" href="class_game_object.html#a3a1df73c1ffc15d9bb616aebc3e477fd" title="Retrieves the floating recantle encompassing a sprite (after the result of transormations) ..." alt="" coords="281,5,484,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a9fd4ee6157fcf61fd8f7d7318598c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameObject::circleToCircleIntersection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_game_object.html">GameObject</a> *&#160;</td>
+          <td class="paramname"><em>game_object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Measures the distance between the centers of each object to each other and compare that with their radii. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+<p>Reimplemented in <a class="el" href="class_tower.html#a518ff249dec05cdd026a830d845abfd2">Tower</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_object_a3a9fd4ee6157fcf61fd8f7d7318598c5_cgraph.png" border="0" usemap="#class_game_object_a3a9fd4ee6157fcf61fd8f7d7318598c5_cgraph" alt=""/></div>
+<map name="class_game_object_a3a9fd4ee6157fcf61fd8f7d7318598c5_cgraph" id="class_game_object_a3a9fd4ee6157fcf61fd8f7d7318598c5_cgraph">
+<area shape="rect" id="node2" href="class_game_object.html#a8220201988f2aaea8a6f748872e188a9" title="Measures the radius of the rectangle sprite. " alt="" coords="242,5,421,47"/><area shape="rect" id="node4" href="class_game_object.html#afe3b2585b3615868c64b62bb1cb40adb" title="Gets the center of a sprite. " alt="" coords="235,71,428,98"/><area shape="rect" id="node3" href="class_game_object.html#a267f290e80e877be0de3a9706321c049" title="Gets the size of a sprite. " alt="" coords="476,13,657,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="abf4de46e52c8f23d18d51bc29744b136"></a>
 <div class="memitem">
 <div class="memproto">
@@ -206,6 +318,213 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Void.</dd></dl>
 <p><a class="el" href="class_game_object.html#abf4de46e52c8f23d18d51bc29744b136" title="Draws a sprite to the render window if the GameObject instance has previously been loaded...">draw()</a> takes in a reference to a rendering window and checks if sprite is created, if it has been, the sprite is drawn to the window. </p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_object_abf4de46e52c8f23d18d51bc29744b136_icgraph.png" border="0" usemap="#class_game_object_abf4de46e52c8f23d18d51bc29744b136_icgraph" alt=""/></div>
+<map name="class_game_object_abf4de46e52c8f23d18d51bc29744b136_icgraph" id="class_game_object_abf4de46e52c8f23d18d51bc29744b136_icgraph">
+<area shape="rect" id="node2" href="class_game_state_map_editor.html#a37c87643309459ac32d0b5f608bc93b0" title="Draws game to the render window. " alt="" coords="185,5,332,47"/><area shape="rect" id="node3" href="class_game_state_play.html#a63a3ba0c891afd8ec126806bab4f315a" title="Draws game to the render window. " alt="" coords="184,71,333,98"/><area shape="rect" id="node4" href="class_game_state_play.html#ab41594c10b04429a3126d4a8085de82d" title="GameStatePlay::runThreads" alt="" coords="381,71,568,98"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a387e235ced0f778e58d5f4a39f58a220"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GameObject::getFileName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3a1df73c1ffc15d9bb616aebc3e477fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::FloatRect GameObject::getGlobalBounds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the floating recantle encompassing a sprite (after the result of transormations) </p>
+<dl class="section return"><dt>Returns</dt><dd>sf::FloatRect </dd></dl>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_object_a3a1df73c1ffc15d9bb616aebc3e477fd_icgraph.png" border="0" usemap="#class_game_object_a3a1df73c1ffc15d9bb616aebc3e477fd_icgraph" alt=""/></div>
+<map name="class_game_object_a3a1df73c1ffc15d9bb616aebc3e477fd_icgraph" id="class_game_object_a3a1df73c1ffc15d9bb616aebc3e477fd_icgraph">
+<area shape="rect" id="node2" href="class_game_object.html#a18a09c750e617f7e3188bda15a7d5fd7" title="Bouding box intersection between GameObjects. " alt="" coords="256,5,484,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a380c5cec0ed79277359dbbb9935f1ffe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2f GameObject::getPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_critter.html#a8fdba06ecb582e8b542e2e73a76f455d">Critter</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_object_a380c5cec0ed79277359dbbb9935f1ffe_icgraph.png" border="0" usemap="#class_game_object_a380c5cec0ed79277359dbbb9935f1ffe_icgraph" alt=""/></div>
+<map name="class_game_object_a380c5cec0ed79277359dbbb9935f1ffe_icgraph" id="class_game_object_a380c5cec0ed79277359dbbb9935f1ffe_icgraph">
+<area shape="rect" id="node2" href="class_tower.html#acfb9cb7c1b2c1573929ff7d618aa996b" title="Determines collision path based on position of tower object and the distance in a straight line towar..." alt="" coords="221,5,381,32"/><area shape="rect" id="node3" href="class_tower.html#a7deaf3f9565d32468d3056fa5bcc43b0" title="Rotates the tower to face the critter it is attacking. " alt="" coords="429,5,611,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8220201988f2aaea8a6f748872e188a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObject::getRectangleSpriteRadius </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Measures the radius of the rectangle sprite. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_object_a8220201988f2aaea8a6f748872e188a9_cgraph.png" border="0" usemap="#class_game_object_a8220201988f2aaea8a6f748872e188a9_cgraph" alt=""/></div>
+<map name="class_game_object_a8220201988f2aaea8a6f748872e188a9_cgraph" id="class_game_object_a8220201988f2aaea8a6f748872e188a9_cgraph">
+<area shape="rect" id="node2" href="class_game_object.html#a267f290e80e877be0de3a9706321c049" title="Gets the size of a sprite. " alt="" coords="232,13,413,39"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_object_a8220201988f2aaea8a6f748872e188a9_icgraph.png" border="0" usemap="#class_game_object_a8220201988f2aaea8a6f748872e188a9_icgraph" alt=""/></div>
+<map name="class_game_object_a8220201988f2aaea8a6f748872e188a9_icgraph" id="class_game_object_a8220201988f2aaea8a6f748872e188a9_icgraph">
+<area shape="rect" id="node2" href="class_game_object.html#a3a9fd4ee6157fcf61fd8f7d7318598c5" title="Measures the distance between the centers of each object to each other and compare that with their ra..." alt="" coords="232,5,413,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="afe3b2585b3615868c64b62bb1cb40adb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2f GameObject::getSpriteCenter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the center of a sprite. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_object_afe3b2585b3615868c64b62bb1cb40adb_icgraph.png" border="0" usemap="#class_game_object_afe3b2585b3615868c64b62bb1cb40adb_icgraph" alt=""/></div>
+<map name="class_game_object_afe3b2585b3615868c64b62bb1cb40adb_icgraph" id="class_game_object_afe3b2585b3615868c64b62bb1cb40adb_icgraph">
+<area shape="rect" id="node2" href="class_game_object.html#a3a9fd4ee6157fcf61fd8f7d7318598c5" title="Measures the distance between the centers of each object to each other and compare that with their ra..." alt="" coords="261,5,442,47"/><area shape="rect" id="node3" href="class_tower.html#a518ff249dec05cdd026a830d845abfd2" title="Overrides method to apply to tower range sf::CircleShape object. " alt="" coords="247,71,456,98"/><area shape="rect" id="node4" href="class_tower.html#a3bc66411a614f108ceaefd255bdb4179" title="Determines whether tower can attack a critter based on whether the critter falls within its range whi..." alt="" coords="537,42,659,69"/><area shape="rect" id="node6" href="class_tower.html#aa4d0884a1fc45d6b47e8ed4a3cd23b34" title="Determines whether tower can apply a special effect on a critter based on whether the critter falls w..." alt="" coords="504,93,692,135"/><area shape="rect" id="node5" href="class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="740,42,928,69"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a267f290e80e877be0de3a9706321c049"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2f GameObject::getSpriteSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the size of a sprite. </p>
+<dl class="section return"><dt>Returns</dt><dd>sf::Vector2f </dd></dl>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_object_a267f290e80e877be0de3a9706321c049_icgraph.png" border="0" usemap="#class_game_object_a267f290e80e877be0de3a9706321c049_icgraph" alt=""/></div>
+<map name="class_game_object_a267f290e80e877be0de3a9706321c049_icgraph" id="class_game_object_a267f290e80e877be0de3a9706321c049_icgraph">
+<area shape="rect" id="node2" href="class_critter.html#a628b203e25050a085786d3993a660ab9" title="Critter::controlCat" alt="" coords="262,5,386,32"/><area shape="rect" id="node4" href="class_game_object.html#a8220201988f2aaea8a6f748872e188a9" title="Measures the radius of the rectangle sprite. " alt="" coords="235,57,413,98"/><area shape="rect" id="node3" href="class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="461,5,649,32"/><area shape="rect" id="node5" href="class_game_object.html#a3a9fd4ee6157fcf61fd8f7d7318598c5" title="Measures the distance between the centers of each object to each other and compare that with their ra..." alt="" coords="465,57,646,98"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -250,6 +569,73 @@ Here is the call graph for this function:</div>
 </div>
 </p>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_object_acc593e5b75a58c4a59ad59da654ce807_icgraph.png" border="0" usemap="#class_game_object_acc593e5b75a58c4a59ad59da654ce807_icgraph" alt=""/></div>
+<map name="class_game_object_acc593e5b75a58c4a59ad59da654ce807_icgraph" id="class_game_object_acc593e5b75a58c4a59ad59da654ce807_icgraph">
+<area shape="rect" id="node2" href="class_bulldog.html#a21e6065a0e9cfa5aa862c8b7a5e1b88c" title="Bulldog::Bulldog" alt="" coords="207,5,323,32"/><area shape="rect" id="node3" href="class_bulldog.html#adfecd22f881be0d7946534c2012275d7" title="Bulldog::upgradeTower" alt="" coords="188,56,341,83"/><area shape="rect" id="node4" href="class_dalmatian.html#ab4ce8123d58ef775d1bc80b72485a77d" title="Dalmatian::Dalmatian" alt="" coords="191,107,338,133"/><area shape="rect" id="node5" href="class_dalmatian.html#aa87cd8b4c763d84d24964024bde2fc9b" title="Dalmatian::upgradeTower" alt="" coords="181,157,349,184"/><area shape="rect" id="node6" href="class_shih_tzu.html#a623911469b4f9763666f43b2df48d91a" title="ShihTzu::ShihTzu" alt="" coords="203,208,327,235"/><area shape="rect" id="node7" href="class_shih_tzu.html#a9d8d599edbc19d2a16a65646d0cbc485" title="ShihTzu::upgradeTower" alt="" coords="186,259,343,285"/><area shape="rect" id="node8" href="class_tile.html#a21f16fb59b8fe5c47b0a0b070673786e" title="Tile::Tile" alt="" coords="229,309,300,336"/><area shape="rect" id="node9" href="class_game_state_map_editor.html#a621caf097a99b645b29729ac5bff3426" title="Constructor that takes in a pointer to the Game that created them. " alt="" coords="427,397,582,438"/><area shape="rect" id="node10" href="class_game_state_map_editor.html#ae144185a0fb6138d8381ea6a70c94dcd" title="GameStateMapEditor\l::initializeButtonMap" alt="" coords="191,411,338,453"/><area shape="rect" id="node11" href="class_game_state_play.html#a705c09eac3d2b27757e5b4cc048b22d5" title="Constructor that takes in a pointer to the Game that created them. " alt="" coords="397,492,612,519"/><area shape="rect" id="node12" href="class_game_state_play.html#a3a6947bfe8be3d1974094acb8362eda9" title="GameStatePlay::initialize\lButtonMap" alt="" coords="180,529,349,570"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6fa0d948eccbd0345cda6bdea5b5196a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObject::move </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3ad77a6b8bc1adfb8ea463f12c022b1e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObject::move </td>
+          <td>(</td>
+          <td class="paramtype">const sf::Vector2f &amp;&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <a class="anchor" id="a180d6e9e7afa44b30ca678a95c6f4dad"></a>
@@ -293,6 +679,73 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Void.</dd></dl>
 <p><a class="el" href="class_game_object.html#a180d6e9e7afa44b30ca678a95c6f4dad" title="Sets the initial draw position of a GameObject instance. ">setPosition()</a> sets x and y coordinates of the sprite if it has been created. </p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_object_a180d6e9e7afa44b30ca678a95c6f4dad_icgraph.png" border="0" usemap="#class_game_object_a180d6e9e7afa44b30ca678a95c6f4dad_icgraph" alt=""/></div>
+<map name="class_game_object_a180d6e9e7afa44b30ca678a95c6f4dad_icgraph" id="class_game_object_a180d6e9e7afa44b30ca678a95c6f4dad_icgraph">
+<area shape="rect" id="node2" href="class_bulldog.html#a21e6065a0e9cfa5aa862c8b7a5e1b88c" title="Bulldog::Bulldog" alt="" coords="248,5,364,32"/><area shape="rect" id="node3" href="class_dalmatian.html#ab4ce8123d58ef775d1bc80b72485a77d" title="Dalmatian::Dalmatian" alt="" coords="233,56,379,83"/><area shape="rect" id="node4" href="class_shih_tzu.html#a623911469b4f9763666f43b2df48d91a" title="ShihTzu::ShihTzu" alt="" coords="244,107,368,133"/><area shape="rect" id="node5" href="class_game_state_map_editor.html#a621caf097a99b645b29729ac5bff3426" title="Constructor that takes in a pointer to the Game that created them. " alt="" coords="469,194,623,235"/><area shape="rect" id="node6" href="class_game_state_map_editor.html#ae144185a0fb6138d8381ea6a70c94dcd" title="GameStateMapEditor\l::initializeButtonMap" alt="" coords="233,209,379,250"/><area shape="rect" id="node7" href="class_game_state_play.html#a705c09eac3d2b27757e5b4cc048b22d5" title="Constructor that takes in a pointer to the Game that created them. " alt="" coords="439,289,653,316"/><area shape="rect" id="node8" href="class_game_state_play.html#a3a6947bfe8be3d1974094acb8362eda9" title="GameStatePlay::initialize\lButtonMap" alt="" coords="221,326,391,367"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a320a94559557834d53bffa538d8349c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObject::setRotation </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_object_a320a94559557834d53bffa538d8349c9_icgraph.png" border="0" usemap="#class_game_object_a320a94559557834d53bffa538d8349c9_icgraph" alt=""/></div>
+<map name="class_game_object_a320a94559557834d53bffa538d8349c9_icgraph" id="class_game_object_a320a94559557834d53bffa538d8349c9_icgraph">
+<area shape="rect" id="node2" href="class_tower.html#a7deaf3f9565d32468d3056fa5bcc43b0" title="Rotates the tower to face the critter it is attacking. " alt="" coords="223,5,404,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="adf7e04407f7c2a5bd487b459efe9fd79"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameObject::spriteContains </td>
+          <td>(</td>
+          <td class="paramtype">sf::Vector2i&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_object_adf7e04407f7c2a5bd487b459efe9fd79_icgraph.png" border="0" usemap="#class_game_object_adf7e04407f7c2a5bd487b459efe9fd79_icgraph" alt=""/></div>
+<map name="class_game_object_adf7e04407f7c2a5bd487b459efe9fd79_icgraph" id="class_game_object_adf7e04407f7c2a5bd487b459efe9fd79_icgraph">
+<area shape="rect" id="node2" href="class_game_state_map_editor.html#aab39f5d619995539f39f9cd217130653" title="GameStateMapEditor\l::mapEditorCommandLibrary" alt="" coords="253,5,439,47"/><area shape="rect" id="node4" href="class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="500,101,688,127"/><area shape="rect" id="node5" href="class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="240,123,452,164"/><area shape="rect" id="node3" href="class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="521,5,667,47"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -370,7 +823,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 21 2014 04:52:46 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 7 2014 19:14:36 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

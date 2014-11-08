@@ -17,7 +17,7 @@ Inheritance diagram for Game\+State\+Play\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=206pt]{class_game_state_play__inherit__graph}
+\includegraphics[height=550pt]{class_game_state_play__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -27,33 +27,124 @@ Collaboration diagram for Game\+State\+Play\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=342pt]{class_game_state_play__coll__graph}
+\includegraphics[width=350pt]{class_game_state_play__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+virtual void \hyperlink{class_game_state_play_ab41594c10b04429a3126d4a8085de82d}{run\+Threads} ()
+\item 
 \hyperlink{class_game_state_play_a705c09eac3d2b27757e5b4cc048b22d5}{Game\+State\+Play} (\hyperlink{class_game}{Game} $\ast$\hyperlink{class_game_state_a355a79415b9ef63c2aec1448a99f6e71}{game})
 \begin{DoxyCompactList}\small\item\em Constructor that takes in a pointer to the \hyperlink{class_game}{Game} that created them. \end{DoxyCompactList}\item 
+\hyperlink{class_game_state_play_ae4f10dc83f16da01f425d09f9fbb4ef6}{$\sim$\+Game\+State\+Play} ()
+\item 
+void \hyperlink{class_game_state_play_aec5f72cea0e80d1d83b9cbe155a65ce9}{handle\+Game\+Over} ()
+\item 
+void \hyperlink{class_game_state_play_a5076f9d4d81b1b9dc4e71c627f40a9d2}{register\+Observer} (\hyperlink{class_tower}{Tower} $\ast$tower)
+\item 
 virtual void \hyperlink{class_game_state_play_a63a3ba0c891afd8ec126806bab4f315a}{draw} (const float delta\+\_\+time)
 \begin{DoxyCompactList}\small\item\em Draws game to the render window. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_game_state_play_a2faf041a447ddf86726658455560abb8}{update} (const float delta\+\_\+time)
 \begin{DoxyCompactList}\small\item\em Updates game changes. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_game_state_play_ae9acc781e1fdbc931784ba3892c469ce}{handle\+Input} ()
-\begin{DoxyCompactList}\small\item\em Handles player input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Handles player input. \end{DoxyCompactList}\item 
+\hyperlink{class_waypoint}{Waypoint} $\ast$ \hyperlink{class_game_state_play_a6ebd21112217871afe2e0160f6eb0753}{get\+Starting\+Waypoint} ()
+\begin{DoxyCompactList}\small\item\em Get starting waypoint. \end{DoxyCompactList}\item 
+\hyperlink{class_critter_wave}{Critter\+Wave} $\ast$ \hyperlink{class_game_state_play_a36f7d1ee2a500290e224a50f679ba3ff}{get\+Current\+Critter\+Wave} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_white_cat}{White\+Cat} $\ast$ \hyperlink{class_game_state_play_a90934640484bd6417007e112d8034a50}{mew}
+\item 
+\hyperlink{class_black_cat}{Black\+Cat} $\ast$ \hyperlink{class_game_state_play_ace195ef46750d243d3bbaf2abaaf6e2e}{blacky}
+\item 
+int \hyperlink{class_game_state_play_aa0948c192d3ef1adb6eaaeade8521733}{delay\+\_\+count}
+\item 
+\hyperlink{class_critter}{Critter} $\ast$ \hyperlink{class_game_state_play_ad6c5af538edc9f5b2fd3ba0c0f95e89d}{last\+\_\+activated\+\_\+critter}
+\item 
+bool \hyperlink{class_game_state_play_a59cc893637827eb0d9ee902262548980}{first\+Start}
+\item 
+bool \hyperlink{class_game_state_play_a406124f1525e8555fb264c743298d7b9}{show\+\_\+waypoints}
+\item 
+bool \hyperlink{class_game_state_play_a0e613be489b2c61857676303a15ce3cc}{end\+Of\+Waves}
+\item 
+std\+::thread \hyperlink{class_game_state_play_aac5b1d9de4ab0ad2445d97a588cb3168}{draw\+Thread}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{class_waypoint}{Waypoint} $>$ \hyperlink{class_game_state_play_aee1a80f02dd69d8f06c041020eb4447e}{add\+Waypoints} (std\+::vector$<$ sf\+::\+Vector2f $>$ path\+\_\+points)
+\begin{DoxyCompactList}\small\item\em Add waypoints. \end{DoxyCompactList}\item 
+std\+::vector$<$ sf\+::\+Vector2f $>$ \hyperlink{class_game_state_play_aae84ae33a68caa8bf05a4a2a49a2b41d}{get\+Waypoints\+From\+Map\+Path} ()
+\begin{DoxyCompactList}\small\item\em Create waypoint vector from the map's path. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_state_play_a28fee46c0b9d0248ed319976be94494a}{draw\+Waypoints} (std\+::vector$<$ \hyperlink{class_waypoint}{Waypoint} $>$ waypoints, sf\+::\+Render\+Window \&game\+\_\+window)
+\begin{DoxyCompactList}\small\item\em Draw all waypoints. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_state_play_ae812a7447027abe5fcc2f79bf3e35ad8}{move\+Activated\+Critters} (const float delta\+\_\+time)
+\item 
+void \hyperlink{class_game_state_play_a0d6ff2e65992c5fb29f180c6b1eb9435}{move\+Critter} (\hyperlink{class_critter}{Critter} $\ast$critter, const float delta\+\_\+time)
+\item 
+void \hyperlink{class_game_state_play_a3a6947bfe8be3d1974094acb8362eda9}{initialize\+Button\+Map} ()
+\item 
+void \hyperlink{class_game_state_play_a79237473ceeb26b94f641d0bf66c1ec0}{button\+Command\+Library} ()
+\item 
+void \hyperlink{class_game_state_play_ab33de76aa28534d14aa1d79bed43aa17}{tower\+Command\+Library} (const int \hyperlink{class_game_state_play_a6c82bd77433f30b20a88e19ab37a7f96}{tile\+X}, const int \hyperlink{class_game_state_play_ae34c6aa315832bd457df59720345534e}{tile\+Y})
+\item 
+bool \hyperlink{class_game_state_play_ac82134049ed6dd0aaa929e200f7185d5}{check\+If\+At\+End\+Tile} (\hyperlink{class_critter}{Critter} $\ast$critter)
+\item 
+void \hyperlink{class_game_state_play_a2278751d53b50beb97c809db26f1b9b6}{handle\+Critter\+Removal\+From\+Wave} ()
+\item 
+void \hyperlink{class_game_state_play_a2eda31c4d98a8440c6eba38604aa2a79}{handle\+Critter\+Wave\+Level\+Switching} ()
+\item 
+void \hyperlink{class_game_state_play_a6047cbdce7daa2092d95bf786db5267a}{set\+Critter\+Wave\+Levels} (\hyperlink{class_waypoint}{Waypoint} $\ast$starting\+\_\+waypoint)
+\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
+\item 
+sf\+::\+Vector2i \hyperlink{class_game_state_play_aef4648e9978d2b031365686fa5221038}{local\+Position}
+\item 
+int \hyperlink{class_game_state_play_a6c82bd77433f30b20a88e19ab37a7f96}{tile\+X}
+\item 
+int \hyperlink{class_game_state_play_ae34c6aa315832bd457df59720345534e}{tile\+Y}
+\item 
+\hyperlink{class_game_object}{Game\+Object} \hyperlink{class_game_state_play_a1114fc8f3e15f5f46ab4361dad37ad0b}{map\+Backdrop}
+\item 
+std\+::map$<$ string, \hyperlink{class_game_object}{Game\+Object} $>$ \hyperlink{class_game_state_play_ab0755d9a7eb5708a840d82bbdc7eb9f2}{button\+Map}
+\item 
+bool \hyperlink{class_game_state_play_a6f5a18b6d0597c0f6c4d26b4df873ee6}{return\+To\+Menu}
+\item 
+sf\+::\+Circle\+Shape \hyperlink{class_game_state_play_a4ac9c1b314dfbfe0082728eacfc401fc}{range}
+\item 
+\hyperlink{class_tower_a110a21c18d4ec095c6234bd17f004b3e}{Tower\+::\+Tower\+Type} \hyperlink{class_game_state_play_ac22880bd1c34ebbe5d45182caaaf2523}{tower\+Selector}
+\item 
+sf\+::\+Font \hyperlink{class_game_state_play_a333494e6c4a8ae4a285635776c3b486e}{font}
+\item 
+sf\+::\+Text \hyperlink{class_game_state_play_add98cf58c2cc6af809cade72be6c6c0a}{tower\+Specs}
+\item 
+sf\+::\+Text \hyperlink{class_game_state_play_a61669dc94331d0302f3a0f5792304049}{wave\+Specs}
+\item 
+sf\+::\+Text \hyperlink{class_game_state_play_afee193abc64a41d61a08db7d6d5b507d}{next\+Wave\+Specs}
+\item 
+sf\+::\+Text \hyperlink{class_game_state_play_a5e7f3929ab226b4ad0fb627d3c779f84}{player\+Specs}
 \item 
 sf\+::\+View \hyperlink{class_game_state_play_a9513cfeac2178d83e23ba6f9291fba8c}{\+\_\+game\+View}
 \begin{DoxyCompactList}\small\item\em Camera view for the gameplay displayed to the window. \end{DoxyCompactList}\item 
 sf\+::\+View \hyperlink{class_game_state_play_affee804e287fd1968fe8c5b0a303b05d}{\+\_\+gui\+View}
-\begin{DoxyCompactList}\small\item\em Camera view for the H\+U\+D displayed to the window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Camera view for the H\+U\+D displayed to the window. \end{DoxyCompactList}\item 
+\hyperlink{class_critter_wave}{Critter\+Wave} $\ast$ \hyperlink{class_game_state_play_a64cd6841a6f7139ff7e3747e4159654c}{current\+\_\+wave}
+\item 
+std\+::vector$<$ \hyperlink{class_critter_wave}{Critter\+Wave} $\ast$ $>$ \hyperlink{class_game_state_play_a97b5c39127688b4c5ddb147572f77290}{wave\+\_\+levels}
+\item 
+std\+::vector$<$ \hyperlink{class_waypoint}{Waypoint} $>$ \hyperlink{class_game_state_play_a14914e609fd8b83324b3fc47343ec19a}{current\+\_\+waypoints}
+\end{DoxyCompactItemize}
 \subsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_game_object_manager}{Game\+Object\+Manager} \hyperlink{class_game_state_play_a3f05ff560a8dbeb5a1922e23c6bbff72}{\+\_\+game\+\_\+object\+\_\+manager}
+\item 
+static \hyperlink{class_tower_manager}{Tower\+Manager} \& \hyperlink{class_game_state_play_a951af277d5a8a7fca23fe3240be847c9}{tower\+\_\+manager} = \hyperlink{class_tower_manager_ad23044e56ca84962064cfcb9bee3adaf}{Tower\+Manager\+::get\+Instance}()
 \end{DoxyCompactItemize}
-\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
@@ -78,7 +169,116 @@ Constructor that takes in a pointer to the \hyperlink{class_game}{Game} that cre
 \end{DoxyParams}
 The constructor sets the view to the size of the window and centers the view on the center of the window. 
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a705c09eac3d2b27757e5b4cc048b22d5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_play_ae4f10dc83f16da01f425d09f9fbb4ef6}{\index{Game\+State\+Play@{Game\+State\+Play}!````~Game\+State\+Play@{$\sim$\+Game\+State\+Play}}
+\index{````~Game\+State\+Play@{$\sim$\+Game\+State\+Play}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{$\sim$\+Game\+State\+Play}]{\setlength{\rightskip}{0pt plus 5cm}Game\+State\+Play\+::$\sim$\+Game\+State\+Play (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_game_state_play_ae4f10dc83f16da01f425d09f9fbb4ef6}
+
+
 \subsection{Member Function Documentation}
+\hypertarget{class_game_state_play_aee1a80f02dd69d8f06c041020eb4447e}{\index{Game\+State\+Play@{Game\+State\+Play}!add\+Waypoints@{add\+Waypoints}}
+\index{add\+Waypoints@{add\+Waypoints}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{add\+Waypoints}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Waypoint} $>$ Game\+State\+Play\+::add\+Waypoints (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ sf\+::\+Vector2f $>$}]{path\+\_\+points}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_aee1a80f02dd69d8f06c041020eb4447e}
+
+
+Add waypoints. 
+
+This function initialize waypoints while setting the next waypoints.
+
+\begin{DoxyReturn}{Returns}
+Vector containing \hyperlink{class_waypoint}{Waypoint} pointers. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_aee1a80f02dd69d8f06c041020eb4447e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_play_a79237473ceeb26b94f641d0bf66c1ec0}{\index{Game\+State\+Play@{Game\+State\+Play}!button\+Command\+Library@{button\+Command\+Library}}
+\index{button\+Command\+Library@{button\+Command\+Library}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{button\+Command\+Library}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Play\+::button\+Command\+Library (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_a79237473ceeb26b94f641d0bf66c1ec0}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a79237473ceeb26b94f641d0bf66c1ec0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a79237473ceeb26b94f641d0bf66c1ec0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_play_ac82134049ed6dd0aaa929e200f7185d5}{\index{Game\+State\+Play@{Game\+State\+Play}!check\+If\+At\+End\+Tile@{check\+If\+At\+End\+Tile}}
+\index{check\+If\+At\+End\+Tile@{check\+If\+At\+End\+Tile}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{check\+If\+At\+End\+Tile}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+State\+Play\+::check\+If\+At\+End\+Tile (
+\begin{DoxyParamCaption}
+\item[{{\bf Critter} $\ast$}]{critter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_ac82134049ed6dd0aaa929e200f7185d5}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_game_state_play_ac82134049ed6dd0aaa929e200f7185d5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_ac82134049ed6dd0aaa929e200f7185d5_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_game_state_play_a63a3ba0c891afd8ec126806bab4f315a}{\index{Game\+State\+Play@{Game\+State\+Play}!draw@{draw}}
 \index{draw@{draw}!Game\+State\+Play@{Game\+State\+Play}}
 \subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Play\+::draw (
@@ -102,6 +302,221 @@ This function sets the view to be drawn to the window, and draws everything rela
 
 Implements \hyperlink{class_game_state_a55a6a68aabdf7054ea0e6ddbf24902df}{Game\+State}.
 
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a63a3ba0c891afd8ec126806bab4f315a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a63a3ba0c891afd8ec126806bab4f315a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_play_a28fee46c0b9d0248ed319976be94494a}{\index{Game\+State\+Play@{Game\+State\+Play}!draw\+Waypoints@{draw\+Waypoints}}
+\index{draw\+Waypoints@{draw\+Waypoints}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{draw\+Waypoints}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Play\+::draw\+Waypoints (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Waypoint} $>$}]{waypoints, }
+\item[{sf\+::\+Render\+Window \&}]{game\+\_\+window}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_a28fee46c0b9d0248ed319976be94494a}
+
+
+Draw all waypoints. 
+
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a28fee46c0b9d0248ed319976be94494a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_play_a36f7d1ee2a500290e224a50f679ba3ff}{\index{Game\+State\+Play@{Game\+State\+Play}!get\+Current\+Critter\+Wave@{get\+Current\+Critter\+Wave}}
+\index{get\+Current\+Critter\+Wave@{get\+Current\+Critter\+Wave}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{get\+Current\+Critter\+Wave}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Critter\+Wave} $\ast$ Game\+State\+Play\+::get\+Current\+Critter\+Wave (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_state_play_a36f7d1ee2a500290e224a50f679ba3ff}
+\hypertarget{class_game_state_play_a6ebd21112217871afe2e0160f6eb0753}{\index{Game\+State\+Play@{Game\+State\+Play}!get\+Starting\+Waypoint@{get\+Starting\+Waypoint}}
+\index{get\+Starting\+Waypoint@{get\+Starting\+Waypoint}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{get\+Starting\+Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Waypoint} $\ast$ Game\+State\+Play\+::get\+Starting\+Waypoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_state_play_a6ebd21112217871afe2e0160f6eb0753}
+
+
+Get starting waypoint. 
+
+\begin{DoxyReturn}{Returns}
+Vector containing \hyperlink{class_waypoint}{Waypoint} pointers. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a6ebd21112217871afe2e0160f6eb0753_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_play_aae84ae33a68caa8bf05a4a2a49a2b41d}{\index{Game\+State\+Play@{Game\+State\+Play}!get\+Waypoints\+From\+Map\+Path@{get\+Waypoints\+From\+Map\+Path}}
+\index{get\+Waypoints\+From\+Map\+Path@{get\+Waypoints\+From\+Map\+Path}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{get\+Waypoints\+From\+Map\+Path}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ sf\+::\+Vector2f $>$ Game\+State\+Play\+::get\+Waypoints\+From\+Map\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_aae84ae33a68caa8bf05a4a2a49a2b41d}
+
+
+Create waypoint vector from the map's path. 
+
+\begin{DoxyReturn}{Returns}
+Vector containing positions. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_aae84ae33a68caa8bf05a4a2a49a2b41d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_aae84ae33a68caa8bf05a4a2a49a2b41d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_play_a2278751d53b50beb97c809db26f1b9b6}{\index{Game\+State\+Play@{Game\+State\+Play}!handle\+Critter\+Removal\+From\+Wave@{handle\+Critter\+Removal\+From\+Wave}}
+\index{handle\+Critter\+Removal\+From\+Wave@{handle\+Critter\+Removal\+From\+Wave}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{handle\+Critter\+Removal\+From\+Wave}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Play\+::handle\+Critter\+Removal\+From\+Wave (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_a2278751d53b50beb97c809db26f1b9b6}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a2278751d53b50beb97c809db26f1b9b6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a2278751d53b50beb97c809db26f1b9b6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_play_a2eda31c4d98a8440c6eba38604aa2a79}{\index{Game\+State\+Play@{Game\+State\+Play}!handle\+Critter\+Wave\+Level\+Switching@{handle\+Critter\+Wave\+Level\+Switching}}
+\index{handle\+Critter\+Wave\+Level\+Switching@{handle\+Critter\+Wave\+Level\+Switching}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{handle\+Critter\+Wave\+Level\+Switching}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Play\+::handle\+Critter\+Wave\+Level\+Switching (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_a2eda31c4d98a8440c6eba38604aa2a79}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a2eda31c4d98a8440c6eba38604aa2a79_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a2eda31c4d98a8440c6eba38604aa2a79_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_play_aec5f72cea0e80d1d83b9cbe155a65ce9}{\index{Game\+State\+Play@{Game\+State\+Play}!handle\+Game\+Over@{handle\+Game\+Over}}
+\index{handle\+Game\+Over@{handle\+Game\+Over}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{handle\+Game\+Over}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Play\+::handle\+Game\+Over (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_state_play_aec5f72cea0e80d1d83b9cbe155a65ce9}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_aec5f72cea0e80d1d83b9cbe155a65ce9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_aec5f72cea0e80d1d83b9cbe155a65ce9_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_game_state_play_ae9acc781e1fdbc931784ba3892c469ce}{\index{Game\+State\+Play@{Game\+State\+Play}!handle\+Input@{handle\+Input}}
 \index{handle\+Input@{handle\+Input}!Game\+State\+Play@{Game\+State\+Play}}
 \subsubsection[{handle\+Input}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Play\+::handle\+Input (
@@ -119,6 +534,229 @@ Void.
 Close the window 
 
 Implements \hyperlink{class_game_state_a970b55edd5a1da31ea0f7113e2c1f85a}{Game\+State}.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_ae9acc781e1fdbc931784ba3892c469ce_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_play_a3a6947bfe8be3d1974094acb8362eda9}{\index{Game\+State\+Play@{Game\+State\+Play}!initialize\+Button\+Map@{initialize\+Button\+Map}}
+\index{initialize\+Button\+Map@{initialize\+Button\+Map}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{initialize\+Button\+Map}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Play\+::initialize\+Button\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_a3a6947bfe8be3d1974094acb8362eda9}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a3a6947bfe8be3d1974094acb8362eda9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a3a6947bfe8be3d1974094acb8362eda9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_play_ae812a7447027abe5fcc2f79bf3e35ad8}{\index{Game\+State\+Play@{Game\+State\+Play}!move\+Activated\+Critters@{move\+Activated\+Critters}}
+\index{move\+Activated\+Critters@{move\+Activated\+Critters}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{move\+Activated\+Critters}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Play\+::move\+Activated\+Critters (
+\begin{DoxyParamCaption}
+\item[{const float}]{delta\+\_\+time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_ae812a7447027abe5fcc2f79bf3e35ad8}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_ae812a7447027abe5fcc2f79bf3e35ad8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_ae812a7447027abe5fcc2f79bf3e35ad8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_play_a0d6ff2e65992c5fb29f180c6b1eb9435}{\index{Game\+State\+Play@{Game\+State\+Play}!move\+Critter@{move\+Critter}}
+\index{move\+Critter@{move\+Critter}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{move\+Critter}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Play\+::move\+Critter (
+\begin{DoxyParamCaption}
+\item[{{\bf Critter} $\ast$}]{critter, }
+\item[{const float}]{delta\+\_\+time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_a0d6ff2e65992c5fb29f180c6b1eb9435}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a0d6ff2e65992c5fb29f180c6b1eb9435_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a0d6ff2e65992c5fb29f180c6b1eb9435_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_play_a5076f9d4d81b1b9dc4e71c627f40a9d2}{\index{Game\+State\+Play@{Game\+State\+Play}!register\+Observer@{register\+Observer}}
+\index{register\+Observer@{register\+Observer}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{register\+Observer}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Play\+::register\+Observer (
+\begin{DoxyParamCaption}
+\item[{{\bf Tower} $\ast$}]{tower}
+\end{DoxyParamCaption}
+)}}\label{class_game_state_play_a5076f9d4d81b1b9dc4e71c627f40a9d2}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a5076f9d4d81b1b9dc4e71c627f40a9d2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a5076f9d4d81b1b9dc4e71c627f40a9d2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_play_ab41594c10b04429a3126d4a8085de82d}{\index{Game\+State\+Play@{Game\+State\+Play}!run\+Threads@{run\+Threads}}
+\index{run\+Threads@{run\+Threads}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{run\+Threads}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Play\+::run\+Threads (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_state_play_ab41594c10b04429a3126d4a8085de82d}
+
+
+Implements \hyperlink{class_game_state_a98cd49f1d8fd9fc3e79d607a238ba518}{Game\+State}.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_ab41594c10b04429a3126d4a8085de82d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_play_a6047cbdce7daa2092d95bf786db5267a}{\index{Game\+State\+Play@{Game\+State\+Play}!set\+Critter\+Wave\+Levels@{set\+Critter\+Wave\+Levels}}
+\index{set\+Critter\+Wave\+Levels@{set\+Critter\+Wave\+Levels}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{set\+Critter\+Wave\+Levels}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Play\+::set\+Critter\+Wave\+Levels (
+\begin{DoxyParamCaption}
+\item[{{\bf Waypoint} $\ast$}]{starting\+\_\+waypoint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_a6047cbdce7daa2092d95bf786db5267a}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a6047cbdce7daa2092d95bf786db5267a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a6047cbdce7daa2092d95bf786db5267a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_state_play_ab33de76aa28534d14aa1d79bed43aa17}{\index{Game\+State\+Play@{Game\+State\+Play}!tower\+Command\+Library@{tower\+Command\+Library}}
+\index{tower\+Command\+Library@{tower\+Command\+Library}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{tower\+Command\+Library}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+Play\+::tower\+Command\+Library (
+\begin{DoxyParamCaption}
+\item[{const int}]{tile\+X, }
+\item[{const int}]{tile\+Y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_ab33de76aa28534d14aa1d79bed43aa17}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_ab33de76aa28534d14aa1d79bed43aa17_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_ab33de76aa28534d14aa1d79bed43aa17_icgraph}
+\end{center}
+\end{figure}
+
 
 \hypertarget{class_game_state_play_a2faf041a447ddf86726658455560abb8}{\index{Game\+State\+Play@{Game\+State\+Play}!update@{update}}
 \index{update@{update}!Game\+State\+Play@{Game\+State\+Play}}
@@ -145,6 +783,18 @@ Implements \hyperlink{class_game_state_ad331d02d3989271b8cbc88fcb1448959}{Game\+
 
 
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_play_a2faf041a447ddf86726658455560abb8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_game_state_play_a3f05ff560a8dbeb5a1922e23c6bbff72}{\index{Game\+State\+Play@{Game\+State\+Play}!\+\_\+game\+\_\+object\+\_\+manager@{\+\_\+game\+\_\+object\+\_\+manager}}
 \index{\+\_\+game\+\_\+object\+\_\+manager@{\+\_\+game\+\_\+object\+\_\+manager}!Game\+State\+Play@{Game\+State\+Play}}
@@ -163,6 +813,81 @@ Camera view for the gameplay displayed to the window.
 
 Camera view for the H\+U\+D displayed to the window. 
 
+\hypertarget{class_game_state_play_ace195ef46750d243d3bbaf2abaaf6e2e}{\index{Game\+State\+Play@{Game\+State\+Play}!blacky@{blacky}}
+\index{blacky@{blacky}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{blacky}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Black\+Cat}$\ast$ Game\+State\+Play\+::blacky}}\label{class_game_state_play_ace195ef46750d243d3bbaf2abaaf6e2e}
+\hypertarget{class_game_state_play_ab0755d9a7eb5708a840d82bbdc7eb9f2}{\index{Game\+State\+Play@{Game\+State\+Play}!button\+Map@{button\+Map}}
+\index{button\+Map@{button\+Map}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{button\+Map}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$string,{\bf Game\+Object}$>$ Game\+State\+Play\+::button\+Map\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_ab0755d9a7eb5708a840d82bbdc7eb9f2}
+\hypertarget{class_game_state_play_a64cd6841a6f7139ff7e3747e4159654c}{\index{Game\+State\+Play@{Game\+State\+Play}!current\+\_\+wave@{current\+\_\+wave}}
+\index{current\+\_\+wave@{current\+\_\+wave}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{current\+\_\+wave}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Critter\+Wave}$\ast$ Game\+State\+Play\+::current\+\_\+wave\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_a64cd6841a6f7139ff7e3747e4159654c}
+\hypertarget{class_game_state_play_a14914e609fd8b83324b3fc47343ec19a}{\index{Game\+State\+Play@{Game\+State\+Play}!current\+\_\+waypoints@{current\+\_\+waypoints}}
+\index{current\+\_\+waypoints@{current\+\_\+waypoints}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{current\+\_\+waypoints}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Waypoint}$>$ Game\+State\+Play\+::current\+\_\+waypoints\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_a14914e609fd8b83324b3fc47343ec19a}
+\hypertarget{class_game_state_play_aa0948c192d3ef1adb6eaaeade8521733}{\index{Game\+State\+Play@{Game\+State\+Play}!delay\+\_\+count@{delay\+\_\+count}}
+\index{delay\+\_\+count@{delay\+\_\+count}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{delay\+\_\+count}]{\setlength{\rightskip}{0pt plus 5cm}int Game\+State\+Play\+::delay\+\_\+count}}\label{class_game_state_play_aa0948c192d3ef1adb6eaaeade8521733}
+\hypertarget{class_game_state_play_aac5b1d9de4ab0ad2445d97a588cb3168}{\index{Game\+State\+Play@{Game\+State\+Play}!draw\+Thread@{draw\+Thread}}
+\index{draw\+Thread@{draw\+Thread}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{draw\+Thread}]{\setlength{\rightskip}{0pt plus 5cm}std\+::thread Game\+State\+Play\+::draw\+Thread}}\label{class_game_state_play_aac5b1d9de4ab0ad2445d97a588cb3168}
+\hypertarget{class_game_state_play_a0e613be489b2c61857676303a15ce3cc}{\index{Game\+State\+Play@{Game\+State\+Play}!end\+Of\+Waves@{end\+Of\+Waves}}
+\index{end\+Of\+Waves@{end\+Of\+Waves}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{end\+Of\+Waves}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+State\+Play\+::end\+Of\+Waves}}\label{class_game_state_play_a0e613be489b2c61857676303a15ce3cc}
+\hypertarget{class_game_state_play_a59cc893637827eb0d9ee902262548980}{\index{Game\+State\+Play@{Game\+State\+Play}!first\+Start@{first\+Start}}
+\index{first\+Start@{first\+Start}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{first\+Start}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+State\+Play\+::first\+Start}}\label{class_game_state_play_a59cc893637827eb0d9ee902262548980}
+\hypertarget{class_game_state_play_a333494e6c4a8ae4a285635776c3b486e}{\index{Game\+State\+Play@{Game\+State\+Play}!font@{font}}
+\index{font@{font}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{font}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Font Game\+State\+Play\+::font\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_a333494e6c4a8ae4a285635776c3b486e}
+\hypertarget{class_game_state_play_ad6c5af538edc9f5b2fd3ba0c0f95e89d}{\index{Game\+State\+Play@{Game\+State\+Play}!last\+\_\+activated\+\_\+critter@{last\+\_\+activated\+\_\+critter}}
+\index{last\+\_\+activated\+\_\+critter@{last\+\_\+activated\+\_\+critter}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{last\+\_\+activated\+\_\+critter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Critter}$\ast$ Game\+State\+Play\+::last\+\_\+activated\+\_\+critter}}\label{class_game_state_play_ad6c5af538edc9f5b2fd3ba0c0f95e89d}
+\hypertarget{class_game_state_play_aef4648e9978d2b031365686fa5221038}{\index{Game\+State\+Play@{Game\+State\+Play}!local\+Position@{local\+Position}}
+\index{local\+Position@{local\+Position}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{local\+Position}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2i Game\+State\+Play\+::local\+Position\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_aef4648e9978d2b031365686fa5221038}
+\hypertarget{class_game_state_play_a1114fc8f3e15f5f46ab4361dad37ad0b}{\index{Game\+State\+Play@{Game\+State\+Play}!map\+Backdrop@{map\+Backdrop}}
+\index{map\+Backdrop@{map\+Backdrop}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{map\+Backdrop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Object} Game\+State\+Play\+::map\+Backdrop\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_a1114fc8f3e15f5f46ab4361dad37ad0b}
+\hypertarget{class_game_state_play_a90934640484bd6417007e112d8034a50}{\index{Game\+State\+Play@{Game\+State\+Play}!mew@{mew}}
+\index{mew@{mew}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{mew}]{\setlength{\rightskip}{0pt plus 5cm}{\bf White\+Cat}$\ast$ Game\+State\+Play\+::mew}}\label{class_game_state_play_a90934640484bd6417007e112d8034a50}
+\hypertarget{class_game_state_play_afee193abc64a41d61a08db7d6d5b507d}{\index{Game\+State\+Play@{Game\+State\+Play}!next\+Wave\+Specs@{next\+Wave\+Specs}}
+\index{next\+Wave\+Specs@{next\+Wave\+Specs}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{next\+Wave\+Specs}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Text Game\+State\+Play\+::next\+Wave\+Specs\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_afee193abc64a41d61a08db7d6d5b507d}
+\hypertarget{class_game_state_play_a5e7f3929ab226b4ad0fb627d3c779f84}{\index{Game\+State\+Play@{Game\+State\+Play}!player\+Specs@{player\+Specs}}
+\index{player\+Specs@{player\+Specs}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{player\+Specs}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Text Game\+State\+Play\+::player\+Specs\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_a5e7f3929ab226b4ad0fb627d3c779f84}
+\hypertarget{class_game_state_play_a4ac9c1b314dfbfe0082728eacfc401fc}{\index{Game\+State\+Play@{Game\+State\+Play}!range@{range}}
+\index{range@{range}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{range}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Circle\+Shape Game\+State\+Play\+::range\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_a4ac9c1b314dfbfe0082728eacfc401fc}
+\hypertarget{class_game_state_play_a6f5a18b6d0597c0f6c4d26b4df873ee6}{\index{Game\+State\+Play@{Game\+State\+Play}!return\+To\+Menu@{return\+To\+Menu}}
+\index{return\+To\+Menu@{return\+To\+Menu}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{return\+To\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+State\+Play\+::return\+To\+Menu\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_a6f5a18b6d0597c0f6c4d26b4df873ee6}
+\hypertarget{class_game_state_play_a406124f1525e8555fb264c743298d7b9}{\index{Game\+State\+Play@{Game\+State\+Play}!show\+\_\+waypoints@{show\+\_\+waypoints}}
+\index{show\+\_\+waypoints@{show\+\_\+waypoints}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{show\+\_\+waypoints}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+State\+Play\+::show\+\_\+waypoints}}\label{class_game_state_play_a406124f1525e8555fb264c743298d7b9}
+\hypertarget{class_game_state_play_a6c82bd77433f30b20a88e19ab37a7f96}{\index{Game\+State\+Play@{Game\+State\+Play}!tile\+X@{tile\+X}}
+\index{tile\+X@{tile\+X}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{tile\+X}]{\setlength{\rightskip}{0pt plus 5cm}int Game\+State\+Play\+::tile\+X\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_a6c82bd77433f30b20a88e19ab37a7f96}
+\hypertarget{class_game_state_play_ae34c6aa315832bd457df59720345534e}{\index{Game\+State\+Play@{Game\+State\+Play}!tile\+Y@{tile\+Y}}
+\index{tile\+Y@{tile\+Y}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{tile\+Y}]{\setlength{\rightskip}{0pt plus 5cm}int Game\+State\+Play\+::tile\+Y\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_ae34c6aa315832bd457df59720345534e}
+\hypertarget{class_game_state_play_a951af277d5a8a7fca23fe3240be847c9}{\index{Game\+State\+Play@{Game\+State\+Play}!tower\+\_\+manager@{tower\+\_\+manager}}
+\index{tower\+\_\+manager@{tower\+\_\+manager}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{tower\+\_\+manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower\+Manager} \& Game\+State\+Play\+::tower\+\_\+manager = {\bf Tower\+Manager\+::get\+Instance}()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_game_state_play_a951af277d5a8a7fca23fe3240be847c9}
+\hypertarget{class_game_state_play_ac22880bd1c34ebbe5d45182caaaf2523}{\index{Game\+State\+Play@{Game\+State\+Play}!tower\+Selector@{tower\+Selector}}
+\index{tower\+Selector@{tower\+Selector}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{tower\+Selector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower\+::\+Tower\+Type} Game\+State\+Play\+::tower\+Selector\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_ac22880bd1c34ebbe5d45182caaaf2523}
+\hypertarget{class_game_state_play_add98cf58c2cc6af809cade72be6c6c0a}{\index{Game\+State\+Play@{Game\+State\+Play}!tower\+Specs@{tower\+Specs}}
+\index{tower\+Specs@{tower\+Specs}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{tower\+Specs}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Text Game\+State\+Play\+::tower\+Specs\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_add98cf58c2cc6af809cade72be6c6c0a}
+\hypertarget{class_game_state_play_a97b5c39127688b4c5ddb147572f77290}{\index{Game\+State\+Play@{Game\+State\+Play}!wave\+\_\+levels@{wave\+\_\+levels}}
+\index{wave\+\_\+levels@{wave\+\_\+levels}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{wave\+\_\+levels}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Critter\+Wave}$\ast$$>$ Game\+State\+Play\+::wave\+\_\+levels\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_a97b5c39127688b4c5ddb147572f77290}
+\hypertarget{class_game_state_play_a61669dc94331d0302f3a0f5792304049}{\index{Game\+State\+Play@{Game\+State\+Play}!wave\+Specs@{wave\+Specs}}
+\index{wave\+Specs@{wave\+Specs}!Game\+State\+Play@{Game\+State\+Play}}
+\subsubsection[{wave\+Specs}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Text Game\+State\+Play\+::wave\+Specs\hspace{0.3cm}{\ttfamily [private]}}}\label{class_game_state_play_a61669dc94331d0302f3a0f5792304049}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

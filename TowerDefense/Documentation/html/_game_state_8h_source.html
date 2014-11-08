@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -98,18 +99,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_game_state.html#a55a6a68aabdf7054ea0e6ddbf24902df">draw</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> delta_time) = 0;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_game_state.html#ad331d02d3989271b8cbc88fcb1448959">update</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> delta_time) = 0;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_game_state.html#a970b55edd5a1da31ea0f7113e2c1f85a">handleInput</a>() = 0;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_game_state.html#a98cd49f1d8fd9fc3e79d607a238ba518">runThreads</a>() = 0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
 <div class="ttc" id="class_game_state_html_a355a79415b9ef63c2aec1448a99f6e71"><div class="ttname"><a href="class_game_state.html#a355a79415b9ef63c2aec1448a99f6e71">GameState::game</a></div><div class="ttdeci">Game * game</div><div class="ttdoc">Pointer to Game instance that handles the changing. of the states and store the info in every game st...</div><div class="ttdef"><b>Definition:</b> GameState.h:21</div></div>
 <div class="ttc" id="class_game_state_html_ad331d02d3989271b8cbc88fcb1448959"><div class="ttname"><a href="class_game_state.html#ad331d02d3989271b8cbc88fcb1448959">GameState::update</a></div><div class="ttdeci">virtual void update(const float delta_time)=0</div></div>
+<div class="ttc" id="class_game_state_html_a98cd49f1d8fd9fc3e79d607a238ba518"><div class="ttname"><a href="class_game_state.html#a98cd49f1d8fd9fc3e79d607a238ba518">GameState::runThreads</a></div><div class="ttdeci">virtual void runThreads()=0</div></div>
 <div class="ttc" id="class_game_state_html"><div class="ttname"><a href="class_game_state.html">GameState</a></div><div class="ttdoc">GameState virtual base class. GameState is an interface for states within the game. </div><div class="ttdef"><b>Definition:</b> GameState.h:16</div></div>
 <div class="ttc" id="class_game_state_html_a970b55edd5a1da31ea0f7113e2c1f85a"><div class="ttname"><a href="class_game_state.html#a970b55edd5a1da31ea0f7113e2c1f85a">GameState::handleInput</a></div><div class="ttdeci">virtual void handleInput()=0</div></div>
-<div class="ttc" id="class_game_html"><div class="ttname"><a href="class_game.html">Game</a></div><div class="ttdoc">Creates a Game. Game is a GameState manager that handles the changing of the states and info storage ...</div><div class="ttdef"><b>Definition:</b> Game.h:21</div></div>
+<div class="ttc" id="class_game_html"><div class="ttname"><a href="class_game.html">Game</a></div><div class="ttdoc">Creates a Game. Game is a GameState manager that handles the changing of the states and info storage ...</div><div class="ttdef"><b>Definition:</b> Game.h:23</div></div>
 <div class="ttc" id="class_game_state_html_a55a6a68aabdf7054ea0e6ddbf24902df"><div class="ttname"><a href="class_game_state.html#a55a6a68aabdf7054ea0e6ddbf24902df">GameState::draw</a></div><div class="ttdeci">virtual void draw(const float delta_time)=0</div></div>
 <div class="ttc" id="_game_8h_html"><div class="ttname"><a href="_game_8h.html">Game.h</a></div><div class="ttdoc">File containing the Game class. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 21 2014 04:52:43 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 7 2014 19:14:32 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

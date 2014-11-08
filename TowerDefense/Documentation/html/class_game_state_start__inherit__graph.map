@@ -1,3 +1,3 @@
 <map id="GameStateStart" name="GameStateStart">
-<area shape="rect" id="node2" href="$class_game_state.html" title="GameState virtual base class. GameState is an interface for states within the game. " alt="" coords="37,5,145,112"/>
+<area shape="rect" id="node2" href="$class_game_state.html" title="GameState virtual base class. GameState is an interface for states within the game. " alt="" coords="37,5,145,127"/>
 </map>

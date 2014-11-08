@@ -1,8 +1,15 @@
 <map id="jamms/TowerDefense/TowerDefense/include/gameStates/GameStatePlay.h" name="jamms/TowerDefense/TowerDefense/include/gameStates/GameStatePlay.h">
-<area shape="rect" id="node2" href="$_game_state_main_menu_8h.html" title="File containing the GameStateMainMenu class. " alt="" coords="211,109,448,165"/>
-<area shape="rect" id="node7" href="$_game_state_play_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStatePlay.cpp" alt="" coords="472,109,675,165"/>
-<area shape="rect" id="node3" href="$_game_state_start_8h.html" title="File containing the GameStateStart class. " alt="" coords="113,213,319,269"/>
-<area shape="rect" id="node6" href="$_game_state_main_menu_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateMainMenu.cpp" alt="" coords="343,213,545,269"/>
-<area shape="rect" id="node4" href="$_game_state_start_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateStart.cpp" alt="" coords="5,317,208,373"/>
-<area shape="rect" id="node5" href="$_main_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/Main.cpp" alt="" coords="232,325,419,366"/>
+<area shape="rect" id="node2" href="$_game_state_map_editor_8h.html" title="File containing the GameStateMapEditor class. " alt="" coords="464,109,700,165"/>
+<area shape="rect" id="node8" href="$_main_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/Main.cpp" alt="" coords="603,429,790,470"/>
+<area shape="rect" id="node13" href="$_game_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/Game.cpp" alt="" coords="827,117,1020,158"/>
+<area shape="rect" id="node14" href="$_game_state_play_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStatePlay.cpp" alt="" coords="1045,109,1247,165"/>
+<area shape="rect" id="node3" href="$_game_state_main_menu_8h.html" title="File containing the GameStateMainMenu class. " alt="" coords="463,213,701,269"/>
+<area shape="rect" id="node12" href="$_game_state_map_editor_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateMapEditor.cpp" alt="" coords="237,213,439,269"/>
+<area shape="rect" id="node4" href="$_game_state_game_over_8h.html" title="File containing the GameStateGameOver class. " alt="" coords="5,317,244,373"/>
+<area shape="rect" id="node6" href="$_game_state_start_8h.html" title="File containing the GameStateStart class. " alt="" coords="495,317,701,373"/>
+<area shape="rect" id="node9" href="$_game_state_win_8h.html" title="File containing the GameStateWin class. " alt="" coords="775,317,975,373"/>
+<area shape="rect" id="node11" href="$_game_state_main_menu_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateMainMenu.cpp" alt="" coords="269,317,471,373"/>
+<area shape="rect" id="node5" href="$_game_state_game_over_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateGameOver.cpp" alt="" coords="23,421,226,477"/>
+<area shape="rect" id="node7" href="$_game_state_start_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateStart.cpp" alt="" coords="377,421,579,477"/>
+<area shape="rect" id="node10" href="$_game_state_game_win_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateGameWin.cpp" alt="" coords="814,421,1017,477"/>
 </map>

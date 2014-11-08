@@ -27,7 +27,7 @@ Collaboration diagram for Game\+State\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=166pt]{class_game_state__coll__graph}
+\includegraphics[width=350pt]{class_game_state__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -38,6 +38,8 @@ virtual void \hyperlink{class_game_state_a55a6a68aabdf7054ea0e6ddbf24902df}{draw
 virtual void \hyperlink{class_game_state_ad331d02d3989271b8cbc88fcb1448959}{update} (const float delta\+\_\+time)=0
 \item 
 virtual void \hyperlink{class_game_state_a970b55edd5a1da31ea0f7113e2c1f85a}{handle\+Input} ()=0
+\item 
+virtual void \hyperlink{class_game_state_a98cd49f1d8fd9fc3e79d607a238ba518}{run\+Threads} ()=0
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -59,12 +61,11 @@ virtual void \hyperlink{class_game_state_a970b55edd5a1da31ea0f7113e2c1f85a}{hand
 )\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_game_state_a55a6a68aabdf7054ea0e6ddbf24902df}
 
 
-Implemented in \hyperlink{class_game_state_main_menu_ad34efc1ade7193ce765d00ac60f019ed}{Game\+State\+Main\+Menu}, \hyperlink{class_game_state_start_a0969e5227b6f2eaabd53ee69f32a37e7}{Game\+State\+Start}, and \hyperlink{class_game_state_play_a63a3ba0c891afd8ec126806bab4f315a}{Game\+State\+Play}.
+Implemented in \hyperlink{class_game_state_play_a63a3ba0c891afd8ec126806bab4f315a}{Game\+State\+Play}, \hyperlink{class_game_state_map_editor_a37c87643309459ac32d0b5f608bc93b0}{Game\+State\+Map\+Editor}, \hyperlink{class_game_state_main_menu_ad34efc1ade7193ce765d00ac60f019ed}{Game\+State\+Main\+Menu}, \hyperlink{class_game_state_game_over_a1e88ff4cbd7d608858604efdb16e2adc}{Game\+State\+Game\+Over}, \hyperlink{class_game_state_start_a0969e5227b6f2eaabd53ee69f32a37e7}{Game\+State\+Start}, and \hyperlink{class_game_state_win_aa5d3bc751d492439016f8d42fce2110a}{Game\+State\+Win}.
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -82,12 +83,11 @@ Here is the caller graph for this function\+:
 )\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_game_state_a970b55edd5a1da31ea0f7113e2c1f85a}
 
 
-Implemented in \hyperlink{class_game_state_main_menu_a91ca3c60e107d135ab67c5f9e05e8aa6}{Game\+State\+Main\+Menu}, \hyperlink{class_game_state_start_afa9da08e1a51b4914ee436e7f1c4f6e6}{Game\+State\+Start}, and \hyperlink{class_game_state_play_ae9acc781e1fdbc931784ba3892c469ce}{Game\+State\+Play}.
+Implemented in \hyperlink{class_game_state_play_ae9acc781e1fdbc931784ba3892c469ce}{Game\+State\+Play}, \hyperlink{class_game_state_map_editor_ad8bd50d8a9823c26a57d315a6b303b88}{Game\+State\+Map\+Editor}, \hyperlink{class_game_state_main_menu_a91ca3c60e107d135ab67c5f9e05e8aa6}{Game\+State\+Main\+Menu}, \hyperlink{class_game_state_game_over_a10777cb963bba4f1c80edd6112888585}{Game\+State\+Game\+Over}, \hyperlink{class_game_state_start_afa9da08e1a51b4914ee436e7f1c4f6e6}{Game\+State\+Start}, and \hyperlink{class_game_state_win_a6a40673e81af38639e4191c0ec2f4048}{Game\+State\+Win}.
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -95,6 +95,17 @@ Here is the caller graph for this function\+:
 \end{center}
 \end{figure}
 
+
+\hypertarget{class_game_state_a98cd49f1d8fd9fc3e79d607a238ba518}{\index{Game\+State@{Game\+State}!run\+Threads@{run\+Threads}}
+\index{run\+Threads@{run\+Threads}!Game\+State@{Game\+State}}
+\subsubsection[{run\+Threads}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Game\+State\+::run\+Threads (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_game_state_a98cd49f1d8fd9fc3e79d607a238ba518}
+
+
+Implemented in \hyperlink{class_game_state_map_editor_a82ca3024c962b254ebdedcaa6ce5c1a8}{Game\+State\+Map\+Editor}, \hyperlink{class_game_state_main_menu_a2ba60c5da8bcb0c20988165a69f238a9}{Game\+State\+Main\+Menu}, \hyperlink{class_game_state_game_over_a7a9b37edd4132ee9b500a05aecfe57fb}{Game\+State\+Game\+Over}, \hyperlink{class_game_state_start_ac9514695cbd6366c721e9057aca970fe}{Game\+State\+Start}, \hyperlink{class_game_state_win_a83539ca4b809a5635d30500fa5813d1e}{Game\+State\+Win}, and \hyperlink{class_game_state_play_ab41594c10b04429a3126d4a8085de82d}{Game\+State\+Play}.
 
 \hypertarget{class_game_state_ad331d02d3989271b8cbc88fcb1448959}{\index{Game\+State@{Game\+State}!update@{update}}
 \index{update@{update}!Game\+State@{Game\+State}}
@@ -105,12 +116,11 @@ Here is the caller graph for this function\+:
 )\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_game_state_ad331d02d3989271b8cbc88fcb1448959}
 
 
-Implemented in \hyperlink{class_game_state_main_menu_a15b2abc99f50183569112f7fe1499951}{Game\+State\+Main\+Menu}, \hyperlink{class_game_state_start_afbfe6831f8f9a14456840a98c7b5ef9c}{Game\+State\+Start}, and \hyperlink{class_game_state_play_a2faf041a447ddf86726658455560abb8}{Game\+State\+Play}.
+Implemented in \hyperlink{class_game_state_play_a2faf041a447ddf86726658455560abb8}{Game\+State\+Play}, \hyperlink{class_game_state_map_editor_afc6fb92c082c138e86f295b99aad2ddf}{Game\+State\+Map\+Editor}, \hyperlink{class_game_state_main_menu_a796234ad5719f191b1e44affaa48026f}{Game\+State\+Main\+Menu}, \hyperlink{class_game_state_game_over_a11d874c60455411c70a9ebaab2db6a17}{Game\+State\+Game\+Over}, \hyperlink{class_game_state_start_a6a57f1c6f34ea789cb9ebf8935350627}{Game\+State\+Start}, and \hyperlink{class_game_state_win_ae8f665d71817f632afc55a665573ca8e}{Game\+State\+Win}.
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

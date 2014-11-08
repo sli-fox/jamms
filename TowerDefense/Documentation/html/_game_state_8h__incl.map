@@ -1,3 +1,11 @@
 <map id="jamms/TowerDefense/TowerDefense/include/gameStates/GameState.h" name="jamms/TowerDefense/TowerDefense/include/gameStates/GameState.h">
-<area shape="rect" id="node2" href="$_game_8h.html" title="File containing the Game class. " alt="" coords="197,109,265,136"/>
+<area shape="rect" id="node2" href="$_game_8h.html" title="File containing the Game class. " alt="" coords="196,109,264,136"/>
+<area shape="rect" id="node6" href="$_map_8h.html" title="Map.h" alt="" coords="649,184,707,211"/>
+<area shape="rect" id="node28" href="$_player_8h.html" title="Player.h" alt="" coords="1153,184,1224,211"/>
+<area shape="rect" id="node13" href="$_tile_8h.html" title="gameObjects/Tile.h" alt="" coords="281,259,416,285"/>
+<area shape="rect" id="node19" href="$rapidxml_8hpp.html" title="This file contains rapidxml parser and DOM implementation. " alt="" coords="821,333,945,360"/>
+<area shape="rect" id="node24" href="$rapidxml__print_8hpp.html" title="This file contains rapidxml printer implementation. " alt="" coords="665,259,821,285"/>
+<area shape="rect" id="node14" href="$_game_object_8h.html" title="File containing the GameObject class. " alt="" coords="233,333,419,360"/>
+<area shape="rect" id="node15" href="$_texture_manager_8h.html" title="File containing the TextureManager class. " alt="" coords="414,408,601,435"/>
+<area shape="rect" id="node17" href="$_console_color_8h.html" title="utils/ConsoleColor.h" alt="" coords="251,408,390,435"/>
 </map>

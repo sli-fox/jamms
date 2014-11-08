@@ -17,14 +17,14 @@ Collaboration diagram for Game\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=166pt]{class_game__coll__graph}
+\includegraphics[width=350pt]{class_game__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game} ()
-\begin{DoxyCompactList}\small\item\em Constructor of \hyperlink{class_game}{Game} sets the game window properties and frame rate. \end{DoxyCompactList}\item 
+\item 
 \hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{$\sim$\+Game} ()
 \begin{DoxyCompactList}\small\item\em Destructor of \hyperlink{class_game}{Game} removes all Game\+States from game states stack. \end{DoxyCompactList}\item 
 void \hyperlink{class_game_a5898f1edb6e3bc1700b2ffb1943bc609}{push\+State} (\hyperlink{class_game_state}{Game\+State} $\ast$state)
@@ -40,10 +40,21 @@ void \hyperlink{class_game_aede5f46c8c7bbbaf8459eeec397a11e7}{game\+Loop} ()
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
+float \hyperlink{class_game_ac66b5c6782d42e6c7344fad1cda50b67}{delta\+\_\+time}
+\item 
 std\+::stack$<$ \hyperlink{class_game_state}{Game\+State} $\ast$ $>$ \hyperlink{class_game_a5ed7be8060ef5d384b62f384fb8662ed}{game\+\_\+states}
 \begin{DoxyCompactList}\small\item\em Stack for storing the game states. \end{DoxyCompactList}\item 
 sf\+::\+Render\+Window \hyperlink{class_game_ae19475408ec62b8ed6d4109b56d28b1d}{game\+\_\+window}
-\begin{DoxyCompactList}\small\item\em Main window for game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Main window for game. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_aa897c46d369e8ab808ba5463691511da}{is\+Game\+Paused}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_map}{Map} \hyperlink{class_game_ab910de42d0cf4238d9d20815de472523}{map} = \hyperlink{class_map}{Map}(\hyperlink{class_map_ae9582bc1e99bdf1ecc5413f81cc95f69}{Map\+::\+M\+A\+X\+\_\+\+M\+A\+P\+\_\+\+W\+I\+D\+T\+H}, \hyperlink{class_map_aef313313ef5bbeafeae1f6b66073bace}{Map\+::\+M\+A\+X\+\_\+\+M\+A\+P\+\_\+\+H\+E\+I\+G\+H\+T})
+\begin{DoxyCompactList}\small\item\em Constructor of \hyperlink{class_game}{Game} sets the game window properties and frame rate. \end{DoxyCompactList}\item 
+static \hyperlink{class_player}{Player} \hyperlink{class_game_a6e48721b0532833b99fd5615a3628792}{player} = \hyperlink{class_player}{Player}(\char`\"{}Jamms\char`\"{}, 500)
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -57,10 +68,6 @@ Creates a \hyperlink{class_game}{Game}. \hyperlink{class_game}{Game} is a \hyper
 {}
 \end{DoxyParamCaption}
 )}}\label{class_game_ad59df6562a58a614fda24622d3715b65}
-
-
-Constructor of \hyperlink{class_game}{Game} sets the game window properties and frame rate. 
-
 \hypertarget{class_game_ae3d112ca6e0e55150d2fdbc704474530}{\index{Game@{Game}!````~Game@{$\sim$\+Game}}
 \index{````~Game@{$\sim$\+Game}!Game@{Game}}
 \subsubsection[{$\sim$\+Game}]{\setlength{\rightskip}{0pt plus 5cm}Game\+::$\sim$\+Game (
@@ -74,8 +81,7 @@ Destructor of \hyperlink{class_game}{Game} removes all Game\+States from game st
 
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -103,8 +109,7 @@ Void.
 \end{DoxyReturn}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -133,8 +138,7 @@ The functions from \hyperlink{class_game_state}{Game\+State} are then called to 
 
 Draw updates to render window 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -145,8 +149,7 @@ Here is the call graph for this function\+:
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -171,8 +174,7 @@ Pointer to \hyperlink{class_game_state}{Game\+State} that's on top of the stack.
 \end{DoxyReturn}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -202,7 +204,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=308pt]{class_game_a4b33dd67adef59bebadba8a234282c88_icgraph}
+\includegraphics[width=350pt]{class_game_a4b33dd67adef59bebadba8a234282c88_icgraph}
 \end{center}
 \end{figure}
 
@@ -236,6 +238,9 @@ Here is the caller graph for this function\+:
 
 
 \subsection{Member Data Documentation}
+\hypertarget{class_game_ac66b5c6782d42e6c7344fad1cda50b67}{\index{Game@{Game}!delta\+\_\+time@{delta\+\_\+time}}
+\index{delta\+\_\+time@{delta\+\_\+time}!Game@{Game}}
+\subsubsection[{delta\+\_\+time}]{\setlength{\rightskip}{0pt plus 5cm}float Game\+::delta\+\_\+time}}\label{class_game_ac66b5c6782d42e6c7344fad1cda50b67}
 \hypertarget{class_game_a5ed7be8060ef5d384b62f384fb8662ed}{\index{Game@{Game}!game\+\_\+states@{game\+\_\+states}}
 \index{game\+\_\+states@{game\+\_\+states}!Game@{Game}}
 \subsubsection[{game\+\_\+states}]{\setlength{\rightskip}{0pt plus 5cm}std\+::stack$<${\bf Game\+State}$\ast$$>$ Game\+::game\+\_\+states}}\label{class_game_a5ed7be8060ef5d384b62f384fb8662ed}
@@ -250,6 +255,19 @@ Stack for storing the game states.
 
 Main window for game. 
 
+\hypertarget{class_game_aa897c46d369e8ab808ba5463691511da}{\index{Game@{Game}!is\+Game\+Paused@{is\+Game\+Paused}}
+\index{is\+Game\+Paused@{is\+Game\+Paused}!Game@{Game}}
+\subsubsection[{is\+Game\+Paused}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+::is\+Game\+Paused}}\label{class_game_aa897c46d369e8ab808ba5463691511da}
+\hypertarget{class_game_ab910de42d0cf4238d9d20815de472523}{\index{Game@{Game}!map@{map}}
+\index{map@{map}!Game@{Game}}
+\subsubsection[{map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Map} Game\+::map = {\bf Map}({\bf Map\+::\+M\+A\+X\+\_\+\+M\+A\+P\+\_\+\+W\+I\+D\+T\+H}, {\bf Map\+::\+M\+A\+X\+\_\+\+M\+A\+P\+\_\+\+H\+E\+I\+G\+H\+T})\hspace{0.3cm}{\ttfamily [static]}}}\label{class_game_ab910de42d0cf4238d9d20815de472523}
+
+
+Constructor of \hyperlink{class_game}{Game} sets the game window properties and frame rate. 
+
+\hypertarget{class_game_a6e48721b0532833b99fd5615a3628792}{\index{Game@{Game}!player@{player}}
+\index{player@{player}!Game@{Game}}
+\subsubsection[{player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player} Game\+::player = {\bf Player}(\char`\"{}Jamms\char`\"{}, 500)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_game_a6e48721b0532833b99fd5615a3628792}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

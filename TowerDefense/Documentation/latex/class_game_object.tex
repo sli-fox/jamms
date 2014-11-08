@@ -12,12 +12,22 @@ Creates a \hyperlink{class_game_object}{Game\+Object}. \hyperlink{class_game_obj
 
 
 
+Inheritance diagram for Game\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
 Collaboration diagram for Game\+Object\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=172pt]{class_game_object__coll__graph}
+\includegraphics[width=177pt]{class_game_object__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -32,7 +42,31 @@ virtual void \hyperlink{class_game_object_acc593e5b75a58c4a59ad59da654ce807}{loa
 virtual void \hyperlink{class_game_object_abf4de46e52c8f23d18d51bc29744b136}{draw} (sf\+::\+Render\+Window \&window)
 \begin{DoxyCompactList}\small\item\em Draws a sprite to the render window if the \hyperlink{class_game_object}{Game\+Object} instance has previously been loaded. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_game_object_a180d6e9e7afa44b30ca678a95c6f4dad}{set\+Position} (float x, float y)
-\begin{DoxyCompactList}\small\item\em Sets the initial draw position of a \hyperlink{class_game_object}{Game\+Object} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sets the initial draw position of a \hyperlink{class_game_object}{Game\+Object} instance. \end{DoxyCompactList}\item 
+virtual sf\+::\+Vector2f \hyperlink{class_game_object_a380c5cec0ed79277359dbbb9935f1ffe}{get\+Position} () const 
+\item 
+std\+::string \hyperlink{class_game_object_a387e235ced0f778e58d5f4a39f58a220}{get\+File\+Name} () const 
+\item 
+bool \hyperlink{class_game_object_adf7e04407f7c2a5bd487b459efe9fd79}{sprite\+Contains} (sf\+::\+Vector2i position) const 
+\item 
+virtual void \hyperlink{class_game_object_a6fa0d948eccbd0345cda6bdea5b5196a}{move} (float x, float y)
+\item 
+virtual void \hyperlink{class_game_object_a3ad77a6b8bc1adfb8ea463f12c022b1e}{move} (const sf\+::\+Vector2f \&offset)
+\item 
+virtual sf\+::\+Float\+Rect \hyperlink{class_game_object_a3a1df73c1ffc15d9bb616aebc3e477fd}{get\+Global\+Bounds} () const 
+\begin{DoxyCompactList}\small\item\em Retrieves the floating recantle encompassing a sprite (after the result of transormations) \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_game_object_a18a09c750e617f7e3188bda15a7d5fd7}{box\+To\+Box\+Intersection} (\hyperlink{class_game_object}{Game\+Object} $\ast$game\+\_\+object)
+\begin{DoxyCompactList}\small\item\em Bouding box intersection between Game\+Objects. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_game_object_a3a9fd4ee6157fcf61fd8f7d7318598c5}{circle\+To\+Circle\+Intersection} (\hyperlink{class_game_object}{Game\+Object} $\ast$game\+\_\+object)
+\begin{DoxyCompactList}\small\item\em Measures the distance between the centers of each object to each other and compare that with their radii. \end{DoxyCompactList}\item 
+virtual sf\+::\+Vector2f \hyperlink{class_game_object_afe3b2585b3615868c64b62bb1cb40adb}{get\+Sprite\+Center} ()
+\begin{DoxyCompactList}\small\item\em Gets the center of a sprite. \end{DoxyCompactList}\item 
+virtual sf\+::\+Vector2f \hyperlink{class_game_object_a267f290e80e877be0de3a9706321c049}{get\+Sprite\+Size} ()
+\begin{DoxyCompactList}\small\item\em Gets the size of a sprite. \end{DoxyCompactList}\item 
+virtual float \hyperlink{class_game_object_a8220201988f2aaea8a6f748872e188a9}{get\+Rectangle\+Sprite\+Radius} ()
+\begin{DoxyCompactList}\small\item\em Measures the radius of the rectangle sprite. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_object_a320a94559557834d53bffa538d8349c9}{set\+Rotation} (float angle)
+\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -69,6 +103,62 @@ The \hyperlink{class_game_object}{Game\+Object} constructor. Default setup is th
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_game_object_a18a09c750e617f7e3188bda15a7d5fd7}{\index{Game\+Object@{Game\+Object}!box\+To\+Box\+Intersection@{box\+To\+Box\+Intersection}}
+\index{box\+To\+Box\+Intersection@{box\+To\+Box\+Intersection}!Game\+Object@{Game\+Object}}
+\subsubsection[{box\+To\+Box\+Intersection}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+Object\+::box\+To\+Box\+Intersection (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Object} $\ast$}]{game\+\_\+object}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_object_a18a09c750e617f7e3188bda15a7d5fd7}
+
+
+Bouding box intersection between Game\+Objects. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_object_a18a09c750e617f7e3188bda15a7d5fd7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_object_a3a9fd4ee6157fcf61fd8f7d7318598c5}{\index{Game\+Object@{Game\+Object}!circle\+To\+Circle\+Intersection@{circle\+To\+Circle\+Intersection}}
+\index{circle\+To\+Circle\+Intersection@{circle\+To\+Circle\+Intersection}!Game\+Object@{Game\+Object}}
+\subsubsection[{circle\+To\+Circle\+Intersection}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+Object\+::circle\+To\+Circle\+Intersection (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Object} $\ast$}]{game\+\_\+object}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_object_a3a9fd4ee6157fcf61fd8f7d7318598c5}
+
+
+Measures the distance between the centers of each object to each other and compare that with their radii. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_tower_a518ff249dec05cdd026a830d845abfd2}{Tower}.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_object_a3a9fd4ee6157fcf61fd8f7d7318598c5_cgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_game_object_abf4de46e52c8f23d18d51bc29744b136}{\index{Game\+Object@{Game\+Object}!draw@{draw}}
 \index{draw@{draw}!Game\+Object@{Game\+Object}}
 \subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Object\+::draw (
@@ -88,7 +178,165 @@ Draws a sprite to the render window if the \hyperlink{class_game_object}{Game\+O
 \begin{DoxyReturn}{Returns}
 Void.
 \end{DoxyReturn}
-\hyperlink{class_game_object_abf4de46e52c8f23d18d51bc29744b136}{draw()} takes in a reference to a rendering window and checks if sprite is created, if it has been, the sprite is drawn to the window. \hypertarget{class_game_object_acc593e5b75a58c4a59ad59da654ce807}{\index{Game\+Object@{Game\+Object}!load@{load}}
+\hyperlink{class_game_object_abf4de46e52c8f23d18d51bc29744b136}{draw()} takes in a reference to a rendering window and checks if sprite is created, if it has been, the sprite is drawn to the window. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_object_abf4de46e52c8f23d18d51bc29744b136_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_object_a387e235ced0f778e58d5f4a39f58a220}{\index{Game\+Object@{Game\+Object}!get\+File\+Name@{get\+File\+Name}}
+\index{get\+File\+Name@{get\+File\+Name}!Game\+Object@{Game\+Object}}
+\subsubsection[{get\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Game\+Object\+::get\+File\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_game_object_a387e235ced0f778e58d5f4a39f58a220}
+\hypertarget{class_game_object_a3a1df73c1ffc15d9bb616aebc3e477fd}{\index{Game\+Object@{Game\+Object}!get\+Global\+Bounds@{get\+Global\+Bounds}}
+\index{get\+Global\+Bounds@{get\+Global\+Bounds}!Game\+Object@{Game\+Object}}
+\subsubsection[{get\+Global\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect Game\+Object\+::get\+Global\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_object_a3a1df73c1ffc15d9bb616aebc3e477fd}
+
+
+Retrieves the floating recantle encompassing a sprite (after the result of transormations) 
+
+\begin{DoxyReturn}{Returns}
+sf\+::\+Float\+Rect 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_object_a3a1df73c1ffc15d9bb616aebc3e477fd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_object_a380c5cec0ed79277359dbbb9935f1ffe}{\index{Game\+Object@{Game\+Object}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Game\+Object@{Game\+Object}}
+\subsubsection[{get\+Position}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f Game\+Object\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_object_a380c5cec0ed79277359dbbb9935f1ffe}
+
+
+Reimplemented in \hyperlink{class_critter_a8fdba06ecb582e8b542e2e73a76f455d}{Critter}.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_object_a380c5cec0ed79277359dbbb9935f1ffe_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_object_a8220201988f2aaea8a6f748872e188a9}{\index{Game\+Object@{Game\+Object}!get\+Rectangle\+Sprite\+Radius@{get\+Rectangle\+Sprite\+Radius}}
+\index{get\+Rectangle\+Sprite\+Radius@{get\+Rectangle\+Sprite\+Radius}!Game\+Object@{Game\+Object}}
+\subsubsection[{get\+Rectangle\+Sprite\+Radius}]{\setlength{\rightskip}{0pt plus 5cm}float Game\+Object\+::get\+Rectangle\+Sprite\+Radius (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_object_a8220201988f2aaea8a6f748872e188a9}
+
+
+Measures the radius of the rectangle sprite. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_object_a8220201988f2aaea8a6f748872e188a9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_object_a8220201988f2aaea8a6f748872e188a9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_object_afe3b2585b3615868c64b62bb1cb40adb}{\index{Game\+Object@{Game\+Object}!get\+Sprite\+Center@{get\+Sprite\+Center}}
+\index{get\+Sprite\+Center@{get\+Sprite\+Center}!Game\+Object@{Game\+Object}}
+\subsubsection[{get\+Sprite\+Center}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f Game\+Object\+::get\+Sprite\+Center (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_object_afe3b2585b3615868c64b62bb1cb40adb}
+
+
+Gets the center of a sprite. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_object_afe3b2585b3615868c64b62bb1cb40adb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_object_a267f290e80e877be0de3a9706321c049}{\index{Game\+Object@{Game\+Object}!get\+Sprite\+Size@{get\+Sprite\+Size}}
+\index{get\+Sprite\+Size@{get\+Sprite\+Size}!Game\+Object@{Game\+Object}}
+\subsubsection[{get\+Sprite\+Size}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f Game\+Object\+::get\+Sprite\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_object_a267f290e80e877be0de3a9706321c049}
+
+
+Gets the size of a sprite. 
+
+\begin{DoxyReturn}{Returns}
+sf\+::\+Vector2f 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_object_a267f290e80e877be0de3a9706321c049_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_object_acc593e5b75a58c4a59ad59da654ce807}{\index{Game\+Object@{Game\+Object}!load@{load}}
 \index{load@{load}!Game\+Object@{Game\+Object}}
 \subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Object\+::load (
 \begin{DoxyParamCaption}
@@ -109,8 +357,7 @@ Void.
 \end{DoxyReturn}
 \hyperlink{class_game_object_acc593e5b75a58c4a59ad59da654ce807}{load()} gets a reference to the \hyperlink{class_texture_manager}{Texture\+Manager} instance, loads the texture based on the given file name, sets the texture for the \hyperlink{class_game_object}{Game\+Object} sprite, and indicates that the sprite creation is true. 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -119,6 +366,33 @@ Here is the call graph for this function\+:
 \end{figure}
 
 
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_object_acc593e5b75a58c4a59ad59da654ce807_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_object_a6fa0d948eccbd0345cda6bdea5b5196a}{\index{Game\+Object@{Game\+Object}!move@{move}}
+\index{move@{move}!Game\+Object@{Game\+Object}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Object\+::move (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_object_a6fa0d948eccbd0345cda6bdea5b5196a}
+\hypertarget{class_game_object_a3ad77a6b8bc1adfb8ea463f12c022b1e}{\index{Game\+Object@{Game\+Object}!move@{move}}
+\index{move@{move}!Game\+Object@{Game\+Object}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Object\+::move (
+\begin{DoxyParamCaption}
+\item[{const sf\+::\+Vector2f \&}]{offset}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_object_a3ad77a6b8bc1adfb8ea463f12c022b1e}
 \hypertarget{class_game_object_a180d6e9e7afa44b30ca678a95c6f4dad}{\index{Game\+Object@{Game\+Object}!set\+Position@{set\+Position}}
 \index{set\+Position@{set\+Position}!Game\+Object@{Game\+Object}}
 \subsubsection[{set\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Object\+::set\+Position (
@@ -140,6 +414,56 @@ Sets the initial draw position of a \hyperlink{class_game_object}{Game\+Object} 
 Void.
 \end{DoxyReturn}
 \hyperlink{class_game_object_a180d6e9e7afa44b30ca678a95c6f4dad}{set\+Position()} sets x and y coordinates of the sprite if it has been created. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_object_a180d6e9e7afa44b30ca678a95c6f4dad_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_object_a320a94559557834d53bffa538d8349c9}{\index{Game\+Object@{Game\+Object}!set\+Rotation@{set\+Rotation}}
+\index{set\+Rotation@{set\+Rotation}!Game\+Object@{Game\+Object}}
+\subsubsection[{set\+Rotation}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Object\+::set\+Rotation (
+\begin{DoxyParamCaption}
+\item[{float}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_object_a320a94559557834d53bffa538d8349c9}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_object_a320a94559557834d53bffa538d8349c9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_game_object_adf7e04407f7c2a5bd487b459efe9fd79}{\index{Game\+Object@{Game\+Object}!sprite\+Contains@{sprite\+Contains}}
+\index{sprite\+Contains@{sprite\+Contains}!Game\+Object@{Game\+Object}}
+\subsubsection[{sprite\+Contains}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+Object\+::sprite\+Contains (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Vector2i}]{position}
+\end{DoxyParamCaption}
+) const}}\label{class_game_object_adf7e04407f7c2a5bd487b459efe9fd79}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_object_adf7e04407f7c2a5bd487b459efe9fd79_icgraph}
+\end{center}
+\end{figure}
+
+
+
 
 \subsection{Member Data Documentation}
 \hypertarget{class_game_object_a1b725daa9c79833a7139469468dc770a}{\index{Game\+Object@{Game\+Object}!file\+\_\+name@{file\+\_\+name}}
