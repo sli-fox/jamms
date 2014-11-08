@@ -190,7 +190,7 @@ void GameStatePlay::handleInput() {
 		
 			for (int i = 0; i < critters.size(); ++i) {
 
-				while(critters[i]->isActive && tower->canAttack(critters[i])) {
+				while(critters[i]->isActive && tower->canAttack(critters[i]) && !this->game->isGamePaused) {
 
 					tower->attack();
 
@@ -471,6 +471,7 @@ void GameStatePlay::buttonCommandLibrary(){
 	if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
 		if(buttonMap["returnToEditorBtn"].spriteContains(localPosition)){
 			returnToMenu = true;
+			tower_manager.clearAllTowers();
 			this->game->popState();
 		}
 		else if(buttonMap["startWaveBtn"].spriteContains(localPosition)){

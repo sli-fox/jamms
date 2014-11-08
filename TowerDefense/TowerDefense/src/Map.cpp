@@ -98,6 +98,15 @@ bool Map::isMapValid(){
 		}
 	}
 
+	if(!hasStart){
+		cout << "missing Start tile!" << endl;
+	}
+	if(!hasEnd){
+		cout << "missing End tile!" << endl;
+	}
+	if(hasEmpty){
+		cout << "map still has Empty tiles!" << endl;
+	}
 	return hasStart && hasEnd && !hasEmpty;
 }
 
