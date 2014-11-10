@@ -15,7 +15,7 @@ jamms
   - Documentation
 	- [Initial project planning](#user-content-initial-project-planning)
 	- [Doxygen generated documentation](#user-content-doxygen-generated-documentation)
-	- 
+
 ## SFML 2.1
 This project uses [SFML] (http://www.sfml-dev.org/) as its GUI library. SFML 2.1 files are included in the project in its own directory and the project properties are already configured to this directory. Thus, SFML should compile with the project without additional configuration. If there is an issue, please go through the steps in the Project configuration section: [Installing SFML].   
 
