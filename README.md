@@ -1,49 +1,39 @@
 jamms
 =====
 
-For the new TowerDefense solution:
-- Sprites are drawn NOT in the gameLoop(), but in the GameState that the object should appear in. 
-- For example, to draw something in the playing state of the game, draw must be called in the GameStatePlay class' draw function.
-
 **Table of Contents** 
 
 - [jamms](#user-content-jamms)
-  - General info
-	- [Consistent naming and style conventions](#user-content-consistent-naming-and-style-conventions)
-	- [Guidelines for commits](#user-content-guidelines-for-commits)
-  - Project configuration (what you need to do to get the project to compile)
+  - Compilation information
+	- [SFML 2.1](#user-content-sfml-2.1)
+	- [Cppunit](#user-content-cppunit)
+	- [TowerDefense header files](#user-content-tower-defense-header-files)
+  - Usage information
+  	- [Key Bindings](#user-content-key-bindings)
+  - Project configuration (in case something isn't working)
 	- [Installing SFML](#user-content-installing-sfml)
-	- [Adding jamms headers path](#user-content-adding-jamms-headers-path)
-  - About the code
-	- [The TextureManager class](#user-content-the-texturemanager-class)
+  - Documentation
+	- [Initial project planning](#user-content-initial-project-planning)
+	- [Doxygen generated documentation](#user-content-doxygen-generated-documentation)
+	- 
+## SFML 2.1
+This project uses [SFML] (http://www.sfml-dev.org/) as its GUI library. SFML 2.1 files are included in the project in its own directory and the project properties are already configured to this directory. Thus, SFML should compile with the project without additional configuration. If there is an issue, please go through the steps in the Project configuration section: [Installing SFML].   
 
-## Consistent naming and style conventions
-If in doubt, we should all use the same naming and style conventions. I chose this system because I think it helps to quickly recognize what is a variable or a method, etc.
-  - Variable names have underscores
-    - Public: my_public_var
-    - Private: _my_private_var
-  - Class and struct names are in upper camel case
-    - MyClassName
-  - Method names are in lower camel case
-    - myMethodName()
-  - Enums are in upper camel case
-    - MyEnumName
-  - Code blocks with curly braces have the first brace inline:
-    - void myMethodName {
-      -   //Add code
-    - }
-  - Don't use "using namespace std" declarations, use "std::string" in front of the variable type instead
+## Cppunit
+This project uses Cppunit as a testing library. Cppunit files are included in the project in its own directory and the project properties are already configured to this directory. Thus, Cppunit should compile with the project without additional configuration.
 
-The above conventions I've used are based from Google's guide for C++:
-[http://google-styleguide.googlecode.com/svn/trunk/cppguide.html#General_Naming_Rules]
+## TowerDefense header files
+The header files for the project are included in the project's additional includes path. If this is not configured properly, please check the following:
+	- Right click project name in Solution Explorer, click on Properties
+	- Go to Configuration Properties > C/C++ > General
+	- Check to see "../TowerDefense/include" is in the field for Additional Include Directories
 
-## Guidelines for commits
-- Only add and commit files that you have actually changed code in AND the .vcxproj file (if it has changed)
-  - The .vcxproj file is the actual project file so it should be checked in (committed and pushed to the repo).
-  - If you've changed the .vcxproj.filters file, we need to talk as a team if you guys want to check that file in.The .vcxproj.filter files provides the folder structure you see in your solution. IMO, I think all the devs should be using the same folder structure to be in sync, but that means each dev needs to NOT make unecessary changes to the file structure in jamms. We may want to NOT check this file in and work off our own file structures (if people want drastically different solution views. TBD.
-- .gitignore will prevent untracked files from being added (without an add -f) to the set of files tracked by git, however git will continue to track any files that are already being tracked. So you will see a lot of files like .suo and .sdf files in your git status. Ignore them! Only check in code (cpp and h files)!
-- If you add files that you're not supposed to, use "git reset" to revert back to before you added the wrong files to your staging area. 
-- Guide on git commands: [http://gitref.org/basic/]
+## Key bindings
+While playing the game, here are some useful key bindings:
+	- Right click to delete a map cell or a section of a path
+	- Press U while selecting a Tower to upgrade it
+	- Right click a Tower to sell it
+	- Press W to toggle on and off waypoints along the path
 
 ## Installing SFML
 SFML is the graphical library we will be using for this project. It's a dependency for the project, so please install it locally by following the steps below. 
@@ -68,25 +58,14 @@ SFML is the graphical library we will be using for this project. It's a dependen
 
 5. Now, your SFML should be ready! I've included a SFMLTest.txt file with code that should render a green circle in AN EMPTY SOLUTION if SFML is properly installed. To test, you can copy the code in SFMLTest.txt into your main cpp file and run the main function. If a green circle appears, then SFML works! :) Alternatively, you can just run the exisiting jamms project to test.
 
-## Adding jamms headers path
-To simplify adding headers to the project, you must add (<jamms-folder-path>/include) to C/C++ » General » Additional Include Directories in your project properties. 
-  - For example, mine is "C:\Users\Steph\Projects\COMP345\jamms\jamms\jamms\include"
-  - Then, in the project, create header files ONLY in the that same include folder
-    - You'll be able to include header files simply by using #include \<MyHeaderFile.h\> without worrying about paths. 
+## Initial project documentation
+As a team, we brainstormed and created Game Design Document with initial concepts prior to coding. This document is found in the Documentation folder under "Initial Game Design Document". Additionally, we have an "Initial Domain Model" in the same Documentation folder.
+
+## Doxygen generated documentation
+This project has generated Doxygen documentation, including comments, class hierarchies, and diagrams.
+To view the documentation:
+	- The documentation is located in the Documentation folder
+	- Open any of the HTML files in a browser (you can click and drag an HTML file into a new browser window).
+	- All of the documentation pages and tabs will be available in a webpage format.
 
 
-##The TextureManager class
-So, I created a singleton class called TextureManager that makes handles texture loading efficiently. Why is it useful? The class holds a single instance (hence the singleton class) of a map where all previously loaded textures go. Whenever you create a sprite and you give it a path to a texture image, the TextureManager class checks it against the map of textures. If the texture has been previously loaded, the loadTexture function of the class returns a reference to the loaded texture. If the texture is new, it loads the texture, saves the texture reference in the map, and returns you the newly loaded texture reference. Note all textures are implemented in the heap. 
-
-How to create a sprite using the TextureManager class:
-- TextureManager& t_manager = TextureManager::getInstance();  //Get an instance of the TextureManager object
-- sf::Sprite yourSpriteName(t_manager.loadTexture("resources/images/YourImage.png"));  //Create the sprite!
-
-Easy as pie!
-
-There's also the unloadTexture() function whih removes the instance of texture associated with a image path in the texture map.
-
-
-
-----
-Note for Github markdown TOC: http://doctoc.herokuapp.com/
