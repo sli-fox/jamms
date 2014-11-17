@@ -6,6 +6,8 @@
 GameStateMapEditor::GameStateMapEditor(Game* game) {
   this->game = game;
 
+  	trackMapEvents = new TrackMapInput_c(Game::map);
+
 	sf::Vector2f position = sf::Vector2f(this->game->game_window.getSize());
 	this->_gameView.setSize(position);
 	this->_guiView.setSize(position);
@@ -91,6 +93,10 @@ void GameStateMapEditor::handleInput() {
 					systemOutput.setString("");
 					pauseSave = false;
 				}
+			}else if (sf::Keyboard::isKeyPressed(sf::Keyboard::U)) {
+				trackMapEvents->undo();
+			}else if (sf::Keyboard::isKeyPressed(sf::Keyboard::R)) {
+				trackMapEvents->redo();
 			}
 			break;
 									}
@@ -135,7 +141,10 @@ const vector<string> GameStateMapEditor::getFilesInDir(const string dir) {
 void GameStateMapEditor::mapEditorCommandLibrary(){
 	if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
 		if(this->game->map.getTile(tileX, tileY) != nullptr && this->game->map.getTile(tileX, tileY)->spriteContains(localPosition))
-			this->game->map.addTile(tileX, tileY, tileSelector);
+		{
+			if( this->game->map.addTile(tileX, tileY, tileSelector) )
+			trackMapEvents->recordAddTile(tileX, tileY, tileSelector);
+		}
 	}
 	else if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
 		if(this->game->map.getTile(tileX, tileY) != nullptr && this->game->map.getTile(tileX, tileY)->spriteContains(localPosition)){
@@ -158,9 +167,15 @@ void GameStateMapEditor::buttonCommandLibrary(){
 		else if(buttonMap["deadTileBtn"].spriteContains(localPosition))
 			tileSelector = Tile::DEAD;
 		else if(buttonMap["fillMapBtn"].spriteContains(localPosition))
+		{
 			this->game->map.fillMap();
+			trackMapEvents->recordFillMap( );
+		}
 		else if(buttonMap["resetMapBtn"].spriteContains(localPosition))
+		{
 			this->game->map.blankMap();
+			trackMapEvents->recordResetMap();
+		}
 		else if(buttonMap["saveBtn"].spriteContains(localPosition)){
 			if(!pauseSave){
 				pauseSave = true;

@@ -14,6 +14,8 @@
 #include <gameStates/GameState.h>
 #include <gameStates/GameStatePlay.h>
 #include "dirent.h"
+#include "TrackMapInput.h"
+
 
 /** @brief Game state that represents the gameplay.
  */
@@ -46,6 +48,7 @@ class GameStateMapEditor : public GameState {
 
     virtual void runThreads() {};
 
+	TrackMapInput_c  *trackMapEvents;
 
    private:
 	   sf::Vector2i  localPosition;
