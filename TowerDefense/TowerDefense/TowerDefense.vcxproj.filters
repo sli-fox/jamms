@@ -165,6 +165,9 @@
     <ClInclude Include="include\utils\TowerStrategy.h">
       <Filter>Header Files\Utils</Filter>
     </ClInclude>
+    <ClInclude Include="include\TrackMapInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game.cpp">
@@ -253,6 +256,9 @@
     </ClCompile>
     <ClCompile Include="src\gameStates\GameStateGameWin.cpp">
       <Filter>Source Files\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackMapInput.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -108,6 +108,7 @@
     <ClInclude Include="include\Map.h" />
     <ClInclude Include="include\Player.h" />
     <ClInclude Include="include\test\TextureManagerTest.h" />
+    <ClInclude Include="include\TrackMapInput.h" />
     <ClInclude Include="include\utils\Animation.h" />
     <ClInclude Include="include\utils\AnimationHandler.h" />
     <ClInclude Include="include\utils\ConsoleColor.h" />
@@ -148,6 +149,7 @@
     <ClCompile Include="src\views\MainMenu.cpp" />
     <ClCompile Include="src\views\Menu.cpp" />
     <ClCompile Include="test\TextureManagerTest.cpp" />
+    <ClCompile Include="TrackMapInput.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\images\critters\WhiteCatSpriteSheet.png" />

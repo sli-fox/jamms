@@ -87,6 +87,15 @@ for(int tileX = 0 ; tileX < mapWidth ; ++tileX){
 	}
 }
 
+void Map::unfillMap(){
+for(int tileX = 0 ; tileX < mapWidth ; ++tileX){
+		for(int tileY = 0 ; tileY < mapHeight ; ++tileY){
+			if(tileMap[tileX][tileY]->getType() == Tile::SCENERY)
+				tileMap[tileX][tileY].reset(new Tile(imagePath + "blank.png", tileX, tileY));	
+		}
+	}
+}
+
 bool Map::isMapValid(){
 	bool hasEmpty = false;
 	for(int i = 0 ; i < mapWidth ; ++i){
@@ -176,21 +185,21 @@ string Map::convertType(Tile::TYPE type) const{
 }
 
 //creates tile and adds it according to its type. If path, start, or end; adds tile to mapPath queue accordingly
-void Map::addTile(int tileX, int tileY, const Tile::TYPE tileType){
+bool Map::addTile(int tileX, int tileY, const Tile::TYPE tileType){
 	if(!outOfBounds(tileX, tileY) && getTile(tileX, tileY)->getType() != Tile::EMPTY){
 		cout << "Tile not empty" << endl;
-		return;
+		return false;
 	}
 	if(!outOfBounds(tileX, tileY)){
 		switch(tileType){
 		case(Tile::START):{
 				if(hasEnd){
 					cout << "Remove end tile first" << endl;
-					return;
+					return false;
 				}
 				else if(hasStart){
 					cout << "Start tile already exists" << endl;
-					return;
+					return false;
 				}
 					tileMap[tileX][tileY].reset(new StartTile(imagePath + "start.png", tileX, tileY));
 					mapPath.push_back(getTile(tileX, tileY));
@@ -200,11 +209,11 @@ void Map::addTile(int tileX, int tileY, const Tile::TYPE tileType){
 		case(Tile::END):{
 			if(hasEnd){
 				cout << "Remove end tile first" << endl;
-				return;
+					return false;
 			}
 			else if(!hasStart){
 				cout << "Place a start tile first" << endl;
-				return;
+					return false;
 			}
 
 			if(validPathPlacement(tileX, tileY)){
@@ -213,17 +222,20 @@ void Map::addTile(int tileX, int tileY, const Tile::TYPE tileType){
 				hasEnd = true;
 			}
 			else
+			{
 				cout << "Not a valid end placement" << endl;
+				return false;
+			}
 			break;
 						}
 		case(Tile::PATH):{
 			if(hasEnd){
 				cout << "Remove end tile first" << endl;
-				return;
+					return false;
 			}
 			else if(!hasStart){
 				cout << "Place a start tile first" << endl;
-				return;
+				return false;
 			}
 
 			if(validPathPlacement(tileX, tileY)){
@@ -231,7 +243,10 @@ void Map::addTile(int tileX, int tileY, const Tile::TYPE tileType){
 				mapPath.push_back(getTile(tileX, tileY));
 			}
 			else
+			{
 				cout << "Not a valid path placement" << endl;
+				return false;
+			}
 			break;
 						 }
 		case(Tile::DEAD):{
@@ -244,10 +259,13 @@ void Map::addTile(int tileX, int tileY, const Tile::TYPE tileType){
 							}
 		default:{
 			cout << "No tile could be placed" << endl;
+			return false;
 			break;
 				}
 		}
 	}
+
+	return true;
 }
 
 //removes tile at position specified, and if it is in the mapPath queue, removes it.

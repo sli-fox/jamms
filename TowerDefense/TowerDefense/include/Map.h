@@ -64,7 +64,7 @@ public:
 	const Tile* const getTile(const int tileX, const int tileY) const;
 
 	//adds a tile with passed textureID, texturetype (as a string), and position
-	void addTile(int tileX, int tileY, const Tile::TYPE tileType);
+	bool addTile(int tileX, int tileY, const Tile::TYPE tileType);
 
 	//removes a tile at passed position
 	void removeTile(const int tileX, const int tileY);
@@ -85,6 +85,8 @@ public:
 
 	//fills empty tiles with scenery tiles upon map validation (to simplify creation process)
 	void fillMap();
+
+	void unfillMap();
 
 	//loads Map from filename
 	void load(const string filename);
