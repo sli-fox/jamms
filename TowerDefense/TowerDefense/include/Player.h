@@ -23,11 +23,13 @@ public:
 	void setHighScore(int score);
 	void earnLives(int lives);
 	void loseLives(int lives);
+	void resetStats();
 	
 	std::string getPlayerSpecs();
 	
 private:
 	std::string _name;
+	int _startingCash;
 	int _cash; // utilized for buying towers
 	int _points; // acquired during gameplay for defeating critters
 	int _high_score;

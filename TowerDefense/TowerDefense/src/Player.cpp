@@ -5,6 +5,7 @@ Player::Player() {}
 Player::Player(std::string name, int cash) : _name(name), _cash(cash) {
 	this->_name = name;
 	this->_cash = cash;
+	this->_startingCash = cash;
 	this->_points = 0;
 	this->_high_score = 0;
 	this->_lives = 20;
@@ -34,6 +35,13 @@ int Player::getLives() const {
 
 void Player::earnCash(int cash) {
 	this->_cash += cash;
+}
+
+void Player::resetStats(){
+	this->_cash = _startingCash;
+	this->_lives = 20;
+	this->_high_score = 0;
+
 }
 
 /**

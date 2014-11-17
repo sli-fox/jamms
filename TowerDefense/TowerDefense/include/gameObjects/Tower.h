@@ -3,16 +3,19 @@
 #include <GameObjects/GameObject.h>
 #include <GameObjects/Critter.h>
 #include <GameObjects/IObserver.h>
+#include "Utils/TowerStrategy.h"
+#include <memory>
 
-class Tower: public GameObject, public IObserver {
+class Tower: public GameObject, public IObserver{
   public:
     Tower();
 	~Tower() { std::cout << red << _name << " has been deleted." << white << std::endl; };
 	virtual void upgradeTower() = 0;
 	bool canAttack(Critter* critter);
 	bool canApplySpecialAfterEffects(Critter* critter);
-	void attack();
+	Critter* attack();
 	void update();
+	Critter* executeStrategy(Critter* critter);
 	sf::Vector2f findCollisionPath(Critter* critter);
 	void rotateTowardsTarget();
 	float angle(float x, float y);
@@ -38,6 +41,7 @@ class Tower: public GameObject, public IObserver {
 	int getSellCost() const;
 	int getUpgradeCost() const;
 	Critter* getTarget() const;
+	TowerStrategy* getStrategy() const;
 
 	//MUTATORS
     void setID(int _id);
@@ -53,6 +57,7 @@ class Tower: public GameObject, public IObserver {
 	void setSellCost(int _sell_cost);
 	void setUpgradeCost(int _upgrade_cost);
 	void setTarget(Critter* crit);
+	void setStrategy(TowerStrategy* newStrategy);
 
 	std::string getTowerSpecs();
 	virtual bool circleToCircleIntersection(GameObject* game_object);
@@ -72,6 +77,7 @@ class Tower: public GameObject, public IObserver {
 	int _upgrade_cost;
 	int _sell_cost;
 	Critter* _target;
+	std::unique_ptr<TowerStrategy> _strategy;
 
   private:
 	  sf::Clock clock;
