@@ -24,6 +24,7 @@
 #include <Map.h>
 #include <managers/TowerManager.h>
 #include <managers/CritterWave.h>
+#include <list>
 
 
 /** @brief Game state that represents the gameplay.
@@ -90,11 +91,11 @@ class GameStatePlay : public GameState {
 	  sf::CircleShape range;
 	  Tower::TowerType towerSelector;
 	  sf::Font font;
-	  sf::Text towerSpecs;
 	  //sf::Text upgradeTowerSpecs;
-	  sf::Text waveSpecs;
-	  sf::Text nextWaveSpecs;
-	  sf::Text playerSpecs;
+	  sf::Text waveSpecs, nextWaveSpecs, playerSpecs, towerSpecs;
+	  std::map<int,sf::Text> critterHealth;
+	  std::map<int,sf::Clock> healthClock;
+	  sf::Time healthTime;
 	
      /** @brief Camera view for the gameplay displayed to the window.
       */

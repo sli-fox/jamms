@@ -7,6 +7,7 @@ Tower::Tower() {
 	this->_upgrade_level = Tower::UpgradeLevel::Upgrade0;
 	this->_target = NULL;
 	this->time = clock.getElapsedTime();
+	this->_strategy.reset(new WeakestStrategy());
 }
 
 //ACCESSORS
@@ -95,26 +96,36 @@ sf::CircleShape Tower::getRangeShape() const {
   * @brief Determines whether tower can attack a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay
   * @return bool
   */
-bool Tower::canAttack(Critter* critter) {
-	this->time = this->clock.getElapsedTime();
+bool Tower::canAttack(Critter* critter) { //@MARK canAttack() is performing 3 functions. range checking, attack timer checking, and target selection. we should split them into 3 methods in my opinion -Jeremy-
 	
-	if(this->_target != NULL && this->_target->getId() < critter->getId()) 
-		_target = critter;//@MARK why is this if condition different from the one below?
+	if(!this->_target == NULL && (!this->circleToCircleIntersection(_target) || !_target->isActive))
+		this->_target = NULL;
 
-	if(this->circleToCircleIntersection(critter) && time.asSeconds()*this->getRateOfFire() >= 1 && this->_target == NULL) {
+	if(this->_target == NULL) {
 		_target = critter;
 		//this->rotateTowardsTarget();
+	}
+	else{
+		_target = executeStrategy(critter);
+		//_target = critter;//@MARK why is this if condition different from the one below?
+		// I changed them to be more consistent -Jeremy-
+	}
+
+	this->time = this->clock.getElapsedTime();
+	
+	if(this->circleToCircleIntersection(_target) && time.asSeconds()*this->getRateOfFire() >= 1){
 		clock.restart();
 		return true;
 	}
-	this->_target = NULL;
+
 	return false;
 }
 
-void Tower::attack() {
+Critter* Tower::attack() {
 	std::cout << yellow << "WOUF WOUF! Scared cat " << this->_target->getId() << "!" << std::endl;
 	this->_target->inflictDamage(this->getPower());
 	std::cout << yellow << "Cat " << this->_target->getId() << " now has " << this->_target->getHitPoints() << " HP" << std::endl;
+	return _target;
 }
 
 /** 
@@ -241,4 +252,16 @@ bool Tower::circleToCircleIntersection(GameObject* game_object){
 	sf::Vector2f distance = this->getSpriteCenter() - game_object->getSpriteCenter();
 	
 	return sqrt(distance.x * distance.x + distance.y * distance.y) <= radius;
+}
+
+TowerStrategy* Tower::getStrategy() const{
+	return this->_strategy.get();
+}
+
+void Tower::setStrategy(TowerStrategy* newStrategy){
+	this->_strategy.reset(newStrategy);
+}
+
+Critter* Tower::executeStrategy(Critter* critter){
+	return this->_strategy->computeTarget(critter, _target, this);
 }
