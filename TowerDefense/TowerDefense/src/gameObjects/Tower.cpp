@@ -26,7 +26,7 @@ Tower::UpgradeLevel Tower::getUpgradeLevel() const {
 int Tower::getPower() const {
 	return _power;
 }
-Tower::Range Tower::getRange() const {
+float Tower::getRange() const {
 	return _range;
 }
 Tower::RateOfFire Tower::getRateOfFire() const {
@@ -61,8 +61,9 @@ void Tower::setUpgradeLevel(Tower::UpgradeLevel _upgrade_level) {
 void Tower::setPower(int _power) {
 	this->_power = _power;
 }
-void Tower::setRange(Tower::Range _range) {
+void Tower::setRange(float _range) {
 	this->_range = _range;
+	this->setRangeShape(_range);
 }
 void Tower::setRateOfFire(Tower::RateOfFire _rate_of_fire) {
 	this->_rate_of_fire = _rate_of_fire;
@@ -80,12 +81,14 @@ void Tower::setTarget(Critter* crit) {
 	this->_target = crit;
 }
 
-void Tower::setRangeShape(Tower::Range range) {
-	_range_shape.setRadius(float((range+1) * 32));
+void Tower::setRangeShape(float range) {
+	range *= 32;
+	_range_shape.setPosition(this->getPosition().x, this->getPosition().y);
+	_range_shape.setRadius(range);
 	_range_shape.setFillColor(sf::Color::Transparent);
 	_range_shape.setOutlineThickness(2);
 	_range_shape.setOutlineColor(sf::Color::Red);
-	_range_shape.setOrigin(float(this->getRange()*32), float(this->getRange()*32));
+	_range_shape.setOrigin(range-16, range-16);
 }
 
 sf::CircleShape Tower::getRangeShape() const {
@@ -249,7 +252,7 @@ std::string Tower::getTowerSpecs() {
 	output << "Type: " << TowerTypeA[this->_type] << std::endl;
 	output << "Upgrade: " << UpgradeLevelA[this->_upgrade_level] << std::endl;
 	output << "Power: " << this->_power << std::endl;
-	output << "Range:  " << RangeA[this->_range-1] << std::endl;
+	output << "Range:  " << this->_range << std::endl;
 	output << "Fire Rate: " << RateOfFireA[this->_rate_of_fire-1] << std::endl;
 	if(this->_special_effect != SpecialEffect::None)
 		output << "Special Effect: " << SpecialEffectA[this->_special_effect] << std::endl;
