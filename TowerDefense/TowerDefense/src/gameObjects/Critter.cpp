@@ -17,7 +17,10 @@ int Critter::getPlayerReward() const {
 } 
 float Critter::getSpeed() const {
   return speed;
-} 
+}
+void Critter::setSpeed(float speed) {
+	this->speed = speed;
+}
 int Critter::getLevel() const {
   return level;
 }
@@ -26,10 +29,6 @@ bool Critter::getSpecialEffectApplied() const {
 }
 void Critter::setSpecialEffectApplied(bool specialEffectsApplied) {
 	this->specialEffectApplied = specialEffectsApplied;
-}
-
-sf::Vector2f Critter::getPosition() const {
-  return position;
 }
 
 Waypoint* Critter::getCurrentWaypoint() const {
@@ -97,25 +96,25 @@ std::string Critter::getCritterSpecs() {
 //Controlling the cat with Arrow Keys
 void Critter::controlCat(sf::Keyboard::Key arrowKey) {
 	if(arrowKey == sf::Keyboard::Up) {
-		if(this->getPosition().y > (0 + this->getSpriteSize().y / 3.0)) {
+		if(this->getPosition().second > (0 + this->getSpriteSize().second / 3.0)) {
 			this->updatePosition(0, -2);
 			this->animation_index = 3;
 		}
 	}
 	if(arrowKey == sf::Keyboard::Right) {
-		if(this->getPosition().x < (Game::map.getMapWidth()*32 - this->getSpriteSize().x / 2.0)) {
+		if(this->getPosition().first < (Game::map.getMapWidth()*32 - this->getSpriteSize().first / 2.0)) {
 			this->updatePosition(+2, 0);
 			this->animation_index = 2;
 		}
 	}
 	if(arrowKey == sf::Keyboard::Down) {
-		if(this->getPosition().y < (Game::map.getMapHeight()*32 - this->getSpriteSize().y / 2.0)) {
+		if(this->getPosition().second < (Game::map.getMapHeight()*32 - this->getSpriteSize().second / 2.0)) {
 			this->updatePosition(0, +2);
 			this->animation_index = 0;
 		}
 	}
 	if(arrowKey == sf::Keyboard::Left) {
-		if(this->getPosition().x > (0 + this->getSpriteSize().x / 2.0)) {
+		if(this->getPosition().first > (0 + this->getSpriteSize().first / 2.0)) {
 			this->updatePosition(-2, 0);
 			this->animation_index = 1;
 		}

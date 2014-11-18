@@ -45,7 +45,7 @@ class GameObject {
       *   @return Void.
       */
     virtual void setPosition(float x, float y);
-	virtual sf::Vector2f getPosition() const;
+	virtual std::pair<float, float> getPosition() const;
 	std::string getFileName() const;
 	bool spriteContains(sf::Vector2i position) const;
 
@@ -54,8 +54,8 @@ class GameObject {
 	virtual sf::FloatRect getGlobalBounds() const;
 	virtual	bool boxToBoxIntersection(GameObject* game_object);
 	virtual bool circleToCircleIntersection(GameObject* game_object);
-	virtual sf::Vector2f getSpriteCenter();
-	virtual sf::Vector2f getSpriteSize();
+	virtual std::pair<float, float> getSpriteCenter();
+	virtual std::pair<float, float> getSpriteSize();
 	virtual float getRectangleSpriteRadius();
 	virtual	void setRotation(float angle); 
 

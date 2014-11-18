@@ -107,7 +107,7 @@ bool Tower::canAttack(Critter* critter) { //@MARK canAttack() is performing 3 fu
 	}
 	else{
 		_target = executeStrategy(critter);
-		//_target = critter;//@MARK why is this if condition different from the one below?
+		//_target = critter;
 		// I changed them to be more consistent -Jeremy-
 	}
 
@@ -130,17 +130,17 @@ Critter* Tower::attack() {
 
 /** 
   * @brief Determines collision path based on position of tower object and the distance in a straight line towards critter 
-  * @return sf::Vector2f
+  * @return std::pair<float, float>
   */
-sf::Vector2f Tower::findCollisionPath(Critter* critter) {
-	return sf::Vector2f (this->getPosition() - critter->getPosition());
+std::pair<float, float> Tower::findCollisionPath(Critter* critter) {
+	return std::pair<float, float> (this->getPosition().first - critter->getPosition().first, this->getPosition().second - critter->getPosition().second);
 }
 
 /**
   * @brief Calculates angle between an x and y component in degrees from the horizontal
   * @return float
   */
-float Tower::angle(float x, float y) {
+float Tower::angleInDegrees(float x, float y) {
 	return std::atan2(x, y) * 180 / M_PI;
 }
 
@@ -149,11 +149,11 @@ float Tower::angle(float x, float y) {
   * @return void
   */
 void Tower::rotateTowardsTarget() {
-	sf::Vector2f collisionPath = findCollisionPath(this->_target);
+	std::pair<float, float> collisionPath = findCollisionPath(this->_target);
 
-	float facingCritterAngle = angle(collisionPath.x, collisionPath.y);
+	float facingCritterAngle = angleInDegrees(collisionPath.first, collisionPath.second);
 	
-	cout << "CollisionPath ("<< collisionPath.x << ", " << collisionPath.y << ")";
+	cout << "CollisionPath ("<< collisionPath.first << ", " << collisionPath.second << ")";
 	this->setRotation(facingCritterAngle);
 	//this->move(this->getPosition().x + this->getSpriteSize().x/2, this->getPosition().y + this->getSpriteSize().y/2); 
 }
@@ -184,33 +184,50 @@ void Tower::applySpecialEffect(Critter* critter) {
 		cout << red << "Applying electrocute" << endl;
 		break;
 	*/
-	case SpecialEffect::Burning:
+	case SpecialEffect::Burning: {
 		cout << red << "Applying burning" << endl;
+		}
 		break;
 
-	case SpecialEffect::Freezing:
-		cout << red << "Applying freezing" << endl;
-		
-		
-		//if(time.asSeconds()) {
-		//	//time.asSeconds()*this->getRateOfFire() >= 1;
-		//	clock.restart();
+	case SpecialEffect::Freezing: {
+		//cout << red << "Applying Freezing Effect" << endl;
+
+		//float speedBeforeFrozen = critter->getSpeed();
+		//cout << "speed before frozen " << speedBeforeFrozen << endl;
+
+		//critter->setSpeed(0.0f);
+		//cout << "speed after frozen " << critter->getSpeed() << endl;
+
+		//
+		//sf::Clock frozenClock;
+		//sf::Time frozenTime;
+
+		//frozenTime = frozenClock.getElapsedTime();
+		//cout << "frozen time in seconds" << frozenTime.asSeconds() << endl;
+		//
+		//if(frozenTime.asSeconds() < 3) {
+		//	cout << "IN IF: frozen time in seconds" << frozenTime.asSeconds() << endl;
+		//	frozenTime += frozenClock.getElapsedTime();
+		//	frozenClock.restart();
 		//}
-		//cout << red << "Unfreezing freezing" << endl;
-		//	if freeze then slow speed of critter temporarily
+		//critter->setSpeed(speedBeforeFrozen);
+		//cout << "speed completing frozen " << critter->getSpeed() << endl;
 
-
+		//cout << red << "Unfreezing" << endl;
+		}
 		break;
-	
-	case SpecialEffect::Slowing:
-		cout << red << "Applying slowing" << endl;
+
+	case SpecialEffect::Slowing: {
+		cout << red << "Applying Slowing Effect" << endl;
 		cout << red << "Initial speed: " << critter->getSpeed() << endl;
-		critter->reduceSpeed(5.0f + 2.5f * this->getUpgradeLevel());
+		critter->reduceSpeed(10.0f);
 		cout << red << "Final speed: " << critter->getSpeed() << endl;
+		}
 		break;
 	
-	case SpecialEffect::None:
+	case SpecialEffect::None: {
 		cout << red << "Applying no effect" << endl;
+		}
 		break;
 	}
 }
@@ -249,9 +266,9 @@ std::string Tower::getTowerSpecs() {
 bool Tower::circleToCircleIntersection(GameObject* game_object){
 	float radius = this->_range_shape.getRadius();
 
-	sf::Vector2f distance = this->getSpriteCenter() - game_object->getSpriteCenter();
+	std::pair <int, int> distance (this->getSpriteCenter().first - game_object->getSpriteCenter().first, this->getSpriteCenter().second - game_object->getSpriteCenter().second);  
 	
-	return sqrt(distance.x * distance.x + distance.y * distance.y) <= radius;
+	return std::sqrt(std::pow(distance.first, 2) + std::pow(distance.second, 2)) <= radius;
 }
 
 TowerStrategy* Tower::getStrategy() const{

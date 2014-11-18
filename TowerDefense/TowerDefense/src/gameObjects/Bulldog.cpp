@@ -13,7 +13,7 @@ Bulldog::Bulldog(int tileX, int tileY) {
 	this->_range = Tower::Range::Small;
 	this->setRangeShape(_range);
 	this->_rate_of_fire = Tower::RateOfFire::Slow;
-	this->_special_effect = Tower::SpecialEffect::None;
+	this->_special_effect = Tower::SpecialEffect::Freezing;
 	this->_upgrade_cost = 20;
 	this->_sell_cost = 30;
 	

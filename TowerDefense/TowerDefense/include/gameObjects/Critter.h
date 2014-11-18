@@ -41,9 +41,9 @@ class Critter : public GameObject, public ISubject {
     int getStealPointsStrength() const; 
     int getPlayerReward() const; 
     float getSpeed() const;
+	void setSpeed(float speed);
 	void reduceSpeed(float speed);
     int getLevel() const;
-    sf::Vector2f getPosition() const;
     Waypoint* getCurrentWaypoint() const;
     void setCurrentWaypoint(Waypoint* waypoint);
     void setAnimationIndex(unsigned int index);
