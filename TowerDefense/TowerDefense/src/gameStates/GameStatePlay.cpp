@@ -200,9 +200,9 @@ void GameStatePlay::handleInput() {
 				while(critters[i]->isActive && tower->canAttack(critters[i]) && !this->game->isGamePaused) {
 					//made attack() return a pointer to the critter it damaged... for use in displaying critter health above their heads each time they take dmg
 					Critter* target = tower->attack();
-					sf::Vector2f tpos = target->getPosition();
+					std::pair<float, float> tpos = target->getPosition();
 					sf::Text ch(std::to_string(target->getHitPoints()), font, 12); 
-					ch.setPosition(tpos.x, tpos.y -18);
+					ch.setPosition(tpos.first, tpos.second - 18);
 					ch.setColor(sf::Color::Red);
 					critterHealth[target->getId()] = ch;
 					sf::Clock c;
@@ -357,8 +357,8 @@ void GameStatePlay::drawWaypoints(std::vector<Waypoint> waypoints, sf::RenderWin
 }
 
 bool GameStatePlay::checkIfAtEndTile(Critter* critter) {
-  if (int(critter->getPosition().x) == this->current_waypoints[current_waypoints.size() - 1].position.x 
-   && int(critter->getPosition().y) == this->current_waypoints[current_waypoints.size() - 1].position.y) 
+  if (int(critter->getPosition().first) == this->current_waypoints[current_waypoints.size() - 1].position.x 
+   && int(critter->getPosition().second) == this->current_waypoints[current_waypoints.size() - 1].position.y) 
     return true;
   else
     return false;

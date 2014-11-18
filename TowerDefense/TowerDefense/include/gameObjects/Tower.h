@@ -16,9 +16,9 @@ class Tower: public GameObject, public IObserver{
 	Critter* attack();
 	void update();
 	Critter* executeStrategy(Critter* critter);
-	sf::Vector2f findCollisionPath(Critter* critter);
+	std::pair<float, float> findCollisionPath(Critter* critter);
 	void rotateTowardsTarget();
-	float angle(float x, float y);
+	float angleInDegrees(float x, float y);
 
     enum TowerType { ShihTzu, Dalmatian, Bulldog };
 	enum UpgradeLevel { Upgrade0, Upgrade1, Upgrade2 };

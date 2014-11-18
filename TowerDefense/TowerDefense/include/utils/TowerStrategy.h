@@ -12,8 +12,8 @@ public:
 	inline Critter* computeTarget(Critter* critter1, Critter* critter2, GameObject* tower){
 		//using mathematical formula for distance
 		float distance1, distance2;
-		distance1 = sqrt(pow(critter1->getPosition().x  - tower->getPosition().x, 2) + pow(critter1->getPosition().y  - tower->getPosition().y, 2));
-		distance2 = sqrt(pow(critter2->getPosition().x  - tower->getPosition().x, 2) + pow(critter2->getPosition().y  - tower->getPosition().y, 2));
+		distance1 = sqrt(pow(critter1->getPosition().first  - tower->getPosition().first, 2) + pow(critter1->getPosition().second  - tower->getPosition().second, 2));
+		distance2 = sqrt(pow(critter2->getPosition().first  - tower->getPosition().first, 2) + pow(critter2->getPosition().second  - tower->getPosition().second, 2));
 		if(distance1 < distance2)
 			return  critter1;
 		else
