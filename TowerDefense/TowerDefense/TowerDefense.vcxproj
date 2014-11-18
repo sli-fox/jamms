@@ -93,6 +93,9 @@
     <ClInclude Include="include\gameObjects\Tile.h" />
     <ClInclude Include="include\gameObjects\Tower.h" />
     <ClInclude Include="include\gameObjects\ShihTzu.h" />
+    <ClInclude Include="include\gameObjects\Towers\ITower.h" />
+    <ClInclude Include="include\gameObjects\Towers\DTower.h" />
+    <ClInclude Include="include\gameObjects\Towers\TowerUpgrades.h" />
     <ClInclude Include="include\gameObjects\WhiteCat.h" />
     <ClInclude Include="include\gameStates\GameState.h" />
     <ClInclude Include="include\gameStates\GameStateGameOver.h" />
@@ -128,6 +131,9 @@
     <ClCompile Include="src\gameObjects\Tile.cpp" />
     <ClCompile Include="src\gameObjects\Tower.cpp" />
     <ClCompile Include="src\gameObjects\ShihTzu.cpp" />
+    <ClCompile Include="src\gameObjects\Towers\ITower.cpp" />
+    <ClCompile Include="src\gameObjects\Towers\DTower.cpp" />
+    <ClCompile Include="src\gameObjects\Towers\TowerUpgrades.cpp" />
     <ClCompile Include="src\gameObjects\WhiteCat.cpp" />
     <ClCompile Include="src\gameStates\GameStateGameOver.cpp" />
     <ClCompile Include="src\gameStates\GameStateGameWin.cpp" />

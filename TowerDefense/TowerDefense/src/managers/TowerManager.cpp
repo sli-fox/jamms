@@ -75,6 +75,11 @@ Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
 	return NULL;
 }
 
+DTower* TowerManager::DbuyTower(int tileX, int tileY) {
+	Dtowers[make_pair(tileX, tileY)] = new DTower(tileX, tileY);
+	return Dtowers[make_pair(tileX, tileY)];
+}
+
 void TowerManager::sellTower(int tileX, int tileY)  {
 	if(!outOfBound(tileX, tileY) && isTileFree(tileX, tileY))
 		return;
@@ -89,6 +94,11 @@ void TowerManager::sellTower(int tileX, int tileY)  {
 //draws tower to game window
 void TowerManager::draw(sf::RenderWindow& gameWindow){
 	for(std::map<std::pair<int,int>, Tower*>::iterator it = towers.begin() ; it != towers.end() ; ++it) {
+		if(it->second != NULL)
+			it->second->draw(gameWindow);
+	}
+	
+	for(std::map<std::pair<int,int>, DTower*>::iterator it = Dtowers.begin() ; it != Dtowers.end() ; ++it) {
 		if(it->second != NULL)
 			it->second->draw(gameWindow);
 	}

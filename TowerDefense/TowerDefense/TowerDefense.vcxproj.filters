@@ -55,6 +55,12 @@
     <Filter Include="Header Files\Utils\Views">
       <UniqueIdentifier>{7db0e6fb-b5d3-4ae8-bdf7-75170e2f43bb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\GameObjects\Towers">
+      <UniqueIdentifier>{2e647bf5-30bd-405b-9a51-47adcfbad57b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects\Towers">
+      <UniqueIdentifier>{90add794-0db3-43eb-b734-698cdf4b1082}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\test\TextureManagerTest.h">
@@ -162,6 +168,15 @@
     <ClInclude Include="include\gameStates\GameStateWin.h">
       <Filter>Header Files\GameStates</Filter>
     </ClInclude>
+    <ClInclude Include="include\gameObjects\Towers\ITower.h">
+      <Filter>Header Files\GameObjects\Towers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\Towers\DTower.h">
+      <Filter>Header Files\GameObjects\Towers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\Towers\TowerUpgrades.h">
+      <Filter>Header Files\GameObjects\Towers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game.cpp">
@@ -250,6 +265,15 @@
     </ClCompile>
     <ClCompile Include="src\gameStates\GameStateGameWin.cpp">
       <Filter>Source Files\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\Towers\ITower.cpp">
+      <Filter>Source Files\GameObjects\Towers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\Towers\DTower.cpp">
+      <Filter>Source Files\GameObjects\Towers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\Towers\TowerUpgrades.cpp">
+      <Filter>Source Files\GameObjects\Towers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

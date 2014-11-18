@@ -252,6 +252,9 @@ void GameStatePlay::handleInput() {
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 				(!show_waypoints) ? show_waypoints = true : show_waypoints = false;
 				//show_waypoints = !show_waypoints;
+			
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+				tower_manager.DbuyTower(tileX, tileY);
 			break;
 		}
 		default: break;

@@ -19,7 +19,7 @@ class Tower: public GameObject, public IObserver {
 
     enum TowerType { ShihTzu, Dalmatian, Bulldog };
 	enum UpgradeLevel { Upgrade0, Upgrade1, Upgrade2 };
-	enum Range { Small=1, Medium, Large };
+	//enum Range { Small=1, Medium, Large };
 	enum RateOfFire { Slow = 1, Normal, Fast };
 	enum SpecialEffect { None, Slowing, Burning, Freezing };
 	
@@ -29,7 +29,7 @@ class Tower: public GameObject, public IObserver {
     Tower::TowerType getType() const;
 	Tower::UpgradeLevel getUpgradeLevel() const;
 	int getPower() const;
-	Tower::Range getRange() const;
+	float getRange() const;
 	sf::CircleShape getRangeShape() const;
 	Tower::RateOfFire getRateOfFire() const;
 	bool getIsFiring() const;
@@ -44,8 +44,8 @@ class Tower: public GameObject, public IObserver {
     void setType(Tower::TowerType _tower_type);
 	void setUpgradeLevel(Tower::UpgradeLevel _upgrade_level);
 	void setPower(int _power);
-	void setRange(Tower::Range _range);
-	void setRangeShape(Tower::Range range);
+	void setRange(float _range);
+	void setRangeShape(float range);
 	void setRateOfFire(Tower::RateOfFire _rate_of_fire);
 	void setIsFiring(bool b);
 	void setSpecialEffect(Tower::SpecialEffect _special_effect);
@@ -64,7 +64,7 @@ class Tower: public GameObject, public IObserver {
     TowerType _type;
 	UpgradeLevel _upgrade_level;
 	int _power;
-	Range _range;
+	float _range;
 	sf::CircleShape _range_shape;
 	RateOfFire _rate_of_fire;
 	SpecialEffect _special_effect;
