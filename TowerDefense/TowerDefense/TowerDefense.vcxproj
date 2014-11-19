@@ -153,6 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\images\critters\WhiteCatSpriteSheet.png" />
+    <Image Include="resources\images\RedoBtn.png" />
     <Image Include="resources\images\towers\AntibacterialTower_0.png" />
     <Image Include="resources\images\towers\AntibacterialTower_1.png" />
     <Image Include="resources\images\towers\AntibacterialTower_2.png" />
@@ -162,6 +163,7 @@
     <Image Include="resources\images\towers\WhiteBloodCellTower_0.png" />
     <Image Include="resources\images\towers\WhiteBloodCellTower_1.png" />
     <Image Include="resources\images\towers\WhiteBloodCellTower_2.png" />
+    <Image Include="resources\images\UndoBtn.png" />
     <Image Include="resources\MainMenuScreen.png" />
     <Image Include="resources\SplashScreen.png" />
   </ItemGroup>

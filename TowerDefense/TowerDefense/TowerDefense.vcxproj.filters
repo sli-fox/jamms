@@ -298,5 +298,11 @@
     <Image Include="resources\images\critters\WhiteCatSpriteSheet.png">
       <Filter>Resource Files\Images</Filter>
     </Image>
+    <Image Include="resources\images\RedoBtn.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="resources\images\UndoBtn.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -176,6 +176,15 @@ void GameStateMapEditor::buttonCommandLibrary(){
 			this->game->map.blankMap();
 			trackMapEvents->recordResetMap();
 		}
+		else if(buttonMap["UndoBtn"].spriteContains(localPosition))
+		{
+			trackMapEvents->undo();
+		}
+		else if(buttonMap["RedoBtn"].spriteContains(localPosition))
+		{
+			trackMapEvents->redo();
+		}
+
 		else if(buttonMap["saveBtn"].spriteContains(localPosition)){
 			if(!pauseSave){
 				pauseSave = true;
@@ -341,6 +350,16 @@ void GameStateMapEditor::initializeButtonMap(){
 	plusSizeBtnX.setPosition(4.5*32,20*32);
 	buttonMap.emplace("plusSizeBtnX", plusSizeBtnX);
 
+	GameObject undoMapBtn;
+	undoMapBtn.load(imagePath + "UndoBtn.png");
+	undoMapBtn.setPosition(0*32,22*32);
+	buttonMap.emplace("UndoBtn", undoMapBtn); 
+
+	GameObject redoMapBtn;
+	redoMapBtn.load(imagePath + "RedoBtn.png");
+	redoMapBtn.setPosition(0*32,23*32);
+	buttonMap.emplace("RedoBtn", redoMapBtn);
+
 	GameObject displayX;
 	displayX.load(imagePath + "blank.png");
 	displayX.setPosition(3.5*32,20*32);
@@ -396,5 +415,4 @@ void GameStateMapEditor::initializeButtonMap(){
 	userInputDisplay.setPosition(6*32+4,18*32);
 	userInputDisplay.setColor(sf::Color::Black);
 	userInputDisplay.setCharacterSize(14);
-
 }

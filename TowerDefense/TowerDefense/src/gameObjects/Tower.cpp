@@ -83,7 +83,7 @@ void Tower::setTarget(Critter* crit) {
 
 void Tower::setRangeShape(float range) {
 	range *= 32;
-	_range_shape.setPosition(this->getPosition().x, this->getPosition().y);
+	_range_shape.setPosition(this->getPosition().first, this->getPosition().second);
 	_range_shape.setRadius(range);
 	_range_shape.setFillColor(sf::Color::Transparent);
 	_range_shape.setOutlineThickness(2);
