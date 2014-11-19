@@ -106,6 +106,14 @@ void GameStatePlay::draw(const float delta_time) {
 	  this->game->game_window.draw(towerSpecs);
 	  //this->game->game_window.draw(upgradeTowerSpecs);
     }
+	if(!critterHealth.empty() && !healthClock.empty()){
+		for(int i = 0 ; i < critterHealth.size() ; ++i){
+			healthTime = healthClock[i].getElapsedTime();
+			if(healthTime.asSeconds() > 0.5 )
+				critterHealth[i].setString("");
+			this->game->game_window.draw(critterHealth[i]);
+		}
+	}
 }
 
 void GameStatePlay::update(const float delta_time) {
@@ -189,10 +197,16 @@ void GameStatePlay::handleInput() {
 		if(tower != NULL) {
 		
 			for (int i = 0; i < critters.size(); ++i) {
-
 				while(critters[i]->isActive && tower->canAttack(critters[i]) && !this->game->isGamePaused) {
-
-					tower->attack();
+					//made attack() return a pointer to the critter it damaged... for use in displaying critter health above their heads each time they take dmg
+					Critter* target = tower->attack();
+					std::pair<float, float> tpos = target->getPosition();
+					sf::Text ch(std::to_string(target->getHitPoints()), font, 12); 
+					ch.setPosition(tpos.first, tpos.second - 18);
+					ch.setColor(sf::Color::Red);
+					critterHealth[target->getId()] = ch;
+					sf::Clock c;
+					healthClock[target->getId()] = c;
 
 					if(!critters[i]->getSpecialEffectApplied()) {
 						tower->applySpecialEffect(critters[i]);
@@ -346,8 +360,8 @@ void GameStatePlay::drawWaypoints(std::vector<Waypoint> waypoints, sf::RenderWin
 }
 
 bool GameStatePlay::checkIfAtEndTile(Critter* critter) {
-  if (int(critter->getPosition().x) == this->current_waypoints[current_waypoints.size() - 1].position.x 
-   && int(critter->getPosition().y) == this->current_waypoints[current_waypoints.size() - 1].position.y) 
+  if (int(critter->getPosition().first) == this->current_waypoints[current_waypoints.size() - 1].position.x 
+   && int(critter->getPosition().second) == this->current_waypoints[current_waypoints.size() - 1].position.y) 
     return true;
   else
     return false;
@@ -475,6 +489,7 @@ void GameStatePlay::buttonCommandLibrary(){
 		if(buttonMap["returnToEditorBtn"].spriteContains(localPosition)){
 			returnToMenu = true;
 			tower_manager.clearAllTowers();
+			game->player.resetStats();
 			this->game->popState();
 		}
 		else if(buttonMap["startWaveBtn"].spriteContains(localPosition)){

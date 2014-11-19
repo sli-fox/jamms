@@ -6,7 +6,6 @@ int const Bulldog::buy_cost = 70;
 Bulldog::Bulldog(int tileX, int tileY) {
 	this->load("resources/images/towers/bulldog_0.png");
 	this->setPosition(tileX*32, tileY*32);		// has to be set BEFORE setRange();
-
 	this->_id = Bulldog::serial++;
 	this->_name = "Bulldog_" + std::to_string(this->_id);
 	this->_type = Tower::Bulldog;
@@ -14,7 +13,7 @@ Bulldog::Bulldog(int tileX, int tileY) {
 	this->_power = 2;
 	this->setRange(1);
 	this->_rate_of_fire = Tower::RateOfFire::Slow;
-	this->_special_effect = Tower::SpecialEffect::None;
+	this->_special_effect = Tower::SpecialEffect::Freezing;
 	this->_upgrade_cost = 20;
 	this->_sell_cost = 30;
 	

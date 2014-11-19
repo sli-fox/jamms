@@ -35,8 +35,12 @@ void GameObject::setPosition(float x, float y) {
   }
 }
 
-  sf::Vector2f GameObject::getPosition() const{
-	  return sprite.getPosition();
+/**
+  * @brief Converts and retrieves an pair<float, float> object from a sf::vector2f
+  * @return std::pair<float, float>
+  */
+  std::pair<float, float> GameObject::getPosition() const{
+	  return std::pair<float, float> (this->sprite.getPosition().x, this->sprite.getPosition().y);
   }
 
   std::string GameObject::getFileName() const{
@@ -83,9 +87,9 @@ bool GameObject::circleToCircleIntersection(GameObject* game_object) {
 	float radius_1 = this->getRectangleSpriteRadius();
 	float radius_2 = game_object->getRectangleSpriteRadius();
 
-	sf::Vector2f distance = this->getSpriteCenter() - game_object->getSpriteCenter();
+	std::pair <int, int> distance (this->getSpriteCenter().first - game_object->getSpriteCenter().first, this->getSpriteCenter().second - game_object->getSpriteCenter().second);  
 
-	return (distance.x * distance.x + distance.y * distance.y) <= (radius_1 + radius_2);
+	return std::sqrt(std::pow(distance.first, 2) + std::pow(distance.second, 2)) <= (radius_1 + radius_2);
 }
 
  /**
@@ -93,25 +97,25 @@ bool GameObject::circleToCircleIntersection(GameObject* game_object) {
   * @return bool
   */
 float GameObject::getRectangleSpriteRadius() {
-	sf::Vector2f size = this->getSpriteSize();
-	return (size.x + size.y) * 2.5; // originally divided by 4. changed to get slightly more "accurate" collision
+	std::pair<float, float> size = this->getSpriteSize();
+	return (size.first + size.second) * 2.5; // originally divided by 4. changed to get slightly more "accurate" collision
 }
 
  /**
   * @brief Gets the center of a sprite
-  * @return bool
+  * @return std::pair<float, float>
   */
-sf::Vector2f GameObject::getSpriteCenter() {
+std::pair<float, float> GameObject::getSpriteCenter() {
 	sf::FloatRect globalBounds = this->sprite.getGlobalBounds();
-	return sf::Vector2f (globalBounds.left + globalBounds.width / 2.0f, globalBounds.top + globalBounds.height / 2.0f);
+	return std::pair<float, float> (globalBounds.left + globalBounds.width / 2.0f, globalBounds.top + globalBounds.height / 2.0f);
 }
 
  /**
   * @brief Gets the size of a sprite
-  * @return sf::Vector2f
+  * @return std::pair<float, float>
   */
-sf::Vector2f GameObject::getSpriteSize() {
+std::pair<float, float> GameObject::getSpriteSize() {
 	sf::IntRect size = this->sprite.getTextureRect();
 	sf::Vector2f scale = this->sprite.getScale();
-	return sf::Vector2f (size.width * scale.x, size.height * scale.y);
+	return std::pair<float, float> (size.width * scale.x, size.height * scale.y);
 }

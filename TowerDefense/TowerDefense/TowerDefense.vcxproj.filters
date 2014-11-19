@@ -168,6 +168,7 @@
     <ClInclude Include="include\gameStates\GameStateWin.h">
       <Filter>Header Files\GameStates</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="include\gameObjects\Towers\ITower.h">
       <Filter>Header Files\GameObjects\Towers</Filter>
     </ClInclude>
@@ -179,6 +180,13 @@
     </ClInclude>
     <ClInclude Include="include\gameObjects\Towers\TowerDecorator.h">
       <Filter>Header Files\GameObjects\Towers</Filter>
+=======
+    <ClInclude Include="include\utils\TowerStrategy.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TrackMapInput.h">
+      <Filter>Header Files</Filter>
+>>>>>>> daa778d3d09b325a309e2eb91da6f9320627e256
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -269,6 +277,7 @@
     <ClCompile Include="src\gameStates\GameStateGameWin.cpp">
       <Filter>Source Files\GameStates</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="src\gameObjects\Towers\ConcreteTower.cpp">
       <Filter>Source Files\GameObjects\Towers</Filter>
     </ClCompile>
@@ -277,6 +286,10 @@
     </ClCompile>
     <ClCompile Include="src\gameObjects\Towers\TowerDecorator.cpp">
       <Filter>Source Files\GameObjects\Towers</Filter>
+=======
+    <ClCompile Include="TrackMapInput.cpp">
+      <Filter>Source Files</Filter>
+>>>>>>> daa778d3d09b325a309e2eb91da6f9320627e256
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -7,6 +7,7 @@ Tower::Tower() {
 	this->_upgrade_level = Tower::UpgradeLevel::Upgrade0;
 	this->_target = NULL;
 	this->time = clock.getElapsedTime();
+	this->_strategy.reset(new WeakestStrategy());
 }
 
 //ACCESSORS
@@ -98,41 +99,51 @@ sf::CircleShape Tower::getRangeShape() const {
   * @brief Determines whether tower can attack a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay
   * @return bool
   */
-bool Tower::canAttack(Critter* critter) {
-	this->time = this->clock.getElapsedTime();
+bool Tower::canAttack(Critter* critter) { //@MARK canAttack() is performing 3 functions. range checking, attack timer checking, and target selection. we should split them into 3 methods in my opinion -Jeremy-
 	
-	if(this->_target != NULL && this->_target->getId() < critter->getId()) 
-		_target = critter;//@MARK why is this if condition different from the one below?
+	if(!this->_target == NULL && (!this->circleToCircleIntersection(_target) || !_target->isActive))
+		this->_target = NULL;
 
-	if(this->circleToCircleIntersection(critter) && time.asSeconds()*this->getRateOfFire() >= 1 && this->_target == NULL) {
+	if(this->_target == NULL) {
 		_target = critter;
 		//this->rotateTowardsTarget();
+	}
+	else{
+		_target = executeStrategy(critter);
+		//_target = critter;
+		// I changed them to be more consistent -Jeremy-
+	}
+
+	this->time = this->clock.getElapsedTime();
+	
+	if(this->circleToCircleIntersection(_target) && time.asSeconds()*this->getRateOfFire() >= 1){
 		clock.restart();
 		return true;
 	}
-	this->_target = NULL;
+
 	return false;
 }
 
-void Tower::attack() {
+Critter* Tower::attack() {
 	std::cout << yellow << "WOUF WOUF! Scared cat " << this->_target->getId() << "!" << std::endl;
 	this->_target->inflictDamage(this->getPower());
 	std::cout << yellow << "Cat " << this->_target->getId() << " now has " << this->_target->getHitPoints() << " HP" << std::endl;
+	return _target;
 }
 
 /** 
   * @brief Determines collision path based on position of tower object and the distance in a straight line towards critter 
-  * @return sf::Vector2f
+  * @return std::pair<float, float>
   */
-sf::Vector2f Tower::findCollisionPath(Critter* critter) {
-	return sf::Vector2f (this->getPosition() - critter->getPosition());
+std::pair<float, float> Tower::findCollisionPath(Critter* critter) {
+	return std::pair<float, float> (this->getPosition().first - critter->getPosition().first, this->getPosition().second - critter->getPosition().second);
 }
 
 /**
   * @brief Calculates angle between an x and y component in degrees from the horizontal
   * @return float
   */
-float Tower::angle(float x, float y) {
+float Tower::angleInDegrees(float x, float y) {
 	return std::atan2(x, y) * 180 / M_PI;
 }
 
@@ -141,11 +152,11 @@ float Tower::angle(float x, float y) {
   * @return void
   */
 void Tower::rotateTowardsTarget() {
-	sf::Vector2f collisionPath = findCollisionPath(this->_target);
+	std::pair<float, float> collisionPath = findCollisionPath(this->_target);
 
-	float facingCritterAngle = angle(collisionPath.x, collisionPath.y);
+	float facingCritterAngle = angleInDegrees(collisionPath.first, collisionPath.second);
 	
-	cout << "CollisionPath ("<< collisionPath.x << ", " << collisionPath.y << ")";
+	cout << "CollisionPath ("<< collisionPath.first << ", " << collisionPath.second << ")";
 	this->setRotation(facingCritterAngle);
 	//this->move(this->getPosition().x + this->getSpriteSize().x/2, this->getPosition().y + this->getSpriteSize().y/2); 
 }
@@ -176,33 +187,50 @@ void Tower::applySpecialEffect(Critter* critter) {
 		cout << red << "Applying electrocute" << endl;
 		break;
 	*/
-	case SpecialEffect::Burning:
+	case SpecialEffect::Burning: {
 		cout << red << "Applying burning" << endl;
+		}
 		break;
 
-	case SpecialEffect::Freezing:
-		cout << red << "Applying freezing" << endl;
-		
-		
-		//if(time.asSeconds()) {
-		//	//time.asSeconds()*this->getRateOfFire() >= 1;
-		//	clock.restart();
+	case SpecialEffect::Freezing: {
+		//cout << red << "Applying Freezing Effect" << endl;
+
+		//float speedBeforeFrozen = critter->getSpeed();
+		//cout << "speed before frozen " << speedBeforeFrozen << endl;
+
+		//critter->setSpeed(0.0f);
+		//cout << "speed after frozen " << critter->getSpeed() << endl;
+
+		//
+		//sf::Clock frozenClock;
+		//sf::Time frozenTime;
+
+		//frozenTime = frozenClock.getElapsedTime();
+		//cout << "frozen time in seconds" << frozenTime.asSeconds() << endl;
+		//
+		//if(frozenTime.asSeconds() < 3) {
+		//	cout << "IN IF: frozen time in seconds" << frozenTime.asSeconds() << endl;
+		//	frozenTime += frozenClock.getElapsedTime();
+		//	frozenClock.restart();
 		//}
-		//cout << red << "Unfreezing freezing" << endl;
-		//	if freeze then slow speed of critter temporarily
+		//critter->setSpeed(speedBeforeFrozen);
+		//cout << "speed completing frozen " << critter->getSpeed() << endl;
 
-
+		//cout << red << "Unfreezing" << endl;
+		}
 		break;
-	
-	case SpecialEffect::Slowing:
-		cout << red << "Applying slowing" << endl;
+
+	case SpecialEffect::Slowing: {
+		cout << red << "Applying Slowing Effect" << endl;
 		cout << red << "Initial speed: " << critter->getSpeed() << endl;
-		critter->reduceSpeed(5.0f + 2.5f * this->getUpgradeLevel());
+		critter->reduceSpeed(10.0f);
 		cout << red << "Final speed: " << critter->getSpeed() << endl;
+		}
 		break;
 	
-	case SpecialEffect::None:
+	case SpecialEffect::None: {
 		cout << red << "Applying no effect" << endl;
+		}
 		break;
 	}
 }
@@ -240,7 +268,19 @@ std::string Tower::getTowerSpecs() {
 bool Tower::circleToCircleIntersection(GameObject* game_object){
 	float radius = this->_range_shape.getRadius();
 
-	sf::Vector2f distance = this->getSpriteCenter() - game_object->getSpriteCenter();
+	std::pair <int, int> distance (this->getSpriteCenter().first - game_object->getSpriteCenter().first, this->getSpriteCenter().second - game_object->getSpriteCenter().second);  
 	
-	return sqrt(distance.x * distance.x + distance.y * distance.y) <= radius;
+	return std::sqrt(std::pow(distance.first, 2) + std::pow(distance.second, 2)) <= radius;
+}
+
+TowerStrategy* Tower::getStrategy() const{
+	return this->_strategy.get();
+}
+
+void Tower::setStrategy(TowerStrategy* newStrategy){
+	this->_strategy.reset(newStrategy);
+}
+
+Critter* Tower::executeStrategy(Critter* critter){
+	return this->_strategy->computeTarget(critter, _target, this);
 }
