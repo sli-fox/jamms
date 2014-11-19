@@ -1,6 +1,5 @@
 #pragma once
 #include <Managers/TowerManager.h>
-#include <Game.h>
 
 TowerManager::TowerManager(int mapWidth, int mapHeight) {
 	tArrayRows = mapWidth;
@@ -75,8 +74,11 @@ Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
 	return NULL;
 }
 
-DTower* TowerManager::DbuyTower(int tileX, int tileY) {
-	Dtowers[make_pair(tileX, tileY)] = new DTower(tileX, tileY);
+ITower* TowerManager::DecBuyTower(int tileX, int tileY) {
+	Dec::ConcreteTower* ct = new Dec::FreezeEffect(new Dec::TowerDecorator(new Dec::ConcreteTower(tileX, tileY)));
+	ct->getTowerSpecs();
+	ct->attack();
+	Dtowers[make_pair(tileX, tileY)] = ct;
 	return Dtowers[make_pair(tileX, tileY)];
 }
 
@@ -98,7 +100,7 @@ void TowerManager::draw(sf::RenderWindow& gameWindow){
 			it->second->draw(gameWindow);
 	}
 	
-	for(std::map<std::pair<int,int>, DTower*>::iterator it = Dtowers.begin() ; it != Dtowers.end() ; ++it) {
+	for(std::map<std::pair<int,int>, ITower*>::iterator it = Dtowers.begin() ; it != Dtowers.end() ; ++it) {
 		if(it->second != NULL)
 			it->second->draw(gameWindow);
 	}

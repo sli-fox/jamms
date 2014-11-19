@@ -171,10 +171,13 @@
     <ClInclude Include="include\gameObjects\Towers\ITower.h">
       <Filter>Header Files\GameObjects\Towers</Filter>
     </ClInclude>
-    <ClInclude Include="include\gameObjects\Towers\DTower.h">
+    <ClInclude Include="include\gameObjects\Towers\ConcreteTower.h">
       <Filter>Header Files\GameObjects\Towers</Filter>
     </ClInclude>
-    <ClInclude Include="include\gameObjects\Towers\TowerUpgrades.h">
+    <ClInclude Include="include\gameObjects\Towers\FreezeEffect.h">
+      <Filter>Header Files\GameObjects\Towers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\Towers\TowerDecorator.h">
       <Filter>Header Files\GameObjects\Towers</Filter>
     </ClInclude>
   </ItemGroup>
@@ -266,13 +269,13 @@
     <ClCompile Include="src\gameStates\GameStateGameWin.cpp">
       <Filter>Source Files\GameStates</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\Towers\ITower.cpp">
+    <ClCompile Include="src\gameObjects\Towers\ConcreteTower.cpp">
       <Filter>Source Files\GameObjects\Towers</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\Towers\DTower.cpp">
+    <ClCompile Include="src\gameObjects\Towers\FreezeEffect.cpp">
       <Filter>Source Files\GameObjects\Towers</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\Towers\TowerUpgrades.cpp">
+    <ClCompile Include="src\gameObjects\Towers\TowerDecorator.cpp">
       <Filter>Source Files\GameObjects\Towers</Filter>
     </ClCompile>
   </ItemGroup>

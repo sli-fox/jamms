@@ -254,7 +254,7 @@ void GameStatePlay::handleInput() {
 				//show_waypoints = !show_waypoints;
 			
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-				tower_manager.DbuyTower(tileX, tileY);
+				tower_manager.DecBuyTower(tileX, tileY);
 			break;
 		}
 		default: break;
