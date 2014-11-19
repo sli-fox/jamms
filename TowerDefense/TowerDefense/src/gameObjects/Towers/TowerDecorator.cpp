@@ -6,7 +6,7 @@ Dec::TowerDecorator::TowerDecorator(ITower* decoratedTower) : _decoratedTower(de
 	this->_speed = 5;
 	this->_range = 32;
 	this->load("resources/images/dead.png");
-	this->setPosition(decoratedTower->getPosition().x, decoratedTower->getPosition().y);
+	this->setPosition(decoratedTower->getPosition().first, decoratedTower->getPosition().second);
 }
 
 // ACCESSORS

@@ -8,7 +8,7 @@ Dec::FreezeEffect::FreezeEffect() {
 Dec::FreezeEffect::FreezeEffect(ITower* decoratedTower) : _decoratedTower(decoratedTower) {
 	this->_effect = "Freezing Critter";
 	this->load("resources/images/end.png");
-	this->setPosition(decoratedTower->getPosition().x, decoratedTower->getPosition().y);
+	this->setPosition(decoratedTower->getPosition().first, decoratedTower->getPosition().second);
 }
 
 int Dec::FreezeEffect::getBuyCost() const {

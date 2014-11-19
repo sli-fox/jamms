@@ -56,10 +56,7 @@
       <UniqueIdentifier>{7db0e6fb-b5d3-4ae8-bdf7-75170e2f43bb}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\GameObjects\Towers">
-      <UniqueIdentifier>{2e647bf5-30bd-405b-9a51-47adcfbad57b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\GameObjects\Towers">
-      <UniqueIdentifier>{90add794-0db3-43eb-b734-698cdf4b1082}</UniqueIdentifier>
+      <UniqueIdentifier>{dc11e052-f510-4fff-ae0b-e0476e737a76}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -168,25 +165,23 @@
     <ClInclude Include="include\gameStates\GameStateWin.h">
       <Filter>Header Files\GameStates</Filter>
     </ClInclude>
-<<<<<<< HEAD
-    <ClInclude Include="include\gameObjects\Towers\ITower.h">
-      <Filter>Header Files\GameObjects\Towers</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gameObjects\Towers\ConcreteTower.h">
-      <Filter>Header Files\GameObjects\Towers</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gameObjects\Towers\FreezeEffect.h">
-      <Filter>Header Files\GameObjects\Towers</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gameObjects\Towers\TowerDecorator.h">
-      <Filter>Header Files\GameObjects\Towers</Filter>
-=======
     <ClInclude Include="include\utils\TowerStrategy.h">
       <Filter>Header Files\Utils</Filter>
     </ClInclude>
     <ClInclude Include="include\TrackMapInput.h">
       <Filter>Header Files</Filter>
->>>>>>> daa778d3d09b325a309e2eb91da6f9320627e256
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\Towers\ConcreteTower.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\Towers\FreezeEffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\Towers\ITower.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\Towers\TowerDecorator.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -277,19 +272,17 @@
     <ClCompile Include="src\gameStates\GameStateGameWin.cpp">
       <Filter>Source Files\GameStates</Filter>
     </ClCompile>
-<<<<<<< HEAD
-    <ClCompile Include="src\gameObjects\Towers\ConcreteTower.cpp">
-      <Filter>Source Files\GameObjects\Towers</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\Towers\FreezeEffect.cpp">
-      <Filter>Source Files\GameObjects\Towers</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\Towers\TowerDecorator.cpp">
-      <Filter>Source Files\GameObjects\Towers</Filter>
-=======
     <ClCompile Include="TrackMapInput.cpp">
       <Filter>Source Files</Filter>
->>>>>>> daa778d3d09b325a309e2eb91da6f9320627e256
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\Towers\ConcreteTower.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\Towers\FreezeEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\Towers\TowerDecorator.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
