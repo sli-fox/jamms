@@ -11,7 +11,7 @@ class Tower: public GameObject, public IObserver{
     Tower();
 	~Tower() { std::cout << red << _name << " has been deleted." << white << std::endl; };
 	void upgradeTower() {}
-	bool canAttack(Critter* critter);
+	virtual bool canAttack(Critter* critter) = 0;
 	bool canApplySpecialAfterEffects(Critter* critter);
 	virtual void attack() = 0;
 	void update();
@@ -44,10 +44,11 @@ class Tower: public GameObject, public IObserver{
 
 	//MUTATORS
     void setID(int _id);
+	void setName(std::string _name);
     void setType(Tower::TowerType _tower_type);
 	void setUpgradeLevel(Tower::UpgradeLevel _upgrade_level);
 	void setPower(int _power);
-	void setRange(float _range);
+	virtual void setRange(float _range) = 0;
 	void setRangeShape(float range);
 	void setRateOfFire(Tower::RateOfFire _rate_of_fire);
 	void setIsFiring(bool b);

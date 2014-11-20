@@ -199,13 +199,15 @@ void GameStatePlay::handleInput() {
 				while(critters[i]->isActive && tower->canAttack(critters[i]) && !this->game->isGamePaused) {
 					tower->attack();
 					Critter* target = tower->getTarget();
-					std::pair<float, float> tpos = target->getPosition();
-					sf::Text ch(std::to_string(target->getHitPoints()), font, 12); 
-					ch.setPosition(tpos.first, tpos.second - 18);
-					ch.setColor(sf::Color::Red);
-					critterHealth[target->getId()] = ch;
-					sf::Clock c;
-					healthClock[target->getId()] = c;
+					if(target != NULL) {
+						std::pair<float, float> tpos = target->getPosition();
+						sf::Text ch(std::to_string(target->getHitPoints()), font, 12); 
+						ch.setPosition(tpos.first, tpos.second - 18);
+						ch.setColor(sf::Color::Red);
+						critterHealth[target->getId()] = ch;
+						sf::Clock c;
+						healthClock[target->getId()] = c;
+					}
 
 					if(!critters[i]->getSpecialEffectApplied()) {
 						tower->applySpecialEffect(critters[i]);
@@ -467,7 +469,7 @@ void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 		}
 	}
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::U) && tower_manager.getTower(tileX, tileY) != NULL){
-		tower_manager.getTower(tileX, tileY)->upgradeTower();
+		tower_manager.upgradeTower(tileX, tileY, "range");
 	}
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num0)){
 		tower_manager.clearAllTowers();

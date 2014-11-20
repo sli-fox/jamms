@@ -3,15 +3,15 @@
 #include <sstream>
 #include <GameObjects/TowerDecorator.h>
 
-class FreezeEffect : public TowerDecorator {
+class BurnEffect : public TowerDecorator {
 	
 	public:
-		FreezeEffect();
-		FreezeEffect(Tower* decoratedTower);
-		~FreezeEffect() { std::cout << red << "FreezeEffect has been deleted." << std::endl; }
-		
-		void setRange(float _range);
+		BurnEffect();
+		BurnEffect(Tower* decoratedTower);
+		~BurnEffect() { std::cout << red << "BurnEffect has been deleted." << std::endl; }
+
 		int getBuyCost() const;
+		void setRange(float _range);
 		std::string getTowerSpecs();
 		bool canAttack(Critter* critter);
 		void attack();

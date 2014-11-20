@@ -49,6 +49,9 @@ Critter* Tower::getTarget() const {
 void Tower::setID(int _id) {
 	this->_id = _id;
 }
+void Tower::setName(std::string _name) {
+	this->_name = _name;
+}
 void Tower::setType(Tower::TowerType _tower_type) {
 	this->_type = _tower_type;
 }
@@ -58,10 +61,12 @@ void Tower::setUpgradeLevel(Tower::UpgradeLevel _upgrade_level) {
 void Tower::setPower(int _power) {
 	this->_power = _power;
 }
+/*
 void Tower::setRange(float _range) {
 	this->_range = _range;
 	this->setRangeShape(_range);
 }
+*/
 void Tower::setRateOfFire(Tower::RateOfFire _rate_of_fire) {
 	this->_rate_of_fire = _rate_of_fire;
 }
@@ -90,35 +95,6 @@ void Tower::setRangeShape(float range) {
 
 sf::CircleShape Tower::getRangeShape() const {
 	return _range_shape;
-}
-
-/**
-  * @brief Determines whether tower can attack a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay
-  * @return bool
-  */
-bool Tower::canAttack(Critter* critter) { //@MARK canAttack() is performing 3 functions. range checking, attack timer checking, and target selection. we should split them into 3 methods in my opinion -Jeremy-
-	
-	if(!this->_target == NULL && (!this->circleToCircleIntersection(_target) || !_target->isActive))
-		this->_target = NULL;
-
-	if(this->_target == NULL) {
-		_target = critter;
-		//this->rotateTowardsTarget();
-	}
-	else{
-		_target = executeStrategy(critter);
-		//_target = critter;
-		// I changed them to be more consistent -Jeremy-
-	}
-
-	this->time = this->clock.getElapsedTime();
-	
-	if(this->circleToCircleIntersection(_target) && time.asSeconds()*this->getRateOfFire() >= 1){
-		clock.restart();
-		return true;
-	}
-
-	return false;
 }
 
 /** 

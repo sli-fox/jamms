@@ -56,7 +56,7 @@ Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
 			}
 			case 2: {
 				if(ConcreteTower::buy_cost <= Game::player.getCash())
-					towers[make_pair(tileX, tileY)] = new ConcreteTower(tileX, tileY);
+					towers[make_pair(tileX, tileY)] = new BurnEffect(new ConcreteTower(tileX, tileY));
 				else {
 					cout << red << "Insufficient funds." << std::endl;
 					return NULL;
@@ -71,6 +71,18 @@ Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
 		std::cerr << red << "Error: There is already a tower on this cell." << std::endl;
 	}
 	return NULL;
+}
+
+void TowerManager::upgradeTower(int tileX, int tileY, std::string upgrade) {
+	if(!outOfBound(tileX, tileY) && isTileFree(tileX, tileY))
+		return;
+	if(upgrade == "ice")
+		towers[make_pair(tileX, tileY)] = new FreezeEffect(towers[make_pair(tileX, tileY)]);
+	if(upgrade == "fire")
+		towers[make_pair(tileX, tileY)] = new BurnEffect(towers[make_pair(tileX, tileY)]);
+	if(upgrade == "range")
+		towers[make_pair(tileX, tileY)]->setRange(towers[make_pair(tileX, tileY)]->getRange()+0.5);
+
 }
 
 void TowerManager::sellTower(int tileX, int tileY)  {

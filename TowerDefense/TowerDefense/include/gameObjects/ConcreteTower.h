@@ -7,8 +7,10 @@ class ConcreteTower : public Tower {
 		static int ConcreteTower::serial;
 		static int const ConcreteTower::buy_cost;
 		ConcreteTower(int tileX, int tileY);
+		void setRange(float _range);
 		int getBuyCost() const;
 		void upgradeTower();
+		bool canAttack(Critter* critter);
 		void attack();
 		
 		std::string getTowerSpecs();

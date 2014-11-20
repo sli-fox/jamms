@@ -25,6 +25,11 @@ int ConcreteTower::getBuyCost() const {
 	return _buy_cost;
 }
 
+void ConcreteTower::setRange(float _range) {
+	this->_range = _range;
+	this->setRangeShape(_range);
+}
+
 void ConcreteTower::upgradeTower() {
 	if(this->_upgrade_cost <= Game::player.getCash()) {
 		int oldUpgradeCost = this->_upgrade_cost;
@@ -59,10 +64,38 @@ void ConcreteTower::upgradeTower() {
 }
 
 void ConcreteTower::attack() {
-	std::cout << red << this->getTarget() << std::endl;
-	std::cout << yellow << "ConcreteTower attacking..." << this->_target->getId() << "!" << std::endl;
+	std::cout << yellow << this->_name << " attacking #" << this->_target->getId() << "... ";
 	this->_target->inflictDamage(this->getPower());
-	std::cout << yellow << "Cat " << this->_target->getId() << " now has " << this->_target->getHitPoints() << " HP" << std::endl;
+	std::cout << yellow << this->_target->getHitPoints() << "HP" << std::endl;
+}
+
+/**
+  * @brief Determines whether tower can attack a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay
+  * @return bool
+  */
+bool ConcreteTower::canAttack(Critter* critter) { //@MARK canAttack() is performing 3 functions. range checking, attack timer checking, and target selection. we should split them into 3 methods in my opinion -Jeremy-
+	
+	if(!this->_target == NULL && (!this->circleToCircleIntersection(_target) || !_target->isActive))
+		this->_target = NULL;
+
+	if(this->_target == NULL) {
+		_target = critter;
+		//this->rotateTowardsTarget();
+	}
+	else{
+		_target = executeStrategy(critter);
+		//_target = critter;
+		// I changed them to be more consistent -Jeremy-
+	}
+
+	this->time = this->clock.getElapsedTime();
+	
+	if(this->circleToCircleIntersection(_target) && time.asSeconds()*this->getRateOfFire() >= 1){
+		clock.restart();
+		return true;
+	}
+
+	return false;
 }
 
 std::string ConcreteTower::getTowerSpecs() {
