@@ -19,7 +19,6 @@ bool TowerManager::isTileFree(int tileX, int tileY) {
 	return false;
 }
 
-
 map<pair<int,int>, Tower*> * TowerManager::getTowerMap() {
 	return &towers;
 }
@@ -38,8 +37,8 @@ Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
 	if(isTileFree(tileX, tileY) && type <= 2) {
 		switch(type) {
 			case 0: {
-				if(ShihTzu::buy_cost <= Game::player.getCash())
-					towers[make_pair(tileX, tileY)] = new ShihTzu(tileX, tileY);
+				if(ConcreteTower::buy_cost <= Game::player.getCash())
+					towers[make_pair(tileX, tileY)] = new FreezeEffect(new ConcreteTower(tileX, tileY));
 				else {
 					cout << red << "Insufficient funds." << std::endl;
 					return NULL;
@@ -47,8 +46,8 @@ Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
 				break;
 			}
 			case 1: {
-				if(Dalmatian::buy_cost <= Game::player.getCash())
-					towers[make_pair(tileX, tileY)] = new Dalmatian(tileX, tileY);
+				if(ConcreteTower::buy_cost <= Game::player.getCash())
+					towers[make_pair(tileX, tileY)] = new ConcreteTower(tileX, tileY);
 				else {
 					cout << red << "Insufficient funds." << std::endl;
 					return NULL;
@@ -56,8 +55,8 @@ Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
 				break;
 			}
 			case 2: {
-				if(Bulldog::buy_cost <= Game::player.getCash())
-					towers[make_pair(tileX, tileY)] = new Bulldog(tileX, tileY);
+				if(ConcreteTower::buy_cost <= Game::player.getCash())
+					towers[make_pair(tileX, tileY)] = new ConcreteTower(tileX, tileY);
 				else {
 					cout << red << "Insufficient funds." << std::endl;
 					return NULL;
@@ -74,14 +73,6 @@ Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
 	return NULL;
 }
 
-ITower* TowerManager::DecBuyTower(int tileX, int tileY) {
-	Dec::ConcreteTower* ct = new Dec::FreezeEffect(new Dec::TowerDecorator(new Dec::ConcreteTower(tileX, tileY)));
-	ct->getTowerSpecs();
-	ct->attack();
-	Dtowers[make_pair(tileX, tileY)] = ct;
-	return Dtowers[make_pair(tileX, tileY)];
-}
-
 void TowerManager::sellTower(int tileX, int tileY)  {
 	if(!outOfBound(tileX, tileY) && isTileFree(tileX, tileY))
 		return;
@@ -96,11 +87,6 @@ void TowerManager::sellTower(int tileX, int tileY)  {
 //draws tower to game window
 void TowerManager::draw(sf::RenderWindow& gameWindow){
 	for(std::map<std::pair<int,int>, Tower*>::iterator it = towers.begin() ; it != towers.end() ; ++it) {
-		if(it->second != NULL)
-			it->second->draw(gameWindow);
-	}
-	
-	for(std::map<std::pair<int,int>, ITower*>::iterator it = Dtowers.begin() ; it != Dtowers.end() ; ++it) {
 		if(it->second != NULL)
 			it->second->draw(gameWindow);
 	}

@@ -55,9 +55,6 @@
     <Filter Include="Header Files\Utils\Views">
       <UniqueIdentifier>{7db0e6fb-b5d3-4ae8-bdf7-75170e2f43bb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\GameObjects\Towers">
-      <UniqueIdentifier>{dc11e052-f510-4fff-ae0b-e0476e737a76}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\test\TextureManagerTest.h">
@@ -129,15 +126,6 @@
     <ClInclude Include="include\utils\ConsoleColor.h">
       <Filter>Header Files\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="include\gameObjects\Dalmatian.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gameObjects\Bulldog.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gameObjects\ShihTzu.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
     <ClInclude Include="include\gameObjects\BlackCat.h">
       <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
@@ -171,17 +159,14 @@
     <ClInclude Include="include\TrackMapInput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\gameObjects\Towers\ConcreteTower.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\gameObjects\TowerDecorator.h">
+      <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
-    <ClInclude Include="include\gameObjects\Towers\FreezeEffect.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\gameObjects\FreezeEffect.h">
+      <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
-    <ClInclude Include="include\gameObjects\Towers\ITower.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gameObjects\Towers\TowerDecorator.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\gameObjects\ConcreteTower.h">
+      <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -245,15 +230,6 @@
     <ClCompile Include="src\managers\TowerManager.cpp">
       <Filter>Source Files\Managers</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\Dalmatian.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\Bulldog.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\ShihTzu.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
     <ClCompile Include="src\gameObjects\BlackCat.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
@@ -275,14 +251,14 @@
     <ClCompile Include="TrackMapInput.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\Towers\ConcreteTower.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\gameObjects\FreezeEffect.cpp">
+      <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\Towers\FreezeEffect.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\gameObjects\TowerDecorator.cpp">
+      <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\Towers\TowerDecorator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\gameObjects\ConcreteTower.cpp">
+      <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -10,10 +10,10 @@ class Tower: public GameObject, public IObserver{
   public:
     Tower();
 	~Tower() { std::cout << red << _name << " has been deleted." << white << std::endl; };
-	virtual void upgradeTower() = 0;
+	void upgradeTower() {}
 	bool canAttack(Critter* critter);
 	bool canApplySpecialAfterEffects(Critter* critter);
-	Critter* attack();
+	virtual void attack() = 0;
 	void update();
 	Critter* executeStrategy(Critter* critter);
 	std::pair<float, float> findCollisionPath(Critter* critter);
@@ -36,7 +36,7 @@ class Tower: public GameObject, public IObserver{
 	Tower::RateOfFire getRateOfFire() const;
 	bool getIsFiring() const;
 	Tower::SpecialEffect getSpecialEffect() const;
-	int getBuyCost() const;
+	virtual int getBuyCost() const = 0;
 	int getSellCost() const;
 	int getUpgradeCost() const;
 	Critter* getTarget() const;
@@ -58,7 +58,7 @@ class Tower: public GameObject, public IObserver{
 	void setTarget(Critter* crit);
 	void setStrategy(TowerStrategy* newStrategy);
 
-	std::string getTowerSpecs();
+	virtual std::string getTowerSpecs() = 0;
 	virtual bool circleToCircleIntersection(GameObject* game_object);
 	void applySpecialEffect(Critter* critter);
 
@@ -75,10 +75,9 @@ class Tower: public GameObject, public IObserver{
 	int _buy_cost;
 	int _upgrade_cost;
 	int _sell_cost;
+	sf::Clock clock;
+	sf::Time time;
 	Critter* _target;
 	std::unique_ptr<TowerStrategy> _strategy;
 
-  private:
-	  sf::Clock clock;
-	  sf::Time time;
 };
