@@ -2,10 +2,12 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <vector>
+#include <Game.h>
+#include "gameObjects/TowerDecorator.h"
+#include "gameObjects/FreezeEffect.h"
+#include "gameObjects/BurnEffect.h"
 #include <gameObjects/Tower.h>
-#include <gameObjects/ShihTzu.h>
-#include <gameObjects/Dalmatian.h>
-#include <gameObjects/Bulldog.h>
+#include <gameObjects/ConcreteTower.h>
 using std::vector;
 using std::map;
 using std::cout;
@@ -26,6 +28,7 @@ class TowerManager {
 	Tower* getTower(int tileX, int tileY);
 
 	Tower* buyTower(Tower::TowerType type, int tileX, int tileY);
+	void upgradeTower(int tileX, int tileY, std::string upgrade);
 	void sellTower(int tileX, int tileY);
 
 	bool isTileFree(int tileX, int tileY);

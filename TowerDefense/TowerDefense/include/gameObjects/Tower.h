@@ -10,10 +10,10 @@ class Tower: public GameObject, public IObserver{
   public:
     Tower();
 	~Tower() { std::cout << red << _name << " has been deleted." << white << std::endl; };
-	virtual void upgradeTower() = 0;
-	bool canAttack(Critter* critter);
+	void upgradeTower() {}
+	virtual bool canAttack(Critter* critter) = 0;
 	bool canApplySpecialAfterEffects(Critter* critter);
-	Critter* attack();
+	virtual void attack() = 0;
 	void update();
 	Critter* executeStrategy(Critter* critter);
 	std::pair<float, float> findCollisionPath(Critter* critter);
@@ -36,7 +36,7 @@ class Tower: public GameObject, public IObserver{
 	Tower::RateOfFire getRateOfFire() const;
 	bool getIsFiring() const;
 	Tower::SpecialEffect getSpecialEffect() const;
-	int getBuyCost() const;
+	virtual int getBuyCost() const = 0;
 	int getSellCost() const;
 	int getUpgradeCost() const;
 	Critter* getTarget() const;
@@ -44,10 +44,11 @@ class Tower: public GameObject, public IObserver{
 
 	//MUTATORS
     void setID(int _id);
+	void setName(std::string _name);
     void setType(Tower::TowerType _tower_type);
 	void setUpgradeLevel(Tower::UpgradeLevel _upgrade_level);
 	void setPower(int _power);
-	void setRange(float _range);
+	virtual void setRange(float _range) = 0;
 	void setRangeShape(float range);
 	void setRateOfFire(Tower::RateOfFire _rate_of_fire);
 	void setIsFiring(bool b);
@@ -58,7 +59,7 @@ class Tower: public GameObject, public IObserver{
 	void setTarget(Critter* crit);
 	void setStrategy(TowerStrategy* newStrategy);
 
-	std::string getTowerSpecs();
+	virtual std::string getTowerSpecs() = 0;
 	virtual bool circleToCircleIntersection(GameObject* game_object);
 	void applySpecialEffect(Critter* critter);
 
@@ -75,10 +76,9 @@ class Tower: public GameObject, public IObserver{
 	int _buy_cost;
 	int _upgrade_cost;
 	int _sell_cost;
+	sf::Clock clock;
+	sf::Time time;
 	Critter* _target;
 	std::unique_ptr<TowerStrategy> _strategy;
 
-  private:
-	  sf::Clock clock;
-	  sf::Time time;
 };

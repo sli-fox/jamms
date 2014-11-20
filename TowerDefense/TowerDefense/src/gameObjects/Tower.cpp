@@ -35,9 +35,6 @@ Tower::RateOfFire Tower::getRateOfFire() const {
 Tower::SpecialEffect Tower::getSpecialEffect() const {
 	return _special_effect;
 }
-int Tower::getBuyCost() const {
-	return _buy_cost;
-}
 int Tower::getSellCost() const {
 	return _sell_cost;
 }
@@ -52,6 +49,9 @@ Critter* Tower::getTarget() const {
 void Tower::setID(int _id) {
 	this->_id = _id;
 }
+void Tower::setName(std::string _name) {
+	this->_name = _name;
+}
 void Tower::setType(Tower::TowerType _tower_type) {
 	this->_type = _tower_type;
 }
@@ -61,10 +61,12 @@ void Tower::setUpgradeLevel(Tower::UpgradeLevel _upgrade_level) {
 void Tower::setPower(int _power) {
 	this->_power = _power;
 }
+/*
 void Tower::setRange(float _range) {
 	this->_range = _range;
 	this->setRangeShape(_range);
 }
+*/
 void Tower::setRateOfFire(Tower::RateOfFire _rate_of_fire) {
 	this->_rate_of_fire = _rate_of_fire;
 }
@@ -93,42 +95,6 @@ void Tower::setRangeShape(float range) {
 
 sf::CircleShape Tower::getRangeShape() const {
 	return _range_shape;
-}
-
-/**
-  * @brief Determines whether tower can attack a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay
-  * @return bool
-  */
-bool Tower::canAttack(Critter* critter) { //@MARK canAttack() is performing 3 functions. range checking, attack timer checking, and target selection. we should split them into 3 methods in my opinion -Jeremy-
-	
-	if(!this->_target == NULL && (!this->circleToCircleIntersection(_target) || !_target->isActive))
-		this->_target = NULL;
-
-	if(this->_target == NULL) {
-		_target = critter;
-		//this->rotateTowardsTarget();
-	}
-	else{
-		_target = executeStrategy(critter);
-		//_target = critter;
-		// I changed them to be more consistent -Jeremy-
-	}
-
-	this->time = this->clock.getElapsedTime();
-	
-	if(this->circleToCircleIntersection(_target) && time.asSeconds()*this->getRateOfFire() >= 1){
-		clock.restart();
-		return true;
-	}
-
-	return false;
-}
-
-Critter* Tower::attack() {
-	std::cout << yellow << "WOUF WOUF! Scared cat " << this->_target->getId() << "!" << std::endl;
-	this->_target->inflictDamage(this->getPower());
-	std::cout << yellow << "Cat " << this->_target->getId() << " now has " << this->_target->getHitPoints() << " HP" << std::endl;
-	return _target;
 }
 
 /** 
@@ -239,28 +205,6 @@ void Tower::update() {
 	std::cout << "TOWER UPDATED!" << std::endl;
 }
 
-std::string Tower::getTowerSpecs() {
-	//Since we can't cout an enum in C++, we need this Array system as a workaround (optional, but prettier at output)
-	char *TowerTypeA[] = { "ShihTzu", "Dalmatian", "Bulldog" };
-	char *UpgradeLevelA[] = { "Upgrade0", "Upgrade1", "Upgrade2" };
-	char *RangeA[] = { "Small", "Medium", "Large" };
-	char *RateOfFireA[] = { "Slow", "Normal", "Fast" };
-	char *SpecialEffectA[] = { "None", "Slowing", "Burning", "Freezing" };
-	std::stringstream output;
-	output << "CURRENT TOWER SPECIFICATIONS:" << std::endl;
-	output << "Name: " << this->_name << std::endl;
-	output << "Type: " << TowerTypeA[this->_type] << std::endl;
-	output << "Upgrade: " << UpgradeLevelA[this->_upgrade_level] << std::endl;
-	output << "Power: " << this->_power << std::endl;
-	output << "Range:  " << this->_range << std::endl;
-	output << "Fire Rate: " << RateOfFireA[this->_rate_of_fire-1] << std::endl;
-	if(this->_special_effect != SpecialEffect::None)
-		output << "Special Effect: " << SpecialEffectA[this->_special_effect] << std::endl;
-	output << "Upgrade Cost: " << this->_upgrade_cost << " coins" << std::endl;
-	output << "Sell Cost: " << this->_sell_cost << " coins" << std::endl;
-
-	return output.str();
-}
 
 /**
   * @brief Overrides method to apply to tower range sf::CircleShape object

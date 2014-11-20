@@ -98,7 +98,7 @@ void GameStatePlay::draw(const float delta_time) {
 	this->game->game_window.draw(nextWaveSpecs);
 	playerSpecs.setString(Game::player.getPlayerSpecs());
 	this->game->game_window.draw(playerSpecs);
-	this->game->game_window.draw(towerSpecs);
+	//this->game->game_window.draw(towerSpecs);
 	//Draw Towers and their Specs
     if(tower_manager.getTower(tileX, tileY) != nullptr) {
 	  towerSpecs.setString(tower_manager.getTower(tileX, tileY)->getTowerSpecs());
@@ -186,7 +186,6 @@ void GameStatePlay::setCritterWaveLevels(Waypoint* starting_waypoint) {
   }
 }
 
-
 void GameStatePlay::handleInput() {
 	sf::Event event;
 
@@ -198,15 +197,17 @@ void GameStatePlay::handleInput() {
 		
 			for (int i = 0; i < critters.size(); ++i) {
 				while(critters[i]->isActive && tower->canAttack(critters[i]) && !this->game->isGamePaused) {
-					//made attack() return a pointer to the critter it damaged... for use in displaying critter health above their heads each time they take dmg
-					Critter* target = tower->attack();
-					std::pair<float, float> tpos = target->getPosition();
-					sf::Text ch(std::to_string(target->getHitPoints()), font, 12); 
-					ch.setPosition(tpos.first, tpos.second - 18);
-					ch.setColor(sf::Color::Red);
-					critterHealth[target->getId()] = ch;
-					sf::Clock c;
-					healthClock[target->getId()] = c;
+					tower->attack();
+					Critter* target = tower->getTarget();
+					if(target != NULL) {
+						std::pair<float, float> tpos = target->getPosition();
+						sf::Text ch(std::to_string(target->getHitPoints()), font, 12); 
+						ch.setPosition(tpos.first, tpos.second - 18);
+						ch.setColor(sf::Color::Red);
+						critterHealth[target->getId()] = ch;
+						sf::Clock c;
+						healthClock[target->getId()] = c;
+					}
 
 					if(!critters[i]->getSpecialEffectApplied()) {
 						tower->applySpecialEffect(critters[i]);
@@ -467,8 +468,8 @@ void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 				tower_manager.sellTower(tileX, tileY);
 		}
 	}
-	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::U) && !tower_manager.isTileFree(tileX, tileY)){
-		tower_manager.getTower(tileX, tileY)->upgradeTower();
+	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::U) && tower_manager.getTower(tileX, tileY) != NULL){
+		tower_manager.upgradeTower(tileX, tileY, "range");
 	}
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num0)){
 		tower_manager.clearAllTowers();
@@ -545,13 +546,13 @@ void GameStatePlay::initializeButtonMap(){
 	displayStartWave.setPosition(0*32,17*32);
 	buttonMap.emplace("displayStartWave", displayStartWave);
 
-	GameObject towerDisplayBox;
-	towerDisplayBox.load(imagePath + "DisplayBox.png");
-	towerDisplayBox.setPosition(24*32,14*32);
-	buttonMap.emplace("towerDisplayBox", towerDisplayBox);
+	//GameObject towerDisplayBox;
+	//towerDisplayBox.load(imagePath + "DisplayBox.png");
+	//towerDisplayBox.setPosition(24*32,14*32);
+	//buttonMap.emplace("towerDisplayBox", towerDisplayBox);
 	towerSpecs.setFont(font);
 	towerSpecs.setPosition(24*32+8,14*32);
-	towerSpecs.setColor(sf::Color::Black);
+	towerSpecs.setColor(sf::Color::White);
 	towerSpecs.setCharacterSize(13);
 
 	/*
