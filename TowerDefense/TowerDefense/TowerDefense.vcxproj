@@ -83,16 +83,17 @@
   <ItemGroup>
     <ClInclude Include="include\Game.h" />
     <ClInclude Include="include\gameObjects\BlackCat.h" />
-    <ClInclude Include="include\gameObjects\Dalmatian.h" />
-    <ClInclude Include="include\gameObjects\Bulldog.h" />
+    <ClInclude Include="include\gameObjects\BurnEffect.h" />
+    <ClInclude Include="include\gameObjects\ConcreteTower.h" />
     <ClInclude Include="include\gameObjects\Critter.h" />
     <ClInclude Include="include\gameObjects\CritterFactory.h" />
+    <ClInclude Include="include\gameObjects\FreezeEffect.h" />
     <ClInclude Include="include\gameObjects\GameObject.h" />
     <ClInclude Include="include\gameObjects\IObserver.h" />
     <ClInclude Include="include\gameObjects\ISubject.h" />
     <ClInclude Include="include\gameObjects\Tile.h" />
     <ClInclude Include="include\gameObjects\Tower.h" />
-    <ClInclude Include="include\gameObjects\ShihTzu.h" />
+    <ClInclude Include="include\gameObjects\TowerDecorator.h" />
     <ClInclude Include="include\gameObjects\WhiteCat.h" />
     <ClInclude Include="include\gameStates\GameState.h" />
     <ClInclude Include="include\gameStates\GameStateGameOver.h" />
@@ -122,14 +123,15 @@
   <ItemGroup>
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\gameObjects\BlackCat.cpp" />
-    <ClCompile Include="src\gameObjects\Dalmatian.cpp" />
-    <ClCompile Include="src\gameObjects\Bulldog.cpp" />
+    <ClCompile Include="src\gameObjects\BurnEffect.cpp" />
+    <ClCompile Include="src\gameObjects\ConcreteTower.cpp" />
     <ClCompile Include="src\gameObjects\Critter.cpp" />
     <ClCompile Include="src\gameObjects\CritterFactory.cpp" />
+    <ClCompile Include="src\gameObjects\FreezeEffect.cpp" />
     <ClCompile Include="src\gameObjects\GameObject.cpp" />
     <ClCompile Include="src\gameObjects\Tile.cpp" />
     <ClCompile Include="src\gameObjects\Tower.cpp" />
-    <ClCompile Include="src\gameObjects\ShihTzu.cpp" />
+    <ClCompile Include="src\gameObjects\TowerDecorator.cpp" />
     <ClCompile Include="src\gameObjects\WhiteCat.cpp" />
     <ClCompile Include="src\gameStates\GameStateGameOver.cpp" />
     <ClCompile Include="src\gameStates\GameStateGameWin.cpp" />

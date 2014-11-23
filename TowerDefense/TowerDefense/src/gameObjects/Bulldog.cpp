@@ -5,12 +5,10 @@ int const Bulldog::buy_cost = 70;
 
 Bulldog::Bulldog(int tileX, int tileY) {
 	this->load("resources/images/towers/bulldog_0.png");
-	this->setPosition(tileX*32, tileY*32);
-
+	this->setPosition(tileX*32, tileY*32);		// has to be set BEFORE setRange();
 	this->_id = Bulldog::serial++;
 	this->_name = "Bulldog_" + std::to_string(this->_id);
 	this->_type = Tower::Bulldog;
-	this->_range_shape.setPosition((tileX*32)-16, (tileY*32)-16);
 	this->_buy_cost = buy_cost;
 	this->_power = 2;
 	this->setRange(1);
