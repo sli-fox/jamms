@@ -79,5 +79,7 @@ void CritterWave::drawActivatedCrittersInWave(sf::RenderWindow& render_window, f
   for (int i = 0; i < _m_critter_wave.size(); ++i) {
    if ( _m_critter_wave[i]->isActive)
      _m_critter_wave[i]->draw(render_window, delta_time);
+
+
   }
 }

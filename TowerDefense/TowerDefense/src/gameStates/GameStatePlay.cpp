@@ -100,6 +100,33 @@ void GameStatePlay::draw(const float delta_time) {
 	this->game->game_window.draw(playerSpecs);
 	//this->game->game_window.draw(towerSpecs);
 	//Draw Towers and their Specs
+
+	if(buttonMap["bulldog_0_Btn"].spriteContains(localPosition)) {
+	  towerSpecs.setString(getTower1ButtonSpecs());
+	  this->game->game_window.draw(towerSpecs);
+	  //this->game->game_window.draw(upgradeTowerSpecs);
+    }else if(buttonMap["dalmatian_0_Btn"].spriteContains(localPosition)) {
+	  towerSpecs.setString(getTower2ButtonSpecs());
+	  this->game->game_window.draw(towerSpecs);
+	  //this->game->game_window.draw(upgradeTowerSpecs);
+    }else if(buttonMap["shihtzu_0_Btn"].spriteContains(localPosition)) {
+	  towerSpecs.setString(getTower3ButtonSpecs());
+	  this->game->game_window.draw(towerSpecs);
+	  //this->game->game_window.draw(upgradeTowerSpecs);
+    }
+
+	 for (int i = 0; i < this->current_wave->getContainerOfCritters().size(); ++i) 
+	 {
+		if ( this->current_wave->getContainerOfCritters()[i]->isActive )
+			if( this->current_wave->getContainerOfCritters()[i]->spriteContains(localPosition) )
+			{
+				critterSpecs.setString(this->current_wave->getContainerOfCritters()[i]->getCritterSpecs());
+				this->game->game_window.draw(critterSpecs);
+
+			}
+	}
+
+
     if(tower_manager.getTower(tileX, tileY) != nullptr) {
 	  towerSpecs.setString(tower_manager.getTower(tileX, tileY)->getTowerSpecs());
 	  //upgradeTowerSpecs.setString(tower_manager.getTower(tileX, tileY)->getUpgradeTowerSpecs());
@@ -119,6 +146,7 @@ void GameStatePlay::draw(const float delta_time) {
 void GameStatePlay::update(const float delta_time) {
   handleGameOver();
 
+ 
   //Draw  & move activated Critters within a wave
   this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
   moveActivatedCritters(delta_time);
@@ -555,6 +583,13 @@ void GameStatePlay::initializeButtonMap(){
 	towerSpecs.setColor(sf::Color::White);
 	towerSpecs.setCharacterSize(13);
 
+	critterSpecs.setFont(font);
+	critterSpecs.setPosition(24*32+8,14*32);
+	critterSpecs.setColor(sf::Color::White);
+	critterSpecs.setCharacterSize(13);
+
+
+
 	/*
 	GameObject upgradeTowerDisplayBox;
 	upgradeTowerDisplayBox.load(imagePath + "DisplayBox.png");
@@ -596,7 +631,7 @@ void GameStatePlay::initializeButtonMap(){
 	buttonMap.emplace("startWaveBtn", startWaveBtn);
 
 	GameObject bulldog_0_Btn;
-	bulldog_0_Btn.load(towerPath + "bulldog_0.png");
+	bulldog_0_Btn.load(towerPath + "tower.png");
 	bulldog_0_Btn.setPosition(24*32,12*32);
 	buttonMap.emplace("bulldog_0_Btn", bulldog_0_Btn);
 
@@ -613,7 +648,7 @@ void GameStatePlay::initializeButtonMap(){
 	*/
 
 	GameObject dalmatian_0_Btn;
-	dalmatian_0_Btn.load(towerPath + "dalmatian_0.png");
+	dalmatian_0_Btn.load(towerPath + "firetower.png");
 	dalmatian_0_Btn.setPosition(25*32,12*32);
 	buttonMap.emplace("dalmatian_0_Btn", dalmatian_0_Btn);
 
@@ -630,7 +665,7 @@ void GameStatePlay::initializeButtonMap(){
 	*/
 
 	GameObject shihtzu_0_Btn;
-	shihtzu_0_Btn.load(towerPath + "shihtzu_0.png");
+	shihtzu_0_Btn.load(towerPath + "icetower.png");
 	shihtzu_0_Btn.setPosition(26*32,12*32);
 	buttonMap.emplace("shihtzu_0_Btn", shihtzu_0_Btn);
 
@@ -647,6 +682,56 @@ void GameStatePlay::initializeButtonMap(){
 	*/
 
 }
+
+std::string GameStatePlay::getTower1ButtonSpecs() {
+	std::stringstream output;
+	output << "CURRENT TOWER SPECIFICATIONS:" << std::endl;
+	output << "Name: " << "Concrete  "<< std::endl;
+	output << "Upgrade: 0"<< std::endl;
+	output << "Power: 1"<< std::endl;
+	output << "Range:  1.5" << std::endl;
+	output << "Fire Rate: Slow"  << std::endl;
+	output << "Buy Cost: 70 coins" << std::endl;
+	output << "Upgrade Cost: 20 coins" << std::endl;
+	output << "Sell Cost: 30 coins" << std::endl;
+	output << "Special Effect: None" << std::endl;
+
+	return output.str();
+}
+
+
+std::string GameStatePlay::getTower2ButtonSpecs() {
+	std::stringstream output;
+	output << "CURRENT TOWER SPECIFICATIONS:" << std::endl;
+	output << "Name: " << "Concrete_2  "<< std::endl;
+	output << "Upgrade: 0"<< std::endl;
+	output << "Power: 2"<< std::endl;
+	output << "Range:  3" << std::endl;
+	output << "Fire Rate: Medium"  << std::endl;
+	output << "Buy Cost: 140 coins" << std::endl;
+	output << "Upgrade Cost: 20 coins" << std::endl;
+	output << "Sell Cost: 30 coins" << std::endl;
+	output << "Special Effect: None" << std::endl;
+
+	return output.str();
+}
+
+std::string GameStatePlay::getTower3ButtonSpecs() {
+	std::stringstream output;
+	output << "CURRENT TOWER SPECIFICATIONS:" << std::endl;
+	output << "Name: " << "Concrete_3 "<< std::endl;
+	output << "Upgrade: 0"<< std::endl;
+	output << "Power: 3"<< std::endl;
+	output << "Range:  4.5" << std::endl;
+	output << "Fire Rate: Fast"  << std::endl;
+	output << "Buy Cost: 210 coins" << std::endl;
+	output << "Upgrade Cost: 60 coins" << std::endl;
+	output << "Sell Cost: 30 coins" << std::endl;
+	output << "Special Effect: None" << std::endl;
+
+	return output.str();
+}
+
 
 GameObjectManager GameStatePlay::_game_object_manager;
 TowerManager& GameStatePlay::tower_manager = TowerManager::getInstance();
