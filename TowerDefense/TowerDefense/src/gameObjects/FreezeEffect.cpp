@@ -1,6 +1,8 @@
 #pragma once
 #include <GameObjects/FreezeEffect.h>
 
+int FreezeEffect::upgrade_cost = 20;
+
 FreezeEffect::FreezeEffect() {
 	std::cout << green << "FreezeEffect Default Constructor called." << std::endl;
 }

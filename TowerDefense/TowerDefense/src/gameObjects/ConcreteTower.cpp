@@ -2,6 +2,7 @@
 
 int ConcreteTower::serial = 0;
 int const ConcreteTower::buy_cost = 70;
+int const ConcreteTower::upgrade_range_cost = 10;
 
 ConcreteTower::ConcreteTower(int tileX, int tileY) {
 	this->load("resources/images/towers/tower.png");
