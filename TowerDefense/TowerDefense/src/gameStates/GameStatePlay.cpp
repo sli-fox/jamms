@@ -655,7 +655,7 @@ void GameStatePlay::initializeButtonMap(){
 	buttonMap.emplace("startWaveBtn", startWaveBtn);
 
 	GameObject bulldog_0_Btn;
-	bulldog_0_Btn.load(towerPath + "tower.png");
+	bulldog_0_Btn.load(towerPath + "firetower.png");
 	bulldog_0_Btn.setPosition(24*32,12*32);
 	buttonMap.emplace("bulldog_0_Btn", bulldog_0_Btn);
 
@@ -672,7 +672,7 @@ void GameStatePlay::initializeButtonMap(){
 	*/
 
 	GameObject dalmatian_0_Btn;
-	dalmatian_0_Btn.load(towerPath + "firetower.png");
+	dalmatian_0_Btn.load(towerPath + "tower.png");
 	dalmatian_0_Btn.setPosition(25*32,12*32);
 	buttonMap.emplace("dalmatian_0_Btn", dalmatian_0_Btn);
 

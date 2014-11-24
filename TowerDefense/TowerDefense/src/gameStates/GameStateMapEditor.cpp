@@ -4,9 +4,9 @@
 *  and centers the view on the center of the window.
 */
 GameStateMapEditor::GameStateMapEditor(Game* game) {
-	this->game = game;
+  this->game = game;
 
-	trackMapEvents = new TrackMapInput_c(Game::map);
+  	trackMapEvents = new TrackMapInput_c(Game::map);
 
 	sf::Vector2f position = sf::Vector2f(this->game->game_window.getSize());
 	this->_gameView.setSize(position);
@@ -15,7 +15,7 @@ GameStateMapEditor::GameStateMapEditor(Game* game) {
 	sf::Vector2f center_position = 0.5f * position;
 	this->_gameView.setCenter(center_position);
 	this->_guiView.setCenter(center_position);
-
+	
 	initializeButtonMap();
 	tileSelector = Tile::EMPTY;
 	returnToMenu = false;
@@ -43,6 +43,46 @@ void GameStateMapEditor::draw(const float delta_time) {
 	mapBackdrop.draw(this->game->game_window);
 	this->game->map.draw(this->game->game_window);
 
+	if(buttonMap["RedoBtn"].spriteContains(localPosition)) {
+	  userInputDisplay.setString(getRedoButtonSpecs());
+	  this->game->game_window.draw(userInputDisplay);
+	}
+	else if(buttonMap["UndoBtn"].spriteContains(localPosition)) {
+	  userInputDisplay.setString(getUndoButtonSpecs());
+	  this->game->game_window.draw(userInputDisplay);
+    }
+	else if(buttonMap["saveBtn"].spriteContains(localPosition)) {
+	  userInputDisplay.setString(getSaveButtonSpecs());
+	  this->game->game_window.draw(userInputDisplay);
+    }
+	else if(buttonMap["playBtn"].spriteContains(localPosition)) {
+	  userInputDisplay.setString(getPlayButtonSpecs());
+	  this->game->game_window.draw(userInputDisplay);
+    }
+	else if(buttonMap["startTileBtn"].spriteContains(localPosition)) {
+	  userInputDisplay.setString(getStartTileButtonSpecs());
+	  this->game->game_window.draw(userInputDisplay);
+    }
+	else if(buttonMap["endTileBtn"].spriteContains(localPosition)) {
+	  userInputDisplay.setString(getEndTileButtonSpecs());
+	  this->game->game_window.draw(userInputDisplay);
+    }
+	else if(buttonMap["sceneryTileBtn"].spriteContains(localPosition)) {
+	  userInputDisplay.setString(getSceneryTileButtonSpecs());
+	  this->game->game_window.draw(userInputDisplay);
+    }
+	else if(buttonMap["deadTileBtn"].spriteContains(localPosition)) {
+	  userInputDisplay.setString(getDeadTileButtonSpecs());
+	  this->game->game_window.draw(userInputDisplay);
+    }
+	else if(buttonMap["pathTileBtn"].spriteContains(localPosition)) {
+	  userInputDisplay.setString(getPathTileButtonSpecs());
+	  this->game->game_window.draw(userInputDisplay);
+    }
+	else if(buttonMap["loadBtn"].spriteContains(localPosition)) {
+	  userInputDisplay.setString(getLoadMapButtonSpecs());
+	  this->game->game_window.draw(userInputDisplay);
+    }
 	//Draw buttons
 	for(std::map<std::string, GameObject>::iterator it = buttonMap.begin() ; it != buttonMap.end() ; ++it)
 		it->second.draw(this->game->game_window);
@@ -52,6 +92,9 @@ void GameStateMapEditor::draw(const float delta_time) {
 	this->game->game_window.draw(displayYsize);
 	this->game->game_window.draw(systemOutput);
 	this->game->game_window.draw(userInputDisplay);
+
+	
+	
 }
 
 void GameStateMapEditor::handleInput() {
@@ -99,7 +142,7 @@ void GameStateMapEditor::handleInput() {
 				trackMapEvents->redo();
 			}
 			break;
-								   }
+									}
 		case sf::Event::TextEntered:{
 			if(event.text.unicode == '\b'){
 				if(!userInput.empty())
@@ -143,7 +186,7 @@ void GameStateMapEditor::mapEditorCommandLibrary(){
 		if(this->game->map.getTile(tileX, tileY) != nullptr && this->game->map.getTile(tileX, tileY)->spriteContains(localPosition))
 		{
 			if( this->game->map.addTile(tileX, tileY, tileSelector) )
-				trackMapEvents->recordAddTile(tileX, tileY, tileSelector);
+			trackMapEvents->recordAddTile(tileX, tileY, tileSelector);
 		}
 	}
 	else if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
@@ -269,7 +312,7 @@ void GameStateMapEditor::initializeButtonMap(){
 	tilePalette.load(imagePath + "TilePalette.png");
 	tilePalette.setPosition(0*32,12*32);
 	buttonMap.emplace("tilePalette", tilePalette);
-
+	
 	GameObject startTileBtn;
 	startTileBtn.load(imagePath + "start.png");
 	startTileBtn.setPosition(0*32,13*32);
@@ -415,4 +458,66 @@ void GameStateMapEditor::initializeButtonMap(){
 	userInputDisplay.setPosition(6*32+4,18*32);
 	userInputDisplay.setColor(sf::Color::Black);
 	userInputDisplay.setCharacterSize(14);
+}
+
+std::string GameStateMapEditor::getRedoButtonSpecs() {
+	std::stringstream output;
+	output << "Press to redo  map tiles" << std::endl;
+	
+	return output.str();
+}
+std::string GameStateMapEditor::getUndoButtonSpecs() {
+	std::stringstream output;
+	output << "Press to Undo  map tiles" << std::endl;
+	
+	return output.str();
+}
+std::string GameStateMapEditor::getSaveButtonSpecs() {
+	std::stringstream output;
+	output << "Press to save the map created" << std::endl;
+	
+	return output.str();
+}
+
+std::string GameStateMapEditor::getPlayButtonSpecs() {
+	std::stringstream output;
+	output << "Press to start the game" << std::endl;
+	
+	return output.str();
+}
+std::string GameStateMapEditor::getStartTileButtonSpecs() {
+	std::stringstream output;
+	output << "Start tile of the map" << std::endl;
+	
+	return output.str();
+}
+std::string GameStateMapEditor::getEndTileButtonSpecs() {
+	std::stringstream output;
+	output << "End tile of the map" << std::endl;
+	
+	return output.str();
+}
+std::string GameStateMapEditor::getPathTileButtonSpecs() {
+	std::stringstream output;
+	output << "Path tile of the map" << std::endl;
+	
+	return output.str();
+}
+std::string GameStateMapEditor::getSceneryTileButtonSpecs() {
+	std::stringstream output;
+	output << "Scenery tile of the map" << std::endl;
+	
+	return output.str();
+}
+std::string GameStateMapEditor::getDeadTileButtonSpecs() {
+	std::stringstream output;
+	output << "Dead tile of the map" << std::endl;
+	output << "No tower could be placed on it" << std::endl;
+	return output.str();
+}
+std::string GameStateMapEditor::getLoadMapButtonSpecs() {
+	std::stringstream output;
+	output << "Press to see all the saved maps" << std::endl;
+	output << "Type the name of map you would like to load" << std::endl;
+	return output.str();
 }
