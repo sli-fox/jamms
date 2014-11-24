@@ -10,6 +10,8 @@ class FreezeEffect : public TowerDecorator {
 		FreezeEffect(Tower* decoratedTower);
 		~FreezeEffect() { std::cout << red << "FreezeEffect has been deleted." << std::endl; }
 		
+		static int upgrade_cost;
+
 		void setRange(float _range);
 		int getBuyCost() const;
 		std::string getTowerSpecs();

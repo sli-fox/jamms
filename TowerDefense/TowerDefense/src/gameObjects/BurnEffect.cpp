@@ -1,6 +1,8 @@
 #pragma once
 #include <GameObjects/BurnEffect.h>
 
+int BurnEffect::upgrade_cost = 25;
+
 BurnEffect::BurnEffect() {
 	std::cout << green << "BurnEffect Default Constructor called." << std::endl;
 }

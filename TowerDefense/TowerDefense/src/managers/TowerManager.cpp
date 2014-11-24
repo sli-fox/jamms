@@ -76,13 +76,22 @@ Tower* TowerManager::buyTower(Tower::TowerType type, int tileX, int tileY) {
 void TowerManager::upgradeTower(int tileX, int tileY, std::string upgrade) {
 	if(!outOfBound(tileX, tileY) && isTileFree(tileX, tileY))
 		return;
-	if(upgrade == "ice")
+	int upgradeCost = 0;
+	if(upgrade == "ice" && FreezeEffect::upgrade_cost <= Game::player.getCash()) {
 		towers[make_pair(tileX, tileY)] = new FreezeEffect(towers[make_pair(tileX, tileY)]);
-	if(upgrade == "fire")
+		upgradeCost = FreezeEffect::upgrade_cost;
+	}
+	if(upgrade == "fire" && BurnEffect::upgrade_cost <= Game::player.getCash()) {
 		towers[make_pair(tileX, tileY)] = new BurnEffect(towers[make_pair(tileX, tileY)]);
-	if(upgrade == "range")
+		upgradeCost = BurnEffect::upgrade_cost;
+	}
+	if(upgrade == "range" && towers[make_pair(tileX, tileY)]->getRange() < 3.5 && ConcreteTower::upgrade_range_cost <= Game::player.getCash()) {
 		towers[make_pair(tileX, tileY)]->setRange(towers[make_pair(tileX, tileY)]->getRange()+0.5);
+		upgradeCost = ConcreteTower::upgrade_range_cost;
+	}
 
+	if(upgradeCost !=0)
+		Game::player.spendCash(upgradeCost);
 }
 
 void TowerManager::sellTower(int tileX, int tileY)  {
