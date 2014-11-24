@@ -21,7 +21,7 @@ class Tower: public GameObject, public IObserver{
 	float angleInDegrees(float x, float y);
 
     enum TowerType { ShihTzu, Dalmatian, Bulldog };
-	enum UpgradeLevel { Upgrade0, Upgrade1, Upgrade2 };
+	enum UpgradeLevel { Baby, Teen, Adult };
 	enum RateOfFire { Slow = 1, Normal, Fast };
 	enum SpecialEffect { None, Slowing, Burning, Freezing };
 	

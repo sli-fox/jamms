@@ -4,7 +4,7 @@
 #include <math.h>
 
 Tower::Tower() {
-	this->_upgrade_level = Tower::UpgradeLevel::Upgrade0;
+	this->_upgrade_level = Tower::UpgradeLevel::Baby;
 	this->_target = NULL;
 	this->time = clock.getElapsedTime();
 	this->_strategy.reset(new WeakestStrategy());
