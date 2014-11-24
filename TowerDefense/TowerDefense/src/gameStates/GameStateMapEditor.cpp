@@ -4,9 +4,9 @@
 *  and centers the view on the center of the window.
 */
 GameStateMapEditor::GameStateMapEditor(Game* game) {
-  this->game = game;
+	this->game = game;
 
-  	trackMapEvents = new TrackMapInput_c(Game::map);
+	trackMapEvents = new TrackMapInput_c(Game::map);
 
 	sf::Vector2f position = sf::Vector2f(this->game->game_window.getSize());
 	this->_gameView.setSize(position);
@@ -15,7 +15,7 @@ GameStateMapEditor::GameStateMapEditor(Game* game) {
 	sf::Vector2f center_position = 0.5f * position;
 	this->_gameView.setCenter(center_position);
 	this->_guiView.setCenter(center_position);
-	
+
 	initializeButtonMap();
 	tileSelector = Tile::EMPTY;
 	returnToMenu = false;
@@ -99,7 +99,7 @@ void GameStateMapEditor::handleInput() {
 				trackMapEvents->redo();
 			}
 			break;
-									}
+								   }
 		case sf::Event::TextEntered:{
 			if(event.text.unicode == '\b'){
 				if(!userInput.empty())
@@ -143,7 +143,7 @@ void GameStateMapEditor::mapEditorCommandLibrary(){
 		if(this->game->map.getTile(tileX, tileY) != nullptr && this->game->map.getTile(tileX, tileY)->spriteContains(localPosition))
 		{
 			if( this->game->map.addTile(tileX, tileY, tileSelector) )
-			trackMapEvents->recordAddTile(tileX, tileY, tileSelector);
+				trackMapEvents->recordAddTile(tileX, tileY, tileSelector);
 		}
 	}
 	else if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
@@ -269,7 +269,7 @@ void GameStateMapEditor::initializeButtonMap(){
 	tilePalette.load(imagePath + "TilePalette.png");
 	tilePalette.setPosition(0*32,12*32);
 	buttonMap.emplace("tilePalette", tilePalette);
-	
+
 	GameObject startTileBtn;
 	startTileBtn.load(imagePath + "start.png");
 	startTileBtn.setPosition(0*32,13*32);

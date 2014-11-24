@@ -92,7 +92,7 @@ class GameStatePlay : public GameState {
 	  Tower::TowerType towerSelector;
 	  sf::Font font;
 	  //sf::Text upgradeTowerSpecs;
-	  sf::Text waveSpecs, nextWaveSpecs, playerSpecs, towerSpecs, critterSpecs;
+	  sf::Text waveSpecs, nextWaveSpecs, playerSpecs, towerSpecs, critterSpecs, buttonSpecs;
 	  std::map<int,sf::Text> critterHealth;
 	  std::map<int,sf::Clock> healthClock;
 	  sf::Time healthTime;
@@ -141,5 +141,9 @@ class GameStatePlay : public GameState {
 	 static std::string getTower1ButtonSpecs();
 	 static std::string getTower2ButtonSpecs();
 	 static std::string getTower3ButtonSpecs();
+	 static std::string getPauseButtonSpecs();
+	 static std::string getUnPauseButtonSpecs();
+	 static std::string getReturnToEditorButtonSpecs();
+	 static std::string getStartWaveButtonSpecs();
 
 };

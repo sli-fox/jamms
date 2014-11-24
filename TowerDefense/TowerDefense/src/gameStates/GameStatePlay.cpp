@@ -114,7 +114,26 @@ void GameStatePlay::draw(const float delta_time) {
 	  this->game->game_window.draw(towerSpecs);
 	  //this->game->game_window.draw(upgradeTowerSpecs);
     }
-
+	else if(buttonMap["pauseBtn"].spriteContains(localPosition)) {
+	  buttonSpecs.setString(getPauseButtonSpecs());
+	  this->game->game_window.draw(buttonSpecs);
+	  //this->game->game_window.draw(upgradeTowerSpecs);
+    }
+	else if(buttonMap["unpauseBtn"].spriteContains(localPosition)) {
+	  buttonSpecs.setString(getUnPauseButtonSpecs());
+	  this->game->game_window.draw(buttonSpecs);
+	  //this->game->game_window.draw(upgradeTowerSpecs);
+    }
+	else if(buttonMap["returnToEditorBtn"].spriteContains(localPosition)) {
+	  buttonSpecs.setString(getReturnToEditorButtonSpecs());
+	  this->game->game_window.draw(buttonSpecs);
+	  //this->game->game_window.draw(upgradeTowerSpecs);
+    }
+	else if(buttonMap["startWaveBtn"].spriteContains(localPosition)) {
+	  buttonSpecs.setString(getStartWaveButtonSpecs());
+	  this->game->game_window.draw(buttonSpecs);
+	  //this->game->game_window.draw(upgradeTowerSpecs);
+    }
 	 for (int i = 0; i < this->current_wave->getContainerOfCritters().size(); ++i) 
 	 {
 		if ( this->current_wave->getContainerOfCritters()[i]->isActive )
@@ -534,6 +553,7 @@ void GameStatePlay::buttonCommandLibrary(){
 			if (this->game->isGamePaused)
         this->game->isGamePaused = false;
     }
+
 		else if(buttonMap["bulldog_0_Btn"].spriteContains(localPosition)){
 			towerSelector = Tower::Bulldog;
 		}
@@ -588,6 +608,10 @@ void GameStatePlay::initializeButtonMap(){
 	critterSpecs.setColor(sf::Color::White);
 	critterSpecs.setCharacterSize(13);
 
+	buttonSpecs.setFont(font);
+	buttonSpecs.setPosition(24*32+8,14*32);
+	buttonSpecs.setColor(sf::Color::White);
+	buttonSpecs.setCharacterSize(13);
 
 
 	/*
@@ -732,6 +756,34 @@ std::string GameStatePlay::getTower3ButtonSpecs() {
 	return output.str();
 }
 
+std::string GameStatePlay::getPauseButtonSpecs() {
+	std::stringstream output;
+	output << "Button is used to pause the game." << std::endl;
+	output << "Critters in the range of tower "<< std::endl;
+	output << "wont be affected." << std::endl;
 
+	return output.str();
+}
+
+std::string GameStatePlay::getUnPauseButtonSpecs() {
+	std::stringstream output;
+	output << "Button is used to unpause the game." << std::endl;
+
+	return output.str();
+}
+std::string GameStatePlay::getReturnToEditorButtonSpecs() {
+	std::stringstream output;
+	output << "Brings the game back to Map Editor." << std::endl;
+	output << "Towers placed in the game are cleared up." << std::endl;
+	output << "Waves are also cleared." << std::endl;
+
+	return output.str();
+}
+std::string GameStatePlay::getStartWaveButtonSpecs() {
+	std::stringstream output;
+	output << "Start the wave of Critters." << std::endl;
+	
+	return output.str();
+}
 GameObjectManager GameStatePlay::_game_object_manager;
 TowerManager& GameStatePlay::tower_manager = TowerManager::getInstance();
