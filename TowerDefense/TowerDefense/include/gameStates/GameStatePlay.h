@@ -89,7 +89,7 @@ class GameStatePlay : public GameState {
 	  std::map<string,GameObject> buttonMap;
 	  bool returnToMenu;
 	  sf::CircleShape range;
-	  Tower::TowerType towerSelector;
+	  std::string towerSelector;
 	  sf::Font font;
 	  //sf::Text upgradeTowerSpecs;
 	  sf::Text waveSpecs, nextWaveSpecs, playerSpecs, towerSpecs, critterSpecs, buttonSpecs;

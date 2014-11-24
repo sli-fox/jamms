@@ -501,7 +501,7 @@ void GameStatePlay::handleGameOver() {
 }
 
 void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
-	if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && towerSelector >= 0 && towerSelector < 3){
+	if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
 		if(tower_manager.getTower(tileX, tileY) == nullptr && this->game->map.getTile(tileX, tileY) != nullptr
 			&& this->game->map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY) {
 			tower_manager.buyTower(towerSelector, tileX, tileY);
@@ -515,8 +515,8 @@ void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 				tower_manager.sellTower(tileX, tileY);
 		}
 	}
-	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::U) && tower_manager.getTower(tileX, tileY) != NULL){
-		tower_manager.upgradeTower(tileX, tileY, "range");
+	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::U) && tower_manager.getTower(tileX, tileY) != NULL) {
+		tower_manager.upgradeTower(tower_manager.getTower(tileX, tileY));
 	}
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num0)){
 		tower_manager.clearAllTowers();
@@ -529,15 +529,15 @@ void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 	}
 }
 
-void GameStatePlay::buttonCommandLibrary(){
-	if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-		if(buttonMap["returnToEditorBtn"].spriteContains(localPosition)){
+void GameStatePlay::buttonCommandLibrary() {
+	if(sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+		if(buttonMap["returnToEditorBtn"].spriteContains(localPosition)) {
 			returnToMenu = true;
 			tower_manager.clearAllTowers();
 			game->player.resetStats();
 			this->game->popState();
 		}
-		else if(buttonMap["startWaveBtn"].spriteContains(localPosition)){
+		else if(buttonMap["startWaveBtn"].spriteContains(localPosition)) {
       if (firstStart) {
         last_activated_critter->hasSpawned = true;
         last_activated_critter->isActive = true;
@@ -545,7 +545,7 @@ void GameStatePlay::buttonCommandLibrary(){
       }
       handleCritterWaveLevelSwitching();
 		}
-		else if(buttonMap["pauseBtn"].spriteContains(localPosition)){
+		else if(buttonMap["pauseBtn"].spriteContains(localPosition)) {
 			if (!this->game->isGamePaused)
         this->game->isGamePaused = true;
 		}
@@ -553,20 +553,25 @@ void GameStatePlay::buttonCommandLibrary(){
 			if (this->game->isGamePaused)
         this->game->isGamePaused = false;
     }
+<<<<<<< HEAD
 
 		else if(buttonMap["bulldog_0_Btn"].spriteContains(localPosition)){
 			towerSelector = Tower::Bulldog;
+=======
+		else if(buttonMap["BabyShihTzu_Btn"].spriteContains(localPosition)) {
+			towerSelector = "BabyShihTzu";
+>>>>>>> b7247c7a6abd342519a4767bc5d6217d38734434
 		}
-		else if(buttonMap["dalmatian_0_Btn"].spriteContains(localPosition)){
-			towerSelector = Tower::Dalmatian;
+		else if(buttonMap["BabyDalmatian_Btn"].spriteContains(localPosition)) {
+			towerSelector = "BabyDalmatian";
 		}
-		else if(buttonMap["shihtzu_0_Btn"].spriteContains(localPosition)){
-			towerSelector = Tower::ShihTzu;
+		else if(buttonMap["BabyBulldog_Btn"].spriteContains(localPosition)) {
+			towerSelector = "BabyBulldog";
 		}
 	}
 }
 
-void GameStatePlay::initializeButtonMap(){
+void GameStatePlay::initializeButtonMap() {
 	string imagePath = "resources/images/";
 	string towerPath = "resources/images/towers/";
 	string squaresPath = "resources/images/towers/squares";
@@ -653,11 +658,28 @@ void GameStatePlay::initializeButtonMap(){
 	startWaveBtn.load(imagePath + "StartWaveBtn.png");
 	startWaveBtn.setPosition(6*32,22*32);
 	buttonMap.emplace("startWaveBtn", startWaveBtn);
+	
+	GameObject BabyShihTzu_Btn;
+	BabyShihTzu_Btn.load(towerPath + "ShihTzu_0.png");
+	BabyShihTzu_Btn.setPosition(24*32,12*32);
+	buttonMap.emplace("BabyShihTzu_Btn", BabyShihTzu_Btn);
+	
+	GameObject BabyDalmatian_Btn;
+	BabyDalmatian_Btn.load(towerPath + "Dalmatian_0.png");
+	BabyDalmatian_Btn.setPosition(25*32,12*32);
+	buttonMap.emplace("BabyDalmatian_Btn", BabyDalmatian_Btn);
 
+<<<<<<< HEAD
 	GameObject bulldog_0_Btn;
 	bulldog_0_Btn.load(towerPath + "firetower.png");
 	bulldog_0_Btn.setPosition(24*32,12*32);
 	buttonMap.emplace("bulldog_0_Btn", bulldog_0_Btn);
+=======
+	GameObject BabyBulldog_Btn;
+	BabyBulldog_Btn.load(towerPath + "Bulldog_0.png");
+	BabyBulldog_Btn.setPosition(26*32,12*32);
+	buttonMap.emplace("BabyBulldog_Btn", BabyBulldog_Btn);
+>>>>>>> b7247c7a6abd342519a4767bc5d6217d38734434
 
 	/*
 	GameObject bulldog_1_Btn;
@@ -671,11 +693,14 @@ void GameStatePlay::initializeButtonMap(){
 	buttonMap.emplace("bulldog_2_Btn", bulldog_2_Btn);
 	*/
 
+<<<<<<< HEAD
 	GameObject dalmatian_0_Btn;
 	dalmatian_0_Btn.load(towerPath + "tower.png");
 	dalmatian_0_Btn.setPosition(25*32,12*32);
 	buttonMap.emplace("dalmatian_0_Btn", dalmatian_0_Btn);
 
+=======
+>>>>>>> b7247c7a6abd342519a4767bc5d6217d38734434
 	/*
 	GameObject dalmatian_1_Btn;
 	dalmatian_1_Btn.load(towerPath + "dalmatian_1.png");
@@ -688,11 +713,14 @@ void GameStatePlay::initializeButtonMap(){
 	buttonMap.emplace("dalmatian_2_Btn", dalmatian_2_Btn);
 	*/
 
+<<<<<<< HEAD
 	GameObject shihtzu_0_Btn;
 	shihtzu_0_Btn.load(towerPath + "icetower.png");
 	shihtzu_0_Btn.setPosition(26*32,12*32);
 	buttonMap.emplace("shihtzu_0_Btn", shihtzu_0_Btn);
 
+=======
+>>>>>>> b7247c7a6abd342519a4767bc5d6217d38734434
 	/*
 	GameObject shihtzu_1_Btn;
 	shihtzu_1_Btn.load(towerPath + "shihtzu_1.png");
