@@ -82,6 +82,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="include\Game.h" />
+    <ClInclude Include="include\gameObjects\BabyBulldog.h" />
+    <ClInclude Include="include\gameObjects\BabyDalmatian.h" />
+    <ClInclude Include="include\gameObjects\BabyShihTzu.h" />
     <ClInclude Include="include\gameObjects\BlackCat.h" />
     <ClInclude Include="include\gameObjects\BurnEffect.h" />
     <ClInclude Include="include\gameObjects\ConcreteTower.h" />
@@ -121,7 +124,19 @@
     <ClInclude Include="include\views\Menu.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="include\gameObjects\AdultBulldogUpgrade.h" />
+    <ClCompile Include="include\gameObjects\AdultDalmatianUpgrade.h" />
+    <ClCompile Include="include\gameObjects\AdultShihTzuUpgrade.h" />
+    <ClCompile Include="include\gameObjects\TeenBulldogUpgrade.h" />
+    <ClCompile Include="include\gameObjects\TeenDalmatianUpgrade.h" />
+    <ClCompile Include="include\gameObjects\TeenShihTzuUpgrade.h" />
     <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\gameObjects\AdultBulldogUpgrade.cpp" />
+    <ClCompile Include="src\gameObjects\AdultDalmatianUpgrade.cpp" />
+    <ClCompile Include="src\gameObjects\AdultShihTzuUpgrade.cpp" />
+    <ClCompile Include="src\gameObjects\BabyBulldog.cpp" />
+    <ClCompile Include="src\gameObjects\BabyDalmatian.cpp" />
+    <ClCompile Include="src\gameObjects\BabyShihTzu.cpp" />
     <ClCompile Include="src\gameObjects\BlackCat.cpp" />
     <ClCompile Include="src\gameObjects\BurnEffect.cpp" />
     <ClCompile Include="src\gameObjects\ConcreteTower.cpp" />
@@ -129,6 +144,9 @@
     <ClCompile Include="src\gameObjects\CritterFactory.cpp" />
     <ClCompile Include="src\gameObjects\FreezeEffect.cpp" />
     <ClCompile Include="src\gameObjects\GameObject.cpp" />
+    <ClCompile Include="src\gameObjects\TeenBulldogUpgrade.cpp" />
+    <ClCompile Include="src\gameObjects\TeenDalmatianUpgrade.cpp" />
+    <ClCompile Include="src\gameObjects\TeenShihTzuUpgrade.cpp" />
     <ClCompile Include="src\gameObjects\Tile.cpp" />
     <ClCompile Include="src\gameObjects\Tower.cpp" />
     <ClCompile Include="src\gameObjects\TowerDecorator.cpp" />

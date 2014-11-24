@@ -3,11 +3,20 @@
 #include <iostream>
 #include <vector>
 #include <Game.h>
-#include "gameObjects/TowerDecorator.h"
-#include "gameObjects/FreezeEffect.h"
-#include "gameObjects/BurnEffect.h"
-#include <gameObjects/Tower.h>
-#include <gameObjects/ConcreteTower.h>
+#include "GameObjects/TowerDecorator.h"
+#include "GameObjects/FreezeEffect.h"
+#include "GameObjects/BurnEffect.h"
+#include "GameObjects/Tower.h"
+#include "GameObjects/ConcreteTower.h"
+#include "GameObjects/BabyShihTzu.h"
+#include "GameObjects/BabyDalmatian.h"
+#include "GameObjects/BabyBulldog.h"
+#include "GameObjects/TeenShihTzuUpgrade.h"
+#include "GameObjects/TeenDalmatianUpgrade.h"
+#include "GameObjects/TeenBulldogUpgrade.h"
+#include "GameObjects/AdultShihTzuUpgrade.h"
+#include "GameObjects/AdultDalmatianUpgrade.h"
+#include "GameObjects/AdultBulldogUpgrade.h"
 using std::vector;
 using std::map;
 using std::cout;
@@ -27,8 +36,8 @@ class TowerManager {
 	map<pair<int,int>, Tower*>* getTowerMap();
 	Tower* getTower(int tileX, int tileY);
 
-	Tower* buyTower(Tower::TowerType type, int tileX, int tileY);
-	void upgradeTower(int tileX, int tileY, std::string upgrade);
+	Tower* buyTower(std::string towerSelector, int tileX, int tileY);
+	void upgradeTower(Tower* tower);
 	void sellTower(int tileX, int tileY);
 
 	bool isTileFree(int tileX, int tileY);
