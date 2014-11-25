@@ -48,7 +48,7 @@ bool FreezeEffect::canAttack(Critter* critter) {
 void FreezeEffect::attack() {
 		this->_target = _decoratedTower->getTarget();
 		_decoratedTower->attack();
-		std::cout << yellow << this->_name << " attacking..." << std::endl;
+		std::cout << yellow << this->_name << " attacking... with freeze effect" << std::endl;
 }
 
 // @Override

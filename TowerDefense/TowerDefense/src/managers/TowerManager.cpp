@@ -61,12 +61,13 @@ Tower* TowerManager::buyTower(std::string towerSelector, int tileX, int tileY) {
 	return NULL;
 }
 
-void TowerManager::upgradeTower(Tower* tower) {
+void TowerManager::upgradeTower(int tileX, int tileY) {
 		int upgradeCost = -1;
-
+		Tower* tower = towers[make_pair(tileX, tileY)];
 		if(tower->getType() == Tower::TowerType::ShihTzu) {
 			if(tower->getUpgradeLevel() == Tower::UpgradeLevel::Baby && TeenShihTzuUpgrade::teen_upgrade_cost <= Game::player.getCash()) {
-				tower = new TeenShihTzuUpgrade(tower);
+				//tower = new FreezeEffect(tower);
+				towers[make_pair(tileX, tileY)] = new FreezeEffect(towers[make_pair(tileX, tileY)]);
 				upgradeCost = TeenShihTzuUpgrade::teen_upgrade_cost;
 			}
 			else if(tower->getUpgradeLevel() == Tower::UpgradeLevel::Teen && AdultShihTzuUpgrade::adult_upgrade_cost <= Game::player.getCash()) {

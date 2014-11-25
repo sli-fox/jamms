@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <Game.h>
-//#include "GameObjects/FreezeEffect.h"
+#include "GameObjects/FreezeEffect.h"
 //#include "GameObjects/BurnEffect.h"
 #include "GameObjects/Tower.h"
 #include "GameObjects/BabyShihTzu.h"
@@ -35,7 +35,7 @@ class TowerManager {
 	Tower* getTower(int tileX, int tileY);
 
 	Tower* buyTower(std::string towerSelector, int tileX, int tileY);
-	void upgradeTower(Tower* tower);
+	void upgradeTower(int tileX, int tileY);
 	void sellTower(int tileX, int tileY);
 
 	bool isTileFree(int tileX, int tileY);

@@ -516,7 +516,7 @@ void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 		}
 	}
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::U) && tower_manager.getTower(tileX, tileY) != NULL) {
-		tower_manager.upgradeTower(tower_manager.getTower(tileX, tileY));
+		tower_manager.upgradeTower(tileX, tileY);
 	}
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num0)){
 		tower_manager.clearAllTowers();
