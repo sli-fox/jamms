@@ -20,7 +20,6 @@
 #include <algorithm>
 #include <iostream>
 #include <thread>
-#include <thread>
 #include <Map.h>
 #include <managers/TowerManager.h>
 #include <managers/CritterWave.h>

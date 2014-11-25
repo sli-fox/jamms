@@ -82,6 +82,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="include\Game.h" />
+    <ClInclude Include="include\gameObjects\AdultBulldogUpgrade.h" />
+    <ClInclude Include="include\gameObjects\AdultDalmatianUpgrade.h" />
+    <ClInclude Include="include\gameObjects\AdultShihTzuUpgrade.h" />
     <ClInclude Include="include\gameObjects\BabyBulldog.h" />
     <ClInclude Include="include\gameObjects\BabyDalmatian.h" />
     <ClInclude Include="include\gameObjects\BabyShihTzu.h" />
@@ -94,6 +97,9 @@
     <ClInclude Include="include\gameObjects\GameObject.h" />
     <ClInclude Include="include\gameObjects\IObserver.h" />
     <ClInclude Include="include\gameObjects\ISubject.h" />
+    <ClInclude Include="include\gameObjects\TeenBulldogUpgrade.h" />
+    <ClInclude Include="include\gameObjects\TeenDalmatianUpgrade.h" />
+    <ClInclude Include="include\gameObjects\TeenShihTzuUpgrade.h" />
     <ClInclude Include="include\gameObjects\Tile.h" />
     <ClInclude Include="include\gameObjects\Tower.h" />
     <ClInclude Include="include\gameObjects\TowerDecorator.h" />
@@ -124,12 +130,6 @@
     <ClInclude Include="include\views\Menu.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="include\gameObjects\AdultBulldogUpgrade.h" />
-    <ClCompile Include="include\gameObjects\AdultDalmatianUpgrade.h" />
-    <ClCompile Include="include\gameObjects\AdultShihTzuUpgrade.h" />
-    <ClCompile Include="include\gameObjects\TeenBulldogUpgrade.h" />
-    <ClCompile Include="include\gameObjects\TeenDalmatianUpgrade.h" />
-    <ClCompile Include="include\gameObjects\TeenShihTzuUpgrade.h" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\gameObjects\AdultBulldogUpgrade.cpp" />
     <ClCompile Include="src\gameObjects\AdultDalmatianUpgrade.cpp" />
