@@ -238,10 +238,10 @@ void GameStatePlay::handleInput() {
 
 	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
 	for(std::map<std::pair<int,int>, Tower*>::iterator it = tower_manager.getTowerMap()->begin() ; it != tower_manager.getTowerMap()->end() ; ++it) {
-		
+
 		Tower* tower = it->second;
 		if(tower != NULL) {
-		
+
 			for (int i = 0; i < critters.size(); ++i) {
 				while(critters[i]->isActive && tower->canAttack(critters[i]) && !this->game->isGamePaused) {
 					tower->attack();
@@ -259,13 +259,6 @@ void GameStatePlay::handleInput() {
 					if(!critters[i]->getSpecialEffectApplied()) {
 						tower->applySpecialEffect(critters[i]);
 						critters[i]->setSpecialEffectApplied(true);
-					}
-					if(critters[i]->getHitPoints() <= 0) {
-						critters[i]->isActive = false;
-						current_wave->decrementCrittersRemaining();
-						std::cout << red << "Cat " << critters[i]->getId() << " fled away!" << std::endl;
-						Game::player.earnCash(critters[i]->getPlayerReward() * 2);
-						Game::player.gainPoints(critters[i]->getPlayerReward() * 3);
 					}
 				}
 			}
@@ -447,22 +440,30 @@ void GameStatePlay::moveCritter(Critter* critter, const float delta_time) {
 }
 
 void GameStatePlay::handleCritterRemovalFromWave() {
-  std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
-  for (int i = 0; i < critters.size(); ++i) {
-    //Check if critters are at end tile
-    critters[i]->isAtEndTile = checkIfAtEndTile(critters[i]);
-    
-    if (critters[i]->isAtEndTile && critters[i]->isActive) {
-      //Take a life from the player
-      this->game->player.loseLives(1);
-      //Remove points from player
-      this->game->player.losePoints(critters[i]->getStealPointsStrength());
-    }
+	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
+	for (int i = 0; i < critters.size(); ++i) {
+		//Check if critters are at end tile
+		critters[i]->isAtEndTile = checkIfAtEndTile(critters[i]);
 
-    if (critters[i]->isAtEndTile || critters[i]->getHitPoints() <= 0) {
-      current_wave->findCritter(i)->isActive = false;
-    }
-  }
+		//handle removal of dead critters
+		if(critters[i]->isActive && critters[i]->getHitPoints() <= 0){
+			std::cout << red << "Cat " << critters[i]->getId() << " fled away!" << std::endl;
+			Game::player.earnCash(critters[i]->getPlayerReward() * 2);
+			Game::player.gainPoints(critters[i]->getPlayerReward() * 3);
+
+			current_wave->decrementCrittersRemaining();
+			critters[i]->isActive = false;
+		}
+		//handle removal of critters at end tile
+		else if (critters[i]->isActive && critters[i]->isAtEndTile) {
+			//Take a life from the player
+			this->game->player.loseLives(1);
+			//Remove points from player
+			this->game->player.losePoints(critters[i]->getStealPointsStrength());
+			current_wave->decrementCrittersRemaining();
+			critters[i]->isActive = false;
+		}
+	}
 }
 
 void GameStatePlay::handleCritterWaveLevelSwitching() {
