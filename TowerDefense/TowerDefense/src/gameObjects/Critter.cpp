@@ -84,6 +84,8 @@ std::string Critter::getCritterSpecs() {
 	//Since we can't cout an enum in C++, we need this Array system as a workaround (optional, but prettier at output)
 	char *CritterTypeA[] = { "BLACK_CAT", "WHITE_CAT" };
 	std::stringstream output;
+	output << "Critter Id: " << this->id << std::endl;
+	output << "Current Health: " << this->getHitPoints() << std::endl;
 	output << "Max Health: " << this->max_health << std::endl;
 	output << "Type: " << CritterTypeA[this->type] << std::endl;
 	output << "Steal Coins: " << this->steal_points << std::endl;

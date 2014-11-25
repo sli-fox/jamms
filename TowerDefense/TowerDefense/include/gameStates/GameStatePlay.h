@@ -20,7 +20,6 @@
 #include <algorithm>
 #include <iostream>
 #include <thread>
-#include <thread>
 #include <Map.h>
 #include <managers/TowerManager.h>
 #include <managers/CritterWave.h>
@@ -92,7 +91,7 @@ class GameStatePlay : public GameState {
 	  std::string towerSelector;
 	  sf::Font font;
 	  //sf::Text upgradeTowerSpecs;
-	  sf::Text waveSpecs, nextWaveSpecs, playerSpecs, towerSpecs;
+	  sf::Text waveSpecs, nextWaveSpecs, playerSpecs, towerSpecs, critterSpecs, buttonSpecs;
 	  std::map<int,sf::Text> critterHealth;
 	  std::map<int,sf::Clock> healthClock;
 	  sf::Time healthTime;
@@ -137,4 +136,13 @@ class GameStatePlay : public GameState {
      void handleCritterRemovalFromWave();
      void handleCritterWaveLevelSwitching();
      void setCritterWaveLevels(Waypoint* starting_waypoint);
+
+	 static std::string getTower1ButtonSpecs();
+	 static std::string getTower2ButtonSpecs();
+	 static std::string getTower3ButtonSpecs();
+	 static std::string getPauseButtonSpecs();
+	 static std::string getUnPauseButtonSpecs();
+	 static std::string getReturnToEditorButtonSpecs();
+	 static std::string getStartWaveButtonSpecs();
+
 };

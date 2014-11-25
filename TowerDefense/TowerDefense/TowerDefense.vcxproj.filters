@@ -171,13 +171,31 @@
     <ClInclude Include="include\gameObjects\BurnEffect.h">
       <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
-    <ClInclude Include="include\gameObjects\BabyShihTzu.h">
+    <ClInclude Include="include\gameObjects\AdultBulldogUpgrade.h">
+      <Filter>Header Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\AdultDalmatianUpgrade.h">
+      <Filter>Header Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\AdultShihTzuUpgrade.h">
+      <Filter>Header Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\BabyBulldog.h">
       <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
     <ClInclude Include="include\gameObjects\BabyDalmatian.h">
       <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
-    <ClInclude Include="include\gameObjects\BabyBulldog.h">
+    <ClInclude Include="include\gameObjects\BabyShihTzu.h">
+      <Filter>Header Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\TeenBulldogUpgrade.h">
+      <Filter>Header Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\TeenDalmatianUpgrade.h">
+      <Filter>Header Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\TeenShihTzuUpgrade.h">
       <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
   </ItemGroup>
@@ -275,15 +293,6 @@
     <ClCompile Include="src\gameObjects\BurnEffect.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\BabyShihTzu.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\BabyDalmatian.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\BabyBulldog.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
     <ClCompile Include="src\gameObjects\TeenShihTzuUpgrade.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
@@ -293,32 +302,23 @@
     <ClCompile Include="src\gameObjects\TeenBulldogUpgrade.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\AdultShihTzuUpgrade.cpp">
+    <ClCompile Include="src\gameObjects\AdultBulldogUpgrade.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
     <ClCompile Include="src\gameObjects\AdultDalmatianUpgrade.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\AdultBulldogUpgrade.cpp">
+    <ClCompile Include="src\gameObjects\AdultShihTzuUpgrade.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
-    <ClCompile Include="include\gameObjects\AdultBulldogUpgrade.h">
-      <Filter>Header Files\GameObjects</Filter>
+    <ClCompile Include="src\gameObjects\BabyBulldog.cpp">
+      <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
-    <ClCompile Include="include\gameObjects\AdultDalmatianUpgrade.h">
-      <Filter>Header Files\GameObjects</Filter>
+    <ClCompile Include="src\gameObjects\BabyDalmatian.cpp">
+      <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
-    <ClCompile Include="include\gameObjects\AdultShihTzuUpgrade.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="include\gameObjects\TeenBulldogUpgrade.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="include\gameObjects\TeenDalmatianUpgrade.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="include\gameObjects\TeenShihTzuUpgrade.h">
-      <Filter>Header Files\GameObjects</Filter>
+    <ClCompile Include="src\gameObjects\BabyShihTzu.cpp">
+      <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -356,6 +356,12 @@
       <Filter>Resource Files\Images\Towers</Filter>
     </Image>
     <Image Include="resources\images\critters\WhiteCatSpriteSheet.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="resources\images\RedoBtn.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="resources\images\UndoBtn.png">
       <Filter>Resource Files\Images</Filter>
     </Image>
   </ItemGroup>

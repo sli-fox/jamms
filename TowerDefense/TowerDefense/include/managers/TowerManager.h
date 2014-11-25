@@ -3,11 +3,9 @@
 #include <iostream>
 #include <vector>
 #include <Game.h>
-#include "GameObjects/TowerDecorator.h"
-#include "GameObjects/FreezeEffect.h"
-#include "GameObjects/BurnEffect.h"
+//#include "GameObjects/FreezeEffect.h"
+//#include "GameObjects/BurnEffect.h"
 #include "GameObjects/Tower.h"
-#include "GameObjects/ConcreteTower.h"
 #include "GameObjects/BabyShihTzu.h"
 #include "GameObjects/BabyDalmatian.h"
 #include "GameObjects/BabyBulldog.h"

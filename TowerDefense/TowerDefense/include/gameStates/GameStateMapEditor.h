@@ -74,4 +74,15 @@ class GameStateMapEditor : public GameState {
 	 void initializeButtonMap();
 	 void buttonCommandLibrary();
      void mapEditorCommandLibrary();
+
+	 static std::string getRedoButtonSpecs();
+	 static std::string getSaveButtonSpecs();
+	 static std::string getUndoButtonSpecs();
+	 static std::string getPlayButtonSpecs();
+	 static std::string getStartTileButtonSpecs();
+	 static std::string getEndTileButtonSpecs();
+	 static std::string getPathTileButtonSpecs();
+	 static std::string getSceneryTileButtonSpecs();
+	 static std::string getDeadTileButtonSpecs();
+	 static std::string getLoadMapButtonSpecs();
 };

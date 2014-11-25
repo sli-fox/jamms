@@ -1,7 +1,6 @@
 #include "GameObjects/ConcreteTower.h"
 
 int ConcreteTower::serial = 0;
-int const ConcreteTower::upgrade_range_cost = 10;
 
 int ConcreteTower::getBuyCost() const {
 	return _buy_cost;
