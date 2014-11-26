@@ -25,61 +25,61 @@ void FreezeEffect::attack() {
 	cout << red << "Freezing critter " << _target->getId() << endl;
 	//cout << red << this->getName() << " is Applying Freezing Effect to Critter " << this->getTarget()->getId() << endl;
 	this->_target->setSpeed(0);
-			/*
-			critter->isFrozen;
-			
-			float speedBeforeFrozen = critter->getSpeed();
-			cout << "speed before frozen " << speedBeforeFrozen << endl;
+	/*
+	critter->isFrozen;
 
-			critter->setSpeed(0);
-			cout << "speed after frozen " << critter->getSpeed() << endl;
-			*/
+	float speedBeforeFrozen = critter->getSpeed();
+	cout << "speed before frozen " << speedBeforeFrozen << endl;
 
-
-			/*
-			this->time = this->clock.getElapsedTime();
-
-			while(this->time.asSeconds() * this->getRateOfFire() >= 1) {
-				cout << "Unfreezing " << endl;
-				critter->setSpeed(0);
-				this->clock.restart();
-				//critter->setSpeed(0);
-			}
-			*/
-			
-
-			/*
-			this->time = this->clock.getElapsedTime();
-			cout << "frozen time in seconds " << time.asSeconds() << endl;
-			
-			while(time.asSeconds() <= 3) {
-				critter->setSpeed(0.0f);
-				
-				time += clock.getElapsedTime();
-				cout << "frozen time in seconds + more elapsed time " << time.asSeconds() << endl;
-			}
-			*/
+	critter->setSpeed(0);
+	cout << "speed after frozen " << critter->getSpeed() << endl;
+	*/
 
 
-			/*
-			int delayCount = 0;
+	/*
+	this->time = this->clock.getElapsedTime();
 
-			while (critter->getSpeed() == 0) {
-				cout << "Delay Count: " << delayCount << endl;
-				if (delayCount >= 500) {
-					cout << "Delay Count >= 500" << endl;
-					critter->setSpeed(speedBeforeFrozen);
-				}
-				delayCount += 1;
-			}
-			*/
+	while(this->time.asSeconds() * this->getRateOfFire() >= 1) {
+	cout << "Unfreezing " << endl;
+	critter->setSpeed(0);
+	this->clock.restart();
+	//critter->setSpeed(0);
+	}
+	*/
 
 
-			/*
-			critter->setSpeed(speedBeforeFrozen);
-			cout << "speed completing frozen " << critter->getSpeed() << endl;
-			*/
-			//cout << red << "Unfreezing Critter " << this->getTarget()->getId() << endl;
+	/*
+	this->time = this->clock.getElapsedTime();
+	cout << "frozen time in seconds " << time.asSeconds() << endl;
+
+	while(time.asSeconds() <= 3) {
+	critter->setSpeed(0.0f);
+
+	time += clock.getElapsedTime();
+	cout << "frozen time in seconds + more elapsed time " << time.asSeconds() << endl;
+	}
+	*/
+
+
+	/*
+	int delayCount = 0;
+
+	while (critter->getSpeed() == 0) {
+	cout << "Delay Count: " << delayCount << endl;
+	if (delayCount >= 500) {
+	cout << "Delay Count >= 500" << endl;
+	critter->setSpeed(speedBeforeFrozen);
+	}
+	delayCount += 1;
+	}
+	*/
+
+
+	/*
+	critter->setSpeed(speedBeforeFrozen);
+	cout << "speed completing frozen " << critter->getSpeed() << endl;
+	*/
+	//cout << red << "Unfreezing Critter " << this->getTarget()->getId() << endl;
 }
 
 // @Override

@@ -215,48 +215,48 @@ void GameStatePlay::update(const float delta_time) {
 	//if (mew->isAtEndTile)
 	//std::cout << "Mew: I'm at the end tile!" << std::endl; 
 
-  handleGameOver();
+	handleGameOver();
 
- 
-  //Draw  & move activated Critters within a wave
-  this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
-  moveActivatedCritters(delta_time);
-  waveSpecs.setString("CURRENT WAVE ("
-	  + std::to_string(current_wave->getId()+1) + "/"
-	  + std::to_string(wave_levels.size()) + "):\n"
-	  + "Number of cats left: " 
-	  + std::to_string(current_wave->getCrittersRemaining()) + "/"
-	  + std::to_string(current_wave->getContainerOfCritters().size()) + "\n"
-	  + current_wave->findCritter(current_wave->getContainerOfCritters().size()-1)->getCritterSpecs());
 
-  if(current_wave->next_wave != nullptr) {
-	  nextWaveSpecs.setString("NEXT WAVE ("
-		  + std::to_string(current_wave->getId()+2) + "/"
-		  + std::to_string(wave_levels.size()) + "):\n"+ "Number of cats: "
-		  + std::to_string(current_wave->next_wave->getContainerOfCritters().size()) + "\n"
-		  + current_wave->next_wave->findCritter(0)->getCritterSpecs());
-  } else {
-	  nextWaveSpecs.setString("No more waves!");
-  }
+	//Draw  & move activated Critters within a wave
+	this->current_wave->drawActivatedCrittersInWave(this->game->game_window, delta_time);
+	moveActivatedCritters(delta_time);
+	waveSpecs.setString("CURRENT WAVE ("
+		+ std::to_string(current_wave->getId()+1) + "/"
+		+ std::to_string(wave_levels.size()) + "):\n"
+		+ "Number of cats left: " 
+		+ std::to_string(current_wave->getCrittersRemaining()) + "/"
+		+ std::to_string(current_wave->getContainerOfCritters().size()) + "\n"
+		+ current_wave->findCritter(current_wave->getContainerOfCritters().size()-1)->getCritterSpecs());
 
-  //Activate Critters within a wave based on number of update cycles
-  if (last_activated_critter->hasSpawned) {
-    if (delay_count >= 175 && last_activated_critter->next_critter) {
-      last_activated_critter->next_critter->hasSpawned = true;
-      last_activated_critter->next_critter->isActive = true;
-      std::cout << green << "ACTIVATE critter with id " << last_activated_critter->next_critter->getId() << std::endl;
-      last_activated_critter = last_activated_critter->next_critter;
-      delay_count = 0;
-    }
-    delay_count += 1;
-  }
+	if(current_wave->next_wave != nullptr) {
+		nextWaveSpecs.setString("NEXT WAVE ("
+			+ std::to_string(current_wave->getId()+2) + "/"
+			+ std::to_string(wave_levels.size()) + "):\n"+ "Number of cats: "
+			+ std::to_string(current_wave->next_wave->getContainerOfCritters().size()) + "\n"
+			+ current_wave->next_wave->findCritter(0)->getCritterSpecs());
+	} else {
+		nextWaveSpecs.setString("No more waves!");
+	}
 
-  //Handle the removal of critters from the current wave
-  handleCritterRemovalFromWave();
+	//Activate Critters within a wave based on number of update cycles
+	if (last_activated_critter->hasSpawned) {
+		if (delay_count >= 175 && last_activated_critter->next_critter) {
+			last_activated_critter->next_critter->hasSpawned = true;
+			last_activated_critter->next_critter->isActive = true;
+			std::cout << green << "ACTIVATE critter with id " << last_activated_critter->next_critter->getId() << std::endl;
+			last_activated_critter = last_activated_critter->next_critter;
+			delay_count = 0;
+		}
+		delay_count += 1;
+	}
 
- if (blacky->isActive)
-	  this->blacky->draw(this->game->game_window, delta_time);
-  
+	//Handle the removal of critters from the current wave
+	handleCritterRemovalFromWave();
+
+	if (blacky->isActive)
+		this->blacky->draw(this->game->game_window, delta_time);
+
 }
 
 void GameStatePlay::setCritterWaveLevels(Waypoint* starting_waypoint) {
@@ -303,7 +303,7 @@ void GameStatePlay::handleInput() {
 						tower->applySpecialEffect(critters[i]);
 						critters[i]->setSpecialEffectApplied(true);
 					}
-					
+
 					if(critters[i]->getHitPoints() <= 0) {
 						critters[i]->isActive = false;
 						tower->setTarget(NULL);
@@ -495,34 +495,34 @@ void GameStatePlay::handleCritterRemovalFromWave() {
 
 		if (critters[i]->isAtEndTile && critters[i]->isActive) {
 
-		//handle removal of dead critters
-		if(critters[i]->isActive && critters[i]->getHitPoints() <= 0){
-			std::cout << red << "Cat " << critters[i]->getId() << " fled away!" << std::endl;
-			Game::player.earnCash(critters[i]->getPlayerReward() * 2);
-			Game::player.gainPoints(critters[i]->getPlayerReward() * 3);
+			//handle removal of dead critters
+			if(critters[i]->isActive && critters[i]->getHitPoints() <= 0){
+				std::cout << red << "Cat " << critters[i]->getId() << " fled away!" << std::endl;
+				Game::player.earnCash(critters[i]->getPlayerReward() * 2);
+				Game::player.gainPoints(critters[i]->getPlayerReward() * 3);
 
-			current_wave->decrementCrittersRemaining();
-			critters[i]->isActive = false;
-		}
-		//handle removal of critters at end tile
-		else if (critters[i]->isActive && critters[i]->isAtEndTile) {
+				current_wave->decrementCrittersRemaining();
+				critters[i]->isActive = false;
+			}
+			//handle removal of critters at end tile
+			else if (critters[i]->isActive && critters[i]->isAtEndTile) {
 
-			//Take a life from the player
-			this->game->player.loseLives(1);
-			//Remove points from player
-			this->game->player.losePoints(critters[i]->getStealPointsStrength());
+				//Take a life from the player
+				this->game->player.loseLives(1);
+				//Remove points from player
+				this->game->player.losePoints(critters[i]->getStealPointsStrength());
 
-		}
+			}
 
-		if (critters[i]->isAtEndTile || critters[i]->getHitPoints() <= 0) {
-			current_wave->findCritter(i)->isActive = false;
+			if (critters[i]->isAtEndTile || critters[i]->getHitPoints() <= 0) {
+				current_wave->findCritter(i)->isActive = false;
 
-			current_wave->decrementCrittersRemaining();
-			critters[i]->isActive = false;
+				current_wave->decrementCrittersRemaining();
+				critters[i]->isActive = false;
 
+			}
 		}
 	}
-}
 }
 void GameStatePlay::handleCritterWaveLevelSwitching() {
 	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
