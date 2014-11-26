@@ -4,7 +4,7 @@
 #include <vector>
 #include <Game.h>
 #include "GameObjects/FreezeEffect.h"
-//#include "GameObjects/BurnEffect.h"
+#include "GameObjects/BurnEffect.h"
 #include "GameObjects/Tower.h"
 #include "GameObjects/BabyShihTzu.h"
 #include "GameObjects/BabyDalmatian.h"
@@ -22,11 +22,11 @@ using std::pair;
 using std::make_pair;
 
 class TowerManager {
-  public:
+public:
 	static TowerManager& getInstance() {
-      static TowerManager instance;   //Guaranteed to be destroyed, instantiated on first use
-      return instance;
-    }
+		static TowerManager instance;   //Guaranteed to be destroyed, instantiated on first use
+		return instance;
+	}
 	TowerManager() {};
 	TowerManager(int mapWidth, int mapHeight);
 	~TowerManager() {};
@@ -47,8 +47,8 @@ class TowerManager {
 	int tArrayRows;
 	int tArrayCols;
 
-	
-  private:
+
+private:
 	map<pair<int,int>, Tower*> towers;
-	 
+
 };

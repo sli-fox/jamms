@@ -4,22 +4,19 @@
 #include <GameObjects/TowerDecorator.h>
 
 class BurnEffect : public TowerDecorator {
-	
-	public:
-		BurnEffect();
-		BurnEffect(Tower* decoratedTower);
-		~BurnEffect() { std::cout << red << "BurnEffect has been deleted." << std::endl; }
 
-		static int upgrade_cost;
+public:
+	BurnEffect();
+	BurnEffect(Tower* decoratedTower);
+	~BurnEffect() { std::cout << red << "BurnEffect has been deleted." << std::endl; }
 
-		int getBuyCost() const;
-		void setRange(float _range);
-		std::string getTowerSpecs();
-		bool canAttack(Critter* critter);
-		void attack();
+	static int upgrade_cost;
 
-	private:
-		Tower* _decoratedTower;
-		std::string _special_effect;
+	void attack();
+	std::string getTowerSpecs();
+
+private:
+	Tower* _decoratedTower;
+	std::string _special_effect;
 
 };

@@ -165,9 +165,6 @@
     <ClInclude Include="include\gameObjects\FreezeEffect.h">
       <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
-    <ClInclude Include="include\gameObjects\ConcreteTower.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
     <ClInclude Include="include\gameObjects\BurnEffect.h">
       <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
@@ -285,9 +282,6 @@
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
     <ClCompile Include="src\gameObjects\TowerDecorator.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\ConcreteTower.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
     <ClCompile Include="src\gameObjects\BurnEffect.cpp">

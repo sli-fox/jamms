@@ -3,6 +3,8 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
 
+int Tower::serial = 0;
+
 Tower::Tower() {
 	this->_upgrade_level = Tower::UpgradeLevel::Baby;
 	this->_target = NULL;
@@ -35,6 +37,9 @@ Tower::RateOfFire Tower::getRateOfFire() const {
 Tower::SpecialEffect Tower::getSpecialEffect() const {
 	return _special_effect;
 }
+int Tower::getBuyCost() const {
+	return _sell_cost;
+}
 int Tower::getSellCost() const {
 	return _sell_cost;
 }
@@ -61,12 +66,12 @@ void Tower::setUpgradeLevel(Tower::UpgradeLevel _upgrade_level) {
 void Tower::setPower(int _power) {
 	this->_power = _power;
 }
-/*
+
 void Tower::setRange(float _range) {
 	this->_range = _range;
 	this->setRangeShape(_range);
 }
-*/
+
 void Tower::setRateOfFire(Tower::RateOfFire _rate_of_fire) {
 	this->_rate_of_fire = _rate_of_fire;
 }
@@ -97,43 +102,79 @@ sf::CircleShape Tower::getRangeShape() const {
 	return _range_shape;
 }
 
+/**
+* @brief Determines whether tower can attack a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay
+* @return bool
+*/
+bool Tower::canAttack(Critter* critter) { //@MARK canAttack() is performing 3 functions. range checking, attack timer checking, and target selection. we should split them into 3 methods in my opinion -Jeremy-
+
+	if(!this->_target == NULL && (!this->circleToCircleIntersection(_target) || !_target->isActive))
+		this->_target = NULL;
+
+	if(this->_target == NULL) {
+		_target = critter;
+		//this->rotateTowardsTarget();
+	}
+	else{
+		_target = executeStrategy(critter);
+		//_target = critter;
+		// I changed them to be more consistent -Jeremy-
+	}
+
+	this->time = this->clock.getElapsedTime();
+
+	if(this->circleToCircleIntersection(_target) && time.asSeconds()*this->getRateOfFire() >= 1){
+		clock.restart();
+		return true;
+	}
+
+	return false;
+}
+
+void Tower::attack() {
+	cout << "Tower attacking..." << endl;
+	cout << yellow << this->_name << " attacking Critter " << this->_target->getId() << "... ";
+	this->_target->inflictDamage(this->getPower());
+	cout << yellow << this->_target->getHitPoints() << "HP" << endl;
+}
+
 /** 
-  * @brief Determines collision path based on position of tower object and the distance in a straight line towards critter 
-  * @return std::pair<float, float>
-  */
+* @brief Determines collision path based on position of tower object and the distance in a straight line towards critter 
+* @return std::pair<float, float>
+*/
 std::pair<float, float> Tower::findCollisionPath(Critter* critter) {
 	return std::pair<float, float> (this->getPosition().first - critter->getPosition().first, this->getPosition().second - critter->getPosition().second);
 }
 
 /**
-  * @brief Calculates angle between an x and y component in degrees from the horizontal
-  * @return float
-  */
+* @brief Calculates angle between an x and y component in degrees from the horizontal
+* @return float
+*/
 float Tower::angleInDegrees(float x, float y) {
 	return std::atan2(x, y) * 180 / M_PI;
 }
 
 /**
-  * @brief Rotates the tower to face the critter it is attacking
-  * @return void
-  */
+* @brief Rotates the tower to face the critter it is attacking
+* @return void
+*/
 void Tower::rotateTowardsTarget() {
 	std::pair<float, float> collisionPath = findCollisionPath(this->_target);
 
 	float facingCritterAngle = angleInDegrees(collisionPath.first, collisionPath.second);
-	
+
 	cout << "CollisionPath ("<< collisionPath.first << ", " << collisionPath.second << ")";
 	this->setRotation(facingCritterAngle);
 	//this->move(this->getPosition().x + this->getSpriteSize().x/2, this->getPosition().y + this->getSpriteSize().y/2); 
 }
 
 /**
-  * @brief Determines whether tower can apply a special effect on a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay
-  * @return bool
-  */
+* @brief Determines whether tower can apply a special effect on a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay
+* @return bool
+*/
 bool Tower::canApplySpecialAfterEffects(Critter* critter) {
 	this->time = this->clock.getElapsedTime();
-	
+
 	if(this->circleToCircleIntersection(critter) && time.asSeconds()*this->getRateOfFire() >= 1) {
 		clock.restart();
 		return true;
@@ -143,20 +184,20 @@ bool Tower::canApplySpecialAfterEffects(Critter* critter) {
 
 void Tower::applySpecialEffect(Critter* critter) {
 	switch(this->_special_effect) {
-	/*
-	case SpecialEffect::Bomb:
+		/*
+		case SpecialEffect::Bomb:
 		cout << red << "Applying bomb" << endl;
 		break;
-	*/
-	/*
-	case SpecialEffect::Electrocute:
+		*/
+		/*
+		case SpecialEffect::Electrocute:
 		cout << red << "Applying electrocute" << endl;
 		break;
-	*/
+		*/
 	case SpecialEffect::Burning: {
 		cout << red << "Applying burning" << endl;
-		}
-		break;
+								 }
+								 break;
 
 	case SpecialEffect::Freezing: {
 		//cout << red << "Applying Freezing Effect" << endl;
@@ -183,21 +224,21 @@ void Tower::applySpecialEffect(Critter* critter) {
 		//cout << "speed completing frozen " << critter->getSpeed() << endl;
 
 		//cout << red << "Unfreezing" << endl;
-		}
-		break;
+								  }
+								  break;
 
 	case SpecialEffect::Slowing: {
 		cout << red << "Applying Slowing Effect" << endl;
 		cout << red << "Initial speed: " << critter->getSpeed() << endl;
 		critter->reduceSpeed(10.0f);
 		cout << red << "Final speed: " << critter->getSpeed() << endl;
-		}
-		break;
-	
+								 }
+								 break;
+
 	case SpecialEffect::None: {
 		cout << red << "Applying no effect" << endl;
-		}
-		break;
+							  }
+							  break;
 	}
 }
 
@@ -207,14 +248,14 @@ void Tower::update() {
 
 
 /**
-  * @brief Overrides method to apply to tower range sf::CircleShape object
-  * @return bool
-  */
+* @brief Overrides method to apply to tower range sf::CircleShape object
+* @return bool
+*/
 bool Tower::circleToCircleIntersection(GameObject* game_object){
 	float radius = this->_range_shape.getRadius();
 
 	std::pair <int, int> distance (this->getSpriteCenter().first - game_object->getSpriteCenter().first, this->getSpriteCenter().second - game_object->getSpriteCenter().second);  
-	
+
 	return std::sqrt(std::pow(distance.first, 2) + std::pow(distance.second, 2)) <= radius;
 }
 
@@ -228,4 +269,23 @@ void Tower::setStrategy(TowerStrategy* newStrategy){
 
 Critter* Tower::executeStrategy(Critter* critter){
 	return this->_strategy->computeTarget(critter, _target, this);
+}
+
+std::string Tower::getTowerSpecs() {
+	//Since we can't cout an enum in C++, we need this Array system as a workaround (optional, but prettier at output)
+	char *UpgradeLevelA[] = { "Baby", "Teen", "Adult" };
+	char *RateOfFireA[] = { "Slow", "Normal", "Fast" };
+	char *SpecialEffectA[] = { "None", "Slowing", "Burning", "Freezing" };
+	std::stringstream output;
+	output << "CURRENT TOWER SPECIFICATIONS:" << std::endl;
+	output << "Name: " << this->_name << std::endl;
+	output << "Upgrade: " << UpgradeLevelA[this->_upgrade_level] << std::endl;
+	output << "Power: " << this->_power << std::endl;
+	output << "Range:  " << this->_range << std::endl;
+	output << "Fire Rate: " << RateOfFireA[this->_rate_of_fire-1] << std::endl;
+	output << "Buy Cost: " << this->getBuyCost() << " coins" << std::endl;
+	output << "Upgrade Cost: " << this->_upgrade_cost << " coins" << std::endl;
+	output << "Sell Cost: " << this->_sell_cost << " coins" << std::endl;
+
+	return output.str();
 }

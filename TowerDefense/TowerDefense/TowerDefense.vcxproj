@@ -90,7 +90,6 @@
     <ClInclude Include="include\gameObjects\BabyShihTzu.h" />
     <ClInclude Include="include\gameObjects\BlackCat.h" />
     <ClInclude Include="include\gameObjects\BurnEffect.h" />
-    <ClInclude Include="include\gameObjects\ConcreteTower.h" />
     <ClInclude Include="include\gameObjects\Critter.h" />
     <ClInclude Include="include\gameObjects\CritterFactory.h" />
     <ClInclude Include="include\gameObjects\FreezeEffect.h" />
@@ -139,7 +138,6 @@
     <ClCompile Include="src\gameObjects\BabyShihTzu.cpp" />
     <ClCompile Include="src\gameObjects\BlackCat.cpp" />
     <ClCompile Include="src\gameObjects\BurnEffect.cpp" />
-    <ClCompile Include="src\gameObjects\ConcreteTower.cpp" />
     <ClCompile Include="src\gameObjects\Critter.cpp" />
     <ClCompile Include="src\gameObjects\CritterFactory.cpp" />
     <ClCompile Include="src\gameObjects\FreezeEffect.cpp" />
