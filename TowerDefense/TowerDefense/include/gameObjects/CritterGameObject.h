@@ -19,6 +19,10 @@
 */
 class CritterGameObject : public GameObject {
 public:
+  enum MovementDirection { DOWN, LEFT, RIGHT, UP };
+  bool isActive;
+  bool hasSpawned;
+  bool isAtEndTile;
 
   /** @brief Handles the animated object. 
   */
@@ -27,6 +31,8 @@ public:
   CritterGameObject() {};
   virtual ~CritterGameObject() {};
 
+  Waypoint* getCurrentWaypoint() const;
+  void setCurrentWaypoint(Waypoint* waypoint);
   void setAnimationIndex(unsigned int index);
 
   /** @brief Draw a Critter.
@@ -36,9 +42,16 @@ public:
   *  @return Void.
   */
   void draw(sf::RenderWindow& game_window, float delta_time);
+  MovementDirection getMovementDirection();
+  bool isAtNextWaypoint();
+  void updatePosition(float x, float y);
+
+  void controlCat(sf::Keyboard::Key arrowKey);
+
 
 protected:
-  
+  Waypoint* current_waypoint;
+
   /** @brief Indicates which animation in a sprite sheet
   */
   int animation_index;

@@ -18,14 +18,8 @@
 */
 class Critter : public CritterGameObject, public ISubject {
 public:
-  enum MovementDirection { DOWN, LEFT, RIGHT, UP };
   enum CritterType { BLACK_CAT, WHITE_CAT };
 
-  void controlCat(sf::Keyboard::Key arrowKey);
-
-  bool isActive;
-  bool hasSpawned;
-  bool isAtEndTile;
   Critter* next_critter;
 
   Critter() {};
@@ -40,26 +34,13 @@ public:
   void setSpeed(float speed);
   void reduceSpeed(float speed);
   int getLevel() const;
-  Waypoint* getCurrentWaypoint() const;
-  void setCurrentWaypoint(Waypoint* waypoint);
   bool getSpecialEffectApplied() const;
   void setSpecialEffectApplied(bool specialEffectApplied);
 
-
   void inflictDamage(int dmg);
-
-  MovementDirection getMovementDirection();
-
-  void updatePosition(float x, float y);
-
-  bool isAtNextWaypoint();
-
-
   std::string getCritterSpecs();
 
 protected:
-  Waypoint* current_waypoint;
-
   CritterType type;
   int id;
   int max_health;
@@ -93,8 +74,5 @@ protected:
   */
   int level;
 
-  /**
-  * @brief
-  */
   bool specialEffectApplied;
 };
