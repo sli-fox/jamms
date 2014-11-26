@@ -14,7 +14,7 @@ void TowerManager::clearAllTowers() {
 }
 
 bool TowerManager::isTileFree(int tileX, int tileY) {
-	if(towers[std::make_pair(tileX,tileY)] == NULL)
+	if(towers[make_pair(tileX,tileY)] == NULL)
 		return true;
 	return false;
 }
@@ -37,8 +37,9 @@ Tower* TowerManager::buyTower(std::string towerSelector, int tileX, int tileY) {
 	if(towerSelector == "") return NULL;
 	if(isTileFree(tileX, tileY)) {
 		if(towerSelector == "BabyShihTzu") {
-			if(BabyShihTzu::buy_cost <= Game::player.getCash())
+			if(BabyShihTzu::buy_cost <= Game::player.getCash()) {
 				towers[make_pair(tileX, tileY)] = new BabyShihTzu(tileX, tileY);
+			}
 			else return NULL;
 		}
 		if(towerSelector == "BabyDalmatian") {
@@ -61,41 +62,43 @@ Tower* TowerManager::buyTower(std::string towerSelector, int tileX, int tileY) {
 	return NULL;
 }
 
-void TowerManager::upgradeTower(Tower* tower) {
-		int upgradeCost = -1;
-
-		if(tower->getType() == Tower::TowerType::ShihTzu) {
-			if(tower->getUpgradeLevel() == Tower::UpgradeLevel::Baby && TeenShihTzuUpgrade::teen_upgrade_cost <= Game::player.getCash()) {
-				tower = new TeenShihTzuUpgrade(tower);
-				upgradeCost = TeenShihTzuUpgrade::teen_upgrade_cost;
-			}
-			else if(tower->getUpgradeLevel() == Tower::UpgradeLevel::Teen && AdultShihTzuUpgrade::adult_upgrade_cost <= Game::player.getCash()) {
-				tower = new AdultShihTzuUpgrade(tower);
-				upgradeCost = AdultShihTzuUpgrade::adult_upgrade_cost;
-			}
+void TowerManager::upgradeTower(int tileX, int tileY) {
+	int upgradeCost = -1;
+	Tower* tower = towers[make_pair(tileX, tileY)];
+	if(tower->getType() == Tower::TowerType::ShihTzu) {
+		if(tower->getUpgradeLevel() == Tower::UpgradeLevel::Baby && TeenShihTzuUpgrade::teen_upgrade_cost <= Game::player.getCash()) {
+			tower = new TeenShihTzuUpgrade(tower);
+			upgradeCost = TeenShihTzuUpgrade::teen_upgrade_cost;
 		}
-		if(tower->getType() == Tower::TowerType::Dalmatian) {
-			if(tower->getUpgradeLevel() == Tower::UpgradeLevel::Baby && TeenDalmatianUpgrade::teen_upgrade_cost <= Game::player.getCash()) {
-				tower = new TeenDalmatianUpgrade(tower);
-				upgradeCost = TeenDalmatianUpgrade::teen_upgrade_cost;
-			}
-			else if(tower->getUpgradeLevel() == Tower::UpgradeLevel::Teen && AdultDalmatianUpgrade::adult_upgrade_cost <= Game::player.getCash()) {
-				tower = new AdultDalmatianUpgrade(tower);
-				upgradeCost = AdultDalmatianUpgrade::adult_upgrade_cost;
-			}
+		else if(tower->getUpgradeLevel() == Tower::UpgradeLevel::Teen && AdultShihTzuUpgrade::adult_upgrade_cost <= Game::player.getCash()) {
+			tower = new FreezeEffect(new AdultShihTzuUpgrade(tower));
+			upgradeCost = AdultShihTzuUpgrade::adult_upgrade_cost;
 		}
-		if(tower->getType() == Tower::TowerType::Bulldog) {
-			if(tower->getUpgradeLevel() == Tower::UpgradeLevel::Baby && TeenBulldogUpgrade::teen_upgrade_cost <= Game::player.getCash()) {
-				tower = new TeenBulldogUpgrade(tower);
-				upgradeCost = TeenBulldogUpgrade::teen_upgrade_cost;
-			}
-			else if(tower->getUpgradeLevel() == Tower::UpgradeLevel::Teen && AdultBulldogUpgrade::adult_upgrade_cost <= Game::player.getCash()) {
-				tower = new AdultBulldogUpgrade(tower);
-				upgradeCost = AdultBulldogUpgrade::adult_upgrade_cost;
-			}
+	}
+	if(tower->getType() == Tower::TowerType::Dalmatian) {
+		if(tower->getUpgradeLevel() == Tower::UpgradeLevel::Baby && TeenDalmatianUpgrade::teen_upgrade_cost <= Game::player.getCash()) {
+			tower = new TeenDalmatianUpgrade(tower);
+			upgradeCost = TeenDalmatianUpgrade::teen_upgrade_cost;
 		}
-	if(upgradeCost != -1)
+		else if(tower->getUpgradeLevel() == Tower::UpgradeLevel::Teen && AdultDalmatianUpgrade::adult_upgrade_cost <= Game::player.getCash()) {
+			tower = new SlowEffect(new AdultDalmatianUpgrade(tower));
+			upgradeCost = AdultDalmatianUpgrade::adult_upgrade_cost;
+		}
+	}
+	if(tower->getType() == Tower::TowerType::Bulldog) {
+		if(tower->getUpgradeLevel() == Tower::UpgradeLevel::Baby && TeenBulldogUpgrade::teen_upgrade_cost <= Game::player.getCash()) {
+			tower = new TeenBulldogUpgrade(tower);
+			upgradeCost = TeenBulldogUpgrade::teen_upgrade_cost;
+		}
+		else if(tower->getUpgradeLevel() == Tower::UpgradeLevel::Teen && AdultBulldogUpgrade::adult_upgrade_cost <= Game::player.getCash()) {
+			tower = new BurnEffect(new AdultBulldogUpgrade(tower));
+			upgradeCost = AdultBulldogUpgrade::adult_upgrade_cost;
+		}
+	}
+	if(upgradeCost != -1) {
+		towers[make_pair(tileX, tileY)] = tower;
 		Game::player.spendCash(upgradeCost);
+	}
 }
 
 void TowerManager::sellTower(int tileX, int tileY)  {

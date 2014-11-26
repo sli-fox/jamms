@@ -8,40 +8,26 @@ TeenShihTzuUpgrade::TeenShihTzuUpgrade() {
 }
 
 TeenShihTzuUpgrade::TeenShihTzuUpgrade(Tower* tower) : _decoratedTower(tower) {
-	tower->load("resources/images/towers/ShihTzu_1.png");
-	tower->setName("TeenShihTzu_"+ std::to_string(tower->getID()));
-	tower->setRange(tower->getRange()+0.5);
-	tower->setUpgradeLevel(Tower::UpgradeLevel::Teen);
-	std::cout << green << tower->getName() << " has grown up to Teen." << std::endl;
-}
+	this->load("resources/images/towers/ShihTzu_1.png");
+	this->setPosition(tower->getPosition().first, tower->getPosition().second);		// has to be set BEFORE setRange();
 
-int TeenShihTzuUpgrade::getBuyCost() const {
-	return _decoratedTower->getBuyCost() + 20;
-}
+	this->_id = tower->getID();
+	this->_name = tower->getName();
+	this->_type = tower->getType();
+	this->_upgrade_level = Tower::UpgradeLevel::Teen;
+	this->_buy_cost = tower->getBuyCost();
+	this->_power = tower->getPower() + 1;
+	this->setRange(tower->getRange() + 0.5);
+	this->_rate_of_fire = tower->getRateOfFire();
+	this->_upgrade_cost = tower->getUpgradeCost();
+	this->_sell_cost = tower->getSellCost();
 
-void TeenShihTzuUpgrade::setRange(float _range) {
-	this->_range = _range;
-	this->setRangeShape(_range);
-	_decoratedTower->setRange(_range);
-}
-
-/**
-  * @brief Determines whether tower can attack a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay
-  * @return bool
-  */
-bool TeenShihTzuUpgrade::canAttack(Critter* critter) {
-	return _decoratedTower->canAttack(critter);
-}
-
-void TeenShihTzuUpgrade::attack() {
-		this->_target = _decoratedTower->getTarget();
-		_decoratedTower->attack();
-		std::cout << yellow << this->_name << " attacking..." << std::endl;
+	std::cout << green << "Tower has grown up to Teen." << std::endl;
 }
 
 // @Override
 std::string TeenShihTzuUpgrade::getTowerSpecs() {
 	std::stringstream output;
-	output << _decoratedTower->getTowerSpecs() << std::endl;
+	output << Tower::getTowerSpecs();
 	return output.str();
 }

@@ -1,10 +1,10 @@
 #pragma once
-#include <GameObjects/BurnEffect.h>
+#include <GameObjects/SlowEffect.h>
 
-BurnEffect::BurnEffect() {}
+SlowEffect::SlowEffect() {}
 
-BurnEffect::BurnEffect(Tower* tower) : _decoratedTower(tower) {
-	this->load("resources/images/towers/firetower.png");
+SlowEffect::SlowEffect(Tower* tower) : _decoratedTower(tower) {
+	this->load("resources/images/towers/tower.png");
 	this->setPosition(tower->getPosition().first, tower->getPosition().second);		// has to be set BEFORE setRange();
 
 	this->_id = tower->getID();
@@ -17,17 +17,22 @@ BurnEffect::BurnEffect(Tower* tower) : _decoratedTower(tower) {
 	this->_rate_of_fire = tower->getRateOfFire();
 	this->_upgrade_cost = tower->getUpgradeCost();
 	this->_sell_cost = tower->getSellCost();
+	this->_target = tower->getTarget();
 }
 
-void BurnEffect::attack() {
+void SlowEffect::attack() {
 	Tower::attack();
-	cout << red << "BurnEffect on critter " << _target->getId() << endl;
+	cout << red << this->getName() << " is Applying Slowing Effect to Critter " << _target->getId() << endl;
+
+	cout << red << "\tInitial Critter Speed: " << _target->getSpeed() << endl;
+	_target->reduceSpeed(2.0f);
+	cout << red << "\tFinal Critter Speed: " << _target->getSpeed() << endl;
 }
 
 // @Override
-std::string BurnEffect::getTowerSpecs() {
+std::string SlowEffect::getTowerSpecs() {
 	std::stringstream output;
 	output << _decoratedTower->getTowerSpecs();
-	output << "Special Effect: Burning" << std::endl;
+	output << "Special Effect: Freezing" << std::endl;
 	return output.str();
 }

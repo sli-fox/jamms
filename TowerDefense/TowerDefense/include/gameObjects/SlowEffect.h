@@ -3,12 +3,12 @@
 #include <sstream>
 #include <GameObjects/TowerDecorator.h>
 
-class FreezeEffect : public TowerDecorator {
+class SlowEffect : public TowerDecorator {
 
 public:
-	FreezeEffect();
-	FreezeEffect(Tower* decoratedTower);
-	~FreezeEffect() { std::cout << red << "FreezeEffect has been deleted." << std::endl; }
+	SlowEffect();
+	SlowEffect(Tower* decoratedTower);
+	~SlowEffect() { std::cout << red << "SlowEffect has been deleted." << std::endl; }
 
 	static int upgrade_cost;
 
