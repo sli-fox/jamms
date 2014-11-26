@@ -93,6 +93,7 @@
     <ClInclude Include="include\gameObjects\ConcreteTower.h" />
     <ClInclude Include="include\gameObjects\Critter.h" />
     <ClInclude Include="include\gameObjects\CritterFactory.h" />
+    <ClInclude Include="include\gameObjects\CritterGameObject.h" />
     <ClInclude Include="include\gameObjects\FreezeEffect.h" />
     <ClInclude Include="include\gameObjects\GameObject.h" />
     <ClInclude Include="include\gameObjects\IObserver.h" />
@@ -142,6 +143,7 @@
     <ClCompile Include="src\gameObjects\ConcreteTower.cpp" />
     <ClCompile Include="src\gameObjects\Critter.cpp" />
     <ClCompile Include="src\gameObjects\CritterFactory.cpp" />
+    <ClCompile Include="src\gameObjects\CritterGameObject.cpp" />
     <ClCompile Include="src\gameObjects\FreezeEffect.cpp" />
     <ClCompile Include="src\gameObjects\GameObject.cpp" />
     <ClCompile Include="src\gameObjects\TeenBulldogUpgrade.cpp" />
