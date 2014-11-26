@@ -21,8 +21,8 @@ FreezeEffect::FreezeEffect(Tower* tower) : _decoratedTower(tower) {
 }
 
 void FreezeEffect::attack() {
-	_decoratedTower->attack();
-	this->_target = _decoratedTower->getTarget();
+	Tower::attack();
+	cout << red << "Freezing critter " << _target->getId() << endl;
 	//cout << red << this->getName() << " is Applying Freezing Effect to Critter " << this->getTarget()->getId() << endl;
 	this->_target->setSpeed(0);
 			/*

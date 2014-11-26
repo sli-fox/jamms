@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include <GameObjects/GameObject.h>
+#include <GameObjects/TowerGameObject.h>
 #include <GameObjects/Critter.h>
 #include <GameObjects/IObserver.h>
 #include "Utils/TowerStrategy.h"

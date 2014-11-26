@@ -8,7 +8,6 @@ int Tower::serial = 0;
 Tower::Tower() {
 	this->_upgrade_level = Tower::UpgradeLevel::Baby;
 	this->_target = NULL;
-	this->time = clock.getElapsedTime();
 	this->_strategy.reset(new WeakestStrategy());
 }
 
@@ -31,9 +30,7 @@ int Tower::getPower() const {
 float Tower::getRange() const {
 	return _range;
 }
-Tower::RateOfFire Tower::getRateOfFire() const {
-	return _rate_of_fire;
-}
+
 Tower::SpecialEffect Tower::getSpecialEffect() const {
 	return _special_effect;
 }
@@ -72,9 +69,11 @@ void Tower::setRange(float _range) {
 	this->setRangeShape(_range);
 }
 
+
 void Tower::setRateOfFire(Tower::RateOfFire _rate_of_fire) {
 	this->_rate_of_fire = _rate_of_fire;
 }
+
 void Tower::setSpecialEffect(Tower::SpecialEffect _special_effect) {
 	this->_special_effect = _special_effect;
 }
@@ -96,6 +95,10 @@ void Tower::setRangeShape(float range) {
 	_range_shape.setOutlineThickness(2);
 	_range_shape.setOutlineColor(sf::Color::Red);
 	_range_shape.setOrigin(range-16, range-16);
+}
+
+Tower::RateOfFire Tower::getRateOfFire() const {
+	return _rate_of_fire;
 }
 
 sf::CircleShape Tower::getRangeShape() const {
@@ -245,7 +248,6 @@ void Tower::applySpecialEffect(Critter* critter) {
 void Tower::update() {
 	std::cout << "TOWER UPDATED!" << std::endl;
 }
-
 
 /**
 * @brief Overrides method to apply to tower range sf::CircleShape object

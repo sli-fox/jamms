@@ -20,7 +20,7 @@ BurnEffect::BurnEffect(Tower* tower) : _decoratedTower(tower) {
 }
 
 void BurnEffect::attack() {
-	_decoratedTower->attack();
+	Tower::attack();
 	cout << yellow << "BurnEffect burning..." << endl;
 }
 
