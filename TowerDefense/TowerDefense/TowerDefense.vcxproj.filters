@@ -55,6 +55,18 @@
     <Filter Include="Header Files\Utils\Views">
       <UniqueIdentifier>{7db0e6fb-b5d3-4ae8-bdf7-75170e2f43bb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\GameObjects\Towers">
+      <UniqueIdentifier>{a0bfe15b-f799-4aa1-9b4b-1d8ab93fed91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects\Towers\Special Effects">
+      <UniqueIdentifier>{e7543f19-74e5-450e-bf88-b9d0bf348654}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameObjects\Towers">
+      <UniqueIdentifier>{05482680-3f0f-4109-9261-0858fea966f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameObjects\Towers\Special Effects">
+      <UniqueIdentifier>{7a48be5c-8a65-411e-b6d7-89481782a498}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\test\TextureManagerTest.h">
@@ -117,9 +129,6 @@
     <ClInclude Include="include\utils\rapidxml_print.hpp">
       <Filter>Header Files\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="include\gameObjects\Tower.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
     <ClInclude Include="include\managers\TowerManager.h">
       <Filter>Header Files\Managers</Filter>
     </ClInclude>
@@ -159,47 +168,53 @@
     <ClInclude Include="include\TrackMapInput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\gameObjects\TowerDecorator.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gameObjects\FreezeEffect.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gameObjects\BurnEffect.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gameObjects\AdultBulldogUpgrade.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gameObjects\AdultDalmatianUpgrade.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gameObjects\AdultShihTzuUpgrade.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gameObjects\BabyBulldog.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gameObjects\BabyDalmatian.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gameObjects\BabyShihTzu.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gameObjects\TeenBulldogUpgrade.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gameObjects\TeenDalmatianUpgrade.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gameObjects\TeenShihTzuUpgrade.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
     <ClInclude Include="include\gameObjects\CritterGameObject.h">
       <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
     <ClInclude Include="include\gameObjects\TowerGameObject.h">
       <Filter>Header Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\AdultBulldogUpgrade.h">
+      <Filter>Header Files\GameObjects\Towers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\AdultDalmatianUpgrade.h">
+      <Filter>Header Files\GameObjects\Towers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\AdultShihTzuUpgrade.h">
+      <Filter>Header Files\GameObjects\Towers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\BabyBulldog.h">
+      <Filter>Header Files\GameObjects\Towers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\BabyDalmatian.h">
+      <Filter>Header Files\GameObjects\Towers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\BabyShihTzu.h">
+      <Filter>Header Files\GameObjects\Towers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\BurnEffect.h">
+      <Filter>Header Files\GameObjects\Towers\Special Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\FreezeEffect.h">
+      <Filter>Header Files\GameObjects\Towers\Special Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\TeenBulldogUpgrade.h">
+      <Filter>Header Files\GameObjects\Towers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\TeenDalmatianUpgrade.h">
+      <Filter>Header Files\GameObjects\Towers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\TeenShihTzuUpgrade.h">
+      <Filter>Header Files\GameObjects\Towers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\Tower.h">
+      <Filter>Header Files\GameObjects\Towers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\TowerDecorator.h">
+      <Filter>Header Files\GameObjects\Towers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gameObjects\SlowEffect.h">
+      <Filter>Header Files\GameObjects\Towers\Special Effects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -257,9 +272,6 @@
     <ClCompile Include="src\Map.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\Tower.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
     <ClCompile Include="src\managers\TowerManager.cpp">
       <Filter>Source Files\Managers</Filter>
     </ClCompile>
@@ -284,47 +296,53 @@
     <ClCompile Include="TrackMapInput.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\FreezeEffect.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\TowerDecorator.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\BurnEffect.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\TeenShihTzuUpgrade.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\TeenDalmatianUpgrade.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\TeenBulldogUpgrade.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\AdultBulldogUpgrade.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\AdultDalmatianUpgrade.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\AdultShihTzuUpgrade.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\BabyBulldog.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\BabyDalmatian.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\BabyShihTzu.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
     <ClCompile Include="src\gameObjects\CritterGameObject.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
     <ClCompile Include="src\gameObjects\TowerGameObject.cpp">
       <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\BurnEffect.cpp">
+      <Filter>Source Files\GameObjects\Towers\Special Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\FreezeEffect.cpp">
+      <Filter>Source Files\GameObjects\Towers\Special Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\AdultBulldogUpgrade.cpp">
+      <Filter>Source Files\GameObjects\Towers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\AdultDalmatianUpgrade.cpp">
+      <Filter>Source Files\GameObjects\Towers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\AdultShihTzuUpgrade.cpp">
+      <Filter>Source Files\GameObjects\Towers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\BabyBulldog.cpp">
+      <Filter>Source Files\GameObjects\Towers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\BabyDalmatian.cpp">
+      <Filter>Source Files\GameObjects\Towers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\BabyShihTzu.cpp">
+      <Filter>Source Files\GameObjects\Towers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\TeenBulldogUpgrade.cpp">
+      <Filter>Source Files\GameObjects\Towers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\TeenDalmatianUpgrade.cpp">
+      <Filter>Source Files\GameObjects\Towers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\TeenShihTzuUpgrade.cpp">
+      <Filter>Source Files\GameObjects\Towers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\TowerDecorator.cpp">
+      <Filter>Source Files\GameObjects\Towers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\Tower.cpp">
+      <Filter>Source Files\GameObjects\Towers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\SlowEffect.cpp">
+      <Filter>Source Files\GameObjects\Towers\Special Effects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -97,6 +97,7 @@
     <ClInclude Include="include\gameObjects\GameObject.h" />
     <ClInclude Include="include\gameObjects\IObserver.h" />
     <ClInclude Include="include\gameObjects\ISubject.h" />
+    <ClInclude Include="include\gameObjects\SlowEffect.h" />
     <ClInclude Include="include\gameObjects\TeenBulldogUpgrade.h" />
     <ClInclude Include="include\gameObjects\TeenDalmatianUpgrade.h" />
     <ClInclude Include="include\gameObjects\TeenShihTzuUpgrade.h" />
@@ -145,6 +146,7 @@
     <ClCompile Include="src\gameObjects\CritterGameObject.cpp" />
     <ClCompile Include="src\gameObjects\FreezeEffect.cpp" />
     <ClCompile Include="src\gameObjects\GameObject.cpp" />
+    <ClCompile Include="src\gameObjects\SlowEffect.cpp" />
     <ClCompile Include="src\gameObjects\TeenBulldogUpgrade.cpp" />
     <ClCompile Include="src\gameObjects\TeenDalmatianUpgrade.cpp" />
     <ClCompile Include="src\gameObjects\TeenShihTzuUpgrade.cpp" />

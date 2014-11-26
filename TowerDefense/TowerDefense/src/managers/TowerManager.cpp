@@ -81,7 +81,7 @@ void TowerManager::upgradeTower(int tileX, int tileY) {
 			upgradeCost = TeenDalmatianUpgrade::teen_upgrade_cost;
 		}
 		else if(tower->getUpgradeLevel() == Tower::UpgradeLevel::Teen && AdultDalmatianUpgrade::adult_upgrade_cost <= Game::player.getCash()) {
-			tower = new AdultDalmatianUpgrade(tower);
+			tower = new SlowEffect(new AdultDalmatianUpgrade(tower));
 			upgradeCost = AdultDalmatianUpgrade::adult_upgrade_cost;
 		}
 	}

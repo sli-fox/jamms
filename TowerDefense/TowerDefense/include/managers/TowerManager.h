@@ -4,6 +4,7 @@
 #include <vector>
 #include <Game.h>
 #include "GameObjects/FreezeEffect.h"
+#include "GameObjects/SlowEffect.h"
 #include "GameObjects/BurnEffect.h"
 #include "GameObjects/Tower.h"
 #include "GameObjects/BabyShihTzu.h"
