@@ -7,7 +7,7 @@ Tower::Tower() {
 	this->_upgrade_level = Tower::UpgradeLevel::Baby;
 	this->_target = NULL;
 	this->time = clock.getElapsedTime();
-	this->_strategy.reset(new WeakestStrategy());
+	this->_strategy.reset(new NearestEndPointStrategy());
 }
 
 //ACCESSORS

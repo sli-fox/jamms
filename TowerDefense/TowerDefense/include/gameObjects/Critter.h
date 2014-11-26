@@ -11,6 +11,8 @@
 #include <utils/AnimationHandler.h>
 #include <utils/Waypoint.h>
 #include <gameObjects/ISubject.h>
+#include "utils/CritterEffect.h"
+#include <list>
 
 /** @brief Abstract base class of all Critters
  *  Critter defines the attributes, accessors, and update function
@@ -32,8 +34,8 @@ class Critter : public GameObject, public ISubject {
     bool isAtEndTile;
     Critter* next_critter;
     
-    Critter() {};
-    virtual ~Critter() {};
+    Critter();
+    virtual ~Critter();
 
     int getId() const;
     int getHitPoints() const; 
@@ -50,8 +52,10 @@ class Critter : public GameObject, public ISubject {
 	bool getSpecialEffectApplied() const;
 	void setSpecialEffectApplied(bool specialEffectApplied);
 
-
 	void inflictDamage(int dmg);
+
+	void addEffect(CritterEffect effect);
+	void inflictEffects();
   
   MovementDirection getMovementDirection();
   
@@ -72,6 +76,7 @@ class Critter : public GameObject, public ISubject {
 
   protected:
     Waypoint* current_waypoint;
+	std::list<CritterEffect> effectList;
 
     CritterType type;
     int id;
@@ -104,7 +109,7 @@ class Critter : public GameObject, public ISubject {
 
     /** @brief Critter movement speed 
       */
-    float speed;
+    float speed, speedModifier;
 
     /** @brief Difficulty level as part of a wave
       */

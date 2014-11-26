@@ -160,6 +160,14 @@ void GameStatePlay::draw(const float delta_time) {
 			this->game->game_window.draw(critterHealth[i]);
 		}
 	}
+	if(!effectDamage.empty() && !effectDamageClock.empty()){
+		for(int i = 0 ; i < effectDamage.size() ; ++i){
+			effectDamageTime = effectDamageClock[i].getElapsedTime();
+			if(effectDamageTime.asSeconds() > 0.5 )
+				effectDamage[i].setString("");
+			this->game->game_window.draw(effectDamage[i]);
+		}
+	}
 }
 
 void GameStatePlay::update(const float delta_time) {
@@ -237,6 +245,7 @@ void GameStatePlay::handleInput() {
 	sf::Event event;
 
 	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
+
 	for(std::map<std::pair<int,int>, Tower*>::iterator it = tower_manager.getTowerMap()->begin() ; it != tower_manager.getTowerMap()->end() ; ++it) {
 
 		Tower* tower = it->second;
@@ -249,7 +258,12 @@ void GameStatePlay::handleInput() {
 					if(target != NULL) {
 						std::pair<float, float> tpos = target->getPosition();
 						sf::Text ch(std::to_string(target->getHitPoints()), font, 12); 
-						ch.setPosition(tpos.first, tpos.second - 18);
+						if(target->getMovementDirection() == Critter::MovementDirection::LEFT
+							|| target->getMovementDirection() == Critter::MovementDirection::RIGHT)
+							ch.setPosition(tpos.first, tpos.second - 16);
+						else if(target->getMovementDirection() == Critter::MovementDirection::UP
+							|| target->getMovementDirection() == Critter::MovementDirection::DOWN)
+							ch.setPosition(tpos.first + 10, tpos.second);
 						ch.setColor(sf::Color::Red);
 						critterHealth[target->getId()] = ch;
 						sf::Clock c;
@@ -442,6 +456,27 @@ void GameStatePlay::moveCritter(Critter* critter, const float delta_time) {
 void GameStatePlay::handleCritterRemovalFromWave() {
 	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
 	for (int i = 0; i < critters.size(); ++i) {
+		//tick and apply effects
+		int tempHealth = critters[i]->getHitPoints();
+		if(critters[i]->isActive){
+			critters[i]->inflictEffects();
+			if(tempHealth != critters[i]->getHitPoints()){
+				std::pair<float, float> cpos = critters[i]->getPosition();
+				sf::Text ed(std::to_string(critters[i]->getHitPoints()), font, 12); 
+				if(critters[i]->getMovementDirection() == Critter::MovementDirection::LEFT
+							|| critters[i]->getMovementDirection() == Critter::MovementDirection::RIGHT)
+							ed.setPosition(cpos.first, cpos.second - 32);
+						else if(critters[i]->getMovementDirection() == Critter::MovementDirection::UP
+							|| critters[i]->getMovementDirection() == Critter::MovementDirection::DOWN)
+							ed.setPosition(cpos.first + 24, cpos.second);
+				ed.setColor(sf::Color::Blue);
+				effectDamage[critters[i]->getId()] = ed;
+				sf::Clock c;
+				effectDamageClock[critters[i]->getId()] = c;
+			}
+		}
+
+
 		//Check if critters are at end tile
 		critters[i]->isAtEndTile = checkIfAtEndTile(critters[i]);
 

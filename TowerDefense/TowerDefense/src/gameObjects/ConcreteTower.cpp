@@ -14,6 +14,12 @@ void ConcreteTower::setRange(float _range) {
 void ConcreteTower::attack() {
 	std::cout << yellow << this->_name << " attacking #" << this->_target->getId() << "... ";
 	this->_target->inflictDamage(this->getPower());
+	CritterEffect slowing_1(0,0.2,1,100);
+	//CritterEffect slowing_2(0,0.1,1,50);
+	//CritterEffect burning_1(1,1.0,2,50);
+	_target->addEffect(slowing_1);
+	//_target->addEffect(slowing_2);
+	//_target->addEffect(burning_1);
 	std::cout << yellow << this->_target->getHitPoints() << "HP" << std::endl;
 }
 

@@ -12,5 +12,4 @@ public:
 	void attack();
 
 	std::string getTowerSpecs();
-
 };

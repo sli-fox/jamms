@@ -122,6 +122,7 @@
     <ClInclude Include="include\utils\Animation.h" />
     <ClInclude Include="include\utils\AnimationHandler.h" />
     <ClInclude Include="include\utils\ConsoleColor.h" />
+    <ClInclude Include="include\utils\CritterEffect.h" />
     <ClInclude Include="include\utils\TowerStrategy.h" />
     <ClInclude Include="include\utils\rapidxml.hpp" />
     <ClInclude Include="include\utils\rapidxml_print.hpp" />
@@ -165,6 +166,7 @@
     <ClCompile Include="src\Map.cpp" />
     <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\utils\AnimationHandler.cpp" />
+    <ClCompile Include="src\utils\CritterEffect.cpp" />
     <ClCompile Include="src\utils\Waypoint.cpp" />
     <ClCompile Include="src\views\MainMenu.cpp" />
     <ClCompile Include="src\views\Menu.cpp" />
