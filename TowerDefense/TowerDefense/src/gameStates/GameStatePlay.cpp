@@ -202,17 +202,9 @@ void GameStatePlay::update(const float delta_time) {
   //Handle the removal of critters from the current wave
   handleCritterRemovalFromWave();
 
-  //this->mew->draw(this->game->game_window, delta_time);
  if (blacky->isActive)
 	  this->blacky->draw(this->game->game_window, delta_time);
   
-  //if (mew->isActive)
-    //moveCritter(mew, delta_time);
-  
-  //mew->isAtEndTile = checkIfAtEndTile(mew);
-  
-  //if (mew->isAtEndTile)
-    //std::cout << "Mew: I'm at the end tile!" << std::endl; 
 }
 
 void GameStatePlay::setCritterWaveLevels(Waypoint* starting_waypoint) {
