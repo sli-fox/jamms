@@ -10,7 +10,6 @@
 #pragma once
 #include <gameObjects/GameObject.h>
 #include <GameObjects/Critter.h>
-#include <GameObjects/IObserver.h>
 #include "Utils/TowerStrategy.h"
 #include <memory>
 #include <string>

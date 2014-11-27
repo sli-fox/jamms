@@ -95,8 +95,6 @@
     <ClInclude Include="include\gameObjects\CritterGameObject.h" />
     <ClInclude Include="include\gameObjects\FreezeEffect.h" />
     <ClInclude Include="include\gameObjects\GameObject.h" />
-    <ClInclude Include="include\gameObjects\IObserver.h" />
-    <ClInclude Include="include\gameObjects\ISubject.h" />
     <ClInclude Include="include\gameObjects\SlowEffect.h" />
     <ClInclude Include="include\gameObjects\TeenBulldogUpgrade.h" />
     <ClInclude Include="include\gameObjects\TeenDalmatianUpgrade.h" />

@@ -2,11 +2,10 @@
 #include <string>
 #include <GameObjects/TowerGameObject.h>
 #include <GameObjects/Critter.h>
-#include <GameObjects/IObserver.h>
 #include "Utils/TowerStrategy.h"
 #include <memory>
 
-class Tower: public GameObject, public IObserver{
+class Tower: public GameObject {
 public:
 	Tower();
 	~Tower() { std::cout << red << _name << " has been deleted." << white << std::endl; };
@@ -17,7 +16,6 @@ public:
 	bool canAttack(Critter* critter);
 	bool canApplySpecialAfterEffects(Critter* critter);
 	virtual void attack();
-	void update();
 	Critter* executeStrategy(Critter* critter);
 	std::pair<float, float> findCollisionPath(Critter* critter);
 	void rotateTowardsTarget();
@@ -62,7 +60,7 @@ public:
 	void setTarget(Critter* crit);
 	void setStrategy(TowerStrategy* newStrategy);
 
-	virtual std::string getTowerSpecs();
+	virtual string getTowerSpecs();
 	virtual bool circleToCircleIntersection(GameObject* game_object);
 	void applySpecialEffect(Critter* critter);
 
