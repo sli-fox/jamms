@@ -10,6 +10,7 @@ GameStatePlay::GameStatePlay(Game* game) {
 	firstStart = true;
 	returnToMenu = false;
 	endOfWaves = false;
+	fieldTowerSelector = nullptr;
 
 	this->current_waypoints = addWaypoints(getWaypointsFromMapPath());
 	this->show_waypoints = false;
@@ -168,6 +169,25 @@ void GameStatePlay::draw(const float delta_time) {
 			this->game->game_window.draw(effectDamage[i]);
 		}
 	}
+	nearestTower.setString("Nearest Tower");
+	nearestEnd.setString("Nearest End Point");
+	strongest.setString("Strongest Critter");
+	weakest.setString("Weakest Critter");
+	mostH.setString("Most Health");
+	leastH.setString("Least Health");
+	slowest.setString("Slowest Critter");
+	fastest.setString("Fastest Critter");
+	mostCoins.setString("Most Coins");
+
+	this->game->game_window.draw(nearestTower);
+	this->game->game_window.draw(nearestEnd);
+	this->game->game_window.draw(strongest);
+	this->game->game_window.draw(weakest);
+	this->game->game_window.draw(mostH);
+	this->game->game_window.draw(leastH);
+	this->game->game_window.draw(slowest);
+	this->game->game_window.draw(fastest);
+	this->game->game_window.draw(mostCoins);
 }
 
 void GameStatePlay::update(const float delta_time) {
@@ -533,14 +553,19 @@ void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 			&& this->game->map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY) {
 				tower_manager.buyTower(towerSelector, tileX, tileY);
 		}
+		if(tower_manager.getTower(tileX, tileY) != nullptr)
+			fieldTowerSelector = tower_manager.getTower(tileX, tileY);
 	}
 	else if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
+		fieldTowerSelector = nullptr;
 		if(tower_manager.getTower(tileX, tileY) != nullptr && tower_manager.getTower(tileX, tileY)->spriteContains(localPosition)){
 			tower_manager.sellTower(tileX, tileY);
 		}
 	}
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::U) && tower_manager.getTower(tileX, tileY) != NULL) {
 		tower_manager.upgradeTower(tileX, tileY);
+		if(tower_manager.getTower(tileX, tileY) != nullptr)
+			fieldTowerSelector = tower_manager.getTower(tileX, tileY);
 	}
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num0)){
 		tower_manager.clearAllTowers();
@@ -586,6 +611,42 @@ void GameStatePlay::buttonCommandLibrary() {
 		}
 		else if(buttonMap["BabyBulldog_Btn"].spriteContains(localPosition)) {
 			towerSelector = "BabyBulldog";
+		}
+		else if(buttonMap["EndStrategy_Btn"].spriteContains(localPosition)) {
+			if(fieldTowerSelector != nullptr)
+				fieldTowerSelector->setStrategy(new NearestEndPointStrategy);
+		}
+		else if(buttonMap["NearStrategy_Btn"].spriteContains(localPosition)) {
+			if(fieldTowerSelector != nullptr)
+				fieldTowerSelector->setStrategy(new NearestTowerStrategy);
+		}
+		else if(buttonMap["StrongestStrategy_Btn"].spriteContains(localPosition)) {
+			if(fieldTowerSelector != nullptr)
+				fieldTowerSelector->setStrategy(new StrongestStrategy);
+		}
+		else if(buttonMap["WeakestStrategy_Btn"].spriteContains(localPosition)) {
+			if(fieldTowerSelector != nullptr)
+				fieldTowerSelector->setStrategy(new WeakestStrategy);
+		}
+		else if(buttonMap["MostHealthStrategy_Btn"].spriteContains(localPosition)) {
+			if(fieldTowerSelector != nullptr)
+				fieldTowerSelector->setStrategy(new MostHealthStrategy);
+		}
+		else if(buttonMap["LeastHealthStrategy_Btn"].spriteContains(localPosition)) {
+			if(fieldTowerSelector != nullptr)
+				fieldTowerSelector->setStrategy(new LeastHealthStrategy);
+		}
+		else if(buttonMap["FastestStrategy_Btn"].spriteContains(localPosition)) {
+			if(fieldTowerSelector != nullptr)
+				fieldTowerSelector->setStrategy(new FastestStrategy);
+		}
+		else if(buttonMap["SlowestStrategy_Btn"].spriteContains(localPosition)) {
+			if(fieldTowerSelector != nullptr)
+				fieldTowerSelector->setStrategy(new SlowestStrategy);
+		}
+		else if(buttonMap["MostCoinsStrategy_Btn"].spriteContains(localPosition)) {
+			if(fieldTowerSelector != nullptr)
+				fieldTowerSelector->setStrategy(new MostCoinsStrategy);
 		}
 	}
 }
@@ -692,6 +753,87 @@ void GameStatePlay::initializeButtonMap() {
 	BabyBulldog_Btn.load(towerPath + "Bulldog_0.png");
 	BabyBulldog_Btn.setPosition(26*32,12*32);
 	buttonMap.emplace("BabyBulldog_Btn", BabyBulldog_Btn);
+
+	GameObject EndStrategy_Btn;
+	EndStrategy_Btn.load(imagePath + "StrategyBox.png");
+	EndStrategy_Btn.setPosition(22*32,20*32);
+	buttonMap.emplace("EndStrategy_Btn", EndStrategy_Btn);
+	nearestEnd.setFont(font);
+	nearestEnd.setPosition(22*32+4,20*32+4);
+	nearestEnd.setColor(sf::Color::Black);
+	nearestEnd.setCharacterSize(12);
+
+	GameObject NearStrategy_Btn;
+	NearStrategy_Btn.load(imagePath + "StrategyBox.png");
+	NearStrategy_Btn.setPosition(26*32,20*32);
+	buttonMap.emplace("NearStrategy_Btn", NearStrategy_Btn);
+	nearestTower.setFont(font);
+	nearestTower.setPosition(26*32+4,20*32+4);
+	nearestTower.setColor(sf::Color::Black);
+	nearestTower.setCharacterSize(12);
+
+	GameObject StrongestStrategy_Btn;
+	StrongestStrategy_Btn.load(imagePath + "StrategyBox.png");
+	StrongestStrategy_Btn.setPosition(14*32,20*32);
+	buttonMap.emplace("StrongestStrategy_Btn", StrongestStrategy_Btn);
+	strongest.setFont(font);
+	strongest.setPosition(14*32+4,20*32+4);
+	strongest.setColor(sf::Color::Black);
+	strongest.setCharacterSize(12);
+
+	GameObject WeakestStrategy_Btn;
+	WeakestStrategy_Btn.load(imagePath + "StrategyBox.png");
+	WeakestStrategy_Btn.setPosition(18*32,20*32);
+	buttonMap.emplace("WeakestStrategy_Btn", WeakestStrategy_Btn);
+	weakest.setFont(font);
+	weakest.setPosition(18*32+4,20*32+4);
+	weakest.setColor(sf::Color::Black);
+	weakest.setCharacterSize(12);
+
+	GameObject MostHealthStrategy_Btn;
+	MostHealthStrategy_Btn.load(imagePath + "StrategyBox.png");
+	MostHealthStrategy_Btn.setPosition(14*32,21*32);
+	buttonMap.emplace("MostHealthStrategy_Btn", MostHealthStrategy_Btn);
+	mostH.setFont(font);
+	mostH.setPosition(14*32+4,21*32+4);
+	mostH.setColor(sf::Color::Black);
+	mostH.setCharacterSize(12);
+
+	GameObject LeastHealthStrategy_Btn;
+	LeastHealthStrategy_Btn.load(imagePath + "StrategyBox.png");
+	LeastHealthStrategy_Btn.setPosition(18*32,21*32);
+	buttonMap.emplace("LeastHealthStrategy_Btn", LeastHealthStrategy_Btn);
+	leastH.setFont(font);
+	leastH.setPosition(18*32+4,21*32+4);
+	leastH.setColor(sf::Color::Black);
+	leastH.setCharacterSize(12);
+
+	GameObject FastestStrategy_Btn;
+	FastestStrategy_Btn.load(imagePath + "StrategyBox.png");
+	FastestStrategy_Btn.setPosition(22*32,21*32);
+	buttonMap.emplace("FastestStrategy_Btn", FastestStrategy_Btn);
+	fastest.setFont(font);
+	fastest.setPosition(22*32+4,21*32+4);
+	fastest.setColor(sf::Color::Black);
+	fastest.setCharacterSize(12);
+
+	GameObject SlowestStrategy_Btn;
+	SlowestStrategy_Btn.load(imagePath + "StrategyBox.png");
+	SlowestStrategy_Btn.setPosition(26*32,21*32);
+	buttonMap.emplace("SlowestStrategy_Btn", SlowestStrategy_Btn);
+	slowest.setFont(font);
+	slowest.setPosition(26*32+4,21*32+4);
+	slowest.setColor(sf::Color::Black);
+	slowest.setCharacterSize(12);
+
+	GameObject MostCoinsStrategy_Btn;
+	MostCoinsStrategy_Btn.load(imagePath + "StrategyBox.png");
+	MostCoinsStrategy_Btn.setPosition(10*32,20*32);
+	buttonMap.emplace("MostCoinsStrategy_Btn", MostCoinsStrategy_Btn);
+	mostCoins.setFont(font);
+	mostCoins.setPosition(10*32+4,20*32+4);
+	mostCoins.setColor(sf::Color::Black);
+	mostCoins.setCharacterSize(12);
 
 	/*
 	GameObject bulldog_1_Btn;

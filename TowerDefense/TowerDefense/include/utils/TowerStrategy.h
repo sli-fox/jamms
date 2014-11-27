@@ -6,6 +6,7 @@
 class TowerStrategy{
 public:
 	inline virtual Critter* computeTarget(Critter* critter1, Critter* critter2, std::pair<float,float> towerPosition) = 0;
+	inline virtual std::string getName() const = 0;
 };
 
 class NearestTowerStrategy: public TowerStrategy {
@@ -19,6 +20,9 @@ public:
 			return  critter1;
 		else
 			return critter2;
+	}
+	inline virtual std::string getName() const{
+		return "Nearest Tower";
 	}
 };
 
@@ -57,6 +61,9 @@ public:
 		else
 			return critter2;
 	}
+	inline virtual std::string getName() const{
+		return "Nearest End Point";
+	}
 };
 
 class StrongestStrategy: public TowerStrategy {
@@ -66,6 +73,9 @@ public:
 			return  critter1;
 		else
 			return critter2;
+	}
+	inline virtual std::string getName() const{
+		return "Strongest Critter";
 	}
 };
 
@@ -77,6 +87,9 @@ public:
 		else
 			return critter2;
 	}
+	inline virtual std::string getName() const{
+		return "Weakest Critter";
+	}
 };
 
 class MostHealthStrategy: public TowerStrategy {
@@ -86,6 +99,9 @@ public:
 			return  critter1;
 		else
 			return critter2;
+	}
+	inline virtual std::string getName() const{
+		return "Most Health";
 	}
 };
 
@@ -97,6 +113,9 @@ public:
 		else
 			return critter2;
 	}
+	inline virtual std::string getName() const{
+		return "Least Health";
+	}
 };
 
 class SlowestStrategy: public TowerStrategy {
@@ -106,6 +125,9 @@ public:
 			return  critter1;
 		else
 			return critter2;
+	}
+	inline virtual std::string getName() const{
+		return "Slowest";
 	}
 };
 
@@ -117,6 +139,9 @@ public:
 		else
 			return critter2;
 	}
+	inline virtual std::string getName() const{
+		return "Fastest";
+	}
 };
 
 class MostCoinsStrategy: public TowerStrategy {
@@ -126,5 +151,8 @@ public:
 			return  critter1;
 		else
 			return critter2;
+	}
+	inline virtual std::string getName() const{
+		return "Most Coins";
 	}
 };
