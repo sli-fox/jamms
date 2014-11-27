@@ -119,6 +119,7 @@
     <ClInclude Include="include\managers\TowerManager.h" />
     <ClInclude Include="include\Map.h" />
     <ClInclude Include="include\Player.h" />
+    <ClInclude Include="include\test\CritterFactoryTest.h" />
     <ClInclude Include="include\test\TextureManagerTest.h" />
     <ClInclude Include="include\TrackMapInput.h" />
     <ClInclude Include="include\utils\Animation.h" />
@@ -172,6 +173,7 @@
     <ClCompile Include="src\utils\Waypoint.cpp" />
     <ClCompile Include="src\views\MainMenu.cpp" />
     <ClCompile Include="src\views\Menu.cpp" />
+    <ClCompile Include="test\CritterFactoryTest.cpp" />
     <ClCompile Include="test\TextureManagerTest.cpp" />
     <ClCompile Include="TrackMapInput.cpp" />
   </ItemGroup>
