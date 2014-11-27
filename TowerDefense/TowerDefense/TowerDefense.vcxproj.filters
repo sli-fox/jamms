@@ -213,6 +213,9 @@
     <ClInclude Include="include\test\CritterFactoryTest.h">
       <Filter>Header Files\Test</Filter>
     </ClInclude>
+    <ClInclude Include="include\test\TowerTest.h">
+      <Filter>Header Files\Test</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game.cpp">
@@ -342,6 +345,9 @@
       <Filter>Source Files\GameObjects\Towers\Special Effects</Filter>
     </ClCompile>
     <ClCompile Include="test\CritterFactoryTest.cpp">
+      <Filter>Source Files\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\TowerTest.cpp">
       <Filter>Source Files\Test</Filter>
     </ClCompile>
   </ItemGroup>

@@ -26,6 +26,7 @@ class TextureManagerTest : public CppUnit::TestFixture {
   /** @endcond */
 
   public:
+
     /** @brief Test for loadTexture() to see if a texture was
     *   correctly added to the TextureManager map.
     *   @return void.

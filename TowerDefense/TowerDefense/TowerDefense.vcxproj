@@ -119,6 +119,7 @@
     <ClInclude Include="include\Player.h" />
     <ClInclude Include="include\test\CritterFactoryTest.h" />
     <ClInclude Include="include\test\TextureManagerTest.h" />
+    <ClInclude Include="include\test\TowerTest.h" />
     <ClInclude Include="include\TrackMapInput.h" />
     <ClInclude Include="include\utils\Animation.h" />
     <ClInclude Include="include\utils\AnimationHandler.h" />
@@ -173,6 +174,7 @@
     <ClCompile Include="src\views\Menu.cpp" />
     <ClCompile Include="test\CritterFactoryTest.cpp" />
     <ClCompile Include="test\TextureManagerTest.cpp" />
+    <ClCompile Include="test\TowerTest.cpp" />
     <ClCompile Include="TrackMapInput.cpp" />
   </ItemGroup>
   <ItemGroup>
