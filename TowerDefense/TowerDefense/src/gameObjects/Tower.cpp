@@ -285,6 +285,7 @@ std::string Tower::getTowerSpecs() {
 	output << "Buy Cost: " << this->getBuyCost() << " coins" << std::endl;
 	output << "Upgrade Cost: " << this->_upgrade_cost << " coins" << std::endl;
 	output << "Sell Cost: " << this->_sell_cost << " coins" << std::endl;
+	output << "Strategy: " << this->_strategy->getName().c_str() << std::endl;
 
 	return output.str();
 }
