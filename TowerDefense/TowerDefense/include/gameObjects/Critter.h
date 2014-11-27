@@ -23,8 +23,8 @@ public:
 
   Critter* next_critter;
 
-  Critter() {};
-  virtual ~Critter() {};
+  Critter();
+  virtual ~Critter();
 
   int getId() const;
   int getHitPoints() const; 
@@ -41,14 +41,14 @@ public:
   void inflictDamage(int dmg);
   std::string getCritterSpecs();
 
-  void addEffect(CritterEffect effect);
+  void addEffect(CritterEffect* effect);
   void inflictEffects();
 
 protected:
   CritterType type;
   int id;
   int max_health;
-  std::list<CritterEffect> effectList;
+  std::list<std::unique_ptr<CritterEffect>> effectList;
 
   /** @brief Pure virtualized initialization function for Critter.
   *   @return Void.

@@ -134,7 +134,7 @@ void GameStatePlay::draw(const float delta_time) {
 		this->game->game_window.draw(buttonSpecs);
 		//this->game->game_window.draw(upgradeTowerSpecs);
 	}
-	for (int i = 0; i < this->current_wave->getContainerOfCritters().size(); ++i) 
+	for (int i = 0; i < int(this->current_wave->getContainerOfCritters().size()); ++i) 
 	{
 		if ( this->current_wave->getContainerOfCritters()[i]->isActive )
 			if( this->current_wave->getContainerOfCritters()[i]->spriteContains(localPosition) )
@@ -153,7 +153,7 @@ void GameStatePlay::draw(const float delta_time) {
 		//this->game->game_window.draw(upgradeTowerSpecs);
 	}
 	if(!critterHealth.empty() && !healthClock.empty()){
-		for(int i = 0 ; i < critterHealth.size() ; ++i){
+		for(int i = 0 ; i < int(critterHealth.size()) ; ++i){
 			healthTime = healthClock[i].getElapsedTime();
 			if(healthTime.asSeconds() > 0.5 )
 				critterHealth[i].setString("");
@@ -161,7 +161,7 @@ void GameStatePlay::draw(const float delta_time) {
 		}
 	}
 	if(!effectDamage.empty() && !effectDamageClock.empty()){
-		for(int i = 0 ; i < effectDamage.size() ; ++i){
+		for(int i = 0 ; i < int(effectDamage.size()) ; ++i){
 			effectDamageTime = effectDamageClock[i].getElapsedTime();
 			if(effectDamageTime.asSeconds() > 0.5 )
 				effectDamage[i].setString("");
@@ -223,9 +223,9 @@ void GameStatePlay::setCritterWaveLevels(Waypoint* starting_waypoint) {
 	this->wave_levels.push_back(wave3);  
 	this->wave_levels.push_back(wave4);
 
-	for (int i = 0; i < wave_levels.size(); ++i) {
+	for (int i = 0; i < int(wave_levels.size()); ++i) {
 		wave_levels[i]->setId(i);
-		if (i < wave_levels.size() - 1)
+		if (i < int(wave_levels.size()) - 1)
 			wave_levels[i]->next_wave = wave_levels[i+1];
 	}
 }
@@ -240,7 +240,7 @@ void GameStatePlay::handleInput() {
 		Tower* tower = it->second;
 		if(tower != NULL) {
 
-			for (int i = 0; i < critters.size(); ++i) {
+			for (int i = 0; i < int(critters.size()); ++i) {
 				while(critters[i]->isActive && tower->canAttack(critters[i]) && !this->game->isGamePaused) {
 					Critter* target = tower->getTarget();
 					tower->attack();
@@ -326,13 +326,13 @@ std::vector<Waypoint> GameStatePlay::addWaypoints(std::vector<sf::Vector2f> path
 	std::vector<Waypoint> waypoints;
 
 	//Initialize waypoints
-	for (int i = 0; i < path_points.size(); ++i) {
+	for (int i = 0; i < int(path_points.size()); ++i) {
 		Waypoint waypoint(path_points[i]);
 		waypoints.push_back(waypoint);
 	}
 
 	//Set next waypoints
-	for (int i = 0; i < waypoints.size(); ++i) {
+	for (int i = 0; i < int(waypoints.size()); ++i) {
 		if (i != waypoints.size() - 1) {
 			waypoints[i].next_waypoint = &waypoints[i+1];
 		}
@@ -358,7 +358,7 @@ std::vector<sf::Vector2f> GameStatePlay::getWaypointsFromMapPath() {
 		// Set current tile
 		const Tile* current_tile = path_tiles[0];
 
-		for (int i = 0; i < path_tiles.size() - 1; ++i) {
+		for (int i = 0; i < int(path_tiles.size()) - 1; ++i) {
 			if (i + 2 == path_tiles.size())   // No change of direction can happen in less than 3 tiles
 				break;
 
@@ -402,7 +402,7 @@ bool GameStatePlay::checkIfAtEndTile(Critter* critter) {
 
 void GameStatePlay::moveActivatedCritters(const float delta_time) {
 	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
-	for (int i = 0; i < critters.size(); ++i) {
+	for (int i = 0; i < int(critters.size()); ++i) {
 		if (critters[i]->isActive)
 			moveCritter(critters[i], delta_time);
 	}
@@ -436,7 +436,7 @@ void GameStatePlay::moveCritter(Critter* critter, const float delta_time) {
 
 void GameStatePlay::handleCritterRemovalFromWave() {
 	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
-	for (int i = 0; i < critters.size(); ++i) {
+	for (int i = 0; i < int(critters.size()); ++i) {
 		//tick and apply effects
 		int tempHealth = critters[i]->getHitPoints();
 		if(critters[i]->isActive){
@@ -494,7 +494,7 @@ void GameStatePlay::handleCritterRemovalFromWave() {
 }
 void GameStatePlay::handleCritterWaveLevelSwitching() {
 	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
-	for (int i = 0; i < critters.size(); ++i) {
+	for (int i = 0; i < int(critters.size()); ++i) {
 		if (critters[i]->isActive)
 			return;
 	}

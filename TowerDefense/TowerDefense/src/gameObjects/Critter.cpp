@@ -62,28 +62,30 @@ std::string Critter::getCritterSpecs() {
 	return output.str();
 }
 
-void Critter::addEffect(CritterEffect effect){
+void Critter::addEffect(CritterEffect* effect){
 	bool effectApplied = false;
-	std::list<CritterEffect>::iterator it;
+	std::list<std::unique_ptr<CritterEffect>>::iterator it;
 	for(it = effectList.begin() ; it != effectList.end() ; ++it){
-		if(it->isEqual(effect)){
-			it->addStacks(effect.getStacks());
+		if((*it)->isEqual(effect)){
+			(*it)->addStacks(effect->getStacks());
 			effectApplied = true;
+			delete effect;
+			effect = nullptr;
 			break;
 		}
 	}
 	if(!effectApplied)
-		effectList.push_back(effect);
+		effectList.emplace_back(effect);
 }
 
 void Critter::inflictEffects(){
 	if(!effectList.empty()){
-		std::list<CritterEffect>::iterator it = effectList.begin();
+		std::list<std::unique_ptr<CritterEffect>>::iterator it = effectList.begin();
 		speedModifier = 1.0;
 		while(it != effectList.end()){
-			it->tick();
-			if(it->applyEffect()){
-				if(it->getStacks() < 0){
+			(*it)->tick();
+			if((*it)->applyEffect()){
+				if((*it)->getStacks() < 0){
 					effectList.erase(it++);
 					continue;
 				}
@@ -91,10 +93,10 @@ void Critter::inflictEffects(){
 				<< ", Num of effects: " << int(effectList.size()) 
 				<< ", Num of stacks: " << it->getStacks() << std::endl;
 				*/
-				inflictDamage(it->getDamage());
+				inflictDamage((*it)->getDamage());
 			}
-			if(it->getSpeedModifer() < speedModifier)
-				speedModifier = it->getSpeedModifer();
+			if((*it)->getSpeedModifer() < speedModifier)
+				speedModifier = (*it)->getSpeedModifer();
 			++it;
 		}
 	}
