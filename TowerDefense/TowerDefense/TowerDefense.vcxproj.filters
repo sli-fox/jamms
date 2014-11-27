@@ -210,6 +210,9 @@
     <ClInclude Include="include\gameObjects\SlowEffect.h">
       <Filter>Header Files\GameObjects\Towers\Special Effects</Filter>
     </ClInclude>
+    <ClInclude Include="include\test\CritterFactoryTest.h">
+      <Filter>Header Files\Test</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game.cpp">
@@ -337,6 +340,9 @@
     </ClCompile>
     <ClCompile Include="src\gameObjects\SlowEffect.cpp">
       <Filter>Source Files\GameObjects\Towers\Special Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="test\CritterFactoryTest.cpp">
+      <Filter>Source Files\Test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
