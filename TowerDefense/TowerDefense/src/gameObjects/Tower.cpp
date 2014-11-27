@@ -8,7 +8,7 @@ int Tower::serial = 0;
 Tower::Tower() {
 	this->_upgrade_level = Tower::UpgradeLevel::Baby;
 	this->_target = NULL;
-	this->_strategy.reset(new WeakestStrategy());
+	this->_strategy.reset(new NearestEndPointStrategy());
 }
 
 //ACCESSORS
@@ -138,6 +138,7 @@ void Tower::attack() {
 	cout << "Tower attacking..." << endl;
 	cout << yellow << this->_name << " attacking Critter " << this->_target->getId() << "... ";
 	this->_target->inflictDamage(this->getPower());
+	this->_target->addEffect(new Freeze());
 	cout << yellow << this->_target->getHitPoints() << "HP" << endl;
 }
 
@@ -266,7 +267,7 @@ void Tower::setStrategy(TowerStrategy* newStrategy){
 }
 
 Critter* Tower::executeStrategy(Critter* critter){
-	return this->_strategy->computeTarget(critter, _target, this);
+	return this->_strategy->computeTarget(critter, _target, getPosition());
 }
 
 std::string Tower::getTowerSpecs() {
@@ -284,6 +285,7 @@ std::string Tower::getTowerSpecs() {
 	output << "Buy Cost: " << this->getBuyCost() << " coins" << std::endl;
 	output << "Upgrade Cost: " << this->_upgrade_cost << " coins" << std::endl;
 	output << "Sell Cost: " << this->_sell_cost << " coins" << std::endl;
+	output << "Strategy: " << this->_strategy->getName().c_str() << std::endl;
 
 	return output.str();
 }

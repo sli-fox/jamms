@@ -89,12 +89,26 @@ class GameStatePlay : public GameState {
 	  bool returnToMenu;
 	  sf::CircleShape range;
 	  std::string towerSelector;
+	  Tower* fieldTowerSelector;
 	  sf::Font font;
 	  //sf::Text upgradeTowerSpecs;
 	  sf::Text waveSpecs, nextWaveSpecs, playerSpecs, towerSpecs, critterSpecs, buttonSpecs;
+	  sf::Text nearestTower;
+	  sf::Text nearestEnd;
+	  sf::Text strongest;
+	  sf::Text weakest;
+	  sf::Text mostH;
+	  sf::Text leastH;
+	  sf::Text slowest;
+	  sf::Text fastest;
+	  sf::Text mostCoins;
 	  std::map<int,sf::Text> critterHealth;
 	  std::map<int,sf::Clock> healthClock;
 	  sf::Time healthTime;
+
+	  std::map<int,sf::Text> effectDamage;
+	  std::map<int,sf::Clock> effectDamageClock;
+	  sf::Time effectDamageTime;
 	
      /** @brief Camera view for the gameplay displayed to the window.
       */

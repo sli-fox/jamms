@@ -1,5 +1,13 @@
 #include <gameObjects/Critter.h>
 
+Critter::Critter(){
+	speedModifier = 1.0;
+}
+
+Critter::~Critter(){
+
+}
+
 int Critter::getId() const {
   return id;
 }
@@ -16,7 +24,7 @@ int Critter::getPlayerReward() const {
   return player_reward;
 } 
 float Critter::getSpeed() const {
-  return speed;
+	return speed * speedModifier;
 }
 void Critter::setSpeed(float speed) {
 	this->speed = speed;
@@ -54,3 +62,42 @@ std::string Critter::getCritterSpecs() {
 	return output.str();
 }
 
+void Critter::addEffect(CritterEffect* effect){
+	bool effectApplied = false;
+	std::list<std::unique_ptr<CritterEffect>>::iterator it;
+	for(it = effectList.begin() ; it != effectList.end() ; ++it){
+		if((*it)->isEqual(effect)){
+			(*it)->addStacks(effect->getStacks());
+			effectApplied = true;
+			delete effect;
+			effect = nullptr;
+			break;
+		}
+	}
+	if(!effectApplied)
+		effectList.emplace_back(effect);
+}
+
+void Critter::inflictEffects(){
+	if(!effectList.empty()){
+		std::list<std::unique_ptr<CritterEffect>>::iterator it = effectList.begin();
+		speedModifier = 1.0;
+		while(it != effectList.end()){
+			(*it)->tick();
+			if((*it)->applyEffect()){
+				if((*it)->getStacks() < 0){
+					effectList.erase(it++);
+					continue;
+				}
+				/*std::cout << "critter ID: " << this->getId()
+				<< ", Num of effects: " << int(effectList.size()) 
+				<< ", Num of stacks: " << it->getStacks() << std::endl;
+				*/
+				inflictDamage((*it)->getDamage());
+			}
+			if((*it)->getSpeedModifer() < speedModifier)
+				speedModifier = (*it)->getSpeedModifer();
+			++it;
+		}
+	}
+}

@@ -10,6 +10,7 @@ GameStatePlay::GameStatePlay(Game* game) {
 	firstStart = true;
 	returnToMenu = false;
 	endOfWaves = false;
+	fieldTowerSelector = nullptr;
 
 	this->current_waypoints = addWaypoints(getWaypointsFromMapPath());
 	this->show_waypoints = false;
@@ -134,7 +135,7 @@ void GameStatePlay::draw(const float delta_time) {
 		this->game->game_window.draw(buttonSpecs);
 		//this->game->game_window.draw(upgradeTowerSpecs);
 	}
-	for (int i = 0; i < this->current_wave->getContainerOfCritters().size(); ++i) 
+	for (int i = 0; i < int(this->current_wave->getContainerOfCritters().size()); ++i) 
 	{
 		if ( this->current_wave->getContainerOfCritters()[i]->isActive )
 			if( this->current_wave->getContainerOfCritters()[i]->spriteContains(localPosition) )
@@ -153,13 +154,40 @@ void GameStatePlay::draw(const float delta_time) {
 		//this->game->game_window.draw(upgradeTowerSpecs);
 	}
 	if(!critterHealth.empty() && !healthClock.empty()){
-		for(int i = 0 ; i < critterHealth.size() ; ++i){
+		for(int i = 0 ; i < int(critterHealth.size()) ; ++i){
 			healthTime = healthClock[i].getElapsedTime();
 			if(healthTime.asSeconds() > 0.5 )
 				critterHealth[i].setString("");
 			this->game->game_window.draw(critterHealth[i]);
 		}
 	}
+	if(!effectDamage.empty() && !effectDamageClock.empty()){
+		for(int i = 0 ; i < int(effectDamage.size()) ; ++i){
+			effectDamageTime = effectDamageClock[i].getElapsedTime();
+			if(effectDamageTime.asSeconds() > 0.5 )
+				effectDamage[i].setString("");
+			this->game->game_window.draw(effectDamage[i]);
+		}
+	}
+	nearestTower.setString("Nearest Tower");
+	nearestEnd.setString("Nearest End Point");
+	strongest.setString("Strongest Critter");
+	weakest.setString("Weakest Critter");
+	mostH.setString("Most Health");
+	leastH.setString("Least Health");
+	slowest.setString("Slowest Critter");
+	fastest.setString("Fastest Critter");
+	mostCoins.setString("Most Coins");
+
+	this->game->game_window.draw(nearestTower);
+	this->game->game_window.draw(nearestEnd);
+	this->game->game_window.draw(strongest);
+	this->game->game_window.draw(weakest);
+	this->game->game_window.draw(mostH);
+	this->game->game_window.draw(leastH);
+	this->game->game_window.draw(slowest);
+	this->game->game_window.draw(fastest);
+	this->game->game_window.draw(mostCoins);
 }
 
 void GameStatePlay::update(const float delta_time) {
@@ -215,9 +243,9 @@ void GameStatePlay::setCritterWaveLevels(Waypoint* starting_waypoint) {
 	this->wave_levels.push_back(wave3);  
 	this->wave_levels.push_back(wave4);
 
-	for (int i = 0; i < wave_levels.size(); ++i) {
+	for (int i = 0; i < int(wave_levels.size()); ++i) {
 		wave_levels[i]->setId(i);
-		if (i < wave_levels.size() - 1)
+		if (i < int(wave_levels.size()) - 1)
 			wave_levels[i]->next_wave = wave_levels[i+1];
 	}
 }
@@ -226,12 +254,13 @@ void GameStatePlay::handleInput() {
 	sf::Event event;
 
 	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
+
 	for(std::map<std::pair<int,int>, Tower*>::iterator it = tower_manager.getTowerMap()->begin() ; it != tower_manager.getTowerMap()->end() ; ++it) {
 
 		Tower* tower = it->second;
 		if(tower != NULL) {
 
-			for (int i = 0; i < critters.size(); ++i) {
+			for (int i = 0; i < int(critters.size()); ++i) {
 				while(critters[i]->isActive && tower->canAttack(critters[i]) && !this->game->isGamePaused) {
 					Critter* target = tower->getTarget();
 					tower->attack();
@@ -240,7 +269,12 @@ void GameStatePlay::handleInput() {
 					if(target != NULL) {
 						std::pair<float, float> tpos = target->getPosition();
 						sf::Text ch(std::to_string(target->getHitPoints()), font, 12); 
-						ch.setPosition(tpos.first, tpos.second - 18);
+						if(target->getMovementDirection() == Critter::MovementDirection::LEFT
+							|| target->getMovementDirection() == Critter::MovementDirection::RIGHT)
+							ch.setPosition(tpos.first, tpos.second - 16);
+						else if(target->getMovementDirection() == Critter::MovementDirection::UP
+							|| target->getMovementDirection() == Critter::MovementDirection::DOWN)
+							ch.setPosition(tpos.first + 10, tpos.second);
 						ch.setColor(sf::Color::Red);
 						critterHealth[target->getId()] = ch;
 						sf::Clock c;
@@ -312,13 +346,13 @@ std::vector<Waypoint> GameStatePlay::addWaypoints(std::vector<sf::Vector2f> path
 	std::vector<Waypoint> waypoints;
 
 	//Initialize waypoints
-	for (int i = 0; i < path_points.size(); ++i) {
+	for (int i = 0; i < int(path_points.size()); ++i) {
 		Waypoint waypoint(path_points[i]);
 		waypoints.push_back(waypoint);
 	}
 
 	//Set next waypoints
-	for (int i = 0; i < waypoints.size(); ++i) {
+	for (int i = 0; i < int(waypoints.size()); ++i) {
 		if (i != waypoints.size() - 1) {
 			waypoints[i].next_waypoint = &waypoints[i+1];
 		}
@@ -344,7 +378,7 @@ std::vector<sf::Vector2f> GameStatePlay::getWaypointsFromMapPath() {
 		// Set current tile
 		const Tile* current_tile = path_tiles[0];
 
-		for (int i = 0; i < path_tiles.size() - 1; ++i) {
+		for (int i = 0; i < int(path_tiles.size()) - 1; ++i) {
 			if (i + 2 == path_tiles.size())   // No change of direction can happen in less than 3 tiles
 				break;
 
@@ -388,7 +422,7 @@ bool GameStatePlay::checkIfAtEndTile(Critter* critter) {
 
 void GameStatePlay::moveActivatedCritters(const float delta_time) {
 	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
-	for (int i = 0; i < critters.size(); ++i) {
+	for (int i = 0; i < int(critters.size()); ++i) {
 		if (critters[i]->isActive)
 			moveCritter(critters[i], delta_time);
 	}
@@ -422,7 +456,28 @@ void GameStatePlay::moveCritter(Critter* critter, const float delta_time) {
 
 void GameStatePlay::handleCritterRemovalFromWave() {
 	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
-	for (int i = 0; i < critters.size(); ++i) {
+	for (int i = 0; i < int(critters.size()); ++i) {
+		//tick and apply effects
+		int tempHealth = critters[i]->getHitPoints();
+		if(critters[i]->isActive){
+			critters[i]->inflictEffects();
+			if(tempHealth != critters[i]->getHitPoints()){
+				std::pair<float, float> cpos = critters[i]->getPosition();
+				sf::Text ed(std::to_string(critters[i]->getHitPoints()), font, 12); 
+				if(critters[i]->getMovementDirection() == Critter::MovementDirection::LEFT
+							|| critters[i]->getMovementDirection() == Critter::MovementDirection::RIGHT)
+							ed.setPosition(cpos.first, cpos.second - 32);
+						else if(critters[i]->getMovementDirection() == Critter::MovementDirection::UP
+							|| critters[i]->getMovementDirection() == Critter::MovementDirection::DOWN)
+							ed.setPosition(cpos.first + 24, cpos.second);
+				ed.setColor(sf::Color::Blue);
+				effectDamage[critters[i]->getId()] = ed;
+				sf::Clock c;
+				effectDamageClock[critters[i]->getId()] = c;
+			}
+		}
+
+
 		//Check if critters are at end tile
 		critters[i]->isAtEndTile = checkIfAtEndTile(critters[i]);
 
@@ -459,7 +514,7 @@ void GameStatePlay::handleCritterRemovalFromWave() {
 }
 void GameStatePlay::handleCritterWaveLevelSwitching() {
 	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
-	for (int i = 0; i < critters.size(); ++i) {
+	for (int i = 0; i < int(critters.size()); ++i) {
 		if (critters[i]->isActive)
 			return;
 	}
@@ -498,14 +553,19 @@ void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 			&& this->game->map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY) {
 				tower_manager.buyTower(towerSelector, tileX, tileY);
 		}
+		if(tower_manager.getTower(tileX, tileY) != nullptr)
+			fieldTowerSelector = tower_manager.getTower(tileX, tileY);
 	}
 	else if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
+		fieldTowerSelector = nullptr;
 		if(tower_manager.getTower(tileX, tileY) != nullptr && tower_manager.getTower(tileX, tileY)->spriteContains(localPosition)){
 			tower_manager.sellTower(tileX, tileY);
 		}
 	}
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::U) && tower_manager.getTower(tileX, tileY) != NULL) {
 		tower_manager.upgradeTower(tileX, tileY);
+		if(tower_manager.getTower(tileX, tileY) != nullptr)
+			fieldTowerSelector = tower_manager.getTower(tileX, tileY);
 	}
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num0)){
 		tower_manager.clearAllTowers();
@@ -551,6 +611,42 @@ void GameStatePlay::buttonCommandLibrary() {
 		}
 		else if(buttonMap["BabyBulldog_Btn"].spriteContains(localPosition)) {
 			towerSelector = "BabyBulldog";
+		}
+		else if(buttonMap["EndStrategy_Btn"].spriteContains(localPosition)) {
+			if(fieldTowerSelector != nullptr)
+				fieldTowerSelector->setStrategy(new NearestEndPointStrategy);
+		}
+		else if(buttonMap["NearStrategy_Btn"].spriteContains(localPosition)) {
+			if(fieldTowerSelector != nullptr)
+				fieldTowerSelector->setStrategy(new NearestTowerStrategy);
+		}
+		else if(buttonMap["StrongestStrategy_Btn"].spriteContains(localPosition)) {
+			if(fieldTowerSelector != nullptr)
+				fieldTowerSelector->setStrategy(new StrongestStrategy);
+		}
+		else if(buttonMap["WeakestStrategy_Btn"].spriteContains(localPosition)) {
+			if(fieldTowerSelector != nullptr)
+				fieldTowerSelector->setStrategy(new WeakestStrategy);
+		}
+		else if(buttonMap["MostHealthStrategy_Btn"].spriteContains(localPosition)) {
+			if(fieldTowerSelector != nullptr)
+				fieldTowerSelector->setStrategy(new MostHealthStrategy);
+		}
+		else if(buttonMap["LeastHealthStrategy_Btn"].spriteContains(localPosition)) {
+			if(fieldTowerSelector != nullptr)
+				fieldTowerSelector->setStrategy(new LeastHealthStrategy);
+		}
+		else if(buttonMap["FastestStrategy_Btn"].spriteContains(localPosition)) {
+			if(fieldTowerSelector != nullptr)
+				fieldTowerSelector->setStrategy(new FastestStrategy);
+		}
+		else if(buttonMap["SlowestStrategy_Btn"].spriteContains(localPosition)) {
+			if(fieldTowerSelector != nullptr)
+				fieldTowerSelector->setStrategy(new SlowestStrategy);
+		}
+		else if(buttonMap["MostCoinsStrategy_Btn"].spriteContains(localPosition)) {
+			if(fieldTowerSelector != nullptr)
+				fieldTowerSelector->setStrategy(new MostCoinsStrategy);
 		}
 	}
 }
@@ -657,6 +753,87 @@ void GameStatePlay::initializeButtonMap() {
 	BabyBulldog_Btn.load(towerPath + "Bulldog_0.png");
 	BabyBulldog_Btn.setPosition(26*32,12*32);
 	buttonMap.emplace("BabyBulldog_Btn", BabyBulldog_Btn);
+
+	GameObject EndStrategy_Btn;
+	EndStrategy_Btn.load(imagePath + "StrategyBox.png");
+	EndStrategy_Btn.setPosition(22*32,20*32);
+	buttonMap.emplace("EndStrategy_Btn", EndStrategy_Btn);
+	nearestEnd.setFont(font);
+	nearestEnd.setPosition(22*32+4,20*32+4);
+	nearestEnd.setColor(sf::Color::Black);
+	nearestEnd.setCharacterSize(12);
+
+	GameObject NearStrategy_Btn;
+	NearStrategy_Btn.load(imagePath + "StrategyBox.png");
+	NearStrategy_Btn.setPosition(26*32,20*32);
+	buttonMap.emplace("NearStrategy_Btn", NearStrategy_Btn);
+	nearestTower.setFont(font);
+	nearestTower.setPosition(26*32+4,20*32+4);
+	nearestTower.setColor(sf::Color::Black);
+	nearestTower.setCharacterSize(12);
+
+	GameObject StrongestStrategy_Btn;
+	StrongestStrategy_Btn.load(imagePath + "StrategyBox.png");
+	StrongestStrategy_Btn.setPosition(14*32,20*32);
+	buttonMap.emplace("StrongestStrategy_Btn", StrongestStrategy_Btn);
+	strongest.setFont(font);
+	strongest.setPosition(14*32+4,20*32+4);
+	strongest.setColor(sf::Color::Black);
+	strongest.setCharacterSize(12);
+
+	GameObject WeakestStrategy_Btn;
+	WeakestStrategy_Btn.load(imagePath + "StrategyBox.png");
+	WeakestStrategy_Btn.setPosition(18*32,20*32);
+	buttonMap.emplace("WeakestStrategy_Btn", WeakestStrategy_Btn);
+	weakest.setFont(font);
+	weakest.setPosition(18*32+4,20*32+4);
+	weakest.setColor(sf::Color::Black);
+	weakest.setCharacterSize(12);
+
+	GameObject MostHealthStrategy_Btn;
+	MostHealthStrategy_Btn.load(imagePath + "StrategyBox.png");
+	MostHealthStrategy_Btn.setPosition(14*32,21*32);
+	buttonMap.emplace("MostHealthStrategy_Btn", MostHealthStrategy_Btn);
+	mostH.setFont(font);
+	mostH.setPosition(14*32+4,21*32+4);
+	mostH.setColor(sf::Color::Black);
+	mostH.setCharacterSize(12);
+
+	GameObject LeastHealthStrategy_Btn;
+	LeastHealthStrategy_Btn.load(imagePath + "StrategyBox.png");
+	LeastHealthStrategy_Btn.setPosition(18*32,21*32);
+	buttonMap.emplace("LeastHealthStrategy_Btn", LeastHealthStrategy_Btn);
+	leastH.setFont(font);
+	leastH.setPosition(18*32+4,21*32+4);
+	leastH.setColor(sf::Color::Black);
+	leastH.setCharacterSize(12);
+
+	GameObject FastestStrategy_Btn;
+	FastestStrategy_Btn.load(imagePath + "StrategyBox.png");
+	FastestStrategy_Btn.setPosition(22*32,21*32);
+	buttonMap.emplace("FastestStrategy_Btn", FastestStrategy_Btn);
+	fastest.setFont(font);
+	fastest.setPosition(22*32+4,21*32+4);
+	fastest.setColor(sf::Color::Black);
+	fastest.setCharacterSize(12);
+
+	GameObject SlowestStrategy_Btn;
+	SlowestStrategy_Btn.load(imagePath + "StrategyBox.png");
+	SlowestStrategy_Btn.setPosition(26*32,21*32);
+	buttonMap.emplace("SlowestStrategy_Btn", SlowestStrategy_Btn);
+	slowest.setFont(font);
+	slowest.setPosition(26*32+4,21*32+4);
+	slowest.setColor(sf::Color::Black);
+	slowest.setCharacterSize(12);
+
+	GameObject MostCoinsStrategy_Btn;
+	MostCoinsStrategy_Btn.load(imagePath + "StrategyBox.png");
+	MostCoinsStrategy_Btn.setPosition(10*32,20*32);
+	buttonMap.emplace("MostCoinsStrategy_Btn", MostCoinsStrategy_Btn);
+	mostCoins.setFont(font);
+	mostCoins.setPosition(10*32+4,20*32+4);
+	mostCoins.setColor(sf::Color::Black);
+	mostCoins.setCharacterSize(12);
 
 	/*
 	GameObject bulldog_1_Btn;
