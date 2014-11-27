@@ -10,13 +10,12 @@
 #include <gameObjects/CritterGameObject.h>
 #include <utils/AnimationHandler.h>
 #include <utils/Waypoint.h>
-#include <gameObjects/ISubject.h>
 
 /** @brief Abstract base class of all Critters
 *  Critter defines the attributes, accessors, and update function
 *  for its subclass instances. 
 */
-class Critter : public CritterGameObject, public ISubject {
+class Critter : public CritterGameObject {
 public:
   enum CritterType { BLACK_CAT, WHITE_CAT };
 

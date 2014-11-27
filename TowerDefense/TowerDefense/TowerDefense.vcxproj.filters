@@ -150,12 +150,6 @@
     <ClInclude Include="include\gameStates\GameStateStart.h">
       <Filter>Header Files\GameStates</Filter>
     </ClInclude>
-    <ClInclude Include="include\gameObjects\ISubject.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="include\gameObjects\IObserver.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
     <ClInclude Include="include\gameStates\GameStateGameOver.h">
       <Filter>Header Files\GameStates</Filter>
     </ClInclude>

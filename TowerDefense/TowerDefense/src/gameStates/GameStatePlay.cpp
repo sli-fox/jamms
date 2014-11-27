@@ -288,8 +288,10 @@ void GameStatePlay::handleInput() {
 
 			for (int i = 0; i < critters.size(); ++i) {
 				while(critters[i]->isActive && tower->canAttack(critters[i]) && !this->game->isGamePaused) {
-					tower->attack();
 					Critter* target = tower->getTarget();
+					tower->attack();
+					if(target->getHitPoints() <= 0) target->isActive = false;
+
 					if(target != NULL) {
 						std::pair<float, float> tpos = target->getPosition();
 						sf::Text ch(std::to_string(target->getHitPoints()), font, 12); 
@@ -304,10 +306,6 @@ void GameStatePlay::handleInput() {
 						critters[i]->setSpecialEffectApplied(true);
 					}
 
-					if(critters[i]->getHitPoints() <= 0) {
-						critters[i]->isActive = false;
-						tower->setTarget(NULL);
-					}
 				}
 			}
 		}
@@ -358,16 +356,6 @@ void GameStatePlay::handleInput() {
 			break;
 									}
 		default: break;
-		}
-	}
-}
-
-// Attach ONE tower to every active critter
-void GameStatePlay::registerObserver(Tower* tower) {
-	std::map<int, Critter*> critters = current_wave->getContainerOfCritters();
-	for (int i = 0; i < critters.size(); ++i) {
-		if(critters[i]->isActive) {
-			critters[i]->attach(tower);
 		}
 	}
 }
@@ -564,9 +552,6 @@ void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 		if(tower_manager.getTower(tileX, tileY) == nullptr && this->game->map.getTile(tileX, tileY) != nullptr
 			&& this->game->map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY) {
 				tower_manager.buyTower(towerSelector, tileX, tileY);
-				if(tower_manager.getTower(tileX, tileY) != nullptr) {
-					registerObserver(tower_manager.getTower(tileX, tileY));
-				}
 		}
 	}
 	else if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){

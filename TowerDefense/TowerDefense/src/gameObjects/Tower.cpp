@@ -245,10 +245,6 @@ void Tower::applySpecialEffect(Critter* critter) {
 	}
 }
 
-void Tower::update() {
-	std::cout << "TOWER UPDATED!" << std::endl;
-}
-
 /**
 * @brief Overrides method to apply to tower range sf::CircleShape object
 * @return bool
