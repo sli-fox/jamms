@@ -1,7 +1,7 @@
 #pragma once
-#include <GameObjects/ConcreteTower.h>
+#include <GameObjects/Tower.h>
 
-class BabyDalmatian : public ConcreteTower {
+class BabyDalmatian : public Tower {
 
 public:
 	BabyDalmatian() {}
