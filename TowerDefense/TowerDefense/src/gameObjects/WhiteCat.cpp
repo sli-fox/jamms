@@ -7,7 +7,7 @@
 
 WhiteCat::WhiteCat(int id, Waypoint* starting_waypoint) {
   this->id = id;
-  max_health = 15;
+  max_health = 100;
   this->current_waypoint = starting_waypoint;
   
   //Set starting position

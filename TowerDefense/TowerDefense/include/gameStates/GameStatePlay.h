@@ -95,6 +95,10 @@ class GameStatePlay : public GameState {
 	  std::map<int,sf::Text> critterHealth;
 	  std::map<int,sf::Clock> healthClock;
 	  sf::Time healthTime;
+
+	  std::map<int,sf::Text> effectDamage;
+	  std::map<int,sf::Clock> effectDamageClock;
+	  sf::Time effectDamageTime;
 	
      /** @brief Camera view for the gameplay displayed to the window.
       */

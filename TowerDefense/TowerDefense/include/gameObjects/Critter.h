@@ -10,6 +10,8 @@
 #include <gameObjects/CritterGameObject.h>
 #include <utils/AnimationHandler.h>
 #include <utils/Waypoint.h>
+#include "utils/CritterEffect.h"
+#include <list>
 
 /** @brief Abstract base class of all Critters
 *  Critter defines the attributes, accessors, and update function
@@ -21,8 +23,8 @@ public:
 
   Critter* next_critter;
 
-  Critter() {};
-  virtual ~Critter() {};
+  Critter();
+  virtual ~Critter();
 
   int getId() const;
   int getHitPoints() const; 
@@ -39,10 +41,14 @@ public:
   void inflictDamage(int dmg);
   std::string getCritterSpecs();
 
+  void addEffect(CritterEffect* effect);
+  void inflictEffects();
+
 protected:
   CritterType type;
   int id;
   int max_health;
+  std::list<std::unique_ptr<CritterEffect>> effectList;
 
   /** @brief Pure virtualized initialization function for Critter.
   *   @return Void.
@@ -67,7 +73,7 @@ protected:
 
   /** @brief Critter movement speed 
   */
-  float speed;
+  float speed, speedModifier;
 
   /** @brief Difficulty level as part of a wave
   */
