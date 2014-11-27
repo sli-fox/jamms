@@ -4,21 +4,17 @@
 #include <GameObjects/TowerDecorator.h>
 
 class TeenDalmatianUpgrade : public TowerDecorator {
-	
-	public:
-		TeenDalmatianUpgrade();
-		TeenDalmatianUpgrade(Tower* decoratedTower);
-		~TeenDalmatianUpgrade() { std::cout << red << "TeenDalmatianUpgrade has been deleted." << std::endl; }
-		
-		static int teen_upgrade_cost;
 
-		void setRange(float _range);
-		int getBuyCost() const;
-		std::string getTowerSpecs();
-		bool canAttack(Critter* critter);
-		void attack();
+public:
+	TeenDalmatianUpgrade();
+	TeenDalmatianUpgrade(Tower* decoratedTower);
+	~TeenDalmatianUpgrade() { std::cout << red << "TeenDalmatianUpgrade has been deleted." << std::endl; }
 
-	private:
-		Tower* _decoratedTower;
+	static int teen_upgrade_cost;
+
+	std::string getTowerSpecs();
+
+private:
+	Tower* _decoratedTower;
 
 };

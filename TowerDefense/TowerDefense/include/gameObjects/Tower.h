@@ -1,34 +1,35 @@
 #pragma once
 #include <string>
-#include <GameObjects/GameObject.h>
+#include <GameObjects/TowerGameObject.h>
 #include <GameObjects/Critter.h>
-#include <GameObjects/IObserver.h>
 #include "Utils/TowerStrategy.h"
 #include <memory>
 
-class Tower: public GameObject, public IObserver{
-  public:
-    Tower();
+class Tower: public GameObject {
+public:
+	Tower();
 	~Tower() { std::cout << red << _name << " has been deleted." << white << std::endl; };
+
+	static int serial;
+
 	void upgradeTower() {}
-	virtual bool canAttack(Critter* critter) = 0;
+	bool canAttack(Critter* critter);
 	bool canApplySpecialAfterEffects(Critter* critter);
-	virtual void attack() = 0;
-	void update();
+	virtual void attack();
 	Critter* executeStrategy(Critter* critter);
 	std::pair<float, float> findCollisionPath(Critter* critter);
 	void rotateTowardsTarget();
 	float angleInDegrees(float x, float y);
 
-    enum TowerType { ShihTzu, Dalmatian, Bulldog };
+	enum TowerType { ShihTzu, Dalmatian, Bulldog };
 	enum UpgradeLevel { Baby, Teen, Adult };
 	enum RateOfFire { Slow = 1, Normal, Fast };
 	enum SpecialEffect { None, Slowing, Burning, Freezing };
-	
+
 	//ACCESSORS
-    int getID() const;
+	int getID() const;
 	std::string getName() const;
-    Tower::TowerType getType() const;
+	Tower::TowerType getType() const;
 	Tower::UpgradeLevel getUpgradeLevel() const;
 	int getPower() const;
 	float getRange() const;
@@ -36,19 +37,19 @@ class Tower: public GameObject, public IObserver{
 	Tower::RateOfFire getRateOfFire() const;
 	bool getIsFiring() const;
 	Tower::SpecialEffect getSpecialEffect() const;
-	virtual int getBuyCost() const = 0;
+	int getBuyCost() const;
 	int getSellCost() const;
 	int getUpgradeCost() const;
 	Critter* getTarget() const;
 	TowerStrategy* getStrategy() const;
 
 	//MUTATORS
-    void setID(int _id);
+	void setID(int _id);
 	void setName(std::string _name);
-    void setType(Tower::TowerType _tower_type);
+	void setType(Tower::TowerType _tower_type);
 	void setUpgradeLevel(Tower::UpgradeLevel _upgrade_level);
 	void setPower(int _power);
-	virtual void setRange(float _range) = 0;
+	void setRange(float _range);
 	void setRangeShape(float range);
 	void setRateOfFire(Tower::RateOfFire _rate_of_fire);
 	void setIsFiring(bool b);
@@ -59,14 +60,14 @@ class Tower: public GameObject, public IObserver{
 	void setTarget(Critter* crit);
 	void setStrategy(TowerStrategy* newStrategy);
 
-	virtual std::string getTowerSpecs() = 0;
+	virtual string getTowerSpecs();
 	virtual bool circleToCircleIntersection(GameObject* game_object);
 	void applySpecialEffect(Critter* critter);
 
-  protected:
-    int _id;
+protected:
+	int _id;
 	std::string _name;
-    TowerType _type;
+	TowerType _type;
 	UpgradeLevel _upgrade_level;
 	int _power;
 	float _range;

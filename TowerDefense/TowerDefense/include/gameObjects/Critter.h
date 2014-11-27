@@ -1,126 +1,83 @@
 /** @file Critter.h
- *  @brief Representation of critter object.
- *
- *  This is the abstract representation of the critter object.
- *
- *  @author Stephanie Li
- */
+*  @brief Representation of critter object.
+*
+*  This is the abstract representation of the critter object.
+*
+*  @author Stephanie Li
+*/
 
 #pragma once
-#include <gameObjects/GameObject.h>
+#include <gameObjects/CritterGameObject.h>
 #include <utils/AnimationHandler.h>
 #include <utils/Waypoint.h>
-#include <gameObjects/ISubject.h>
 #include "utils/CritterEffect.h"
 #include <list>
 
 /** @brief Abstract base class of all Critters
- *  Critter defines the attributes, accessors, and update function
- *  for its subclass instances. 
- */
-class Critter : public GameObject, public ISubject {
-  public:
-    enum MovementDirection { DOWN, LEFT, RIGHT, UP };
-    enum CritterType { BLACK_CAT, WHITE_CAT };
+*  Critter defines the attributes, accessors, and update function
+*  for its subclass instances. 
+*/
+class Critter : public CritterGameObject {
+public:
+  enum CritterType { BLACK_CAT, WHITE_CAT };
 
-	void controlCat(sf::Keyboard::Key arrowKey);
+  Critter* next_critter;
 
-   /** @brief Handles the animated object. 
-     */
-    AnimationHandler animation_handler;
+  Critter() {};
+  virtual ~Critter() {};
 
-    bool isActive;
-    bool hasSpawned;
-    bool isAtEndTile;
-    Critter* next_critter;
-    
-    Critter();
-    virtual ~Critter();
+  int getId() const;
+  int getHitPoints() const; 
+  void setHitPoints(int points);
+  int getStealPointsStrength() const; 
+  int getPlayerReward() const; 
+  float getSpeed() const;
+  void setSpeed(float speed);
+  void reduceSpeed(float speed);
+  int getLevel() const;
+  bool getSpecialEffectApplied() const;
+  void setSpecialEffectApplied(bool specialEffectApplied);
 
-    int getId() const;
-    int getHitPoints() const; 
-    void setHitPoints(int points);
-    int getStealPointsStrength() const; 
-    int getPlayerReward() const; 
-    float getSpeed() const;
-	void setSpeed(float speed);
-	void reduceSpeed(float speed);
-    int getLevel() const;
-    Waypoint* getCurrentWaypoint() const;
-    void setCurrentWaypoint(Waypoint* waypoint);
-    void setAnimationIndex(unsigned int index);
-	bool getSpecialEffectApplied() const;
-	void setSpecialEffectApplied(bool specialEffectApplied);
-
-	void inflictDamage(int dmg);
-
-	void addEffect(CritterEffect effect);
-	void inflictEffects();
-  
-  MovementDirection getMovementDirection();
-  
-  void updatePosition(float x, float y);
-
-  bool isAtNextWaypoint();
-
-  
+  void inflictDamage(int dmg);
   std::string getCritterSpecs();
 
-  /** @brief Draw a Critter.
-  *  @param game_window Reference to the window, passed in so that Critters
-  *  don't need to know about the Game class.
-  *  @param delta_time Elapsed time 
-  *  @return Void.
+  void addEffect(CritterEffect effect);
+  void inflictEffects();
+
+protected:
+  CritterType type;
+  int id;
+  int max_health;
+  std::list<CritterEffect> effectList;
+
+  /** @brief Pure virtualized initialization function for Critter.
+  *   @return Void.
   */
-  void draw(sf::RenderWindow& game_window, float delta_time);
+  virtual void initializeCritter(const std::vector<Animation>& animations) = 0;
 
-  protected:
-    Waypoint* current_waypoint;
-	std::list<CritterEffect> effectList;
+  /** @brief Health of the Critter.
+  */
+  int hit_points;
 
-    CritterType type;
-    int id;
-    int max_health;
+  /** @brief Rate at which the critter can steal points from the player.
+  */
+  int steal_points;
 
-    /** @brief Pure virtualized initialization function for Critter.
-    *   @return Void.
-    */
-    virtual void initializeCritter(const std::vector<Animation>& animations) = 0;
+  /** @brief Rate at which the critter can steal lives from the player.
+  */
+  static const int STEAL_LIVES = 1;
 
-    /** @brief Health of the Critter.
-      */
-    int hit_points;
+  /** @brief Coin reward for the player when the Critter is killed 
+  */
+  int player_reward;
 
-    /** @brief Position of the Critter.
-      */
-    sf::Vector2f position;
+  /** @brief Critter movement speed 
+  */
+  float speed, speedModifier;
 
-    /** @brief Rate at which the critter can steal points from the player.
-      */
-    int steal_points;
+  /** @brief Difficulty level as part of a wave
+  */
+  int level;
 
-    /** @brief Rate at which the critter can steal lives from the player.
-      */
-    static const int STEAL_LIVES = 1;
-
-    /** @brief Coin reward for the player when the Critter is killed 
-      */
-    int player_reward;
-
-    /** @brief Critter movement speed 
-      */
-    float speed, speedModifier;
-
-    /** @brief Difficulty level as part of a wave
-      */
-    int level;
-
-    /** @brief Indicates which animation in a sprite sheet
-     */
-    int animation_index;
-
-	/**
-	  * @brief
-	  */
-	bool specialEffectApplied;
+  bool specialEffectApplied;
 };

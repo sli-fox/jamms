@@ -8,40 +8,26 @@ AdultShihTzuUpgrade::AdultShihTzuUpgrade() {
 }
 
 AdultShihTzuUpgrade::AdultShihTzuUpgrade(Tower* tower) : _decoratedTower(tower) {
-	tower->load("resources/images/towers/ShihTzu_2.png");
-	tower->setName("AdultShihTzu_"+ std::to_string(tower->getID()));
-	tower->setRange(tower->getRange()+0.5);
-	tower->setUpgradeLevel(Tower::UpgradeLevel::Adult);
-	std::cout << green << tower->getName() << " has grown up to Adult." << std::endl;
-}
+	this->load("resources/images/towers/ShihTzu_2.png");
+	this->setPosition(tower->getPosition().first, tower->getPosition().second);		// has to be set BEFORE setRange();
 
-int AdultShihTzuUpgrade::getBuyCost() const {
-	return _decoratedTower->getBuyCost() + 20;
-}
+	this->_id = tower->getID();
+	this->_name = tower->getName();
+	this->_type = tower->getType();
+	this->_upgrade_level = Tower::UpgradeLevel::Adult;
+	this->_buy_cost = tower->getBuyCost();
+	this->_power = tower->getPower() + 1;
+	this->setRange(tower->getRange() + 0.5);
+	this->_rate_of_fire = tower->getRateOfFire();
+	this->_upgrade_cost = tower->getUpgradeCost();
+	this->_sell_cost = tower->getSellCost();
 
-void AdultShihTzuUpgrade::setRange(float _range) {
-	this->_range = _range;
-	this->setRangeShape(_range);
-	_decoratedTower->setRange(_range);
-}
-
-/**
-  * @brief Determines whether tower can attack a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay
-  * @return bool
-  */
-bool AdultShihTzuUpgrade::canAttack(Critter* critter) {
-	return _decoratedTower->canAttack(critter);
-}
-
-void AdultShihTzuUpgrade::attack() {
-		this->_target = _decoratedTower->getTarget();
-		_decoratedTower->attack();
-		std::cout << yellow << this->_name << " attacking..." << std::endl;
+	std::cout << green << "Tower has grown up to Adult." << std::endl;
 }
 
 // @Override
 std::string AdultShihTzuUpgrade::getTowerSpecs() {
 	std::stringstream output;
-	output << _decoratedTower->getTowerSpecs() << std::endl;
+	output << Tower::getTowerSpecs() << std::endl;
 	return output.str();
 }
