@@ -212,6 +212,9 @@
     </ClInclude>
     <ClInclude Include="include\utils\CritterEffect.h">
       <Filter>Header Files\Utils</Filter>
+	  </ClInclude>
+    <ClInclude Include="include\test\CritterFactoryTest.h">
+      <Filter>Header Files\Test</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -343,6 +346,9 @@
     </ClCompile>
     <ClCompile Include="src\utils\CritterEffect.cpp">
       <Filter>Source Files\Utils</Filter>
+	  </ClCompile>
+    <ClCompile Include="test\CritterFactoryTest.cpp">
+      <Filter>Source Files\Test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
