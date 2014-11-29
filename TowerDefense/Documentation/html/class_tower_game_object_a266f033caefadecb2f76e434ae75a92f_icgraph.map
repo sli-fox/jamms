@@ -1,0 +1,4 @@
+<map id="TowerGameObject::executeStrategy" name="TowerGameObject::executeStrategy">
+<area shape="rect" id="node2" href="$class_tower_game_object.html#a16d07954c10a2a54c202fe2e2fdc7de3" title="Determines whether tower can attack a critter based on whether the critter falls within its range whi..." alt="" coords="236,13,432,39"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="480,13,668,39"/>
+</map>
