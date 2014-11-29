@@ -10,7 +10,7 @@
 #pragma once
 #include <gameObjects/GameObject.h>
 #include <GameObjects/Critter.h>
-#include "Utils/TowerStrategy.h"
+#include <utils/TowerStrategy.h>
 #include <memory>
 #include <string>
 
@@ -30,19 +30,23 @@ public:
   //Accessors
   sf::CircleShape getRangeShape() const;
   RateOfFire getRateOfFire() const;
-
+  Critter* getTarget() const;
 
   //Mutators
   void setRangeShape(float range);
   void setRateOfFire(RateOfFire _rate_of_fire);
+  void setTarget(Critter* crit);
 
   virtual bool circleToCircleIntersection(GameObject* game_object);
+  bool canAttack(Critter* critter);
   bool canApplySpecialAfterEffects(Critter* critter);
+  Critter* executeStrategy(Critter* critter);
 
 protected:
   sf::CircleShape _range_shape;
   sf::Clock clock;
   sf::Time time;
   RateOfFire _rate_of_fire;
-
+	Critter* _target;
+  std::unique_ptr<TowerStrategy> _strategy;
 };

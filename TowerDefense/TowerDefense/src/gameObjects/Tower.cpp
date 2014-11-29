@@ -43,9 +43,6 @@ int Tower::getSellCost() const {
 int Tower::getUpgradeCost() const {
 	return _upgrade_cost;
 }
-Critter* Tower::getTarget() const {
-	return _target;
-}
 
 //MUTATORS
 void Tower::setID(int _id) {
@@ -69,11 +66,6 @@ void Tower::setRange(float _range) {
 	this->setRangeShape(_range);
 }
 
-
-void Tower::setRateOfFire(Tower::RateOfFire _rate_of_fire) {
-	this->_rate_of_fire = _rate_of_fire;
-}
-
 void Tower::setSpecialEffect(Tower::SpecialEffect _special_effect) {
 	this->_special_effect = _special_effect;
 }
@@ -82,56 +74,6 @@ void Tower::setSellCost(int _sell_cost) {
 }
 void Tower::setUpgradeCost(int _upgrade_cost) {
 	this->_upgrade_cost = _upgrade_cost;
-}
-void Tower::setTarget(Critter* crit) {
-	this->_target = crit;
-}
-
-void Tower::setRangeShape(float range) {
-	range *= 32;
-	_range_shape.setPosition(this->getPosition().first, this->getPosition().second);
-	_range_shape.setRadius(range);
-	_range_shape.setFillColor(sf::Color::Transparent);
-	_range_shape.setOutlineThickness(2);
-	_range_shape.setOutlineColor(sf::Color::Red);
-	_range_shape.setOrigin(range-16, range-16);
-}
-
-Tower::RateOfFire Tower::getRateOfFire() const {
-	return _rate_of_fire;
-}
-
-sf::CircleShape Tower::getRangeShape() const {
-	return _range_shape;
-}
-
-/**
-* @brief Determines whether tower can attack a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay
-* @return bool
-*/
-bool Tower::canAttack(Critter* critter) { //@MARK canAttack() is performing 3 functions. range checking, attack timer checking, and target selection. we should split them into 3 methods in my opinion -Jeremy-
-
-	if(!this->_target == NULL && (!this->circleToCircleIntersection(_target) || !_target->isActive))
-		this->_target = NULL;
-
-	if(this->_target == NULL) {
-		_target = critter;
-		//this->rotateTowardsTarget();
-	}
-	else{
-		_target = executeStrategy(critter);
-		//_target = critter;
-		// I changed them to be more consistent -Jeremy-
-	}
-
-	this->time = this->clock.getElapsedTime();
-
-	if(this->circleToCircleIntersection(_target) && time.asSeconds()*this->getRateOfFire() >= 1){
-		clock.restart();
-		return true;
-	}
-
-	return false;
 }
 
 void Tower::attack() {
@@ -169,20 +111,6 @@ void Tower::rotateTowardsTarget() {
 	cout << "CollisionPath ("<< collisionPath.first << ", " << collisionPath.second << ")";
 	this->setRotation(facingCritterAngle);
 	//this->move(this->getPosition().x + this->getSpriteSize().x/2, this->getPosition().y + this->getSpriteSize().y/2); 
-}
-
-/**
-* @brief Determines whether tower can apply a special effect on a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay
-* @return bool
-*/
-bool Tower::canApplySpecialAfterEffects(Critter* critter) {
-	this->time = this->clock.getElapsedTime();
-
-	if(this->circleToCircleIntersection(critter) && time.asSeconds()*this->getRateOfFire() >= 1) {
-		clock.restart();
-		return true;
-	}
-	return false;
 }
 
 void Tower::applySpecialEffect(Critter* critter) {
@@ -245,29 +173,11 @@ void Tower::applySpecialEffect(Critter* critter) {
 	}
 }
 
-/**
-* @brief Overrides method to apply to tower range sf::CircleShape object
-* @return bool
-*/
-bool Tower::circleToCircleIntersection(GameObject* game_object){
-	float radius = this->_range_shape.getRadius();
-
-	std::pair <int, int> distance (this->getSpriteCenter().first - game_object->getSpriteCenter().first, this->getSpriteCenter().second - game_object->getSpriteCenter().second);  
-
-	return std::sqrt(std::pow(distance.first, 2) + std::pow(distance.second, 2)) <= radius;
-}
-
-TowerStrategy* Tower::getStrategy() const{
-	return this->_strategy.get();
-}
 
 void Tower::setStrategy(TowerStrategy* newStrategy){
 	this->_strategy.reset(newStrategy);
 }
 
-Critter* Tower::executeStrategy(Critter* critter){
-	return this->_strategy->computeTarget(critter, _target, getPosition());
-}
 
 std::string Tower::getTowerSpecs() {
 	//Since we can't cout an enum in C++, we need this Array system as a workaround (optional, but prettier at output)
