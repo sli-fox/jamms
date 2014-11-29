@@ -8,7 +8,7 @@ var searchData=
   ['rapidxml_5fparse_5ferror',['RAPIDXML_PARSE_ERROR',['../rapidxml_8hpp.html#a65f2be309896ffb841997d467c2f4fff',1,'rapidxml.hpp']]],
   ['rapidxml_5fprint_2ehpp',['rapidxml_print.hpp',['../rapidxml__print_8hpp.html',1,'']]],
   ['rapidxml_5fstatic_5fpool_5fsize',['RAPIDXML_STATIC_POOL_SIZE',['../rapidxml_8hpp.html#a001304844ab478e3b213749fc8d72ca2',1,'rapidxml.hpp']]],
-  ['rateoffire',['RateOfFire',['../class_tower.html#ae82ae8201f8921eb64878d2c9ecb5bb2',1,'Tower::RateOfFire()'],['../class_tower_game_object.html#a6a687237ad352e41acb35f8b4cf25fa3',1,'TowerGameObject::RateOfFire()']]],
+  ['rateoffire',['RateOfFire',['../class_tower_game_object.html#a6a687237ad352e41acb35f8b4cf25fa3',1,'TowerGameObject']]],
   ['readdir',['readdir',['../dirent_8h.html#aff48ec2514bda89769c968c66db181f3',1,'dirent.h']]],
   ['recordaddtile',['recordAddTile',['../class_track_map_input__c.html#a5287b682e102d4d12ff1cf5d7e1029ec',1,'TrackMapInput_c']]],
   ['recordfillmap',['recordFillMap',['../class_track_map_input__c.html#a5118fc2fdbf1a9612a0e9dc6225a0d39',1,'TrackMapInput_c']]],

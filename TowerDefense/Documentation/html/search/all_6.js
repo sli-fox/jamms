@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['fast',['Fast',['../class_tower.html#ae82ae8201f8921eb64878d2c9ecb5bb2aa62913c3081700b5c283d075f9f6240a',1,'Tower::Fast()'],['../class_tower_game_object.html#a6a687237ad352e41acb35f8b4cf25fa3a646a1a6a2369018ea562acb0299de468',1,'TowerGameObject::Fast()']]],
+  ['fast',['Fast',['../class_tower_game_object.html#a6a687237ad352e41acb35f8b4cf25fa3a646a1a6a2369018ea562acb0299de468',1,'TowerGameObject']]],
   ['fastest',['fastest',['../class_game_state_play.html#a6b8fba9f1816c183dc546ccbe8fc04cc',1,'GameStatePlay']]],
   ['fasteststrategy',['FastestStrategy',['../class_fastest_strategy.html',1,'']]],
   ['fieldtowerselector',['fieldTowerSelector',['../class_game_state_play.html#af37399cc10da66842740622a891489e0',1,'GameStatePlay']]],

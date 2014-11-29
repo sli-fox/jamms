@@ -1,51 +1,51 @@
 <map id="GameStatePlay::handleInput" name="GameStatePlay::handleInput">
-<area shape="rect" id="node2" href="$class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="775,54,946,95"/>
-<area shape="rect" id="node3" href="$class_tower_manager.html#a3c54cdf57006efbcd9fc074f156d5360" title="TowerManager::getTowerMap" alt="" coords="516,356,707,382"/>
-<area shape="rect" id="node4" href="$class_tower.html#a3bc66411a614f108ceaefd255bdb4179" title="Determines whether tower can attack a critter based on whether the critter falls within its range whi..." alt="" coords="289,1040,411,1066"/>
-<area shape="rect" id="node8" href="$class_game_object.html#ad568496dd9cee5b9edd9357d30a00dff" title="Converts and retrieves an pair&lt;float, float&gt; object from a sf::vector2f. " alt="" coords="777,1116,945,1142"/>
-<area shape="rect" id="node10" href="$class_tower.html#ad5d042b8ab67fdcae27ecbd82fb27b0c" title="Tower::getTarget" alt="" coords="291,1225,409,1252"/>
-<area shape="rect" id="node11" href="$class_tower.html#a9f067c2b9e5e6987f341704b8b098606" title="Tower::attack" alt="" coords="300,1385,400,1412"/>
-<area shape="rect" id="node13" href="$class_critter.html#a5636f0ed2f067318e0d361fe31c9eff2" title="Critter::getId" alt="" coords="565,1334,658,1361"/>
-<area shape="rect" id="node16" href="$class_critter.html#a1e98c05f5a41102cc37eb7a4396b90cf" title="Critter::getHitPoints" alt="" coords="543,1537,679,1564"/>
-<area shape="rect" id="node17" href="$class_critter_game_object.html#a3ce69ef5cbc8983b45df839674aab0bc" title="CritterGameObject::\lgetMovementDirection" alt="" coords="275,1487,425,1528"/>
-<area shape="rect" id="node18" href="$class_tower.html#a7df1e896cdd5cdf7cc2169d6d4f9a6cf" title="Tower::applySpecialEffect" alt="" coords="265,888,435,914"/>
-<area shape="rect" id="node22" href="$class_game_state_play.html#a79237473ceeb26b94f641d0bf66c1ec0" title="GameStatePlay::buttonCommand\lLibrary" alt="" coords="241,188,459,230"/>
-<area shape="rect" id="node29" href="$class_tower.html#a2427fab36824f8ec98273cb5e563e0c9" title="Tower::getTowerSpecs" alt="" coords="535,254,688,281"/>
-<area shape="rect" id="node31" href="$class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="244,526,456,567"/>
-<area shape="rect" id="node32" href="$class_tower_manager.html#ae2cf2fc1dd19ced5d64ec74042673055" title="TowerManager::getTower" alt="" coords="528,406,695,433"/>
-<area shape="rect" id="node40" href="$class_game_object.html#adf7e04407f7c2a5bd487b459efe9fd79" title="GameObject::spriteContains" alt="" coords="518,761,705,788"/>
-<area shape="rect" id="node48" href="$class_critter_game_object.html#aade350efb5f7c65da8eb66d01c65be6f" title="CritterGameObject::\lcontrolCat" alt="" coords="281,1159,419,1200"/>
-<area shape="rect" id="node5" href="$class_tower.html#a518ff249dec05cdd026a830d845abfd2" title="Overrides method to apply to tower range sf::CircleShape object. " alt="" coords="507,1014,716,1041"/>
-<area shape="rect" id="node7" href="$class_tower.html#aa6950f72316cb57bbc8c32a9e332dff3" title="Tower::executeStrategy" alt="" coords="532,1116,691,1142"/>
-<area shape="rect" id="node9" href="$class_tower.html#acf53d0a9123761730bd3e737a5b5a854" title="Tower::getRateOfFire" alt="" coords="539,1065,683,1092"/>
-<area shape="rect" id="node6" href="$class_game_object.html#ad6d60e0c273cb0074c91a19f3aed8708" title="Gets the center of a sprite. " alt="" coords="764,1014,957,1041"/>
-<area shape="rect" id="node12" href="$_console_color_8h.html#a90575bb670cda4e9ae9da0847e05bd1c" title="yellow" alt="" coords="582,1436,641,1462"/>
-<area shape="rect" id="node14" href="$class_critter.html#a3601e12d79247c3345e9e828688cf321" title="Critter::inflictDamage" alt="" coords="540,1486,683,1513"/>
-<area shape="rect" id="node15" href="$class_tower.html#a198af6f04dad766d019b72fc667b90a7" title="Tower::getPower" alt="" coords="552,1385,671,1412"/>
-<area shape="rect" id="node19" href="$_console_color_8h.html#abfbb0c9e0e5ee33dd1026c23381b78c5" title="red" alt="" coords="841,761,881,788"/>
-<area shape="rect" id="node20" href="$class_critter.html#a3785ffa05cec86b30264fbdbf613e4f8" title="Critter::getSpeed" alt="" coords="551,862,671,889"/>
-<area shape="rect" id="node21" href="$class_critter.html#ae843395fb1106cd2c550cd9be9f14df0" title="Critter::reduceSpeed" alt="" coords="541,913,682,940"/>
-<area shape="rect" id="node23" href="$class_tower_manager.html#ae71fc7c55f92477846760b122d0f60b9" title="TowerManager::clearAllTowers" alt="" coords="512,305,711,332"/>
-<area shape="rect" id="node24" href="$class_player.html#ad85b7618b95a6d763db0587760fd2dd3" title="Player::resetStats" alt="" coords="548,36,675,62"/>
-<area shape="rect" id="node25" href="$class_game.html#a4b33dd67adef59bebadba8a234282c88" title="Helper pop function for GameState stack. " alt="" coords="553,86,670,113"/>
-<area shape="rect" id="node26" href="$class_game_state_play.html#a2eda31c4d98a8440c6eba38604aa2a79" title="GameStatePlay::handleCritter\lWaveLevelSwitching" alt="" coords="514,188,709,230"/>
-<area shape="rect" id="node28" href="$class_tower.html#aa5280191c23e7cd98e9a1d9cfaba3416" title="Tower::setStrategy" alt="" coords="546,137,677,164"/>
-<area shape="rect" id="node27" href="$class_critter_wave.html#a1244e59ebd702edd2530e6256779ace0" title="Returns a reference to a Critter in the map. " alt="" coords="785,196,937,222"/>
-<area shape="rect" id="node30" href="$class_tower.html#af2bb341e8011c2526ad5c58e11d79b28" title="Tower::getBuyCost" alt="" coords="795,254,927,281"/>
-<area shape="rect" id="node33" href="$class_map.html#aa8e57f0e6d665def93ad7b33413e98a7" title="Map::getTile" alt="" coords="565,508,658,534"/>
-<area shape="rect" id="node35" href="$class_tile.html#accf61745cef281d948e7acc7260c8b86" title="Tile::getType" alt="" coords="563,558,659,585"/>
-<area shape="rect" id="node36" href="$class_tower_manager.html#a48859fff5518d39549e26d73633eb3c6" title="TowerManager::buyTower" alt="" coords="527,660,696,686"/>
-<area shape="rect" id="node41" href="$class_tower_manager.html#afa7bbe1d178269f32df231807ab419d8" title="TowerManager::sellTower" alt="" coords="527,609,695,636"/>
-<area shape="rect" id="node44" href="$class_tower_manager.html#aa74345499b531c211c0abf7b91eb96fc" title="TowerManager::upgradeTower" alt="" coords="514,710,709,737"/>
-<area shape="rect" id="node47" href="$_console_color_8h.html#a76f93616e13cd7a489bd5efc123b85c2" title="white" alt="" coords="585,457,637,484"/>
-<area shape="rect" id="node34" href="$class_map.html#a6995c0de6fe380ffa652990490b867c8" title="Map::outOfBounds" alt="" coords="795,457,926,484"/>
-<area shape="rect" id="node37" href="$class_tower_manager.html#afd9c7b3113dd4d02b0ee875d705cdf39" title="TowerManager::isTileFree" alt="" coords="775,609,946,636"/>
-<area shape="rect" id="node38" href="$class_player.html#abb709d55c86f703fbd6cc5b90d31fc39" title="Maintains non&#45;negative cash value. " alt="" coords="795,710,927,737"/>
-<area shape="rect" id="node39" href="$_console_color_8h.html#a9a5da37d743c609ea42e11b710812de2" title="blue" alt="" coords="837,660,884,686"/>
-<area shape="rect" id="node42" href="$class_tower_manager.html#a0158f9210b43ea166977e01768849c3a" title="TowerManager::outOfBound" alt="" coords="769,558,952,585"/>
-<area shape="rect" id="node43" href="$class_player.html#af3bdca44c57bee211d1d0ea53c11f9b3" title="Player::earnCash" alt="" coords="799,508,922,534"/>
-<area shape="rect" id="node45" href="$class_tower.html#a87db306927fd4022cae1369b88688ed7" title="Tower::getType" alt="" coords="805,812,916,838"/>
-<area shape="rect" id="node46" href="$class_tower.html#ae8236cf1fac3f2fd791312e3dc59d904" title="Tower::getUpgradeLevel" alt="" coords="781,862,940,889"/>
-<area shape="rect" id="node49" href="$class_game_object.html#a3731c03ddcbdb904bd41af78e09d262a" title="Gets the size of a sprite. " alt="" coords="521,1284,702,1310"/>
-<area shape="rect" id="node50" href="$class_critter_game_object.html#a546fa242023f61965a284e4a2e72ab7d" title="CritterGameObject::\lupdatePosition" alt="" coords="542,1218,681,1259"/>
+<area shape="rect" id="node2" href="$class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="765,50,935,91"/>
+<area shape="rect" id="node3" href="$class_tower_manager.html#a3c54cdf57006efbcd9fc074f156d5360" title="TowerManager::getTowerMap" alt="" coords="511,352,701,379"/>
+<area shape="rect" id="node4" href="$class_tower_game_object.html#a16d07954c10a2a54c202fe2e2fdc7de3" title="Determines whether tower can attack a critter based on whether the critter falls within its range whi..." alt="" coords="252,1051,448,1077"/>
+<area shape="rect" id="node8" href="$class_game_object.html#ad568496dd9cee5b9edd9357d30a00dff" title="Converts and retrieves an pair&lt;float, float&gt; object from a sf::vector2f. " alt="" coords="766,1149,934,1176"/>
+<area shape="rect" id="node10" href="$class_tower_game_object.html#abd2539f169fb1011d57bdf61cd1fca0d" title="TowerGameObject::getTarget" alt="" coords="255,1267,445,1293"/>
+<area shape="rect" id="node11" href="$class_tower.html#a9f067c2b9e5e6987f341704b8b098606" title="Tower::attack" alt="" coords="300,1427,400,1453"/>
+<area shape="rect" id="node13" href="$class_critter.html#a5636f0ed2f067318e0d361fe31c9eff2" title="Critter::getId" alt="" coords="559,1376,653,1403"/>
+<area shape="rect" id="node16" href="$class_critter.html#a1e98c05f5a41102cc37eb7a4396b90cf" title="Critter::getHitPoints" alt="" coords="538,1579,674,1605"/>
+<area shape="rect" id="node17" href="$class_critter_game_object.html#a3ce69ef5cbc8983b45df839674aab0bc" title="CritterGameObject::\lgetMovementDirection" alt="" coords="275,1529,425,1570"/>
+<area shape="rect" id="node18" href="$class_tower.html#a7df1e896cdd5cdf7cc2169d6d4f9a6cf" title="Tower::applySpecialEffect" alt="" coords="265,884,435,911"/>
+<area shape="rect" id="node22" href="$class_game_state_play.html#a79237473ceeb26b94f641d0bf66c1ec0" title="GameStatePlay::buttonCommand\lLibrary" alt="" coords="241,185,459,226"/>
+<area shape="rect" id="node29" href="$class_tower.html#a2427fab36824f8ec98273cb5e563e0c9" title="Tower::getTowerSpecs" alt="" coords="529,251,683,277"/>
+<area shape="rect" id="node31" href="$class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="244,522,456,563"/>
+<area shape="rect" id="node32" href="$class_tower_manager.html#ae2cf2fc1dd19ced5d64ec74042673055" title="TowerManager::getTower" alt="" coords="523,403,689,429"/>
+<area shape="rect" id="node40" href="$class_game_object.html#adf7e04407f7c2a5bd487b459efe9fd79" title="GameObject::spriteContains" alt="" coords="513,757,699,784"/>
+<area shape="rect" id="node48" href="$class_critter_game_object.html#aade350efb5f7c65da8eb66d01c65be6f" title="CritterGameObject::\lcontrolCat" alt="" coords="281,1201,419,1242"/>
+<area shape="rect" id="node5" href="$class_tower_game_object.html#a824c0212a0c2958d9facfa97947c7332" title="Overrides method to apply to tower range sf::CircleShape object. " alt="" coords="515,1011,697,1053"/>
+<area shape="rect" id="node7" href="$class_tower_game_object.html#a266f033caefadecb2f76e434ae75a92f" title="TowerGameObject::execute\lStrategy" alt="" coords="515,1142,697,1183"/>
+<area shape="rect" id="node9" href="$class_tower_game_object.html#a176b325a7415c42dd368a958d52f912c" title="TowerGameObject::getRate\lOfFire" alt="" coords="515,1077,697,1118"/>
+<area shape="rect" id="node6" href="$class_game_object.html#ad6d60e0c273cb0074c91a19f3aed8708" title="Gets the center of a sprite. " alt="" coords="753,1019,947,1045"/>
+<area shape="rect" id="node12" href="$_console_color_8h.html#a90575bb670cda4e9ae9da0847e05bd1c" title="yellow" alt="" coords="577,1477,635,1504"/>
+<area shape="rect" id="node14" href="$class_critter.html#a3601e12d79247c3345e9e828688cf321" title="Critter::inflictDamage" alt="" coords="535,1528,677,1555"/>
+<area shape="rect" id="node15" href="$class_tower.html#a198af6f04dad766d019b72fc667b90a7" title="Tower::getPower" alt="" coords="547,1427,665,1453"/>
+<area shape="rect" id="node19" href="$_console_color_8h.html#abfbb0c9e0e5ee33dd1026c23381b78c5" title="red" alt="" coords="830,757,870,784"/>
+<area shape="rect" id="node20" href="$class_critter.html#a3785ffa05cec86b30264fbdbf613e4f8" title="Critter::getSpeed" alt="" coords="546,859,666,885"/>
+<area shape="rect" id="node21" href="$class_critter.html#ae843395fb1106cd2c550cd9be9f14df0" title="Critter::reduceSpeed" alt="" coords="535,909,677,936"/>
+<area shape="rect" id="node23" href="$class_tower_manager.html#ae71fc7c55f92477846760b122d0f60b9" title="TowerManager::clearAllTowers" alt="" coords="507,301,705,328"/>
+<area shape="rect" id="node24" href="$class_player.html#ad85b7618b95a6d763db0587760fd2dd3" title="Player::resetStats" alt="" coords="543,32,669,59"/>
+<area shape="rect" id="node25" href="$class_game.html#a4b33dd67adef59bebadba8a234282c88" title="Helper pop function for GameState stack. " alt="" coords="547,83,665,109"/>
+<area shape="rect" id="node26" href="$class_game_state_play.html#a2eda31c4d98a8440c6eba38604aa2a79" title="GameStatePlay::handleCritter\lWaveLevelSwitching" alt="" coords="509,185,703,226"/>
+<area shape="rect" id="node28" href="$class_tower.html#aa5280191c23e7cd98e9a1d9cfaba3416" title="Tower::setStrategy" alt="" coords="541,133,671,160"/>
+<area shape="rect" id="node27" href="$class_critter_wave.html#a1244e59ebd702edd2530e6256779ace0" title="Returns a reference to a Critter in the map. " alt="" coords="774,192,926,219"/>
+<area shape="rect" id="node30" href="$class_tower.html#af2bb341e8011c2526ad5c58e11d79b28" title="Tower::getBuyCost" alt="" coords="784,251,916,277"/>
+<area shape="rect" id="node33" href="$class_map.html#aa8e57f0e6d665def93ad7b33413e98a7" title="Map::getTile" alt="" coords="559,504,653,531"/>
+<area shape="rect" id="node35" href="$class_tile.html#accf61745cef281d948e7acc7260c8b86" title="Tile::getType" alt="" coords="558,555,654,581"/>
+<area shape="rect" id="node36" href="$class_tower_manager.html#a48859fff5518d39549e26d73633eb3c6" title="TowerManager::buyTower" alt="" coords="521,656,691,683"/>
+<area shape="rect" id="node41" href="$class_tower_manager.html#afa7bbe1d178269f32df231807ab419d8" title="TowerManager::sellTower" alt="" coords="522,605,690,632"/>
+<area shape="rect" id="node44" href="$class_tower_manager.html#aa74345499b531c211c0abf7b91eb96fc" title="TowerManager::upgradeTower" alt="" coords="509,707,703,733"/>
+<area shape="rect" id="node47" href="$_console_color_8h.html#a76f93616e13cd7a489bd5efc123b85c2" title="white" alt="" coords="580,453,632,480"/>
+<area shape="rect" id="node34" href="$class_map.html#a6995c0de6fe380ffa652990490b867c8" title="Map::outOfBounds" alt="" coords="785,453,915,480"/>
+<area shape="rect" id="node37" href="$class_tower_manager.html#afd9c7b3113dd4d02b0ee875d705cdf39" title="TowerManager::isTileFree" alt="" coords="765,605,935,632"/>
+<area shape="rect" id="node38" href="$class_player.html#abb709d55c86f703fbd6cc5b90d31fc39" title="Maintains non&#45;negative cash value. " alt="" coords="784,707,916,733"/>
+<area shape="rect" id="node39" href="$_console_color_8h.html#a9a5da37d743c609ea42e11b710812de2" title="blue" alt="" coords="827,656,873,683"/>
+<area shape="rect" id="node42" href="$class_tower_manager.html#a0158f9210b43ea166977e01768849c3a" title="TowerManager::outOfBound" alt="" coords="759,555,941,581"/>
+<area shape="rect" id="node43" href="$class_player.html#af3bdca44c57bee211d1d0ea53c11f9b3" title="Player::earnCash" alt="" coords="789,504,911,531"/>
+<area shape="rect" id="node45" href="$class_tower.html#a87db306927fd4022cae1369b88688ed7" title="Tower::getType" alt="" coords="795,808,905,835"/>
+<area shape="rect" id="node46" href="$class_tower.html#ae8236cf1fac3f2fd791312e3dc59d904" title="Tower::getUpgradeLevel" alt="" coords="771,859,929,885"/>
+<area shape="rect" id="node49" href="$class_game_object.html#a3731c03ddcbdb904bd41af78e09d262a" title="Gets the size of a sprite. " alt="" coords="515,1325,697,1352"/>
+<area shape="rect" id="node50" href="$class_critter_game_object.html#a546fa242023f61965a284e4a2e72ab7d" title="CritterGameObject::\lupdatePosition" alt="" coords="537,1259,675,1301"/>
 </map>

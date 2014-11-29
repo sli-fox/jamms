@@ -24,7 +24,7 @@ var searchData=
   ['node_5fpi',['node_pi',['../namespacerapidxml.html#abb456db38f7efb746c4330eed6072a7caeb73b472e77347b9aa89525f16493b87',1,'rapidxml']]],
   ['node_5ftype',['node_type',['../namespacerapidxml.html#abb456db38f7efb746c4330eed6072a7c',1,'rapidxml']]],
   ['none',['None',['../class_tower.html#a355ab1cbcfd8c4d037ccf8937f784445a6cc15d5458e0ec17ed737a46a8580f29',1,'Tower::None()'],['../class_critter_effect.html#a82b9b0530aff3cbf89c8cc6c60222419a3dd3ee00267a16a6a640108342078374',1,'CritterEffect::NONE()']]],
-  ['normal',['Normal',['../class_tower.html#ae82ae8201f8921eb64878d2c9ecb5bb2acf86f1d4ed7c8db9c2177baf929b152c',1,'Tower::Normal()'],['../class_tower_game_object.html#a6a687237ad352e41acb35f8b4cf25fa3a1452f172c386f95f93e0da09e0381aef',1,'TowerGameObject::Normal()']]],
+  ['normal',['Normal',['../class_tower_game_object.html#a6a687237ad352e41acb35f8b4cf25fa3a1452f172c386f95f93e0da09e0381aef',1,'TowerGameObject']]],
   ['nothing',['NOTHING',['../class_menu.html#a2d708ce8df47ab5feaea1ba559a938d3aedbb0d5fcacdbd60784bd600d7f17763',1,'Menu']]],
   ['nullstr',['nullstr',['../classrapidxml_1_1xml__base.html#ad96ff6b1e41dab3ff60b9bc4df769a75',1,'rapidxml::xml_base']]],
   ['numofcritters',['numOfCritters',['../class_critter_wave.html#a6c8edb08492ed068c5e4c5323695c29d',1,'CritterWave']]]

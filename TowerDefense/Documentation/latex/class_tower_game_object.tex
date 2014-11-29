@@ -17,7 +17,7 @@ Inheritance diagram for Tower\+Game\+Object\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=235pt]{class_tower_game_object__inherit__graph}
+\includegraphics[width=350pt]{class_tower_game_object__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -49,14 +49,22 @@ sf\+::\+Circle\+Shape \hyperlink{class_tower_game_object_a0e49616a6bb7cea91b4528
 \item 
 \hyperlink{class_tower_game_object_a6a687237ad352e41acb35f8b4cf25fa3}{Rate\+Of\+Fire} \hyperlink{class_tower_game_object_a176b325a7415c42dd368a958d52f912c}{get\+Rate\+Of\+Fire} () const 
 \item 
+\hyperlink{class_critter}{Critter} $\ast$ \hyperlink{class_tower_game_object_abd2539f169fb1011d57bdf61cd1fca0d}{get\+Target} () const 
+\item 
 void \hyperlink{class_tower_game_object_a9e83986372f5cba1f6788d61c27c52f7}{set\+Range\+Shape} (float range)
 \item 
 void \hyperlink{class_tower_game_object_a44938da9215d2552043ddc7b35067be0}{set\+Rate\+Of\+Fire} (\hyperlink{class_tower_game_object_a6a687237ad352e41acb35f8b4cf25fa3}{Rate\+Of\+Fire} \hyperlink{class_tower_game_object_a791d99099306673e85ed6b93fd6f7b1b}{\+\_\+rate\+\_\+of\+\_\+fire})
 \item 
+void \hyperlink{class_tower_game_object_ad4c6aaebbc3602bee857a625d1fbc004}{set\+Target} (\hyperlink{class_critter}{Critter} $\ast$crit)
+\item 
 virtual bool \hyperlink{class_tower_game_object_a824c0212a0c2958d9facfa97947c7332}{circle\+To\+Circle\+Intersection} (\hyperlink{class_game_object}{Game\+Object} $\ast$game\+\_\+object)
 \begin{DoxyCompactList}\small\item\em Overrides method to apply to tower range sf\+::\+Circle\+Shape object. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tower_game_object_a16d07954c10a2a54c202fe2e2fdc7de3}{can\+Attack} (\hyperlink{class_critter}{Critter} $\ast$critter)
+\begin{DoxyCompactList}\small\item\em Determines whether tower can attack a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay. \end{DoxyCompactList}\item 
 bool \hyperlink{class_tower_game_object_a92b1f8a95c7792bd9924d4f1286e3ddb}{can\+Apply\+Special\+After\+Effects} (\hyperlink{class_critter}{Critter} $\ast$critter)
-\begin{DoxyCompactList}\small\item\em Determines whether tower can apply a special effect on a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Determines whether tower can apply a special effect on a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay. \end{DoxyCompactList}\item 
+\hyperlink{class_critter}{Critter} $\ast$ \hyperlink{class_tower_game_object_a266f033caefadecb2f76e434ae75a92f}{execute\+Strategy} (\hyperlink{class_critter}{Critter} $\ast$critter)
+\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -67,6 +75,10 @@ sf\+::\+Clock \hyperlink{class_tower_game_object_a5c5f8162877828c20bf937c9033820
 sf\+::\+Time \hyperlink{class_tower_game_object_ade7e1ea2089b38f90fa3920a80a3619a}{time}
 \item 
 \hyperlink{class_tower_game_object_a6a687237ad352e41acb35f8b4cf25fa3}{Rate\+Of\+Fire} \hyperlink{class_tower_game_object_a791d99099306673e85ed6b93fd6f7b1b}{\+\_\+rate\+\_\+of\+\_\+fire}
+\item 
+\hyperlink{class_critter}{Critter} $\ast$ \hyperlink{class_tower_game_object_a6709e0f4ef86d852d98280a37dbc77bd}{\+\_\+target}
+\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{class_tower_strategy}{Tower\+Strategy} $>$ \hyperlink{class_tower_game_object_aa9eaa9739981280ef9ecebc0d5158205}{\+\_\+strategy}
 \end{DoxyCompactItemize}
 
 
@@ -124,12 +136,49 @@ bool
 \end{DoxyReturn}
 
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_game_object_a92b1f8a95c7792bd9924d4f1286e3ddb_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_game_object_a16d07954c10a2a54c202fe2e2fdc7de3}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!can\+Attack@{can\+Attack}}
+\index{can\+Attack@{can\+Attack}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{can\+Attack}]{\setlength{\rightskip}{0pt plus 5cm}bool Tower\+Game\+Object\+::can\+Attack (
+\begin{DoxyParamCaption}
+\item[{{\bf Critter} $\ast$}]{critter}
+\end{DoxyParamCaption}
+)}}\label{class_tower_game_object_a16d07954c10a2a54c202fe2e2fdc7de3}
+
+
+Determines whether tower can attack a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_tower_game_object_a92b1f8a95c7792bd9924d4f1286e3ddb_cgraph}
+\includegraphics[width=350pt]{class_tower_game_object_a16d07954c10a2a54c202fe2e2fdc7de3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_game_object_a16d07954c10a2a54c202fe2e2fdc7de3_icgraph}
 \end{center}
 \end{figure}
 
@@ -154,8 +203,7 @@ Reimplemented from \hyperlink{class_game_object_a3a9fd4ee6157fcf61fd8f7d7318598c
 
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -176,6 +224,37 @@ Here is the caller graph for this function\+:
 \end{figure}
 
 
+\hypertarget{class_tower_game_object_a266f033caefadecb2f76e434ae75a92f}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!execute\+Strategy@{execute\+Strategy}}
+\index{execute\+Strategy@{execute\+Strategy}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{execute\+Strategy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Critter} $\ast$ Tower\+Game\+Object\+::execute\+Strategy (
+\begin{DoxyParamCaption}
+\item[{{\bf Critter} $\ast$}]{critter}
+\end{DoxyParamCaption}
+)}}\label{class_tower_game_object_a266f033caefadecb2f76e434ae75a92f}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_game_object_a266f033caefadecb2f76e434ae75a92f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_game_object_a266f033caefadecb2f76e434ae75a92f_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_tower_game_object_a0e49616a6bb7cea91b45288a886e7e8e}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!get\+Range\+Shape@{get\+Range\+Shape}}
 \index{get\+Range\+Shape@{get\+Range\+Shape}!Tower\+Game\+Object@{Tower\+Game\+Object}}
 \subsubsection[{get\+Range\+Shape}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Circle\+Shape Tower\+Game\+Object\+::get\+Range\+Shape (
@@ -183,6 +262,18 @@ Here is the caller graph for this function\+:
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_tower_game_object_a0e49616a6bb7cea91b45288a886e7e8e}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_game_object_a0e49616a6bb7cea91b45288a886e7e8e_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_tower_game_object_a176b325a7415c42dd368a958d52f912c}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!get\+Rate\+Of\+Fire@{get\+Rate\+Of\+Fire}}
 \index{get\+Rate\+Of\+Fire@{get\+Rate\+Of\+Fire}!Tower\+Game\+Object@{Tower\+Game\+Object}}
 \subsubsection[{get\+Rate\+Of\+Fire}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower\+Game\+Object\+::\+Rate\+Of\+Fire} Tower\+Game\+Object\+::get\+Rate\+Of\+Fire (
@@ -202,6 +293,25 @@ Here is the caller graph for this function\+:
 \end{figure}
 
 
+\hypertarget{class_tower_game_object_abd2539f169fb1011d57bdf61cd1fca0d}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!get\+Target@{get\+Target}}
+\index{get\+Target@{get\+Target}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{get\+Target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Critter} $\ast$ Tower\+Game\+Object\+::get\+Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tower_game_object_abd2539f169fb1011d57bdf61cd1fca0d}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_game_object_abd2539f169fb1011d57bdf61cd1fca0d_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_tower_game_object_a9e83986372f5cba1f6788d61c27c52f7}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!set\+Range\+Shape@{set\+Range\+Shape}}
 \index{set\+Range\+Shape@{set\+Range\+Shape}!Tower\+Game\+Object@{Tower\+Game\+Object}}
 \subsubsection[{set\+Range\+Shape}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+Game\+Object\+::set\+Range\+Shape (
@@ -211,12 +321,23 @@ Here is the caller graph for this function\+:
 )}}\label{class_tower_game_object_a9e83986372f5cba1f6788d61c27c52f7}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_tower_game_object_a9e83986372f5cba1f6788d61c27c52f7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_game_object_a9e83986372f5cba1f6788d61c27c52f7_icgraph}
 \end{center}
 \end{figure}
 
@@ -230,6 +351,25 @@ Here is the call graph for this function\+:
 )}}\label{class_tower_game_object_a44938da9215d2552043ddc7b35067be0}
 
 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_game_object_a44938da9215d2552043ddc7b35067be0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_game_object_ad4c6aaebbc3602bee857a625d1fbc004}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!set\+Target@{set\+Target}}
+\index{set\+Target@{set\+Target}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{set\+Target}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+Game\+Object\+::set\+Target (
+\begin{DoxyParamCaption}
+\item[{{\bf Critter} $\ast$}]{crit}
+\end{DoxyParamCaption}
+)}}\label{class_tower_game_object_ad4c6aaebbc3602bee857a625d1fbc004}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_tower_game_object_a3c154fe0b6a056540332b0c40d60304f}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!\+\_\+range\+\_\+shape@{\+\_\+range\+\_\+shape}}
 \index{\+\_\+range\+\_\+shape@{\+\_\+range\+\_\+shape}!Tower\+Game\+Object@{Tower\+Game\+Object}}
@@ -237,6 +377,12 @@ Here is the call graph for this function\+:
 \hypertarget{class_tower_game_object_a791d99099306673e85ed6b93fd6f7b1b}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!\+\_\+rate\+\_\+of\+\_\+fire@{\+\_\+rate\+\_\+of\+\_\+fire}}
 \index{\+\_\+rate\+\_\+of\+\_\+fire@{\+\_\+rate\+\_\+of\+\_\+fire}!Tower\+Game\+Object@{Tower\+Game\+Object}}
 \subsubsection[{\+\_\+rate\+\_\+of\+\_\+fire}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rate\+Of\+Fire} Tower\+Game\+Object\+::\+\_\+rate\+\_\+of\+\_\+fire\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_game_object_a791d99099306673e85ed6b93fd6f7b1b}
+\hypertarget{class_tower_game_object_aa9eaa9739981280ef9ecebc0d5158205}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!\+\_\+strategy@{\+\_\+strategy}}
+\index{\+\_\+strategy@{\+\_\+strategy}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{\+\_\+strategy}]{\setlength{\rightskip}{0pt plus 5cm}std\+::unique\+\_\+ptr$<${\bf Tower\+Strategy}$>$ Tower\+Game\+Object\+::\+\_\+strategy\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_game_object_aa9eaa9739981280ef9ecebc0d5158205}
+\hypertarget{class_tower_game_object_a6709e0f4ef86d852d98280a37dbc77bd}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!\+\_\+target@{\+\_\+target}}
+\index{\+\_\+target@{\+\_\+target}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{\+\_\+target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Critter}$\ast$ Tower\+Game\+Object\+::\+\_\+target\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_game_object_a6709e0f4ef86d852d98280a37dbc77bd}
 \hypertarget{class_tower_game_object_a5c5f8162877828c20bf937c90338205c}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!clock@{clock}}
 \index{clock@{clock}!Tower\+Game\+Object@{Tower\+Game\+Object}}
 \subsubsection[{clock}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Clock Tower\+Game\+Object\+::clock\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_game_object_a5c5f8162877828c20bf937c90338205c}

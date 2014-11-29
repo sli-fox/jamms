@@ -1,19 +1,19 @@
 <map id="BurnEffect::BurnEffect" name="BurnEffect::BurnEffect">
-<area shape="rect" id="node2" href="$class_game_object.html#acc593e5b75a58c4a59ad59da654ce807" title="Loads a texture using the TextureManager class and creates a sprite. " alt="" coords="225,31,351,57"/>
-<area shape="rect" id="node5" href="$class_game_object.html#a180d6e9e7afa44b30ca678a95c6f4dad" title="Sets the initial draw position of a GameObject instance. " alt="" coords="204,81,372,108"/>
-<area shape="rect" id="node6" href="$class_game_object.html#ad568496dd9cee5b9edd9357d30a00dff" title="Converts and retrieves an pair&lt;float, float&gt; object from a sf::vector2f. " alt="" coords="659,233,827,260"/>
-<area shape="rect" id="node7" href="$class_tower.html#abe79d42828ca9c8ba4b60263e566697f" title="Tower::getID" alt="" coords="241,183,335,209"/>
-<area shape="rect" id="node8" href="$class_tower.html#ad830cdd9f1870479b5763b7ee9c33c8d" title="Tower::getName" alt="" coords="230,233,346,260"/>
-<area shape="rect" id="node9" href="$class_tower.html#a87db306927fd4022cae1369b88688ed7" title="Tower::getType" alt="" coords="233,284,343,311"/>
-<area shape="rect" id="node10" href="$class_tower.html#ae8236cf1fac3f2fd791312e3dc59d904" title="Tower::getUpgradeLevel" alt="" coords="209,335,367,361"/>
-<area shape="rect" id="node11" href="$class_tower.html#af2bb341e8011c2526ad5c58e11d79b28" title="Tower::getBuyCost" alt="" coords="222,385,354,412"/>
-<area shape="rect" id="node12" href="$class_tower.html#a198af6f04dad766d019b72fc667b90a7" title="Tower::getPower" alt="" coords="229,436,347,463"/>
-<area shape="rect" id="node13" href="$class_tower.html#a867f4e6b1621fba50fcba5cd1d27f227" title="Tower::setRange" alt="" coords="229,487,347,513"/>
-<area shape="rect" id="node15" href="$class_tower.html#ac11ad49620dd4af1a72459508ca0856a" title="Tower::getRange" alt="" coords="229,537,347,564"/>
-<area shape="rect" id="node16" href="$class_tower.html#acf53d0a9123761730bd3e737a5b5a854" title="Tower::getRateOfFire" alt="" coords="216,588,360,615"/>
-<area shape="rect" id="node17" href="$class_tower.html#a6211c9d5d2718c1d65efb0b636e74d77" title="Tower::getUpgradeCost" alt="" coords="209,639,367,665"/>
-<area shape="rect" id="node18" href="$class_tower.html#adae75d4203ca7c3a92da1fe367d64bac" title="Tower::getSellCost" alt="" coords="223,689,353,716"/>
-<area shape="rect" id="node3" href="$class_texture_manager.html#a0a6bc63e2f6fa7e1d0aee5b24cfa089a" title="Returns the only instance of a TextureManager object. " alt="" coords="420,5,611,32"/>
-<area shape="rect" id="node4" href="$class_texture_manager.html#aa631660b783d448a29b1096c64fe65e4" title="Returns the instance of a texture loaded by the file name. " alt="" coords="420,56,611,83"/>
-<area shape="rect" id="node14" href="$class_tower.html#ab91ce57d4ab80bd2aa03e6f4b68ef1a8" title="Tower::setRangeShape" alt="" coords="437,335,593,361"/>
+<area shape="rect" id="node2" href="$class_game_object.html#acc593e5b75a58c4a59ad59da654ce807" title="Loads a texture using the TextureManager class and creates a sprite. " alt="" coords="232,31,359,57"/>
+<area shape="rect" id="node5" href="$class_game_object.html#a180d6e9e7afa44b30ca678a95c6f4dad" title="Sets the initial draw position of a GameObject instance. " alt="" coords="211,81,379,108"/>
+<area shape="rect" id="node6" href="$class_game_object.html#ad568496dd9cee5b9edd9357d30a00dff" title="Converts and retrieves an pair&lt;float, float&gt; object from a sf::vector2f. " alt="" coords="675,236,843,263"/>
+<area shape="rect" id="node7" href="$class_tower.html#abe79d42828ca9c8ba4b60263e566697f" title="Tower::getID" alt="" coords="248,183,343,209"/>
+<area shape="rect" id="node8" href="$class_tower.html#ad830cdd9f1870479b5763b7ee9c33c8d" title="Tower::getName" alt="" coords="237,233,353,260"/>
+<area shape="rect" id="node9" href="$class_tower.html#a87db306927fd4022cae1369b88688ed7" title="Tower::getType" alt="" coords="240,284,351,311"/>
+<area shape="rect" id="node10" href="$class_tower.html#ae8236cf1fac3f2fd791312e3dc59d904" title="Tower::getUpgradeLevel" alt="" coords="216,335,375,361"/>
+<area shape="rect" id="node11" href="$class_tower.html#af2bb341e8011c2526ad5c58e11d79b28" title="Tower::getBuyCost" alt="" coords="229,385,361,412"/>
+<area shape="rect" id="node12" href="$class_tower.html#a198af6f04dad766d019b72fc667b90a7" title="Tower::getPower" alt="" coords="236,436,355,463"/>
+<area shape="rect" id="node13" href="$class_tower.html#a867f4e6b1621fba50fcba5cd1d27f227" title="Tower::setRange" alt="" coords="236,487,355,513"/>
+<area shape="rect" id="node15" href="$class_tower.html#ac11ad49620dd4af1a72459508ca0856a" title="Tower::getRange" alt="" coords="236,537,355,564"/>
+<area shape="rect" id="node16" href="$class_tower_game_object.html#a176b325a7415c42dd368a958d52f912c" title="TowerGameObject::getRate\lOfFire" alt="" coords="204,589,387,630"/>
+<area shape="rect" id="node17" href="$class_tower.html#a6211c9d5d2718c1d65efb0b636e74d77" title="Tower::getUpgradeCost" alt="" coords="217,655,374,681"/>
+<area shape="rect" id="node18" href="$class_tower.html#adae75d4203ca7c3a92da1fe367d64bac" title="Tower::getSellCost" alt="" coords="230,705,361,732"/>
+<area shape="rect" id="node3" href="$class_texture_manager.html#a0a6bc63e2f6fa7e1d0aee5b24cfa089a" title="Returns the only instance of a TextureManager object. " alt="" coords="435,5,626,32"/>
+<area shape="rect" id="node4" href="$class_texture_manager.html#aa631660b783d448a29b1096c64fe65e4" title="Returns the instance of a texture loaded by the file name. " alt="" coords="435,56,626,83"/>
+<area shape="rect" id="node14" href="$class_tower_game_object.html#a9e83986372f5cba1f6788d61c27c52f7" title="TowerGameObject::setRange\lShape" alt="" coords="435,331,627,373"/>
 </map>

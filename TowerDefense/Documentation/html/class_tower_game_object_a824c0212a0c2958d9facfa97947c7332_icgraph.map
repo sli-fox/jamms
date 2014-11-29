@@ -1,3 +1,5 @@
 <map id="TowerGameObject::circleToCircleIntersection" name="TowerGameObject::circleToCircleIntersection">
-<area shape="rect" id="node2" href="$class_tower_game_object.html#a92b1f8a95c7792bd9924d4f1286e3ddb" title="Determines whether tower can apply a special effect on a critter based on whether the critter falls w..." alt="" coords="236,5,427,47"/>
+<area shape="rect" id="node2" href="$class_tower_game_object.html#a92b1f8a95c7792bd9924d4f1286e3ddb" title="Determines whether tower can apply a special effect on a critter based on whether the critter falls w..." alt="" coords="239,5,429,47"/>
+<area shape="rect" id="node3" href="$class_tower_game_object.html#a16d07954c10a2a54c202fe2e2fdc7de3" title="Determines whether tower can attack a critter based on whether the critter falls within its range whi..." alt="" coords="236,71,432,98"/>
+<area shape="rect" id="node4" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="480,71,668,98"/>
 </map>

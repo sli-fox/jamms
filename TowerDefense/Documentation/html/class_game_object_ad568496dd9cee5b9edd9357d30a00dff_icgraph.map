@@ -1,32 +1,31 @@
 <map id="GameObject::getPosition" name="GameObject::getPosition">
-<area shape="rect" id="node2" href="$class_nearest_tower_strategy.html#a633e3d0ea599c73a25f01853c359e2a4" title="NearestTowerStrategy\l::computeTarget" alt="" coords="242,161,393,203"/>
-<area shape="rect" id="node3" href="$class_nearest_end_point_strategy.html#aca706490c44e71865ee4667fe21ed4f3" title="NearestEndPointStrategy\l::computeTarget" alt="" coords="233,227,402,268"/>
-<area shape="rect" id="node4" href="$class_adult_bulldog_upgrade.html#a9152b2b5fae3cc23cab3753832b06b94" title="AdultBulldogUpgrade\l::AdultBulldogUpgrade" alt="" coords="732,5,883,47"/>
-<area shape="rect" id="node5" href="$class_adult_dalmatian_upgrade.html#a8eba9816fcfc628e2c9310ef2f1ca989" title="AdultDalmatianUpgrade\l::AdultDalmatianUpgrade" alt="" coords="724,71,891,112"/>
-<area shape="rect" id="node6" href="$class_adult_shih_tzu_upgrade.html#a85e7b1079bb72002fb0873337435dc49" title="AdultShihTzuUpgrade\l::AdultShihTzuUpgrade" alt="" coords="730,136,885,177"/>
-<area shape="rect" id="node7" href="$class_burn_effect.html#a06df17552152fa567597e60ac9fc5a76" title="BurnEffect::BurnEffect" alt="" coords="732,202,883,229"/>
-<area shape="rect" id="node8" href="$class_critter_game_object.html#aade350efb5f7c65da8eb66d01c65be6f" title="CritterGameObject::\lcontrolCat" alt="" coords="489,851,628,892"/>
-<area shape="rect" id="node9" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="713,906,901,933"/>
-<area shape="rect" id="node10" href="$class_freeze_effect.html#aa9aa4fc5b5a963f961c5250383977cdd" title="FreezeEffect::FreezeEffect" alt="" coords="719,607,895,634"/>
-<area shape="rect" id="node11" href="$class_slow_effect.html#a451bf06f86366b8857e09bcb38834756" title="SlowEffect::SlowEffect" alt="" coords="731,658,883,685"/>
-<area shape="rect" id="node12" href="$class_teen_bulldog_upgrade.html#a6808367cbdaa1deed5780a916bf127cd" title="TeenBulldogUpgrade\l::TeenBulldogUpgrade" alt="" coords="733,709,882,751"/>
-<area shape="rect" id="node13" href="$class_teen_dalmatian_upgrade.html#a36935783afda88bfb639c41f8ad68959" title="TeenDalmatianUpgrade\l::TeenDalmatianUpgrade" alt="" coords="725,775,889,816"/>
-<area shape="rect" id="node14" href="$class_teen_shih_tzu_upgrade.html#ac9c5b3bfe2a3b2529b649871e3afa4c3" title="TeenShihTzuUpgrade\l::TeenShihTzuUpgrade" alt="" coords="731,840,884,881"/>
-<area shape="rect" id="node15" href="$class_tower.html#ab91ce57d4ab80bd2aa03e6f4b68ef1a8" title="Tower::setRangeShape" alt="" coords="239,495,395,522"/>
-<area shape="rect" id="node24" href="$class_tower.html#a3e68908edd23da1f69b78017e58c27eb" title="Determines collision path based on position of tower object and the distance in a straight line towar..." alt="" coords="237,951,397,978"/>
-<area shape="rect" id="node26" href="$class_tower.html#aa6950f72316cb57bbc8c32a9e332dff3" title="Tower::executeStrategy" alt="" coords="238,901,397,927"/>
-<area shape="rect" id="node28" href="$class_tower_game_object.html#a9e83986372f5cba1f6788d61c27c52f7" title="TowerGameObject::setRange\lShape" alt="" coords="221,1003,413,1044"/>
-<area shape="rect" id="node29" href="$class_game_state_play.html#ac82134049ed6dd0aaa929e200f7185d5" title="GameStatePlay::checkIfAt\lEndTile" alt="" coords="229,1068,405,1109"/>
-<area shape="rect" id="node16" href="$class_tower.html#a867f4e6b1621fba50fcba5cd1d27f227" title="Tower::setRange" alt="" coords="499,495,618,522"/>
-<area shape="rect" id="node17" href="$class_baby_bulldog.html#adb01b9d1b5b21f1caf39d3eb737646a4" title="BabyBulldog::BabyBulldog" alt="" coords="719,506,895,533"/>
-<area shape="rect" id="node18" href="$class_baby_dalmatian.html#a0b9460fd26d39fa361b1386486f96f19" title="BabyDalmatian::BabyDalmatian" alt="" coords="704,557,911,583"/>
-<area shape="rect" id="node19" href="$class_baby_shih_tzu.html#afcc1a988bb58e1e4f1eeab886c7c233d" title="BabyShihTzu::BabyShihTzu" alt="" coords="715,253,899,279"/>
-<area shape="rect" id="node20" href="$class_bulldog.html#a21e6065a0e9cfa5aa862c8b7a5e1b88c" title="Bulldog::Bulldog" alt="" coords="749,303,865,330"/>
-<area shape="rect" id="node21" href="$class_bulldog.html#adfecd22f881be0d7946534c2012275d7" title="Bulldog::upgradeTower" alt="" coords="731,354,884,381"/>
-<area shape="rect" id="node22" href="$class_shih_tzu.html#a623911469b4f9763666f43b2df48d91a" title="ShihTzu::ShihTzu" alt="" coords="745,405,869,431"/>
-<area shape="rect" id="node23" href="$class_shih_tzu.html#a9d8d599edbc19d2a16a65646d0cbc485" title="ShihTzu::upgradeTower" alt="" coords="729,455,886,482"/>
-<area shape="rect" id="node25" href="$class_tower.html#a7deaf3f9565d32468d3056fa5bcc43b0" title="Rotates the tower to face the critter it is attacking. " alt="" coords="468,967,649,994"/>
-<area shape="rect" id="node27" href="$class_tower.html#a3bc66411a614f108ceaefd255bdb4179" title="Determines whether tower can attack a critter based on whether the critter falls within its range whi..." alt="" coords="497,917,620,943"/>
-<area shape="rect" id="node30" href="$class_game_state_play.html#a2278751d53b50beb97c809db26f1b9b6" title="GameStatePlay::handleCritter\lRemovalFromWave" alt="" coords="461,1068,656,1109"/>
-<area shape="rect" id="node31" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="727,1075,888,1102"/>
+<area shape="rect" id="node2" href="$class_nearest_tower_strategy.html#a633e3d0ea599c73a25f01853c359e2a4" title="NearestTowerStrategy\l::computeTarget" alt="" coords="242,153,393,195"/>
+<area shape="rect" id="node3" href="$class_nearest_end_point_strategy.html#aca706490c44e71865ee4667fe21ed4f3" title="NearestEndPointStrategy\l::computeTarget" alt="" coords="233,219,402,260"/>
+<area shape="rect" id="node4" href="$class_adult_bulldog_upgrade.html#a9152b2b5fae3cc23cab3753832b06b94" title="AdultBulldogUpgrade\l::AdultBulldogUpgrade" alt="" coords="733,5,884,47"/>
+<area shape="rect" id="node5" href="$class_adult_dalmatian_upgrade.html#a8eba9816fcfc628e2c9310ef2f1ca989" title="AdultDalmatianUpgrade\l::AdultDalmatianUpgrade" alt="" coords="725,71,892,112"/>
+<area shape="rect" id="node6" href="$class_adult_shih_tzu_upgrade.html#a85e7b1079bb72002fb0873337435dc49" title="AdultShihTzuUpgrade\l::AdultShihTzuUpgrade" alt="" coords="731,136,886,177"/>
+<area shape="rect" id="node7" href="$class_burn_effect.html#a06df17552152fa567597e60ac9fc5a76" title="BurnEffect::BurnEffect" alt="" coords="733,202,884,229"/>
+<area shape="rect" id="node8" href="$class_critter_game_object.html#aade350efb5f7c65da8eb66d01c65be6f" title="CritterGameObject::\lcontrolCat" alt="" coords="490,859,629,900"/>
+<area shape="rect" id="node9" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="715,906,903,933"/>
+<area shape="rect" id="node10" href="$class_freeze_effect.html#aa9aa4fc5b5a963f961c5250383977cdd" title="FreezeEffect::FreezeEffect" alt="" coords="721,607,897,634"/>
+<area shape="rect" id="node11" href="$class_slow_effect.html#a451bf06f86366b8857e09bcb38834756" title="SlowEffect::SlowEffect" alt="" coords="733,658,885,685"/>
+<area shape="rect" id="node12" href="$class_teen_bulldog_upgrade.html#a6808367cbdaa1deed5780a916bf127cd" title="TeenBulldogUpgrade\l::TeenBulldogUpgrade" alt="" coords="734,709,883,751"/>
+<area shape="rect" id="node13" href="$class_teen_dalmatian_upgrade.html#a36935783afda88bfb639c41f8ad68959" title="TeenDalmatianUpgrade\l::TeenDalmatianUpgrade" alt="" coords="727,775,891,816"/>
+<area shape="rect" id="node14" href="$class_teen_shih_tzu_upgrade.html#ac9c5b3bfe2a3b2529b649871e3afa4c3" title="TeenShihTzuUpgrade\l::TeenShihTzuUpgrade" alt="" coords="732,840,885,881"/>
+<area shape="rect" id="node15" href="$class_tower.html#a3e68908edd23da1f69b78017e58c27eb" title="Determines collision path based on position of tower object and the distance in a straight line towar..." alt="" coords="237,975,397,1002"/>
+<area shape="rect" id="node17" href="$class_tower_game_object.html#a9e83986372f5cba1f6788d61c27c52f7" title="TowerGameObject::setRange\lShape" alt="" coords="221,488,413,529"/>
+<area shape="rect" id="node26" href="$class_tower_game_object.html#a266f033caefadecb2f76e434ae75a92f" title="TowerGameObject::execute\lStrategy" alt="" coords="226,909,409,951"/>
+<area shape="rect" id="node28" href="$class_game_state_play.html#ac82134049ed6dd0aaa929e200f7185d5" title="GameStatePlay::checkIfAt\lEndTile" alt="" coords="229,1027,405,1068"/>
+<area shape="rect" id="node16" href="$class_tower.html#a7deaf3f9565d32468d3056fa5bcc43b0" title="Rotates the tower to face the critter it is attacking. " alt="" coords="469,975,650,1002"/>
+<area shape="rect" id="node18" href="$class_tower.html#a867f4e6b1621fba50fcba5cd1d27f227" title="Tower::setRange" alt="" coords="500,487,619,514"/>
+<area shape="rect" id="node19" href="$class_baby_bulldog.html#adb01b9d1b5b21f1caf39d3eb737646a4" title="BabyBulldog::BabyBulldog" alt="" coords="721,506,897,533"/>
+<area shape="rect" id="node20" href="$class_baby_dalmatian.html#a0b9460fd26d39fa361b1386486f96f19" title="BabyDalmatian::BabyDalmatian" alt="" coords="705,557,912,583"/>
+<area shape="rect" id="node21" href="$class_baby_shih_tzu.html#afcc1a988bb58e1e4f1eeab886c7c233d" title="BabyShihTzu::BabyShihTzu" alt="" coords="717,253,901,279"/>
+<area shape="rect" id="node22" href="$class_bulldog.html#a21e6065a0e9cfa5aa862c8b7a5e1b88c" title="Bulldog::Bulldog" alt="" coords="751,303,867,330"/>
+<area shape="rect" id="node23" href="$class_bulldog.html#adfecd22f881be0d7946534c2012275d7" title="Bulldog::upgradeTower" alt="" coords="732,354,885,381"/>
+<area shape="rect" id="node24" href="$class_shih_tzu.html#a623911469b4f9763666f43b2df48d91a" title="ShihTzu::ShihTzu" alt="" coords="747,405,871,431"/>
+<area shape="rect" id="node25" href="$class_shih_tzu.html#a9d8d599edbc19d2a16a65646d0cbc485" title="ShihTzu::upgradeTower" alt="" coords="730,455,887,482"/>
+<area shape="rect" id="node27" href="$class_tower_game_object.html#a16d07954c10a2a54c202fe2e2fdc7de3" title="Determines whether tower can attack a critter based on whether the critter falls within its range whi..." alt="" coords="461,925,657,951"/>
+<area shape="rect" id="node29" href="$class_game_state_play.html#a2278751d53b50beb97c809db26f1b9b6" title="GameStatePlay::handleCritter\lRemovalFromWave" alt="" coords="462,1027,657,1068"/>
+<area shape="rect" id="node30" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="728,1034,889,1061"/>
 </map>

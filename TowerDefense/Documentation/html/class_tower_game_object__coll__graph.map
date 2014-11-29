@@ -1,3 +1,7 @@
 <map id="TowerGameObject" name="TowerGameObject">
-<area shape="rect" id="node2" href="$class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="46,145,171,399"/>
+<area shape="rect" id="node2" href="$class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="462,145,587,399"/>
+<area shape="rect" id="node5" href="$class_critter_game_object.html" title="Creates a CritterGameObject. CritterGameObject is a subclass of GameObject that separates GUI code sp..." alt="" coords="246,461,417,715"/>
+<area shape="rect" id="node4" href="$class_critter.html" title="Abstract base class of all Critters Critter defines the attributes, accessors, and update function fo..." alt="" coords="233,764,409,1164"/>
+<area shape="rect" id="node6" href="$class_waypoint.html" title="Represents an Waypoint in the game. " alt="" coords="5,219,111,325"/>
+<area shape="rect" id="node7" href="$class_animation_handler.html" title="Handles animations. " alt="" coords="255,167,415,377"/>
 </map>

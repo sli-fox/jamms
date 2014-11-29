@@ -22,9 +22,9 @@
 <area shape="rect" id="node15" href="$_texture_manager_8h.html" title="File containing the TextureManager class. " alt="" coords="541,1020,728,1047"/>
 <area shape="rect" id="node16" href="$_console_color_8h.html" title="utils/ConsoleColor.h" alt="" coords="752,1020,891,1047"/>
 <area shape="rect" id="node28" href="$_tower_decorator_8h.html" title="GameObjects/TowerDecorator.h" alt="" coords="2205,199,2411,225"/>
-<area shape="rect" id="node30" href="$_tower_game_object_8h.html" title="File containing the TowerGameObject class. " alt="" coords="907,348,1131,375"/>
-<area shape="rect" id="node31" href="$_critter_8h.html" title="Representation of critter object. " alt="" coords="513,497,665,524"/>
-<area shape="rect" id="node38" href="$_tower_strategy_8h.html" title="Utils/TowerStrategy.h" alt="" coords="736,423,883,449"/>
+<area shape="rect" id="node30" href="$_tower_game_object_8h.html" title="File containing the TowerGameObject class. " alt="" coords="908,348,1132,375"/>
+<area shape="rect" id="node31" href="$_critter_8h.html" title="Representation of critter object. " alt="" coords="515,497,667,524"/>
+<area shape="rect" id="node38" href="$_tower_strategy_8h.html" title="utils/TowerStrategy.h" alt="" coords="739,423,883,449"/>
 <area shape="rect" id="node32" href="$_critter_game_object_8h.html" title="File containing the CritterGameObject class. " alt="" coords="305,572,527,599"/>
 <area shape="rect" id="node33" href="$_animation_handler_8h.html" title="File containing the AnimationHandler class. " alt="" coords="203,796,365,823"/>
 <area shape="rect" id="node35" href="$_waypoint_8h.html" title="File containing the Waypoint class. " alt="" coords="358,647,474,673"/>
