@@ -139,7 +139,7 @@ Stun::Stun(){
 	this->damage = 0;
 	this->speedModifier = 0;
 	this->stacks = 1;
-	this->cycles = 15;
+	this->cycles = 60;
 	elapsedTicks = cycles;
 	type = STUN;
 }

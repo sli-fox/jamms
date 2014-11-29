@@ -26,7 +26,7 @@ FreezeEffect::FreezeEffect(Tower* tower) {
 void FreezeEffect::attack() {
 	Tower::attack();
 	cout << red << "FreezeEffect critter " << _target->getId() << endl;
-	this->_target->addEffect(new Freeze());
+	this->_target->addEffect(new Stun());
 }
 
 // @Override

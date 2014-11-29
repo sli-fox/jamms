@@ -925,7 +925,7 @@ void GameStatePlay::initializeButtonMap() {
 std::string GameStatePlay::getTower1ButtonSpecs() {
 	std::stringstream output;
 	output << "CURRENT TOWER SPECIFICATIONS:" << std::endl;
-	output << "Name: " << "Concrete  "<< std::endl;
+	output << "Name: " << "Shihtzu  "<< std::endl;
 	output << "Upgrade: 0"<< std::endl;
 	output << "Power: 1"<< std::endl;
 	output << "Range:  1.5" << std::endl;
@@ -933,7 +933,7 @@ std::string GameStatePlay::getTower1ButtonSpecs() {
 	output << "Buy Cost: 70 coins" << std::endl;
 	output << "Upgrade Cost: 20 coins" << std::endl;
 	output << "Sell Cost: 30 coins" << std::endl;
-	output << "Special Effect: None" << std::endl;
+	output << "Special Effect: Freezing" << std::endl;
 
 	return output.str();
 }
@@ -942,7 +942,7 @@ std::string GameStatePlay::getTower1ButtonSpecs() {
 std::string GameStatePlay::getTower2ButtonSpecs() {
 	std::stringstream output;
 	output << "CURRENT TOWER SPECIFICATIONS:" << std::endl;
-	output << "Name: " << "Concrete_2  "<< std::endl;
+	output << "Name: " << "Dalmation  "<< std::endl;
 	output << "Upgrade: 0"<< std::endl;
 	output << "Power: 2"<< std::endl;
 	output << "Range:  3" << std::endl;
@@ -950,7 +950,7 @@ std::string GameStatePlay::getTower2ButtonSpecs() {
 	output << "Buy Cost: 140 coins" << std::endl;
 	output << "Upgrade Cost: 20 coins" << std::endl;
 	output << "Sell Cost: 30 coins" << std::endl;
-	output << "Special Effect: None" << std::endl;
+	output << "Special Effect: Slowing" << std::endl;
 
 	return output.str();
 }
@@ -958,7 +958,7 @@ std::string GameStatePlay::getTower2ButtonSpecs() {
 std::string GameStatePlay::getTower3ButtonSpecs() {
 	std::stringstream output;
 	output << "CURRENT TOWER SPECIFICATIONS:" << std::endl;
-	output << "Name: " << "Concrete_3 "<< std::endl;
+	output << "Name: " << "Bulldog "<< std::endl;
 	output << "Upgrade: 0"<< std::endl;
 	output << "Power: 3"<< std::endl;
 	output << "Range:  4.5" << std::endl;
@@ -966,7 +966,7 @@ std::string GameStatePlay::getTower3ButtonSpecs() {
 	output << "Buy Cost: 210 coins" << std::endl;
 	output << "Upgrade Cost: 60 coins" << std::endl;
 	output << "Sell Cost: 30 coins" << std::endl;
-	output << "Special Effect: None" << std::endl;
+	output << "Special Effect: Burning" << std::endl;
 
 	return output.str();
 }

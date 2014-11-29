@@ -33,6 +33,6 @@ void SlowEffect::attack() {
 std::string SlowEffect::getTowerSpecs() {
 	std::stringstream output;
 	output << Tower::getTowerSpecs();
-	output << "Special Effect: Freezing" << std::endl;
+	output << "Special Effect: Slowing" << std::endl;
 	return output.str();
 }
