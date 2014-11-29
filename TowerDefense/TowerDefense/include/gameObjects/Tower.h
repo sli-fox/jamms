@@ -2,10 +2,10 @@
 #include <string>
 #include <GameObjects/TowerGameObject.h>
 #include <GameObjects/Critter.h>
-#include "Utils/TowerStrategy.h"
+#include <utils/TowerStrategy.h>
 #include <memory>
 
-class Tower: public GameObject {
+class Tower: public TowerGameObject {
 public:
 	Tower();
 	~Tower() { std::cout << red << _name << " has been deleted." << white << std::endl; };
@@ -13,17 +13,14 @@ public:
 	static int serial;
 
 	void upgradeTower() {}
-	bool canAttack(Critter* critter);
 	bool canApplySpecialAfterEffects(Critter* critter);
 	virtual void attack();
-	Critter* executeStrategy(Critter* critter);
 	std::pair<float, float> findCollisionPath(Critter* critter);
 	void rotateTowardsTarget();
 	float angleInDegrees(float x, float y);
 
 	enum TowerType { ShihTzu, Dalmatian, Bulldog };
 	enum UpgradeLevel { Baby, Teen, Adult };
-	enum RateOfFire { Slow = 1, Normal, Fast };
 	enum SpecialEffect { None, Slowing, Burning, Freezing };
 
 	//ACCESSORS
@@ -33,14 +30,11 @@ public:
 	Tower::UpgradeLevel getUpgradeLevel() const;
 	int getPower() const;
 	float getRange() const;
-	sf::CircleShape getRangeShape() const;
-	Tower::RateOfFire getRateOfFire() const;
 	bool getIsFiring() const;
 	Tower::SpecialEffect getSpecialEffect() const;
 	int getBuyCost() const;
 	int getSellCost() const;
 	int getUpgradeCost() const;
-	Critter* getTarget() const;
 	TowerStrategy* getStrategy() const;
 
 	//MUTATORS
@@ -50,18 +44,14 @@ public:
 	void setUpgradeLevel(Tower::UpgradeLevel _upgrade_level);
 	void setPower(int _power);
 	void setRange(float _range);
-	void setRangeShape(float range);
-	void setRateOfFire(Tower::RateOfFire _rate_of_fire);
 	void setIsFiring(bool b);
 	void setSpecialEffect(Tower::SpecialEffect _special_effect);
 	void setBuyCost(int _buy_cost);
 	void setSellCost(int _sell_cost);
 	void setUpgradeCost(int _upgrade_cost);
-	void setTarget(Critter* crit);
 	void setStrategy(TowerStrategy* newStrategy);
 
 	virtual string getTowerSpecs();
-	virtual bool circleToCircleIntersection(GameObject* game_object);
 	void applySpecialEffect(Critter* critter);
 
 protected:
@@ -71,15 +61,8 @@ protected:
 	UpgradeLevel _upgrade_level;
 	int _power;
 	float _range;
-	sf::CircleShape _range_shape;
-	RateOfFire _rate_of_fire;
 	SpecialEffect _special_effect;
 	int _buy_cost;
 	int _upgrade_cost;
 	int _sell_cost;
-	sf::Clock clock;
-	sf::Time time;
-	Critter* _target;
-	std::unique_ptr<TowerStrategy> _strategy;
-
 };
