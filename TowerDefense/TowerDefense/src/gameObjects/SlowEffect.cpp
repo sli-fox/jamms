@@ -23,10 +23,7 @@ SlowEffect::SlowEffect(Tower* tower) : _decoratedTower(tower) {
 void SlowEffect::attack() {
 	Tower::attack();
 	cout << red << this->getName() << " is Applying Slowing Effect to Critter " << _target->getId() << endl;
-
-	cout << red << "\tInitial Critter Speed: " << _target->getSpeed() << endl;
-	_target->reduceSpeed(2.0f);
-	cout << red << "\tFinal Critter Speed: " << _target->getSpeed() << endl;
+	this->_target->addEffect(new Slowe());
 }
 
 // @Override
