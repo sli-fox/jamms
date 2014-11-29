@@ -22,6 +22,7 @@ BurnEffect::BurnEffect(Tower* tower) : _decoratedTower(tower) {
 void BurnEffect::attack() {
 	Tower::attack();
 	cout << red << "BurnEffect on critter " << _target->getId() << endl;
+	this->_target->addEffect(new Burn());
 }
 
 // @Override

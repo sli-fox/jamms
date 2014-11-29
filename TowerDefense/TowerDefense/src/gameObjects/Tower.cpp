@@ -138,7 +138,6 @@ void Tower::attack() {
 	cout << "Tower attacking..." << endl;
 	cout << yellow << this->_name << " attacking Critter " << this->_target->getId() << "... ";
 	this->_target->inflictDamage(this->getPower());
-	this->_target->addEffect(new Freeze());
 	cout << yellow << this->_target->getHitPoints() << "HP" << endl;
 }
 
