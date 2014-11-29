@@ -62,6 +62,14 @@ Critter* TowerGameObject::executeStrategy(Critter* critter){
 	return this->_strategy->computeTarget(critter, _target, getPosition());
 }
 
+TowerStrategy* TowerGameObject::getStrategy() const{
+	return this->_strategy.get();
+}
+
+void TowerGameObject::setStrategy(TowerStrategy* newStrategy){
+	this->_strategy.reset(newStrategy);
+}
+
 /**
 * @brief Determines whether tower can attack a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay
 * @return bool
