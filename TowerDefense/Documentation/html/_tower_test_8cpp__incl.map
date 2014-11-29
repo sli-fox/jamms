@@ -3,7 +3,7 @@
 <area shape="rect" id="node4" href="$_tower_manager_8h.html" title="managers/TowerManager.h" alt="" coords="1093,177,1272,203"/>
 <area shape="rect" id="node8" href="$_game_8h.html" title="File containing the Game class. " alt="" coords="665,871,733,897"/>
 <area shape="rect" id="node28" href="$_freeze_effect_8h.html" title="GameObjects/FreezeEffect.h" alt="" coords="1973,266,2163,293"/>
-<area shape="rect" id="node30" href="$_tower_8h.html" title="GameObjects/Tower.h" alt="" coords="789,423,939,449"/>
+<area shape="rect" id="node30" href="$_tower_8h.html" title="GameObjects/Tower.h" alt="" coords="790,423,941,449"/>
 <area shape="rect" id="node40" href="$_slow_effect_8h.html" title="GameObjects/SlowEffect.h" alt="" coords="1505,266,1684,293"/>
 <area shape="rect" id="node41" href="$_burn_effect_8h.html" title="GameObjects/BurnEffect.h" alt="" coords="1303,266,1481,293"/>
 <area shape="rect" id="node42" href="$_baby_shih_tzu_8h.html" title="GameObjects/BabyShihTzu.h" alt="" coords="321,348,516,375"/>
@@ -22,9 +22,9 @@
 <area shape="rect" id="node23" href="$rapidxml__print_8hpp.html" title="This file contains rapidxml printer implementation. " alt="" coords="1045,1020,1201,1047"/>
 <area shape="rect" id="node17" href="$_game_object_8h.html" title="File containing the GameObject class. " alt="" coords="369,1095,556,1121"/>
 <area shape="rect" id="node29" href="$_tower_decorator_8h.html" title="GameObjects/TowerDecorator.h" alt="" coords="1877,348,2083,375"/>
-<area shape="rect" id="node31" href="$_tower_game_object_8h.html" title="File containing the TowerGameObject class. " alt="" coords="747,497,971,524"/>
-<area shape="rect" id="node32" href="$_critter_8h.html" title="Representation of critter object. " alt="" coords="472,647,624,673"/>
-<area shape="rect" id="node38" href="$_tower_strategy_8h.html" title="Utils/TowerStrategy.h" alt="" coords="627,572,773,599"/>
+<area shape="rect" id="node31" href="$_tower_game_object_8h.html" title="File containing the TowerGameObject class. " alt="" coords="748,497,972,524"/>
+<area shape="rect" id="node32" href="$_critter_8h.html" title="Representation of critter object. " alt="" coords="473,647,625,673"/>
+<area shape="rect" id="node38" href="$_tower_strategy_8h.html" title="utils/TowerStrategy.h" alt="" coords="629,572,773,599"/>
 <area shape="rect" id="node33" href="$_critter_game_object_8h.html" title="File containing the CritterGameObject class. " alt="" coords="230,721,453,748"/>
 <area shape="rect" id="node34" href="$_animation_handler_8h.html" title="File containing the AnimationHandler class. " alt="" coords="93,945,256,972"/>
 <area shape="rect" id="node35" href="$_waypoint_8h.html" title="File containing the Waypoint class. " alt="" coords="387,796,503,823"/>

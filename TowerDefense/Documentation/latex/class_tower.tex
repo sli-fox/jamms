@@ -38,11 +38,6 @@ enum \hyperlink{class_tower_a23889cd9ee2fbae0420c97105fd6ebc8}{Upgrade\+Level} \
 \hyperlink{class_tower_a23889cd9ee2fbae0420c97105fd6ebc8a6635d4aacf20837fc1065ef9477f1c1a}{Adult}
  \}
 \item 
-enum \hyperlink{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2}{Rate\+Of\+Fire} \{ \hyperlink{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2a389259b288c5e1e55229bc31de93c04e}{Slow} = 1, 
-\hyperlink{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2acf86f1d4ed7c8db9c2177baf929b152c}{Normal}, 
-\hyperlink{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2aa62913c3081700b5c283d075f9f6240a}{Fast}
- \}
-\item 
 enum \hyperlink{class_tower_a355ab1cbcfd8c4d037ccf8937f784445}{Special\+Effect} \{ \hyperlink{class_tower_a355ab1cbcfd8c4d037ccf8937f784445a6cc15d5458e0ec17ed737a46a8580f29}{None}, 
 \hyperlink{class_tower_a355ab1cbcfd8c4d037ccf8937f784445aa395d83c58910dc4e8f2927ff2102a1f}{Slowing}, 
 \hyperlink{class_tower_a355ab1cbcfd8c4d037ccf8937f784445a278a02e93c587ce4032eed7176b9c5b6}{Burning}, 
@@ -58,13 +53,9 @@ enum \hyperlink{class_tower_a355ab1cbcfd8c4d037ccf8937f784445}{Special\+Effect} 
 \item 
 void \hyperlink{class_tower_a3ae303a04b27b7cb89ed478d492f1a64}{upgrade\+Tower} ()
 \item 
-bool \hyperlink{class_tower_a3bc66411a614f108ceaefd255bdb4179}{can\+Attack} (\hyperlink{class_critter}{Critter} $\ast$critter)
-\begin{DoxyCompactList}\small\item\em Determines whether tower can attack a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay. \end{DoxyCompactList}\item 
 bool \hyperlink{class_tower_aa4d0884a1fc45d6b47e8ed4a3cd23b34}{can\+Apply\+Special\+After\+Effects} (\hyperlink{class_critter}{Critter} $\ast$critter)
-\begin{DoxyCompactList}\small\item\em Determines whether tower can apply a special effect on a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay. \end{DoxyCompactList}\item 
-virtual void \hyperlink{class_tower_a9f067c2b9e5e6987f341704b8b098606}{attack} ()
 \item 
-\hyperlink{class_critter}{Critter} $\ast$ \hyperlink{class_tower_aa6950f72316cb57bbc8c32a9e332dff3}{execute\+Strategy} (\hyperlink{class_critter}{Critter} $\ast$critter)
+virtual void \hyperlink{class_tower_a9f067c2b9e5e6987f341704b8b098606}{attack} ()
 \item 
 std\+::pair$<$ float, float $>$ \hyperlink{class_tower_a3e68908edd23da1f69b78017e58c27eb}{find\+Collision\+Path} (\hyperlink{class_critter}{Critter} $\ast$critter)
 \begin{DoxyCompactList}\small\item\em Determines collision path based on position of tower object and the distance in a straight line towards critter. \end{DoxyCompactList}\item 
@@ -84,10 +75,6 @@ int \hyperlink{class_tower_a198af6f04dad766d019b72fc667b90a7}{get\+Power} () con
 \item 
 float \hyperlink{class_tower_ac11ad49620dd4af1a72459508ca0856a}{get\+Range} () const 
 \item 
-sf\+::\+Circle\+Shape \hyperlink{class_tower_a829a95b9dc022cc07ecd4d5c0afa7260}{get\+Range\+Shape} () const 
-\item 
-\hyperlink{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2}{Tower\+::\+Rate\+Of\+Fire} \hyperlink{class_tower_acf53d0a9123761730bd3e737a5b5a854}{get\+Rate\+Of\+Fire} () const 
-\item 
 bool \hyperlink{class_tower_a488db197289e0850f573310a13cfecef}{get\+Is\+Firing} () const 
 \item 
 \hyperlink{class_tower_a355ab1cbcfd8c4d037ccf8937f784445}{Tower\+::\+Special\+Effect} \hyperlink{class_tower_a9ef4f0f087f1bc09fe0e4e30e44ca6a5}{get\+Special\+Effect} () const 
@@ -98,9 +85,7 @@ int \hyperlink{class_tower_adae75d4203ca7c3a92da1fe367d64bac}{get\+Sell\+Cost} (
 \item 
 int \hyperlink{class_tower_a6211c9d5d2718c1d65efb0b636e74d77}{get\+Upgrade\+Cost} () const 
 \item 
-\hyperlink{class_critter}{Critter} $\ast$ \hyperlink{class_tower_ad5d042b8ab67fdcae27ecbd82fb27b0c}{get\+Target} () const 
-\item 
-\hyperlink{class_tower_strategy}{Tower\+Strategy} $\ast$ \hyperlink{class_tower_afe734b0803dc45f90d59c6dc2d3aa5fe}{get\+Strategy} () const 
+\hyperlink{class_tower_strategy}{Tower\+Strategy} $\ast$ \hyperlink{class_tower_a5a75e27e64a3df45d6c88b141ccf202d}{get\+Strategy} () const 
 \item 
 void \hyperlink{class_tower_a2ad5e52d8c8e3c5783b1c3499f19ceca}{set\+I\+D} (int \hyperlink{class_tower_a02ec2f8d1c4dea2f7fc002d8626c8b28}{\+\_\+id})
 \item 
@@ -114,10 +99,6 @@ void \hyperlink{class_tower_a89f3c815849be59057c2bcdeb1bb097f}{set\+Power} (int 
 \item 
 void \hyperlink{class_tower_a867f4e6b1621fba50fcba5cd1d27f227}{set\+Range} (float \hyperlink{class_tower_a77cd5002dac75320f83fb540a3878936}{\+\_\+range})
 \item 
-void \hyperlink{class_tower_ab91ce57d4ab80bd2aa03e6f4b68ef1a8}{set\+Range\+Shape} (float range)
-\item 
-void \hyperlink{class_tower_a954b831038f6fe86e40d0dcd398bd239}{set\+Rate\+Of\+Fire} (\hyperlink{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2}{Tower\+::\+Rate\+Of\+Fire} \hyperlink{class_tower_a746898a9884a60cf09c5b4d0f1fdac2a}{\+\_\+rate\+\_\+of\+\_\+fire})
-\item 
 void \hyperlink{class_tower_af1ca7002ff17d468f7b9b3b5e4f99348}{set\+Is\+Firing} (bool b)
 \item 
 void \hyperlink{class_tower_ac2b7becdd52924a8787cf7de2a62fff5}{set\+Special\+Effect} (\hyperlink{class_tower_a355ab1cbcfd8c4d037ccf8937f784445}{Tower\+::\+Special\+Effect} \hyperlink{class_tower_ad6a84071c2e7f48386443c469961116c}{\+\_\+special\+\_\+effect})
@@ -128,14 +109,10 @@ void \hyperlink{class_tower_ade5f41558a0240b5596a017a23334336}{set\+Sell\+Cost} 
 \item 
 void \hyperlink{class_tower_af0366aa989249fc2d8254b967dd2f9aa}{set\+Upgrade\+Cost} (int \hyperlink{class_tower_ade771f89ab1aecb165efb74592e71261}{\+\_\+upgrade\+\_\+cost})
 \item 
-void \hyperlink{class_tower_ac8251f835bd2a94690d1c6e4f1e18d93}{set\+Target} (\hyperlink{class_critter}{Critter} $\ast$crit)
-\item 
 void \hyperlink{class_tower_aa5280191c23e7cd98e9a1d9cfaba3416}{set\+Strategy} (\hyperlink{class_tower_strategy}{Tower\+Strategy} $\ast$new\+Strategy)
 \item 
 virtual string \hyperlink{class_tower_a2427fab36824f8ec98273cb5e563e0c9}{get\+Tower\+Specs} ()
 \item 
-virtual bool \hyperlink{class_tower_a518ff249dec05cdd026a830d845abfd2}{circle\+To\+Circle\+Intersection} (\hyperlink{class_game_object}{Game\+Object} $\ast$game\+\_\+object)
-\begin{DoxyCompactList}\small\item\em Overrides method to apply to tower range sf\+::\+Circle\+Shape object. \end{DoxyCompactList}\item 
 void \hyperlink{class_tower_a7df1e896cdd5cdf7cc2169d6d4f9a6cf}{apply\+Special\+Effect} (\hyperlink{class_critter}{Critter} $\ast$critter)
 \end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
@@ -158,10 +135,6 @@ int \hyperlink{class_tower_af9e223c165f5632944868df3dfc70bee}{\+\_\+power}
 \item 
 float \hyperlink{class_tower_a77cd5002dac75320f83fb540a3878936}{\+\_\+range}
 \item 
-sf\+::\+Circle\+Shape \hyperlink{class_tower_ae1c75d802145f4b64d6a42820557e708}{\+\_\+range\+\_\+shape}
-\item 
-\hyperlink{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2}{Rate\+Of\+Fire} \hyperlink{class_tower_a746898a9884a60cf09c5b4d0f1fdac2a}{\+\_\+rate\+\_\+of\+\_\+fire}
-\item 
 \hyperlink{class_tower_a355ab1cbcfd8c4d037ccf8937f784445}{Special\+Effect} \hyperlink{class_tower_ad6a84071c2e7f48386443c469961116c}{\+\_\+special\+\_\+effect}
 \item 
 int \hyperlink{class_tower_a102680a58c45f98a79609ce8961a7bed}{\+\_\+buy\+\_\+cost}
@@ -169,32 +142,10 @@ int \hyperlink{class_tower_a102680a58c45f98a79609ce8961a7bed}{\+\_\+buy\+\_\+cos
 int \hyperlink{class_tower_ade771f89ab1aecb165efb74592e71261}{\+\_\+upgrade\+\_\+cost}
 \item 
 int \hyperlink{class_tower_a7f50414500ec524ccc6ffb7069328d1e}{\+\_\+sell\+\_\+cost}
-\item 
-sf\+::\+Clock \hyperlink{class_tower_a3b6e91ecba4f6dadb4e5ed3514f970e9}{clock}
-\item 
-sf\+::\+Time \hyperlink{class_tower_a2536099ae99cd22eef6d84259dab5ed7}{time}
-\item 
-\hyperlink{class_critter}{Critter} $\ast$ \hyperlink{class_tower_a8ce9a2da58e6b3563ffddf1ff70826e4}{\+\_\+target}
-\item 
-std\+::unique\+\_\+ptr$<$ \hyperlink{class_tower_strategy}{Tower\+Strategy} $>$ \hyperlink{class_tower_a1fe38f81de5f23293d088c7aa69f3e1e}{\+\_\+strategy}
 \end{DoxyCompactItemize}
 
 
 \subsection{Member Enumeration Documentation}
-\hypertarget{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2}{\index{Tower@{Tower}!Rate\+Of\+Fire@{Rate\+Of\+Fire}}
-\index{Rate\+Of\+Fire@{Rate\+Of\+Fire}!Tower@{Tower}}
-\subsubsection[{Rate\+Of\+Fire}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Tower\+::\+Rate\+Of\+Fire}}}\label{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2}
-\begin{Desc}
-\item[Enumerator]\par
-\begin{description}
-\index{Slow@{Slow}!Tower@{Tower}}\index{Tower@{Tower}!Slow@{Slow}}\item[{\em 
-\hypertarget{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2a389259b288c5e1e55229bc31de93c04e}{Slow}\label{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2a389259b288c5e1e55229bc31de93c04e}
-}]\index{Normal@{Normal}!Tower@{Tower}}\index{Tower@{Tower}!Normal@{Normal}}\item[{\em 
-\hypertarget{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2acf86f1d4ed7c8db9c2177baf929b152c}{Normal}\label{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2acf86f1d4ed7c8db9c2177baf929b152c}
-}]\index{Fast@{Fast}!Tower@{Tower}}\index{Tower@{Tower}!Fast@{Fast}}\item[{\em 
-\hypertarget{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2aa62913c3081700b5c283d075f9f6240a}{Fast}\label{class_tower_ae82ae8201f8921eb64878d2c9ecb5bb2aa62913c3081700b5c283d075f9f6240a}
-}]\end{description}
-\end{Desc}
 \hypertarget{class_tower_a355ab1cbcfd8c4d037ccf8937f784445}{\index{Tower@{Tower}!Special\+Effect@{Special\+Effect}}
 \index{Special\+Effect@{Special\+Effect}!Tower@{Tower}}
 \subsubsection[{Special\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Tower\+::\+Special\+Effect}}}\label{class_tower_a355ab1cbcfd8c4d037ccf8937f784445}
@@ -287,8 +238,7 @@ float
 \end{DoxyReturn}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -306,8 +256,7 @@ Here is the caller graph for this function\+:
 )}}\label{class_tower_a7df1e896cdd5cdf7cc2169d6d4f9a6cf}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -351,8 +300,7 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -368,134 +316,6 @@ Here is the caller graph for this function\+:
 \item[{{\bf Critter} $\ast$}]{critter}
 \end{DoxyParamCaption}
 )}}\label{class_tower_aa4d0884a1fc45d6b47e8ed4a3cd23b34}
-
-
-Determines whether tower can apply a special effect on a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay. 
-
-\begin{DoxyReturn}{Returns}
-bool 
-\end{DoxyReturn}
-
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_tower_aa4d0884a1fc45d6b47e8ed4a3cd23b34_cgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{class_tower_a3bc66411a614f108ceaefd255bdb4179}{\index{Tower@{Tower}!can\+Attack@{can\+Attack}}
-\index{can\+Attack@{can\+Attack}!Tower@{Tower}}
-\subsubsection[{can\+Attack}]{\setlength{\rightskip}{0pt plus 5cm}bool Tower\+::can\+Attack (
-\begin{DoxyParamCaption}
-\item[{{\bf Critter} $\ast$}]{critter}
-\end{DoxyParamCaption}
-)}}\label{class_tower_a3bc66411a614f108ceaefd255bdb4179}
-
-
-Determines whether tower can attack a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay. 
-
-\begin{DoxyReturn}{Returns}
-bool 
-\end{DoxyReturn}
-
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_tower_a3bc66411a614f108ceaefd255bdb4179_cgraph}
-\end{center}
-\end{figure}
-
-
-
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=349pt]{class_tower_a3bc66411a614f108ceaefd255bdb4179_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{class_tower_a518ff249dec05cdd026a830d845abfd2}{\index{Tower@{Tower}!circle\+To\+Circle\+Intersection@{circle\+To\+Circle\+Intersection}}
-\index{circle\+To\+Circle\+Intersection@{circle\+To\+Circle\+Intersection}!Tower@{Tower}}
-\subsubsection[{circle\+To\+Circle\+Intersection}]{\setlength{\rightskip}{0pt plus 5cm}bool Tower\+::circle\+To\+Circle\+Intersection (
-\begin{DoxyParamCaption}
-\item[{{\bf Game\+Object} $\ast$}]{game\+\_\+object}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tower_a518ff249dec05cdd026a830d845abfd2}
-
-
-Overrides method to apply to tower range sf\+::\+Circle\+Shape object. 
-
-\begin{DoxyReturn}{Returns}
-bool 
-\end{DoxyReturn}
-
-
-Reimplemented from \hyperlink{class_game_object_a3a9fd4ee6157fcf61fd8f7d7318598c5}{Game\+Object}.
-
-
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_tower_a518ff249dec05cdd026a830d845abfd2_cgraph}
-\end{center}
-\end{figure}
-
-
-
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_tower_a518ff249dec05cdd026a830d845abfd2_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{class_tower_aa6950f72316cb57bbc8c32a9e332dff3}{\index{Tower@{Tower}!execute\+Strategy@{execute\+Strategy}}
-\index{execute\+Strategy@{execute\+Strategy}!Tower@{Tower}}
-\subsubsection[{execute\+Strategy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Critter} $\ast$ Tower\+::execute\+Strategy (
-\begin{DoxyParamCaption}
-\item[{{\bf Critter} $\ast$}]{critter}
-\end{DoxyParamCaption}
-)}}\label{class_tower_aa6950f72316cb57bbc8c32a9e332dff3}
-
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_tower_aa6950f72316cb57bbc8c32a9e332dff3_cgraph}
-\end{center}
-\end{figure}
-
-
-
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_tower_aa6950f72316cb57bbc8c32a9e332dff3_icgraph}
-\end{center}
-\end{figure}
-
-
 \hypertarget{class_tower_a3e68908edd23da1f69b78017e58c27eb}{\index{Tower@{Tower}!find\+Collision\+Path@{find\+Collision\+Path}}
 \index{find\+Collision\+Path@{find\+Collision\+Path}!Tower@{Tower}}
 \subsubsection[{find\+Collision\+Path}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ float, float $>$ Tower\+::find\+Collision\+Path (
@@ -512,8 +332,7 @@ std\+::pair$<$float, float$>$
 \end{DoxyReturn}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -524,8 +343,7 @@ Here is the call graph for this function\+:
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -543,8 +361,7 @@ Here is the caller graph for this function\+:
 ) const}}\label{class_tower_af2bb341e8011c2526ad5c58e11d79b28}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -562,8 +379,7 @@ Here is the caller graph for this function\+:
 ) const}}\label{class_tower_abe79d42828ca9c8ba4b60263e566697f}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -588,8 +404,7 @@ Here is the caller graph for this function\+:
 ) const}}\label{class_tower_ad830cdd9f1870479b5763b7ee9c33c8d}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -607,8 +422,7 @@ Here is the caller graph for this function\+:
 ) const}}\label{class_tower_a198af6f04dad766d019b72fc667b90a7}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -626,49 +440,11 @@ Here is the caller graph for this function\+:
 ) const}}\label{class_tower_ac11ad49620dd4af1a72459508ca0856a}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=337pt]{class_tower_ac11ad49620dd4af1a72459508ca0856a_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{class_tower_a829a95b9dc022cc07ecd4d5c0afa7260}{\index{Tower@{Tower}!get\+Range\+Shape@{get\+Range\+Shape}}
-\index{get\+Range\+Shape@{get\+Range\+Shape}!Tower@{Tower}}
-\subsubsection[{get\+Range\+Shape}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Circle\+Shape Tower\+::get\+Range\+Shape (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const}}\label{class_tower_a829a95b9dc022cc07ecd4d5c0afa7260}
-
-
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_tower_a829a95b9dc022cc07ecd4d5c0afa7260_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{class_tower_acf53d0a9123761730bd3e737a5b5a854}{\index{Tower@{Tower}!get\+Rate\+Of\+Fire@{get\+Rate\+Of\+Fire}}
-\index{get\+Rate\+Of\+Fire@{get\+Rate\+Of\+Fire}!Tower@{Tower}}
-\subsubsection[{get\+Rate\+Of\+Fire}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower\+::\+Rate\+Of\+Fire} Tower\+::get\+Rate\+Of\+Fire (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const}}\label{class_tower_acf53d0a9123761730bd3e737a5b5a854}
-
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_tower_acf53d0a9123761730bd3e737a5b5a854_icgraph}
+\includegraphics[width=337pt]{class_tower_ac11ad49620dd4af1a72459508ca0856a_icgraph}
 \end{center}
 \end{figure}
 
@@ -682,8 +458,7 @@ Here is the caller graph for this function\+:
 ) const}}\label{class_tower_adae75d4203ca7c3a92da1fe367d64bac}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -699,32 +474,13 @@ Here is the caller graph for this function\+:
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_tower_a9ef4f0f087f1bc09fe0e4e30e44ca6a5}
-\hypertarget{class_tower_afe734b0803dc45f90d59c6dc2d3aa5fe}{\index{Tower@{Tower}!get\+Strategy@{get\+Strategy}}
+\hypertarget{class_tower_a5a75e27e64a3df45d6c88b141ccf202d}{\index{Tower@{Tower}!get\+Strategy@{get\+Strategy}}
 \index{get\+Strategy@{get\+Strategy}!Tower@{Tower}}
-\subsubsection[{get\+Strategy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower\+Strategy} $\ast$ Tower\+::get\+Strategy (
+\subsubsection[{get\+Strategy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower\+Strategy}$\ast$ Tower\+::get\+Strategy (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const}}\label{class_tower_afe734b0803dc45f90d59c6dc2d3aa5fe}
-\hypertarget{class_tower_ad5d042b8ab67fdcae27ecbd82fb27b0c}{\index{Tower@{Tower}!get\+Target@{get\+Target}}
-\index{get\+Target@{get\+Target}!Tower@{Tower}}
-\subsubsection[{get\+Target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Critter} $\ast$ Tower\+::get\+Target (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const}}\label{class_tower_ad5d042b8ab67fdcae27ecbd82fb27b0c}
-
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=346pt]{class_tower_ad5d042b8ab67fdcae27ecbd82fb27b0c_icgraph}
-\end{center}
-\end{figure}
-
-
+) const}}\label{class_tower_a5a75e27e64a3df45d6c88b141ccf202d}
 \hypertarget{class_tower_a2427fab36824f8ec98273cb5e563e0c9}{\index{Tower@{Tower}!get\+Tower\+Specs@{get\+Tower\+Specs}}
 \index{get\+Tower\+Specs@{get\+Tower\+Specs}!Tower@{Tower}}
 \subsubsection[{get\+Tower\+Specs}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Tower\+::get\+Tower\+Specs (
@@ -738,8 +494,7 @@ Reimplemented in \hyperlink{class_burn_effect_a696db158260eaf01e3b497b6d400230e}
 
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -750,8 +505,7 @@ Here is the call graph for this function\+:
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -769,8 +523,7 @@ Here is the caller graph for this function\+:
 ) const}}\label{class_tower_a87db306927fd4022cae1369b88688ed7}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -788,8 +541,7 @@ Here is the caller graph for this function\+:
 ) const}}\label{class_tower_a6211c9d5d2718c1d65efb0b636e74d77}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -807,8 +559,7 @@ Here is the caller graph for this function\+:
 ) const}}\label{class_tower_ae8236cf1fac3f2fd791312e3dc59d904}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -833,8 +584,7 @@ void
 \end{DoxyReturn}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -880,8 +630,7 @@ Here is the call graph for this function\+:
 )}}\label{class_tower_a89f3c815849be59057c2bcdeb1bb097f}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -911,62 +660,11 @@ Here is the call graph for this function\+:
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=550pt]{class_tower_a867f4e6b1621fba50fcba5cd1d27f227_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{class_tower_ab91ce57d4ab80bd2aa03e6f4b68ef1a8}{\index{Tower@{Tower}!set\+Range\+Shape@{set\+Range\+Shape}}
-\index{set\+Range\+Shape@{set\+Range\+Shape}!Tower@{Tower}}
-\subsubsection[{set\+Range\+Shape}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::set\+Range\+Shape (
-\begin{DoxyParamCaption}
-\item[{float}]{range}
-\end{DoxyParamCaption}
-)}}\label{class_tower_ab91ce57d4ab80bd2aa03e6f4b68ef1a8}
-
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_tower_ab91ce57d4ab80bd2aa03e6f4b68ef1a8_cgraph}
-\end{center}
-\end{figure}
-
-
-
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_tower_ab91ce57d4ab80bd2aa03e6f4b68ef1a8_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{class_tower_a954b831038f6fe86e40d0dcd398bd239}{\index{Tower@{Tower}!set\+Rate\+Of\+Fire@{set\+Rate\+Of\+Fire}}
-\index{set\+Rate\+Of\+Fire@{set\+Rate\+Of\+Fire}!Tower@{Tower}}
-\subsubsection[{set\+Rate\+Of\+Fire}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::set\+Rate\+Of\+Fire (
-\begin{DoxyParamCaption}
-\item[{{\bf Tower\+::\+Rate\+Of\+Fire}}]{\+\_\+rate\+\_\+of\+\_\+fire}
-\end{DoxyParamCaption}
-)}}\label{class_tower_a954b831038f6fe86e40d0dcd398bd239}
-
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=342pt]{class_tower_a954b831038f6fe86e40d0dcd398bd239_icgraph}
 \end{center}
 \end{figure}
 
@@ -980,8 +678,7 @@ Here is the caller graph for this function\+:
 )}}\label{class_tower_ade5f41558a0240b5596a017a23334336}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -999,8 +696,7 @@ Here is the caller graph for this function\+:
 )}}\label{class_tower_ac2b7becdd52924a8787cf7de2a62fff5}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1018,8 +714,7 @@ Here is the caller graph for this function\+:
 )}}\label{class_tower_aa5280191c23e7cd98e9a1d9cfaba3416}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1028,13 +723,6 @@ Here is the caller graph for this function\+:
 \end{figure}
 
 
-\hypertarget{class_tower_ac8251f835bd2a94690d1c6e4f1e18d93}{\index{Tower@{Tower}!set\+Target@{set\+Target}}
-\index{set\+Target@{set\+Target}!Tower@{Tower}}
-\subsubsection[{set\+Target}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::set\+Target (
-\begin{DoxyParamCaption}
-\item[{{\bf Critter} $\ast$}]{crit}
-\end{DoxyParamCaption}
-)}}\label{class_tower_ac8251f835bd2a94690d1c6e4f1e18d93}
 \hypertarget{class_tower_a47ee9428118e95e689950ad605f90cb3}{\index{Tower@{Tower}!set\+Type@{set\+Type}}
 \index{set\+Type@{set\+Type}!Tower@{Tower}}
 \subsubsection[{set\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+::set\+Type (
@@ -1051,8 +739,7 @@ Here is the caller graph for this function\+:
 )}}\label{class_tower_af0366aa989249fc2d8254b967dd2f9aa}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1070,8 +757,7 @@ Here is the caller graph for this function\+:
 )}}\label{class_tower_ac31643b1a10e1821d90583dc9ff03943}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1105,24 +791,12 @@ Here is the caller graph for this function\+:
 \hypertarget{class_tower_a77cd5002dac75320f83fb540a3878936}{\index{Tower@{Tower}!\+\_\+range@{\+\_\+range}}
 \index{\+\_\+range@{\+\_\+range}!Tower@{Tower}}
 \subsubsection[{\+\_\+range}]{\setlength{\rightskip}{0pt plus 5cm}float Tower\+::\+\_\+range\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_a77cd5002dac75320f83fb540a3878936}
-\hypertarget{class_tower_ae1c75d802145f4b64d6a42820557e708}{\index{Tower@{Tower}!\+\_\+range\+\_\+shape@{\+\_\+range\+\_\+shape}}
-\index{\+\_\+range\+\_\+shape@{\+\_\+range\+\_\+shape}!Tower@{Tower}}
-\subsubsection[{\+\_\+range\+\_\+shape}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Circle\+Shape Tower\+::\+\_\+range\+\_\+shape\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_ae1c75d802145f4b64d6a42820557e708}
-\hypertarget{class_tower_a746898a9884a60cf09c5b4d0f1fdac2a}{\index{Tower@{Tower}!\+\_\+rate\+\_\+of\+\_\+fire@{\+\_\+rate\+\_\+of\+\_\+fire}}
-\index{\+\_\+rate\+\_\+of\+\_\+fire@{\+\_\+rate\+\_\+of\+\_\+fire}!Tower@{Tower}}
-\subsubsection[{\+\_\+rate\+\_\+of\+\_\+fire}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rate\+Of\+Fire} Tower\+::\+\_\+rate\+\_\+of\+\_\+fire\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_a746898a9884a60cf09c5b4d0f1fdac2a}
 \hypertarget{class_tower_a7f50414500ec524ccc6ffb7069328d1e}{\index{Tower@{Tower}!\+\_\+sell\+\_\+cost@{\+\_\+sell\+\_\+cost}}
 \index{\+\_\+sell\+\_\+cost@{\+\_\+sell\+\_\+cost}!Tower@{Tower}}
 \subsubsection[{\+\_\+sell\+\_\+cost}]{\setlength{\rightskip}{0pt plus 5cm}int Tower\+::\+\_\+sell\+\_\+cost\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_a7f50414500ec524ccc6ffb7069328d1e}
 \hypertarget{class_tower_ad6a84071c2e7f48386443c469961116c}{\index{Tower@{Tower}!\+\_\+special\+\_\+effect@{\+\_\+special\+\_\+effect}}
 \index{\+\_\+special\+\_\+effect@{\+\_\+special\+\_\+effect}!Tower@{Tower}}
 \subsubsection[{\+\_\+special\+\_\+effect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Special\+Effect} Tower\+::\+\_\+special\+\_\+effect\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_ad6a84071c2e7f48386443c469961116c}
-\hypertarget{class_tower_a1fe38f81de5f23293d088c7aa69f3e1e}{\index{Tower@{Tower}!\+\_\+strategy@{\+\_\+strategy}}
-\index{\+\_\+strategy@{\+\_\+strategy}!Tower@{Tower}}
-\subsubsection[{\+\_\+strategy}]{\setlength{\rightskip}{0pt plus 5cm}std\+::unique\+\_\+ptr$<${\bf Tower\+Strategy}$>$ Tower\+::\+\_\+strategy\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_a1fe38f81de5f23293d088c7aa69f3e1e}
-\hypertarget{class_tower_a8ce9a2da58e6b3563ffddf1ff70826e4}{\index{Tower@{Tower}!\+\_\+target@{\+\_\+target}}
-\index{\+\_\+target@{\+\_\+target}!Tower@{Tower}}
-\subsubsection[{\+\_\+target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Critter}$\ast$ Tower\+::\+\_\+target\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_a8ce9a2da58e6b3563ffddf1ff70826e4}
 \hypertarget{class_tower_adebb7de2d38284d29e3ca6b37c4a2be9}{\index{Tower@{Tower}!\+\_\+type@{\+\_\+type}}
 \index{\+\_\+type@{\+\_\+type}!Tower@{Tower}}
 \subsubsection[{\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower\+Type} Tower\+::\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_adebb7de2d38284d29e3ca6b37c4a2be9}
@@ -1132,15 +806,9 @@ Here is the caller graph for this function\+:
 \hypertarget{class_tower_a0172731487da6a0480901e031e2aecbe}{\index{Tower@{Tower}!\+\_\+upgrade\+\_\+level@{\+\_\+upgrade\+\_\+level}}
 \index{\+\_\+upgrade\+\_\+level@{\+\_\+upgrade\+\_\+level}!Tower@{Tower}}
 \subsubsection[{\+\_\+upgrade\+\_\+level}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Upgrade\+Level} Tower\+::\+\_\+upgrade\+\_\+level\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_a0172731487da6a0480901e031e2aecbe}
-\hypertarget{class_tower_a3b6e91ecba4f6dadb4e5ed3514f970e9}{\index{Tower@{Tower}!clock@{clock}}
-\index{clock@{clock}!Tower@{Tower}}
-\subsubsection[{clock}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Clock Tower\+::clock\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_a3b6e91ecba4f6dadb4e5ed3514f970e9}
 \hypertarget{class_tower_a53001ebc47ba7e60fdb7eb1dcdd82a64}{\index{Tower@{Tower}!serial@{serial}}
 \index{serial@{serial}!Tower@{Tower}}
 \subsubsection[{serial}]{\setlength{\rightskip}{0pt plus 5cm}int Tower\+::serial = 0\hspace{0.3cm}{\ttfamily [static]}}}\label{class_tower_a53001ebc47ba7e60fdb7eb1dcdd82a64}
-\hypertarget{class_tower_a2536099ae99cd22eef6d84259dab5ed7}{\index{Tower@{Tower}!time@{time}}
-\index{time@{time}!Tower@{Tower}}
-\subsubsection[{time}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Time Tower\+::time\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_a2536099ae99cd22eef6d84259dab5ed7}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -4,7 +4,7 @@
 <area shape="rect" id="node6" href="$_tower_8h.html" title="GameObjects/Tower.h" alt="" coords="223,273,374,300"/>
 <area shape="rect" id="node7" href="$_tower_game_object_8h.html" title="File containing the TowerGameObject class. " alt="" coords="187,348,411,375"/>
 <area shape="rect" id="node16" href="$_critter_8h.html" title="Representation of critter object. " alt="" coords="608,497,760,524"/>
-<area shape="rect" id="node41" href="$_tower_strategy_8h.html" title="Utils/TowerStrategy.h" alt="" coords="611,423,757,449"/>
+<area shape="rect" id="node41" href="$_tower_strategy_8h.html" title="utils/TowerStrategy.h" alt="" coords="612,423,756,449"/>
 <area shape="rect" id="node8" href="$_game_object_8h.html" title="File containing the GameObject class. " alt="" coords="416,945,603,972"/>
 <area shape="rect" id="node11" href="$_texture_manager_8h.html" title="File containing the TextureManager class. " alt="" coords="376,1020,563,1047"/>
 <area shape="rect" id="node14" href="$_console_color_8h.html" title="utils/ConsoleColor.h" alt="" coords="587,1020,725,1047"/>

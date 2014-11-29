@@ -1,11 +1,11 @@
 var searchData=
 [
   ['canapplyspecialaftereffects',['canApplySpecialAfterEffects',['../class_tower.html#aa4d0884a1fc45d6b47e8ed4a3cd23b34',1,'Tower::canApplySpecialAfterEffects()'],['../class_tower_game_object.html#a92b1f8a95c7792bd9924d4f1286e3ddb',1,'TowerGameObject::canApplySpecialAfterEffects()']]],
-  ['canattack',['canAttack',['../class_tower.html#a3bc66411a614f108ceaefd255bdb4179',1,'Tower']]],
+  ['canattack',['canAttack',['../class_tower_game_object.html#a16d07954c10a2a54c202fe2e2fdc7de3',1,'TowerGameObject']]],
   ['changeanimation',['changeAnimation',['../class_animation_handler.html#a93f1509e5eccdf13a07ba1eb2256c6d0',1,'AnimationHandler']]],
   ['changestate',['changeState',['../class_game.html#a8683b16995200bd11d95efc372e6722a',1,'Game']]],
   ['checkifatendtile',['checkIfAtEndTile',['../class_game_state_play.html#ac82134049ed6dd0aaa929e200f7185d5',1,'GameStatePlay']]],
-  ['circletocircleintersection',['circleToCircleIntersection',['../class_game_object.html#a3a9fd4ee6157fcf61fd8f7d7318598c5',1,'GameObject::circleToCircleIntersection()'],['../class_tower.html#a518ff249dec05cdd026a830d845abfd2',1,'Tower::circleToCircleIntersection()'],['../class_tower_game_object.html#a824c0212a0c2958d9facfa97947c7332',1,'TowerGameObject::circleToCircleIntersection()']]],
+  ['circletocircleintersection',['circleToCircleIntersection',['../class_game_object.html#a3a9fd4ee6157fcf61fd8f7d7318598c5',1,'GameObject::circleToCircleIntersection()'],['../class_tower_game_object.html#a824c0212a0c2958d9facfa97947c7332',1,'TowerGameObject::circleToCircleIntersection()']]],
   ['clear',['clear',['../classrapidxml_1_1memory__pool.html#aad377c835fdaed1cb2cc9df194cf84e4',1,'rapidxml::memory_pool::clear()'],['../singletonrapidxml_1_1xml__document.html#a826929ff54242532198701f19ff5f83f',1,'rapidxml::xml_document::clear()']]],
   ['clearalltowers',['clearAllTowers',['../class_tower_manager.html#ae71fc7c55f92477846760b122d0f60b9',1,'TowerManager']]],
   ['clone_5fnode',['clone_node',['../classrapidxml_1_1memory__pool.html#a0a10679fc17597d339a0dc107f8a94ac',1,'rapidxml::memory_pool']]],

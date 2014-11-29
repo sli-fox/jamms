@@ -1,10 +1,10 @@
 <map id="BabyBulldog::BabyBulldog" name="BabyBulldog::BabyBulldog">
-<area shape="rect" id="node2" href="$class_game_object.html#acc593e5b75a58c4a59ad59da654ce807" title="Loads a texture using the TextureManager class and creates a sprite. " alt="" coords="250,31,377,57"/>
-<area shape="rect" id="node5" href="$class_game_object.html#a180d6e9e7afa44b30ca678a95c6f4dad" title="Sets the initial draw position of a GameObject instance. " alt="" coords="229,81,397,108"/>
-<area shape="rect" id="node6" href="$class_tower.html#a867f4e6b1621fba50fcba5cd1d27f227" title="Tower::setRange" alt="" coords="254,132,373,159"/>
-<area shape="rect" id="node9" href="$_console_color_8h.html#a04ab64d75dbc16fee70b58f76b28ba36" title="green" alt="" coords="286,183,341,209"/>
-<area shape="rect" id="node3" href="$class_texture_manager.html#a0a6bc63e2f6fa7e1d0aee5b24cfa089a" title="Returns the only instance of a TextureManager object. " alt="" coords="445,5,636,32"/>
-<area shape="rect" id="node4" href="$class_texture_manager.html#aa631660b783d448a29b1096c64fe65e4" title="Returns the instance of a texture loaded by the file name. " alt="" coords="445,56,636,83"/>
-<area shape="rect" id="node7" href="$class_tower.html#ab91ce57d4ab80bd2aa03e6f4b68ef1a8" title="Tower::setRangeShape" alt="" coords="463,132,619,159"/>
-<area shape="rect" id="node8" href="$class_game_object.html#ad568496dd9cee5b9edd9357d30a00dff" title="Converts and retrieves an pair&lt;float, float&gt; object from a sf::vector2f. " alt="" coords="684,132,852,159"/>
+<area shape="rect" id="node2" href="$class_game_object.html#acc593e5b75a58c4a59ad59da654ce807" title="Loads a texture using the TextureManager class and creates a sprite. " alt="" coords="250,35,377,61"/>
+<area shape="rect" id="node5" href="$class_game_object.html#a180d6e9e7afa44b30ca678a95c6f4dad" title="Sets the initial draw position of a GameObject instance. " alt="" coords="229,85,397,112"/>
+<area shape="rect" id="node6" href="$class_tower.html#a867f4e6b1621fba50fcba5cd1d27f227" title="Tower::setRange" alt="" coords="254,136,373,163"/>
+<area shape="rect" id="node9" href="$_console_color_8h.html#a04ab64d75dbc16fee70b58f76b28ba36" title="green" alt="" coords="286,187,341,213"/>
+<area shape="rect" id="node3" href="$class_texture_manager.html#a0a6bc63e2f6fa7e1d0aee5b24cfa089a" title="Returns the only instance of a TextureManager object. " alt="" coords="446,5,637,32"/>
+<area shape="rect" id="node4" href="$class_texture_manager.html#aa631660b783d448a29b1096c64fe65e4" title="Returns the instance of a texture loaded by the file name. " alt="" coords="446,56,637,83"/>
+<area shape="rect" id="node7" href="$class_tower_game_object.html#a9e83986372f5cba1f6788d61c27c52f7" title="TowerGameObject::setRange\lShape" alt="" coords="445,129,637,170"/>
+<area shape="rect" id="node8" href="$class_game_object.html#ad568496dd9cee5b9edd9357d30a00dff" title="Converts and retrieves an pair&lt;float, float&gt; object from a sf::vector2f. " alt="" coords="685,136,853,163"/>
 </map>

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['cached',['cached',['../struct___w_d_i_r.html#a9b7432df163d1e291ba5925347fd4af3',1,'_WDIR']]],
-  ['clock',['clock',['../class_tower.html#a3b6e91ecba4f6dadb4e5ed3514f970e9',1,'Tower::clock()'],['../class_tower_game_object.html#a5c5f8162877828c20bf937c90338205c',1,'TowerGameObject::clock()']]],
+  ['clock',['clock',['../class_tower_game_object.html#a5c5f8162877828c20bf937c90338205c',1,'TowerGameObject']]],
   ['critterhealth',['critterHealth',['../class_game_state_play.html#a7ca10b4aceefc0e2732ec427c5b5b5c5',1,'GameStatePlay']]],
   ['critters_5fremaining',['critters_remaining',['../class_critter_wave.html#a6fea77f30895b8ac455dd25a4287abd6',1,'CritterWave']]],
   ['critterspecs',['critterSpecs',['../class_game_state_play.html#a1667ea17be43ded7176a9dc28d99a8e1',1,'GameStatePlay']]],
