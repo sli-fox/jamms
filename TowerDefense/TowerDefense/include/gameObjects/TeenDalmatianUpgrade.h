@@ -14,7 +14,4 @@ public:
 
 	std::string getTowerSpecs();
 
-private:
-	Tower* _decoratedTower;
-
 };

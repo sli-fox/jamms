@@ -7,7 +7,9 @@ TeenBulldogUpgrade::TeenBulldogUpgrade() {
 	std::cout << green << "TeenBulldogUpgrade Default Constructor called." << std::endl;
 }
 
-TeenBulldogUpgrade::TeenBulldogUpgrade(Tower* tower) : _decoratedTower(tower) {
+TeenBulldogUpgrade::TeenBulldogUpgrade(Tower* tower) {
+	this->_decoratedTower = tower;
+
 	this->load("resources/images/towers/Bulldog_1.png");
 	this->setPosition(tower->getPosition().first, tower->getPosition().second);		// has to be set BEFORE setRange();
 

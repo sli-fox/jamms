@@ -3,7 +3,9 @@
 
 BurnEffect::BurnEffect() {}
 
-BurnEffect::BurnEffect(Tower* tower) : _decoratedTower(tower) {
+BurnEffect::BurnEffect(Tower* tower) {
+	this->_decoratedTower = tower;
+
 	this->load("resources/images/towers/firetower.png");
 	this->setPosition(tower->getPosition().first, tower->getPosition().second);		// has to be set BEFORE setRange();
 

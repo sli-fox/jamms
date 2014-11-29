@@ -16,7 +16,6 @@ public:
 	void attack();
 
 private:
-	Tower* _decoratedTower;
 	string _special_effect;
 
 };

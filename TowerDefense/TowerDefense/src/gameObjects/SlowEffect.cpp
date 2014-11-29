@@ -3,7 +3,9 @@
 
 SlowEffect::SlowEffect() {}
 
-SlowEffect::SlowEffect(Tower* tower) : _decoratedTower(tower) {
+SlowEffect::SlowEffect(Tower* tower) {
+	this->_decoratedTower = tower;
+
 	this->load("resources/images/towers/tower.png");
 	this->setPosition(tower->getPosition().first, tower->getPosition().second);		// has to be set BEFORE setRange();
 

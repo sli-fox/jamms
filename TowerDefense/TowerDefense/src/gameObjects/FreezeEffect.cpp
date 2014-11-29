@@ -3,7 +3,9 @@
 
 FreezeEffect::FreezeEffect() {}
 
-FreezeEffect::FreezeEffect(Tower* tower) : _decoratedTower(tower) {
+FreezeEffect::FreezeEffect(Tower* tower) {
+	this->_decoratedTower = tower;
+
 	this->load("resources/images/towers/icetower.png");
 	this->setPosition(tower->getPosition().first, tower->getPosition().second);		// has to be set BEFORE setRange();
 
