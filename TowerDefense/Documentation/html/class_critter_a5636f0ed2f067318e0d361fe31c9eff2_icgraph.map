@@ -1,6 +1,9 @@
 <map id="Critter::getId" name="Critter::getId">
-<area shape="rect" id="node2" href="$class_tower.html#a3bc66411a614f108ceaefd255bdb4179" title="Determines whether tower can attack a critter based on whether the critter falls within its range whi..." alt="" coords="166,5,289,32"/>
-<area shape="rect" id="node4" href="$class_tower.html#a9f067c2b9e5e6987f341704b8b098606" title="Tower::attack" alt="" coords="177,56,277,83"/>
-<area shape="rect" id="node5" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="147,107,308,133"/>
-<area shape="rect" id="node3" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="356,31,544,57"/>
+<area shape="rect" id="node2" href="$class_burn_effect.html#a79e25ceec437f8beb196751e6cd37e2e" title="BurnEffect::attack" alt="" coords="387,5,513,32"/>
+<area shape="rect" id="node3" href="$class_freeze_effect.html#a6820f382c09080db9d8e5fbc26287f74" title="FreezeEffect::attack" alt="" coords="381,68,519,95"/>
+<area shape="rect" id="node4" href="$class_slow_effect.html#a0004dd210f4c8aac78fc72902b2bba1f" title="SlowEffect::attack" alt="" coords="387,144,513,171"/>
+<area shape="rect" id="node5" href="$class_tower.html#a9f067c2b9e5e6987f341704b8b098606" title="Tower::attack" alt="" coords="177,100,277,127"/>
+<area shape="rect" id="node6" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="356,195,544,221"/>
+<area shape="rect" id="node7" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="147,252,308,279"/>
+<area shape="rect" id="node8" href="$class_critter_factory_test.html#a65f7b71bed5e2a81441a6d2d020c31c1" title="Test to see if a cat was created properly. " alt="" coords="164,303,291,345"/>
 </map>

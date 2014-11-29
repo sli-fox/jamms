@@ -1,0 +1,159 @@
+\hypertarget{class_cmd_base__c}{\section{Cmd\+Base\+\_\+c Class Reference}
+\label{class_cmd_base__c}\index{Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}}
+}
+
+
+{\ttfamily \#include $<$Track\+Map\+Input.\+h$>$}
+
+
+
+Inheritance diagram for Cmd\+Base\+\_\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_cmd_base__c__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Cmd\+Base\+\_\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_cmd_base__c__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+\hyperlink{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889ab9e27df11c718d9e4486b0c578c6391e}{A\+D\+D\+\_\+\+T\+I\+L\+E}, 
+\hyperlink{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889aee12e4ac9ace8bb24ea3f2a709c1babd}{R\+E\+M\+O\+V\+E\+\_\+\+T\+I\+L\+E}, 
+\hyperlink{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889a7a8c2602fa5efda43ecde5bbfe76dd3c}{L\+O\+A\+D\+\_\+\+M\+A\+P}, 
+\hyperlink{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889a2289030417d1bf93a2124a768ec98ef8}{U\+N\+L\+O\+A\+D\+\_\+\+M\+A\+P}, 
+\\*
+\hyperlink{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889a1ec9788e8f8abac37b35e5dbf191fd9b}{F\+I\+L\+L\+\_\+\+M\+A\+P}, 
+\hyperlink{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889a4281fb7c02d3a6ccc11d17a6dde0af7c}{U\+N\+F\+I\+L\+L\+\_\+\+M\+A\+P}, 
+\hyperlink{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889a5f227000bcb4fea713b6f37dc276e991}{R\+E\+S\+E\+T\+\_\+\+M\+A\+P}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cmd_base__c_a2f11354ded469c6caab3eb91b9bc5da2}{Cmd\+Base\+\_\+c} (\hyperlink{class_map}{Map} \&map)
+\item 
+\hyperlink{class_cmd_base__c_a8d33b988bc598aa99ec716477d538fc7}{$\sim$\+Cmd\+Base\+\_\+c} ()
+\item 
+virtual void \hyperlink{class_cmd_base__c_ae68d28d330d9cd8e93ea9688590ff966}{undo} ()=0
+\item 
+virtual void \hyperlink{class_cmd_base__c_ad774c1a7af7d278cb1d72e7e663b4738}{redo} ()=0
+\item 
+virtual int \hyperlink{class_cmd_base__c_a9a9437116dec340c4e65f02181a97b2e}{get\+Eve\+Type} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_map}{Map} $\ast$ \hyperlink{class_cmd_base__c_ac9697d946dd6d470fe6933904ff057e6}{m\+\_\+map}
+\item 
+int \hyperlink{class_cmd_base__c_a20e2061e49434fe75eeeb5fc75e4a448}{event\+\_\+type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+D\+D\+\_\+\+T\+I\+L\+E@{A\+D\+D\+\_\+\+T\+I\+L\+E}!Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}}\index{Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}!A\+D\+D\+\_\+\+T\+I\+L\+E@{A\+D\+D\+\_\+\+T\+I\+L\+E}}\item[{\em 
+\hypertarget{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889ab9e27df11c718d9e4486b0c578c6391e}{A\+D\+D\+\_\+\+T\+I\+L\+E}\label{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889ab9e27df11c718d9e4486b0c578c6391e}
+}]\index{R\+E\+M\+O\+V\+E\+\_\+\+T\+I\+L\+E@{R\+E\+M\+O\+V\+E\+\_\+\+T\+I\+L\+E}!Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}}\index{Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}!R\+E\+M\+O\+V\+E\+\_\+\+T\+I\+L\+E@{R\+E\+M\+O\+V\+E\+\_\+\+T\+I\+L\+E}}\item[{\em 
+\hypertarget{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889aee12e4ac9ace8bb24ea3f2a709c1babd}{R\+E\+M\+O\+V\+E\+\_\+\+T\+I\+L\+E}\label{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889aee12e4ac9ace8bb24ea3f2a709c1babd}
+}]\index{L\+O\+A\+D\+\_\+\+M\+A\+P@{L\+O\+A\+D\+\_\+\+M\+A\+P}!Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}}\index{Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}!L\+O\+A\+D\+\_\+\+M\+A\+P@{L\+O\+A\+D\+\_\+\+M\+A\+P}}\item[{\em 
+\hypertarget{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889a7a8c2602fa5efda43ecde5bbfe76dd3c}{L\+O\+A\+D\+\_\+\+M\+A\+P}\label{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889a7a8c2602fa5efda43ecde5bbfe76dd3c}
+}]\index{U\+N\+L\+O\+A\+D\+\_\+\+M\+A\+P@{U\+N\+L\+O\+A\+D\+\_\+\+M\+A\+P}!Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}}\index{Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}!U\+N\+L\+O\+A\+D\+\_\+\+M\+A\+P@{U\+N\+L\+O\+A\+D\+\_\+\+M\+A\+P}}\item[{\em 
+\hypertarget{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889a2289030417d1bf93a2124a768ec98ef8}{U\+N\+L\+O\+A\+D\+\_\+\+M\+A\+P}\label{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889a2289030417d1bf93a2124a768ec98ef8}
+}]\index{F\+I\+L\+L\+\_\+\+M\+A\+P@{F\+I\+L\+L\+\_\+\+M\+A\+P}!Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}}\index{Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}!F\+I\+L\+L\+\_\+\+M\+A\+P@{F\+I\+L\+L\+\_\+\+M\+A\+P}}\item[{\em 
+\hypertarget{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889a1ec9788e8f8abac37b35e5dbf191fd9b}{F\+I\+L\+L\+\_\+\+M\+A\+P}\label{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889a1ec9788e8f8abac37b35e5dbf191fd9b}
+}]\index{U\+N\+F\+I\+L\+L\+\_\+\+M\+A\+P@{U\+N\+F\+I\+L\+L\+\_\+\+M\+A\+P}!Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}}\index{Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}!U\+N\+F\+I\+L\+L\+\_\+\+M\+A\+P@{U\+N\+F\+I\+L\+L\+\_\+\+M\+A\+P}}\item[{\em 
+\hypertarget{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889a4281fb7c02d3a6ccc11d17a6dde0af7c}{U\+N\+F\+I\+L\+L\+\_\+\+M\+A\+P}\label{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889a4281fb7c02d3a6ccc11d17a6dde0af7c}
+}]\index{R\+E\+S\+E\+T\+\_\+\+M\+A\+P@{R\+E\+S\+E\+T\+\_\+\+M\+A\+P}!Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}}\index{Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}!R\+E\+S\+E\+T\+\_\+\+M\+A\+P@{R\+E\+S\+E\+T\+\_\+\+M\+A\+P}}\item[{\em 
+\hypertarget{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889a5f227000bcb4fea713b6f37dc276e991}{R\+E\+S\+E\+T\+\_\+\+M\+A\+P}\label{class_cmd_base__c_af28adb77d1dc7716af08a63b40457889a5f227000bcb4fea713b6f37dc276e991}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_cmd_base__c_a2f11354ded469c6caab3eb91b9bc5da2}{\index{Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}!Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}}
+\index{Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}!Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}}
+\subsubsection[{Cmd\+Base\+\_\+c}]{\setlength{\rightskip}{0pt plus 5cm}Cmd\+Base\+\_\+c\+::\+Cmd\+Base\+\_\+c (
+\begin{DoxyParamCaption}
+\item[{{\bf Map} \&}]{map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_cmd_base__c_a2f11354ded469c6caab3eb91b9bc5da2}
+\hypertarget{class_cmd_base__c_a8d33b988bc598aa99ec716477d538fc7}{\index{Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}!````~Cmd\+Base\+\_\+c@{$\sim$\+Cmd\+Base\+\_\+c}}
+\index{````~Cmd\+Base\+\_\+c@{$\sim$\+Cmd\+Base\+\_\+c}!Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}}
+\subsubsection[{$\sim$\+Cmd\+Base\+\_\+c}]{\setlength{\rightskip}{0pt plus 5cm}Cmd\+Base\+\_\+c\+::$\sim$\+Cmd\+Base\+\_\+c (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_cmd_base__c_a8d33b988bc598aa99ec716477d538fc7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_cmd_base__c_a9a9437116dec340c4e65f02181a97b2e}{\index{Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}!get\+Eve\+Type@{get\+Eve\+Type}}
+\index{get\+Eve\+Type@{get\+Eve\+Type}!Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}}
+\subsubsection[{get\+Eve\+Type}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Cmd\+Base\+\_\+c\+::get\+Eve\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_cmd_base__c_a9a9437116dec340c4e65f02181a97b2e}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_cmd_base__c_a9a9437116dec340c4e65f02181a97b2e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_cmd_base__c_ad774c1a7af7d278cb1d72e7e663b4738}{\index{Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}!redo@{redo}}
+\index{redo@{redo}!Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}}
+\subsubsection[{redo}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Cmd\+Base\+\_\+c\+::redo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_cmd_base__c_ad774c1a7af7d278cb1d72e7e663b4738}
+
+
+Implemented in \hyperlink{class_cmd_un_fill_map__c_a32fb82d2400cc3b5cf911f2aec441168}{Cmd\+Un\+Fill\+Map\+\_\+c}, \hyperlink{class_cmd_fill_map__c_a03c8b3d6027ae4bf50714b6358125eab}{Cmd\+Fill\+Map\+\_\+c}, \hyperlink{class_cmd_add_tile__c_aedf0b5944d1cc3a15372b74a78ac54b4}{Cmd\+Add\+Tile\+\_\+c}, and \hyperlink{class_cmd_remove_tile__c_ab423f8f77192b2772f245feb82c96cb4}{Cmd\+Remove\+Tile\+\_\+c}.
+
+\hypertarget{class_cmd_base__c_ae68d28d330d9cd8e93ea9688590ff966}{\index{Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}!undo@{undo}}
+\index{undo@{undo}!Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}}
+\subsubsection[{undo}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Cmd\+Base\+\_\+c\+::undo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_cmd_base__c_ae68d28d330d9cd8e93ea9688590ff966}
+
+
+Implemented in \hyperlink{class_cmd_un_fill_map__c_a966ef4e2f64ef0c9689328b68617c40e}{Cmd\+Un\+Fill\+Map\+\_\+c}, \hyperlink{class_cmd_fill_map__c_a1fc1349fea407dbc4a41f614eec45fbf}{Cmd\+Fill\+Map\+\_\+c}, \hyperlink{class_cmd_add_tile__c_ae2cf1ae80b5d05be7fea2fc57954a617}{Cmd\+Add\+Tile\+\_\+c}, and \hyperlink{class_cmd_remove_tile__c_a739dac75f48718fd9f3bd90b7cba59b1}{Cmd\+Remove\+Tile\+\_\+c}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_cmd_base__c_a20e2061e49434fe75eeeb5fc75e4a448}{\index{Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}!event\+\_\+type@{event\+\_\+type}}
+\index{event\+\_\+type@{event\+\_\+type}!Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}}
+\subsubsection[{event\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}int Cmd\+Base\+\_\+c\+::event\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_cmd_base__c_a20e2061e49434fe75eeeb5fc75e4a448}
+\hypertarget{class_cmd_base__c_ac9697d946dd6d470fe6933904ff057e6}{\index{Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}!m\+\_\+map@{m\+\_\+map}}
+\index{m\+\_\+map@{m\+\_\+map}!Cmd\+Base\+\_\+c@{Cmd\+Base\+\_\+c}}
+\subsubsection[{m\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Map}$\ast$ Cmd\+Base\+\_\+c\+::m\+\_\+map\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_cmd_base__c_ac9697d946dd6d470fe6933904ff057e6}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/\hyperlink{_track_map_input_8h}{Track\+Map\+Input.\+h}\end{DoxyCompactItemize}

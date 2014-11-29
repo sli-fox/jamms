@@ -1,0 +1,264 @@
+\hypertarget{class_critter_effect}{\section{Critter\+Effect Class Reference}
+\label{class_critter_effect}\index{Critter\+Effect@{Critter\+Effect}}
+}
+
+
+{\ttfamily \#include $<$Critter\+Effect.\+h$>$}
+
+
+
+Inheritance diagram for Critter\+Effect\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_effect__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Critter\+Effect\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{class_critter_effect__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419}{E\+F\+F\+E\+C\+T} \{ \\*
+\hyperlink{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419af3d31fe9bfb16333918fbfc1b327d22f}{B\+U\+R\+N}, 
+\hyperlink{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419abf2592f5e6004546c5b18049d2d16465}{F\+R\+E\+E\+Z\+E}, 
+\hyperlink{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a7f908a2d1a464805a2677db837b32342}{S\+L\+O\+W}, 
+\hyperlink{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419ae220dec7e3323ff06985bf799428b7b8}{S\+T\+U\+N}, 
+\\*
+\hyperlink{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a8de625f907a1471427bb17d25a47f30c}{K\+N\+O\+C\+K\+B\+A\+C\+K}, 
+\hyperlink{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a97a5b1c4585d066a43c0ee8bd8e81152}{P\+E\+T\+R\+I\+F\+Y}, 
+\hyperlink{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a682f1b487c9eeb699152dbf7cadc3ff9}{C\+R\+U\+S\+H}, 
+\hyperlink{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a316b019bbf9cda9a62b579b36acea5ec}{P\+O\+I\+S\+O\+N}, 
+\\*
+\hyperlink{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419acb606e41f43984362e21c5c0f2c9bdf3}{S\+H\+O\+C\+K}, 
+\hyperlink{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a31e7f9ebd023ae054aa8ef1c36dc7757}{T\+I\+M\+E\+B\+O\+M\+B}, 
+\hyperlink{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a28a6f474326afbe2be2b572a02c8c8c4}{M\+O\+O\+N\+W\+A\+L\+K}, 
+\hyperlink{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a3dd3ee00267a16a6a640108342078374}{N\+O\+N\+E}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_critter_effect_a8aa99dff5425605e7f38ba40b4e34095}{Critter\+Effect} ()
+\item 
+\hyperlink{class_critter_effect_a3743356c7523d507ad2848594bc01a4c}{Critter\+Effect} (int \hyperlink{class_critter_effect_a972e96abb9c75f8af45a0a878cf2f0b9}{damage}, float \hyperlink{class_critter_effect_a70f3b198f8dacc9ca942c99b3d6ddb39}{speed\+Modifier}, int \hyperlink{class_critter_effect_ad6b5573ff377524e3e434441a0cf8496}{stacks}, float \hyperlink{class_critter_effect_aae5fb4e6fbff8c135128966ab8e9e0de}{cycles})
+\item 
+virtual \hyperlink{class_critter_effect_a075770a736eed494c5723f81cfe6a4ff}{$\sim$\+Critter\+Effect} ()
+\item 
+virtual int \hyperlink{class_critter_effect_a90ba05f6a3bc2214cbd9015807b1c966}{get\+Damage} ()
+\item 
+virtual float \hyperlink{class_critter_effect_aa66ba6502448706a5bc1608aa42e6847}{get\+Speed\+Modifer} ()
+\item 
+int \hyperlink{class_critter_effect_a4c6246bbe62acf3bfa683f40ff562a54}{get\+Stacks} ()
+\item 
+float \hyperlink{class_critter_effect_a3119a2498116df7dde12016aa031b26d}{get\+Cycles} ()
+\item 
+float \hyperlink{class_critter_effect_af010bf5eaaddf43a7f247639bf7b8b93}{get\+Elapsed\+Ticks} ()
+\item 
+bool \hyperlink{class_critter_effect_ae647669428e5d7b141b21a230f6cacd8}{apply\+Effect} ()
+\item 
+void \hyperlink{class_critter_effect_a68c08d83a3f9c37332e62cb7c0b98749}{add\+Stacks} (int \hyperlink{class_critter_effect_ad6b5573ff377524e3e434441a0cf8496}{stacks})
+\item 
+void \hyperlink{class_critter_effect_a54a7b5a2ebb2509b64c9f0a7436ccbcc}{tick} ()
+\item 
+virtual bool \hyperlink{class_critter_effect_aa8d9733ea321f972c60f5c30907f9a09}{is\+Equal} (\hyperlink{class_critter_effect}{Critter\+Effect} $\ast$effect)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_critter_effect_ad6b5573ff377524e3e434441a0cf8496}{stacks}
+\item 
+int \hyperlink{class_critter_effect_a972e96abb9c75f8af45a0a878cf2f0b9}{damage}
+\item 
+float \hyperlink{class_critter_effect_a70f3b198f8dacc9ca942c99b3d6ddb39}{speed\+Modifier}
+\item 
+float \hyperlink{class_critter_effect_aae5fb4e6fbff8c135128966ab8e9e0de}{cycles}
+\item 
+float \hyperlink{class_critter_effect_a5839d4edca217fa559f6a45ddc91a73b}{elapsed\+Ticks}
+\item 
+\hyperlink{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419}{E\+F\+F\+E\+C\+T} \hyperlink{class_critter_effect_a25a88f402fc725134ed7d6e3376ed1d1}{type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419}{\index{Critter\+Effect@{Critter\+Effect}!E\+F\+F\+E\+C\+T@{E\+F\+F\+E\+C\+T}}
+\index{E\+F\+F\+E\+C\+T@{E\+F\+F\+E\+C\+T}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{E\+F\+F\+E\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Critter\+Effect\+::\+E\+F\+F\+E\+C\+T}}}\label{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{B\+U\+R\+N@{B\+U\+R\+N}!Critter\+Effect@{Critter\+Effect}}\index{Critter\+Effect@{Critter\+Effect}!B\+U\+R\+N@{B\+U\+R\+N}}\item[{\em 
+\hypertarget{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419af3d31fe9bfb16333918fbfc1b327d22f}{B\+U\+R\+N}\label{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419af3d31fe9bfb16333918fbfc1b327d22f}
+}]\index{F\+R\+E\+E\+Z\+E@{F\+R\+E\+E\+Z\+E}!Critter\+Effect@{Critter\+Effect}}\index{Critter\+Effect@{Critter\+Effect}!F\+R\+E\+E\+Z\+E@{F\+R\+E\+E\+Z\+E}}\item[{\em 
+\hypertarget{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419abf2592f5e6004546c5b18049d2d16465}{F\+R\+E\+E\+Z\+E}\label{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419abf2592f5e6004546c5b18049d2d16465}
+}]\index{S\+L\+O\+W@{S\+L\+O\+W}!Critter\+Effect@{Critter\+Effect}}\index{Critter\+Effect@{Critter\+Effect}!S\+L\+O\+W@{S\+L\+O\+W}}\item[{\em 
+\hypertarget{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a7f908a2d1a464805a2677db837b32342}{S\+L\+O\+W}\label{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a7f908a2d1a464805a2677db837b32342}
+}]\index{S\+T\+U\+N@{S\+T\+U\+N}!Critter\+Effect@{Critter\+Effect}}\index{Critter\+Effect@{Critter\+Effect}!S\+T\+U\+N@{S\+T\+U\+N}}\item[{\em 
+\hypertarget{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419ae220dec7e3323ff06985bf799428b7b8}{S\+T\+U\+N}\label{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419ae220dec7e3323ff06985bf799428b7b8}
+}]\index{K\+N\+O\+C\+K\+B\+A\+C\+K@{K\+N\+O\+C\+K\+B\+A\+C\+K}!Critter\+Effect@{Critter\+Effect}}\index{Critter\+Effect@{Critter\+Effect}!K\+N\+O\+C\+K\+B\+A\+C\+K@{K\+N\+O\+C\+K\+B\+A\+C\+K}}\item[{\em 
+\hypertarget{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a8de625f907a1471427bb17d25a47f30c}{K\+N\+O\+C\+K\+B\+A\+C\+K}\label{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a8de625f907a1471427bb17d25a47f30c}
+}]\index{P\+E\+T\+R\+I\+F\+Y@{P\+E\+T\+R\+I\+F\+Y}!Critter\+Effect@{Critter\+Effect}}\index{Critter\+Effect@{Critter\+Effect}!P\+E\+T\+R\+I\+F\+Y@{P\+E\+T\+R\+I\+F\+Y}}\item[{\em 
+\hypertarget{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a97a5b1c4585d066a43c0ee8bd8e81152}{P\+E\+T\+R\+I\+F\+Y}\label{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a97a5b1c4585d066a43c0ee8bd8e81152}
+}]\index{C\+R\+U\+S\+H@{C\+R\+U\+S\+H}!Critter\+Effect@{Critter\+Effect}}\index{Critter\+Effect@{Critter\+Effect}!C\+R\+U\+S\+H@{C\+R\+U\+S\+H}}\item[{\em 
+\hypertarget{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a682f1b487c9eeb699152dbf7cadc3ff9}{C\+R\+U\+S\+H}\label{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a682f1b487c9eeb699152dbf7cadc3ff9}
+}]\index{P\+O\+I\+S\+O\+N@{P\+O\+I\+S\+O\+N}!Critter\+Effect@{Critter\+Effect}}\index{Critter\+Effect@{Critter\+Effect}!P\+O\+I\+S\+O\+N@{P\+O\+I\+S\+O\+N}}\item[{\em 
+\hypertarget{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a316b019bbf9cda9a62b579b36acea5ec}{P\+O\+I\+S\+O\+N}\label{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a316b019bbf9cda9a62b579b36acea5ec}
+}]\index{S\+H\+O\+C\+K@{S\+H\+O\+C\+K}!Critter\+Effect@{Critter\+Effect}}\index{Critter\+Effect@{Critter\+Effect}!S\+H\+O\+C\+K@{S\+H\+O\+C\+K}}\item[{\em 
+\hypertarget{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419acb606e41f43984362e21c5c0f2c9bdf3}{S\+H\+O\+C\+K}\label{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419acb606e41f43984362e21c5c0f2c9bdf3}
+}]\index{T\+I\+M\+E\+B\+O\+M\+B@{T\+I\+M\+E\+B\+O\+M\+B}!Critter\+Effect@{Critter\+Effect}}\index{Critter\+Effect@{Critter\+Effect}!T\+I\+M\+E\+B\+O\+M\+B@{T\+I\+M\+E\+B\+O\+M\+B}}\item[{\em 
+\hypertarget{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a31e7f9ebd023ae054aa8ef1c36dc7757}{T\+I\+M\+E\+B\+O\+M\+B}\label{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a31e7f9ebd023ae054aa8ef1c36dc7757}
+}]\index{M\+O\+O\+N\+W\+A\+L\+K@{M\+O\+O\+N\+W\+A\+L\+K}!Critter\+Effect@{Critter\+Effect}}\index{Critter\+Effect@{Critter\+Effect}!M\+O\+O\+N\+W\+A\+L\+K@{M\+O\+O\+N\+W\+A\+L\+K}}\item[{\em 
+\hypertarget{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a28a6f474326afbe2be2b572a02c8c8c4}{M\+O\+O\+N\+W\+A\+L\+K}\label{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a28a6f474326afbe2be2b572a02c8c8c4}
+}]\index{N\+O\+N\+E@{N\+O\+N\+E}!Critter\+Effect@{Critter\+Effect}}\index{Critter\+Effect@{Critter\+Effect}!N\+O\+N\+E@{N\+O\+N\+E}}\item[{\em 
+\hypertarget{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a3dd3ee00267a16a6a640108342078374}{N\+O\+N\+E}\label{class_critter_effect_a82b9b0530aff3cbf89c8cc6c60222419a3dd3ee00267a16a6a640108342078374}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_critter_effect_a8aa99dff5425605e7f38ba40b4e34095}{\index{Critter\+Effect@{Critter\+Effect}!Critter\+Effect@{Critter\+Effect}}
+\index{Critter\+Effect@{Critter\+Effect}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{Critter\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}Critter\+Effect\+::\+Critter\+Effect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_critter_effect_a8aa99dff5425605e7f38ba40b4e34095}
+\hypertarget{class_critter_effect_a3743356c7523d507ad2848594bc01a4c}{\index{Critter\+Effect@{Critter\+Effect}!Critter\+Effect@{Critter\+Effect}}
+\index{Critter\+Effect@{Critter\+Effect}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{Critter\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}Critter\+Effect\+::\+Critter\+Effect (
+\begin{DoxyParamCaption}
+\item[{int}]{damage, }
+\item[{float}]{speed\+Modifier, }
+\item[{int}]{stacks, }
+\item[{float}]{cycles}
+\end{DoxyParamCaption}
+)}}\label{class_critter_effect_a3743356c7523d507ad2848594bc01a4c}
+\hypertarget{class_critter_effect_a075770a736eed494c5723f81cfe6a4ff}{\index{Critter\+Effect@{Critter\+Effect}!````~Critter\+Effect@{$\sim$\+Critter\+Effect}}
+\index{````~Critter\+Effect@{$\sim$\+Critter\+Effect}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{$\sim$\+Critter\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}Critter\+Effect\+::$\sim$\+Critter\+Effect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_critter_effect_a075770a736eed494c5723f81cfe6a4ff}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_critter_effect_a68c08d83a3f9c37332e62cb7c0b98749}{\index{Critter\+Effect@{Critter\+Effect}!add\+Stacks@{add\+Stacks}}
+\index{add\+Stacks@{add\+Stacks}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{add\+Stacks}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+Effect\+::add\+Stacks (
+\begin{DoxyParamCaption}
+\item[{int}]{stacks}
+\end{DoxyParamCaption}
+)}}\label{class_critter_effect_a68c08d83a3f9c37332e62cb7c0b98749}
+\hypertarget{class_critter_effect_ae647669428e5d7b141b21a230f6cacd8}{\index{Critter\+Effect@{Critter\+Effect}!apply\+Effect@{apply\+Effect}}
+\index{apply\+Effect@{apply\+Effect}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{apply\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}bool Critter\+Effect\+::apply\+Effect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_critter_effect_ae647669428e5d7b141b21a230f6cacd8}
+\hypertarget{class_critter_effect_a3119a2498116df7dde12016aa031b26d}{\index{Critter\+Effect@{Critter\+Effect}!get\+Cycles@{get\+Cycles}}
+\index{get\+Cycles@{get\+Cycles}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{get\+Cycles}]{\setlength{\rightskip}{0pt plus 5cm}float Critter\+Effect\+::get\+Cycles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_critter_effect_a3119a2498116df7dde12016aa031b26d}
+\hypertarget{class_critter_effect_a90ba05f6a3bc2214cbd9015807b1c966}{\index{Critter\+Effect@{Critter\+Effect}!get\+Damage@{get\+Damage}}
+\index{get\+Damage@{get\+Damage}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{get\+Damage}]{\setlength{\rightskip}{0pt plus 5cm}int Critter\+Effect\+::get\+Damage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_critter_effect_a90ba05f6a3bc2214cbd9015807b1c966}
+
+
+Reimplemented in \hyperlink{struct_crush_a269885cd9bf52fbf5af8b0f9778e0330}{Crush}, and \hyperlink{struct_freeze_a5f9b77d2b88bb5f945d476f4405569a3}{Freeze}.
+
+\hypertarget{class_critter_effect_af010bf5eaaddf43a7f247639bf7b8b93}{\index{Critter\+Effect@{Critter\+Effect}!get\+Elapsed\+Ticks@{get\+Elapsed\+Ticks}}
+\index{get\+Elapsed\+Ticks@{get\+Elapsed\+Ticks}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{get\+Elapsed\+Ticks}]{\setlength{\rightskip}{0pt plus 5cm}float Critter\+Effect\+::get\+Elapsed\+Ticks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_critter_effect_af010bf5eaaddf43a7f247639bf7b8b93}
+\hypertarget{class_critter_effect_aa66ba6502448706a5bc1608aa42e6847}{\index{Critter\+Effect@{Critter\+Effect}!get\+Speed\+Modifer@{get\+Speed\+Modifer}}
+\index{get\+Speed\+Modifer@{get\+Speed\+Modifer}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{get\+Speed\+Modifer}]{\setlength{\rightskip}{0pt plus 5cm}float Critter\+Effect\+::get\+Speed\+Modifer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_critter_effect_aa66ba6502448706a5bc1608aa42e6847}
+
+
+Reimplemented in \hyperlink{struct_petrify_a5dbc65a84dfd4f6f809e39af9c33adfd}{Petrify}, and \hyperlink{struct_freeze_a47d5a9d0658cd1e8d25e174dca0b934b}{Freeze}.
+
+\hypertarget{class_critter_effect_a4c6246bbe62acf3bfa683f40ff562a54}{\index{Critter\+Effect@{Critter\+Effect}!get\+Stacks@{get\+Stacks}}
+\index{get\+Stacks@{get\+Stacks}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{get\+Stacks}]{\setlength{\rightskip}{0pt plus 5cm}int Critter\+Effect\+::get\+Stacks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_critter_effect_a4c6246bbe62acf3bfa683f40ff562a54}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_effect_a4c6246bbe62acf3bfa683f40ff562a54_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_critter_effect_aa8d9733ea321f972c60f5c30907f9a09}{\index{Critter\+Effect@{Critter\+Effect}!is\+Equal@{is\+Equal}}
+\index{is\+Equal@{is\+Equal}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{is\+Equal}]{\setlength{\rightskip}{0pt plus 5cm}bool Critter\+Effect\+::is\+Equal (
+\begin{DoxyParamCaption}
+\item[{{\bf Critter\+Effect} $\ast$}]{effect}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_critter_effect_aa8d9733ea321f972c60f5c30907f9a09}
+\hypertarget{class_critter_effect_a54a7b5a2ebb2509b64c9f0a7436ccbcc}{\index{Critter\+Effect@{Critter\+Effect}!tick@{tick}}
+\index{tick@{tick}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{tick}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+Effect\+::tick (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_critter_effect_a54a7b5a2ebb2509b64c9f0a7436ccbcc}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_critter_effect_aae5fb4e6fbff8c135128966ab8e9e0de}{\index{Critter\+Effect@{Critter\+Effect}!cycles@{cycles}}
+\index{cycles@{cycles}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{cycles}]{\setlength{\rightskip}{0pt plus 5cm}float Critter\+Effect\+::cycles\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_critter_effect_aae5fb4e6fbff8c135128966ab8e9e0de}
+\hypertarget{class_critter_effect_a972e96abb9c75f8af45a0a878cf2f0b9}{\index{Critter\+Effect@{Critter\+Effect}!damage@{damage}}
+\index{damage@{damage}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{damage}]{\setlength{\rightskip}{0pt plus 5cm}int Critter\+Effect\+::damage\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_critter_effect_a972e96abb9c75f8af45a0a878cf2f0b9}
+\hypertarget{class_critter_effect_a5839d4edca217fa559f6a45ddc91a73b}{\index{Critter\+Effect@{Critter\+Effect}!elapsed\+Ticks@{elapsed\+Ticks}}
+\index{elapsed\+Ticks@{elapsed\+Ticks}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{elapsed\+Ticks}]{\setlength{\rightskip}{0pt plus 5cm}float Critter\+Effect\+::elapsed\+Ticks\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_critter_effect_a5839d4edca217fa559f6a45ddc91a73b}
+\hypertarget{class_critter_effect_a70f3b198f8dacc9ca942c99b3d6ddb39}{\index{Critter\+Effect@{Critter\+Effect}!speed\+Modifier@{speed\+Modifier}}
+\index{speed\+Modifier@{speed\+Modifier}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{speed\+Modifier}]{\setlength{\rightskip}{0pt plus 5cm}float Critter\+Effect\+::speed\+Modifier\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_critter_effect_a70f3b198f8dacc9ca942c99b3d6ddb39}
+\hypertarget{class_critter_effect_ad6b5573ff377524e3e434441a0cf8496}{\index{Critter\+Effect@{Critter\+Effect}!stacks@{stacks}}
+\index{stacks@{stacks}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{stacks}]{\setlength{\rightskip}{0pt plus 5cm}int Critter\+Effect\+::stacks\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_critter_effect_ad6b5573ff377524e3e434441a0cf8496}
+\hypertarget{class_critter_effect_a25a88f402fc725134ed7d6e3376ed1d1}{\index{Critter\+Effect@{Critter\+Effect}!type@{type}}
+\index{type@{type}!Critter\+Effect@{Critter\+Effect}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+F\+F\+E\+C\+T} Critter\+Effect\+::type\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_critter_effect_a25a88f402fc725134ed7d6e3376ed1d1}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/utils/\hyperlink{_critter_effect_8h}{Critter\+Effect.\+h}\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/src/utils/\hyperlink{_critter_effect_8cpp}{Critter\+Effect.\+cpp}\end{DoxyCompactItemize}

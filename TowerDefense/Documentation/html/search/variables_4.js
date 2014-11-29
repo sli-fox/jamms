@@ -5,6 +5,7 @@ var searchData=
   ['d_5fnamlen',['d_namlen',['../struct__wdirent.html#a0050d6131e6fa90206903e216b38799e',1,'_wdirent::d_namlen()'],['../structdirent.html#a09ced068b03cdb339e34840c8b709621',1,'dirent::d_namlen()']]],
   ['d_5freclen',['d_reclen',['../struct__wdirent.html#aff7f360608e576cd18cf11f2caf13ef3',1,'_wdirent::d_reclen()'],['../structdirent.html#a90dc47836e8ef510437317876368859e',1,'dirent::d_reclen()']]],
   ['d_5ftype',['d_type',['../struct__wdirent.html#a3c3874604ffccbeeaffd96709763cc3b',1,'_wdirent::d_type()'],['../structdirent.html#ad6a736cb04c7295e8f97f708324b3500',1,'dirent::d_type()']]],
+  ['damage',['damage',['../class_critter_effect.html#a972e96abb9c75f8af45a0a878cf2f0b9',1,'CritterEffect']]],
   ['data',['data',['../struct___w_d_i_r.html#a065b17b666ee06c4e8068d8accb0eef9',1,'_WDIR']]],
   ['delay_5fcount',['delay_count',['../class_game_state_play.html#aa0948c192d3ef1adb6eaaeade8521733',1,'GameStatePlay']]],
   ['delta_5ftime',['delta_time',['../class_game.html#ac66b5c6782d42e6c7344fad1cda50b67',1,'Game']]],

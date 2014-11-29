@@ -1,6 +1,7 @@
 <map id="TowerManager::isTileFree" name="TowerManager::isTileFree">
-<area shape="rect" id="node2" href="$class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="441,15,653,56"/>
-<area shape="rect" id="node4" href="$class_tower_manager.html#ac057ea8072b060d0fad71fa218e219af" title="TowerManager::buyTower" alt="" coords="224,22,393,49"/>
-<area shape="rect" id="node5" href="$class_tower_manager.html#afa7bbe1d178269f32df231807ab419d8" title="TowerManager::sellTower" alt="" coords="225,73,393,100"/>
-<area shape="rect" id="node3" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="701,22,889,49"/>
+<area shape="rect" id="node2" href="$class_tower_manager.html#a48859fff5518d39549e26d73633eb3c6" title="TowerManager::buyTower" alt="" coords="224,63,393,90"/>
+<area shape="rect" id="node6" href="$class_tower_manager.html#afa7bbe1d178269f32df231807ab419d8" title="TowerManager::sellTower" alt="" coords="225,13,393,39"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="441,5,653,47"/>
+<area shape="rect" id="node5" href="$class_tower_test.html#aa5b9633ca71b4020fb635758e39d98ad" title="TowerTest::setUp" alt="" coords="486,71,609,98"/>
+<area shape="rect" id="node4" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="701,13,889,39"/>
 </map>

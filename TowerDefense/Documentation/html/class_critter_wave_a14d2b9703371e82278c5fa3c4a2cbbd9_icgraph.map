@@ -1,3 +1,4 @@
 <map id="CritterWave::decrementCrittersRemaining" name="CritterWave::decrementCrittersRemaining">
-<area shape="rect" id="node2" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="253,13,441,39"/>
+<area shape="rect" id="node2" href="$class_game_state_play.html#a2278751d53b50beb97c809db26f1b9b6" title="GameStatePlay::handleCritter\lRemovalFromWave" alt="" coords="253,5,448,47"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="496,13,657,39"/>
 </map>

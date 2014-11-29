@@ -1,5 +1,16 @@
 <map id="Tower::getTowerSpecs" name="Tower::getTowerSpecs">
-<area shape="rect" id="node2" href="$class_game_state_play.html#a63a3ba0c891afd8ec126806bab4f315a" title="Draws game to the render window. " alt="" coords="226,5,375,32"/>
-<area shape="rect" id="node4" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="207,56,395,83"/>
-<area shape="rect" id="node3" href="$class_game_state_play.html#ab41594c10b04429a3126d4a8085de82d" title="GameStatePlay::runThreads" alt="" coords="443,5,629,32"/>
+<area shape="rect" id="node2" href="$class_adult_bulldog_upgrade.html#a131cfb89f2cc408ed19be9961d0bd968" title="AdultBulldogUpgrade\l::getTowerSpecs" alt="" coords="244,5,387,47"/>
+<area shape="rect" id="node3" href="$class_adult_dalmatian_upgrade.html#a6b6d0c8464ddd845565d72b2e1480183" title="AdultDalmatianUpgrade\l::getTowerSpecs" alt="" coords="236,71,395,112"/>
+<area shape="rect" id="node4" href="$class_adult_shih_tzu_upgrade.html#afd0c6011047f5c5e89eb4c0428744df5" title="AdultShihTzuUpgrade\l::getTowerSpecs" alt="" coords="242,136,389,177"/>
+<area shape="rect" id="node5" href="$class_burn_effect.html#a696db158260eaf01e3b497b6d400230e" title="BurnEffect::getTowerSpecs" alt="" coords="226,202,405,229"/>
+<area shape="rect" id="node6" href="$class_freeze_effect.html#ace1230a2379fb2ec5894bcdf20e69ae9" title="FreezeEffect::getTowerSpecs" alt="" coords="219,253,411,279"/>
+<area shape="rect" id="node7" href="$class_slow_effect.html#aaa162ffbad9bc163a53b0927b035dcb8" title="SlowEffect::getTowerSpecs" alt="" coords="225,303,405,330"/>
+<area shape="rect" id="node8" href="$class_teen_bulldog_upgrade.html#a2aea4581606c9dd178bb62f594da700d" title="TeenBulldogUpgrade\l::getTowerSpecs" alt="" coords="245,355,386,396"/>
+<area shape="rect" id="node9" href="$class_teen_dalmatian_upgrade.html#a5810149bbbc74a4560718ccb524612fa" title="TeenDalmatianUpgrade\l::getTowerSpecs" alt="" coords="237,420,393,461"/>
+<area shape="rect" id="node10" href="$class_teen_shih_tzu_upgrade.html#a2db9fffe978423d001bd7e37c7d7fbc4" title="TeenShihTzuUpgrade\l::getTowerSpecs" alt="" coords="243,485,388,527"/>
+<area shape="rect" id="node11" href="$class_game_state_play.html#a63a3ba0c891afd8ec126806bab4f315a" title="Draws game to the render window. " alt="" coords="241,551,390,578"/>
+<area shape="rect" id="node13" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="472,661,660,687"/>
+<area shape="rect" id="node14" href="$class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="209,653,421,695"/>
+<area shape="rect" id="node15" href="$class_game_state_play.html#a79237473ceeb26b94f641d0bf66c1ec0" title="GameStatePlay::buttonCommand\lLibrary" alt="" coords="207,719,424,760"/>
+<area shape="rect" id="node12" href="$class_game_state_play.html#ab41594c10b04429a3126d4a8085de82d" title="GameStatePlay::runThreads" alt="" coords="473,551,659,578"/>
 </map>

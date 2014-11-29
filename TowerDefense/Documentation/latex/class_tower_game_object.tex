@@ -1,0 +1,251 @@
+\hypertarget{class_tower_game_object}{\section{Tower\+Game\+Object Class Reference}
+\label{class_tower_game_object}\index{Tower\+Game\+Object@{Tower\+Game\+Object}}
+}
+
+
+Creates a \hyperlink{class_tower_game_object}{Tower\+Game\+Object}. \hyperlink{class_tower_game_object}{Tower\+Game\+Object} is a subclass of \hyperlink{class_game_object}{Game\+Object} that separates G\+U\+I code specific to the \hyperlink{class_tower}{Tower} from the \hyperlink{class_tower}{Tower} model in the application.  
+
+
+
+
+{\ttfamily \#include $<$Tower\+Game\+Object.\+h$>$}
+
+
+
+Inheritance diagram for Tower\+Game\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{class_tower_game_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tower\+Game\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_tower_game_object__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_tower_game_object_a6a687237ad352e41acb35f8b4cf25fa3}{Rate\+Of\+Fire} \{ \hyperlink{class_tower_game_object_a6a687237ad352e41acb35f8b4cf25fa3a121781111da145b0477ca824e28a2d62}{Slow} = 1, 
+\hyperlink{class_tower_game_object_a6a687237ad352e41acb35f8b4cf25fa3a1452f172c386f95f93e0da09e0381aef}{Normal}, 
+\hyperlink{class_tower_game_object_a6a687237ad352e41acb35f8b4cf25fa3a646a1a6a2369018ea562acb0299de468}{Fast}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tower_game_object_ae587eca041adf51c144a376564fac17e}{Tower\+Game\+Object} ()
+\item 
+\hyperlink{class_tower_game_object_a87241c8025188b610e3fb520608a85fa}{$\sim$\+Tower\+Game\+Object} ()
+\item 
+sf\+::\+Circle\+Shape \hyperlink{class_tower_game_object_a0e49616a6bb7cea91b45288a886e7e8e}{get\+Range\+Shape} () const 
+\item 
+\hyperlink{class_tower_game_object_a6a687237ad352e41acb35f8b4cf25fa3}{Rate\+Of\+Fire} \hyperlink{class_tower_game_object_a176b325a7415c42dd368a958d52f912c}{get\+Rate\+Of\+Fire} () const 
+\item 
+void \hyperlink{class_tower_game_object_a9e83986372f5cba1f6788d61c27c52f7}{set\+Range\+Shape} (float range)
+\item 
+void \hyperlink{class_tower_game_object_a44938da9215d2552043ddc7b35067be0}{set\+Rate\+Of\+Fire} (\hyperlink{class_tower_game_object_a6a687237ad352e41acb35f8b4cf25fa3}{Rate\+Of\+Fire} \hyperlink{class_tower_game_object_a791d99099306673e85ed6b93fd6f7b1b}{\+\_\+rate\+\_\+of\+\_\+fire})
+\item 
+virtual bool \hyperlink{class_tower_game_object_a824c0212a0c2958d9facfa97947c7332}{circle\+To\+Circle\+Intersection} (\hyperlink{class_game_object}{Game\+Object} $\ast$game\+\_\+object)
+\begin{DoxyCompactList}\small\item\em Overrides method to apply to tower range sf\+::\+Circle\+Shape object. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tower_game_object_a92b1f8a95c7792bd9924d4f1286e3ddb}{can\+Apply\+Special\+After\+Effects} (\hyperlink{class_critter}{Critter} $\ast$critter)
+\begin{DoxyCompactList}\small\item\em Determines whether tower can apply a special effect on a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Circle\+Shape \hyperlink{class_tower_game_object_a3c154fe0b6a056540332b0c40d60304f}{\+\_\+range\+\_\+shape}
+\item 
+sf\+::\+Clock \hyperlink{class_tower_game_object_a5c5f8162877828c20bf937c90338205c}{clock}
+\item 
+sf\+::\+Time \hyperlink{class_tower_game_object_ade7e1ea2089b38f90fa3920a80a3619a}{time}
+\item 
+\hyperlink{class_tower_game_object_a6a687237ad352e41acb35f8b4cf25fa3}{Rate\+Of\+Fire} \hyperlink{class_tower_game_object_a791d99099306673e85ed6b93fd6f7b1b}{\+\_\+rate\+\_\+of\+\_\+fire}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Creates a \hyperlink{class_tower_game_object}{Tower\+Game\+Object}. \hyperlink{class_tower_game_object}{Tower\+Game\+Object} is a subclass of \hyperlink{class_game_object}{Game\+Object} that separates G\+U\+I code specific to the \hyperlink{class_tower}{Tower} from the \hyperlink{class_tower}{Tower} model in the application. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_tower_game_object_a6a687237ad352e41acb35f8b4cf25fa3}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!Rate\+Of\+Fire@{Rate\+Of\+Fire}}
+\index{Rate\+Of\+Fire@{Rate\+Of\+Fire}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{Rate\+Of\+Fire}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Tower\+Game\+Object\+::\+Rate\+Of\+Fire}}}\label{class_tower_game_object_a6a687237ad352e41acb35f8b4cf25fa3}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Slow@{Slow}!Tower\+Game\+Object@{Tower\+Game\+Object}}\index{Tower\+Game\+Object@{Tower\+Game\+Object}!Slow@{Slow}}\item[{\em 
+\hypertarget{class_tower_game_object_a6a687237ad352e41acb35f8b4cf25fa3a121781111da145b0477ca824e28a2d62}{Slow}\label{class_tower_game_object_a6a687237ad352e41acb35f8b4cf25fa3a121781111da145b0477ca824e28a2d62}
+}]\index{Normal@{Normal}!Tower\+Game\+Object@{Tower\+Game\+Object}}\index{Tower\+Game\+Object@{Tower\+Game\+Object}!Normal@{Normal}}\item[{\em 
+\hypertarget{class_tower_game_object_a6a687237ad352e41acb35f8b4cf25fa3a1452f172c386f95f93e0da09e0381aef}{Normal}\label{class_tower_game_object_a6a687237ad352e41acb35f8b4cf25fa3a1452f172c386f95f93e0da09e0381aef}
+}]\index{Fast@{Fast}!Tower\+Game\+Object@{Tower\+Game\+Object}}\index{Tower\+Game\+Object@{Tower\+Game\+Object}!Fast@{Fast}}\item[{\em 
+\hypertarget{class_tower_game_object_a6a687237ad352e41acb35f8b4cf25fa3a646a1a6a2369018ea562acb0299de468}{Fast}\label{class_tower_game_object_a6a687237ad352e41acb35f8b4cf25fa3a646a1a6a2369018ea562acb0299de468}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tower_game_object_ae587eca041adf51c144a376564fac17e}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\index{Tower\+Game\+Object@{Tower\+Game\+Object}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{Tower\+Game\+Object}]{\setlength{\rightskip}{0pt plus 5cm}Tower\+Game\+Object\+::\+Tower\+Game\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tower_game_object_ae587eca041adf51c144a376564fac17e}
+\hypertarget{class_tower_game_object_a87241c8025188b610e3fb520608a85fa}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!````~Tower\+Game\+Object@{$\sim$\+Tower\+Game\+Object}}
+\index{````~Tower\+Game\+Object@{$\sim$\+Tower\+Game\+Object}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{$\sim$\+Tower\+Game\+Object}]{\setlength{\rightskip}{0pt plus 5cm}Tower\+Game\+Object\+::$\sim$\+Tower\+Game\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_tower_game_object_a87241c8025188b610e3fb520608a85fa}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tower_game_object_a92b1f8a95c7792bd9924d4f1286e3ddb}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!can\+Apply\+Special\+After\+Effects@{can\+Apply\+Special\+After\+Effects}}
+\index{can\+Apply\+Special\+After\+Effects@{can\+Apply\+Special\+After\+Effects}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{can\+Apply\+Special\+After\+Effects}]{\setlength{\rightskip}{0pt plus 5cm}bool Tower\+Game\+Object\+::can\+Apply\+Special\+After\+Effects (
+\begin{DoxyParamCaption}
+\item[{{\bf Critter} $\ast$}]{critter}
+\end{DoxyParamCaption}
+)}}\label{class_tower_game_object_a92b1f8a95c7792bd9924d4f1286e3ddb}
+
+
+Determines whether tower can apply a special effect on a critter based on whether the critter falls within its range while taking into account the tower's rate of fire delay. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_game_object_a92b1f8a95c7792bd9924d4f1286e3ddb_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_game_object_a824c0212a0c2958d9facfa97947c7332}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!circle\+To\+Circle\+Intersection@{circle\+To\+Circle\+Intersection}}
+\index{circle\+To\+Circle\+Intersection@{circle\+To\+Circle\+Intersection}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{circle\+To\+Circle\+Intersection}]{\setlength{\rightskip}{0pt plus 5cm}bool Tower\+Game\+Object\+::circle\+To\+Circle\+Intersection (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Object} $\ast$}]{game\+\_\+object}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tower_game_object_a824c0212a0c2958d9facfa97947c7332}
+
+
+Overrides method to apply to tower range sf\+::\+Circle\+Shape object. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_object_a3a9fd4ee6157fcf61fd8f7d7318598c5}{Game\+Object}.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_game_object_a824c0212a0c2958d9facfa97947c7332_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_game_object_a824c0212a0c2958d9facfa97947c7332_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_game_object_a0e49616a6bb7cea91b45288a886e7e8e}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!get\+Range\+Shape@{get\+Range\+Shape}}
+\index{get\+Range\+Shape@{get\+Range\+Shape}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{get\+Range\+Shape}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Circle\+Shape Tower\+Game\+Object\+::get\+Range\+Shape (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tower_game_object_a0e49616a6bb7cea91b45288a886e7e8e}
+\hypertarget{class_tower_game_object_a176b325a7415c42dd368a958d52f912c}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!get\+Rate\+Of\+Fire@{get\+Rate\+Of\+Fire}}
+\index{get\+Rate\+Of\+Fire@{get\+Rate\+Of\+Fire}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{get\+Rate\+Of\+Fire}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower\+Game\+Object\+::\+Rate\+Of\+Fire} Tower\+Game\+Object\+::get\+Rate\+Of\+Fire (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tower_game_object_a176b325a7415c42dd368a958d52f912c}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_game_object_a176b325a7415c42dd368a958d52f912c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_game_object_a9e83986372f5cba1f6788d61c27c52f7}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!set\+Range\+Shape@{set\+Range\+Shape}}
+\index{set\+Range\+Shape@{set\+Range\+Shape}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{set\+Range\+Shape}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+Game\+Object\+::set\+Range\+Shape (
+\begin{DoxyParamCaption}
+\item[{float}]{range}
+\end{DoxyParamCaption}
+)}}\label{class_tower_game_object_a9e83986372f5cba1f6788d61c27c52f7}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_game_object_a9e83986372f5cba1f6788d61c27c52f7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_game_object_a44938da9215d2552043ddc7b35067be0}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!set\+Rate\+Of\+Fire@{set\+Rate\+Of\+Fire}}
+\index{set\+Rate\+Of\+Fire@{set\+Rate\+Of\+Fire}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{set\+Rate\+Of\+Fire}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+Game\+Object\+::set\+Rate\+Of\+Fire (
+\begin{DoxyParamCaption}
+\item[{{\bf Tower\+Game\+Object\+::\+Rate\+Of\+Fire}}]{\+\_\+rate\+\_\+of\+\_\+fire}
+\end{DoxyParamCaption}
+)}}\label{class_tower_game_object_a44938da9215d2552043ddc7b35067be0}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_tower_game_object_a3c154fe0b6a056540332b0c40d60304f}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!\+\_\+range\+\_\+shape@{\+\_\+range\+\_\+shape}}
+\index{\+\_\+range\+\_\+shape@{\+\_\+range\+\_\+shape}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{\+\_\+range\+\_\+shape}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Circle\+Shape Tower\+Game\+Object\+::\+\_\+range\+\_\+shape\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_game_object_a3c154fe0b6a056540332b0c40d60304f}
+\hypertarget{class_tower_game_object_a791d99099306673e85ed6b93fd6f7b1b}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!\+\_\+rate\+\_\+of\+\_\+fire@{\+\_\+rate\+\_\+of\+\_\+fire}}
+\index{\+\_\+rate\+\_\+of\+\_\+fire@{\+\_\+rate\+\_\+of\+\_\+fire}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{\+\_\+rate\+\_\+of\+\_\+fire}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rate\+Of\+Fire} Tower\+Game\+Object\+::\+\_\+rate\+\_\+of\+\_\+fire\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_game_object_a791d99099306673e85ed6b93fd6f7b1b}
+\hypertarget{class_tower_game_object_a5c5f8162877828c20bf937c90338205c}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!clock@{clock}}
+\index{clock@{clock}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{clock}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Clock Tower\+Game\+Object\+::clock\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_game_object_a5c5f8162877828c20bf937c90338205c}
+\hypertarget{class_tower_game_object_ade7e1ea2089b38f90fa3920a80a3619a}{\index{Tower\+Game\+Object@{Tower\+Game\+Object}!time@{time}}
+\index{time@{time}!Tower\+Game\+Object@{Tower\+Game\+Object}}
+\subsubsection[{time}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Time Tower\+Game\+Object\+::time\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tower_game_object_ade7e1ea2089b38f90fa3920a80a3619a}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/game\+Objects/\hyperlink{_tower_game_object_8h}{Tower\+Game\+Object.\+h}\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/src/game\+Objects/\hyperlink{_tower_game_object_8cpp}{Tower\+Game\+Object.\+cpp}\end{DoxyCompactItemize}

@@ -6,11 +6,12 @@
 <area shape="rect" id="node9" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="209,239,373,281"/>
 <area shape="rect" id="node11" href="$class_game_state_play.html#aec5f72cea0e80d1d83b9cbe155a65ce9" title="GameStatePlay::handleGameOver" alt="" coords="180,305,401,332"/>
 <area shape="rect" id="node13" href="$class_game_state_start.html#abf9604839c31d8b48f3cdccb79f370e5" title="Function that transitions to the GameStateMainMenu state. " alt="" coords="187,356,395,383"/>
-<area shape="rect" id="node15" href="$_main_8cpp.html#a17c71e8de8c58645dd41431d716ac739" title="main" alt="" coords="265,407,316,433"/>
+<area shape="rect" id="node15" href="$_main_8cpp.html#aa306ac815a7115856bc4c6c8f3376df5" title="handleGameMode" alt="" coords="227,407,354,433"/>
 <area shape="rect" id="node4" href="$class_game_state_game_over.html#a10777cb963bba4f1c80edd6112888585" title="Handles player input. " alt="" coords="469,57,626,98"/>
 <area shape="rect" id="node6" href="$class_game_state_win.html#a6a40673e81af38639e4191c0ec2f4048" title="Handles player input. " alt="" coords="455,123,640,149"/>
 <area shape="rect" id="node8" href="$class_game_state_main_menu.html#a91ca3c60e107d135ab67c5f9e05e8aa6" title="Handles player input. " alt="" coords="469,174,625,215"/>
 <area shape="rect" id="node10" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="474,239,621,281"/>
 <area shape="rect" id="node12" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="467,305,628,332"/>
 <area shape="rect" id="node14" href="$class_game_state_start.html#afa9da08e1a51b4914ee436e7f1c4f6e6" title="Handles player input. " alt="" coords="452,356,643,383"/>
+<area shape="rect" id="node16" href="$_main_8cpp.html#a17c71e8de8c58645dd41431d716ac739" title="main" alt="" coords="522,407,573,433"/>
 </map>

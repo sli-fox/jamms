@@ -1,5 +1,4 @@
 <map id="Tower::setPower" name="Tower::setPower">
-<area shape="rect" id="node2" href="$class_bulldog.html#adfecd22f881be0d7946534c2012275d7" title="Bulldog::upgradeTower" alt="" coords="179,5,333,32"/>
-<area shape="rect" id="node3" href="$class_dalmatian.html#aa87cd8b4c763d84d24964024bde2fc9b" title="Dalmatian::upgradeTower" alt="" coords="172,56,340,83"/>
-<area shape="rect" id="node4" href="$class_shih_tzu.html#a9d8d599edbc19d2a16a65646d0cbc485" title="ShihTzu::upgradeTower" alt="" coords="177,107,335,133"/>
+<area shape="rect" id="node2" href="$class_bulldog.html#adfecd22f881be0d7946534c2012275d7" title="Bulldog::upgradeTower" alt="" coords="174,5,327,32"/>
+<area shape="rect" id="node3" href="$class_shih_tzu.html#a9d8d599edbc19d2a16a65646d0cbc485" title="ShihTzu::upgradeTower" alt="" coords="172,56,329,83"/>
 </map>

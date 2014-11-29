@@ -1,0 +1,4 @@
+<map id="GameStatePlay::getReturnToEditorButtonSpecs" name="GameStatePlay::getReturnToEditorButtonSpecs">
+<area shape="rect" id="node2" href="$class_game_state_play.html#a63a3ba0c891afd8ec126806bab4f315a" title="Draws game to the render window. " alt="" coords="232,13,381,39"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#ab41594c10b04429a3126d4a8085de82d" title="GameStatePlay::runThreads" alt="" coords="429,13,616,39"/>
+</map>

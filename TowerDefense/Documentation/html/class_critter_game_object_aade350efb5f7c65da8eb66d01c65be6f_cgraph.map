@@ -1,0 +1,5 @@
+<map id="CritterGameObject::controlCat" name="CritterGameObject::controlCat">
+<area shape="rect" id="node2" href="$class_game_object.html#ad568496dd9cee5b9edd9357d30a00dff" title="Converts and retrieves an pair&lt;float, float&gt; object from a sf::vector2f. " alt="" coords="199,5,367,32"/>
+<area shape="rect" id="node3" href="$class_game_object.html#a3731c03ddcbdb904bd41af78e09d262a" title="Gets the size of a sprite. " alt="" coords="192,56,373,83"/>
+<area shape="rect" id="node4" href="$class_critter_game_object.html#a546fa242023f61965a284e4a2e72ab7d" title="CritterGameObject::\lupdatePosition" alt="" coords="213,107,352,149"/>
+</map>

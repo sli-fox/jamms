@@ -1,4 +1,7 @@
 <map id="yellow" name="yellow">
-<area shape="rect" id="node2" href="$class_tower.html#a9f067c2b9e5e6987f341704b8b098606" title="Tower::attack" alt="" coords="112,5,212,32"/>
-<area shape="rect" id="node3" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="260,5,448,32"/>
+<area shape="rect" id="node2" href="$class_tower.html#a9f067c2b9e5e6987f341704b8b098606" title="Tower::attack" alt="" coords="112,81,212,108"/>
+<area shape="rect" id="node3" href="$class_burn_effect.html#a79e25ceec437f8beb196751e6cd37e2e" title="BurnEffect::attack" alt="" coords="291,5,417,32"/>
+<area shape="rect" id="node4" href="$class_freeze_effect.html#a6820f382c09080db9d8e5fbc26287f74" title="FreezeEffect::attack" alt="" coords="285,56,423,83"/>
+<area shape="rect" id="node5" href="$class_slow_effect.html#a0004dd210f4c8aac78fc72902b2bba1f" title="SlowEffect::attack" alt="" coords="291,107,417,133"/>
+<area shape="rect" id="node6" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="260,157,448,184"/>
 </map>

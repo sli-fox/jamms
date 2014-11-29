@@ -1,8 +1,8 @@
 <map id="Tile" name="Tile">
-<area shape="rect" id="node3" href="$class_dead_tile.html" title="{DeadTile\n||+ DeadTile()\l+ ~DeadTile()\l}" alt="" coords="5,549,105,641"/>
-<area shape="rect" id="node4" href="$class_path_tile.html" title="{PathTile\n||+ PathTile()\l+ ~PathTile()\l}" alt="" coords="129,549,227,641"/>
-<area shape="rect" id="node7" href="$class_scenery_tile.html" title="{SceneryTile\n||+ SceneryTile()\l+ ~SceneryTile()\l}" alt="" coords="251,549,369,641"/>
-<area shape="rect" id="node2" href="$class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="115,5,241,259"/>
-<area shape="rect" id="node5" href="$class_end_tile.html" title="{EndTile\n||+ EndTile()\l+ ~EndTile()\l}" alt="" coords="71,689,165,781"/>
-<area shape="rect" id="node6" href="$class_start_tile.html" title="{StartTile\n||+ StartTile()\l+ ~StartTile()\l}" alt="" coords="189,689,287,781"/>
+<area shape="rect" id="node3" href="$class_dead_tile.html" title="{DeadTile\n||+ DeadTile()\l+ ~DeadTile()\l}" alt="" coords="5,564,105,656"/>
+<area shape="rect" id="node4" href="$class_path_tile.html" title="{PathTile\n||+ PathTile()\l+ ~PathTile()\l}" alt="" coords="129,564,227,656"/>
+<area shape="rect" id="node7" href="$class_scenery_tile.html" title="{SceneryTile\n||+ SceneryTile()\l+ ~SceneryTile()\l}" alt="" coords="251,564,369,656"/>
+<area shape="rect" id="node2" href="$class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="115,5,241,273"/>
+<area shape="rect" id="node5" href="$class_end_tile.html" title="{EndTile\n||+ EndTile()\l+ ~EndTile()\l}" alt="" coords="71,704,165,796"/>
+<area shape="rect" id="node6" href="$class_start_tile.html" title="{StartTile\n||+ StartTile()\l+ ~StartTile()\l}" alt="" coords="189,704,287,796"/>
 </map>

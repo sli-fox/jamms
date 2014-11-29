@@ -1,5 +1,16 @@
 var searchData=
 [
+  ['baby',['Baby',['../class_tower.html#a23889cd9ee2fbae0420c97105fd6ebc8adb2878fae2becbff4d2087394ba2000a',1,'Tower']]],
+  ['babybulldog',['BabyBulldog',['../class_baby_bulldog.html',1,'BabyBulldog'],['../class_baby_bulldog.html#a58ec67bd22716eac5303165b780ca86e',1,'BabyBulldog::BabyBulldog()'],['../class_baby_bulldog.html#adb01b9d1b5b21f1caf39d3eb737646a4',1,'BabyBulldog::BabyBulldog(int tileX, int tileY)']]],
+  ['babybulldog_2ecpp',['BabyBulldog.cpp',['../_baby_bulldog_8cpp.html',1,'']]],
+  ['babybulldog_2eh',['BabyBulldog.h',['../_baby_bulldog_8h.html',1,'']]],
+  ['babydalmatian',['BabyDalmatian',['../class_baby_dalmatian.html',1,'BabyDalmatian'],['../class_baby_dalmatian.html#a8f4acd61c863f01d1d525723349c9e89',1,'BabyDalmatian::BabyDalmatian()'],['../class_baby_dalmatian.html#a0b9460fd26d39fa361b1386486f96f19',1,'BabyDalmatian::BabyDalmatian(int tileX, int tileY)']]],
+  ['babydalmatian_2ecpp',['BabyDalmatian.cpp',['../_baby_dalmatian_8cpp.html',1,'']]],
+  ['babydalmatian_2eh',['BabyDalmatian.h',['../_baby_dalmatian_8h.html',1,'']]],
+  ['babyshihtzu',['BabyShihTzu',['../class_baby_shih_tzu.html',1,'BabyShihTzu'],['../class_baby_shih_tzu.html#acc87c55b63e1aa025cb277c436570b6a',1,'BabyShihTzu::BabyShihTzu()'],['../class_baby_shih_tzu.html#afcc1a988bb58e1e4f1eeab886c7c233d',1,'BabyShihTzu::BabyShihTzu(int tileX, int tileY)']]],
+  ['babyshihtzu_2ecpp',['BabyShihTzu.cpp',['../_baby_shih_tzu_8cpp.html',1,'']]],
+  ['babyshihtzu_2eh',['BabyShihTzu.h',['../_baby_shih_tzu_8h.html',1,'']]],
+  ['big_5fdog',['big_dog',['../class_tower_test.html#a9468a416c0811ad87dcc103385d8a248',1,'TowerTest']]],
   ['black_5fcat',['BLACK_CAT',['../class_critter.html#acda8a5c3234b66101e0546d75d6f90f1a91135fa8da5b64a8a556e8c198b46fe9',1,'Critter']]],
   ['blackcat',['BlackCat',['../class_black_cat.html',1,'BlackCat'],['../class_black_cat.html#a7974aa98721932e53102c10484af1abe',1,'BlackCat::BlackCat()']]],
   ['blackcat_2ecpp',['BlackCat.cpp',['../_black_cat_8cpp.html',1,'']]],
@@ -12,8 +23,13 @@ var searchData=
   ['bulldog',['Bulldog',['../class_bulldog.html',1,'Bulldog'],['../class_tower.html#a110a21c18d4ec095c6234bd17f004b3eab8e7a477424b107e0e8e39401c757e03',1,'Tower::Bulldog()'],['../class_bulldog.html#a21e6065a0e9cfa5aa862c8b7a5e1b88c',1,'Bulldog::Bulldog()']]],
   ['bulldog_2ecpp',['Bulldog.cpp',['../_bulldog_8cpp.html',1,'']]],
   ['bulldog_2eh',['Bulldog.h',['../_bulldog_8h.html',1,'']]],
+  ['burn',['Burn',['../struct_burn.html',1,'Burn'],['../struct_burn.html#acc5865b4cf477642e883e3132dea63c1',1,'Burn::Burn()'],['../class_critter_effect.html#a82b9b0530aff3cbf89c8cc6c60222419af3d31fe9bfb16333918fbfc1b327d22f',1,'CritterEffect::BURN()']]],
+  ['burneffect',['BurnEffect',['../class_burn_effect.html',1,'BurnEffect'],['../class_burn_effect.html#ac51b659f222ccbc30cbb609ef177c887',1,'BurnEffect::BurnEffect()'],['../class_burn_effect.html#a06df17552152fa567597e60ac9fc5a76',1,'BurnEffect::BurnEffect(Tower *decoratedTower)']]],
+  ['burneffect_2ecpp',['BurnEffect.cpp',['../_burn_effect_8cpp.html',1,'']]],
+  ['burneffect_2eh',['BurnEffect.h',['../_burn_effect_8h.html',1,'']]],
   ['burning',['Burning',['../class_tower.html#a355ab1cbcfd8c4d037ccf8937f784445a278a02e93c587ce4032eed7176b9c5b6',1,'Tower']]],
   ['buttoncommandlibrary',['buttonCommandLibrary',['../class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b',1,'GameStateMapEditor::buttonCommandLibrary()'],['../class_game_state_play.html#a79237473ceeb26b94f641d0bf66c1ec0',1,'GameStatePlay::buttonCommandLibrary()']]],
   ['buttonmap',['buttonMap',['../class_game_state_map_editor.html#adda219b4fc3202046be4e861db0971c8',1,'GameStateMapEditor::buttonMap()'],['../class_game_state_play.html#ab0755d9a7eb5708a840d82bbdc7eb9f2',1,'GameStatePlay::buttonMap()']]],
-  ['buytower',['buyTower',['../class_tower_manager.html#ac057ea8072b060d0fad71fa218e219af',1,'TowerManager']]]
+  ['buttonspecs',['buttonSpecs',['../class_game_state_play.html#a65d1a4d74f886ce3de872c1ffbb63d57',1,'GameStatePlay']]],
+  ['buytower',['buyTower',['../class_tower_manager.html#a48859fff5518d39549e26d73633eb3c6',1,'TowerManager']]]
 ];

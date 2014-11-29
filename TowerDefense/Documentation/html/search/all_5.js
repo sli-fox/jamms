@@ -2,11 +2,19 @@ var searchData=
 [
   ['earncash',['earnCash',['../class_player.html#af3bdca44c57bee211d1d0ea53c11f9b3',1,'Player']]],
   ['earnlives',['earnLives',['../class_player.html#a94ae7ed65222575524357b70e7d44592',1,'Player']]],
+  ['effect',['EFFECT',['../class_critter_effect.html#a82b9b0530aff3cbf89c8cc6c60222419',1,'CritterEffect']]],
+  ['effectdamage',['effectDamage',['../class_game_state_play.html#a2c0118859e607a1ef2aa008f1b94b7f8',1,'GameStatePlay']]],
+  ['effectdamageclock',['effectDamageClock',['../class_game_state_play.html#a672216db210bc2dca82196badc7c20e9',1,'GameStatePlay']]],
+  ['effectdamagetime',['effectDamageTime',['../class_game_state_play.html#a9d324dec79041681951cf84349507e7f',1,'GameStatePlay']]],
+  ['effectlist',['effectList',['../class_critter.html#a9974fdc5dd5ef5afc8ff2fffbd2261e0',1,'Critter']]],
+  ['elapsedticks',['elapsedTicks',['../class_critter_effect.html#a5839d4edca217fa559f6a45ddc91a73b',1,'CritterEffect']]],
   ['empty',['EMPTY',['../class_tile.html#acb53d82f9dacff45a98acc63276928eba410bd5c2074558a74ff688ff43723296',1,'Tile']]],
   ['end',['END',['../class_tile.html#acb53d82f9dacff45a98acc63276928ebabe602dcbe043275048d7cb0f2df6c2db',1,'Tile']]],
   ['end_5fframe',['end_frame',['../class_animation.html#a4dcf93e9ee175acaa8cc84f3241e8ee0',1,'Animation']]],
   ['endofwaves',['endOfWaves',['../class_game_state_play.html#a0e613be489b2c61857676303a15ce3cc',1,'GameStatePlay']]],
   ['endtile',['EndTile',['../class_end_tile.html',1,'EndTile'],['../class_end_tile.html#a9818c2f740546dfe5abdefa9cc8b4a32',1,'EndTile::EndTile()']]],
   ['ent',['ent',['../struct___w_d_i_r.html#a84ae1457352005f813ed4b3dc1994b62',1,'_WDIR::ent()'],['../struct_d_i_r.html#a59e9f5211cbb2f8e5b2807ccfdd2a7fc',1,'DIR::ent()']]],
+  ['event_5ftype',['event_type',['../class_cmd_base__c.html#a20e2061e49434fe75eeeb5fc75e4a448',1,'CmdBase_c']]],
+  ['executestrategy',['executeStrategy',['../class_tower.html#aa6950f72316cb57bbc8c32a9e332dff3',1,'Tower']]],
   ['exit',['EXIT',['../class_menu.html#a2d708ce8df47ab5feaea1ba559a938d3aeb6dc9b046b3581da0ce2c13dd6a329f',1,'Menu']]]
 ];

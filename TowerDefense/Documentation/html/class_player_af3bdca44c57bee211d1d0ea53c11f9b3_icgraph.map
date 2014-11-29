@@ -1,5 +1,7 @@
 <map id="Player::earnCash" name="Player::earnCash">
-<area shape="rect" id="node2" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="652,7,840,33"/>
-<area shape="rect" id="node3" href="$class_tower_manager.html#afa7bbe1d178269f32df231807ab419d8" title="TowerManager::sellTower" alt="" coords="176,32,344,59"/>
-<area shape="rect" id="node4" href="$class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="392,29,604,70"/>
+<area shape="rect" id="node2" href="$class_game_state_play.html#a2278751d53b50beb97c809db26f1b9b6" title="GameStatePlay::handleCritter\lRemovalFromWave" alt="" coords="176,5,371,47"/>
+<area shape="rect" id="node4" href="$class_tower_manager.html#afa7bbe1d178269f32df231807ab419d8" title="TowerManager::sellTower" alt="" coords="189,71,357,98"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="444,13,605,39"/>
+<area shape="rect" id="node5" href="$class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="419,64,631,105"/>
+<area shape="rect" id="node6" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="679,71,867,98"/>
 </map>

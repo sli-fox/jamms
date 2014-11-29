@@ -1,0 +1,3 @@
+<map id="TowerGameObject" name="TowerGameObject">
+<area shape="rect" id="node2" href="$class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="46,145,171,399"/>
+</map>

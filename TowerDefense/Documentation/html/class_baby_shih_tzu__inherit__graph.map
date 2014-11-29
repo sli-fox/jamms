@@ -1,0 +1,4 @@
+<map id="BabyShihTzu" name="BabyShihTzu">
+<area shape="rect" id="node2" href="$class_tower.html" title="{Tower\n|+ serial\l# _id\l# _name\l# _type\l# _upgrade_level\l# _power\l# _range\l# _range_shape\l# _rate_of_fire\l# _special_effect\l# _buy_cost\land 6 more...\l|+ Tower()\l+ ~Tower()\l+ upgradeTower()\l+ canAttack()\l+ canApplySpecialAfterEffects()\l+ attack()\l+ executeStrategy()\l+ findCollisionPath()\l+ rotateTowardsTarget()\l+ angleInDegrees()\land 33 more...\l}" alt="" coords="5,321,212,707"/>
+<area shape="rect" id="node3" href="$class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="46,5,171,273"/>
+</map>

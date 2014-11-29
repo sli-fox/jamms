@@ -1,0 +1,3 @@
+<map id="Slowe" name="Slowe">
+<area shape="rect" id="node2" href="$class_critter_effect.html" title="{CritterEffect\n|# stacks\l# damage\l# speedModifier\l# cycles\l# elapsedTicks\l# type\l|+ CritterEffect()\l+ CritterEffect()\l+ ~CritterEffect()\l+ getDamage()\l+ getSpeedModifer()\l+ getStacks()\l+ getCycles()\l+ getElapsedTicks()\l+ applyEffect()\l+ addStacks()\l+ tick()\l+ isEqual()\l}" alt="" coords="5,5,144,317"/>
+</map>

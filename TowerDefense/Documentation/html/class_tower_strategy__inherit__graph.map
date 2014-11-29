@@ -1,0 +1,11 @@
+<map id="TowerStrategy" name="TowerStrategy">
+<area shape="rect" id="node2" href="$class_fastest_strategy.html" title="{FastestStrategy\n||+ computeTarget()\l+ getName()\l}" alt="" coords="5,145,133,237"/>
+<area shape="rect" id="node3" href="$class_least_health_strategy.html" title="{LeastHealthStrategy\n||+ computeTarget()\l+ getName()\l}" alt="" coords="158,145,298,237"/>
+<area shape="rect" id="node4" href="$class_most_coins_strategy.html" title="{MostCoinsStrategy\n||+ computeTarget()\l+ getName()\l}" alt="" coords="323,145,456,237"/>
+<area shape="rect" id="node5" href="$class_most_health_strategy.html" title="{MostHealthStrategy\n||+ computeTarget()\l+ getName()\l}" alt="" coords="481,145,618,237"/>
+<area shape="rect" id="node6" href="$class_nearest_end_point_strategy.html" title="{NearestEndPointStrategy\n||+ computeTarget()\l+ getName()\l}" alt="" coords="642,145,811,237"/>
+<area shape="rect" id="node7" href="$class_nearest_tower_strategy.html" title="{NearestTowerStrategy\n||+ computeTarget()\l+ getName()\l}" alt="" coords="835,145,986,237"/>
+<area shape="rect" id="node8" href="$class_slowest_strategy.html" title="{SlowestStrategy\n||+ computeTarget()\l+ getName()\l}" alt="" coords="1011,145,1139,237"/>
+<area shape="rect" id="node9" href="$class_strongest_strategy.html" title="{StrongestStrategy\n||+ computeTarget()\l+ getName()\l}" alt="" coords="1163,145,1291,237"/>
+<area shape="rect" id="node10" href="$class_weakest_strategy.html" title="{WeakestStrategy\n||+ computeTarget()\l+ getName()\l}" alt="" coords="1315,145,1443,237"/>
+</map>

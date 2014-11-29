@@ -86,6 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_game_state_play-members.html">List of all members</a>  </div>
@@ -110,7 +111,7 @@ Collaboration diagram for GameStatePlay:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_state_play__coll__graph.png" border="0" usemap="#_game_state_play_coll__map" alt="Collaboration graph"/></div>
 <map name="_game_state_play_coll__map" id="_game_state_play_coll__map">
-<area shape="rect" id="node2" href="class_game_state.html" title="GameState virtual base class. GameState is an interface for states within the game. " alt="" coords="441,1343,549,1464"/><area shape="rect" id="node3" href="class_game.html" title="Creates a Game. Game is a GameState manager that handles the changing of the states and info storage ..." alt="" coords="428,865,551,1075"/><area shape="rect" id="node4" href="class_map.html" title="{Map\n|+ MAX_MAP_WIDTH\l+ MAX_MAP_HEIGHT\l&#45; mapWidth\l&#45; mapHeight\l&#45; hasStart\l&#45; hasEnd\l|+ Map()\l+ Map()\l+ ~Map()\l+ getMapWidth()\l+ getMapHeight()\l+ setMapSize()\l+ getTile()\l+ addTile()\l+ removeTile()\l+ getMapPath()\land 11 more...\l&#45; outOfBounds()\l&#45; validPathPlacement()\l&#45; convertType()\l&#45; convertType()\l}" alt="" coords="272,315,424,671"/><area shape="rect" id="node11" href="class_player.html" title="{Player\n|&#45; _cash\l&#45; _points\l&#45; _high_score\l&#45; _lives\l|+ Player()\l+ Player()\l+ ~Player()\l+ getName()\l+ getCash()\l+ getPoints()\l+ getHighScore()\l+ getLives()\l+ earnCash()\l+ spendCash()\land 6 more...\l}" alt="" coords="448,359,568,627"/><area shape="rect" id="node13" href="class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="592,373,717,612"/><area shape="rect" id="node12" href="class_critter_wave.html" title="Represents a wave of Critters. Class that has holds Critters in a map data structure, which represents a wave of Critters. " alt="" coords="1139,1255,1346,1552"/><area shape="rect" id="node15" href="class_critter.html" title="Abstract base class of all Critters Critter defines the attributes, accessors, and update function fo..." alt="" coords="812,748,988,1192"/><area shape="rect" id="node14" href="class_black_cat.html" title="Class for BlackCat. Subclass of Critter. " alt="" coords="851,1350,971,1457"/><area shape="rect" id="node21" href="class_white_cat.html" title="Class for WhiteCat. Subclass of Critter. " alt="" coords="995,1350,1115,1457"/><area shape="rect" id="node16" href="class_i_subject.html" title="{ISubject\n||+ attach()\l+ detach()\l+ notify()\l}" alt="" coords="742,439,823,546"/><area shape="rect" id="node18" href="class_waypoint.html" title="Represents an Waypoint in the game. " alt="" coords="847,439,953,546"/><area shape="rect" id="node19" href="class_animation_handler.html" title="Handles animations. " alt="" coords="1097,388,1257,597"/><area shape="rect" id="node20" href="class_game_object_manager.html" title="{GameObjectManager\n|&#45; _m_game_objects\l|+ GameObjectManager()\l+ ~GameObjectManager()\l+ add()\l+ remove()\l+ getObjectCount()\l+ getGameObject()\l+ drawAll()\l}" alt="" coords="1468,1321,1641,1486"/><area shape="rect" id="node22" href="class_tower_manager.html" title="{TowerManager\n|+ tArrayRows\l+ tArrayCols\l|+ TowerManager()\l+ TowerManager()\l+ ~TowerManager()\l+ getTowerMap()\l+ getTower()\l+ buyTower()\l+ sellTower()\l+ isTileFree()\l+ outOfBound()\l+ clearAllTowers()\l+ draw()\l+ getInstance()\l}" alt="" coords="1666,1277,1801,1530"/></map>
+<area shape="rect" id="node2" href="class_game_state.html" title="GameState virtual base class. GameState is an interface for states within the game. " alt="" coords="510,1488,618,1609"/><area shape="rect" id="node3" href="class_game.html" title="Creates a Game. Game is a GameState manager that handles the changing of the states and info storage ..." alt="" coords="491,755,613,965"/><area shape="rect" id="node4" href="class_map.html" title="{Map\n|+ MAX_MAP_WIDTH\l+ MAX_MAP_HEIGHT\l&#45; mapWidth\l&#45; mapHeight\l&#45; hasStart\l&#45; hasEnd\l|+ Map()\l+ Map()\l+ ~Map()\l+ getMapWidth()\l+ getMapHeight()\l+ setMapSize()\l+ getTile()\l+ addTile()\l+ removeTile()\l+ getMapPath()\land 12 more...\l&#45; outOfBounds()\l&#45; validPathPlacement()\l&#45; convertType()\l&#45; convertType()\l}" alt="" coords="317,315,469,671"/><area shape="rect" id="node11" href="class_player.html" title="{Player\n|&#45; _startingCash\l&#45; _cash\l&#45; _points\l&#45; _high_score\l&#45; _lives\l|+ Player()\l+ Player()\l+ ~Player()\l+ getName()\l+ getCash()\l+ getPoints()\l+ getHighScore()\l+ getLives()\l+ earnCash()\l+ spendCash()\land 7 more...\l}" alt="" coords="493,351,613,634"/><area shape="rect" id="node13" href="class_tower.html" title="{Tower\n|+ serial\l# _id\l# _type\l# _upgrade_level\l# _power\l# _range\l# _range_shape\l# _rate_of_fire\l# _special_effect\l# _buy_cost\l# _upgrade_cost\l# _sell_cost\l# clock\l# time\l# _strategy\l|+ Tower()\l+ ~Tower()\l+ upgradeTower()\l+ canAttack()\l+ canApplySpecialAfterEffects()\l+ attack()\l+ executeStrategy()\l+ findCollisionPath()\l+ rotateTowardsTarget()\l+ angleInDegrees()\land 33 more...\l}" alt="" coords="1069,1633,1275,2063"/><area shape="rect" id="node14" href="class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="1017,366,1143,619"/><area shape="rect" id="node12" href="class_critter_wave.html" title="Represents a wave of Critters. Class that has holds Critters in a map data structure, which represents a wave of Critters. " alt="" coords="689,1699,895,1997"/><area shape="rect" id="node16" href="class_critter_game_object.html" title="Creates a CritterGameObject. CritterGameObject is a subclass of GameObject that separates GUI code sp..." alt="" coords="1271,733,1441,987"/><area shape="rect" id="node15" href="class_critter.html" title="Abstract base class of all Critters Critter defines the attributes, accessors, and update function fo..." alt="" coords="1272,1064,1448,1464"/><area shape="rect" id="node19" href="class_black_cat.html" title="Class for BlackCat. Subclass of Critter. " alt="" coords="1300,1795,1420,1901"/><area shape="rect" id="node21" href="class_white_cat.html" title="Class for WhiteCat. Subclass of Critter. " alt="" coords="1444,1795,1564,1901"/><area shape="rect" id="node17" href="class_waypoint.html" title="Represents an Waypoint in the game. " alt="" coords="1171,439,1277,546"/><area shape="rect" id="node18" href="class_animation_handler.html" title="Handles animations. " alt="" coords="1421,388,1581,597"/><area shape="rect" id="node20" href="class_game_object_manager.html" title="{GameObjectManager\n|&#45; _m_game_objects\l|+ GameObjectManager()\l+ ~GameObjectManager()\l+ add()\l+ remove()\l+ getObjectCount()\l+ getGameObject()\l+ drawAll()\l}" alt="" coords="1588,1765,1761,1931"/><area shape="rect" id="node22" href="class_tower_manager.html" title="{TowerManager\n|+ tArrayRows\l+ tArrayCols\l|+ TowerManager()\l+ TowerManager()\l+ ~TowerManager()\l+ getTowerMap()\l+ getTower()\l+ buyTower()\l+ upgradeTower()\l+ sellTower()\l+ isTileFree()\l+ outOfBound()\l+ clearAllTowers()\l+ draw()\l+ getInstance()\l}" alt="" coords="1966,1714,2101,1982"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -194,6 +195,23 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a6047cbdce7daa2092d95bf786db5267a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a6047cbdce7daa2092d95bf786db5267a">setCritterWaveLevels</a> (<a class="el" href="class_waypoint.html">Waypoint</a> *starting_waypoint)</td></tr>
 <tr class="separator:a6047cbdce7daa2092d95bf786db5267a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a11c1d1976d85631c84a8db18b1458637"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a11c1d1976d85631c84a8db18b1458637">getTower1ButtonSpecs</a> ()</td></tr>
+<tr class="separator:a11c1d1976d85631c84a8db18b1458637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b9e886dc6a80b52f559441c7a3455d8"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a0b9e886dc6a80b52f559441c7a3455d8">getTower2ButtonSpecs</a> ()</td></tr>
+<tr class="separator:a0b9e886dc6a80b52f559441c7a3455d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c79cb57b169ec8c0dc08c49451ebfc1"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a0c79cb57b169ec8c0dc08c49451ebfc1">getTower3ButtonSpecs</a> ()</td></tr>
+<tr class="separator:a0c79cb57b169ec8c0dc08c49451ebfc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84292b8af5919f8da3b54c1d1dba5cfd"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a84292b8af5919f8da3b54c1d1dba5cfd">getPauseButtonSpecs</a> ()</td></tr>
+<tr class="separator:a84292b8af5919f8da3b54c1d1dba5cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93771d14333ebc475f2428d3c1a3c3d3"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a93771d14333ebc475f2428d3c1a3c3d3">getUnPauseButtonSpecs</a> ()</td></tr>
+<tr class="separator:a93771d14333ebc475f2428d3c1a3c3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed4df6e7af126ba32ac06eb5dd79694d"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#aed4df6e7af126ba32ac06eb5dd79694d">getReturnToEditorButtonSpecs</a> ()</td></tr>
+<tr class="separator:aed4df6e7af126ba32ac06eb5dd79694d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace72b0eb76edd4a7e02ab12454f9f5b7"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#ace72b0eb76edd4a7e02ab12454f9f5b7">getStartWaveButtonSpecs</a> ()</td></tr>
+<tr class="separator:ace72b0eb76edd4a7e02ab12454f9f5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:aef4648e9978d2b031365686fa5221038"><td class="memItemLeft" align="right" valign="top">sf::Vector2i&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#aef4648e9978d2b031365686fa5221038">localPosition</a></td></tr>
@@ -204,24 +222,64 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ae34c6aa315832bd457df59720345534e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1114fc8f3e15f5f46ab4361dad37ad0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_object.html">GameObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a1114fc8f3e15f5f46ab4361dad37ad0b">mapBackdrop</a></td></tr>
 <tr class="separator:a1114fc8f3e15f5f46ab4361dad37ad0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153cd0b94e19f3c0fab378c716678f60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_object.html">GameObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a153cd0b94e19f3c0fab378c716678f60">interfaceBackdrop</a></td></tr>
+<tr class="separator:a153cd0b94e19f3c0fab378c716678f60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0755d9a7eb5708a840d82bbdc7eb9f2"><td class="memItemLeft" align="right" valign="top">std::map&lt; string, <a class="el" href="class_game_object.html">GameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#ab0755d9a7eb5708a840d82bbdc7eb9f2">buttonMap</a></td></tr>
 <tr class="separator:ab0755d9a7eb5708a840d82bbdc7eb9f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f5a18b6d0597c0f6c4d26b4df873ee6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a6f5a18b6d0597c0f6c4d26b4df873ee6">returnToMenu</a></td></tr>
 <tr class="separator:a6f5a18b6d0597c0f6c4d26b4df873ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ac9c1b314dfbfe0082728eacfc401fc"><td class="memItemLeft" align="right" valign="top">sf::CircleShape&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a4ac9c1b314dfbfe0082728eacfc401fc">range</a></td></tr>
 <tr class="separator:a4ac9c1b314dfbfe0082728eacfc401fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac22880bd1c34ebbe5d45182caaaf2523"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tower.html#a110a21c18d4ec095c6234bd17f004b3e">Tower::TowerType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#ac22880bd1c34ebbe5d45182caaaf2523">towerSelector</a></td></tr>
-<tr class="separator:ac22880bd1c34ebbe5d45182caaaf2523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfd6271509da5b9cec7ed2904b3ad33a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#acfd6271509da5b9cec7ed2904b3ad33a">towerSelector</a></td></tr>
+<tr class="separator:acfd6271509da5b9cec7ed2904b3ad33a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af37399cc10da66842740622a891489e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tower.html">Tower</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#af37399cc10da66842740622a891489e0">fieldTowerSelector</a></td></tr>
+<tr class="separator:af37399cc10da66842740622a891489e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a333494e6c4a8ae4a285635776c3b486e"><td class="memItemLeft" align="right" valign="top">sf::Font&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a333494e6c4a8ae4a285635776c3b486e">font</a></td></tr>
 <tr class="separator:a333494e6c4a8ae4a285635776c3b486e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add98cf58c2cc6af809cade72be6c6c0a"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#add98cf58c2cc6af809cade72be6c6c0a">towerSpecs</a></td></tr>
-<tr class="separator:add98cf58c2cc6af809cade72be6c6c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61669dc94331d0302f3a0f5792304049"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a61669dc94331d0302f3a0f5792304049">waveSpecs</a></td></tr>
 <tr class="separator:a61669dc94331d0302f3a0f5792304049"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afee193abc64a41d61a08db7d6d5b507d"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#afee193abc64a41d61a08db7d6d5b507d">nextWaveSpecs</a></td></tr>
 <tr class="separator:afee193abc64a41d61a08db7d6d5b507d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e7f3929ab226b4ad0fb627d3c779f84"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a5e7f3929ab226b4ad0fb627d3c779f84">playerSpecs</a></td></tr>
 <tr class="separator:a5e7f3929ab226b4ad0fb627d3c779f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add98cf58c2cc6af809cade72be6c6c0a"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#add98cf58c2cc6af809cade72be6c6c0a">towerSpecs</a></td></tr>
+<tr class="separator:add98cf58c2cc6af809cade72be6c6c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1667ea17be43ded7176a9dc28d99a8e1"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a1667ea17be43ded7176a9dc28d99a8e1">critterSpecs</a></td></tr>
+<tr class="separator:a1667ea17be43ded7176a9dc28d99a8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65d1a4d74f886ce3de872c1ffbb63d57"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a65d1a4d74f886ce3de872c1ffbb63d57">buttonSpecs</a></td></tr>
+<tr class="separator:a65d1a4d74f886ce3de872c1ffbb63d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8809caa817213fe1b78749b3b19ad6f"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#ac8809caa817213fe1b78749b3b19ad6f">selectedTowerSpecs</a></td></tr>
+<tr class="separator:ac8809caa817213fe1b78749b3b19ad6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1ee7931ef89e141f54ad6588759ea6f"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#ae1ee7931ef89e141f54ad6588759ea6f">nearestTower</a></td></tr>
+<tr class="separator:ae1ee7931ef89e141f54ad6588759ea6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ca301f18fc6be19a8465721a6c3bb1f"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a4ca301f18fc6be19a8465721a6c3bb1f">nearestEnd</a></td></tr>
+<tr class="separator:a4ca301f18fc6be19a8465721a6c3bb1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19bbd6c5ddab619c2fed65c1a368395d"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a19bbd6c5ddab619c2fed65c1a368395d">strongest</a></td></tr>
+<tr class="separator:a19bbd6c5ddab619c2fed65c1a368395d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa528568bfe4f5fcc79605557c6d0d12d"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#aa528568bfe4f5fcc79605557c6d0d12d">weakest</a></td></tr>
+<tr class="separator:aa528568bfe4f5fcc79605557c6d0d12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ff2a6f5c9983a5240afa2aa94c3d034"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a1ff2a6f5c9983a5240afa2aa94c3d034">mostH</a></td></tr>
+<tr class="separator:a1ff2a6f5c9983a5240afa2aa94c3d034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ba25d35cbc05415be9173aac2ce4c1"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a68ba25d35cbc05415be9173aac2ce4c1">leastH</a></td></tr>
+<tr class="separator:a68ba25d35cbc05415be9173aac2ce4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5a191ff7adb99b88d5c967f44880264"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#aa5a191ff7adb99b88d5c967f44880264">slowest</a></td></tr>
+<tr class="separator:aa5a191ff7adb99b88d5c967f44880264"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8fba9f1816c183dc546ccbe8fc04cc"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a6b8fba9f1816c183dc546ccbe8fc04cc">fastest</a></td></tr>
+<tr class="separator:a6b8fba9f1816c183dc546ccbe8fc04cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d77b920db04a5a69e86625200631dd7"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a2d77b920db04a5a69e86625200631dd7">mostCoins</a></td></tr>
+<tr class="separator:a2d77b920db04a5a69e86625200631dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca10b4aceefc0e2732ec427c5b5b5c5"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, sf::Text &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a7ca10b4aceefc0e2732ec427c5b5b5c5">critterHealth</a></td></tr>
+<tr class="separator:a7ca10b4aceefc0e2732ec427c5b5b5c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af65d40be0eb5748b1d80186cefd3cc71"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, sf::Clock &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#af65d40be0eb5748b1d80186cefd3cc71">healthClock</a></td></tr>
+<tr class="separator:af65d40be0eb5748b1d80186cefd3cc71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a2fd0f59504ad64f5d8b871cbf3cd35"><td class="memItemLeft" align="right" valign="top">sf::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a4a2fd0f59504ad64f5d8b871cbf3cd35">healthTime</a></td></tr>
+<tr class="separator:a4a2fd0f59504ad64f5d8b871cbf3cd35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c0118859e607a1ef2aa008f1b94b7f8"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, sf::Text &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a2c0118859e607a1ef2aa008f1b94b7f8">effectDamage</a></td></tr>
+<tr class="separator:a2c0118859e607a1ef2aa008f1b94b7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a672216db210bc2dca82196badc7c20e9"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, sf::Clock &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a672216db210bc2dca82196badc7c20e9">effectDamageClock</a></td></tr>
+<tr class="separator:a672216db210bc2dca82196badc7c20e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d324dec79041681951cf84349507e7f"><td class="memItemLeft" align="right" valign="top">sf::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a9d324dec79041681951cf84349507e7f">effectDamageTime</a></td></tr>
+<tr class="separator:a9d324dec79041681951cf84349507e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9513cfeac2178d83e23ba6f9291fba8c"><td class="memItemLeft" align="right" valign="top">sf::View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state_play.html#a9513cfeac2178d83e23ba6f9291fba8c">_gameView</a></td></tr>
 <tr class="memdesc:a9513cfeac2178d83e23ba6f9291fba8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera view for the gameplay displayed to the window.  <a href="#a9513cfeac2178d83e23ba6f9291fba8c">More...</a><br /></td></tr>
 <tr class="separator:a9513cfeac2178d83e23ba6f9291fba8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -366,7 +424,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_state_play_a79237473ceeb26b94f641d0bf66c1ec0_cgraph.png" border="0" usemap="#class_game_state_play_a79237473ceeb26b94f641d0bf66c1ec0_cgraph" alt=""/></div>
 <map name="class_game_state_play_a79237473ceeb26b94f641d0bf66c1ec0_cgraph" id="class_game_state_play_a79237473ceeb26b94f641d0bf66c1ec0_cgraph">
-<area shape="rect" id="node2" href="class_game.html#a4b33dd67adef59bebadba8a234282c88" title="Helper pop function for GameState stack. " alt="" coords="309,5,427,32"/><area shape="rect" id="node3" href="class_game_state_play.html#a2eda31c4d98a8440c6eba38604aa2a79" title="GameStatePlay::handleCritter\lWaveLevelSwitching" alt="" coords="271,57,465,98"/><area shape="rect" id="node4" href="class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="513,27,684,69"/><area shape="rect" id="node5" href="class_critter_wave.html#a1244e59ebd702edd2530e6256779ace0" title="Returns a reference to a Critter in the map. " alt="" coords="523,93,675,120"/></map>
+<area shape="rect" id="node2" href="class_tower_manager.html#ae71fc7c55f92477846760b122d0f60b9" title="TowerManager::clearAllTowers" alt="" coords="271,5,469,32"/><area shape="rect" id="node3" href="class_player.html#ad85b7618b95a6d763db0587760fd2dd3" title="Player::resetStats" alt="" coords="307,56,433,83"/><area shape="rect" id="node4" href="class_game.html#a4b33dd67adef59bebadba8a234282c88" title="Helper pop function for GameState stack. " alt="" coords="311,107,429,133"/><area shape="rect" id="node5" href="class_game_state_play.html#a2eda31c4d98a8440c6eba38604aa2a79" title="GameStatePlay::handleCritter\lWaveLevelSwitching" alt="" coords="273,158,467,199"/><area shape="rect" id="node8" href="class_tower.html#aa5280191c23e7cd98e9a1d9cfaba3416" title="Tower::setStrategy" alt="" coords="305,224,435,251"/><area shape="rect" id="node9" href="class_tower.html#a2427fab36824f8ec98273cb5e563e0c9" title="Tower::getTowerSpecs" alt="" coords="293,275,447,301"/><area shape="rect" id="node6" href="class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="517,129,688,170"/><area shape="rect" id="node7" href="class_critter_wave.html#a1244e59ebd702edd2530e6256779ace0" title="Returns a reference to a Critter in the map. " alt="" coords="527,195,679,221"/><area shape="rect" id="node10" href="class_tower.html#af2bb341e8011c2526ad5c58e11d79b28" title="Tower::getBuyCost" alt="" coords="537,275,669,301"/></map>
 </div>
 </p>
 
@@ -408,7 +466,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_state_play_ac82134049ed6dd0aaa929e200f7185d5_cgraph.png" border="0" usemap="#class_game_state_play_ac82134049ed6dd0aaa929e200f7185d5_cgraph" alt=""/></div>
 <map name="class_game_state_play_ac82134049ed6dd0aaa929e200f7185d5_cgraph" id="class_game_state_play_ac82134049ed6dd0aaa929e200f7185d5_cgraph">
-<area shape="rect" id="node2" href="class_critter.html#a8fdba06ecb582e8b542e2e73a76f455d" title="Critter::getPosition" alt="" coords="229,13,360,39"/></map>
+<area shape="rect" id="node2" href="class_game_object.html#ad568496dd9cee5b9edd9357d30a00dff" title="Converts and retrieves an pair&lt;float, float&gt; object from a sf::vector2f. " alt="" coords="229,13,397,39"/></map>
 </div>
 </p>
 
@@ -462,7 +520,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_state_play_a63a3ba0c891afd8ec126806bab4f315a_cgraph.png" border="0" usemap="#class_game_state_play_a63a3ba0c891afd8ec126806bab4f315a_cgraph" alt=""/></div>
 <map name="class_game_state_play_a63a3ba0c891afd8ec126806bab4f315a_cgraph" id="class_game_state_play_a63a3ba0c891afd8ec126806bab4f315a_cgraph">
-<area shape="rect" id="node2" href="class_game_object.html#abf4de46e52c8f23d18d51bc29744b136" title="Draws a sprite to the render window if the GameObject instance has previously been loaded..." alt="" coords="243,5,373,32"/><area shape="rect" id="node3" href="class_map.html#a84c0e37119c02d7c81071271e004041d" title="Map::draw" alt="" coords="267,56,349,83"/><area shape="rect" id="node4" href="class_game_state_play.html#a28fee46c0b9d0248ed319976be94494a" title="Draw all waypoints. " alt="" coords="203,107,413,133"/><area shape="rect" id="node5" href="class_critter.html#afe6dafa77006e5b6b7f3f905447af3fb" title="Draw a Critter. " alt="" coords="262,157,354,184"/><area shape="rect" id="node8" href="class_critter_wave.html#a858c5934f74ac3148218e2f5a6a6e0b6" title="CritterWave::drawActivated\lCrittersInWave" alt="" coords="219,209,397,250"/><area shape="rect" id="node9" href="class_tower_manager.html#aa795de46937cdcb51d7a885d79c069b3" title="TowerManager::draw" alt="" coords="237,275,379,301"/><area shape="rect" id="node10" href="class_tower_manager.html#ae2cf2fc1dd19ced5d64ec74042673055" title="TowerManager::getTower" alt="" coords="225,325,391,352"/><area shape="rect" id="node11" href="class_tower.html#a829a95b9dc022cc07ecd4d5c0afa7260" title="Tower::getRangeShape" alt="" coords="230,376,386,403"/><area shape="rect" id="node12" href="class_tower.html#a2427fab36824f8ec98273cb5e563e0c9" title="Tower::getTowerSpecs" alt="" coords="231,427,385,453"/><area shape="rect" id="node6" href="class_animation_handler.html#a93f1509e5eccdf13a07ba1eb2256c6d0" title="Changes the animation. " alt="" coords="461,121,636,162"/><area shape="rect" id="node7" href="class_animation_handler.html#a74c541905109998e971c578c4aa3e3de" title="Updates the current frame of animation. " alt="" coords="463,187,634,213"/></map>
+<area shape="rect" id="node2" href="class_game_object.html#abf4de46e52c8f23d18d51bc29744b136" title="Draws a sprite to the render window if the GameObject instance has previously been loaded..." alt="" coords="245,5,375,32"/><area shape="rect" id="node3" href="class_map.html#a84c0e37119c02d7c81071271e004041d" title="Map::draw" alt="" coords="269,56,351,83"/><area shape="rect" id="node4" href="class_game_state_play.html#a28fee46c0b9d0248ed319976be94494a" title="Draw all waypoints. " alt="" coords="205,107,415,133"/><area shape="rect" id="node5" href="class_critter_game_object.html#a87b34231710c3537c9691e2034502269" title="Draw a Critter. " alt="" coords="227,157,393,184"/><area shape="rect" id="node8" href="class_critter_wave.html#a858c5934f74ac3148218e2f5a6a6e0b6" title="CritterWave::drawActivated\lCrittersInWave" alt="" coords="221,209,399,250"/><area shape="rect" id="node9" href="class_tower_manager.html#aa795de46937cdcb51d7a885d79c069b3" title="TowerManager::draw" alt="" coords="239,275,381,301"/><area shape="rect" id="node10" href="class_tower_manager.html#ae2cf2fc1dd19ced5d64ec74042673055" title="TowerManager::getTower" alt="" coords="227,325,393,352"/><area shape="rect" id="node11" href="class_tower.html#a829a95b9dc022cc07ecd4d5c0afa7260" title="Tower::getRangeShape" alt="" coords="232,376,388,403"/><area shape="rect" id="node12" href="class_game_state_play.html#a11c1d1976d85631c84a8db18b1458637" title="GameStatePlay::getTower1\lButtonSpecs" alt="" coords="219,427,401,469"/><area shape="rect" id="node13" href="class_game_state_play.html#a0b9e886dc6a80b52f559441c7a3455d8" title="GameStatePlay::getTower2\lButtonSpecs" alt="" coords="219,493,401,534"/><area shape="rect" id="node14" href="class_game_state_play.html#a0c79cb57b169ec8c0dc08c49451ebfc1" title="GameStatePlay::getTower3\lButtonSpecs" alt="" coords="219,558,401,599"/><area shape="rect" id="node15" href="class_game_state_play.html#a84292b8af5919f8da3b54c1d1dba5cfd" title="GameStatePlay::getPauseButton\lSpecs" alt="" coords="203,623,417,665"/><area shape="rect" id="node16" href="class_game_state_play.html#a93771d14333ebc475f2428d3c1a3c3d3" title="GameStatePlay::getUnPause\lButtonSpecs" alt="" coords="213,689,407,730"/><area shape="rect" id="node17" href="class_game_state_play.html#aed4df6e7af126ba32ac06eb5dd79694d" title="GameStatePlay::getReturn\lToEditorButtonSpecs" alt="" coords="221,754,399,795"/><area shape="rect" id="node18" href="class_game_state_play.html#ace72b0eb76edd4a7e02ab12454f9f5b7" title="GameStatePlay::getStartWave\lButtonSpecs" alt="" coords="210,819,410,861"/><area shape="rect" id="node19" href="class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="225,885,395,926"/><area shape="rect" id="node20" href="class_tower.html#a2427fab36824f8ec98273cb5e563e0c9" title="Tower::getTowerSpecs" alt="" coords="233,951,387,977"/><area shape="rect" id="node6" href="class_animation_handler.html#a93f1509e5eccdf13a07ba1eb2256c6d0" title="Changes the animation. " alt="" coords="465,121,640,162"/><area shape="rect" id="node7" href="class_animation_handler.html#a74c541905109998e971c578c4aa3e3de" title="Updates the current frame of animation. " alt="" coords="467,187,638,213"/><area shape="rect" id="node21" href="class_tower.html#af2bb341e8011c2526ad5c58e11d79b28" title="Tower::getBuyCost" alt="" coords="487,951,619,977"/></map>
 </div>
 </p>
 
@@ -538,6 +596,70 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="a84292b8af5919f8da3b54c1d1dba5cfd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GameStatePlay::getPauseButtonSpecs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_state_play_a84292b8af5919f8da3b54c1d1dba5cfd_icgraph.png" border="0" usemap="#class_game_state_play_a84292b8af5919f8da3b54c1d1dba5cfd_icgraph" alt=""/></div>
+<map name="class_game_state_play_a84292b8af5919f8da3b54c1d1dba5cfd_icgraph" id="class_game_state_play_a84292b8af5919f8da3b54c1d1dba5cfd_icgraph">
+<area shape="rect" id="node2" href="class_game_state_play.html#a63a3ba0c891afd8ec126806bab4f315a" title="Draws game to the render window. " alt="" coords="268,13,417,39"/><area shape="rect" id="node3" href="class_game_state_play.html#ab41594c10b04429a3126d4a8085de82d" title="GameStatePlay::runThreads" alt="" coords="465,13,652,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aed4df6e7af126ba32ac06eb5dd79694d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GameStatePlay::getReturnToEditorButtonSpecs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_state_play_aed4df6e7af126ba32ac06eb5dd79694d_icgraph.png" border="0" usemap="#class_game_state_play_aed4df6e7af126ba32ac06eb5dd79694d_icgraph" alt=""/></div>
+<map name="class_game_state_play_aed4df6e7af126ba32ac06eb5dd79694d_icgraph" id="class_game_state_play_aed4df6e7af126ba32ac06eb5dd79694d_icgraph">
+<area shape="rect" id="node2" href="class_game_state_play.html#a63a3ba0c891afd8ec126806bab4f315a" title="Draws game to the render window. " alt="" coords="232,13,381,39"/><area shape="rect" id="node3" href="class_game_state_play.html#ab41594c10b04429a3126d4a8085de82d" title="GameStatePlay::runThreads" alt="" coords="429,13,616,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a6ebd21112217871afe2e0160f6eb0753"></a>
 <div class="memitem">
 <div class="memproto">
@@ -560,6 +682,166 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_game_state_play_a6ebd21112217871afe2e0160f6eb0753_icgraph.png" border="0" usemap="#class_game_state_play_a6ebd21112217871afe2e0160f6eb0753_icgraph" alt=""/></div>
 <map name="class_game_state_play_a6ebd21112217871afe2e0160f6eb0753_icgraph" id="class_game_state_play_a6ebd21112217871afe2e0160f6eb0753_icgraph">
 <area shape="rect" id="node2" href="class_game_state_play.html#a705c09eac3d2b27757e5b4cc048b22d5" title="Constructor that takes in a pointer to the Game that created them. " alt="" coords="461,13,676,39"/><area shape="rect" id="node3" href="class_game_state_play.html#a6047cbdce7daa2092d95bf786db5267a" title="GameStatePlay::setCritter\lWaveLevels" alt="" coords="239,35,413,76"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ace72b0eb76edd4a7e02ab12454f9f5b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GameStatePlay::getStartWaveButtonSpecs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_state_play_ace72b0eb76edd4a7e02ab12454f9f5b7_icgraph.png" border="0" usemap="#class_game_state_play_ace72b0eb76edd4a7e02ab12454f9f5b7_icgraph" alt=""/></div>
+<map name="class_game_state_play_ace72b0eb76edd4a7e02ab12454f9f5b7_icgraph" id="class_game_state_play_ace72b0eb76edd4a7e02ab12454f9f5b7_icgraph">
+<area shape="rect" id="node2" href="class_game_state_play.html#a63a3ba0c891afd8ec126806bab4f315a" title="Draws game to the render window. " alt="" coords="253,13,403,39"/><area shape="rect" id="node3" href="class_game_state_play.html#ab41594c10b04429a3126d4a8085de82d" title="GameStatePlay::runThreads" alt="" coords="451,13,637,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a11c1d1976d85631c84a8db18b1458637"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GameStatePlay::getTower1ButtonSpecs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_state_play_a11c1d1976d85631c84a8db18b1458637_icgraph.png" border="0" usemap="#class_game_state_play_a11c1d1976d85631c84a8db18b1458637_icgraph" alt=""/></div>
+<map name="class_game_state_play_a11c1d1976d85631c84a8db18b1458637_icgraph" id="class_game_state_play_a11c1d1976d85631c84a8db18b1458637_icgraph">
+<area shape="rect" id="node2" href="class_game_state_play.html#a63a3ba0c891afd8ec126806bab4f315a" title="Draws game to the render window. " alt="" coords="235,13,384,39"/><area shape="rect" id="node3" href="class_game_state_play.html#ab41594c10b04429a3126d4a8085de82d" title="GameStatePlay::runThreads" alt="" coords="432,13,619,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b9e886dc6a80b52f559441c7a3455d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GameStatePlay::getTower2ButtonSpecs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_state_play_a0b9e886dc6a80b52f559441c7a3455d8_icgraph.png" border="0" usemap="#class_game_state_play_a0b9e886dc6a80b52f559441c7a3455d8_icgraph" alt=""/></div>
+<map name="class_game_state_play_a0b9e886dc6a80b52f559441c7a3455d8_icgraph" id="class_game_state_play_a0b9e886dc6a80b52f559441c7a3455d8_icgraph">
+<area shape="rect" id="node2" href="class_game_state_play.html#a63a3ba0c891afd8ec126806bab4f315a" title="Draws game to the render window. " alt="" coords="235,13,384,39"/><area shape="rect" id="node3" href="class_game_state_play.html#ab41594c10b04429a3126d4a8085de82d" title="GameStatePlay::runThreads" alt="" coords="432,13,619,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0c79cb57b169ec8c0dc08c49451ebfc1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GameStatePlay::getTower3ButtonSpecs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_state_play_a0c79cb57b169ec8c0dc08c49451ebfc1_icgraph.png" border="0" usemap="#class_game_state_play_a0c79cb57b169ec8c0dc08c49451ebfc1_icgraph" alt=""/></div>
+<map name="class_game_state_play_a0c79cb57b169ec8c0dc08c49451ebfc1_icgraph" id="class_game_state_play_a0c79cb57b169ec8c0dc08c49451ebfc1_icgraph">
+<area shape="rect" id="node2" href="class_game_state_play.html#a63a3ba0c891afd8ec126806bab4f315a" title="Draws game to the render window. " alt="" coords="235,13,384,39"/><area shape="rect" id="node3" href="class_game_state_play.html#ab41594c10b04429a3126d4a8085de82d" title="GameStatePlay::runThreads" alt="" coords="432,13,619,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a93771d14333ebc475f2428d3c1a3c3d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GameStatePlay::getUnPauseButtonSpecs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_state_play_a93771d14333ebc475f2428d3c1a3c3d3_icgraph.png" border="0" usemap="#class_game_state_play_a93771d14333ebc475f2428d3c1a3c3d3_icgraph" alt=""/></div>
+<map name="class_game_state_play_a93771d14333ebc475f2428d3c1a3c3d3_icgraph" id="class_game_state_play_a93771d14333ebc475f2428d3c1a3c3d3_icgraph">
+<area shape="rect" id="node2" href="class_game_state_play.html#a63a3ba0c891afd8ec126806bab4f315a" title="Draws game to the render window. " alt="" coords="247,13,396,39"/><area shape="rect" id="node3" href="class_game_state_play.html#ab41594c10b04429a3126d4a8085de82d" title="GameStatePlay::runThreads" alt="" coords="444,13,631,39"/></map>
 </div>
 </p>
 
@@ -635,7 +917,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_state_play_a2278751d53b50beb97c809db26f1b9b6_cgraph.png" border="0" usemap="#class_game_state_play_a2278751d53b50beb97c809db26f1b9b6_cgraph" alt=""/></div>
 <map name="class_game_state_play_a2278751d53b50beb97c809db26f1b9b6_cgraph" id="class_game_state_play_a2278751d53b50beb97c809db26f1b9b6_cgraph">
-<area shape="rect" id="node2" href="class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="251,5,421,47"/><area shape="rect" id="node3" href="class_game_state_play.html#ac82134049ed6dd0aaa929e200f7185d5" title="GameStatePlay::checkIfAt\lEndTile" alt="" coords="248,71,424,112"/><area shape="rect" id="node5" href="class_player.html#a5bb1f83134c899add66053bb08786fb0" title="Player::loseLives" alt="" coords="276,137,396,163"/><area shape="rect" id="node6" href="class_player.html#a861005738bf21093c79383a3494f2ca8" title="Maintains non&#45;negative points value. " alt="" coords="272,187,400,214"/><area shape="rect" id="node7" href="class_critter_wave.html#a1244e59ebd702edd2530e6256779ace0" title="Returns a reference to a Critter in the map. " alt="" coords="260,238,412,265"/><area shape="rect" id="node4" href="class_critter.html#a8fdba06ecb582e8b542e2e73a76f455d" title="Critter::getPosition" alt="" coords="472,78,603,105"/></map>
+<area shape="rect" id="node2" href="class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="263,5,433,47"/><area shape="rect" id="node3" href="class_game_state_play.html#ac82134049ed6dd0aaa929e200f7185d5" title="GameStatePlay::checkIfAt\lEndTile" alt="" coords="260,71,436,112"/><area shape="rect" id="node5" href="_console_color_8h.html#abfbb0c9e0e5ee33dd1026c23381b78c5" title="red" alt="" coords="328,137,368,163"/><area shape="rect" id="node6" href="class_player.html#af3bdca44c57bee211d1d0ea53c11f9b3" title="Player::earnCash" alt="" coords="287,187,409,214"/><area shape="rect" id="node7" href="class_player.html#ac540cf7f9631bfd6d9c76242addd8eea" title="Player::gainPoints" alt="" coords="284,238,412,265"/><area shape="rect" id="node8" href="class_critter_wave.html#a14d2b9703371e82278c5fa3c4a2cbbd9" title="CritterWave::decrementCritters\lRemaining" alt="" coords="248,289,448,331"/><area shape="rect" id="node9" href="class_player.html#a5bb1f83134c899add66053bb08786fb0" title="Player::loseLives" alt="" coords="288,355,408,382"/><area shape="rect" id="node10" href="class_player.html#a861005738bf21093c79383a3494f2ca8" title="Maintains non&#45;negative points value. " alt="" coords="284,406,412,433"/><area shape="rect" id="node11" href="class_critter_wave.html#a1244e59ebd702edd2530e6256779ace0" title="Returns a reference to a Critter in the map. " alt="" coords="272,457,424,483"/><area shape="rect" id="node4" href="class_game_object.html#ad568496dd9cee5b9edd9357d30a00dff" title="Converts and retrieves an pair&lt;float, float&gt; object from a sf::vector2f. " alt="" coords="496,78,664,105"/></map>
 </div>
 </p>
 
@@ -756,7 +1038,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_state_play_ae9acc781e1fdbc931784ba3892c469ce_cgraph.png" border="0" usemap="#class_game_state_play_ae9acc781e1fdbc931784ba3892c469ce_cgraph" alt=""/></div>
 <map name="class_game_state_play_ae9acc781e1fdbc931784ba3892c469ce_cgraph" id="class_game_state_play_ae9acc781e1fdbc931784ba3892c469ce_cgraph">
-<area shape="rect" id="node2" href="class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="782,115,953,156"/><area shape="rect" id="node3" href="class_tower_manager.html#a3c54cdf57006efbcd9fc074f156d5360" title="TowerManager::getTowerMap" alt="" coords="519,173,710,199"/><area shape="rect" id="node4" href="class_tower.html#a3bc66411a614f108ceaefd255bdb4179" title="Determines whether tower can attack a critter based on whether the critter falls within its range whi..." alt="" coords="289,1186,411,1213"/><area shape="rect" id="node9" href="class_tower.html#a9f067c2b9e5e6987f341704b8b098606" title="Tower::attack" alt="" coords="300,1135,400,1162"/><area shape="rect" id="node14" href="class_tower.html#a7df1e896cdd5cdf7cc2169d6d4f9a6cf" title="Tower::applySpecialEffect" alt="" coords="265,933,435,959"/><area shape="rect" id="node15" href="_console_color_8h.html#abfbb0c9e0e5ee33dd1026c23381b78c5" title="red" alt="" coords="847,831,887,858"/><area shape="rect" id="node19" href="class_critter_wave.html#a14d2b9703371e82278c5fa3c4a2cbbd9" title="CritterWave::decrementCritters\lRemaining" alt="" coords="250,1237,450,1279"/><area shape="rect" id="node20" href="class_player.html#af3bdca44c57bee211d1d0ea53c11f9b3" title="Player::earnCash" alt="" coords="806,755,929,782"/><area shape="rect" id="node21" href="class_player.html#ac540cf7f9631bfd6d9c76242addd8eea" title="Player::gainPoints" alt="" coords="286,1303,414,1330"/><area shape="rect" id="node22" href="class_game_state_play.html#a79237473ceeb26b94f641d0bf66c1ec0" title="GameStatePlay::buttonCommand\lLibrary" alt="" coords="241,56,459,97"/><area shape="rect" id="node26" href="class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="244,469,456,511"/><area shape="rect" id="node27" href="class_tower_manager.html#ae2cf2fc1dd19ced5d64ec74042673055" title="TowerManager::getTower" alt="" coords="531,223,698,250"/><area shape="rect" id="node36" href="class_game_object.html#adf7e04407f7c2a5bd487b459efe9fd79" title="GameObject::spriteContains" alt="" coords="521,730,708,757"/><area shape="rect" id="node42" href="class_tower.html#a2427fab36824f8ec98273cb5e563e0c9" title="Tower::getTowerSpecs" alt="" coords="273,1354,427,1381"/><area shape="rect" id="node43" href="class_critter.html#a628b203e25050a085786d3993a660ab9" title="Critter::controlCat" alt="" coords="288,1465,412,1491"/><area shape="rect" id="node5" href="class_critter.html#a5636f0ed2f067318e0d361fe31c9eff2" title="Critter::getId" alt="" coords="568,1287,661,1314"/><area shape="rect" id="node6" href="class_tower.html#a518ff249dec05cdd026a830d845abfd2" title="Overrides method to apply to tower range sf::CircleShape object. " alt="" coords="510,1389,719,1415"/><area shape="rect" id="node8" href="class_tower.html#acf53d0a9123761730bd3e737a5b5a854" title="Tower::getRateOfFire" alt="" coords="543,1338,687,1365"/><area shape="rect" id="node7" href="class_game_object.html#afe3b2585b3615868c64b62bb1cb40adb" title="Gets the center of a sprite. " alt="" coords="771,1389,964,1415"/><area shape="rect" id="node10" href="_console_color_8h.html#a90575bb670cda4e9ae9da0847e05bd1c" title="yellow" alt="" coords="585,1237,644,1263"/><area shape="rect" id="node11" href="class_critter.html#a3601e12d79247c3345e9e828688cf321" title="Critter::inflictDamage" alt="" coords="543,1085,686,1111"/><area shape="rect" id="node12" href="class_tower.html#a198af6f04dad766d019b72fc667b90a7" title="Tower::getPower" alt="" coords="555,1135,674,1162"/><area shape="rect" id="node13" href="class_critter.html#a1e98c05f5a41102cc37eb7a4396b90cf" title="Critter::getHitPoints" alt="" coords="547,1186,683,1213"/><area shape="rect" id="node16" href="class_critter.html#a3785ffa05cec86b30264fbdbf613e4f8" title="Critter::getSpeed" alt="" coords="555,933,675,959"/><area shape="rect" id="node17" href="class_critter.html#ae843395fb1106cd2c550cd9be9f14df0" title="Critter::reduceSpeed" alt="" coords="544,983,685,1010"/><area shape="rect" id="node18" href="class_tower.html#ae8236cf1fac3f2fd791312e3dc59d904" title="Tower::getUpgradeLevel" alt="" coords="535,882,694,909"/><area shape="rect" id="node23" href="class_game.html#a4b33dd67adef59bebadba8a234282c88" title="Helper pop function for GameState stack. " alt="" coords="556,71,673,98"/><area shape="rect" id="node24" href="class_game_state_play.html#a2eda31c4d98a8440c6eba38604aa2a79" title="GameStatePlay::handleCritter\lWaveLevelSwitching" alt="" coords="517,5,712,47"/><area shape="rect" id="node25" href="class_critter_wave.html#a1244e59ebd702edd2530e6256779ace0" title="Returns a reference to a Critter in the map. " alt="" coords="791,13,943,39"/><area shape="rect" id="node28" href="class_map.html#aa8e57f0e6d665def93ad7b33413e98a7" title="Map::getTile" alt="" coords="568,325,661,351"/><area shape="rect" id="node30" href="class_tile.html#accf61745cef281d948e7acc7260c8b86" title="Tile::getType" alt="" coords="567,629,663,655"/><area shape="rect" id="node31" href="class_tower_manager.html#ac057ea8072b060d0fad71fa218e219af" title="TowerManager::buyTower" alt="" coords="530,679,699,706"/><area shape="rect" id="node32" href="class_tower_manager.html#afd9c7b3113dd4d02b0ee875d705cdf39" title="TowerManager::isTileFree" alt="" coords="782,553,953,579"/><area shape="rect" id="node35" href="class_game_state_play.html#a5076f9d4d81b1b9dc4e71c627f40a9d2" title="GameStatePlay::registerObserver" alt="" coords="507,274,723,301"/><area shape="rect" id="node37" href="class_tower_manager.html#afa7bbe1d178269f32df231807ab419d8" title="TowerManager::sellTower" alt="" coords="531,527,699,554"/><area shape="rect" id="node39" href="class_tower.html#a06801dd47796aaa9942fb3d890d2196a" title="Tower::upgradeTower" alt="" coords="543,375,687,402"/><area shape="rect" id="node40" href="class_tower_manager.html#ae71fc7c55f92477846760b122d0f60b9" title="TowerManager::clearAllTowers" alt="" coords="515,426,714,453"/><area shape="rect" id="node41" href="_console_color_8h.html#a76f93616e13cd7a489bd5efc123b85c2" title="white" alt="" coords="589,578,641,605"/><area shape="rect" id="node29" href="class_map.html#a6995c0de6fe380ffa652990490b867c8" title="Map::outOfBounds" alt="" coords="802,325,933,351"/><area shape="rect" id="node33" href="class_player.html#abb709d55c86f703fbd6cc5b90d31fc39" title="Maintains non&#45;negative cash value. " alt="" coords="801,679,933,706"/><area shape="rect" id="node34" href="_console_color_8h.html#a9a5da37d743c609ea42e11b710812de2" title="blue" alt="" coords="844,615,891,642"/><area shape="rect" id="node38" href="class_tower_manager.html#a0158f9210b43ea166977e01768849c3a" title="TowerManager::outOfBound" alt="" coords="776,502,959,529"/><area shape="rect" id="node44" href="class_critter.html#a8fdba06ecb582e8b542e2e73a76f455d" title="Critter::getPosition" alt="" coords="549,1490,680,1517"/><area shape="rect" id="node45" href="class_game_object.html#a267f290e80e877be0de3a9706321c049" title="Gets the size of a sprite. " alt="" coords="524,1541,705,1567"/><area shape="rect" id="node46" href="class_critter.html#a96462bdb554e60ee1c3bb76d7cde3da6" title="Critter::updatePosition" alt="" coords="539,1439,690,1466"/></map>
+<area shape="rect" id="node2" href="class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="775,54,946,95"/><area shape="rect" id="node3" href="class_tower_manager.html#a3c54cdf57006efbcd9fc074f156d5360" title="TowerManager::getTowerMap" alt="" coords="516,356,707,382"/><area shape="rect" id="node4" href="class_tower.html#a3bc66411a614f108ceaefd255bdb4179" title="Determines whether tower can attack a critter based on whether the critter falls within its range whi..." alt="" coords="289,1040,411,1066"/><area shape="rect" id="node8" href="class_game_object.html#ad568496dd9cee5b9edd9357d30a00dff" title="Converts and retrieves an pair&lt;float, float&gt; object from a sf::vector2f. " alt="" coords="777,1116,945,1142"/><area shape="rect" id="node10" href="class_tower.html#ad5d042b8ab67fdcae27ecbd82fb27b0c" title="Tower::getTarget" alt="" coords="291,1225,409,1252"/><area shape="rect" id="node11" href="class_tower.html#a9f067c2b9e5e6987f341704b8b098606" title="Tower::attack" alt="" coords="300,1385,400,1412"/><area shape="rect" id="node13" href="class_critter.html#a5636f0ed2f067318e0d361fe31c9eff2" title="Critter::getId" alt="" coords="565,1334,658,1361"/><area shape="rect" id="node16" href="class_critter.html#a1e98c05f5a41102cc37eb7a4396b90cf" title="Critter::getHitPoints" alt="" coords="543,1537,679,1564"/><area shape="rect" id="node17" href="class_critter_game_object.html#a3ce69ef5cbc8983b45df839674aab0bc" title="CritterGameObject::\lgetMovementDirection" alt="" coords="275,1487,425,1528"/><area shape="rect" id="node18" href="class_tower.html#a7df1e896cdd5cdf7cc2169d6d4f9a6cf" title="Tower::applySpecialEffect" alt="" coords="265,888,435,914"/><area shape="rect" id="node22" href="class_game_state_play.html#a79237473ceeb26b94f641d0bf66c1ec0" title="GameStatePlay::buttonCommand\lLibrary" alt="" coords="241,188,459,230"/><area shape="rect" id="node29" href="class_tower.html#a2427fab36824f8ec98273cb5e563e0c9" title="Tower::getTowerSpecs" alt="" coords="535,254,688,281"/><area shape="rect" id="node31" href="class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="244,526,456,567"/><area shape="rect" id="node32" href="class_tower_manager.html#ae2cf2fc1dd19ced5d64ec74042673055" title="TowerManager::getTower" alt="" coords="528,406,695,433"/><area shape="rect" id="node40" href="class_game_object.html#adf7e04407f7c2a5bd487b459efe9fd79" title="GameObject::spriteContains" alt="" coords="518,761,705,788"/><area shape="rect" id="node48" href="class_critter_game_object.html#aade350efb5f7c65da8eb66d01c65be6f" title="CritterGameObject::\lcontrolCat" alt="" coords="281,1159,419,1200"/><area shape="rect" id="node5" href="class_tower.html#a518ff249dec05cdd026a830d845abfd2" title="Overrides method to apply to tower range sf::CircleShape object. " alt="" coords="507,1014,716,1041"/><area shape="rect" id="node7" href="class_tower.html#aa6950f72316cb57bbc8c32a9e332dff3" title="Tower::executeStrategy" alt="" coords="532,1116,691,1142"/><area shape="rect" id="node9" href="class_tower.html#acf53d0a9123761730bd3e737a5b5a854" title="Tower::getRateOfFire" alt="" coords="539,1065,683,1092"/><area shape="rect" id="node6" href="class_game_object.html#ad6d60e0c273cb0074c91a19f3aed8708" title="Gets the center of a sprite. " alt="" coords="764,1014,957,1041"/><area shape="rect" id="node12" href="_console_color_8h.html#a90575bb670cda4e9ae9da0847e05bd1c" title="yellow" alt="" coords="582,1436,641,1462"/><area shape="rect" id="node14" href="class_critter.html#a3601e12d79247c3345e9e828688cf321" title="Critter::inflictDamage" alt="" coords="540,1486,683,1513"/><area shape="rect" id="node15" href="class_tower.html#a198af6f04dad766d019b72fc667b90a7" title="Tower::getPower" alt="" coords="552,1385,671,1412"/><area shape="rect" id="node19" href="_console_color_8h.html#abfbb0c9e0e5ee33dd1026c23381b78c5" title="red" alt="" coords="841,761,881,788"/><area shape="rect" id="node20" href="class_critter.html#a3785ffa05cec86b30264fbdbf613e4f8" title="Critter::getSpeed" alt="" coords="551,862,671,889"/><area shape="rect" id="node21" href="class_critter.html#ae843395fb1106cd2c550cd9be9f14df0" title="Critter::reduceSpeed" alt="" coords="541,913,682,940"/><area shape="rect" id="node23" href="class_tower_manager.html#ae71fc7c55f92477846760b122d0f60b9" title="TowerManager::clearAllTowers" alt="" coords="512,305,711,332"/><area shape="rect" id="node24" href="class_player.html#ad85b7618b95a6d763db0587760fd2dd3" title="Player::resetStats" alt="" coords="548,36,675,62"/><area shape="rect" id="node25" href="class_game.html#a4b33dd67adef59bebadba8a234282c88" title="Helper pop function for GameState stack. " alt="" coords="553,86,670,113"/><area shape="rect" id="node26" href="class_game_state_play.html#a2eda31c4d98a8440c6eba38604aa2a79" title="GameStatePlay::handleCritter\lWaveLevelSwitching" alt="" coords="514,188,709,230"/><area shape="rect" id="node28" href="class_tower.html#aa5280191c23e7cd98e9a1d9cfaba3416" title="Tower::setStrategy" alt="" coords="546,137,677,164"/><area shape="rect" id="node27" href="class_critter_wave.html#a1244e59ebd702edd2530e6256779ace0" title="Returns a reference to a Critter in the map. " alt="" coords="785,196,937,222"/><area shape="rect" id="node30" href="class_tower.html#af2bb341e8011c2526ad5c58e11d79b28" title="Tower::getBuyCost" alt="" coords="795,254,927,281"/><area shape="rect" id="node33" href="class_map.html#aa8e57f0e6d665def93ad7b33413e98a7" title="Map::getTile" alt="" coords="565,508,658,534"/><area shape="rect" id="node35" href="class_tile.html#accf61745cef281d948e7acc7260c8b86" title="Tile::getType" alt="" coords="563,558,659,585"/><area shape="rect" id="node36" href="class_tower_manager.html#a48859fff5518d39549e26d73633eb3c6" title="TowerManager::buyTower" alt="" coords="527,660,696,686"/><area shape="rect" id="node41" href="class_tower_manager.html#afa7bbe1d178269f32df231807ab419d8" title="TowerManager::sellTower" alt="" coords="527,609,695,636"/><area shape="rect" id="node44" href="class_tower_manager.html#aa74345499b531c211c0abf7b91eb96fc" title="TowerManager::upgradeTower" alt="" coords="514,710,709,737"/><area shape="rect" id="node47" href="_console_color_8h.html#a76f93616e13cd7a489bd5efc123b85c2" title="white" alt="" coords="585,457,637,484"/><area shape="rect" id="node34" href="class_map.html#a6995c0de6fe380ffa652990490b867c8" title="Map::outOfBounds" alt="" coords="795,457,926,484"/><area shape="rect" id="node37" href="class_tower_manager.html#afd9c7b3113dd4d02b0ee875d705cdf39" title="TowerManager::isTileFree" alt="" coords="775,609,946,636"/><area shape="rect" id="node38" href="class_player.html#abb709d55c86f703fbd6cc5b90d31fc39" title="Maintains non&#45;negative cash value. " alt="" coords="795,710,927,737"/><area shape="rect" id="node39" href="_console_color_8h.html#a9a5da37d743c609ea42e11b710812de2" title="blue" alt="" coords="837,660,884,686"/><area shape="rect" id="node42" href="class_tower_manager.html#a0158f9210b43ea166977e01768849c3a" title="TowerManager::outOfBound" alt="" coords="769,558,952,585"/><area shape="rect" id="node43" href="class_player.html#af3bdca44c57bee211d1d0ea53c11f9b3" title="Player::earnCash" alt="" coords="799,508,922,534"/><area shape="rect" id="node45" href="class_tower.html#a87db306927fd4022cae1369b88688ed7" title="Tower::getType" alt="" coords="805,812,916,838"/><area shape="rect" id="node46" href="class_tower.html#ae8236cf1fac3f2fd791312e3dc59d904" title="Tower::getUpgradeLevel" alt="" coords="781,862,940,889"/><area shape="rect" id="node49" href="class_game_object.html#a3731c03ddcbdb904bd41af78e09d262a" title="Gets the size of a sprite. " alt="" coords="521,1284,702,1310"/><area shape="rect" id="node50" href="class_critter_game_object.html#a546fa242023f61965a284e4a2e72ab7d" title="CritterGameObject::\lupdatePosition" alt="" coords="542,1218,681,1259"/></map>
 </div>
 </p>
 
@@ -830,7 +1112,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_state_play_ae812a7447027abe5fcc2f79bf3e35ad8_cgraph.png" border="0" usemap="#class_game_state_play_ae812a7447027abe5fcc2f79bf3e35ad8_cgraph" alt=""/></div>
 <map name="class_game_state_play_ae812a7447027abe5fcc2f79bf3e35ad8_cgraph" id="class_game_state_play_ae812a7447027abe5fcc2f79bf3e35ad8_cgraph">
-<area shape="rect" id="node2" href="class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="267,91,437,133"/><area shape="rect" id="node3" href="class_game_state_play.html#a0d6ff2e65992c5fb29f180c6b1eb9435" title="GameStatePlay::moveCritter" alt="" coords="259,157,445,184"/><area shape="rect" id="node4" href="class_critter.html#ac2d188c14e482de7e28a9520d6f62a16" title="Critter::isAtNextWaypoint" alt="" coords="505,5,675,32"/><area shape="rect" id="node5" href="class_critter.html#affcdf706975d5a761acec7e5effea7b1" title="Critter::getMovementDirection" alt="" coords="493,56,687,83"/><area shape="rect" id="node6" href="class_critter.html#a96462bdb554e60ee1c3bb76d7cde3da6" title="Critter::updatePosition" alt="" coords="515,107,665,133"/><area shape="rect" id="node7" href="class_critter.html#a3785ffa05cec86b30264fbdbf613e4f8" title="Critter::getSpeed" alt="" coords="530,157,650,184"/><area shape="rect" id="node8" href="class_critter.html#a8a95119a0531e9372aa6a2a95b61edde" title="Critter::getCurrentWaypoint" alt="" coords="500,208,680,235"/><area shape="rect" id="node9" href="class_critter.html#a394069b23bdd1fd4f8caeab41b23c83d" title="Critter::setCurrentWaypoint" alt="" coords="500,259,680,285"/><area shape="rect" id="node10" href="class_critter.html#abe76d86eb653909910ee956195a16aec" title="Critter::setAnimationIndex" alt="" coords="504,309,676,336"/></map>
+<area shape="rect" id="node2" href="class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="267,136,437,177"/><area shape="rect" id="node3" href="class_game_state_play.html#a0d6ff2e65992c5fb29f180c6b1eb9435" title="GameStatePlay::moveCritter" alt="" coords="259,202,445,229"/><area shape="rect" id="node4" href="class_critter_game_object.html#abdc7d3071ef2e9e00c277051f62b9005" title="CritterGameObject::\lisAtNextWaypoint" alt="" coords="499,5,638,47"/><area shape="rect" id="node5" href="class_critter_game_object.html#a3ce69ef5cbc8983b45df839674aab0bc" title="CritterGameObject::\lgetMovementDirection" alt="" coords="493,71,644,112"/><area shape="rect" id="node6" href="class_critter_game_object.html#a546fa242023f61965a284e4a2e72ab7d" title="CritterGameObject::\lupdatePosition" alt="" coords="499,136,638,177"/><area shape="rect" id="node7" href="class_critter.html#a3785ffa05cec86b30264fbdbf613e4f8" title="Critter::getSpeed" alt="" coords="509,202,629,229"/><area shape="rect" id="node8" href="class_critter_game_object.html#a1b81867b7f6a204a4c9982da18bb9d0a" title="CritterGameObject::\lgetCurrentWaypoint" alt="" coords="499,253,638,295"/><area shape="rect" id="node9" href="class_critter_game_object.html#a6302cd7be6a4f1d3d724cb0e45941338" title="CritterGameObject::\lsetCurrentWaypoint" alt="" coords="499,319,638,360"/><area shape="rect" id="node10" href="class_critter_game_object.html#afea351babd57c739104879f27dafd910" title="CritterGameObject::\lsetAnimationIndex" alt="" coords="499,384,638,425"/></map>
 </div>
 </p>
 
@@ -882,7 +1164,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_state_play_a0d6ff2e65992c5fb29f180c6b1eb9435_cgraph.png" border="0" usemap="#class_game_state_play_a0d6ff2e65992c5fb29f180c6b1eb9435_cgraph" alt=""/></div>
 <map name="class_game_state_play_a0d6ff2e65992c5fb29f180c6b1eb9435_cgraph" id="class_game_state_play_a0d6ff2e65992c5fb29f180c6b1eb9435_cgraph">
-<area shape="rect" id="node2" href="class_critter.html#ac2d188c14e482de7e28a9520d6f62a16" title="Critter::isAtNextWaypoint" alt="" coords="251,5,422,32"/><area shape="rect" id="node3" href="class_critter.html#affcdf706975d5a761acec7e5effea7b1" title="Critter::getMovementDirection" alt="" coords="240,56,433,83"/><area shape="rect" id="node4" href="class_critter.html#a96462bdb554e60ee1c3bb76d7cde3da6" title="Critter::updatePosition" alt="" coords="261,107,412,133"/><area shape="rect" id="node5" href="class_critter.html#a3785ffa05cec86b30264fbdbf613e4f8" title="Critter::getSpeed" alt="" coords="277,157,397,184"/><area shape="rect" id="node6" href="class_critter.html#a8a95119a0531e9372aa6a2a95b61edde" title="Critter::getCurrentWaypoint" alt="" coords="247,208,427,235"/><area shape="rect" id="node7" href="class_critter.html#a394069b23bdd1fd4f8caeab41b23c83d" title="Critter::setCurrentWaypoint" alt="" coords="247,259,427,285"/><area shape="rect" id="node8" href="class_critter.html#abe76d86eb653909910ee956195a16aec" title="Critter::setAnimationIndex" alt="" coords="251,309,423,336"/></map>
+<area shape="rect" id="node2" href="class_critter_game_object.html#abdc7d3071ef2e9e00c277051f62b9005" title="CritterGameObject::\lisAtNextWaypoint" alt="" coords="246,5,385,47"/><area shape="rect" id="node3" href="class_critter_game_object.html#a3ce69ef5cbc8983b45df839674aab0bc" title="CritterGameObject::\lgetMovementDirection" alt="" coords="240,71,391,112"/><area shape="rect" id="node4" href="class_critter_game_object.html#a546fa242023f61965a284e4a2e72ab7d" title="CritterGameObject::\lupdatePosition" alt="" coords="246,136,385,177"/><area shape="rect" id="node5" href="class_critter.html#a3785ffa05cec86b30264fbdbf613e4f8" title="Critter::getSpeed" alt="" coords="255,202,375,229"/><area shape="rect" id="node6" href="class_critter_game_object.html#a1b81867b7f6a204a4c9982da18bb9d0a" title="CritterGameObject::\lgetCurrentWaypoint" alt="" coords="246,253,385,295"/><area shape="rect" id="node7" href="class_critter_game_object.html#a6302cd7be6a4f1d3d724cb0e45941338" title="CritterGameObject::\lsetCurrentWaypoint" alt="" coords="246,319,385,360"/><area shape="rect" id="node8" href="class_critter_game_object.html#afea351babd57c739104879f27dafd910" title="CritterGameObject::\lsetAnimationIndex" alt="" coords="246,384,385,425"/></map>
 </div>
 </p>
 
@@ -910,24 +1192,6 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_state_play_a5076f9d4d81b1b9dc4e71c627f40a9d2_cgraph.png" border="0" usemap="#class_game_state_play_a5076f9d4d81b1b9dc4e71c627f40a9d2_cgraph" alt=""/></div>
-<map name="class_game_state_play_a5076f9d4d81b1b9dc4e71c627f40a9d2_cgraph" id="class_game_state_play_a5076f9d4d81b1b9dc4e71c627f40a9d2_cgraph">
-<area shape="rect" id="node2" href="class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="269,5,440,47"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_state_play_a5076f9d4d81b1b9dc4e71c627f40a9d2_icgraph.png" border="0" usemap="#class_game_state_play_a5076f9d4d81b1b9dc4e71c627f40a9d2_icgraph" alt=""/></div>
-<map name="class_game_state_play_a5076f9d4d81b1b9dc4e71c627f40a9d2_icgraph" id="class_game_state_play_a5076f9d4d81b1b9dc4e71c627f40a9d2_icgraph">
-<area shape="rect" id="node2" href="class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="269,5,481,47"/><area shape="rect" id="node3" href="class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="529,13,717,39"/></map>
-</div>
-</p>
 
 </div>
 </div>
@@ -959,7 +1223,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_state_play_ab41594c10b04429a3126d4a8085de82d_cgraph.png" border="0" usemap="#class_game_state_play_ab41594c10b04429a3126d4a8085de82d_cgraph" alt=""/></div>
 <map name="class_game_state_play_ab41594c10b04429a3126d4a8085de82d_cgraph" id="class_game_state_play_ab41594c10b04429a3126d4a8085de82d_cgraph">
-<area shape="rect" id="node2" href="class_game_state_play.html#a63a3ba0c891afd8ec126806bab4f315a" title="Draws game to the render window. " alt="" coords="240,216,389,243"/><area shape="rect" id="node3" href="class_game_object.html#abf4de46e52c8f23d18d51bc29744b136" title="Draws a sprite to the render window if the GameObject instance has previously been loaded..." alt="" coords="477,5,608,32"/><area shape="rect" id="node4" href="class_map.html#a84c0e37119c02d7c81071271e004041d" title="Map::draw" alt="" coords="501,56,584,83"/><area shape="rect" id="node5" href="class_game_state_play.html#a28fee46c0b9d0248ed319976be94494a" title="Draw all waypoints. " alt="" coords="437,107,648,133"/><area shape="rect" id="node6" href="class_critter.html#afe6dafa77006e5b6b7f3f905447af3fb" title="Draw a Critter. " alt="" coords="497,157,589,184"/><area shape="rect" id="node9" href="class_critter_wave.html#a858c5934f74ac3148218e2f5a6a6e0b6" title="CritterWave::drawActivated\lCrittersInWave" alt="" coords="454,209,631,250"/><area shape="rect" id="node10" href="class_tower_manager.html#aa795de46937cdcb51d7a885d79c069b3" title="TowerManager::draw" alt="" coords="472,275,613,301"/><area shape="rect" id="node11" href="class_tower_manager.html#ae2cf2fc1dd19ced5d64ec74042673055" title="TowerManager::getTower" alt="" coords="459,325,626,352"/><area shape="rect" id="node12" href="class_tower.html#a829a95b9dc022cc07ecd4d5c0afa7260" title="Tower::getRangeShape" alt="" coords="465,376,621,403"/><area shape="rect" id="node13" href="class_tower.html#a2427fab36824f8ec98273cb5e563e0c9" title="Tower::getTowerSpecs" alt="" coords="466,427,619,453"/><area shape="rect" id="node7" href="class_animation_handler.html#a93f1509e5eccdf13a07ba1eb2256c6d0" title="Changes the animation. " alt="" coords="696,121,871,162"/><area shape="rect" id="node8" href="class_animation_handler.html#a74c541905109998e971c578c4aa3e3de" title="Updates the current frame of animation. " alt="" coords="698,187,869,213"/></map>
+<area shape="rect" id="node2" href="class_game_state_play.html#a63a3ba0c891afd8ec126806bab4f315a" title="Draws game to the render window. " alt="" coords="240,435,389,461"/><area shape="rect" id="node3" href="class_game_object.html#abf4de46e52c8f23d18d51bc29744b136" title="Draws a sprite to the render window if the GameObject instance has previously been loaded..." alt="" coords="479,5,610,32"/><area shape="rect" id="node4" href="class_map.html#a84c0e37119c02d7c81071271e004041d" title="Map::draw" alt="" coords="503,56,586,83"/><area shape="rect" id="node5" href="class_game_state_play.html#a28fee46c0b9d0248ed319976be94494a" title="Draw all waypoints. " alt="" coords="439,107,650,133"/><area shape="rect" id="node6" href="class_critter_game_object.html#a87b34231710c3537c9691e2034502269" title="Draw a Critter. " alt="" coords="462,157,627,184"/><area shape="rect" id="node9" href="class_critter_wave.html#a858c5934f74ac3148218e2f5a6a6e0b6" title="CritterWave::drawActivated\lCrittersInWave" alt="" coords="456,209,633,250"/><area shape="rect" id="node10" href="class_tower_manager.html#aa795de46937cdcb51d7a885d79c069b3" title="TowerManager::draw" alt="" coords="474,275,615,301"/><area shape="rect" id="node11" href="class_tower_manager.html#ae2cf2fc1dd19ced5d64ec74042673055" title="TowerManager::getTower" alt="" coords="461,325,628,352"/><area shape="rect" id="node12" href="class_tower.html#a829a95b9dc022cc07ecd4d5c0afa7260" title="Tower::getRangeShape" alt="" coords="467,376,623,403"/><area shape="rect" id="node13" href="class_game_state_play.html#a11c1d1976d85631c84a8db18b1458637" title="GameStatePlay::getTower1\lButtonSpecs" alt="" coords="454,427,635,469"/><area shape="rect" id="node14" href="class_game_state_play.html#a0b9e886dc6a80b52f559441c7a3455d8" title="GameStatePlay::getTower2\lButtonSpecs" alt="" coords="454,493,635,534"/><area shape="rect" id="node15" href="class_game_state_play.html#a0c79cb57b169ec8c0dc08c49451ebfc1" title="GameStatePlay::getTower3\lButtonSpecs" alt="" coords="454,558,635,599"/><area shape="rect" id="node16" href="class_game_state_play.html#a84292b8af5919f8da3b54c1d1dba5cfd" title="GameStatePlay::getPauseButton\lSpecs" alt="" coords="437,623,652,665"/><area shape="rect" id="node17" href="class_game_state_play.html#a93771d14333ebc475f2428d3c1a3c3d3" title="GameStatePlay::getUnPause\lButtonSpecs" alt="" coords="448,689,641,730"/><area shape="rect" id="node18" href="class_game_state_play.html#aed4df6e7af126ba32ac06eb5dd79694d" title="GameStatePlay::getReturn\lToEditorButtonSpecs" alt="" coords="455,754,634,795"/><area shape="rect" id="node19" href="class_game_state_play.html#ace72b0eb76edd4a7e02ab12454f9f5b7" title="GameStatePlay::getStartWave\lButtonSpecs" alt="" coords="445,819,645,861"/><area shape="rect" id="node20" href="class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="459,885,630,926"/><area shape="rect" id="node21" href="class_tower.html#a2427fab36824f8ec98273cb5e563e0c9" title="Tower::getTowerSpecs" alt="" coords="468,951,621,977"/><area shape="rect" id="node7" href="class_animation_handler.html#a93f1509e5eccdf13a07ba1eb2256c6d0" title="Changes the animation. " alt="" coords="700,121,875,162"/><area shape="rect" id="node8" href="class_animation_handler.html#a74c541905109998e971c578c4aa3e3de" title="Updates the current frame of animation. " alt="" coords="702,187,873,213"/><area shape="rect" id="node22" href="class_tower.html#af2bb341e8011c2526ad5c58e11d79b28" title="Tower::getBuyCost" alt="" coords="721,951,853,977"/></map>
 </div>
 </p>
 
@@ -1044,7 +1308,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_state_play_ab33de76aa28534d14aa1d79bed43aa17_cgraph.png" border="0" usemap="#class_game_state_play_ab33de76aa28534d14aa1d79bed43aa17_cgraph" alt=""/></div>
 <map name="class_game_state_play_ab33de76aa28534d14aa1d79bed43aa17_cgraph" id="class_game_state_play_ab33de76aa28534d14aa1d79bed43aa17_cgraph">
-<area shape="rect" id="node2" href="class_tower_manager.html#ae2cf2fc1dd19ced5d64ec74042673055" title="TowerManager::getTower" alt="" coords="290,5,457,32"/><area shape="rect" id="node3" href="class_map.html#aa8e57f0e6d665def93ad7b33413e98a7" title="Map::getTile" alt="" coords="327,56,420,83"/><area shape="rect" id="node5" href="class_tile.html#accf61745cef281d948e7acc7260c8b86" title="Tile::getType" alt="" coords="325,107,421,133"/><area shape="rect" id="node6" href="class_tower_manager.html#ac057ea8072b060d0fad71fa218e219af" title="TowerManager::buyTower" alt="" coords="289,259,458,285"/><area shape="rect" id="node7" href="class_tower_manager.html#afd9c7b3113dd4d02b0ee875d705cdf39" title="TowerManager::isTileFree" alt="" coords="535,208,706,235"/><area shape="rect" id="node11" href="class_game_state_play.html#a5076f9d4d81b1b9dc4e71c627f40a9d2" title="GameStatePlay::registerObserver" alt="" coords="265,309,481,336"/><area shape="rect" id="node13" href="class_game_object.html#adf7e04407f7c2a5bd487b459efe9fd79" title="GameObject::spriteContains" alt="" coords="280,360,467,387"/><area shape="rect" id="node14" href="class_tower_manager.html#afa7bbe1d178269f32df231807ab419d8" title="TowerManager::sellTower" alt="" coords="289,157,457,184"/><area shape="rect" id="node17" href="class_tower.html#a06801dd47796aaa9942fb3d890d2196a" title="Tower::upgradeTower" alt="" coords="301,411,445,437"/><area shape="rect" id="node18" href="class_tower_manager.html#ae71fc7c55f92477846760b122d0f60b9" title="TowerManager::clearAllTowers" alt="" coords="274,461,473,488"/><area shape="rect" id="node19" href="class_tower_manager.html#a3c54cdf57006efbcd9fc074f156d5360" title="TowerManager::getTowerMap" alt="" coords="278,512,469,539"/><area shape="rect" id="node20" href="_console_color_8h.html#a76f93616e13cd7a489bd5efc123b85c2" title="white" alt="" coords="347,563,399,589"/><area shape="rect" id="node4" href="class_map.html#a6995c0de6fe380ffa652990490b867c8" title="Map::outOfBounds" alt="" coords="555,56,686,83"/><area shape="rect" id="node8" href="_console_color_8h.html#abfbb0c9e0e5ee33dd1026c23381b78c5" title="red" alt="" coords="601,309,641,336"/><area shape="rect" id="node9" href="class_player.html#abb709d55c86f703fbd6cc5b90d31fc39" title="Maintains non&#45;negative cash value. " alt="" coords="555,360,687,387"/><area shape="rect" id="node10" href="_console_color_8h.html#a9a5da37d743c609ea42e11b710812de2" title="blue" alt="" coords="597,259,644,285"/><area shape="rect" id="node12" href="class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="535,411,706,453"/><area shape="rect" id="node15" href="class_tower_manager.html#a0158f9210b43ea166977e01768849c3a" title="TowerManager::outOfBound" alt="" coords="529,107,712,133"/><area shape="rect" id="node16" href="class_player.html#af3bdca44c57bee211d1d0ea53c11f9b3" title="Player::earnCash" alt="" coords="559,157,682,184"/></map>
+<area shape="rect" id="node2" href="class_tower_manager.html#ae2cf2fc1dd19ced5d64ec74042673055" title="TowerManager::getTower" alt="" coords="281,56,448,83"/><area shape="rect" id="node3" href="class_map.html#aa8e57f0e6d665def93ad7b33413e98a7" title="Map::getTile" alt="" coords="318,107,411,133"/><area shape="rect" id="node5" href="class_tile.html#accf61745cef281d948e7acc7260c8b86" title="Tile::getType" alt="" coords="317,157,413,184"/><area shape="rect" id="node6" href="class_tower_manager.html#a48859fff5518d39549e26d73633eb3c6" title="TowerManager::buyTower" alt="" coords="280,259,449,285"/><area shape="rect" id="node11" href="class_tower.html#a2427fab36824f8ec98273cb5e563e0c9" title="Tower::getTowerSpecs" alt="" coords="288,360,441,387"/><area shape="rect" id="node13" href="class_game_object.html#adf7e04407f7c2a5bd487b459efe9fd79" title="GameObject::spriteContains" alt="" coords="271,411,458,437"/><area shape="rect" id="node14" href="class_tower_manager.html#afa7bbe1d178269f32df231807ab419d8" title="TowerManager::sellTower" alt="" coords="281,208,449,235"/><area shape="rect" id="node17" href="class_tower_manager.html#aa74345499b531c211c0abf7b91eb96fc" title="TowerManager::upgradeTower" alt="" coords="267,309,462,336"/><area shape="rect" id="node21" href="class_tower_manager.html#ae71fc7c55f92477846760b122d0f60b9" title="TowerManager::clearAllTowers" alt="" coords="265,461,464,488"/><area shape="rect" id="node22" href="class_tower_manager.html#a3c54cdf57006efbcd9fc074f156d5360" title="TowerManager::getTowerMap" alt="" coords="269,512,460,539"/><area shape="rect" id="node23" href="_console_color_8h.html#a76f93616e13cd7a489bd5efc123b85c2" title="white" alt="" coords="339,563,391,589"/><area shape="rect" id="node4" href="class_map.html#a6995c0de6fe380ffa652990490b867c8" title="Map::outOfBounds" alt="" coords="538,5,669,32"/><area shape="rect" id="node7" href="class_tower_manager.html#afd9c7b3113dd4d02b0ee875d705cdf39" title="TowerManager::isTileFree" alt="" coords="518,208,689,235"/><area shape="rect" id="node8" href="class_player.html#abb709d55c86f703fbd6cc5b90d31fc39" title="Maintains non&#45;negative cash value. " alt="" coords="537,309,669,336"/><area shape="rect" id="node9" href="_console_color_8h.html#a9a5da37d743c609ea42e11b710812de2" title="blue" alt="" coords="580,157,627,184"/><area shape="rect" id="node10" href="_console_color_8h.html#abfbb0c9e0e5ee33dd1026c23381b78c5" title="red" alt="" coords="583,259,623,285"/><area shape="rect" id="node12" href="class_tower.html#af2bb341e8011c2526ad5c58e11d79b28" title="Tower::getBuyCost" alt="" coords="537,512,669,539"/><area shape="rect" id="node15" href="class_tower_manager.html#a0158f9210b43ea166977e01768849c3a" title="TowerManager::outOfBound" alt="" coords="512,107,695,133"/><area shape="rect" id="node16" href="class_player.html#af3bdca44c57bee211d1d0ea53c11f9b3" title="Player::earnCash" alt="" coords="542,56,665,83"/><area shape="rect" id="node18" href="class_tower.html#a87db306927fd4022cae1369b88688ed7" title="Tower::getType" alt="" coords="548,360,659,387"/><area shape="rect" id="node19" href="class_tower.html#ae8236cf1fac3f2fd791312e3dc59d904" title="Tower::getUpgradeLevel" alt="" coords="524,411,683,437"/><area shape="rect" id="node20" href="class_player.html#aee3d68c568ac6d2346852a47fdc25c01" title="Player::getCash" alt="" coords="546,461,661,488"/></map>
 </div>
 </p>
 
@@ -1097,7 +1361,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_state_play_a2faf041a447ddf86726658455560abb8_cgraph.png" border="0" usemap="#class_game_state_play_a2faf041a447ddf86726658455560abb8_cgraph" alt=""/></div>
 <map name="class_game_state_play_a2faf041a447ddf86726658455560abb8_cgraph" id="class_game_state_play_a2faf041a447ddf86726658455560abb8_cgraph">
-<area shape="rect" id="node2" href="class_game_state_play.html#aec5f72cea0e80d1d83b9cbe155a65ce9" title="GameStatePlay::handleGameOver" alt="" coords="215,31,436,57"/><area shape="rect" id="node3" href="class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="492,110,663,151"/><area shape="rect" id="node6" href="class_critter_wave.html#a858c5934f74ac3148218e2f5a6a6e0b6" title="CritterWave::drawActivated\lCrittersInWave" alt="" coords="237,133,414,174"/><area shape="rect" id="node7" href="class_game_state_play.html#ae812a7447027abe5fcc2f79bf3e35ad8" title="GameStatePlay::moveActivated\lCritters" alt="" coords="223,198,428,239"/><area shape="rect" id="node16" href="class_critter_wave.html#a127a4cc493bb6c6afcee3f394715b90d" title="CritterWave::getId" alt="" coords="263,264,388,291"/><area shape="rect" id="node17" href="class_critter_wave.html#af3879610de9f106cc80be0d7b4c1b1df" title="CritterWave::getCritters\lRemaining" alt="" coords="247,315,404,357"/><area shape="rect" id="node18" href="class_critter_wave.html#a1244e59ebd702edd2530e6256779ace0" title="Returns a reference to a Critter in the map. " alt="" coords="501,416,653,443"/><area shape="rect" id="node19" href="class_critter.html#ae0799b0a4602623632fa382e5ad0d0c8" title="Critter::getCritterSpecs" alt="" coords="248,432,403,459"/><area shape="rect" id="node20" href="_console_color_8h.html#a04ab64d75dbc16fee70b58f76b28ba36" title="green" alt="" coords="298,483,353,509"/><area shape="rect" id="node21" href="class_critter.html#a5636f0ed2f067318e0d361fe31c9eff2" title="Critter::getId" alt="" coords="279,533,372,560"/><area shape="rect" id="node22" href="class_game_state_play.html#a2278751d53b50beb97c809db26f1b9b6" title="GameStatePlay::handleCritter\lRemovalFromWave" alt="" coords="228,585,423,626"/><area shape="rect" id="node27" href="class_critter.html#afe6dafa77006e5b6b7f3f905447af3fb" title="Draw a Critter. " alt="" coords="279,676,371,703"/><area shape="rect" id="node4" href="class_player.html#a1cd893cbffe289dd821a5df984c8a2de" title="Player::getLives" alt="" coords="520,5,635,32"/><area shape="rect" id="node5" href="class_game.html#a5898f1edb6e3bc1700b2ffb1943bc609" title="Helper push function for GameState stack. " alt="" coords="515,56,639,83"/><area shape="rect" id="node8" href="class_game_state_play.html#a0d6ff2e65992c5fb29f180c6b1eb9435" title="GameStatePlay::moveCritter" alt="" coords="484,205,671,232"/><area shape="rect" id="node9" href="class_critter.html#ac2d188c14e482de7e28a9520d6f62a16" title="Critter::isAtNextWaypoint" alt="" coords="730,205,901,232"/><area shape="rect" id="node10" href="class_critter.html#affcdf706975d5a761acec7e5effea7b1" title="Critter::getMovementDirection" alt="" coords="719,256,912,283"/><area shape="rect" id="node11" href="class_critter.html#a96462bdb554e60ee1c3bb76d7cde3da6" title="Critter::updatePosition" alt="" coords="740,307,891,333"/><area shape="rect" id="node12" href="class_critter.html#a3785ffa05cec86b30264fbdbf613e4f8" title="Critter::getSpeed" alt="" coords="755,357,875,384"/><area shape="rect" id="node13" href="class_critter.html#a8a95119a0531e9372aa6a2a95b61edde" title="Critter::getCurrentWaypoint" alt="" coords="725,53,905,80"/><area shape="rect" id="node14" href="class_critter.html#a394069b23bdd1fd4f8caeab41b23c83d" title="Critter::setCurrentWaypoint" alt="" coords="725,104,905,131"/><area shape="rect" id="node15" href="class_critter.html#abe76d86eb653909910ee956195a16aec" title="Critter::setAnimationIndex" alt="" coords="729,155,901,181"/><area shape="rect" id="node23" href="class_game_state_play.html#ac82134049ed6dd0aaa929e200f7185d5" title="GameStatePlay::checkIfAt\lEndTile" alt="" coords="489,501,665,542"/><area shape="rect" id="node25" href="class_player.html#a5bb1f83134c899add66053bb08786fb0" title="Player::loseLives" alt="" coords="517,567,637,593"/><area shape="rect" id="node26" href="class_player.html#a861005738bf21093c79383a3494f2ca8" title="Maintains non&#45;negative points value. " alt="" coords="513,617,641,644"/><area shape="rect" id="node24" href="class_critter.html#a8fdba06ecb582e8b542e2e73a76f455d" title="Critter::getPosition" alt="" coords="750,508,881,535"/><area shape="rect" id="node28" href="class_animation_handler.html#a93f1509e5eccdf13a07ba1eb2256c6d0" title="Changes the animation. " alt="" coords="490,669,665,710"/><area shape="rect" id="node29" href="class_animation_handler.html#a74c541905109998e971c578c4aa3e3de" title="Updates the current frame of animation. " alt="" coords="492,735,663,761"/></map>
+<area shape="rect" id="node2" href="class_game_state_play.html#aec5f72cea0e80d1d83b9cbe155a65ce9" title="GameStatePlay::handleGameOver" alt="" coords="215,70,436,97"/><area shape="rect" id="node3" href="class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="499,143,669,184"/><area shape="rect" id="node6" href="class_critter_wave.html#a858c5934f74ac3148218e2f5a6a6e0b6" title="CritterWave::drawActivated\lCrittersInWave" alt="" coords="237,172,414,213"/><area shape="rect" id="node7" href="class_game_state_play.html#ae812a7447027abe5fcc2f79bf3e35ad8" title="GameStatePlay::moveActivated\lCritters" alt="" coords="223,237,428,279"/><area shape="rect" id="node16" href="class_critter_wave.html#a127a4cc493bb6c6afcee3f394715b90d" title="CritterWave::getId" alt="" coords="263,303,388,330"/><area shape="rect" id="node17" href="class_critter_wave.html#af3879610de9f106cc80be0d7b4c1b1df" title="CritterWave::getCritters\lRemaining" alt="" coords="247,355,404,396"/><area shape="rect" id="node18" href="class_critter_wave.html#a1244e59ebd702edd2530e6256779ace0" title="Returns a reference to a Critter in the map. " alt="" coords="508,471,660,498"/><area shape="rect" id="node19" href="class_critter.html#ae0799b0a4602623632fa382e5ad0d0c8" title="Critter::getCritterSpecs" alt="" coords="248,421,403,447"/><area shape="rect" id="node21" href="_console_color_8h.html#a04ab64d75dbc16fee70b58f76b28ba36" title="green" alt="" coords="298,522,353,549"/><area shape="rect" id="node22" href="class_critter.html#a5636f0ed2f067318e0d361fe31c9eff2" title="Critter::getId" alt="" coords="279,573,372,599"/><area shape="rect" id="node23" href="class_game_state_play.html#a2278751d53b50beb97c809db26f1b9b6" title="GameStatePlay::handleCritter\lRemovalFromWave" alt="" coords="228,628,423,669"/><area shape="rect" id="node4" href="class_player.html#a1cd893cbffe289dd821a5df984c8a2de" title="Player::getLives" alt="" coords="527,26,641,53"/><area shape="rect" id="node5" href="class_game.html#a5898f1edb6e3bc1700b2ffb1943bc609" title="Helper push function for GameState stack. " alt="" coords="522,77,646,103"/><area shape="rect" id="node8" href="class_game_state_play.html#a0d6ff2e65992c5fb29f180c6b1eb9435" title="GameStatePlay::moveCritter" alt="" coords="491,237,677,263"/><area shape="rect" id="node9" href="class_critter_game_object.html#abdc7d3071ef2e9e00c277051f62b9005" title="CritterGameObject::\lisAtNextWaypoint" alt="" coords="747,5,885,47"/><area shape="rect" id="node10" href="class_critter_game_object.html#a3ce69ef5cbc8983b45df839674aab0bc" title="CritterGameObject::\lgetMovementDirection" alt="" coords="741,71,891,112"/><area shape="rect" id="node11" href="class_critter_game_object.html#a546fa242023f61965a284e4a2e72ab7d" title="CritterGameObject::\lupdatePosition" alt="" coords="747,136,885,177"/><area shape="rect" id="node12" href="class_critter.html#a3785ffa05cec86b30264fbdbf613e4f8" title="Critter::getSpeed" alt="" coords="756,398,876,425"/><area shape="rect" id="node13" href="class_critter_game_object.html#a1b81867b7f6a204a4c9982da18bb9d0a" title="CritterGameObject::\lgetCurrentWaypoint" alt="" coords="747,201,885,243"/><area shape="rect" id="node14" href="class_critter_game_object.html#a6302cd7be6a4f1d3d724cb0e45941338" title="CritterGameObject::\lsetCurrentWaypoint" alt="" coords="747,267,885,308"/><area shape="rect" id="node15" href="class_critter_game_object.html#afea351babd57c739104879f27dafd910" title="CritterGameObject::\lsetAnimationIndex" alt="" coords="747,332,885,373"/><area shape="rect" id="node20" href="class_critter.html#a1e98c05f5a41102cc37eb7a4396b90cf" title="Critter::getHitPoints" alt="" coords="516,421,652,447"/><area shape="rect" id="node24" href="class_game_state_play.html#ac82134049ed6dd0aaa929e200f7185d5" title="GameStatePlay::checkIfAt\lEndTile" alt="" coords="496,523,672,564"/><area shape="rect" id="node26" href="_console_color_8h.html#abfbb0c9e0e5ee33dd1026c23381b78c5" title="red" alt="" coords="564,589,604,615"/><area shape="rect" id="node27" href="class_player.html#af3bdca44c57bee211d1d0ea53c11f9b3" title="Player::earnCash" alt="" coords="523,639,645,666"/><area shape="rect" id="node28" href="class_player.html#ac540cf7f9631bfd6d9c76242addd8eea" title="Player::gainPoints" alt="" coords="520,690,648,717"/><area shape="rect" id="node29" href="class_critter_wave.html#a14d2b9703371e82278c5fa3c4a2cbbd9" title="CritterWave::decrementCritters\lRemaining" alt="" coords="484,741,684,783"/><area shape="rect" id="node30" href="class_player.html#a5bb1f83134c899add66053bb08786fb0" title="Player::loseLives" alt="" coords="524,807,644,834"/><area shape="rect" id="node31" href="class_player.html#a861005738bf21093c79383a3494f2ca8" title="Maintains non&#45;negative points value. " alt="" coords="520,858,648,885"/><area shape="rect" id="node25" href="class_game_object.html#ad568496dd9cee5b9edd9357d30a00dff" title="Converts and retrieves an pair&lt;float, float&gt; object from a sf::vector2f. " alt="" coords="732,530,900,557"/></map>
 </div>
 </p>
 
@@ -1200,6 +1464,66 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="a65d1a4d74f886ce3de872c1ffbb63d57"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text GameStatePlay::buttonSpecs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7ca10b4aceefc0e2732ec427c5b5b5c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;int,sf::Text&gt; GameStatePlay::critterHealth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1667ea17be43ded7176a9dc28d99a8e1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text GameStatePlay::critterSpecs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a64cd6841a6f7139ff7e3747e4159654c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1264,6 +1588,66 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="a2c0118859e607a1ef2aa008f1b94b7f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;int,sf::Text&gt; GameStatePlay::effectDamage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a672216db210bc2dca82196badc7c20e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;int,sf::Clock&gt; GameStatePlay::effectDamageClock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9d324dec79041681951cf84349507e7f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Time GameStatePlay::effectDamageTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a0e613be489b2c61857676303a15ce3cc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1272,6 +1656,46 @@ Here is the call graph for this function:</div>
           <td class="memname">bool GameStatePlay::endOfWaves</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6b8fba9f1816c183dc546ccbe8fc04cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text GameStatePlay::fastest</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af37399cc10da66842740622a891489e0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tower.html">Tower</a>* GameStatePlay::fieldTowerSelector</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1308,6 +1732,66 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="af65d40be0eb5748b1d80186cefd3cc71"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;int,sf::Clock&gt; GameStatePlay::healthClock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4a2fd0f59504ad64f5d8b871cbf3cd35"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Time GameStatePlay::healthTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a153cd0b94e19f3c0fab378c716678f60"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_object.html">GameObject</a> GameStatePlay::interfaceBackdrop</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad6c5af538edc9f5b2fd3ba0c0f95e89d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1316,6 +1800,26 @@ Here is the call graph for this function:</div>
           <td class="memname"><a class="el" href="class_critter.html">Critter</a>* GameStatePlay::last_activated_critter</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a68ba25d35cbc05415be9173aac2ce4c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text GameStatePlay::leastH</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1368,6 +1872,86 @@ Here is the call graph for this function:</div>
           <td class="memname"><a class="el" href="class_white_cat.html">WhiteCat</a>* GameStatePlay::mew</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2d77b920db04a5a69e86625200631dd7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text GameStatePlay::mostCoins</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1ff2a6f5c9983a5240afa2aa94c3d034"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text GameStatePlay::mostH</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4ca301f18fc6be19a8465721a6c3bb1f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text GameStatePlay::nearestEnd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae1ee7931ef89e141f54ad6588759ea6f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text GameStatePlay::nearestTower</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1452,6 +2036,26 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="ac8809caa817213fe1b78749b3b19ad6f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text GameStatePlay::selectedTowerSpecs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a406124f1525e8555fb264c743298d7b9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1460,6 +2064,46 @@ Here is the call graph for this function:</div>
           <td class="memname">bool GameStatePlay::show_waypoints</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa5a191ff7adb99b88d5c967f44880264"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text GameStatePlay::slowest</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a19bbd6c5ddab619c2fed65c1a368395d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text GameStatePlay::strongest</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1524,7 +2168,7 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="ac22880bd1c34ebbe5d45182caaaf2523"></a>
+<a class="anchor" id="acfd6271509da5b9cec7ed2904b3ad33a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1532,7 +2176,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_tower.html#a110a21c18d4ec095c6234bd17f004b3e">Tower::TowerType</a> GameStatePlay::towerSelector</td>
+          <td class="memname">std::string GameStatePlay::towerSelector</td>
         </tr>
       </table>
   </td>
@@ -1604,6 +2248,26 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="aa528568bfe4f5fcc79605557c6d0d12d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text GameStatePlay::weakest</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>jamms/TowerDefense/TowerDefense/include/gameStates/<a class="el" href="_game_state_play_8h_source.html">GameStatePlay.h</a></li>
 <li>jamms/TowerDefense/TowerDefense/src/gameStates/<a class="el" href="_game_state_play_8cpp.html">GameStatePlay.cpp</a></li>
@@ -1611,7 +2275,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 7 2014 19:14:38 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 28 2014 23:42:32 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -1,5 +1,5 @@
 <map id="GameObject::circleToCircleIntersection" name="GameObject::circleToCircleIntersection">
 <area shape="rect" id="node2" href="$class_game_object.html#a8220201988f2aaea8a6f748872e188a9" title="Measures the radius of the rectangle sprite. " alt="" coords="242,5,421,47"/>
-<area shape="rect" id="node4" href="$class_game_object.html#afe3b2585b3615868c64b62bb1cb40adb" title="Gets the center of a sprite. " alt="" coords="235,71,428,98"/>
-<area shape="rect" id="node3" href="$class_game_object.html#a267f290e80e877be0de3a9706321c049" title="Gets the size of a sprite. " alt="" coords="476,13,657,39"/>
+<area shape="rect" id="node4" href="$class_game_object.html#ad6d60e0c273cb0074c91a19f3aed8708" title="Gets the center of a sprite. " alt="" coords="235,71,428,98"/>
+<area shape="rect" id="node3" href="$class_game_object.html#a3731c03ddcbdb904bd41af78e09d262a" title="Gets the size of a sprite. " alt="" coords="476,13,657,39"/>
 </map>

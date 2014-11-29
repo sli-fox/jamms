@@ -1,6 +1,14 @@
 <map id="green" name="green">
-<area shape="rect" id="node2" href="$class_bulldog.html#a21e6065a0e9cfa5aa862c8b7a5e1b88c" title="Bulldog::Bulldog" alt="" coords="131,5,247,32"/>
-<area shape="rect" id="node3" href="$class_dalmatian.html#ab4ce8123d58ef775d1bc80b72485a77d" title="Dalmatian::Dalmatian" alt="" coords="115,56,262,83"/>
-<area shape="rect" id="node4" href="$class_shih_tzu.html#a623911469b4f9763666f43b2df48d91a" title="ShihTzu::ShihTzu" alt="" coords="127,107,251,133"/>
-<area shape="rect" id="node5" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="108,157,269,184"/>
+<area shape="rect" id="node2" href="$class_adult_bulldog_upgrade.html#a4f70f00f82657fce52c7b013886029c7" title="AdultBulldogUpgrade\l::AdultBulldogUpgrade" alt="" coords="136,5,287,47"/>
+<area shape="rect" id="node3" href="$class_adult_dalmatian_upgrade.html#aa287bbb9aa3120ac94d8cb00e8277f66" title="AdultDalmatianUpgrade\l::AdultDalmatianUpgrade" alt="" coords="128,71,295,112"/>
+<area shape="rect" id="node4" href="$class_adult_shih_tzu_upgrade.html#a61934af82621935aeff025feb0e4a2a6" title="AdultShihTzuUpgrade\l::AdultShihTzuUpgrade" alt="" coords="134,136,289,177"/>
+<area shape="rect" id="node5" href="$class_baby_bulldog.html#adb01b9d1b5b21f1caf39d3eb737646a4" title="BabyBulldog::BabyBulldog" alt="" coords="123,202,299,229"/>
+<area shape="rect" id="node6" href="$class_baby_dalmatian.html#a0b9460fd26d39fa361b1386486f96f19" title="BabyDalmatian::BabyDalmatian" alt="" coords="108,253,315,279"/>
+<area shape="rect" id="node7" href="$class_baby_shih_tzu.html#afcc1a988bb58e1e4f1eeab886c7c233d" title="BabyShihTzu::BabyShihTzu" alt="" coords="119,303,303,330"/>
+<area shape="rect" id="node8" href="$class_bulldog.html#a21e6065a0e9cfa5aa862c8b7a5e1b88c" title="Bulldog::Bulldog" alt="" coords="153,354,269,381"/>
+<area shape="rect" id="node9" href="$class_shih_tzu.html#a623911469b4f9763666f43b2df48d91a" title="ShihTzu::ShihTzu" alt="" coords="149,405,273,431"/>
+<area shape="rect" id="node10" href="$class_teen_bulldog_upgrade.html#a3264266bfb7792eafdb96bc9225bd7c3" title="TeenBulldogUpgrade\l::TeenBulldogUpgrade" alt="" coords="137,456,286,497"/>
+<area shape="rect" id="node11" href="$class_teen_dalmatian_upgrade.html#a4909c2ccf3bdc7be1811472fe6af3e27" title="TeenDalmatianUpgrade\l::TeenDalmatianUpgrade" alt="" coords="129,521,293,563"/>
+<area shape="rect" id="node12" href="$class_teen_shih_tzu_upgrade.html#aa26860c4f87ceefe1f3ec32df9bd6cbb" title="TeenShihTzuUpgrade\l::TeenShihTzuUpgrade" alt="" coords="135,587,288,628"/>
+<area shape="rect" id="node13" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="131,653,292,679"/>
 </map>

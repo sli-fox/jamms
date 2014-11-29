@@ -1,5 +1,5 @@
 <map id="BlackCat" name="BlackCat">
-<area shape="rect" id="node2" href="$class_critter.html" title="Abstract base class of all Critters Critter defines the attributes, accessors, and update function fo..." alt="" coords="44,307,220,795"/>
-<area shape="rect" id="node3" href="$class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="5,5,131,259"/>
-<area shape="rect" id="node4" href="$class_i_subject.html" title="{ISubject\n|&#45; observers\l|+ attach()\l+ detach()\l+ notify()\l}" alt="" coords="155,79,240,185"/>
+<area shape="rect" id="node2" href="$class_critter.html" title="Abstract base class of all Critters Critter defines the attributes, accessors, and update function fo..." alt="" coords="5,652,181,1067"/>
+<area shape="rect" id="node3" href="$class_critter_game_object.html" title="Creates a CritterGameObject. CritterGameObject is a subclass of GameObject that separates GUI code sp..." alt="" coords="8,321,179,604"/>
+<area shape="rect" id="node4" href="$class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="31,5,156,273"/>
 </map>

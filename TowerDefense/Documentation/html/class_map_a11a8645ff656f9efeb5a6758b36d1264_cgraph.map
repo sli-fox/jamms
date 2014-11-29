@@ -7,7 +7,7 @@
 <area shape="rect" id="node15" href="$class_map.html#a3079c08faaa2fd3984bed5471488a790" title="Map::setMapSize" alt="" coords="280,396,404,422"/>
 <area shape="rect" id="node16" href="$class_map.html#afa8798ebce5315b393755d8656fa6038" title="Map::blankMap" alt="" coords="287,497,397,524"/>
 <area shape="rect" id="node21" href="$class_map.html#aae1f3e3de0581ba792b58290c164920f" title="Map::convertType" alt="" coords="280,548,404,574"/>
-<area shape="rect" id="node22" href="$class_map.html#ab9561f11877716cf4687ed4dab54d7db" title="Map::addTile" alt="" coords="503,477,599,504"/>
+<area shape="rect" id="node22" href="$class_map.html#abc4fae321b0a5e1ed4954b7a539686de" title="Map::addTile" alt="" coords="503,477,599,504"/>
 <area shape="rect" id="node24" href="$singletonrapidxml_1_1xml__node.html#ac59af4dd5f0ec715753e42467dff6aed" title="rapidxml::xml_node\l::next_sibling" alt="" coords="695,268,829,310"/>
 <area shape="rect" id="node25" href="$singletonrapidxml_1_1xml__document.html#a826929ff54242532198701f19ff5f83f" title="rapidxml::xml_document\l::clear" alt="" coords="260,178,424,219"/>
 <area shape="rect" id="node4" href="$singletonrapidxml_1_1xml__node.html#a95735358b079ae0adcfbbac69aa1fbc3" title="Removes all child nodes (but not attributes). " alt="" coords="483,47,618,88"/>

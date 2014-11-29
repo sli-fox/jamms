@@ -1,4 +1,5 @@
 <map id="Game::peekState" name="Game::peekState">
 <area shape="rect" id="node2" href="$class_game.html#aede5f46c8c7bbbaf8459eeec397a11e7" title="Drives the game. " alt="" coords="177,5,303,32"/>
-<area shape="rect" id="node3" href="$_main_8cpp.html#a17c71e8de8c58645dd41431d716ac739" title="main" alt="" coords="351,5,401,32"/>
+<area shape="rect" id="node3" href="$_main_8cpp.html#aa306ac815a7115856bc4c6c8f3376df5" title="handleGameMode" alt="" coords="351,5,477,32"/>
+<area shape="rect" id="node4" href="$_main_8cpp.html#a17c71e8de8c58645dd41431d716ac739" title="main" alt="" coords="525,5,576,32"/>
 </map>

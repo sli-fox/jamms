@@ -1,0 +1,12 @@
+<map id="Tower::getName" name="Tower::getName">
+<area shape="rect" id="node2" href="$class_adult_bulldog_upgrade.html#a9152b2b5fae3cc23cab3753832b06b94" title="AdultBulldogUpgrade\l::AdultBulldogUpgrade" alt="" coords="182,5,333,47"/>
+<area shape="rect" id="node3" href="$class_adult_dalmatian_upgrade.html#a8eba9816fcfc628e2c9310ef2f1ca989" title="AdultDalmatianUpgrade\l::AdultDalmatianUpgrade" alt="" coords="174,71,341,112"/>
+<area shape="rect" id="node4" href="$class_adult_shih_tzu_upgrade.html#a85e7b1079bb72002fb0873337435dc49" title="AdultShihTzuUpgrade\l::AdultShihTzuUpgrade" alt="" coords="180,136,335,177"/>
+<area shape="rect" id="node5" href="$class_burn_effect.html#a06df17552152fa567597e60ac9fc5a76" title="BurnEffect::BurnEffect" alt="" coords="182,202,333,229"/>
+<area shape="rect" id="node6" href="$class_freeze_effect.html#aa9aa4fc5b5a963f961c5250383977cdd" title="FreezeEffect::FreezeEffect" alt="" coords="169,253,345,279"/>
+<area shape="rect" id="node7" href="$class_slow_effect.html#a451bf06f86366b8857e09bcb38834756" title="SlowEffect::SlowEffect" alt="" coords="181,303,333,330"/>
+<area shape="rect" id="node8" href="$class_slow_effect.html#a0004dd210f4c8aac78fc72902b2bba1f" title="SlowEffect::attack" alt="" coords="194,354,321,381"/>
+<area shape="rect" id="node9" href="$class_teen_bulldog_upgrade.html#a6808367cbdaa1deed5780a916bf127cd" title="TeenBulldogUpgrade\l::TeenBulldogUpgrade" alt="" coords="183,405,332,447"/>
+<area shape="rect" id="node10" href="$class_teen_dalmatian_upgrade.html#a36935783afda88bfb639c41f8ad68959" title="TeenDalmatianUpgrade\l::TeenDalmatianUpgrade" alt="" coords="175,471,339,512"/>
+<area shape="rect" id="node11" href="$class_teen_shih_tzu_upgrade.html#ac9c5b3bfe2a3b2529b649871e3afa4c3" title="TeenShihTzuUpgrade\l::TeenShihTzuUpgrade" alt="" coords="181,536,334,577"/>
+</map>

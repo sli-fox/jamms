@@ -1,0 +1,4 @@
+<map id="Tower::setStrategy" name="Tower::setStrategy">
+<area shape="rect" id="node2" href="$class_game_state_play.html#a79237473ceeb26b94f641d0bf66c1ec0" title="GameStatePlay::buttonCommand\lLibrary" alt="" coords="184,5,401,47"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="449,13,637,39"/>
+</map>

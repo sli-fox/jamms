@@ -1,5 +1,4 @@
 <map id="Tower::setUpgradeLevel" name="Tower::setUpgradeLevel">
-<area shape="rect" id="node2" href="$class_bulldog.html#adfecd22f881be0d7946534c2012275d7" title="Bulldog::upgradeTower" alt="" coords="219,5,373,32"/>
-<area shape="rect" id="node3" href="$class_dalmatian.html#aa87cd8b4c763d84d24964024bde2fc9b" title="Dalmatian::upgradeTower" alt="" coords="212,56,380,83"/>
-<area shape="rect" id="node4" href="$class_shih_tzu.html#a9d8d599edbc19d2a16a65646d0cbc485" title="ShihTzu::upgradeTower" alt="" coords="217,107,375,133"/>
+<area shape="rect" id="node2" href="$class_bulldog.html#adfecd22f881be0d7946534c2012275d7" title="Bulldog::upgradeTower" alt="" coords="214,5,367,32"/>
+<area shape="rect" id="node3" href="$class_shih_tzu.html#a9d8d599edbc19d2a16a65646d0cbc485" title="ShihTzu::upgradeTower" alt="" coords="212,56,369,83"/>
 </map>

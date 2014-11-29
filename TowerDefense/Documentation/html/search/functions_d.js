@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['opendir',['opendir',['../dirent_8h.html#a56af8d3cfb4a2b2f44e20b276db71f2a',1,'dirent.h']]],
-  ['operator_28_29',['operator()',['../struct_critter_wave_1_1_critter_wave_deallocator.html#a3b5befe161e66cd3d7cf9d72b948cd6a',1,'CritterWave::CritterWaveDeallocator::operator()()'],['../struct_game_object_manager_1_1_game_object_deallocator.html#a7fe3b540a7ac235e0d5b95c9f865db36',1,'GameObjectManager::GameObjectDeallocator::operator()()']]],
-  ['operator_3c_3c',['operator&lt;&lt;',['../_console_color_8h.html#a107203ae78f8e63582331419798f0a8c',1,'operator&lt;&lt;():&#160;ConsoleColor.h'],['../namespacerapidxml.html#a9ed8e626dd81348caede1f92a6c8418a',1,'rapidxml::operator&lt;&lt;()']]],
-  ['operator_3d',['operator=',['../class_texture_manager.html#ac39a48038aa63007dd02f0c53ecc77eb',1,'TextureManager::operator=()'],['../singletonrapidxml_1_1xml__node.html#aa9320e2dd58cfbe5fe4b43b9f0d8c788',1,'rapidxml::xml_node::operator=()']]],
-  ['outofbound',['outOfBound',['../class_tower_manager.html#a0158f9210b43ea166977e01768849c3a',1,'TowerManager']]],
-  ['outofbounds',['outOfBounds',['../class_map.html#a6995c0de6fe380ffa652990490b867c8',1,'Map']]]
+  ['name',['name',['../classrapidxml_1_1xml__base.html#a9a09739310469995db078ebd0da3ed45',1,'rapidxml::xml_base::name() const '],['../classrapidxml_1_1xml__base.html#ae55060ae958c6e6465d6c8db852ec6ce',1,'rapidxml::xml_base::name(const Ch *name, std::size_t size)'],['../classrapidxml_1_1xml__base.html#a4611ddc82ac83a527c65606600eb2a0d',1,'rapidxml::xml_base::name(const Ch *name)']]],
+  ['name_5fsize',['name_size',['../classrapidxml_1_1xml__base.html#a7e7f98b3d01e1eab8dc1ca69aad9af84',1,'rapidxml::xml_base']]],
+  ['next_5fattribute',['next_attribute',['../singletonrapidxml_1_1xml__attribute.html#a56c08d7c96203286c889a43849328a86',1,'rapidxml::xml_attribute']]],
+  ['next_5fsibling',['next_sibling',['../singletonrapidxml_1_1xml__node.html#ac59af4dd5f0ec715753e42467dff6aed',1,'rapidxml::xml_node']]],
+  ['nullstr',['nullstr',['../classrapidxml_1_1xml__base.html#ad96ff6b1e41dab3ff60b9bc4df769a75',1,'rapidxml::xml_base']]]
 ];

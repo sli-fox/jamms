@@ -1,0 +1,4 @@
+<map id="GameStatePlay::getPauseButtonSpecs" name="GameStatePlay::getPauseButtonSpecs">
+<area shape="rect" id="node2" href="$class_game_state_play.html#a63a3ba0c891afd8ec126806bab4f315a" title="Draws game to the render window. " alt="" coords="268,13,417,39"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#ab41594c10b04429a3126d4a8085de82d" title="GameStatePlay::runThreads" alt="" coords="465,13,652,39"/>
+</map>

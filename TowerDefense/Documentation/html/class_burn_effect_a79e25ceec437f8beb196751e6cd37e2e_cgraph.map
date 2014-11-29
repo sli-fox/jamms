@@ -1,0 +1,11 @@
+<map id="BurnEffect::attack" name="BurnEffect::attack">
+<area shape="rect" id="node2" href="$class_tower.html#a9f067c2b9e5e6987f341704b8b098606" title="Tower::attack" alt="" coords="189,107,289,133"/>
+<area shape="rect" id="node4" href="$class_critter.html#a5636f0ed2f067318e0d361fe31c9eff2" title="Critter::getId" alt="" coords="379,5,472,32"/>
+<area shape="rect" id="node8" href="$_console_color_8h.html#abfbb0c9e0e5ee33dd1026c23381b78c5" title="red" alt="" coords="219,157,259,184"/>
+<area shape="rect" id="node9" href="$class_critter.html#a50549d8f01246886b931345865ec9949" title="Critter::addEffect" alt="" coords="180,233,299,260"/>
+<area shape="rect" id="node3" href="$_console_color_8h.html#a90575bb670cda4e9ae9da0847e05bd1c" title="yellow" alt="" coords="396,56,455,83"/>
+<area shape="rect" id="node5" href="$class_critter.html#a3601e12d79247c3345e9e828688cf321" title="Critter::inflictDamage" alt="" coords="354,107,497,133"/>
+<area shape="rect" id="node6" href="$class_tower.html#a198af6f04dad766d019b72fc667b90a7" title="Tower::getPower" alt="" coords="366,157,485,184"/>
+<area shape="rect" id="node7" href="$class_critter.html#a1e98c05f5a41102cc37eb7a4396b90cf" title="Critter::getHitPoints" alt="" coords="357,208,493,235"/>
+<area shape="rect" id="node10" href="$class_critter_effect.html#a4c6246bbe62acf3bfa683f40ff562a54" title="CritterEffect::getStacks" alt="" coords="347,259,504,285"/>
+</map>

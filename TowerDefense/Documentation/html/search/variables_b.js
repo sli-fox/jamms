@@ -9,6 +9,7 @@ var searchData=
   ['m_5ffree_5ffunc',['m_free_func',['../classrapidxml_1_1memory__pool.html#af8f41565f4de167eb2f40ca20695f24d',1,'rapidxml::memory_pool']]],
   ['m_5flast_5fattribute',['m_last_attribute',['../singletonrapidxml_1_1xml__node.html#ad82c1bdd1a5c94927cf8a627f18953b9',1,'rapidxml::xml_node']]],
   ['m_5flast_5fnode',['m_last_node',['../singletonrapidxml_1_1xml__node.html#adc211d26cfea2ba6fb51adb27694ff09',1,'rapidxml::xml_node']]],
+  ['m_5fmap',['m_map',['../class_cmd_base__c.html#ac9697d946dd6d470fe6933904ff057e6',1,'CmdBase_c::m_map()'],['../class_track_map_input__c.html#ac97a1987b2dbb6826e5bf5c8ef3e4283',1,'TrackMapInput_c::m_map()']]],
   ['m_5fname',['m_name',['../classrapidxml_1_1xml__base.html#afd9851ed43e14619db0d7075ef8e9e8a',1,'rapidxml::xml_base']]],
   ['m_5fname_5fsize',['m_name_size',['../classrapidxml_1_1xml__base.html#a5a8c76a7274b4180213796422c4df76f',1,'rapidxml::xml_base']]],
   ['m_5fnext_5fattribute',['m_next_attribute',['../singletonrapidxml_1_1xml__attribute.html#a3254e4b040a9b71c6b6d1c27ec03352a',1,'rapidxml::xml_attribute']]],
@@ -23,6 +24,7 @@ var searchData=
   ['m_5fvalue_5fsize',['m_value_size',['../classrapidxml_1_1xml__base.html#aa3a49d8ceddb8a8d7edb773a2226b89c',1,'rapidxml::xml_base']]],
   ['m_5fwhat',['m_what',['../classrapidxml_1_1parse__error.html#a41bffadc72eec238cf4b7d14c10c16ca',1,'rapidxml::parse_error']]],
   ['m_5fwhere',['m_where',['../classrapidxml_1_1parse__error.html#aa5a164653ac347adddf47b264620d80f',1,'rapidxml::parse_error']]],
+  ['manager',['manager',['../class_tower_test.html#aeef90091c2db96edb1f6610b0e2d3715',1,'TowerTest']]],
   ['map',['map',['../class_game.html#ab910de42d0cf4238d9d20815de472523',1,'Game']]],
   ['mapbackdrop',['mapBackdrop',['../class_game_state_map_editor.html#aad804976be5b8bb4a1aa0a8e5f63863c',1,'GameStateMapEditor::mapBackdrop()'],['../class_game_state_play.html#a1114fc8f3e15f5f46ab4361dad37ad0b',1,'GameStatePlay::mapBackdrop()']]],
   ['mapfiles',['mapFiles',['../class_game_state_map_editor.html#a115a23afd99f2153541a4b1444b6fbd5',1,'GameStateMapEditor']]],
@@ -35,5 +37,7 @@ var searchData=
   ['max_5fhealth',['max_health',['../class_critter.html#a9b2e317fb3a104ea9b449f77c81d7d7a',1,'Critter']]],
   ['max_5fmap_5fheight',['MAX_MAP_HEIGHT',['../class_map.html#aef313313ef5bbeafeae1f6b66073bace',1,'Map']]],
   ['max_5fmap_5fwidth',['MAX_MAP_WIDTH',['../class_map.html#ae9582bc1e99bdf1ecc5413f81cc95f69',1,'Map']]],
-  ['mew',['mew',['../class_game_state_play.html#a90934640484bd6417007e112d8034a50',1,'GameStatePlay']]]
+  ['mew',['mew',['../class_game_state_play.html#a90934640484bd6417007e112d8034a50',1,'GameStatePlay']]],
+  ['mostcoins',['mostCoins',['../class_game_state_play.html#a2d77b920db04a5a69e86625200631dd7',1,'GameStatePlay']]],
+  ['mosth',['mostH',['../class_game_state_play.html#a1ff2a6f5c9983a5240afa2aa94c3d034',1,'GameStatePlay']]]
 ];
