@@ -174,11 +174,6 @@ void Tower::applySpecialEffect(Critter* critter) {
 }
 
 
-void Tower::setStrategy(TowerStrategy* newStrategy){
-	this->_strategy.reset(newStrategy);
-}
-
-
 std::string Tower::getTowerSpecs() {
 	//Since we can't cout an enum in C++, we need this Array system as a workaround (optional, but prettier at output)
 	char *UpgradeLevelA[] = { "Baby", "Teen", "Adult" };

@@ -31,6 +31,8 @@ public:
   sf::CircleShape getRangeShape() const;
   RateOfFire getRateOfFire() const;
   Critter* getTarget() const;
+  TowerStrategy* getStrategy() const;
+	void setStrategy(TowerStrategy* newStrategy);
 
   //Mutators
   void setRangeShape(float range);
@@ -47,6 +49,6 @@ protected:
   sf::Clock clock;
   sf::Time time;
   RateOfFire _rate_of_fire;
-	Critter* _target;
+  Critter* _target;
   std::unique_ptr<TowerStrategy> _strategy;
 };

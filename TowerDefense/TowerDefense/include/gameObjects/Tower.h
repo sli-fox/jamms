@@ -35,7 +35,6 @@ public:
 	int getBuyCost() const;
 	int getSellCost() const;
 	int getUpgradeCost() const;
-	TowerStrategy* getStrategy() const;
 
 	//MUTATORS
 	void setID(int _id);
@@ -49,7 +48,6 @@ public:
 	void setBuyCost(int _buy_cost);
 	void setSellCost(int _sell_cost);
 	void setUpgradeCost(int _upgrade_cost);
-	void setStrategy(TowerStrategy* newStrategy);
 
 	virtual string getTowerSpecs();
 	void applySpecialEffect(Critter* critter);
