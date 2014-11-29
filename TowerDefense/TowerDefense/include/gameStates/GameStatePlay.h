@@ -92,7 +92,7 @@ class GameStatePlay : public GameState {
 	  Tower* fieldTowerSelector;
 	  sf::Font font;
 	  //sf::Text upgradeTowerSpecs;
-	  sf::Text waveSpecs, nextWaveSpecs, playerSpecs, towerSpecs, critterSpecs, buttonSpecs;
+	  sf::Text waveSpecs, nextWaveSpecs, playerSpecs, towerSpecs, critterSpecs, buttonSpecs, selectedTowerSpecs;
 	  sf::Text nearestTower;
 	  sf::Text nearestEnd;
 	  sf::Text strongest;

@@ -135,6 +135,7 @@ void GameStatePlay::draw(const float delta_time) {
 		this->game->game_window.draw(buttonSpecs);
 		//this->game->game_window.draw(upgradeTowerSpecs);
 	}
+
 	for (int i = 0; i < int(this->current_wave->getContainerOfCritters().size()); ++i) 
 	{
 		if ( this->current_wave->getContainerOfCritters()[i]->isActive )
@@ -188,6 +189,11 @@ void GameStatePlay::draw(const float delta_time) {
 	this->game->game_window.draw(slowest);
 	this->game->game_window.draw(fastest);
 	this->game->game_window.draw(mostCoins);
+
+	if(fieldTowerSelector == nullptr)
+		selectedTowerSpecs.setString("");
+
+	this->game->game_window.draw(selectedTowerSpecs);
 }
 
 void GameStatePlay::update(const float delta_time) {
@@ -553,8 +559,10 @@ void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 			&& this->game->map.getTile(tileX, tileY)->getType() == Tile::TYPE::SCENERY) {
 				tower_manager.buyTower(towerSelector, tileX, tileY);
 		}
-		if(tower_manager.getTower(tileX, tileY) != nullptr)
+		if(tower_manager.getTower(tileX, tileY) != nullptr){
 			fieldTowerSelector = tower_manager.getTower(tileX, tileY);
+			selectedTowerSpecs.setString(fieldTowerSelector->getTowerSpecs());
+		}
 	}
 	else if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
 		fieldTowerSelector = nullptr;
@@ -564,8 +572,10 @@ void GameStatePlay::towerCommandLibrary(const int tileX, const int tileY){
 	}
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::U) && tower_manager.getTower(tileX, tileY) != NULL) {
 		tower_manager.upgradeTower(tileX, tileY);
-		if(tower_manager.getTower(tileX, tileY) != nullptr)
+		if(tower_manager.getTower(tileX, tileY) != nullptr){
 			fieldTowerSelector = tower_manager.getTower(tileX, tileY);
+			selectedTowerSpecs.setString(fieldTowerSelector->getTowerSpecs());
+		}
 	}
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num0)){
 		tower_manager.clearAllTowers();
@@ -613,40 +623,58 @@ void GameStatePlay::buttonCommandLibrary() {
 			towerSelector = "BabyBulldog";
 		}
 		else if(buttonMap["EndStrategy_Btn"].spriteContains(localPosition)) {
-			if(fieldTowerSelector != nullptr)
+			if(fieldTowerSelector != nullptr){
 				fieldTowerSelector->setStrategy(new NearestEndPointStrategy);
+				selectedTowerSpecs.setString(fieldTowerSelector->getTowerSpecs());
+			}
 		}
 		else if(buttonMap["NearStrategy_Btn"].spriteContains(localPosition)) {
-			if(fieldTowerSelector != nullptr)
+			if(fieldTowerSelector != nullptr){
 				fieldTowerSelector->setStrategy(new NearestTowerStrategy);
+				selectedTowerSpecs.setString(fieldTowerSelector->getTowerSpecs());
+			}
 		}
 		else if(buttonMap["StrongestStrategy_Btn"].spriteContains(localPosition)) {
-			if(fieldTowerSelector != nullptr)
+			if(fieldTowerSelector != nullptr){
 				fieldTowerSelector->setStrategy(new StrongestStrategy);
+				selectedTowerSpecs.setString(fieldTowerSelector->getTowerSpecs());
+			}
 		}
 		else if(buttonMap["WeakestStrategy_Btn"].spriteContains(localPosition)) {
-			if(fieldTowerSelector != nullptr)
+			if(fieldTowerSelector != nullptr){
 				fieldTowerSelector->setStrategy(new WeakestStrategy);
+				selectedTowerSpecs.setString(fieldTowerSelector->getTowerSpecs());
+			}
 		}
 		else if(buttonMap["MostHealthStrategy_Btn"].spriteContains(localPosition)) {
-			if(fieldTowerSelector != nullptr)
+			if(fieldTowerSelector != nullptr){
 				fieldTowerSelector->setStrategy(new MostHealthStrategy);
+				selectedTowerSpecs.setString(fieldTowerSelector->getTowerSpecs());
+			}
 		}
 		else if(buttonMap["LeastHealthStrategy_Btn"].spriteContains(localPosition)) {
-			if(fieldTowerSelector != nullptr)
+			if(fieldTowerSelector != nullptr){
 				fieldTowerSelector->setStrategy(new LeastHealthStrategy);
+				selectedTowerSpecs.setString(fieldTowerSelector->getTowerSpecs());
+			}
 		}
 		else if(buttonMap["FastestStrategy_Btn"].spriteContains(localPosition)) {
-			if(fieldTowerSelector != nullptr)
+			if(fieldTowerSelector != nullptr){
 				fieldTowerSelector->setStrategy(new FastestStrategy);
+				selectedTowerSpecs.setString(fieldTowerSelector->getTowerSpecs());
+			}
 		}
 		else if(buttonMap["SlowestStrategy_Btn"].spriteContains(localPosition)) {
-			if(fieldTowerSelector != nullptr)
+			if(fieldTowerSelector != nullptr){
 				fieldTowerSelector->setStrategy(new SlowestStrategy);
+				selectedTowerSpecs.setString(fieldTowerSelector->getTowerSpecs());
+			}
 		}
 		else if(buttonMap["MostCoinsStrategy_Btn"].spriteContains(localPosition)) {
-			if(fieldTowerSelector != nullptr)
+			if(fieldTowerSelector != nullptr){
 				fieldTowerSelector->setStrategy(new MostCoinsStrategy);
+				selectedTowerSpecs.setString(fieldTowerSelector->getTowerSpecs());
+			}
 		}
 	}
 }
@@ -834,6 +862,11 @@ void GameStatePlay::initializeButtonMap() {
 	mostCoins.setPosition(10*32+4,20*32+4);
 	mostCoins.setColor(sf::Color::Black);
 	mostCoins.setCharacterSize(12);
+
+	selectedTowerSpecs.setFont(font);
+	selectedTowerSpecs.setPosition(17*32+8,14*32);
+	selectedTowerSpecs.setColor(sf::Color::White);
+	selectedTowerSpecs.setCharacterSize(13);
 
 	/*
 	GameObject bulldog_1_Btn;

@@ -57,7 +57,7 @@ std::string Critter::getCritterSpecs() {
 	output << "Type: " << CritterTypeA[this->type] << std::endl;
 	output << "Steal Coins: " << this->steal_points << std::endl;
 	output << "Player Reward: " << this->player_reward << std::endl;
-	output << "Speed: " << this->speed << std::endl;
+	output << "Speed: " << getSpeed() << std::endl;
 
 	return output.str();
 }
