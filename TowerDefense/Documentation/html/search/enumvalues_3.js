@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['fast',['Fast',['../class_tower.html#ae82ae8201f8921eb64878d2c9ecb5bb2aa62913c3081700b5c283d075f9f6240a',1,'Tower']]],
-  ['freezing',['Freezing',['../class_tower.html#a355ab1cbcfd8c4d037ccf8937f784445a95fcdb81c44a65a2513b49f37515c0c5',1,'Tower']]]
+  ['dalmatian',['Dalmatian',['../class_tower.html#a110a21c18d4ec095c6234bd17f004b3ea4c4f3bb9f46dae3c4007388964d70918',1,'Tower']]],
+  ['dead',['DEAD',['../class_tile.html#acb53d82f9dacff45a98acc63276928ebab89feda40ad0da6fef5e8c0b9ee76410',1,'Tile']]],
+  ['down',['DOWN',['../class_critter_game_object.html#a8d07276919d937f6066395bc0e1febf2ae3b729130fb185c409e639345a7de9ed',1,'CritterGameObject']]]
 ];

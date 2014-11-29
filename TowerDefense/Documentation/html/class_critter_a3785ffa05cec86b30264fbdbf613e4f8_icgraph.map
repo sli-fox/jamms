@@ -1,7 +1,10 @@
 <map id="Critter::getSpeed" name="Critter::getSpeed">
-<area shape="rect" id="node2" href="$class_tower.html#a7df1e896cdd5cdf7cc2169d6d4f9a6cf" title="Tower::applySpecialEffect" alt="" coords="181,8,352,35"/>
-<area shape="rect" id="node4" href="$class_game_state_play.html#a0d6ff2e65992c5fb29f180c6b1eb9435" title="GameStatePlay::moveCritter" alt="" coords="173,60,360,87"/>
-<area shape="rect" id="node3" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="417,5,605,32"/>
-<area shape="rect" id="node5" href="$class_game_state_play.html#ae812a7447027abe5fcc2f79bf3e35ad8" title="GameStatePlay::moveActivated\lCritters" alt="" coords="408,57,613,98"/>
-<area shape="rect" id="node6" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="661,64,823,91"/>
+<area shape="rect" id="node2" href="$class_slowest_strategy.html#ae3a2198747baba78c83c6acc1709a5e3" title="SlowestStrategy::compute\lTarget" alt="" coords="179,5,354,47"/>
+<area shape="rect" id="node3" href="$class_fastest_strategy.html#a085f9592822524427fea231ff7cf9814" title="FastestStrategy::compute\lTarget" alt="" coords="180,71,353,112"/>
+<area shape="rect" id="node4" href="$class_critter.html#ae0799b0a4602623632fa382e5ad0d0c8" title="Critter::getCritterSpecs" alt="" coords="433,137,588,163"/>
+<area shape="rect" id="node6" href="$class_tower.html#a7df1e896cdd5cdf7cc2169d6d4f9a6cf" title="Tower::applySpecialEffect" alt="" coords="181,187,352,214"/>
+<area shape="rect" id="node8" href="$class_game_state_play.html#a0d6ff2e65992c5fb29f180c6b1eb9435" title="GameStatePlay::moveCritter" alt="" coords="173,242,360,269"/>
+<area shape="rect" id="node5" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="661,191,823,218"/>
+<area shape="rect" id="node7" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="417,187,605,214"/>
+<area shape="rect" id="node9" href="$class_game_state_play.html#ae812a7447027abe5fcc2f79bf3e35ad8" title="GameStatePlay::moveActivated\lCritters" alt="" coords="408,239,613,280"/>
 </map>

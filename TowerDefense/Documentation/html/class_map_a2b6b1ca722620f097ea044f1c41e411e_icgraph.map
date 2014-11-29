@@ -1,5 +1,5 @@
 <map id="Map::load" name="Map::load">
-<area shape="rect" id="node2" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="132,5,296,47"/>
-<area shape="rect" id="node4" href="$class_map.html#a11a8645ff656f9efeb5a6758b36d1264" title="Map::Map" alt="" coords="174,71,254,98"/>
-<area shape="rect" id="node3" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="344,5,491,47"/>
+<area shape="rect" id="node2" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="344,5,491,47"/>
+<area shape="rect" id="node3" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="132,35,296,76"/>
+<area shape="rect" id="node4" href="$class_map.html#a11a8645ff656f9efeb5a6758b36d1264" title="Map::Map" alt="" coords="174,101,254,127"/>
 </map>

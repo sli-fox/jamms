@@ -1,10 +1,12 @@
 <map id="Map::removeGameObject" name="Map::removeGameObject">
 <area shape="rect" id="node2" href="$class_game_state_map_editor.html#aab39f5d619995539f39f9cd217130653" title="GameStateMapEditor\l::mapEditorCommandLibrary" alt="" coords="387,5,573,47"/>
-<area shape="rect" id="node4" href="$class_map.html#a69be425dd99011951d8c4f08b598703b" title="Map::removeTile" alt="" coords="223,63,339,90"/>
-<area shape="rect" id="node3" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="961,24,1108,65"/>
-<area shape="rect" id="node5" href="$class_map.html#afa8798ebce5315b393755d8656fa6038" title="Map::blankMap" alt="" coords="425,93,535,119"/>
-<area shape="rect" id="node6" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="749,53,913,95"/>
-<area shape="rect" id="node7" href="$class_map.html#af3e300404b4bdacb2761300cb3cc1eda" title="Map::Map" alt="" coords="621,103,701,130"/>
-<area shape="rect" id="node8" href="$class_map.html#a2b6b1ca722620f097ea044f1c41e411e" title="Map::load" alt="" coords="622,154,701,181"/>
-<area shape="rect" id="node9" href="$class_map.html#a11a8645ff656f9efeb5a6758b36d1264" title="Map::Map" alt="" coords="791,154,871,181"/>
+<area shape="rect" id="node4" href="$class_map.html#a69be425dd99011951d8c4f08b598703b" title="Map::removeTile" alt="" coords="223,71,339,98"/>
+<area shape="rect" id="node3" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="961,43,1108,84"/>
+<area shape="rect" id="node5" href="$class_map.html#afa8798ebce5315b393755d8656fa6038" title="Map::blankMap" alt="" coords="425,71,535,98"/>
+<area shape="rect" id="node10" href="$class_cmd_add_tile__c.html#ae2cf1ae80b5d05be7fea2fc57954a617" title="CmdAddTile_c::undo" alt="" coords="409,122,551,149"/>
+<area shape="rect" id="node11" href="$class_cmd_remove_tile__c.html#ab423f8f77192b2772f245feb82c96cb4" title="CmdRemoveTile_c::redo" alt="" coords="399,173,561,199"/>
+<area shape="rect" id="node6" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="749,43,913,84"/>
+<area shape="rect" id="node7" href="$class_map.html#af3e300404b4bdacb2761300cb3cc1eda" title="Map::Map" alt="" coords="621,93,701,119"/>
+<area shape="rect" id="node8" href="$class_map.html#a2b6b1ca722620f097ea044f1c41e411e" title="Map::load" alt="" coords="622,143,701,170"/>
+<area shape="rect" id="node9" href="$class_map.html#a11a8645ff656f9efeb5a6758b36d1264" title="Map::Map" alt="" coords="791,159,871,186"/>
 </map>

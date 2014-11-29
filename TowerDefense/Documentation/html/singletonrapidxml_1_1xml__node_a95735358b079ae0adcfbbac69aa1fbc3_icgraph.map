@@ -1,9 +1,9 @@
 <map id="rapidxml::xml_node::remove_all_nodes" name="rapidxml::xml_node::remove_all_nodes">
-<area shape="rect" id="node2" href="$singletonrapidxml_1_1xml__document.html#ac6e73ff9ac323bf5a370c38feb03a6b1" title="rapidxml::xml_document\l::parse" alt="" coords="188,5,352,47"/>
-<area shape="rect" id="node7" href="$singletonrapidxml_1_1xml__document.html#a826929ff54242532198701f19ff5f83f" title="rapidxml::xml_document\l::clear" alt="" coords="188,71,352,112"/>
-<area shape="rect" id="node3" href="$class_map.html#a2b6b1ca722620f097ea044f1c41e411e" title="Map::load" alt="" coords="401,23,480,50"/>
-<area shape="rect" id="node4" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="529,71,693,112"/>
-<area shape="rect" id="node6" href="$class_map.html#a11a8645ff656f9efeb5a6758b36d1264" title="Map::Map" alt="" coords="571,19,651,46"/>
-<area shape="rect" id="node5" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="741,71,888,112"/>
-<area shape="rect" id="node8" href="$class_map.html#a7c8e0a56747581e1b9f5248ceb043275" title="Map::save" alt="" coords="400,78,481,105"/>
+<area shape="rect" id="node2" href="$singletonrapidxml_1_1xml__document.html#ac6e73ff9ac323bf5a370c38feb03a6b1" title="rapidxml::xml_document\l::parse" alt="" coords="188,18,352,60"/>
+<area shape="rect" id="node7" href="$singletonrapidxml_1_1xml__document.html#a826929ff54242532198701f19ff5f83f" title="rapidxml::xml_document\l::clear" alt="" coords="188,84,352,125"/>
+<area shape="rect" id="node3" href="$class_map.html#a2b6b1ca722620f097ea044f1c41e411e" title="Map::load" alt="" coords="401,28,480,55"/>
+<area shape="rect" id="node4" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="741,80,888,121"/>
+<area shape="rect" id="node5" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="529,80,693,121"/>
+<area shape="rect" id="node6" href="$class_map.html#a11a8645ff656f9efeb5a6758b36d1264" title="Map::Map" alt="" coords="571,28,651,55"/>
+<area shape="rect" id="node8" href="$class_map.html#a7c8e0a56747581e1b9f5248ceb043275" title="Map::save" alt="" coords="400,91,481,118"/>
 </map>

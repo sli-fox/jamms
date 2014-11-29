@@ -1,7 +1,11 @@
 <map id="Tower::getUpgradeLevel" name="Tower::getUpgradeLevel">
-<area shape="rect" id="node2" href="$class_bulldog.html#adfecd22f881be0d7946534c2012275d7" title="Bulldog::upgradeTower" alt="" coords="221,5,374,32"/>
-<area shape="rect" id="node3" href="$class_dalmatian.html#aa87cd8b4c763d84d24964024bde2fc9b" title="Dalmatian::upgradeTower" alt="" coords="213,56,381,83"/>
-<area shape="rect" id="node4" href="$class_shih_tzu.html#a9d8d599edbc19d2a16a65646d0cbc485" title="ShihTzu::upgradeTower" alt="" coords="219,107,376,133"/>
-<area shape="rect" id="node5" href="$class_tower.html#a7df1e896cdd5cdf7cc2169d6d4f9a6cf" title="Tower::applySpecialEffect" alt="" coords="212,157,383,184"/>
-<area shape="rect" id="node6" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="431,157,619,184"/>
+<area shape="rect" id="node2" href="$class_bulldog.html#adfecd22f881be0d7946534c2012275d7" title="Bulldog::upgradeTower" alt="" coords="233,5,386,32"/>
+<area shape="rect" id="node3" href="$class_burn_effect.html#a06df17552152fa567597e60ac9fc5a76" title="BurnEffect::BurnEffect" alt="" coords="234,56,385,83"/>
+<area shape="rect" id="node4" href="$class_freeze_effect.html#aa9aa4fc5b5a963f961c5250383977cdd" title="FreezeEffect::FreezeEffect" alt="" coords="221,107,397,133"/>
+<area shape="rect" id="node5" href="$class_shih_tzu.html#a9d8d599edbc19d2a16a65646d0cbc485" title="ShihTzu::upgradeTower" alt="" coords="231,157,388,184"/>
+<area shape="rect" id="node6" href="$class_slow_effect.html#a451bf06f86366b8857e09bcb38834756" title="SlowEffect::SlowEffect" alt="" coords="233,208,385,235"/>
+<area shape="rect" id="node7" href="$class_tower_manager.html#aa74345499b531c211c0abf7b91eb96fc" title="TowerManager::upgradeTower" alt="" coords="212,259,407,285"/>
+<area shape="rect" id="node8" href="$class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="455,222,667,263"/>
+<area shape="rect" id="node10" href="$class_tower_test.html#ace6c736cadac380b8d9adf0d7c853979" title="TowerTest::testTowerUpgrades" alt="" coords="461,288,661,315"/>
+<area shape="rect" id="node9" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="715,229,903,256"/>
 </map>

@@ -1,8 +1,8 @@
 <map id="BlackCat::BlackCat" name="BlackCat::BlackCat">
-<area shape="rect" id="node2" href="$class_black_cat.html#a2ae946e05f754f7d7bdbc753946425eb" title="Initialization function for a BlackCat. " alt="" coords="189,107,355,133"/>
-<area shape="rect" id="node3" href="$class_critter.html#affcdf706975d5a761acec7e5effea7b1" title="Critter::getMovementDirection" alt="" coords="411,5,605,32"/>
-<area shape="rect" id="node4" href="$class_texture_manager.html#a0a6bc63e2f6fa7e1d0aee5b24cfa089a" title="Returns the only instance of a TextureManager object. " alt="" coords="413,56,603,83"/>
-<area shape="rect" id="node5" href="$class_texture_manager.html#aa631660b783d448a29b1096c64fe65e4" title="Returns the instance of a texture loaded by the file name. " alt="" coords="413,107,603,133"/>
-<area shape="rect" id="node6" href="$class_animation_handler.html#ae517a14ed199418ccbc8d71db5ad5955" title="Add a new animation. " alt="" coords="403,157,613,184"/>
-<area shape="rect" id="node7" href="$class_animation_handler.html#a74c541905109998e971c578c4aa3e3de" title="Updates the current frame of animation. " alt="" coords="423,208,593,235"/>
+<area shape="rect" id="node2" href="$class_black_cat.html#a2ae946e05f754f7d7bdbc753946425eb" title="Initialization function for a BlackCat. " alt="" coords="189,122,355,149"/>
+<area shape="rect" id="node3" href="$class_critter_game_object.html#a3ce69ef5cbc8983b45df839674aab0bc" title="CritterGameObject::\lgetMovementDirection" alt="" coords="433,5,583,47"/>
+<area shape="rect" id="node4" href="$class_texture_manager.html#a0a6bc63e2f6fa7e1d0aee5b24cfa089a" title="Returns the only instance of a TextureManager object. " alt="" coords="413,71,603,98"/>
+<area shape="rect" id="node5" href="$class_texture_manager.html#aa631660b783d448a29b1096c64fe65e4" title="Returns the instance of a texture loaded by the file name. " alt="" coords="413,122,603,149"/>
+<area shape="rect" id="node6" href="$class_animation_handler.html#ae517a14ed199418ccbc8d71db5ad5955" title="Add a new animation. " alt="" coords="403,173,613,199"/>
+<area shape="rect" id="node7" href="$class_animation_handler.html#a74c541905109998e971c578c4aa3e3de" title="Updates the current frame of animation. " alt="" coords="423,223,593,250"/>
 </map>

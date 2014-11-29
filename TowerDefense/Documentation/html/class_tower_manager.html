@@ -114,8 +114,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3c54cdf57006efbcd9fc074f156d5360"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2cf2fc1dd19ced5d64ec74042673055"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tower.html">Tower</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_manager.html#ae2cf2fc1dd19ced5d64ec74042673055">getTower</a> (int tileX, int tileY)</td></tr>
 <tr class="separator:ae2cf2fc1dd19ced5d64ec74042673055"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac057ea8072b060d0fad71fa218e219af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tower.html">Tower</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_manager.html#ac057ea8072b060d0fad71fa218e219af">buyTower</a> (<a class="el" href="class_tower.html#a110a21c18d4ec095c6234bd17f004b3e">Tower::TowerType</a> type, int tileX, int tileY)</td></tr>
-<tr class="separator:ac057ea8072b060d0fad71fa218e219af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48859fff5518d39549e26d73633eb3c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tower.html">Tower</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_manager.html#a48859fff5518d39549e26d73633eb3c6">buyTower</a> (std::string towerSelector, int tileX, int tileY)</td></tr>
+<tr class="separator:a48859fff5518d39549e26d73633eb3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa74345499b531c211c0abf7b91eb96fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_manager.html#aa74345499b531c211c0abf7b91eb96fc">upgradeTower</a> (int tileX, int tileY)</td></tr>
+<tr class="separator:aa74345499b531c211c0abf7b91eb96fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa7bbe1d178269f32df231807ab419d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_manager.html#afa7bbe1d178269f32df231807ab419d8">sellTower</a> (int tileX, int tileY)</td></tr>
 <tr class="separator:afa7bbe1d178269f32df231807ab419d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd9c7b3113dd4d02b0ee875d705cdf39"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_manager.html#afd9c7b3113dd4d02b0ee875d705cdf39">isTileFree</a> (int tileX, int tileY)</td></tr>
@@ -218,15 +220,15 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ac057ea8072b060d0fad71fa218e219af"></a>
+<a class="anchor" id="a48859fff5518d39549e26d73633eb3c6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_tower.html">Tower</a> * TowerManager::buyTower </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_tower.html#a110a21c18d4ec095c6234bd17f004b3e">Tower::TowerType</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>towerSelector</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -251,18 +253,18 @@ Private Attributes</h2></td></tr>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_tower_manager_ac057ea8072b060d0fad71fa218e219af_cgraph.png" border="0" usemap="#class_tower_manager_ac057ea8072b060d0fad71fa218e219af_cgraph" alt=""/></div>
-<map name="class_tower_manager_ac057ea8072b060d0fad71fa218e219af_cgraph" id="class_tower_manager_ac057ea8072b060d0fad71fa218e219af_cgraph">
-<area shape="rect" id="node2" href="class_tower_manager.html#afd9c7b3113dd4d02b0ee875d705cdf39" title="TowerManager::isTileFree" alt="" coords="223,5,393,32"/><area shape="rect" id="node3" href="_console_color_8h.html#abfbb0c9e0e5ee33dd1026c23381b78c5" title="red" alt="" coords="288,56,328,83"/><area shape="rect" id="node4" href="class_player.html#abb709d55c86f703fbd6cc5b90d31fc39" title="Maintains non&#45;negative cash value. " alt="" coords="242,107,374,133"/><area shape="rect" id="node5" href="_console_color_8h.html#a9a5da37d743c609ea42e11b710812de2" title="blue" alt="" coords="285,157,331,184"/></map>
+<div class="center"><img src="class_tower_manager_a48859fff5518d39549e26d73633eb3c6_cgraph.png" border="0" usemap="#class_tower_manager_a48859fff5518d39549e26d73633eb3c6_cgraph" alt=""/></div>
+<map name="class_tower_manager_a48859fff5518d39549e26d73633eb3c6_cgraph" id="class_tower_manager_a48859fff5518d39549e26d73633eb3c6_cgraph">
+<area shape="rect" id="node2" href="class_tower_manager.html#afd9c7b3113dd4d02b0ee875d705cdf39" title="TowerManager::isTileFree" alt="" coords="223,5,393,32"/><area shape="rect" id="node3" href="class_player.html#abb709d55c86f703fbd6cc5b90d31fc39" title="Maintains non&#45;negative cash value. " alt="" coords="242,56,374,83"/><area shape="rect" id="node4" href="_console_color_8h.html#a9a5da37d743c609ea42e11b710812de2" title="blue" alt="" coords="285,107,331,133"/><area shape="rect" id="node5" href="_console_color_8h.html#abfbb0c9e0e5ee33dd1026c23381b78c5" title="red" alt="" coords="288,157,328,184"/></map>
 </div>
 </p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_tower_manager_ac057ea8072b060d0fad71fa218e219af_icgraph.png" border="0" usemap="#class_tower_manager_ac057ea8072b060d0fad71fa218e219af_icgraph" alt=""/></div>
-<map name="class_tower_manager_ac057ea8072b060d0fad71fa218e219af_icgraph" id="class_tower_manager_ac057ea8072b060d0fad71fa218e219af_icgraph">
-<area shape="rect" id="node2" href="class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="223,5,435,47"/><area shape="rect" id="node3" href="class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="483,13,671,39"/></map>
+<div class="center"><img src="class_tower_manager_a48859fff5518d39549e26d73633eb3c6_icgraph.png" border="0" usemap="#class_tower_manager_a48859fff5518d39549e26d73633eb3c6_icgraph" alt=""/></div>
+<map name="class_tower_manager_a48859fff5518d39549e26d73633eb3c6_icgraph" id="class_tower_manager_a48859fff5518d39549e26d73633eb3c6_icgraph">
+<area shape="rect" id="node2" href="class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="223,5,435,47"/><area shape="rect" id="node4" href="class_tower_test.html#aa5b9633ca71b4020fb635758e39d98ad" title="TowerTest::setUp" alt="" coords="267,71,390,98"/><area shape="rect" id="node3" href="class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="483,13,671,39"/></map>
 </div>
 </p>
 
@@ -286,7 +288,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_tower_manager_ae71fc7c55f92477846760b122d0f60b9_icgraph.png" border="0" usemap="#class_tower_manager_ae71fc7c55f92477846760b122d0f60b9_icgraph" alt=""/></div>
 <map name="class_tower_manager_ae71fc7c55f92477846760b122d0f60b9_icgraph" id="class_tower_manager_ae71fc7c55f92477846760b122d0f60b9_icgraph">
-<area shape="rect" id="node2" href="class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="252,5,464,47"/><area shape="rect" id="node3" href="class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="512,13,700,39"/></map>
+<area shape="rect" id="node2" href="class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="255,5,467,47"/><area shape="rect" id="node4" href="class_game_state_play.html#a79237473ceeb26b94f641d0bf66c1ec0" title="GameStatePlay::buttonCommand\lLibrary" alt="" coords="252,71,469,112"/><area shape="rect" id="node3" href="class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="517,46,705,73"/></map>
 </div>
 </p>
 
@@ -428,7 +430,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_tower_manager_afd9c7b3113dd4d02b0ee875d705cdf39_icgraph.png" border="0" usemap="#class_tower_manager_afd9c7b3113dd4d02b0ee875d705cdf39_icgraph" alt=""/></div>
 <map name="class_tower_manager_afd9c7b3113dd4d02b0ee875d705cdf39_icgraph" id="class_tower_manager_afd9c7b3113dd4d02b0ee875d705cdf39_icgraph">
-<area shape="rect" id="node2" href="class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="441,15,653,56"/><area shape="rect" id="node4" href="class_tower_manager.html#ac057ea8072b060d0fad71fa218e219af" title="TowerManager::buyTower" alt="" coords="224,22,393,49"/><area shape="rect" id="node5" href="class_tower_manager.html#afa7bbe1d178269f32df231807ab419d8" title="TowerManager::sellTower" alt="" coords="225,73,393,100"/><area shape="rect" id="node3" href="class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="701,22,889,49"/></map>
+<area shape="rect" id="node2" href="class_tower_manager.html#a48859fff5518d39549e26d73633eb3c6" title="TowerManager::buyTower" alt="" coords="224,63,393,90"/><area shape="rect" id="node6" href="class_tower_manager.html#afa7bbe1d178269f32df231807ab419d8" title="TowerManager::sellTower" alt="" coords="225,13,393,39"/><area shape="rect" id="node3" href="class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="441,5,653,47"/><area shape="rect" id="node5" href="class_tower_test.html#aa5b9633ca71b4020fb635758e39d98ad" title="TowerTest::setUp" alt="" coords="486,71,609,98"/><area shape="rect" id="node4" href="class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="701,13,889,39"/></map>
 </div>
 </p>
 
@@ -513,6 +515,50 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="aa74345499b531c211c0abf7b91eb96fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TowerManager::upgradeTower </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tileX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tileY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tower_manager_aa74345499b531c211c0abf7b91eb96fc_cgraph.png" border="0" usemap="#class_tower_manager_aa74345499b531c211c0abf7b91eb96fc_cgraph" alt=""/></div>
+<map name="class_tower_manager_aa74345499b531c211c0abf7b91eb96fc_cgraph" id="class_tower_manager_aa74345499b531c211c0abf7b91eb96fc_cgraph">
+<area shape="rect" id="node2" href="class_tower.html#a87db306927fd4022cae1369b88688ed7" title="Tower::getType" alt="" coords="272,5,383,32"/><area shape="rect" id="node3" href="class_tower.html#ae8236cf1fac3f2fd791312e3dc59d904" title="Tower::getUpgradeLevel" alt="" coords="248,56,407,83"/><area shape="rect" id="node4" href="class_player.html#aee3d68c568ac6d2346852a47fdc25c01" title="Player::getCash" alt="" coords="270,107,385,133"/><area shape="rect" id="node5" href="class_player.html#abb709d55c86f703fbd6cc5b90d31fc39" title="Maintains non&#45;negative cash value. " alt="" coords="261,157,393,184"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tower_manager_aa74345499b531c211c0abf7b91eb96fc_icgraph.png" border="0" usemap="#class_tower_manager_aa74345499b531c211c0abf7b91eb96fc_icgraph" alt=""/></div>
+<map name="class_tower_manager_aa74345499b531c211c0abf7b91eb96fc_icgraph" id="class_tower_manager_aa74345499b531c211c0abf7b91eb96fc_icgraph">
+<area shape="rect" id="node2" href="class_game_state_play.html#ab33de76aa28534d14aa1d79bed43aa17" title="GameStatePlay::towerCommand\lLibrary" alt="" coords="248,5,460,47"/><area shape="rect" id="node4" href="class_tower_test.html#ace6c736cadac380b8d9adf0d7c853979" title="TowerTest::testTowerUpgrades" alt="" coords="254,71,454,98"/><area shape="rect" id="node3" href="class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="508,13,696,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a5c5df568b2ea8dd7220fed1d850c4050"></a>
 <div class="memitem">
@@ -565,7 +611,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 7 2014 19:14:41 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 28 2014 23:42:38 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

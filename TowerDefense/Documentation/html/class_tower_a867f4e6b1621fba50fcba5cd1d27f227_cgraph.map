@@ -1,0 +1,4 @@
+<map id="Tower::setRange" name="Tower::setRange">
+<area shape="rect" id="node2" href="$class_tower.html#ab91ce57d4ab80bd2aa03e6f4b68ef1a8" title="Tower::setRangeShape" alt="" coords="172,5,328,32"/>
+<area shape="rect" id="node3" href="$class_game_object.html#ad568496dd9cee5b9edd9357d30a00dff" title="Converts and retrieves an pair&lt;float, float&gt; object from a sf::vector2f. " alt="" coords="376,5,544,32"/>
+</map>

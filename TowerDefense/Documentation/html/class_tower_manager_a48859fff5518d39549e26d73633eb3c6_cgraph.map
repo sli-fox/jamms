@@ -1,0 +1,6 @@
+<map id="TowerManager::buyTower" name="TowerManager::buyTower">
+<area shape="rect" id="node2" href="$class_tower_manager.html#afd9c7b3113dd4d02b0ee875d705cdf39" title="TowerManager::isTileFree" alt="" coords="223,5,393,32"/>
+<area shape="rect" id="node3" href="$class_player.html#abb709d55c86f703fbd6cc5b90d31fc39" title="Maintains non&#45;negative cash value. " alt="" coords="242,56,374,83"/>
+<area shape="rect" id="node4" href="$_console_color_8h.html#a9a5da37d743c609ea42e11b710812de2" title="blue" alt="" coords="285,107,331,133"/>
+<area shape="rect" id="node5" href="$_console_color_8h.html#abfbb0c9e0e5ee33dd1026c23381b78c5" title="red" alt="" coords="288,157,328,184"/>
+</map>

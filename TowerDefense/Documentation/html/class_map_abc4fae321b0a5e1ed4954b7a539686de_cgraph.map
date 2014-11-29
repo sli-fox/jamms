@@ -1,0 +1,5 @@
+<map id="Map::addTile" name="Map::addTile">
+<area shape="rect" id="node2" href="$class_map.html#a6995c0de6fe380ffa652990490b867c8" title="Map::outOfBounds" alt="" coords="367,24,497,51"/>
+<area shape="rect" id="node3" href="$class_map.html#aa8e57f0e6d665def93ad7b33413e98a7" title="Map::getTile" alt="" coords="187,24,281,51"/>
+<area shape="rect" id="node4" href="$class_map.html#a63a6d8a5e6bcbc1cc92cd29fcff638db" title="Map::validPathPlacement" alt="" coords="149,75,319,102"/>
+</map>

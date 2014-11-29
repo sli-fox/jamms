@@ -27,17 +27,11 @@ Collaboration diagram for Critter\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_critter__coll__graph}
+\includegraphics[height=550pt]{class_critter__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
-\item 
-enum \hyperlink{class_critter_a42f4af08084e39edfdb55e38a5858cc4}{Movement\+Direction} \{ \hyperlink{class_critter_a42f4af08084e39edfdb55e38a5858cc4a194b84d714feed4d94178aacf40528df}{D\+O\+W\+N}, 
-\hyperlink{class_critter_a42f4af08084e39edfdb55e38a5858cc4a8c53a6501cb2c04d7207d989683eb84a}{L\+E\+F\+T}, 
-\hyperlink{class_critter_a42f4af08084e39edfdb55e38a5858cc4aea95699e0bc4235e0196fc1833ab589d}{R\+I\+G\+H\+T}, 
-\hyperlink{class_critter_a42f4af08084e39edfdb55e38a5858cc4a5e79e0e8e8c8e0bc3ba2f93b2c9a34ab}{U\+P}
- \}
 \item 
 enum \hyperlink{class_critter_acda8a5c3234b66101e0546d75d6f90f1}{Critter\+Type} \{ \hyperlink{class_critter_acda8a5c3234b66101e0546d75d6f90f1a91135fa8da5b64a8a556e8c198b46fe9}{B\+L\+A\+C\+K\+\_\+\+C\+A\+T}, 
 \hyperlink{class_critter_acda8a5c3234b66101e0546d75d6f90f1ac88c727edcec187617ee3707d2c193c5}{W\+H\+I\+T\+E\+\_\+\+C\+A\+T}
@@ -46,11 +40,9 @@ enum \hyperlink{class_critter_acda8a5c3234b66101e0546d75d6f90f1}{Critter\+Type} 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{class_critter_a628b203e25050a085786d3993a660ab9}{control\+Cat} (sf\+::\+Keyboard\+::\+Key arrow\+Key)
-\item 
 \hyperlink{class_critter_a05aa21e3b570d7380f3ead47c99442ef}{Critter} ()
 \item 
-virtual \hyperlink{class_critter_aa923c19cdc302c7bf10a038983e801c1}{$\sim$\+Critter} ()
+virtual \hyperlink{class_critter_a23e65a0917fc76bcf349e2a28fad5c42}{$\sim$\+Critter} ()
 \item 
 int \hyperlink{class_critter_a5636f0ed2f067318e0d361fe31c9eff2}{get\+Id} () const 
 \item 
@@ -64,17 +56,11 @@ int \hyperlink{class_critter_a7db2281b14479a1c931716c07acbc7da}{get\+Player\+Rew
 \item 
 float \hyperlink{class_critter_a3785ffa05cec86b30264fbdbf613e4f8}{get\+Speed} () const 
 \item 
+void \hyperlink{class_critter_a52be1f776c5c8fbcba1efadceaccc759}{set\+Speed} (float \hyperlink{class_critter_adde7d84a0dd9ac8f5dc144464928638f}{speed})
+\item 
 void \hyperlink{class_critter_ae843395fb1106cd2c550cd9be9f14df0}{reduce\+Speed} (float \hyperlink{class_critter_adde7d84a0dd9ac8f5dc144464928638f}{speed})
 \item 
 int \hyperlink{class_critter_aebbb372bdcd3a709428445554c3d24c9}{get\+Level} () const 
-\item 
-sf\+::\+Vector2f \hyperlink{class_critter_a8fdba06ecb582e8b542e2e73a76f455d}{get\+Position} () const 
-\item 
-\hyperlink{class_waypoint}{Waypoint} $\ast$ \hyperlink{class_critter_a8a95119a0531e9372aa6a2a95b61edde}{get\+Current\+Waypoint} () const 
-\item 
-void \hyperlink{class_critter_a394069b23bdd1fd4f8caeab41b23c83d}{set\+Current\+Waypoint} (\hyperlink{class_waypoint}{Waypoint} $\ast$waypoint)
-\item 
-void \hyperlink{class_critter_abe76d86eb653909910ee956195a16aec}{set\+Animation\+Index} (unsigned int index)
 \item 
 bool \hyperlink{class_critter_aaf084b7cd4ffaa632454ee363723db92}{get\+Special\+Effect\+Applied} () const 
 \item 
@@ -82,26 +68,14 @@ void \hyperlink{class_critter_a662c3e493cd09b78df86afdc3c0725df}{set\+Special\+E
 \item 
 void \hyperlink{class_critter_a3601e12d79247c3345e9e828688cf321}{inflict\+Damage} (int dmg)
 \item 
-\hyperlink{class_critter_a42f4af08084e39edfdb55e38a5858cc4}{Movement\+Direction} \hyperlink{class_critter_affcdf706975d5a761acec7e5effea7b1}{get\+Movement\+Direction} ()
-\item 
-void \hyperlink{class_critter_a96462bdb554e60ee1c3bb76d7cde3da6}{update\+Position} (float x, float y)
-\item 
-bool \hyperlink{class_critter_ac2d188c14e482de7e28a9520d6f62a16}{is\+At\+Next\+Waypoint} ()
-\item 
 std\+::string \hyperlink{class_critter_ae0799b0a4602623632fa382e5ad0d0c8}{get\+Critter\+Specs} ()
 \item 
-void \hyperlink{class_critter_afe6dafa77006e5b6b7f3f905447af3fb}{draw} (sf\+::\+Render\+Window \&game\+\_\+window, float delta\+\_\+time)
-\begin{DoxyCompactList}\small\item\em Draw a \hyperlink{class_critter}{Critter}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{class_critter_a50549d8f01246886b931345865ec9949}{add\+Effect} (\hyperlink{class_critter_effect}{Critter\+Effect} $\ast$effect)
+\item 
+void \hyperlink{class_critter_a06a644a7f12cde7d40679b396c4a3796}{inflict\+Effects} ()
+\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
-\item 
-\hyperlink{class_animation_handler}{Animation\+Handler} \hyperlink{class_critter_a9792a56974224a81ca5ceec3eb967ad6}{animation\+\_\+handler}
-\begin{DoxyCompactList}\small\item\em Handles the animated object. \end{DoxyCompactList}\item 
-bool \hyperlink{class_critter_a1c933b10b2a9cbc1dd7d1dbb57f758fd}{is\+Active}
-\item 
-bool \hyperlink{class_critter_a253cbf3d1e4c85d354d9c538ff7bb631}{has\+Spawned}
-\item 
-bool \hyperlink{class_critter_aa3f2aeb9f3b38fe33d94ca206d9eb24b}{is\+At\+End\+Tile}
 \item 
 \hyperlink{class_critter}{Critter} $\ast$ \hyperlink{class_critter_a6017fbb8c863a2456f43b88996720927}{next\+\_\+critter}
 \end{DoxyCompactItemize}
@@ -113,28 +87,27 @@ virtual void \hyperlink{class_critter_ad425da71f01445ee175e5f98d94ca0ba}{initial
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_waypoint}{Waypoint} $\ast$ \hyperlink{class_critter_a2b72710f8e9418a37d811240f1f7aa18}{current\+\_\+waypoint}
-\item 
 \hyperlink{class_critter_acda8a5c3234b66101e0546d75d6f90f1}{Critter\+Type} \hyperlink{class_critter_ac59fc8262aaffbdae6f2823460b58737}{type}
 \item 
 int \hyperlink{class_critter_ae775e0ebe6e8bbe249c403670bda46f8}{id}
 \item 
 int \hyperlink{class_critter_a9b2e317fb3a104ea9b449f77c81d7d7a}{max\+\_\+health}
 \item 
+std\+::list$<$ std\+::unique\+\_\+ptr\\*
+$<$ \hyperlink{class_critter_effect}{Critter\+Effect} $>$ $>$ \hyperlink{class_critter_a9974fdc5dd5ef5afc8ff2fffbd2261e0}{effect\+List}
+\item 
 int \hyperlink{class_critter_a916038a11e8443ea403a644e91fc791e}{hit\+\_\+points}
 \begin{DoxyCompactList}\small\item\em Health of the \hyperlink{class_critter}{Critter}. \end{DoxyCompactList}\item 
-sf\+::\+Vector2f \hyperlink{class_critter_a7973c2224ad88f4ef758440c306ee31c}{position}
-\begin{DoxyCompactList}\small\item\em Position of the \hyperlink{class_critter}{Critter}. \end{DoxyCompactList}\item 
 int \hyperlink{class_critter_ad2b5b3ee8a0b69d4023f60cfb9f26a6a}{steal\+\_\+points}
 \begin{DoxyCompactList}\small\item\em Rate at which the critter can steal points from the player. \end{DoxyCompactList}\item 
 int \hyperlink{class_critter_a2a17f7366fbde83714742e66ba3e63a7}{player\+\_\+reward}
 \begin{DoxyCompactList}\small\item\em Coin reward for the player when the \hyperlink{class_critter}{Critter} is killed. \end{DoxyCompactList}\item 
 float \hyperlink{class_critter_adde7d84a0dd9ac8f5dc144464928638f}{speed}
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_critter}{Critter} movement speed. \end{DoxyCompactList}\item 
+float \hyperlink{class_critter_ad53189c28d3f392ea8d1f1796e7c0744}{speed\+Modifier}
+\item 
 int \hyperlink{class_critter_a9f9a6408a55212036f317710dc3da410}{level}
 \begin{DoxyCompactList}\small\item\em Difficulty level as part of a wave. \end{DoxyCompactList}\item 
-int \hyperlink{class_critter_a00b1ddafe5beeed3dac75f81568bb404}{animation\+\_\+index}
-\begin{DoxyCompactList}\small\item\em Indicates which animation in a sprite sheet. \end{DoxyCompactList}\item 
 bool \hyperlink{class_critter_aa30e57414bd64c920dca286f87da5c3f}{special\+Effect\+Applied}
 \end{DoxyCompactItemize}
 \subsection*{Static Protected Attributes}
@@ -160,22 +133,6 @@ Abstract base class of all Critters \hyperlink{class_critter}{Critter} defines t
 \hypertarget{class_critter_acda8a5c3234b66101e0546d75d6f90f1ac88c727edcec187617ee3707d2c193c5}{W\+H\+I\+T\+E\+\_\+\+C\+A\+T}\label{class_critter_acda8a5c3234b66101e0546d75d6f90f1ac88c727edcec187617ee3707d2c193c5}
 }]\end{description}
 \end{Desc}
-\hypertarget{class_critter_a42f4af08084e39edfdb55e38a5858cc4}{\index{Critter@{Critter}!Movement\+Direction@{Movement\+Direction}}
-\index{Movement\+Direction@{Movement\+Direction}!Critter@{Critter}}
-\subsubsection[{Movement\+Direction}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Critter\+::\+Movement\+Direction}}}\label{class_critter_a42f4af08084e39edfdb55e38a5858cc4}
-\begin{Desc}
-\item[Enumerator]\par
-\begin{description}
-\index{D\+O\+W\+N@{D\+O\+W\+N}!Critter@{Critter}}\index{Critter@{Critter}!D\+O\+W\+N@{D\+O\+W\+N}}\item[{\em 
-\hypertarget{class_critter_a42f4af08084e39edfdb55e38a5858cc4a194b84d714feed4d94178aacf40528df}{D\+O\+W\+N}\label{class_critter_a42f4af08084e39edfdb55e38a5858cc4a194b84d714feed4d94178aacf40528df}
-}]\index{L\+E\+F\+T@{L\+E\+F\+T}!Critter@{Critter}}\index{Critter@{Critter}!L\+E\+F\+T@{L\+E\+F\+T}}\item[{\em 
-\hypertarget{class_critter_a42f4af08084e39edfdb55e38a5858cc4a8c53a6501cb2c04d7207d989683eb84a}{L\+E\+F\+T}\label{class_critter_a42f4af08084e39edfdb55e38a5858cc4a8c53a6501cb2c04d7207d989683eb84a}
-}]\index{R\+I\+G\+H\+T@{R\+I\+G\+H\+T}!Critter@{Critter}}\index{Critter@{Critter}!R\+I\+G\+H\+T@{R\+I\+G\+H\+T}}\item[{\em 
-\hypertarget{class_critter_a42f4af08084e39edfdb55e38a5858cc4aea95699e0bc4235e0196fc1833ab589d}{R\+I\+G\+H\+T}\label{class_critter_a42f4af08084e39edfdb55e38a5858cc4aea95699e0bc4235e0196fc1833ab589d}
-}]\index{U\+P@{U\+P}!Critter@{Critter}}\index{Critter@{Critter}!U\+P@{U\+P}}\item[{\em 
-\hypertarget{class_critter_a42f4af08084e39edfdb55e38a5858cc4a5e79e0e8e8c8e0bc3ba2f93b2c9a34ab}{U\+P}\label{class_critter_a42f4af08084e39edfdb55e38a5858cc4a5e79e0e8e8c8e0bc3ba2f93b2c9a34ab}
-}]\end{description}
-\end{Desc}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -185,24 +142,24 @@ Abstract base class of all Critters \hyperlink{class_critter}{Critter} defines t
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_critter_a05aa21e3b570d7380f3ead47c99442ef}
-\hypertarget{class_critter_aa923c19cdc302c7bf10a038983e801c1}{\index{Critter@{Critter}!````~Critter@{$\sim$\+Critter}}
+)}}\label{class_critter_a05aa21e3b570d7380f3ead47c99442ef}
+\hypertarget{class_critter_a23e65a0917fc76bcf349e2a28fad5c42}{\index{Critter@{Critter}!````~Critter@{$\sim$\+Critter}}
 \index{````~Critter@{$\sim$\+Critter}!Critter@{Critter}}
-\subsubsection[{$\sim$\+Critter}]{\setlength{\rightskip}{0pt plus 5cm}virtual Critter\+::$\sim$\+Critter (
+\subsubsection[{$\sim$\+Critter}]{\setlength{\rightskip}{0pt plus 5cm}Critter\+::$\sim$\+Critter (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_critter_aa923c19cdc302c7bf10a038983e801c1}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_critter_a23e65a0917fc76bcf349e2a28fad5c42}
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_critter_a628b203e25050a085786d3993a660ab9}{\index{Critter@{Critter}!control\+Cat@{control\+Cat}}
-\index{control\+Cat@{control\+Cat}!Critter@{Critter}}
-\subsubsection[{control\+Cat}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+::control\+Cat (
+\hypertarget{class_critter_a50549d8f01246886b931345865ec9949}{\index{Critter@{Critter}!add\+Effect@{add\+Effect}}
+\index{add\+Effect@{add\+Effect}!Critter@{Critter}}
+\subsubsection[{add\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+::add\+Effect (
 \begin{DoxyParamCaption}
-\item[{sf\+::\+Keyboard\+::\+Key}]{arrow\+Key}
+\item[{{\bf Critter\+Effect} $\ast$}]{effect}
 \end{DoxyParamCaption}
-)}}\label{class_critter_a628b203e25050a085786d3993a660ab9}
+)}}\label{class_critter_a50549d8f01246886b931345865ec9949}
 
 
 Here is the call graph for this function\+:
@@ -210,7 +167,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=345pt]{class_critter_a628b203e25050a085786d3993a660ab9_cgraph}
+\includegraphics[width=323pt]{class_critter_a50549d8f01246886b931345865ec9949_cgraph}
 \end{center}
 \end{figure}
 
@@ -222,53 +179,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_critter_a628b203e25050a085786d3993a660ab9_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{class_critter_afe6dafa77006e5b6b7f3f905447af3fb}{\index{Critter@{Critter}!draw@{draw}}
-\index{draw@{draw}!Critter@{Critter}}
-\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+::draw (
-\begin{DoxyParamCaption}
-\item[{sf\+::\+Render\+Window \&}]{game\+\_\+window, }
-\item[{float}]{delta\+\_\+time}
-\end{DoxyParamCaption}
-)}}\label{class_critter_afe6dafa77006e5b6b7f3f905447af3fb}
-
-
-Draw a \hyperlink{class_critter}{Critter}. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em game\+\_\+window} & Reference to the window, passed in so that Critters don't need to know about the \hyperlink{class_game}{Game} class. \\
-\hline
-{\em delta\+\_\+time} & Elapsed time \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Void. 
-\end{DoxyReturn}
-
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=316pt]{class_critter_afe6dafa77006e5b6b7f3f905447af3fb_cgraph}
-\end{center}
-\end{figure}
-
-
-
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_critter_afe6dafa77006e5b6b7f3f905447af3fb_icgraph}
+\includegraphics[width=309pt]{class_critter_a50549d8f01246886b931345865ec9949_icgraph}
 \end{center}
 \end{figure}
 
@@ -282,31 +193,23 @@ Here is the caller graph for this function\+:
 )}}\label{class_critter_ae0799b0a4602623632fa382e5ad0d0c8}
 
 
-Here is the caller graph for this function\+:
+Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_critter_ae0799b0a4602623632fa382e5ad0d0c8_icgraph}
+\includegraphics[width=334pt]{class_critter_ae0799b0a4602623632fa382e5ad0d0c8_cgraph}
 \end{center}
 \end{figure}
 
 
-\hypertarget{class_critter_a8a95119a0531e9372aa6a2a95b61edde}{\index{Critter@{Critter}!get\+Current\+Waypoint@{get\+Current\+Waypoint}}
-\index{get\+Current\+Waypoint@{get\+Current\+Waypoint}!Critter@{Critter}}
-\subsubsection[{get\+Current\+Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Waypoint} $\ast$ Critter\+::get\+Current\+Waypoint (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const}}\label{class_critter_a8a95119a0531e9372aa6a2a95b61edde}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_critter_a8a95119a0531e9372aa6a2a95b61edde_icgraph}
+\includegraphics[width=350pt]{class_critter_ae0799b0a4602623632fa382e5ad0d0c8_icgraph}
 \end{center}
 \end{figure}
 
@@ -356,25 +259,6 @@ Here is the caller graph for this function\+:
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_critter_aebbb372bdcd3a709428445554c3d24c9}
-\hypertarget{class_critter_affcdf706975d5a761acec7e5effea7b1}{\index{Critter@{Critter}!get\+Movement\+Direction@{get\+Movement\+Direction}}
-\index{get\+Movement\+Direction@{get\+Movement\+Direction}!Critter@{Critter}}
-\subsubsection[{get\+Movement\+Direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Critter\+::\+Movement\+Direction} Critter\+::get\+Movement\+Direction (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{class_critter_affcdf706975d5a761acec7e5effea7b1}
-
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_critter_affcdf706975d5a761acec7e5effea7b1_icgraph}
-\end{center}
-\end{figure}
-
-
 \hypertarget{class_critter_a7db2281b14479a1c931716c07acbc7da}{\index{Critter@{Critter}!get\+Player\+Reward@{get\+Player\+Reward}}
 \index{get\+Player\+Reward@{get\+Player\+Reward}!Critter@{Critter}}
 \subsubsection[{get\+Player\+Reward}]{\setlength{\rightskip}{0pt plus 5cm}int Critter\+::get\+Player\+Reward (
@@ -382,17 +266,6 @@ Here is the caller graph for this function\+:
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_critter_a7db2281b14479a1c931716c07acbc7da}
-\hypertarget{class_critter_a8fdba06ecb582e8b542e2e73a76f455d}{\index{Critter@{Critter}!get\+Position@{get\+Position}}
-\index{get\+Position@{get\+Position}!Critter@{Critter}}
-\subsubsection[{get\+Position}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f Critter\+::get\+Position (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_critter_a8fdba06ecb582e8b542e2e73a76f455d}
-
-
-Reimplemented from \hyperlink{class_game_object_a380c5cec0ed79277359dbbb9935f1ffe}{Game\+Object}.
-
 
 
 Here is the caller graph for this function\+:
@@ -400,7 +273,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_critter_a8fdba06ecb582e8b542e2e73a76f455d_icgraph}
+\includegraphics[width=344pt]{class_critter_a7db2281b14479a1c931716c07acbc7da_icgraph}
 \end{center}
 \end{figure}
 
@@ -438,6 +311,18 @@ Here is the caller graph for this function\+:
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_critter_ac57f38074517fa1cc481380aaff1ed85}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_ac57f38074517fa1cc481380aaff1ed85_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_critter_a3601e12d79247c3345e9e828688cf321}{\index{Critter@{Critter}!inflict\+Damage@{inflict\+Damage}}
 \index{inflict\+Damage@{inflict\+Damage}!Critter@{Critter}}
 \subsubsection[{inflict\+Damage}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+::inflict\+Damage (
@@ -453,6 +338,25 @@ Here is the caller graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_critter_a3601e12d79247c3345e9e828688cf321_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_critter_a06a644a7f12cde7d40679b396c4a3796}{\index{Critter@{Critter}!inflict\+Effects@{inflict\+Effects}}
+\index{inflict\+Effects@{inflict\+Effects}!Critter@{Critter}}
+\subsubsection[{inflict\+Effects}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+::inflict\+Effects (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_critter_a06a644a7f12cde7d40679b396c4a3796}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_critter_a06a644a7f12cde7d40679b396c4a3796_cgraph}
 \end{center}
 \end{figure}
 
@@ -475,25 +379,6 @@ Void.
 
 Implemented in \hyperlink{class_black_cat_a2ae946e05f754f7d7bdbc753946425eb}{Black\+Cat}, and \hyperlink{class_white_cat_a0a3c801e7a6b451b2b1caef9da137585}{White\+Cat}.
 
-\hypertarget{class_critter_ac2d188c14e482de7e28a9520d6f62a16}{\index{Critter@{Critter}!is\+At\+Next\+Waypoint@{is\+At\+Next\+Waypoint}}
-\index{is\+At\+Next\+Waypoint@{is\+At\+Next\+Waypoint}!Critter@{Critter}}
-\subsubsection[{is\+At\+Next\+Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}bool Critter\+::is\+At\+Next\+Waypoint (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{class_critter_ac2d188c14e482de7e28a9520d6f62a16}
-
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_critter_ac2d188c14e482de7e28a9520d6f62a16_icgraph}
-\end{center}
-\end{figure}
-
-
 \hypertarget{class_critter_ae843395fb1106cd2c550cd9be9f14df0}{\index{Critter@{Critter}!reduce\+Speed@{reduce\+Speed}}
 \index{reduce\+Speed@{reduce\+Speed}!Critter@{Critter}}
 \subsubsection[{reduce\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+::reduce\+Speed (
@@ -503,50 +388,11 @@ Here is the caller graph for this function\+:
 )}}\label{class_critter_ae843395fb1106cd2c550cd9be9f14df0}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_critter_ae843395fb1106cd2c550cd9be9f14df0_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{class_critter_abe76d86eb653909910ee956195a16aec}{\index{Critter@{Critter}!set\+Animation\+Index@{set\+Animation\+Index}}
-\index{set\+Animation\+Index@{set\+Animation\+Index}!Critter@{Critter}}
-\subsubsection[{set\+Animation\+Index}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+::set\+Animation\+Index (
-\begin{DoxyParamCaption}
-\item[{unsigned int}]{index}
-\end{DoxyParamCaption}
-)}}\label{class_critter_abe76d86eb653909910ee956195a16aec}
-
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_critter_abe76d86eb653909910ee956195a16aec_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{class_critter_a394069b23bdd1fd4f8caeab41b23c83d}{\index{Critter@{Critter}!set\+Current\+Waypoint@{set\+Current\+Waypoint}}
-\index{set\+Current\+Waypoint@{set\+Current\+Waypoint}!Critter@{Critter}}
-\subsubsection[{set\+Current\+Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+::set\+Current\+Waypoint (
-\begin{DoxyParamCaption}
-\item[{{\bf Waypoint} $\ast$}]{waypoint}
-\end{DoxyParamCaption}
-)}}\label{class_critter_a394069b23bdd1fd4f8caeab41b23c83d}
-
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_critter_a394069b23bdd1fd4f8caeab41b23c83d_icgraph}
 \end{center}
 \end{figure}
 
@@ -565,49 +411,19 @@ Here is the caller graph for this function\+:
 \item[{bool}]{special\+Effect\+Applied}
 \end{DoxyParamCaption}
 )}}\label{class_critter_a662c3e493cd09b78df86afdc3c0725df}
-\hypertarget{class_critter_a96462bdb554e60ee1c3bb76d7cde3da6}{\index{Critter@{Critter}!update\+Position@{update\+Position}}
-\index{update\+Position@{update\+Position}!Critter@{Critter}}
-\subsubsection[{update\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+::update\+Position (
+\hypertarget{class_critter_a52be1f776c5c8fbcba1efadceaccc759}{\index{Critter@{Critter}!set\+Speed@{set\+Speed}}
+\index{set\+Speed@{set\+Speed}!Critter@{Critter}}
+\subsubsection[{set\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+::set\+Speed (
 \begin{DoxyParamCaption}
-\item[{float}]{x, }
-\item[{float}]{y}
+\item[{float}]{speed}
 \end{DoxyParamCaption}
-)}}\label{class_critter_a96462bdb554e60ee1c3bb76d7cde3da6}
-
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_critter_a96462bdb554e60ee1c3bb76d7cde3da6_icgraph}
-\end{center}
-\end{figure}
-
-
+)}}\label{class_critter_a52be1f776c5c8fbcba1efadceaccc759}
 
 
 \subsection{Member Data Documentation}
-\hypertarget{class_critter_a9792a56974224a81ca5ceec3eb967ad6}{\index{Critter@{Critter}!animation\+\_\+handler@{animation\+\_\+handler}}
-\index{animation\+\_\+handler@{animation\+\_\+handler}!Critter@{Critter}}
-\subsubsection[{animation\+\_\+handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Animation\+Handler} Critter\+::animation\+\_\+handler}}\label{class_critter_a9792a56974224a81ca5ceec3eb967ad6}
-
-
-Handles the animated object. 
-
-\hypertarget{class_critter_a00b1ddafe5beeed3dac75f81568bb404}{\index{Critter@{Critter}!animation\+\_\+index@{animation\+\_\+index}}
-\index{animation\+\_\+index@{animation\+\_\+index}!Critter@{Critter}}
-\subsubsection[{animation\+\_\+index}]{\setlength{\rightskip}{0pt plus 5cm}int Critter\+::animation\+\_\+index\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_critter_a00b1ddafe5beeed3dac75f81568bb404}
-
-
-Indicates which animation in a sprite sheet. 
-
-\hypertarget{class_critter_a2b72710f8e9418a37d811240f1f7aa18}{\index{Critter@{Critter}!current\+\_\+waypoint@{current\+\_\+waypoint}}
-\index{current\+\_\+waypoint@{current\+\_\+waypoint}!Critter@{Critter}}
-\subsubsection[{current\+\_\+waypoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Waypoint}$\ast$ Critter\+::current\+\_\+waypoint\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_critter_a2b72710f8e9418a37d811240f1f7aa18}
-\hypertarget{class_critter_a253cbf3d1e4c85d354d9c538ff7bb631}{\index{Critter@{Critter}!has\+Spawned@{has\+Spawned}}
-\index{has\+Spawned@{has\+Spawned}!Critter@{Critter}}
-\subsubsection[{has\+Spawned}]{\setlength{\rightskip}{0pt plus 5cm}bool Critter\+::has\+Spawned}}\label{class_critter_a253cbf3d1e4c85d354d9c538ff7bb631}
+\hypertarget{class_critter_a9974fdc5dd5ef5afc8ff2fffbd2261e0}{\index{Critter@{Critter}!effect\+List@{effect\+List}}
+\index{effect\+List@{effect\+List}!Critter@{Critter}}
+\subsubsection[{effect\+List}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$std\+::unique\+\_\+ptr$<${\bf Critter\+Effect}$>$ $>$ Critter\+::effect\+List\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_critter_a9974fdc5dd5ef5afc8ff2fffbd2261e0}
 \hypertarget{class_critter_a916038a11e8443ea403a644e91fc791e}{\index{Critter@{Critter}!hit\+\_\+points@{hit\+\_\+points}}
 \index{hit\+\_\+points@{hit\+\_\+points}!Critter@{Critter}}
 \subsubsection[{hit\+\_\+points}]{\setlength{\rightskip}{0pt plus 5cm}int Critter\+::hit\+\_\+points\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_critter_a916038a11e8443ea403a644e91fc791e}
@@ -618,12 +434,6 @@ Health of the \hyperlink{class_critter}{Critter}.
 \hypertarget{class_critter_ae775e0ebe6e8bbe249c403670bda46f8}{\index{Critter@{Critter}!id@{id}}
 \index{id@{id}!Critter@{Critter}}
 \subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int Critter\+::id\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_critter_ae775e0ebe6e8bbe249c403670bda46f8}
-\hypertarget{class_critter_a1c933b10b2a9cbc1dd7d1dbb57f758fd}{\index{Critter@{Critter}!is\+Active@{is\+Active}}
-\index{is\+Active@{is\+Active}!Critter@{Critter}}
-\subsubsection[{is\+Active}]{\setlength{\rightskip}{0pt plus 5cm}bool Critter\+::is\+Active}}\label{class_critter_a1c933b10b2a9cbc1dd7d1dbb57f758fd}
-\hypertarget{class_critter_aa3f2aeb9f3b38fe33d94ca206d9eb24b}{\index{Critter@{Critter}!is\+At\+End\+Tile@{is\+At\+End\+Tile}}
-\index{is\+At\+End\+Tile@{is\+At\+End\+Tile}!Critter@{Critter}}
-\subsubsection[{is\+At\+End\+Tile}]{\setlength{\rightskip}{0pt plus 5cm}bool Critter\+::is\+At\+End\+Tile}}\label{class_critter_aa3f2aeb9f3b38fe33d94ca206d9eb24b}
 \hypertarget{class_critter_a9f9a6408a55212036f317710dc3da410}{\index{Critter@{Critter}!level@{level}}
 \index{level@{level}!Critter@{Critter}}
 \subsubsection[{level}]{\setlength{\rightskip}{0pt plus 5cm}int Critter\+::level\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_critter_a9f9a6408a55212036f317710dc3da410}
@@ -644,13 +454,6 @@ Difficulty level as part of a wave.
 
 Coin reward for the player when the \hyperlink{class_critter}{Critter} is killed. 
 
-\hypertarget{class_critter_a7973c2224ad88f4ef758440c306ee31c}{\index{Critter@{Critter}!position@{position}}
-\index{position@{position}!Critter@{Critter}}
-\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f Critter\+::position\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_critter_a7973c2224ad88f4ef758440c306ee31c}
-
-
-Position of the \hyperlink{class_critter}{Critter}. 
-
 \hypertarget{class_critter_aa30e57414bd64c920dca286f87da5c3f}{\index{Critter@{Critter}!special\+Effect\+Applied@{special\+Effect\+Applied}}
 \index{special\+Effect\+Applied@{special\+Effect\+Applied}!Critter@{Critter}}
 \subsubsection[{special\+Effect\+Applied}]{\setlength{\rightskip}{0pt plus 5cm}bool Critter\+::special\+Effect\+Applied\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_critter_aa30e57414bd64c920dca286f87da5c3f}
@@ -661,6 +464,9 @@ Position of the \hyperlink{class_critter}{Critter}.
 
 \hyperlink{class_critter}{Critter} movement speed. 
 
+\hypertarget{class_critter_ad53189c28d3f392ea8d1f1796e7c0744}{\index{Critter@{Critter}!speed\+Modifier@{speed\+Modifier}}
+\index{speed\+Modifier@{speed\+Modifier}!Critter@{Critter}}
+\subsubsection[{speed\+Modifier}]{\setlength{\rightskip}{0pt plus 5cm}float Critter\+::speed\+Modifier\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_critter_ad53189c28d3f392ea8d1f1796e7c0744}
 \hypertarget{class_critter_a1324eb838f1790e904a0b82c9ceed173}{\index{Critter@{Critter}!S\+T\+E\+A\+L\+\_\+\+L\+I\+V\+E\+S@{S\+T\+E\+A\+L\+\_\+\+L\+I\+V\+E\+S}}
 \index{S\+T\+E\+A\+L\+\_\+\+L\+I\+V\+E\+S@{S\+T\+E\+A\+L\+\_\+\+L\+I\+V\+E\+S}!Critter@{Critter}}
 \subsubsection[{S\+T\+E\+A\+L\+\_\+\+L\+I\+V\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}const int Critter\+::\+S\+T\+E\+A\+L\+\_\+\+L\+I\+V\+E\+S = 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{class_critter_a1324eb838f1790e904a0b82c9ceed173}

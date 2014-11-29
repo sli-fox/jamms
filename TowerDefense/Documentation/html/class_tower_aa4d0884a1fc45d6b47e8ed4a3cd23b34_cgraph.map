@@ -1,5 +1,5 @@
 <map id="Tower::canApplySpecialAfterEffects" name="Tower::canApplySpecialAfterEffects">
 <area shape="rect" id="node2" href="$class_tower.html#a518ff249dec05cdd026a830d845abfd2" title="Overrides method to apply to tower range sf::CircleShape object. " alt="" coords="241,5,451,32"/>
 <area shape="rect" id="node4" href="$class_tower.html#acf53d0a9123761730bd3e737a5b5a854" title="Tower::getRateOfFire" alt="" coords="274,56,418,83"/>
-<area shape="rect" id="node3" href="$class_game_object.html#afe3b2585b3615868c64b62bb1cb40adb" title="Gets the center of a sprite. " alt="" coords="499,5,692,32"/>
+<area shape="rect" id="node3" href="$class_game_object.html#ad6d60e0c273cb0074c91a19f3aed8708" title="Gets the center of a sprite. " alt="" coords="499,5,692,32"/>
 </map>

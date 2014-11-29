@@ -1,0 +1,6 @@
+<map id="CritterFactoryTest::testCatCreation" name="CritterFactoryTest::testCatCreation">
+<area shape="rect" id="node2" href="$class_critter_factory.html#a3195f421d348fe4ee5c7e49e605745c1" title="Factory method for Critter class. " alt="" coords="180,5,360,32"/>
+<area shape="rect" id="node3" href="$class_critter.html#a5636f0ed2f067318e0d361fe31c9eff2" title="Critter::getId" alt="" coords="223,56,317,83"/>
+<area shape="rect" id="node4" href="$class_critter.html#a1e98c05f5a41102cc37eb7a4396b90cf" title="Critter::getHitPoints" alt="" coords="202,107,338,133"/>
+<area shape="rect" id="node5" href="$class_critter_game_object.html#abdc7d3071ef2e9e00c277051f62b9005" title="CritterGameObject::\lisAtNextWaypoint" alt="" coords="201,158,339,199"/>
+</map>

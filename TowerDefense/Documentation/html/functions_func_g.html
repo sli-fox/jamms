@@ -87,6 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions_func_g.html#index_g"><span>g</span></a></li>
       <li><a href="functions_func_h.html#index_h"><span>h</span></a></li>
       <li><a href="functions_func_i.html#index_i"><span>i</span></a></li>
+      <li><a href="functions_func_k.html#index_k"><span>k</span></a></li>
       <li><a href="functions_func_l.html#index_l"><span>l</span></a></li>
       <li><a href="functions_func_m.html#index_m"><span>m</span></a></li>
       <li><a href="functions_func_n.html#index_n"><span>n</span></a></li>
@@ -176,7 +177,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_game_state_play.html#a36f7d1ee2a500290e224a50f679ba3ff">GameStatePlay</a>
 </li>
 <li>getCurrentWaypoint()
-: <a class="el" href="class_critter.html#a8a95119a0531e9372aa6a2a95b61edde">Critter</a>
+: <a class="el" href="class_critter_game_object.html#a1b81867b7f6a204a4c9982da18bb9d0a">CritterGameObject</a>
+</li>
+<li>getCycles()
+: <a class="el" href="class_critter_effect.html#a3119a2498116df7dde12016aa031b26d">CritterEffect</a>
+</li>
+<li>getDamage()
+: <a class="el" href="class_critter_effect.html#a90ba05f6a3bc2214cbd9015807b1c966">CritterEffect</a>
+, <a class="el" href="struct_crush.html#a269885cd9bf52fbf5af8b0f9778e0330">Crush</a>
+, <a class="el" href="struct_freeze.html#a5f9b77d2b88bb5f945d476f4405569a3">Freeze</a>
+</li>
+<li>getDeadTileButtonSpecs()
+: <a class="el" href="class_game_state_map_editor.html#a04a6c24a81434220b91d1b70342d33bb">GameStateMapEditor</a>
+</li>
+<li>getElapsedTicks()
+: <a class="el" href="class_critter_effect.html#af010bf5eaaddf43a7f247639bf7b8b93">CritterEffect</a>
+</li>
+<li>getEndTileButtonSpecs()
+: <a class="el" href="class_game_state_map_editor.html#a46d7fbc2e6360bb9a03990f03ca1c149">GameStateMapEditor</a>
+</li>
+<li>getEveType()
+: <a class="el" href="class_cmd_base__c.html#a9a9437116dec340c4e65f02181a97b2e">CmdBase_c</a>
 </li>
 <li>getFileName()
 : <a class="el" href="class_game_object.html#a387e235ced0f778e58d5f4a39f58a220">GameObject</a>
@@ -226,6 +247,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getLives()
 : <a class="el" href="class_player.html#a1cd893cbffe289dd821a5df984c8a2de">Player</a>
 </li>
+<li>getLoadMapButtonSpecs()
+: <a class="el" href="class_game_state_map_editor.html#ab7346157152360254a3886948d10eca8">GameStateMapEditor</a>
+</li>
+<li>getMap()
+: <a class="el" href="class_cmd_add_tile__c.html#a4f797c36fffefbedbb044575918c7871">CmdAddTile_c</a>
+, <a class="el" href="class_cmd_fill_map__c.html#a6b6db21bb875d71bb5c28f3b7ea9a76f">CmdFillMap_c</a>
+, <a class="el" href="class_cmd_remove_tile__c.html#a926aa1e6bd1b37b5527e34b36559d88f">CmdRemoveTile_c</a>
+, <a class="el" href="class_cmd_un_fill_map__c.html#a4002c3452512bf4a5b7a64a2e3ba8d74">CmdUnFillMap_c</a>
+</li>
 <li>getMapHeight()
 : <a class="el" href="class_map.html#a076782bd4ca4a53eb57a894b336f5090">Map</a>
 </li>
@@ -239,14 +269,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_menu.html#a445fe4244dc401a85ab8bbaf61373443">Menu</a>
 </li>
 <li>getMovementDirection()
-: <a class="el" href="class_critter.html#affcdf706975d5a761acec7e5effea7b1">Critter</a>
+: <a class="el" href="class_critter_game_object.html#a3ce69ef5cbc8983b45df839674aab0bc">CritterGameObject</a>
 </li>
 <li>getName()
-: <a class="el" href="class_player.html#ad4c6a95f1cf69c44d0c585465b101c70">Player</a>
+: <a class="el" href="class_fastest_strategy.html#a1c3c8c3e6245218bd8dfe6f8010a86dd">FastestStrategy</a>
+, <a class="el" href="class_least_health_strategy.html#ac75ddddd3fd8cd2ea7852bc8d4a587dc">LeastHealthStrategy</a>
+, <a class="el" href="class_most_coins_strategy.html#a56c6fb58485c7d356a92c556560365a5">MostCoinsStrategy</a>
+, <a class="el" href="class_most_health_strategy.html#ab9d860836441a757691dd21bb2131b85">MostHealthStrategy</a>
+, <a class="el" href="class_nearest_end_point_strategy.html#ae68cd9ced5ff42a4740f6d5320200782">NearestEndPointStrategy</a>
+, <a class="el" href="class_nearest_tower_strategy.html#a22014ea3f55beadd905093f0f4d28f5a">NearestTowerStrategy</a>
+, <a class="el" href="class_player.html#ad4c6a95f1cf69c44d0c585465b101c70">Player</a>
+, <a class="el" href="class_slowest_strategy.html#ab99897892826bf0ddccf5d60d6e638ee">SlowestStrategy</a>
+, <a class="el" href="class_strongest_strategy.html#aa5553aa32c9ff916e4c3cb50c0bbfab2">StrongestStrategy</a>
 , <a class="el" href="class_tower.html#ad830cdd9f1870479b5763b7ee9c33c8d">Tower</a>
+, <a class="el" href="class_tower_strategy.html#a6cf0bf6f2cd94a9f383bc316c6baa922">TowerStrategy</a>
+, <a class="el" href="class_weakest_strategy.html#a3e9379c627d43f7d9a949cceb40440bb">WeakestStrategy</a>
 </li>
 <li>getObjectCount()
 : <a class="el" href="class_game_object_manager.html#aea3ab827dd015aae7a8e8d53fdd6d2b5">GameObjectManager</a>
+</li>
+<li>getPathTileButtonSpecs()
+: <a class="el" href="class_game_state_map_editor.html#a3e1da34ede3015ce2701082e93236d14">GameStateMapEditor</a>
+</li>
+<li>getPauseButtonSpecs()
+: <a class="el" href="class_game_state_play.html#a84292b8af5919f8da3b54c1d1dba5cfd">GameStatePlay</a>
+</li>
+<li>getPlayButtonSpecs()
+: <a class="el" href="class_game_state_map_editor.html#a44da47e4ed2668bb4302467fb594d728">GameStateMapEditor</a>
 </li>
 <li>getPlayerReward()
 : <a class="el" href="class_critter.html#a7db2281b14479a1c931716c07acbc7da">Critter</a>
@@ -258,23 +307,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_player.html#a2d9d894f68e52cc6d9dfdbc0e6cd3e53">Player</a>
 </li>
 <li>getPosition()
-: <a class="el" href="class_critter.html#a8fdba06ecb582e8b542e2e73a76f455d">Critter</a>
-, <a class="el" href="class_game_object.html#a380c5cec0ed79277359dbbb9935f1ffe">GameObject</a>
+: <a class="el" href="class_game_object.html#ad568496dd9cee5b9edd9357d30a00dff">GameObject</a>
 </li>
 <li>getPower()
 : <a class="el" href="class_tower.html#a198af6f04dad766d019b72fc667b90a7">Tower</a>
 </li>
 <li>getRange()
-: <a class="el" href="class_tower.html#ab33ee35d8f02b8961a8fb7697e5e9cea">Tower</a>
+: <a class="el" href="class_tower.html#ac11ad49620dd4af1a72459508ca0856a">Tower</a>
 </li>
 <li>getRangeShape()
 : <a class="el" href="class_tower.html#a829a95b9dc022cc07ecd4d5c0afa7260">Tower</a>
+, <a class="el" href="class_tower_game_object.html#a0e49616a6bb7cea91b45288a886e7e8e">TowerGameObject</a>
 </li>
 <li>getRateOfFire()
 : <a class="el" href="class_tower.html#acf53d0a9123761730bd3e737a5b5a854">Tower</a>
+, <a class="el" href="class_tower_game_object.html#a176b325a7415c42dd368a958d52f912c">TowerGameObject</a>
 </li>
 <li>getRectangleSpriteRadius()
 : <a class="el" href="class_game_object.html#a8220201988f2aaea8a6f748872e188a9">GameObject</a>
+</li>
+<li>getRedoButtonSpecs()
+: <a class="el" href="class_game_state_map_editor.html#ac71e0f13e89b6ecd7df2868293b1be25">GameStateMapEditor</a>
+</li>
+<li>getReturnToEditorButtonSpecs()
+: <a class="el" href="class_game_state_play.html#aed4df6e7af126ba32ac06eb5dd79694d">GameStatePlay</a>
+</li>
+<li>getSaveButtonSpecs()
+: <a class="el" href="class_game_state_map_editor.html#a9151d492662a47b584dbda371f0e6935">GameStateMapEditor</a>
+</li>
+<li>getSceneryTileButtonSpecs()
+: <a class="el" href="class_game_state_map_editor.html#ab2f12c8e4f5b45131f2be03dd890f724">GameStateMapEditor</a>
 </li>
 <li>getSellCost()
 : <a class="el" href="class_tower.html#adae75d4203ca7c3a92da1fe367d64bac">Tower</a>
@@ -288,20 +350,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getSpeed()
 : <a class="el" href="class_critter.html#a3785ffa05cec86b30264fbdbf613e4f8">Critter</a>
 </li>
+<li>getSpeedModifer()
+: <a class="el" href="class_critter_effect.html#aa66ba6502448706a5bc1608aa42e6847">CritterEffect</a>
+, <a class="el" href="struct_freeze.html#a47d5a9d0658cd1e8d25e174dca0b934b">Freeze</a>
+, <a class="el" href="struct_petrify.html#a5dbc65a84dfd4f6f809e39af9c33adfd">Petrify</a>
+</li>
 <li>getSplashScreenSprite()
 : <a class="el" href="class_game_state_start.html#aca967324121e7e404a2f411102f186ac">GameStateStart</a>
 </li>
 <li>getSpriteCenter()
-: <a class="el" href="class_game_object.html#afe3b2585b3615868c64b62bb1cb40adb">GameObject</a>
+: <a class="el" href="class_game_object.html#ad6d60e0c273cb0074c91a19f3aed8708">GameObject</a>
 </li>
 <li>getSpriteSize()
-: <a class="el" href="class_game_object.html#a267f290e80e877be0de3a9706321c049">GameObject</a>
+: <a class="el" href="class_game_object.html#a3731c03ddcbdb904bd41af78e09d262a">GameObject</a>
+</li>
+<li>getStacks()
+: <a class="el" href="class_critter_effect.html#a4c6246bbe62acf3bfa683f40ff562a54">CritterEffect</a>
 </li>
 <li>getStartingWaypoint()
 : <a class="el" href="class_game_state_play.html#a6ebd21112217871afe2e0160f6eb0753">GameStatePlay</a>
 </li>
+<li>getStartTileButtonSpecs()
+: <a class="el" href="class_game_state_map_editor.html#a984f5c908281c5c40ec6e58cc6692475">GameStateMapEditor</a>
+</li>
+<li>getStartWaveButtonSpecs()
+: <a class="el" href="class_game_state_play.html#ace72b0eb76edd4a7e02ab12454f9f5b7">GameStatePlay</a>
+</li>
 <li>getStealPointsStrength()
 : <a class="el" href="class_critter.html#ac57f38074517fa1cc481380aaff1ed85">Critter</a>
+</li>
+<li>getStrategy()
+: <a class="el" href="class_tower.html#afe734b0803dc45f90d59c6dc2d3aa5fe">Tower</a>
 </li>
 <li>getTarget()
 : <a class="el" href="class_tower.html#ad5d042b8ab67fdcae27ecbd82fb27b0c">Tower</a>
@@ -309,24 +388,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getTile()
 : <a class="el" href="class_map.html#aa8e57f0e6d665def93ad7b33413e98a7">Map</a>
 </li>
+<li>getTileType()
+: <a class="el" href="class_cmd_add_tile__c.html#a433017f62b21a8dd20f4c647dba5a49a">CmdAddTile_c</a>
+, <a class="el" href="class_cmd_remove_tile__c.html#aab2bf5508fc6b40f0734c7b6689961d1">CmdRemoveTile_c</a>
+</li>
 <li>getTileX()
-: <a class="el" href="class_tile.html#ac292026c5bfa9181f221bf8a7844ee89">Tile</a>
+: <a class="el" href="class_cmd_add_tile__c.html#ae484a29764817e2f43dc835b9a51d80c">CmdAddTile_c</a>
+, <a class="el" href="class_cmd_remove_tile__c.html#a685d79e52c063ed2d0c8b54d7edeeca6">CmdRemoveTile_c</a>
+, <a class="el" href="class_tile.html#ac292026c5bfa9181f221bf8a7844ee89">Tile</a>
 </li>
 <li>getTileY()
-: <a class="el" href="class_tile.html#aecb8774e1eadb370cc0e350cec68e472">Tile</a>
+: <a class="el" href="class_cmd_add_tile__c.html#a36b0863691f44f229fc11783fe7e4756">CmdAddTile_c</a>
+, <a class="el" href="class_cmd_remove_tile__c.html#a5c34e198729428936017049e92660773">CmdRemoveTile_c</a>
+, <a class="el" href="class_tile.html#aecb8774e1eadb370cc0e350cec68e472">Tile</a>
 </li>
 <li>getTower()
 : <a class="el" href="class_tower_manager.html#ae2cf2fc1dd19ced5d64ec74042673055">TowerManager</a>
+</li>
+<li>getTower1ButtonSpecs()
+: <a class="el" href="class_game_state_play.html#a11c1d1976d85631c84a8db18b1458637">GameStatePlay</a>
+</li>
+<li>getTower2ButtonSpecs()
+: <a class="el" href="class_game_state_play.html#a0b9e886dc6a80b52f559441c7a3455d8">GameStatePlay</a>
+</li>
+<li>getTower3ButtonSpecs()
+: <a class="el" href="class_game_state_play.html#a0c79cb57b169ec8c0dc08c49451ebfc1">GameStatePlay</a>
 </li>
 <li>getTowerMap()
 : <a class="el" href="class_tower_manager.html#a3c54cdf57006efbcd9fc074f156d5360">TowerManager</a>
 </li>
 <li>getTowerSpecs()
-: <a class="el" href="class_tower.html#a2427fab36824f8ec98273cb5e563e0c9">Tower</a>
+: <a class="el" href="class_adult_bulldog_upgrade.html#a131cfb89f2cc408ed19be9961d0bd968">AdultBulldogUpgrade</a>
+, <a class="el" href="class_adult_dalmatian_upgrade.html#a6b6d0c8464ddd845565d72b2e1480183">AdultDalmatianUpgrade</a>
+, <a class="el" href="class_adult_shih_tzu_upgrade.html#afd0c6011047f5c5e89eb4c0428744df5">AdultShihTzuUpgrade</a>
+, <a class="el" href="class_burn_effect.html#a696db158260eaf01e3b497b6d400230e">BurnEffect</a>
+, <a class="el" href="class_freeze_effect.html#ace1230a2379fb2ec5894bcdf20e69ae9">FreezeEffect</a>
+, <a class="el" href="class_slow_effect.html#aaa162ffbad9bc163a53b0927b035dcb8">SlowEffect</a>
+, <a class="el" href="class_teen_bulldog_upgrade.html#a2aea4581606c9dd178bb62f594da700d">TeenBulldogUpgrade</a>
+, <a class="el" href="class_teen_dalmatian_upgrade.html#a5810149bbbc74a4560718ccb524612fa">TeenDalmatianUpgrade</a>
+, <a class="el" href="class_teen_shih_tzu_upgrade.html#a2db9fffe978423d001bd7e37c7d7fbc4">TeenShihTzuUpgrade</a>
+, <a class="el" href="class_tower.html#a2427fab36824f8ec98273cb5e563e0c9">Tower</a>
 </li>
 <li>getType()
 : <a class="el" href="class_tile.html#accf61745cef281d948e7acc7260c8b86">Tile</a>
 , <a class="el" href="class_tower.html#a87db306927fd4022cae1369b88688ed7">Tower</a>
+</li>
+<li>getUndoButtonSpecs()
+: <a class="el" href="class_game_state_map_editor.html#a1d140bbb202e9515530ab8c8b6022baa">GameStateMapEditor</a>
+</li>
+<li>getUnPauseButtonSpecs()
+: <a class="el" href="class_game_state_play.html#a93771d14333ebc475f2428d3c1a3c3d3">GameStatePlay</a>
 </li>
 <li>getUpgradeCost()
 : <a class="el" href="class_tower.html#a6211c9d5d2718c1d65efb0b636e74d77">Tower</a>
@@ -341,7 +452,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 7 2014 19:14:44 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 28 2014 23:42:47 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

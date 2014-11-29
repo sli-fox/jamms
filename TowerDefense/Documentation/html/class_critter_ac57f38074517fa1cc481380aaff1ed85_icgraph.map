@@ -1,0 +1,4 @@
+<map id="Critter::getStealPointsStrength" name="Critter::getStealPointsStrength">
+<area shape="rect" id="node2" href="$class_strongest_strategy.html#acef0a39f23565b3c595891e6582b5fba" title="StrongestStrategy::\lcomputeTarget" alt="" coords="275,5,410,47"/>
+<area shape="rect" id="node3" href="$class_weakest_strategy.html#a44ab38145299c6141d1a0a266e22fa51" title="WeakestStrategy::compute\lTarget" alt="" coords="252,71,433,112"/>
+</map>

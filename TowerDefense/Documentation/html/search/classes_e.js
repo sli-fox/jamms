@@ -1,6 +1,12 @@
 var searchData=
 [
-  ['waypoint',['Waypoint',['../class_waypoint.html',1,'']]],
-  ['whitecat',['WhiteCat',['../class_white_cat.html',1,'']]],
-  ['whitespace_5fpred',['whitespace_pred',['../structrapidxml_1_1xml__document_1_1whitespace__pred.html',1,'rapidxml::xml_document']]]
+  ['scenerytile',['SceneryTile',['../class_scenery_tile.html',1,'']]],
+  ['shihtzu',['ShihTzu',['../class_shih_tzu.html',1,'']]],
+  ['shock',['Shock',['../struct_shock.html',1,'']]],
+  ['slowe',['Slowe',['../struct_slowe.html',1,'']]],
+  ['sloweffect',['SlowEffect',['../class_slow_effect.html',1,'']]],
+  ['sloweststrategy',['SlowestStrategy',['../class_slowest_strategy.html',1,'']]],
+  ['starttile',['StartTile',['../class_start_tile.html',1,'']]],
+  ['strongeststrategy',['StrongestStrategy',['../class_strongest_strategy.html',1,'']]],
+  ['stun',['Stun',['../struct_stun.html',1,'']]]
 ];

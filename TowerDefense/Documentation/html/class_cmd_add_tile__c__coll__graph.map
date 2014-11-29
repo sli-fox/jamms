@@ -1,0 +1,4 @@
+<map id="CmdAddTile_c" name="CmdAddTile_c">
+<area shape="rect" id="node2" href="$class_cmd_base__c.html" title="{CmdBase_c\n|# event_type\l|+ CmdBase_c()\l+ ~CmdBase_c()\l+ undo()\l+ redo()\l+ getEveType()\l}" alt="" coords="234,733,355,869"/>
+<area shape="rect" id="node3" href="$class_map.html" title="{Map\n|+ MAX_MAP_WIDTH\l+ MAX_MAP_HEIGHT\l&#45; mapWidth\l&#45; mapHeight\l&#45; hasStart\l&#45; hasEnd\l|+ Map()\l+ Map()\l+ ~Map()\l+ getMapWidth()\l+ getMapHeight()\l+ setMapSize()\l+ getTile()\l+ addTile()\l+ removeTile()\l+ getMapPath()\land 12 more...\l&#45; outOfBounds()\l&#45; validPathPlacement()\l&#45; convertType()\l&#45; convertType()\l}" alt="" coords="219,315,371,671"/>
+</map>

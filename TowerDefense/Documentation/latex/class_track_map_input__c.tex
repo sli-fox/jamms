@@ -1,0 +1,254 @@
+\hypertarget{class_track_map_input__c}{\section{Track\+Map\+Input\+\_\+c Class Reference}
+\label{class_track_map_input__c}\index{Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}}
+}
+
+
+{\ttfamily \#include $<$Track\+Map\+Input.\+h$>$}
+
+
+
+Collaboration diagram for Track\+Map\+Input\+\_\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_track_map_input__c__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_track_map_input__c_a00d9fec06d73d0ad95760f8770c1d3b1}{Track\+Map\+Input\+\_\+c} (\hyperlink{class_map}{Map} \&map)
+\item 
+\hyperlink{class_track_map_input__c_a434c67365792d8b9fdd12d1c5969bce6}{$\sim$\+Track\+Map\+Input\+\_\+c} ()
+\item 
+virtual void \hyperlink{class_track_map_input__c_a4491e6a575211ee7c90ef09e2c8985c5}{redo} ()
+\item 
+virtual void \hyperlink{class_track_map_input__c_a2365bd5ca234cead62f4cc060f3d5ce1}{undo} ()
+\item 
+virtual void \hyperlink{class_track_map_input__c_ac5e3d19a8902d2c68f20531974a6a9b8}{record\+Remove\+Tile} (int tile\+X, int tile\+Y)
+\item 
+virtual void \hyperlink{class_track_map_input__c_a5287b682e102d4d12ff1cf5d7e1029ec}{record\+Add\+Tile} (int tile\+X, int tile\+Y, \hyperlink{class_tile_acb53d82f9dacff45a98acc63276928eb}{Tile\+::\+T\+Y\+P\+E} tile\+Type)
+\item 
+virtual void \hyperlink{class_track_map_input__c_a5118fc2fdbf1a9612a0e9dc6225a0d39}{record\+Fill\+Map} ()
+\item 
+virtual void \hyperlink{class_track_map_input__c_a677765b189904a05c285d1d17b02a032}{record\+Un\+Fill\+Map} ()
+\item 
+void \hyperlink{class_track_map_input__c_a0ceb17cc87de43351fc6a3409356478c}{record\+Reset\+Map} ()
+\item 
+\hyperlink{class_cmd_base__c}{Cmd\+Base\+\_\+c} $\ast$ \hyperlink{class_track_map_input__c_a508d5ac86762b8269dfb1755d1eb1183}{create\+New\+Object} (\hyperlink{class_cmd_base__c}{Cmd\+Base\+\_\+c} $\ast$cmd)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::stack$<$ \hyperlink{class_cmd_base__c}{Cmd\+Base\+\_\+c} $\ast$ $>$ \hyperlink{class_track_map_input__c_af8132fe4139361e7ff0e06b2ed19eb4d}{undo\+Event\+Stack}
+\item 
+std\+::stack$<$ \hyperlink{class_cmd_base__c}{Cmd\+Base\+\_\+c} $\ast$ $>$ \hyperlink{class_track_map_input__c_adbb2c952b62701ddbf835979484e38b3}{redo\+Event\+Stack}
+\item 
+\hyperlink{class_map}{Map} $\ast$ \hyperlink{class_track_map_input__c_ac97a1987b2dbb6826e5bf5c8ef3e4283}{m\+\_\+map}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_track_map_input__c_a00d9fec06d73d0ad95760f8770c1d3b1}{\index{Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}!Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}}
+\index{Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}!Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}}
+\subsubsection[{Track\+Map\+Input\+\_\+c}]{\setlength{\rightskip}{0pt plus 5cm}Track\+Map\+Input\+\_\+c\+::\+Track\+Map\+Input\+\_\+c (
+\begin{DoxyParamCaption}
+\item[{{\bf Map} \&}]{map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_track_map_input__c_a00d9fec06d73d0ad95760f8770c1d3b1}
+\hypertarget{class_track_map_input__c_a434c67365792d8b9fdd12d1c5969bce6}{\index{Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}!````~Track\+Map\+Input\+\_\+c@{$\sim$\+Track\+Map\+Input\+\_\+c}}
+\index{````~Track\+Map\+Input\+\_\+c@{$\sim$\+Track\+Map\+Input\+\_\+c}!Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}}
+\subsubsection[{$\sim$\+Track\+Map\+Input\+\_\+c}]{\setlength{\rightskip}{0pt plus 5cm}Track\+Map\+Input\+\_\+c\+::$\sim$\+Track\+Map\+Input\+\_\+c (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_track_map_input__c_a434c67365792d8b9fdd12d1c5969bce6}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_track_map_input__c_a508d5ac86762b8269dfb1755d1eb1183}{\index{Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}!create\+New\+Object@{create\+New\+Object}}
+\index{create\+New\+Object@{create\+New\+Object}!Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}}
+\subsubsection[{create\+New\+Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cmd\+Base\+\_\+c} $\ast$ Track\+Map\+Input\+\_\+c\+::create\+New\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Cmd\+Base\+\_\+c} $\ast$}]{cmd}
+\end{DoxyParamCaption}
+)}}\label{class_track_map_input__c_a508d5ac86762b8269dfb1755d1eb1183}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_track_map_input__c_a508d5ac86762b8269dfb1755d1eb1183_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_track_map_input__c_a508d5ac86762b8269dfb1755d1eb1183_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_track_map_input__c_a5287b682e102d4d12ff1cf5d7e1029ec}{\index{Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}!record\+Add\+Tile@{record\+Add\+Tile}}
+\index{record\+Add\+Tile@{record\+Add\+Tile}!Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}}
+\subsubsection[{record\+Add\+Tile}]{\setlength{\rightskip}{0pt plus 5cm}void Track\+Map\+Input\+\_\+c\+::record\+Add\+Tile (
+\begin{DoxyParamCaption}
+\item[{int}]{tile\+X, }
+\item[{int}]{tile\+Y, }
+\item[{{\bf Tile\+::\+T\+Y\+P\+E}}]{tile\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_track_map_input__c_a5287b682e102d4d12ff1cf5d7e1029ec}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_track_map_input__c_a5287b682e102d4d12ff1cf5d7e1029ec_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_track_map_input__c_a5118fc2fdbf1a9612a0e9dc6225a0d39}{\index{Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}!record\+Fill\+Map@{record\+Fill\+Map}}
+\index{record\+Fill\+Map@{record\+Fill\+Map}!Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}}
+\subsubsection[{record\+Fill\+Map}]{\setlength{\rightskip}{0pt plus 5cm}void Track\+Map\+Input\+\_\+c\+::record\+Fill\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_track_map_input__c_a5118fc2fdbf1a9612a0e9dc6225a0d39}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_track_map_input__c_a5118fc2fdbf1a9612a0e9dc6225a0d39_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_track_map_input__c_ac5e3d19a8902d2c68f20531974a6a9b8}{\index{Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}!record\+Remove\+Tile@{record\+Remove\+Tile}}
+\index{record\+Remove\+Tile@{record\+Remove\+Tile}!Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}}
+\subsubsection[{record\+Remove\+Tile}]{\setlength{\rightskip}{0pt plus 5cm}void Track\+Map\+Input\+\_\+c\+::record\+Remove\+Tile (
+\begin{DoxyParamCaption}
+\item[{int}]{tile\+X, }
+\item[{int}]{tile\+Y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_track_map_input__c_ac5e3d19a8902d2c68f20531974a6a9b8}
+\hypertarget{class_track_map_input__c_a0ceb17cc87de43351fc6a3409356478c}{\index{Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}!record\+Reset\+Map@{record\+Reset\+Map}}
+\index{record\+Reset\+Map@{record\+Reset\+Map}!Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}}
+\subsubsection[{record\+Reset\+Map}]{\setlength{\rightskip}{0pt plus 5cm}void Track\+Map\+Input\+\_\+c\+::record\+Reset\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_track_map_input__c_a0ceb17cc87de43351fc6a3409356478c}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_track_map_input__c_a0ceb17cc87de43351fc6a3409356478c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_track_map_input__c_a677765b189904a05c285d1d17b02a032}{\index{Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}!record\+Un\+Fill\+Map@{record\+Un\+Fill\+Map}}
+\index{record\+Un\+Fill\+Map@{record\+Un\+Fill\+Map}!Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}}
+\subsubsection[{record\+Un\+Fill\+Map}]{\setlength{\rightskip}{0pt plus 5cm}void Track\+Map\+Input\+\_\+c\+::record\+Un\+Fill\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_track_map_input__c_a677765b189904a05c285d1d17b02a032}
+\hypertarget{class_track_map_input__c_a4491e6a575211ee7c90ef09e2c8985c5}{\index{Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}!redo@{redo}}
+\index{redo@{redo}!Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}}
+\subsubsection[{redo}]{\setlength{\rightskip}{0pt plus 5cm}void Track\+Map\+Input\+\_\+c\+::redo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_track_map_input__c_a4491e6a575211ee7c90ef09e2c8985c5}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_track_map_input__c_a4491e6a575211ee7c90ef09e2c8985c5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_track_map_input__c_a4491e6a575211ee7c90ef09e2c8985c5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_track_map_input__c_a2365bd5ca234cead62f4cc060f3d5ce1}{\index{Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}!undo@{undo}}
+\index{undo@{undo}!Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}}
+\subsubsection[{undo}]{\setlength{\rightskip}{0pt plus 5cm}void Track\+Map\+Input\+\_\+c\+::undo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_track_map_input__c_a2365bd5ca234cead62f4cc060f3d5ce1}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_track_map_input__c_a2365bd5ca234cead62f4cc060f3d5ce1_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_track_map_input__c_a2365bd5ca234cead62f4cc060f3d5ce1_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_track_map_input__c_ac97a1987b2dbb6826e5bf5c8ef3e4283}{\index{Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}!m\+\_\+map@{m\+\_\+map}}
+\index{m\+\_\+map@{m\+\_\+map}!Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}}
+\subsubsection[{m\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Map}$\ast$ Track\+Map\+Input\+\_\+c\+::m\+\_\+map\hspace{0.3cm}{\ttfamily [private]}}}\label{class_track_map_input__c_ac97a1987b2dbb6826e5bf5c8ef3e4283}
+\hypertarget{class_track_map_input__c_adbb2c952b62701ddbf835979484e38b3}{\index{Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}!redo\+Event\+Stack@{redo\+Event\+Stack}}
+\index{redo\+Event\+Stack@{redo\+Event\+Stack}!Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}}
+\subsubsection[{redo\+Event\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}std\+::stack$<${\bf Cmd\+Base\+\_\+c}$\ast$$>$ Track\+Map\+Input\+\_\+c\+::redo\+Event\+Stack\hspace{0.3cm}{\ttfamily [private]}}}\label{class_track_map_input__c_adbb2c952b62701ddbf835979484e38b3}
+\hypertarget{class_track_map_input__c_af8132fe4139361e7ff0e06b2ed19eb4d}{\index{Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}!undo\+Event\+Stack@{undo\+Event\+Stack}}
+\index{undo\+Event\+Stack@{undo\+Event\+Stack}!Track\+Map\+Input\+\_\+c@{Track\+Map\+Input\+\_\+c}}
+\subsubsection[{undo\+Event\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}std\+::stack$<${\bf Cmd\+Base\+\_\+c}$\ast$$>$ Track\+Map\+Input\+\_\+c\+::undo\+Event\+Stack\hspace{0.3cm}{\ttfamily [private]}}}\label{class_track_map_input__c_af8132fe4139361e7ff0e06b2ed19eb4d}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/\hyperlink{_track_map_input_8h}{Track\+Map\+Input.\+h}\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/src/\hyperlink{src_2_track_map_input_8cpp}{Track\+Map\+Input.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,12 @@
+<map id="CritterEffect" name="CritterEffect">
+<area shape="rect" id="node2" href="$struct_burn.html" title="{Burn\n||+ Burn()\l+ ~Burn()\l}" alt="" coords="5,380,83,472"/>
+<area shape="rect" id="node3" href="$struct_crush.html" title="{Crush\n||+ Crush()\l+ ~Crush()\l+ getDamage()\l}" alt="" coords="107,373,215,479"/>
+<area shape="rect" id="node4" href="$struct_freeze.html" title="{Freeze\n||+ Freeze()\l+ ~Freeze()\l+ getDamage()\l+ getSpeedModifer()\l}" alt="" coords="240,365,379,487"/>
+<area shape="rect" id="node5" href="$struct_knockback.html" title="{Knockback\n||+ Knockback()\l+ ~Knockback()\l}" alt="" coords="403,380,517,472"/>
+<area shape="rect" id="node6" href="$struct_moonwalk.html" title="{Moonwalk\n||+ Moonwalk()\l+ ~Moonwalk()\l}" alt="" coords="542,380,650,472"/>
+<area shape="rect" id="node7" href="$struct_petrify.html" title="{Petrify\n||+ Petrify()\l+ ~Petrify()\l+ getSpeedModifer()\l}" alt="" coords="675,373,813,479"/>
+<area shape="rect" id="node8" href="$struct_poison.html" title="{Poison\n||+ Poison()\l+ ~Poison()\l}" alt="" coords="837,380,928,472"/>
+<area shape="rect" id="node9" href="$struct_shock.html" title="{Shock\n||+ Shock()\l+ ~Shock()\l}" alt="" coords="953,380,1039,472"/>
+<area shape="rect" id="node10" href="$struct_slowe.html" title="{Slowe\n||+ Slowe()\l+ ~Slowe()\l}" alt="" coords="1064,380,1149,472"/>
+<area shape="rect" id="node11" href="$struct_stun.html" title="{Stun\n||+ Stun()\l+ ~Stun()\l}" alt="" coords="1173,380,1251,472"/>
+</map>

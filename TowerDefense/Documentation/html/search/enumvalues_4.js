@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['large',['Large',['../class_tower.html#a52bcc3e7f85c01b3105e919717503169a14da209d684845bb2a30f0ceb007368a',1,'Tower']]],
-  ['left',['LEFT',['../class_critter.html#a42f4af08084e39edfdb55e38a5858cc4a8c53a6501cb2c04d7207d989683eb84a',1,'Critter']]]
+  ['empty',['EMPTY',['../class_tile.html#acb53d82f9dacff45a98acc63276928eba410bd5c2074558a74ff688ff43723296',1,'Tile']]],
+  ['end',['END',['../class_tile.html#acb53d82f9dacff45a98acc63276928ebabe602dcbe043275048d7cb0f2df6c2db',1,'Tile']]],
+  ['exit',['EXIT',['../class_menu.html#a2d708ce8df47ab5feaea1ba559a938d3aeb6dc9b046b3581da0ce2c13dd6a329f',1,'Menu']]]
 ];

@@ -1,0 +1,5 @@
+<map id="CritterGameObject::setAnimationIndex" name="CritterGameObject::setAnimationIndex">
+<area shape="rect" id="node2" href="$class_game_state_play.html#a0d6ff2e65992c5fb29f180c6b1eb9435" title="GameStatePlay::moveCritter" alt="" coords="192,13,379,39"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#ae812a7447027abe5fcc2f79bf3e35ad8" title="GameStatePlay::moveActivated\lCritters" alt="" coords="427,5,632,47"/>
+<area shape="rect" id="node4" href="$class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="680,13,841,39"/>
+</map>

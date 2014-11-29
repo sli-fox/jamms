@@ -1,4 +1,14 @@
 <map id="GameStateMapEditor::draw" name="GameStateMapEditor::draw">
-<area shape="rect" id="node2" href="$class_game_object.html#abf4de46e52c8f23d18d51bc29744b136" title="Draws a sprite to the render window if the GameObject instance has previously been loaded..." alt="" coords="200,5,331,32"/>
-<area shape="rect" id="node3" href="$class_map.html#a84c0e37119c02d7c81071271e004041d" title="Map::draw" alt="" coords="224,56,307,83"/>
+<area shape="rect" id="node2" href="$class_game_object.html#abf4de46e52c8f23d18d51bc29744b136" title="Draws a sprite to the render window if the GameObject instance has previously been loaded..." alt="" coords="230,5,361,32"/>
+<area shape="rect" id="node3" href="$class_map.html#a84c0e37119c02d7c81071271e004041d" title="Map::draw" alt="" coords="254,56,337,83"/>
+<area shape="rect" id="node4" href="$class_game_state_map_editor.html#ac71e0f13e89b6ecd7df2868293b1be25" title="GameStateMapEditor\l::getRedoButtonSpecs" alt="" coords="219,107,372,149"/>
+<area shape="rect" id="node5" href="$class_game_state_map_editor.html#a1d140bbb202e9515530ab8c8b6022baa" title="GameStateMapEditor\l::getUndoButtonSpecs" alt="" coords="219,173,372,214"/>
+<area shape="rect" id="node6" href="$class_game_state_map_editor.html#a9151d492662a47b584dbda371f0e6935" title="GameStateMapEditor\l::getSaveButtonSpecs" alt="" coords="220,238,371,279"/>
+<area shape="rect" id="node7" href="$class_game_state_map_editor.html#a44da47e4ed2668bb4302467fb594d728" title="GameStateMapEditor\l::getPlayButtonSpecs" alt="" coords="221,303,370,345"/>
+<area shape="rect" id="node8" href="$class_game_state_map_editor.html#a984f5c908281c5c40ec6e58cc6692475" title="GameStateMapEditor\l::getStartTileButtonSpecs" alt="" coords="210,369,381,410"/>
+<area shape="rect" id="node9" href="$class_game_state_map_editor.html#a46d7fbc2e6360bb9a03990f03ca1c149" title="GameStateMapEditor\l::getEndTileButtonSpecs" alt="" coords="212,434,379,475"/>
+<area shape="rect" id="node10" href="$class_game_state_map_editor.html#ab2f12c8e4f5b45131f2be03dd890f724" title="GameStateMapEditor\l::getSceneryTileButtonSpecs" alt="" coords="200,499,391,541"/>
+<area shape="rect" id="node11" href="$class_game_state_map_editor.html#a04a6c24a81434220b91d1b70342d33bb" title="GameStateMapEditor\l::getDeadTileButtonSpecs" alt="" coords="209,565,382,606"/>
+<area shape="rect" id="node12" href="$class_game_state_map_editor.html#a3e1da34ede3015ce2701082e93236d14" title="GameStateMapEditor\l::getPathTileButtonSpecs" alt="" coords="210,630,381,671"/>
+<area shape="rect" id="node13" href="$class_game_state_map_editor.html#ab7346157152360254a3886948d10eca8" title="GameStateMapEditor\l::getLoadMapButtonSpecs" alt="" coords="207,695,383,737"/>
 </map>

@@ -1,0 +1,9 @@
+<map id="Map::addTile" name="Map::addTile">
+<area shape="rect" id="node2" href="$class_game_state_map_editor.html#aab39f5d619995539f39f9cd217130653" title="GameStateMapEditor\l::mapEditorCommandLibrary" alt="" coords="363,5,549,47"/>
+<area shape="rect" id="node4" href="$class_map.html#a2b6b1ca722620f097ea044f1c41e411e" title="Map::load" alt="" coords="193,101,271,127"/>
+<area shape="rect" id="node7" href="$class_cmd_add_tile__c.html#aedf0b5944d1cc3a15372b74a78ac54b4" title="CmdAddTile_c::redo" alt="" coords="163,151,301,178"/>
+<area shape="rect" id="node8" href="$class_cmd_remove_tile__c.html#a739dac75f48718fd9f3bd90b7cba59b1" title="CmdRemoveTile_c::undo" alt="" coords="149,202,315,229"/>
+<area shape="rect" id="node3" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="597,64,744,105"/>
+<area shape="rect" id="node5" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="374,123,538,164"/>
+<area shape="rect" id="node6" href="$class_map.html#a11a8645ff656f9efeb5a6758b36d1264" title="Map::Map" alt="" coords="416,189,496,215"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="TrackMapInput_c::createNewObject" name="TrackMapInput_c::createNewObject">
+<area shape="rect" id="node2" href="$class_track_map_input__c.html#a4491e6a575211ee7c90ef09e2c8985c5" title="TrackMapInput_c::redo" alt="" coords="245,6,400,33"/>
+<area shape="rect" id="node5" href="$class_track_map_input__c.html#a2365bd5ca234cead62f4cc060f3d5ce1" title="TrackMapInput_c::undo" alt="" coords="244,57,401,83"/>
+<area shape="rect" id="node3" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="661,24,808,65"/>
+<area shape="rect" id="node4" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="449,24,613,65"/>
+</map>

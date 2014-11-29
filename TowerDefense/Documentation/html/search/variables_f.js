@@ -1,6 +1,19 @@
 var searchData=
 [
-  ['range',['range',['../class_game_state_play.html#a4ac9c1b314dfbfe0082728eacfc401fc',1,'GameStatePlay']]],
-  ['rect',['rect',['../struct_menu_1_1_menu_item.html#ae1998c7b6dad5e12faa131248eb750e3',1,'Menu::MenuItem']]],
-  ['returntomenu',['returnToMenu',['../class_game_state_map_editor.html#a3a2c317aa0be29c33e95c37455048cbd',1,'GameStateMapEditor::returnToMenu()'],['../class_game_state_play.html#a6f5a18b6d0597c0f6c4d26b4df873ee6',1,'GameStatePlay::returnToMenu()']]]
+  ['selected_5faction',['selected_action',['../class_game_state_main_menu.html#ae63addaca64e4099cd1afff642e0307d',1,'GameStateMainMenu']]],
+  ['selectedtowerspecs',['selectedTowerSpecs',['../class_game_state_play.html#ac8809caa817213fe1b78749b3b19ad6f',1,'GameStatePlay']]],
+  ['serial',['serial',['../class_tower.html#a53001ebc47ba7e60fdb7eb1dcdd82a64',1,'Tower']]],
+  ['show_5fwaypoints',['show_waypoints',['../class_game_state_play.html#a406124f1525e8555fb264c743298d7b9',1,'GameStatePlay']]],
+  ['slowest',['slowest',['../class_game_state_play.html#aa5a191ff7adb99b88d5c967f44880264',1,'GameStatePlay']]],
+  ['small_5fdog',['small_dog',['../class_tower_test.html#aef4dab96f03105798c39ca8d33ae6940',1,'TowerTest']]],
+  ['specialeffectapplied',['specialEffectApplied',['../class_critter.html#aa30e57414bd64c920dca286f87da5c3f',1,'Critter']]],
+  ['speed',['speed',['../class_critter.html#adde7d84a0dd9ac8f5dc144464928638f',1,'Critter']]],
+  ['speedmodifier',['speedModifier',['../class_critter.html#ad53189c28d3f392ea8d1f1796e7c0744',1,'Critter::speedModifier()'],['../class_critter_effect.html#a70f3b198f8dacc9ca942c99b3d6ddb39',1,'CritterEffect::speedModifier()']]],
+  ['sprite',['sprite',['../class_game_object.html#abb3608f1c76edd590e023585c2216f02',1,'GameObject']]],
+  ['stacks',['stacks',['../class_critter_effect.html#ad6b5573ff377524e3e434441a0cf8496',1,'CritterEffect']]],
+  ['start_5fframe',['start_frame',['../class_animation.html#a22f5936a58ca1850d5232a1cbfcb3426',1,'Animation']]],
+  ['steal_5flives',['STEAL_LIVES',['../class_critter.html#a1324eb838f1790e904a0b82c9ceed173',1,'Critter']]],
+  ['steal_5fpoints',['steal_points',['../class_critter.html#ad2b5b3ee8a0b69d4023f60cfb9f26a6a',1,'Critter']]],
+  ['strongest',['strongest',['../class_game_state_play.html#a19bbd6c5ddab619c2fed65c1a368395d',1,'GameStatePlay']]],
+  ['systemoutput',['systemOutput',['../class_game_state_map_editor.html#ae9103d07effafe086fb2a808be7fac81',1,'GameStateMapEditor']]]
 ];

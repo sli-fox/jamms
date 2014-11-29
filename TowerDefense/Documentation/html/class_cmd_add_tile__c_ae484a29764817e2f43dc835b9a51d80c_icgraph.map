@@ -1,0 +1,4 @@
+<map id="CmdAddTile_c::getTileX" name="CmdAddTile_c::getTileX">
+<area shape="rect" id="node2" href="$class_cmd_add_tile__c.html#aedf0b5944d1cc3a15372b74a78ac54b4" title="CmdAddTile_c::redo" alt="" coords="214,5,353,32"/>
+<area shape="rect" id="node3" href="$class_cmd_add_tile__c.html#ae2cf1ae80b5d05be7fea2fc57954a617" title="CmdAddTile_c::undo" alt="" coords="212,56,355,83"/>
+</map>

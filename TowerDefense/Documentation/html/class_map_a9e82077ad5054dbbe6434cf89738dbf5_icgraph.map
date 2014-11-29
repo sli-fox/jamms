@@ -1,4 +1,6 @@
 <map id="Map::fillMap" name="Map::fillMap">
 <area shape="rect" id="node2" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="145,5,309,47"/>
+<area shape="rect" id="node4" href="$class_cmd_un_fill_map__c.html#a966ef4e2f64ef0c9689328b68617c40e" title="CmdUnFillMap_c::undo" alt="" coords="149,71,306,98"/>
+<area shape="rect" id="node5" href="$class_cmd_fill_map__c.html#a03c8b3d6027ae4bf50714b6358125eab" title="CmdFillMap_c::redo" alt="" coords="158,122,297,149"/>
 <area shape="rect" id="node3" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="357,5,504,47"/>
 </map>

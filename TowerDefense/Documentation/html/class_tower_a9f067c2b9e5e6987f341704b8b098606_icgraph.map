@@ -1,3 +1,6 @@
 <map id="Tower::attack" name="Tower::attack">
-<area shape="rect" id="node2" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="153,5,341,32"/>
+<area shape="rect" id="node2" href="$class_burn_effect.html#a79e25ceec437f8beb196751e6cd37e2e" title="BurnEffect::attack" alt="" coords="184,5,311,32"/>
+<area shape="rect" id="node3" href="$class_freeze_effect.html#a6820f382c09080db9d8e5fbc26287f74" title="FreezeEffect::attack" alt="" coords="178,56,317,83"/>
+<area shape="rect" id="node4" href="$class_slow_effect.html#a0004dd210f4c8aac78fc72902b2bba1f" title="SlowEffect::attack" alt="" coords="184,107,311,133"/>
+<area shape="rect" id="node5" href="$class_game_state_play.html#ae9acc781e1fdbc931784ba3892c469ce" title="Handles player input. " alt="" coords="153,157,341,184"/>
 </map>

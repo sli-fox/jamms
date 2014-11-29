@@ -1,0 +1,19 @@
+<map id="Tower::setRangeShape" name="Tower::setRangeShape">
+<area shape="rect" id="node2" href="$class_tower.html#a867f4e6b1621fba50fcba5cd1d27f227" title="Tower::setRange" alt="" coords="209,430,328,457"/>
+<area shape="rect" id="node3" href="$class_adult_bulldog_upgrade.html#a9152b2b5fae3cc23cab3753832b06b94" title="AdultBulldogUpgrade\l::AdultBulldogUpgrade" alt="" coords="404,5,555,47"/>
+<area shape="rect" id="node4" href="$class_adult_dalmatian_upgrade.html#a8eba9816fcfc628e2c9310ef2f1ca989" title="AdultDalmatianUpgrade\l::AdultDalmatianUpgrade" alt="" coords="396,71,563,112"/>
+<area shape="rect" id="node5" href="$class_adult_shih_tzu_upgrade.html#a85e7b1079bb72002fb0873337435dc49" title="AdultShihTzuUpgrade\l::AdultShihTzuUpgrade" alt="" coords="402,136,557,177"/>
+<area shape="rect" id="node6" href="$class_baby_bulldog.html#adb01b9d1b5b21f1caf39d3eb737646a4" title="BabyBulldog::BabyBulldog" alt="" coords="391,202,567,229"/>
+<area shape="rect" id="node7" href="$class_baby_dalmatian.html#a0b9460fd26d39fa361b1386486f96f19" title="BabyDalmatian::BabyDalmatian" alt="" coords="376,253,583,279"/>
+<area shape="rect" id="node8" href="$class_baby_shih_tzu.html#afcc1a988bb58e1e4f1eeab886c7c233d" title="BabyShihTzu::BabyShihTzu" alt="" coords="387,303,571,330"/>
+<area shape="rect" id="node9" href="$class_bulldog.html#a21e6065a0e9cfa5aa862c8b7a5e1b88c" title="Bulldog::Bulldog" alt="" coords="421,354,537,381"/>
+<area shape="rect" id="node10" href="$class_bulldog.html#adfecd22f881be0d7946534c2012275d7" title="Bulldog::upgradeTower" alt="" coords="403,405,556,431"/>
+<area shape="rect" id="node11" href="$class_burn_effect.html#a06df17552152fa567597e60ac9fc5a76" title="BurnEffect::BurnEffect" alt="" coords="404,455,555,482"/>
+<area shape="rect" id="node12" href="$class_freeze_effect.html#aa9aa4fc5b5a963f961c5250383977cdd" title="FreezeEffect::FreezeEffect" alt="" coords="391,506,567,533"/>
+<area shape="rect" id="node13" href="$class_shih_tzu.html#a623911469b4f9763666f43b2df48d91a" title="ShihTzu::ShihTzu" alt="" coords="417,557,541,583"/>
+<area shape="rect" id="node14" href="$class_shih_tzu.html#a9d8d599edbc19d2a16a65646d0cbc485" title="ShihTzu::upgradeTower" alt="" coords="401,607,558,634"/>
+<area shape="rect" id="node15" href="$class_slow_effect.html#a451bf06f86366b8857e09bcb38834756" title="SlowEffect::SlowEffect" alt="" coords="403,658,555,685"/>
+<area shape="rect" id="node16" href="$class_teen_bulldog_upgrade.html#a6808367cbdaa1deed5780a916bf127cd" title="TeenBulldogUpgrade\l::TeenBulldogUpgrade" alt="" coords="405,709,554,751"/>
+<area shape="rect" id="node17" href="$class_teen_dalmatian_upgrade.html#a36935783afda88bfb639c41f8ad68959" title="TeenDalmatianUpgrade\l::TeenDalmatianUpgrade" alt="" coords="397,775,561,816"/>
+<area shape="rect" id="node18" href="$class_teen_shih_tzu_upgrade.html#ac9c5b3bfe2a3b2529b649871e3afa4c3" title="TeenShihTzuUpgrade\l::TeenShihTzuUpgrade" alt="" coords="403,840,556,881"/>
+</map>

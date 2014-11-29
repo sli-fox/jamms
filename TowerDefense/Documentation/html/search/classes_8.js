@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['iobserver',['IObserver',['../class_i_observer.html',1,'']]],
-  ['isubject',['ISubject',['../class_i_subject.html',1,'']]]
+  ['header',['header',['../structrapidxml_1_1memory__pool_1_1header.html',1,'rapidxml::memory_pool']]]
 ];

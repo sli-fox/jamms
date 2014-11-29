@@ -1,0 +1,351 @@
+\hypertarget{class_critter_game_object}{\section{Critter\+Game\+Object Class Reference}
+\label{class_critter_game_object}\index{Critter\+Game\+Object@{Critter\+Game\+Object}}
+}
+
+
+Creates a \hyperlink{class_critter_game_object}{Critter\+Game\+Object}. \hyperlink{class_critter_game_object}{Critter\+Game\+Object} is a subclass of \hyperlink{class_game_object}{Game\+Object} that separates G\+U\+I code specific to the \hyperlink{class_critter}{Critter} from the \hyperlink{class_critter}{Critter} model in the application.  
+
+
+
+
+{\ttfamily \#include $<$Critter\+Game\+Object.\+h$>$}
+
+
+
+Inheritance diagram for Critter\+Game\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_critter_game_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Critter\+Game\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_game_object__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_critter_game_object_a8d07276919d937f6066395bc0e1febf2}{Movement\+Direction} \{ \hyperlink{class_critter_game_object_a8d07276919d937f6066395bc0e1febf2ae3b729130fb185c409e639345a7de9ed}{D\+O\+W\+N}, 
+\hyperlink{class_critter_game_object_a8d07276919d937f6066395bc0e1febf2a02ac339d40e010941fad9c94f3826214}{L\+E\+F\+T}, 
+\hyperlink{class_critter_game_object_a8d07276919d937f6066395bc0e1febf2a66b911e14441f191d1477b704dc354b1}{R\+I\+G\+H\+T}, 
+\hyperlink{class_critter_game_object_a8d07276919d937f6066395bc0e1febf2ad339e5942cb7217912a66c55116b7676}{U\+P}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_critter_game_object_afbffc1b3ab985afd2a71f7a66808af62}{Critter\+Game\+Object} ()
+\item 
+virtual \hyperlink{class_critter_game_object_ab1af097b88647066731e22898a7b1697}{$\sim$\+Critter\+Game\+Object} ()
+\item 
+\hyperlink{class_waypoint}{Waypoint} $\ast$ \hyperlink{class_critter_game_object_a1b81867b7f6a204a4c9982da18bb9d0a}{get\+Current\+Waypoint} () const 
+\item 
+void \hyperlink{class_critter_game_object_a6302cd7be6a4f1d3d724cb0e45941338}{set\+Current\+Waypoint} (\hyperlink{class_waypoint}{Waypoint} $\ast$waypoint)
+\item 
+void \hyperlink{class_critter_game_object_afea351babd57c739104879f27dafd910}{set\+Animation\+Index} (unsigned int index)
+\item 
+void \hyperlink{class_critter_game_object_a87b34231710c3537c9691e2034502269}{draw} (sf\+::\+Render\+Window \&game\+\_\+window, float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Draw a \hyperlink{class_critter}{Critter}. \end{DoxyCompactList}\item 
+\hyperlink{class_critter_game_object_a8d07276919d937f6066395bc0e1febf2}{Movement\+Direction} \hyperlink{class_critter_game_object_a3ce69ef5cbc8983b45df839674aab0bc}{get\+Movement\+Direction} ()
+\item 
+bool \hyperlink{class_critter_game_object_abdc7d3071ef2e9e00c277051f62b9005}{is\+At\+Next\+Waypoint} ()
+\item 
+void \hyperlink{class_critter_game_object_a546fa242023f61965a284e4a2e72ab7d}{update\+Position} (float x, float y)
+\item 
+void \hyperlink{class_critter_game_object_aade350efb5f7c65da8eb66d01c65be6f}{control\+Cat} (sf\+::\+Keyboard\+::\+Key arrow\+Key)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_critter_game_object_a9e8edd5ea266b18433e9b9f0f3184b97}{is\+Active}
+\item 
+bool \hyperlink{class_critter_game_object_ad703baff6e0d35129dadc48172c26353}{has\+Spawned}
+\item 
+bool \hyperlink{class_critter_game_object_a21c4863faaf8fc2c0314575c07764ce4}{is\+At\+End\+Tile}
+\item 
+\hyperlink{class_animation_handler}{Animation\+Handler} \hyperlink{class_critter_game_object_aaf2540f8bf0e841fb1f7ffba4afe9b3d}{animation\+\_\+handler}
+\begin{DoxyCompactList}\small\item\em Handles the animated object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_waypoint}{Waypoint} $\ast$ \hyperlink{class_critter_game_object_a1c661287931e114c68e7cd16a1bf5d47}{current\+\_\+waypoint}
+\item 
+int \hyperlink{class_critter_game_object_a24da2fb9666d41d47a736278f9305d95}{animation\+\_\+index}
+\begin{DoxyCompactList}\small\item\em Indicates which animation in a sprite sheet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Creates a \hyperlink{class_critter_game_object}{Critter\+Game\+Object}. \hyperlink{class_critter_game_object}{Critter\+Game\+Object} is a subclass of \hyperlink{class_game_object}{Game\+Object} that separates G\+U\+I code specific to the \hyperlink{class_critter}{Critter} from the \hyperlink{class_critter}{Critter} model in the application. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_critter_game_object_a8d07276919d937f6066395bc0e1febf2}{\index{Critter\+Game\+Object@{Critter\+Game\+Object}!Movement\+Direction@{Movement\+Direction}}
+\index{Movement\+Direction@{Movement\+Direction}!Critter\+Game\+Object@{Critter\+Game\+Object}}
+\subsubsection[{Movement\+Direction}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Critter\+Game\+Object\+::\+Movement\+Direction}}}\label{class_critter_game_object_a8d07276919d937f6066395bc0e1febf2}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{D\+O\+W\+N@{D\+O\+W\+N}!Critter\+Game\+Object@{Critter\+Game\+Object}}\index{Critter\+Game\+Object@{Critter\+Game\+Object}!D\+O\+W\+N@{D\+O\+W\+N}}\item[{\em 
+\hypertarget{class_critter_game_object_a8d07276919d937f6066395bc0e1febf2ae3b729130fb185c409e639345a7de9ed}{D\+O\+W\+N}\label{class_critter_game_object_a8d07276919d937f6066395bc0e1febf2ae3b729130fb185c409e639345a7de9ed}
+}]\index{L\+E\+F\+T@{L\+E\+F\+T}!Critter\+Game\+Object@{Critter\+Game\+Object}}\index{Critter\+Game\+Object@{Critter\+Game\+Object}!L\+E\+F\+T@{L\+E\+F\+T}}\item[{\em 
+\hypertarget{class_critter_game_object_a8d07276919d937f6066395bc0e1febf2a02ac339d40e010941fad9c94f3826214}{L\+E\+F\+T}\label{class_critter_game_object_a8d07276919d937f6066395bc0e1febf2a02ac339d40e010941fad9c94f3826214}
+}]\index{R\+I\+G\+H\+T@{R\+I\+G\+H\+T}!Critter\+Game\+Object@{Critter\+Game\+Object}}\index{Critter\+Game\+Object@{Critter\+Game\+Object}!R\+I\+G\+H\+T@{R\+I\+G\+H\+T}}\item[{\em 
+\hypertarget{class_critter_game_object_a8d07276919d937f6066395bc0e1febf2a66b911e14441f191d1477b704dc354b1}{R\+I\+G\+H\+T}\label{class_critter_game_object_a8d07276919d937f6066395bc0e1febf2a66b911e14441f191d1477b704dc354b1}
+}]\index{U\+P@{U\+P}!Critter\+Game\+Object@{Critter\+Game\+Object}}\index{Critter\+Game\+Object@{Critter\+Game\+Object}!U\+P@{U\+P}}\item[{\em 
+\hypertarget{class_critter_game_object_a8d07276919d937f6066395bc0e1febf2ad339e5942cb7217912a66c55116b7676}{U\+P}\label{class_critter_game_object_a8d07276919d937f6066395bc0e1febf2ad339e5942cb7217912a66c55116b7676}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_critter_game_object_afbffc1b3ab985afd2a71f7a66808af62}{\index{Critter\+Game\+Object@{Critter\+Game\+Object}!Critter\+Game\+Object@{Critter\+Game\+Object}}
+\index{Critter\+Game\+Object@{Critter\+Game\+Object}!Critter\+Game\+Object@{Critter\+Game\+Object}}
+\subsubsection[{Critter\+Game\+Object}]{\setlength{\rightskip}{0pt plus 5cm}Critter\+Game\+Object\+::\+Critter\+Game\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_critter_game_object_afbffc1b3ab985afd2a71f7a66808af62}
+\hypertarget{class_critter_game_object_ab1af097b88647066731e22898a7b1697}{\index{Critter\+Game\+Object@{Critter\+Game\+Object}!````~Critter\+Game\+Object@{$\sim$\+Critter\+Game\+Object}}
+\index{````~Critter\+Game\+Object@{$\sim$\+Critter\+Game\+Object}!Critter\+Game\+Object@{Critter\+Game\+Object}}
+\subsubsection[{$\sim$\+Critter\+Game\+Object}]{\setlength{\rightskip}{0pt plus 5cm}virtual Critter\+Game\+Object\+::$\sim$\+Critter\+Game\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_critter_game_object_ab1af097b88647066731e22898a7b1697}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_critter_game_object_aade350efb5f7c65da8eb66d01c65be6f}{\index{Critter\+Game\+Object@{Critter\+Game\+Object}!control\+Cat@{control\+Cat}}
+\index{control\+Cat@{control\+Cat}!Critter\+Game\+Object@{Critter\+Game\+Object}}
+\subsubsection[{control\+Cat}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+Game\+Object\+::control\+Cat (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Keyboard\+::\+Key}]{arrow\+Key}
+\end{DoxyParamCaption}
+)}}\label{class_critter_game_object_aade350efb5f7c65da8eb66d01c65be6f}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_game_object_aade350efb5f7c65da8eb66d01c65be6f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_game_object_aade350efb5f7c65da8eb66d01c65be6f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_critter_game_object_a87b34231710c3537c9691e2034502269}{\index{Critter\+Game\+Object@{Critter\+Game\+Object}!draw@{draw}}
+\index{draw@{draw}!Critter\+Game\+Object@{Critter\+Game\+Object}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+Game\+Object\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{game\+\_\+window, }
+\item[{float}]{delta\+\_\+time}
+\end{DoxyParamCaption}
+)}}\label{class_critter_game_object_a87b34231710c3537c9691e2034502269}
+
+
+Draw a \hyperlink{class_critter}{Critter}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+window} & Reference to the window, passed in so that Critters don't need to know about the \hyperlink{class_game}{Game} class. \\
+\hline
+{\em delta\+\_\+time} & Elapsed time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_game_object_a87b34231710c3537c9691e2034502269_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_game_object_a87b34231710c3537c9691e2034502269_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_critter_game_object_a1b81867b7f6a204a4c9982da18bb9d0a}{\index{Critter\+Game\+Object@{Critter\+Game\+Object}!get\+Current\+Waypoint@{get\+Current\+Waypoint}}
+\index{get\+Current\+Waypoint@{get\+Current\+Waypoint}!Critter\+Game\+Object@{Critter\+Game\+Object}}
+\subsubsection[{get\+Current\+Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Waypoint} $\ast$ Critter\+Game\+Object\+::get\+Current\+Waypoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_critter_game_object_a1b81867b7f6a204a4c9982da18bb9d0a}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_game_object_a1b81867b7f6a204a4c9982da18bb9d0a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_critter_game_object_a3ce69ef5cbc8983b45df839674aab0bc}{\index{Critter\+Game\+Object@{Critter\+Game\+Object}!get\+Movement\+Direction@{get\+Movement\+Direction}}
+\index{get\+Movement\+Direction@{get\+Movement\+Direction}!Critter\+Game\+Object@{Critter\+Game\+Object}}
+\subsubsection[{get\+Movement\+Direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Critter\+Game\+Object\+::\+Movement\+Direction} Critter\+Game\+Object\+::get\+Movement\+Direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_critter_game_object_a3ce69ef5cbc8983b45df839674aab0bc}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_game_object_a3ce69ef5cbc8983b45df839674aab0bc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_critter_game_object_abdc7d3071ef2e9e00c277051f62b9005}{\index{Critter\+Game\+Object@{Critter\+Game\+Object}!is\+At\+Next\+Waypoint@{is\+At\+Next\+Waypoint}}
+\index{is\+At\+Next\+Waypoint@{is\+At\+Next\+Waypoint}!Critter\+Game\+Object@{Critter\+Game\+Object}}
+\subsubsection[{is\+At\+Next\+Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}bool Critter\+Game\+Object\+::is\+At\+Next\+Waypoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_critter_game_object_abdc7d3071ef2e9e00c277051f62b9005}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_game_object_abdc7d3071ef2e9e00c277051f62b9005_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_critter_game_object_afea351babd57c739104879f27dafd910}{\index{Critter\+Game\+Object@{Critter\+Game\+Object}!set\+Animation\+Index@{set\+Animation\+Index}}
+\index{set\+Animation\+Index@{set\+Animation\+Index}!Critter\+Game\+Object@{Critter\+Game\+Object}}
+\subsubsection[{set\+Animation\+Index}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+Game\+Object\+::set\+Animation\+Index (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{index}
+\end{DoxyParamCaption}
+)}}\label{class_critter_game_object_afea351babd57c739104879f27dafd910}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_game_object_afea351babd57c739104879f27dafd910_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_critter_game_object_a6302cd7be6a4f1d3d724cb0e45941338}{\index{Critter\+Game\+Object@{Critter\+Game\+Object}!set\+Current\+Waypoint@{set\+Current\+Waypoint}}
+\index{set\+Current\+Waypoint@{set\+Current\+Waypoint}!Critter\+Game\+Object@{Critter\+Game\+Object}}
+\subsubsection[{set\+Current\+Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+Game\+Object\+::set\+Current\+Waypoint (
+\begin{DoxyParamCaption}
+\item[{{\bf Waypoint} $\ast$}]{waypoint}
+\end{DoxyParamCaption}
+)}}\label{class_critter_game_object_a6302cd7be6a4f1d3d724cb0e45941338}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_game_object_a6302cd7be6a4f1d3d724cb0e45941338_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_critter_game_object_a546fa242023f61965a284e4a2e72ab7d}{\index{Critter\+Game\+Object@{Critter\+Game\+Object}!update\+Position@{update\+Position}}
+\index{update\+Position@{update\+Position}!Critter\+Game\+Object@{Critter\+Game\+Object}}
+\subsubsection[{update\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void Critter\+Game\+Object\+::update\+Position (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_critter_game_object_a546fa242023f61965a284e4a2e72ab7d}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_critter_game_object_a546fa242023f61965a284e4a2e72ab7d_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_critter_game_object_aaf2540f8bf0e841fb1f7ffba4afe9b3d}{\index{Critter\+Game\+Object@{Critter\+Game\+Object}!animation\+\_\+handler@{animation\+\_\+handler}}
+\index{animation\+\_\+handler@{animation\+\_\+handler}!Critter\+Game\+Object@{Critter\+Game\+Object}}
+\subsubsection[{animation\+\_\+handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Animation\+Handler} Critter\+Game\+Object\+::animation\+\_\+handler}}\label{class_critter_game_object_aaf2540f8bf0e841fb1f7ffba4afe9b3d}
+
+
+Handles the animated object. 
+
+\hypertarget{class_critter_game_object_a24da2fb9666d41d47a736278f9305d95}{\index{Critter\+Game\+Object@{Critter\+Game\+Object}!animation\+\_\+index@{animation\+\_\+index}}
+\index{animation\+\_\+index@{animation\+\_\+index}!Critter\+Game\+Object@{Critter\+Game\+Object}}
+\subsubsection[{animation\+\_\+index}]{\setlength{\rightskip}{0pt plus 5cm}int Critter\+Game\+Object\+::animation\+\_\+index\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_critter_game_object_a24da2fb9666d41d47a736278f9305d95}
+
+
+Indicates which animation in a sprite sheet. 
+
+\hypertarget{class_critter_game_object_a1c661287931e114c68e7cd16a1bf5d47}{\index{Critter\+Game\+Object@{Critter\+Game\+Object}!current\+\_\+waypoint@{current\+\_\+waypoint}}
+\index{current\+\_\+waypoint@{current\+\_\+waypoint}!Critter\+Game\+Object@{Critter\+Game\+Object}}
+\subsubsection[{current\+\_\+waypoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Waypoint}$\ast$ Critter\+Game\+Object\+::current\+\_\+waypoint\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_critter_game_object_a1c661287931e114c68e7cd16a1bf5d47}
+\hypertarget{class_critter_game_object_ad703baff6e0d35129dadc48172c26353}{\index{Critter\+Game\+Object@{Critter\+Game\+Object}!has\+Spawned@{has\+Spawned}}
+\index{has\+Spawned@{has\+Spawned}!Critter\+Game\+Object@{Critter\+Game\+Object}}
+\subsubsection[{has\+Spawned}]{\setlength{\rightskip}{0pt plus 5cm}bool Critter\+Game\+Object\+::has\+Spawned}}\label{class_critter_game_object_ad703baff6e0d35129dadc48172c26353}
+\hypertarget{class_critter_game_object_a9e8edd5ea266b18433e9b9f0f3184b97}{\index{Critter\+Game\+Object@{Critter\+Game\+Object}!is\+Active@{is\+Active}}
+\index{is\+Active@{is\+Active}!Critter\+Game\+Object@{Critter\+Game\+Object}}
+\subsubsection[{is\+Active}]{\setlength{\rightskip}{0pt plus 5cm}bool Critter\+Game\+Object\+::is\+Active}}\label{class_critter_game_object_a9e8edd5ea266b18433e9b9f0f3184b97}
+\hypertarget{class_critter_game_object_a21c4863faaf8fc2c0314575c07764ce4}{\index{Critter\+Game\+Object@{Critter\+Game\+Object}!is\+At\+End\+Tile@{is\+At\+End\+Tile}}
+\index{is\+At\+End\+Tile@{is\+At\+End\+Tile}!Critter\+Game\+Object@{Critter\+Game\+Object}}
+\subsubsection[{is\+At\+End\+Tile}]{\setlength{\rightskip}{0pt plus 5cm}bool Critter\+Game\+Object\+::is\+At\+End\+Tile}}\label{class_critter_game_object_a21c4863faaf8fc2c0314575c07764ce4}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/include/game\+Objects/\hyperlink{_critter_game_object_8h}{Critter\+Game\+Object.\+h}\item 
+jamms/\+Tower\+Defense/\+Tower\+Defense/src/game\+Objects/\hyperlink{_critter_game_object_8cpp}{Critter\+Game\+Object.\+cpp}\end{DoxyCompactItemize}

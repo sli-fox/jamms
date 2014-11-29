@@ -32,7 +32,7 @@ void \hyperlink{class_map_a3079c08faaa2fd3984bed5471488a790}{set\+Map\+Size} (co
 \item 
 const \hyperlink{class_tile}{Tile} $\ast$const \hyperlink{class_map_aa8e57f0e6d665def93ad7b33413e98a7}{get\+Tile} (const int tile\+X, const int tile\+Y) const 
 \item 
-void \hyperlink{class_map_ab9561f11877716cf4687ed4dab54d7db}{add\+Tile} (int tile\+X, int tile\+Y, const \hyperlink{class_tile_acb53d82f9dacff45a98acc63276928eb}{Tile\+::\+T\+Y\+P\+E} tile\+Type)
+bool \hyperlink{class_map_abc4fae321b0a5e1ed4954b7a539686de}{add\+Tile} (int tile\+X, int tile\+Y, const \hyperlink{class_tile_acb53d82f9dacff45a98acc63276928eb}{Tile\+::\+T\+Y\+P\+E} tile\+Type)
 \item 
 void \hyperlink{class_map_a69be425dd99011951d8c4f08b598703b}{remove\+Tile} (const int tile\+X, const int tile\+Y)
 \item 
@@ -45,6 +45,8 @@ void \hyperlink{class_map_afa8798ebce5315b393755d8656fa6038}{blank\+Map} ()
 void \hyperlink{class_map_a79a7d2715d8face71c5f16be9e14ac0a}{reset\+Map} ()
 \item 
 void \hyperlink{class_map_a9e82077ad5054dbbe6434cf89738dbf5}{fill\+Map} ()
+\item 
+void \hyperlink{class_map_a69d219d410a5c2c48bbf493c1af04dee}{unfill\+Map} ()
 \item 
 void \hyperlink{class_map_a2b6b1ca722620f097ea044f1c41e411e}{load} (const string filename)
 \item 
@@ -131,8 +133,7 @@ Here is the call graph for this function\+:
 )}}\label{class_map_af3e300404b4bdacb2761300cb3cc1eda}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -151,15 +152,15 @@ Here is the call graph for this function\+:
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_map_ab9561f11877716cf4687ed4dab54d7db}{\index{Map@{Map}!add\+Tile@{add\+Tile}}
+\hypertarget{class_map_abc4fae321b0a5e1ed4954b7a539686de}{\index{Map@{Map}!add\+Tile@{add\+Tile}}
 \index{add\+Tile@{add\+Tile}!Map@{Map}}
-\subsubsection[{add\+Tile}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::add\+Tile (
+\subsubsection[{add\+Tile}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+::add\+Tile (
 \begin{DoxyParamCaption}
 \item[{int}]{tile\+X, }
 \item[{int}]{tile\+Y, }
 \item[{const {\bf Tile\+::\+T\+Y\+P\+E}}]{tile\+Type}
 \end{DoxyParamCaption}
-)}}\label{class_map_ab9561f11877716cf4687ed4dab54d7db}
+)}}\label{class_map_abc4fae321b0a5e1ed4954b7a539686de}
 
 
 Here is the call graph for this function\+:
@@ -167,7 +168,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_map_ab9561f11877716cf4687ed4dab54d7db_cgraph}
+\includegraphics[width=350pt]{class_map_abc4fae321b0a5e1ed4954b7a539686de_cgraph}
 \end{center}
 \end{figure}
 
@@ -179,7 +180,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_map_ab9561f11877716cf4687ed4dab54d7db_icgraph}
+\includegraphics[width=350pt]{class_map_abc4fae321b0a5e1ed4954b7a539686de_icgraph}
 \end{center}
 \end{figure}
 
@@ -193,8 +194,7 @@ Here is the caller graph for this function\+:
 )}}\label{class_map_afa8798ebce5315b393755d8656fa6038}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -250,8 +250,7 @@ Here is the caller graph for this function\+:
 )}}\label{class_map_a84c0e37119c02d7c81071271e004041d}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -289,8 +288,7 @@ Here is the caller graph for this function\+:
 )}}\label{class_map_ac6851c4a19daaafd76eb5bcd9be23f1b}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -342,8 +340,7 @@ Here is the caller graph for this function\+:
 ) const}}\label{class_map_aa8e57f0e6d665def93ad7b33413e98a7}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -445,8 +442,7 @@ Here is the caller graph for this function\+:
 )}}\label{class_map_afba6396c482b9af9671bc33d7ffdb8dd}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -466,8 +462,7 @@ Here is the call graph for this function\+:
 )}}\label{class_map_a7f1f7f192ff9f48806d5d192fb38d3aa}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -486,8 +481,7 @@ Here is the call graph for this function\+:
 )}}\label{class_map_ab12fa393f25fbbd4ad2fa183a033162b}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -518,8 +512,7 @@ Here is the caller graph for this function\+:
 )}}\label{class_map_a69be425dd99011951d8c4f08b598703b}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -568,8 +561,7 @@ Here is the caller graph for this function\+:
 )}}\label{class_map_a7c8e0a56747581e1b9f5248ceb043275}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -610,6 +602,25 @@ Here is the caller graph for this function\+:
 \end{figure}
 
 
+\hypertarget{class_map_a69d219d410a5c2c48bbf493c1af04dee}{\index{Map@{Map}!unfill\+Map@{unfill\+Map}}
+\index{unfill\+Map@{unfill\+Map}!Map@{Map}}
+\subsubsection[{unfill\+Map}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::unfill\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_a69d219d410a5c2c48bbf493c1af04dee}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{class_map_a69d219d410a5c2c48bbf493c1af04dee_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_map_a63a6d8a5e6bcbc1cc92cd29fcff638db}{\index{Map@{Map}!valid\+Path\+Placement@{valid\+Path\+Placement}}
 \index{valid\+Path\+Placement@{valid\+Path\+Placement}!Map@{Map}}
 \subsubsection[{valid\+Path\+Placement}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+::valid\+Path\+Placement (
@@ -620,8 +631,7 @@ Here is the caller graph for this function\+:
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_a63a6d8a5e6bcbc1cc92cd29fcff638db}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

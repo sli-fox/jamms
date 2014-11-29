@@ -1,23 +1,6 @@
 var searchData=
 [
-  ['wave_5flevels',['wave_levels',['../class_game_state_play.html#a97b5c39127688b4c5ddb147572f77290',1,'GameStatePlay']]],
-  ['wavespecs',['waveSpecs',['../class_game_state_play.html#a61669dc94331d0302f3a0f5792304049',1,'GameStatePlay']]],
-  ['waypoint',['Waypoint',['../class_waypoint.html',1,'Waypoint'],['../class_waypoint.html#a9574a82849a3e48fce6ea8fae8da0b18',1,'Waypoint::Waypoint()']]],
-  ['waypoint_2ecpp',['Waypoint.cpp',['../_waypoint_8cpp.html',1,'']]],
-  ['waypoint_2eh',['Waypoint.h',['../_waypoint_8h.html',1,'']]],
-  ['wclosedir',['wclosedir',['../dirent_8h.html#a783634d83dcc99d8a393b22893acfe66',1,'dirent.h']]],
-  ['wdir',['WDIR',['../dirent_8h.html#aa97efcb21eb4eb1172ca3ac581309f09',1,'dirent.h']]],
-  ['wdirent',['wdirent',['../dirent_8h.html#acced66b96e07a03662493638658986f4',1,'dirent.h']]],
-  ['wdirp',['wdirp',['../struct_d_i_r.html#a29362d4a3d7f809d0f5418b26cac5d41',1,'DIR']]],
-  ['what',['what',['../classrapidxml_1_1parse__error.html#a7665c88639e7466ee1de388a4f85e6fe',1,'rapidxml::parse_error']]],
-  ['where',['where',['../classrapidxml_1_1parse__error.html#a3a0ab9e586c1d2b437c340f6622fbec6',1,'rapidxml::parse_error']]],
-  ['white',['white',['../_console_color_8h.html#a76f93616e13cd7a489bd5efc123b85c2',1,'ConsoleColor.h']]],
-  ['white_5fcat',['WHITE_CAT',['../class_critter.html#acda8a5c3234b66101e0546d75d6f90f1ac88c727edcec187617ee3707d2c193c5',1,'Critter']]],
-  ['whitecat',['WhiteCat',['../class_white_cat.html',1,'WhiteCat'],['../class_white_cat.html#a1af91c1252fac9ac94a9334bff97f6df',1,'WhiteCat::WhiteCat()']]],
-  ['whitecat_2ecpp',['WhiteCat.cpp',['../_white_cat_8cpp.html',1,'']]],
-  ['whitecat_2eh',['WhiteCat.h',['../_white_cat_8h.html',1,'']]],
-  ['whitespace_5fpred',['whitespace_pred',['../structrapidxml_1_1xml__document_1_1whitespace__pred.html',1,'rapidxml::xml_document']]],
-  ['wopendir',['wopendir',['../dirent_8h.html#a728bb1173e923c1ae0801c1d91370c0e',1,'dirent.h']]],
-  ['wreaddir',['wreaddir',['../dirent_8h.html#a53e09ee78c993b9feebaf49cb47146f1',1,'dirent.h']]],
-  ['wrewinddir',['wrewinddir',['../dirent_8h.html#a8de41b9888772577edbb17b85dce573e',1,'dirent.h']]]
+  ['validpathplacement',['validPathPlacement',['../class_map.html#a63a6d8a5e6bcbc1cc92cd29fcff638db',1,'Map']]],
+  ['value',['value',['../classrapidxml_1_1xml__base.html#adcdaccff61c665f039d9344e447b7445',1,'rapidxml::xml_base::value() const '],['../classrapidxml_1_1xml__base.html#a3b183c2db7022a6d30494dd2f0ac11e9',1,'rapidxml::xml_base::value(const Ch *value, std::size_t size)'],['../classrapidxml_1_1xml__base.html#a81e63ec4bfd2d7ef0a6c2ed49be6e623',1,'rapidxml::xml_base::value(const Ch *value)']]],
+  ['value_5fsize',['value_size',['../classrapidxml_1_1xml__base.html#a9fcf201ed0915ac18dd43b0b5dcfaf32',1,'rapidxml::xml_base']]]
 ];

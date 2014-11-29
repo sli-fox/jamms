@@ -1,3 +1,4 @@
 <map id="CritterFactory::createCritter" name="CritterFactory::createCritter">
 <area shape="rect" id="node2" href="$class_critter_wave.html#a1364e3a7f9f4ab379847fe558b1fb233" title="This constructor sets the type and number of critters for the wave. " alt="" coords="233,5,397,32"/>
+<area shape="rect" id="node3" href="$class_critter_factory_test.html#a65f7b71bed5e2a81441a6d2d020c31c1" title="Test to see if a cat was created properly. " alt="" coords="252,57,379,98"/>
 </map>

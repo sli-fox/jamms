@@ -1,8 +1,10 @@
 <map id="Map::validPathPlacement" name="Map::validPathPlacement">
-<area shape="rect" id="node2" href="$class_map.html#ab9561f11877716cf4687ed4dab54d7db" title="Map::addTile" alt="" coords="223,42,319,69"/>
-<area shape="rect" id="node3" href="$class_game_state_map_editor.html#aab39f5d619995539f39f9cd217130653" title="GameStateMapEditor\l::mapEditorCommandLibrary" alt="" coords="367,5,553,47"/>
-<area shape="rect" id="node5" href="$class_map.html#a2b6b1ca722620f097ea044f1c41e411e" title="Map::load" alt="" coords="421,71,499,98"/>
-<area shape="rect" id="node4" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="813,35,960,76"/>
-<area shape="rect" id="node6" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="601,64,765,105"/>
-<area shape="rect" id="node7" href="$class_map.html#a11a8645ff656f9efeb5a6758b36d1264" title="Map::Map" alt="" coords="643,130,723,157"/>
+<area shape="rect" id="node2" href="$class_map.html#abc4fae321b0a5e1ed4954b7a539686de" title="Map::addTile" alt="" coords="223,126,319,153"/>
+<area shape="rect" id="node3" href="$class_game_state_map_editor.html#aab39f5d619995539f39f9cd217130653" title="GameStateMapEditor\l::mapEditorCommandLibrary" alt="" coords="580,5,767,47"/>
+<area shape="rect" id="node5" href="$class_map.html#a2b6b1ca722620f097ea044f1c41e411e" title="Map::load" alt="" coords="410,101,489,127"/>
+<area shape="rect" id="node8" href="$class_cmd_add_tile__c.html#aedf0b5944d1cc3a15372b74a78ac54b4" title="CmdAddTile_c::redo" alt="" coords="380,151,519,178"/>
+<area shape="rect" id="node9" href="$class_cmd_remove_tile__c.html#a739dac75f48718fd9f3bd90b7cba59b1" title="CmdRemoveTile_c::undo" alt="" coords="367,202,532,229"/>
+<area shape="rect" id="node4" href="$class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="815,64,961,105"/>
+<area shape="rect" id="node6" href="$class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="591,123,755,164"/>
+<area shape="rect" id="node7" href="$class_map.html#a11a8645ff656f9efeb5a6758b36d1264" title="Map::Map" alt="" coords="633,189,713,215"/>
 </map>

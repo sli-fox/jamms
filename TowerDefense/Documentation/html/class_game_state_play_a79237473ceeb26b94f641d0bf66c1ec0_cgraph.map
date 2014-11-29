@@ -1,6 +1,11 @@
 <map id="GameStatePlay::buttonCommandLibrary" name="GameStatePlay::buttonCommandLibrary">
-<area shape="rect" id="node2" href="$class_game.html#a4b33dd67adef59bebadba8a234282c88" title="Helper pop function for GameState stack. " alt="" coords="309,5,427,32"/>
-<area shape="rect" id="node3" href="$class_game_state_play.html#a2eda31c4d98a8440c6eba38604aa2a79" title="GameStatePlay::handleCritter\lWaveLevelSwitching" alt="" coords="271,57,465,98"/>
-<area shape="rect" id="node4" href="$class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="513,27,684,69"/>
-<area shape="rect" id="node5" href="$class_critter_wave.html#a1244e59ebd702edd2530e6256779ace0" title="Returns a reference to a Critter in the map. " alt="" coords="523,93,675,120"/>
+<area shape="rect" id="node2" href="$class_tower_manager.html#ae71fc7c55f92477846760b122d0f60b9" title="TowerManager::clearAllTowers" alt="" coords="271,5,469,32"/>
+<area shape="rect" id="node3" href="$class_player.html#ad85b7618b95a6d763db0587760fd2dd3" title="Player::resetStats" alt="" coords="307,56,433,83"/>
+<area shape="rect" id="node4" href="$class_game.html#a4b33dd67adef59bebadba8a234282c88" title="Helper pop function for GameState stack. " alt="" coords="311,107,429,133"/>
+<area shape="rect" id="node5" href="$class_game_state_play.html#a2eda31c4d98a8440c6eba38604aa2a79" title="GameStatePlay::handleCritter\lWaveLevelSwitching" alt="" coords="273,158,467,199"/>
+<area shape="rect" id="node8" href="$class_tower.html#aa5280191c23e7cd98e9a1d9cfaba3416" title="Tower::setStrategy" alt="" coords="305,224,435,251"/>
+<area shape="rect" id="node9" href="$class_tower.html#a2427fab36824f8ec98273cb5e563e0c9" title="Tower::getTowerSpecs" alt="" coords="293,275,447,301"/>
+<area shape="rect" id="node6" href="$class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="517,129,688,170"/>
+<area shape="rect" id="node7" href="$class_critter_wave.html#a1244e59ebd702edd2530e6256779ace0" title="Returns a reference to a Critter in the map. " alt="" coords="527,195,679,221"/>
+<area shape="rect" id="node10" href="$class_tower.html#af2bb341e8011c2526ad5c58e11d79b28" title="Tower::getBuyCost" alt="" coords="537,275,669,301"/>
 </map>

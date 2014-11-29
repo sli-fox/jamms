@@ -28,7 +28,9 @@ map$<$ pair$<$ int, int $>$, \hyperlink{class_tower}{Tower} $\ast$ $>$ $\ast$ \h
 \item 
 \hyperlink{class_tower}{Tower} $\ast$ \hyperlink{class_tower_manager_ae2cf2fc1dd19ced5d64ec74042673055}{get\+Tower} (int tile\+X, int tile\+Y)
 \item 
-\hyperlink{class_tower}{Tower} $\ast$ \hyperlink{class_tower_manager_ac057ea8072b060d0fad71fa218e219af}{buy\+Tower} (\hyperlink{class_tower_a110a21c18d4ec095c6234bd17f004b3e}{Tower\+::\+Tower\+Type} type, int tile\+X, int tile\+Y)
+\hyperlink{class_tower}{Tower} $\ast$ \hyperlink{class_tower_manager_a48859fff5518d39549e26d73633eb3c6}{buy\+Tower} (std\+::string tower\+Selector, int tile\+X, int tile\+Y)
+\item 
+void \hyperlink{class_tower_manager_aa74345499b531c211c0abf7b91eb96fc}{upgrade\+Tower} (int tile\+X, int tile\+Y)
 \item 
 void \hyperlink{class_tower_manager_afa7bbe1d178269f32df231807ab419d8}{sell\+Tower} (int tile\+X, int tile\+Y)
 \item 
@@ -85,15 +87,15 @@ map$<$ pair$<$ int, int $>$, \hyperlink{class_tower}{Tower} $\ast$ $>$ \hyperlin
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_tower_manager_ac057ea8072b060d0fad71fa218e219af}{\index{Tower\+Manager@{Tower\+Manager}!buy\+Tower@{buy\+Tower}}
+\hypertarget{class_tower_manager_a48859fff5518d39549e26d73633eb3c6}{\index{Tower\+Manager@{Tower\+Manager}!buy\+Tower@{buy\+Tower}}
 \index{buy\+Tower@{buy\+Tower}!Tower\+Manager@{Tower\+Manager}}
 \subsubsection[{buy\+Tower}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower} $\ast$ Tower\+Manager\+::buy\+Tower (
 \begin{DoxyParamCaption}
-\item[{{\bf Tower\+::\+Tower\+Type}}]{type, }
+\item[{std\+::string}]{tower\+Selector, }
 \item[{int}]{tile\+X, }
 \item[{int}]{tile\+Y}
 \end{DoxyParamCaption}
-)}}\label{class_tower_manager_ac057ea8072b060d0fad71fa218e219af}
+)}}\label{class_tower_manager_a48859fff5518d39549e26d73633eb3c6}
 
 
 Here is the call graph for this function\+:
@@ -101,7 +103,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_tower_manager_ac057ea8072b060d0fad71fa218e219af_cgraph}
+\includegraphics[width=350pt]{class_tower_manager_a48859fff5518d39549e26d73633eb3c6_cgraph}
 \end{center}
 \end{figure}
 
@@ -113,7 +115,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_tower_manager_ac057ea8072b060d0fad71fa218e219af_icgraph}
+\includegraphics[width=350pt]{class_tower_manager_a48859fff5518d39549e26d73633eb3c6_icgraph}
 \end{center}
 \end{figure}
 
@@ -146,8 +148,7 @@ Here is the caller graph for this function\+:
 )}}\label{class_tower_manager_aa795de46937cdcb51d7a885d79c069b3}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -173,8 +174,7 @@ Here is the caller graph for this function\+:
 )}}\label{class_tower_manager_ae2cf2fc1dd19ced5d64ec74042673055}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -192,8 +192,7 @@ Here is the caller graph for this function\+:
 )}}\label{class_tower_manager_a3c54cdf57006efbcd9fc074f156d5360}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -232,8 +231,7 @@ Here is the caller graph for this function\+:
 ) const}}\label{class_tower_manager_a0158f9210b43ea166977e01768849c3a}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -252,12 +250,42 @@ Here is the caller graph for this function\+:
 )}}\label{class_tower_manager_afa7bbe1d178269f32df231807ab419d8}
 
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_manager_afa7bbe1d178269f32df231807ab419d8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_manager_afa7bbe1d178269f32df231807ab419d8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tower_manager_aa74345499b531c211c0abf7b91eb96fc}{\index{Tower\+Manager@{Tower\+Manager}!upgrade\+Tower@{upgrade\+Tower}}
+\index{upgrade\+Tower@{upgrade\+Tower}!Tower\+Manager@{Tower\+Manager}}
+\subsubsection[{upgrade\+Tower}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+Manager\+::upgrade\+Tower (
+\begin{DoxyParamCaption}
+\item[{int}]{tile\+X, }
+\item[{int}]{tile\+Y}
+\end{DoxyParamCaption}
+)}}\label{class_tower_manager_aa74345499b531c211c0abf7b91eb96fc}
+
+
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_tower_manager_afa7bbe1d178269f32df231807ab419d8_cgraph}
+\includegraphics[width=350pt]{class_tower_manager_aa74345499b531c211c0abf7b91eb96fc_cgraph}
 \end{center}
 \end{figure}
 
@@ -269,7 +297,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_tower_manager_afa7bbe1d178269f32df231807ab419d8_icgraph}
+\includegraphics[width=350pt]{class_tower_manager_aa74345499b531c211c0abf7b91eb96fc_icgraph}
 \end{center}
 \end{figure}
 

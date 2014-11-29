@@ -1,0 +1,6 @@
+<map id="CmdBase_c" name="CmdBase_c">
+<area shape="rect" id="node2" href="$class_cmd_add_tile__c.html" title="{CmdAddTile_c\n|&#45; tileX\l&#45; tileY\l&#45; tileType\l|+ CmdAddTile_c()\l+ CmdAddTile_c()\l+ ~CmdAddTile_c()\l+ getTileX()\l+ getTileY()\l+ getTileType()\l+ getMap()\l+ undo()\l+ redo()\l}" alt="" coords="5,204,140,428"/>
+<area shape="rect" id="node3" href="$class_cmd_fill_map__c.html" title="{CmdFillMap_c\n||+ CmdFillMap_c()\l+ CmdFillMap_c()\l+ ~CmdFillMap_c()\l+ getMap()\l+ undo()\l+ redo()\l}" alt="" coords="165,241,298,391"/>
+<area shape="rect" id="node4" href="$class_cmd_remove_tile__c.html" title="{CmdRemoveTile_c\n|&#45; tileX\l&#45; tileY\l&#45; tileType\l|+ CmdRemoveTile_c()\l+ CmdRemoveTile_c()\l+ ~CmdRemoveTile_c()\l+ getTileX()\l+ getTileY()\l+ getTileType()\l+ getMap()\l+ undo()\l+ redo()\l}" alt="" coords="322,204,479,428"/>
+<area shape="rect" id="node5" href="$class_cmd_un_fill_map__c.html" title="{CmdUnFillMap_c\n||+ CmdUnFillMap_c()\l+ CmdUnFillMap_c()\l+ ~CmdUnFillMap_c()\l+ getMap()\l+ undo()\l+ redo()\l}" alt="" coords="503,241,653,391"/>
+</map>

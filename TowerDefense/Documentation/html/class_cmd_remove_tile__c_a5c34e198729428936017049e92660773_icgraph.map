@@ -1,0 +1,4 @@
+<map id="CmdRemoveTile_c::getTileY" name="CmdRemoveTile_c::getTileY">
+<area shape="rect" id="node2" href="$class_cmd_remove_tile__c.html#ab423f8f77192b2772f245feb82c96cb4" title="CmdRemoveTile_c::redo" alt="" coords="239,5,401,32"/>
+<area shape="rect" id="node3" href="$class_cmd_remove_tile__c.html#a739dac75f48718fd9f3bd90b7cba59b1" title="CmdRemoveTile_c::undo" alt="" coords="237,56,403,83"/>
+</map>

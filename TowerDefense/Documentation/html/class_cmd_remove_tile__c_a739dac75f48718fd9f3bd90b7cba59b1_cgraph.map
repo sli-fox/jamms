@@ -1,0 +1,9 @@
+<map id="CmdRemoveTile_c::undo" name="CmdRemoveTile_c::undo">
+<area shape="rect" id="node2" href="$class_map.html#abc4fae321b0a5e1ed4954b7a539686de" title="Map::addTile" alt="" coords="272,23,368,50"/>
+<area shape="rect" id="node6" href="$class_cmd_remove_tile__c.html#a685d79e52c063ed2d0c8b54d7edeeca6" title="CmdRemoveTile_c::getTileX" alt="" coords="229,74,411,100"/>
+<area shape="rect" id="node7" href="$class_cmd_remove_tile__c.html#a5c34e198729428936017049e92660773" title="CmdRemoveTile_c::getTileY" alt="" coords="228,124,412,151"/>
+<area shape="rect" id="node8" href="$class_cmd_remove_tile__c.html#aab2bf5508fc6b40f0734c7b6689961d1" title="CmdRemoveTile_c::getTileType" alt="" coords="219,175,421,202"/>
+<area shape="rect" id="node3" href="$class_map.html#a6995c0de6fe380ffa652990490b867c8" title="Map::outOfBounds" alt="" coords="687,23,817,50"/>
+<area shape="rect" id="node4" href="$class_map.html#aa8e57f0e6d665def93ad7b33413e98a7" title="Map::getTile" alt="" coords="507,23,601,50"/>
+<area shape="rect" id="node5" href="$class_map.html#a63a6d8a5e6bcbc1cc92cd29fcff638db" title="Map::validPathPlacement" alt="" coords="469,74,639,100"/>
+</map>

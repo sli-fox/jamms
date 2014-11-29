@@ -1,0 +1,4 @@
+<map id="CritterGameObject::draw" name="CritterGameObject::draw">
+<area shape="rect" id="node2" href="$class_animation_handler.html#a93f1509e5eccdf13a07ba1eb2256c6d0" title="Changes the animation. " alt="" coords="219,5,393,47"/>
+<area shape="rect" id="node3" href="$class_animation_handler.html#a74c541905109998e971c578c4aa3e3de" title="Updates the current frame of animation. " alt="" coords="221,71,391,98"/>
+</map>

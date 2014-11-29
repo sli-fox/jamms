@@ -1,0 +1,6 @@
+<map id="TowerManager::upgradeTower" name="TowerManager::upgradeTower">
+<area shape="rect" id="node2" href="$class_tower.html#a87db306927fd4022cae1369b88688ed7" title="Tower::getType" alt="" coords="272,5,383,32"/>
+<area shape="rect" id="node3" href="$class_tower.html#ae8236cf1fac3f2fd791312e3dc59d904" title="Tower::getUpgradeLevel" alt="" coords="248,56,407,83"/>
+<area shape="rect" id="node4" href="$class_player.html#aee3d68c568ac6d2346852a47fdc25c01" title="Player::getCash" alt="" coords="270,107,385,133"/>
+<area shape="rect" id="node5" href="$class_player.html#abb709d55c86f703fbd6cc5b90d31fc39" title="Maintains non&#45;negative cash value. " alt="" coords="261,157,393,184"/>
+</map>

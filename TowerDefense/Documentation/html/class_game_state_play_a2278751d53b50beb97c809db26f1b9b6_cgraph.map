@@ -1,8 +1,12 @@
 <map id="GameStatePlay::handleCritterRemovalFromWave" name="GameStatePlay::handleCritterRemovalFromWave">
-<area shape="rect" id="node2" href="$class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="251,5,421,47"/>
-<area shape="rect" id="node3" href="$class_game_state_play.html#ac82134049ed6dd0aaa929e200f7185d5" title="GameStatePlay::checkIfAt\lEndTile" alt="" coords="248,71,424,112"/>
-<area shape="rect" id="node5" href="$class_player.html#a5bb1f83134c899add66053bb08786fb0" title="Player::loseLives" alt="" coords="276,137,396,163"/>
-<area shape="rect" id="node6" href="$class_player.html#a861005738bf21093c79383a3494f2ca8" title="Maintains non&#45;negative points value. " alt="" coords="272,187,400,214"/>
-<area shape="rect" id="node7" href="$class_critter_wave.html#a1244e59ebd702edd2530e6256779ace0" title="Returns a reference to a Critter in the map. " alt="" coords="260,238,412,265"/>
-<area shape="rect" id="node4" href="$class_critter.html#a8fdba06ecb582e8b542e2e73a76f455d" title="Critter::getPosition" alt="" coords="472,78,603,105"/>
+<area shape="rect" id="node2" href="$class_critter_wave.html#a00afecb75c04a7e0cd5073e20b11cce2" title="CritterWave::getContainer\lOfCritters" alt="" coords="263,5,433,47"/>
+<area shape="rect" id="node3" href="$class_game_state_play.html#ac82134049ed6dd0aaa929e200f7185d5" title="GameStatePlay::checkIfAt\lEndTile" alt="" coords="260,71,436,112"/>
+<area shape="rect" id="node5" href="$_console_color_8h.html#abfbb0c9e0e5ee33dd1026c23381b78c5" title="red" alt="" coords="328,137,368,163"/>
+<area shape="rect" id="node6" href="$class_player.html#af3bdca44c57bee211d1d0ea53c11f9b3" title="Player::earnCash" alt="" coords="287,187,409,214"/>
+<area shape="rect" id="node7" href="$class_player.html#ac540cf7f9631bfd6d9c76242addd8eea" title="Player::gainPoints" alt="" coords="284,238,412,265"/>
+<area shape="rect" id="node8" href="$class_critter_wave.html#a14d2b9703371e82278c5fa3c4a2cbbd9" title="CritterWave::decrementCritters\lRemaining" alt="" coords="248,289,448,331"/>
+<area shape="rect" id="node9" href="$class_player.html#a5bb1f83134c899add66053bb08786fb0" title="Player::loseLives" alt="" coords="288,355,408,382"/>
+<area shape="rect" id="node10" href="$class_player.html#a861005738bf21093c79383a3494f2ca8" title="Maintains non&#45;negative points value. " alt="" coords="284,406,412,433"/>
+<area shape="rect" id="node11" href="$class_critter_wave.html#a1244e59ebd702edd2530e6256779ace0" title="Returns a reference to a Critter in the map. " alt="" coords="272,457,424,483"/>
+<area shape="rect" id="node4" href="$class_game_object.html#ad568496dd9cee5b9edd9357d30a00dff" title="Converts and retrieves an pair&lt;float, float&gt; object from a sf::vector2f. " alt="" coords="496,78,664,105"/>
 </map>

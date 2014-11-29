@@ -1,25 +1,51 @@
 <map id="jamms/TowerDefense/TowerDefense/include/gameObjects/Tower.h" name="jamms/TowerDefense/TowerDefense/include/gameObjects/Tower.h">
-<area shape="rect" id="node2" href="$_bulldog_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/gameObjects/Bulldog.h" alt="" coords="1101,109,1263,165"/>
-<area shape="rect" id="node3" href="$_tower_manager_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/managers/TowerManager.h" alt="" coords="783,213,965,269"/>
-<area shape="rect" id="node20" href="$_dalmatian_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/gameObjects/Dalmatian.h" alt="" coords="661,109,837,165"/>
-<area shape="rect" id="node22" href="$_shih_tzu_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/gameObjects/ShihTzu.h" alt="" coords="911,109,1077,165"/>
-<area shape="rect" id="node24" href="$_tower_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/Tower.cpp" alt="" coords="1287,109,1498,165"/>
-<area shape="rect" id="node19" href="$_bulldog_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/Bulldog.cpp" alt="" coords="1225,213,1435,269"/>
-<area shape="rect" id="node4" href="$_game_state_play_8h.html" title="File containing the GameStateStart class. " alt="" coords="662,317,865,373"/>
-<area shape="rect" id="node18" href="$_tower_manager_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/managers\l/TowerManager.cpp" alt="" coords="889,317,1080,373"/>
-<area shape="rect" id="node5" href="$_game_state_map_editor_8h.html" title="File containing the GameStateMapEditor class. " alt="" coords="464,421,700,477"/>
-<area shape="rect" id="node11" href="$_main_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/Main.cpp" alt="" coords="603,741,790,782"/>
-<area shape="rect" id="node16" href="$_game_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/Game.cpp" alt="" coords="827,429,1020,470"/>
-<area shape="rect" id="node17" href="$_game_state_play_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStatePlay.cpp" alt="" coords="1045,421,1247,477"/>
-<area shape="rect" id="node6" href="$_game_state_main_menu_8h.html" title="File containing the GameStateMainMenu class. " alt="" coords="463,525,701,581"/>
-<area shape="rect" id="node15" href="$_game_state_map_editor_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateMapEditor.cpp" alt="" coords="237,525,439,581"/>
-<area shape="rect" id="node7" href="$_game_state_game_over_8h.html" title="File containing the GameStateGameOver class. " alt="" coords="5,629,244,685"/>
-<area shape="rect" id="node9" href="$_game_state_start_8h.html" title="File containing the GameStateStart class. " alt="" coords="495,629,701,685"/>
-<area shape="rect" id="node12" href="$_game_state_win_8h.html" title="File containing the GameStateWin class. " alt="" coords="775,629,975,685"/>
-<area shape="rect" id="node14" href="$_game_state_main_menu_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateMainMenu.cpp" alt="" coords="269,629,471,685"/>
-<area shape="rect" id="node8" href="$_game_state_game_over_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateGameOver.cpp" alt="" coords="23,733,226,789"/>
-<area shape="rect" id="node10" href="$_game_state_start_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateStart.cpp" alt="" coords="377,733,579,789"/>
-<area shape="rect" id="node13" href="$_game_state_game_win_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateGameWin.cpp" alt="" coords="814,733,1017,789"/>
-<area shape="rect" id="node21" href="$_dalmatian_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/Dalmatian.cpp" alt="" coords="547,213,758,269"/>
-<area shape="rect" id="node23" href="$_shih_tzu_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/ShihTzu.cpp" alt="" coords="990,213,1201,269"/>
+<area shape="rect" id="node2" href="$_baby_bulldog_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/gameObjects/BabyBulldog.h" alt="" coords="143,109,334,165"/>
+<area shape="rect" id="node3" href="$_tower_manager_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/managers/TowerManager.h" alt="" coords="1579,317,1762,373"/>
+<area shape="rect" id="node22" href="$_baby_dalmatian_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/gameObjects/BabyDalmatian.h" alt="" coords="358,109,565,165"/>
+<area shape="rect" id="node24" href="$_baby_shih_tzu_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/gameObjects/BabyShihTzu.h" alt="" coords="727,109,921,165"/>
+<area shape="rect" id="node26" href="$_bulldog_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/gameObjects/Bulldog.h" alt="" coords="2110,109,2271,165"/>
+<area shape="rect" id="node28" href="$_shih_tzu_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/gameObjects/ShihTzu.h" alt="" coords="2296,109,2461,165"/>
+<area shape="rect" id="node30" href="$_tower_decorator_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/gameObjects/TowerDecorator.h" alt="" coords="1877,109,2085,165"/>
+<area shape="rect" id="node50" href="$_tower_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/Tower.cpp" alt="" coords="2485,109,2696,165"/>
+<area shape="rect" id="node21" href="$_baby_bulldog_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/BabyBulldog.cpp" alt="" coords="5,213,216,269"/>
+<area shape="rect" id="node4" href="$_game_state_play_8h.html" title="File containing the GameStateStart class. " alt="" coords="1292,421,1495,477"/>
+<area shape="rect" id="node18" href="$_tower_test_8h.html" title="File containing the tests for the TowerTest class. " alt="" coords="1595,421,1747,477"/>
+<area shape="rect" id="node20" href="$_tower_manager_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/managers\l/TowerManager.cpp" alt="" coords="1771,421,1962,477"/>
+<area shape="rect" id="node5" href="$_game_state_map_editor_8h.html" title="File containing the GameStateMapEditor class. " alt="" coords="1275,525,1511,581"/>
+<area shape="rect" id="node11" href="$_main_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/Main.cpp" alt="" coords="699,845,885,886"/>
+<area shape="rect" id="node16" href="$_game_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/Game.cpp" alt="" coords="830,533,1023,574"/>
+<area shape="rect" id="node17" href="$_game_state_play_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStatePlay.cpp" alt="" coords="1048,525,1251,581"/>
+<area shape="rect" id="node6" href="$_game_state_main_menu_8h.html" title="File containing the GameStateMainMenu class. " alt="" coords="1275,629,1512,685"/>
+<area shape="rect" id="node15" href="$_game_state_map_editor_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateMapEditor.cpp" alt="" coords="1048,629,1251,685"/>
+<area shape="rect" id="node7" href="$_game_state_game_over_8h.html" title="File containing the GameStateGameOver class. " alt="" coords="1553,733,1791,789"/>
+<area shape="rect" id="node9" href="$_game_state_start_8h.html" title="File containing the GameStateStart class. " alt="" coords="872,733,1077,789"/>
+<area shape="rect" id="node12" href="$_game_state_win_8h.html" title="File containing the GameStateWin class. " alt="" coords="1328,733,1528,789"/>
+<area shape="rect" id="node14" href="$_game_state_main_menu_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateMainMenu.cpp" alt="" coords="1101,733,1304,789"/>
+<area shape="rect" id="node8" href="$_game_state_game_over_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateGameOver.cpp" alt="" coords="1571,837,1773,893"/>
+<area shape="rect" id="node10" href="$_game_state_start_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateStart.cpp" alt="" coords="909,837,1112,893"/>
+<area shape="rect" id="node13" href="$_game_state_game_win_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateGameWin.cpp" alt="" coords="1327,837,1529,893"/>
+<area shape="rect" id="node19" href="$_tower_test_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/test/TowerTest.cpp" alt="" coords="1637,533,1859,574"/>
+<area shape="rect" id="node23" href="$_baby_dalmatian_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/BabyDalmatian.cpp" alt="" coords="341,213,552,269"/>
+<area shape="rect" id="node25" href="$_baby_shih_tzu_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/BabyShihTzu.cpp" alt="" coords="576,213,787,269"/>
+<area shape="rect" id="node27" href="$_bulldog_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/Bulldog.cpp" alt="" coords="3381,213,3592,269"/>
+<area shape="rect" id="node29" href="$_shih_tzu_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/ShihTzu.cpp" alt="" coords="3616,213,3827,269"/>
+<area shape="rect" id="node31" href="$_adult_bulldog_upgrade_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/gameObjects/AdultBulldogUpgrade.h" alt="" coords="1455,213,1694,269"/>
+<area shape="rect" id="node33" href="$_adult_dalmatian_upgrade_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/gameObjects/AdultDalmatianUpgrade.h" alt="" coords="1718,213,1973,269"/>
+<area shape="rect" id="node35" href="$_adult_shih_tzu_upgrade_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/gameObjects/AdultShihTzuUpgrade.h" alt="" coords="1997,213,2240,269"/>
+<area shape="rect" id="node37" href="$_burn_effect_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/gameObjects/BurnEffect.h" alt="" coords="2499,213,2677,269"/>
+<area shape="rect" id="node39" href="$_freeze_effect_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/gameObjects/FreezeEffect.h" alt="" coords="2702,213,2893,269"/>
+<area shape="rect" id="node41" href="$_slow_effect_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/gameObjects/SlowEffect.h" alt="" coords="2917,213,3096,269"/>
+<area shape="rect" id="node43" href="$_teen_bulldog_upgrade_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/gameObjects/TeenBulldogUpgrade.h" alt="" coords="3120,213,3357,269"/>
+<area shape="rect" id="node45" href="$_teen_dalmatian_upgrade_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/gameObjects/TeenDalmatianUpgrade.h" alt="" coords="862,213,1114,269"/>
+<area shape="rect" id="node47" href="$_teen_shih_tzu_upgrade_8h.html" title="jamms/TowerDefense\l/TowerDefense/include\l/gameObjects/TeenShihTzuUpgrade.h" alt="" coords="1138,213,1379,269"/>
+<area shape="rect" id="node49" href="$_tower_decorator_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/TowerDecorator.cpp" alt="" coords="2264,213,2475,269"/>
+<area shape="rect" id="node32" href="$_adult_bulldog_upgrade_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/AdultBulldogUpgrade.cpp" alt="" coords="1344,317,1555,373"/>
+<area shape="rect" id="node34" href="$_adult_dalmatian_upgrade_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/AdultDalmatianUpgrade.cpp" alt="" coords="1787,317,1997,373"/>
+<area shape="rect" id="node36" href="$_adult_shih_tzu_upgrade_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/AdultShihTzuUpgrade.cpp" alt="" coords="2021,317,2232,373"/>
+<area shape="rect" id="node38" href="$_burn_effect_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/BurnEffect.cpp" alt="" coords="2444,317,2655,373"/>
+<area shape="rect" id="node40" href="$_freeze_effect_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/FreezeEffect.cpp" alt="" coords="2679,317,2889,373"/>
+<area shape="rect" id="node42" href="$_slow_effect_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/SlowEffect.cpp" alt="" coords="2913,317,3124,373"/>
+<area shape="rect" id="node44" href="$_teen_bulldog_upgrade_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/TeenBulldogUpgrade.cpp" alt="" coords="3148,317,3359,373"/>
+<area shape="rect" id="node46" href="$_teen_dalmatian_upgrade_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/TeenDalmatianUpgrade.cpp" alt="" coords="875,317,1085,373"/>
+<area shape="rect" id="node48" href="$_teen_shih_tzu_upgrade_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/TeenShihTzuUpgrade.cpp" alt="" coords="1109,317,1320,373"/>
 </map>

@@ -1,8 +1,9 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$class_game.html#a5898f1edb6e3bc1700b2ffb1943bc609" title="Helper push function for GameState stack. " alt="" coords="105,31,229,57"/>
-<area shape="rect" id="node3" href="$class_game.html#aede5f46c8c7bbbaf8459eeec397a11e7" title="Drives the game. " alt="" coords="104,81,229,108"/>
-<area shape="rect" id="node4" href="$class_game.html#a6cdc6cb374ab8e7d8ac9b280284b3793" title="Helper peek function for GameState stack. " alt="" coords="297,5,421,32"/>
-<area shape="rect" id="node5" href="$class_game_state.html#a970b55edd5a1da31ea0f7113e2c1f85a" title="GameState::handleInput" alt="" coords="277,56,440,83"/>
-<area shape="rect" id="node6" href="$class_game_state.html#ad331d02d3989271b8cbc88fcb1448959" title="GameState::update" alt="" coords="291,107,426,133"/>
-<area shape="rect" id="node7" href="$class_game_state.html#a55a6a68aabdf7054ea0e6ddbf24902df" title="GameState::draw" alt="" coords="297,157,420,184"/>
+<area shape="rect" id="node2" href="$_main_8cpp.html#aa306ac815a7115856bc4c6c8f3376df5" title="handleGameMode" alt="" coords="104,56,231,83"/>
+<area shape="rect" id="node3" href="$class_game.html#a5898f1edb6e3bc1700b2ffb1943bc609" title="Helper push function for GameState stack. " alt="" coords="279,31,403,57"/>
+<area shape="rect" id="node4" href="$class_game.html#aede5f46c8c7bbbaf8459eeec397a11e7" title="Drives the game. " alt="" coords="279,81,404,108"/>
+<area shape="rect" id="node5" href="$class_game.html#a6cdc6cb374ab8e7d8ac9b280284b3793" title="Helper peek function for GameState stack. " alt="" coords="471,5,595,32"/>
+<area shape="rect" id="node6" href="$class_game_state.html#a970b55edd5a1da31ea0f7113e2c1f85a" title="GameState::handleInput" alt="" coords="452,56,615,83"/>
+<area shape="rect" id="node7" href="$class_game_state.html#ad331d02d3989271b8cbc88fcb1448959" title="GameState::update" alt="" coords="466,107,601,133"/>
+<area shape="rect" id="node8" href="$class_game_state.html#a55a6a68aabdf7054ea0e6ddbf24902df" title="GameState::draw" alt="" coords="472,157,595,184"/>
 </map>

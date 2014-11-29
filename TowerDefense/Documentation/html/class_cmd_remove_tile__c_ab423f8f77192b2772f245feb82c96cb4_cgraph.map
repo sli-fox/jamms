@@ -1,0 +1,8 @@
+<map id="CmdRemoveTile_c::redo" name="CmdRemoveTile_c::redo">
+<area shape="rect" id="node2" href="$class_map.html#a69be425dd99011951d8c4f08b598703b" title="Map::removeTile" alt="" coords="250,23,366,50"/>
+<area shape="rect" id="node6" href="$class_cmd_remove_tile__c.html#a685d79e52c063ed2d0c8b54d7edeeca6" title="CmdRemoveTile_c::getTileX" alt="" coords="217,74,399,101"/>
+<area shape="rect" id="node7" href="$class_cmd_remove_tile__c.html#a5c34e198729428936017049e92660773" title="CmdRemoveTile_c::getTileY" alt="" coords="216,125,400,151"/>
+<area shape="rect" id="node3" href="$class_map.html#a6995c0de6fe380ffa652990490b867c8" title="Map::outOfBounds" alt="" coords="665,23,796,50"/>
+<area shape="rect" id="node4" href="$class_map.html#aa8e57f0e6d665def93ad7b33413e98a7" title="Map::getTile" alt="" coords="486,23,579,50"/>
+<area shape="rect" id="node5" href="$class_map.html#ab12fa393f25fbbd4ad2fa183a033162b" title="Map::removeGameObject" alt="" coords="448,74,617,101"/>
+</map>

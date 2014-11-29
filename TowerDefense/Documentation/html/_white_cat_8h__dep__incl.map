@@ -1,21 +1,23 @@
 <map id="jamms/TowerDefense/TowerDefense/include/gameObjects/WhiteCat.h" name="jamms/TowerDefense/TowerDefense/include/gameObjects/WhiteCat.h">
-<area shape="rect" id="node2" href="$_critter_factory_8h.html" title="File for CritterFactory class. " alt="" coords="741,109,938,165"/>
-<area shape="rect" id="node4" href="$_game_state_play_8h.html" title="File containing the GameStateStart class. " alt="" coords="662,317,865,373"/>
-<area shape="rect" id="node20" href="$_white_cat_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/WhiteCat.cpp" alt="" coords="962,109,1173,165"/>
-<area shape="rect" id="node3" href="$_critter_wave_8h.html" title="File for CritterWave class. " alt="" coords="969,213,1134,269"/>
-<area shape="rect" id="node19" href="$_critter_factory_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/CritterFactory.cpp" alt="" coords="734,213,945,269"/>
-<area shape="rect" id="node18" href="$_critter_wave_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/managers\l/CritterWave.cpp" alt="" coords="956,317,1147,373"/>
-<area shape="rect" id="node5" href="$_game_state_map_editor_8h.html" title="File containing the GameStateMapEditor class. " alt="" coords="464,421,700,477"/>
-<area shape="rect" id="node11" href="$_main_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/Main.cpp" alt="" coords="603,741,790,782"/>
-<area shape="rect" id="node16" href="$_game_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/Game.cpp" alt="" coords="827,429,1020,470"/>
-<area shape="rect" id="node17" href="$_game_state_play_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStatePlay.cpp" alt="" coords="1045,421,1247,477"/>
-<area shape="rect" id="node6" href="$_game_state_main_menu_8h.html" title="File containing the GameStateMainMenu class. " alt="" coords="463,525,701,581"/>
-<area shape="rect" id="node15" href="$_game_state_map_editor_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateMapEditor.cpp" alt="" coords="237,525,439,581"/>
+<area shape="rect" id="node2" href="$_critter_factory_8h.html" title="File for CritterFactory class. " alt="" coords="1023,109,1221,165"/>
+<area shape="rect" id="node4" href="$_game_state_play_8h.html" title="File containing the GameStateStart class. " alt="" coords="835,317,1038,373"/>
+<area shape="rect" id="node22" href="$_white_cat_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/WhiteCat.cpp" alt="" coords="1245,109,1455,165"/>
+<area shape="rect" id="node3" href="$_critter_wave_8h.html" title="File for CritterWave class. " alt="" coords="1146,213,1311,269"/>
+<area shape="rect" id="node19" href="$_critter_factory_test_8h.html" title="File containing the tests for the CritterFactoryTest class. " alt="" coords="1340,213,1507,269"/>
+<area shape="rect" id="node21" href="$_critter_factory_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameObjects\l/CritterFactory.cpp" alt="" coords="911,213,1122,269"/>
+<area shape="rect" id="node18" href="$_critter_wave_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/managers\l/CritterWave.cpp" alt="" coords="1129,317,1320,373"/>
+<area shape="rect" id="node5" href="$_game_state_map_editor_8h.html" title="File containing the GameStateMapEditor class. " alt="" coords="637,421,873,477"/>
+<area shape="rect" id="node11" href="$_main_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/Main.cpp" alt="" coords="505,741,691,782"/>
+<area shape="rect" id="node16" href="$_game_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/Game.cpp" alt="" coords="1000,429,1193,470"/>
+<area shape="rect" id="node17" href="$_game_state_play_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStatePlay.cpp" alt="" coords="1218,421,1421,477"/>
+<area shape="rect" id="node6" href="$_game_state_main_menu_8h.html" title="File containing the GameStateMainMenu class. " alt="" coords="402,525,639,581"/>
+<area shape="rect" id="node15" href="$_game_state_map_editor_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateMapEditor.cpp" alt="" coords="663,525,866,581"/>
 <area shape="rect" id="node7" href="$_game_state_game_over_8h.html" title="File containing the GameStateGameOver class. " alt="" coords="5,629,244,685"/>
-<area shape="rect" id="node9" href="$_game_state_start_8h.html" title="File containing the GameStateStart class. " alt="" coords="495,629,701,685"/>
-<area shape="rect" id="node12" href="$_game_state_win_8h.html" title="File containing the GameStateWin class. " alt="" coords="775,629,975,685"/>
-<area shape="rect" id="node14" href="$_game_state_main_menu_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateMainMenu.cpp" alt="" coords="269,629,471,685"/>
+<area shape="rect" id="node9" href="$_game_state_start_8h.html" title="File containing the GameStateStart class. " alt="" coords="269,629,474,685"/>
+<area shape="rect" id="node12" href="$_game_state_win_8h.html" title="File containing the GameStateWin class. " alt="" coords="725,629,925,685"/>
+<area shape="rect" id="node14" href="$_game_state_main_menu_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateMainMenu.cpp" alt="" coords="498,629,701,685"/>
 <area shape="rect" id="node8" href="$_game_state_game_over_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateGameOver.cpp" alt="" coords="23,733,226,789"/>
-<area shape="rect" id="node10" href="$_game_state_start_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateStart.cpp" alt="" coords="377,733,579,789"/>
-<area shape="rect" id="node13" href="$_game_state_game_win_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateGameWin.cpp" alt="" coords="814,733,1017,789"/>
+<area shape="rect" id="node10" href="$_game_state_start_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateStart.cpp" alt="" coords="270,733,473,789"/>
+<area shape="rect" id="node13" href="$_game_state_game_win_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/src/gameStates\l/GameStateGameWin.cpp" alt="" coords="723,733,926,789"/>
+<area shape="rect" id="node20" href="$_critter_factory_test_8cpp.html" title="jamms/TowerDefense\l/TowerDefense/test/Critter\lFactoryTest.cpp" alt="" coords="1344,317,1516,373"/>
 </map>

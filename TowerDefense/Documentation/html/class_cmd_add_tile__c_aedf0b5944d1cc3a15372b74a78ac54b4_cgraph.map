@@ -1,0 +1,9 @@
+<map id="CmdAddTile_c::redo" name="CmdAddTile_c::redo">
+<area shape="rect" id="node2" href="$class_map.html#abc4fae321b0a5e1ed4954b7a539686de" title="Map::addTile" alt="" coords="234,23,330,50"/>
+<area shape="rect" id="node6" href="$class_cmd_add_tile__c.html#ae484a29764817e2f43dc835b9a51d80c" title="CmdAddTile_c::getTileX" alt="" coords="203,74,361,101"/>
+<area shape="rect" id="node7" href="$class_cmd_add_tile__c.html#a36b0863691f44f229fc11783fe7e4756" title="CmdAddTile_c::getTileY" alt="" coords="201,125,363,151"/>
+<area shape="rect" id="node8" href="$class_cmd_add_tile__c.html#a433017f62b21a8dd20f4c647dba5a49a" title="CmdAddTile_c::getTileType" alt="" coords="192,175,372,202"/>
+<area shape="rect" id="node3" href="$class_map.html#a6995c0de6fe380ffa652990490b867c8" title="Map::outOfBounds" alt="" coords="637,23,768,50"/>
+<area shape="rect" id="node4" href="$class_map.html#aa8e57f0e6d665def93ad7b33413e98a7" title="Map::getTile" alt="" coords="458,23,551,50"/>
+<area shape="rect" id="node5" href="$class_map.html#a63a6d8a5e6bcbc1cc92cd29fcff638db" title="Map::validPathPlacement" alt="" coords="420,74,589,101"/>
+</map>

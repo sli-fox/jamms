@@ -101,7 +101,7 @@ Collaboration diagram for Game:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game__coll__graph.png" border="0" usemap="#_game_coll__map" alt="Collaboration graph"/></div>
 <map name="_game_coll__map" id="_game_coll__map">
-<area shape="rect" id="node2" href="class_map.html" title="{Map\n|+ MAX_MAP_WIDTH\l+ MAX_MAP_HEIGHT\l&#45; mapWidth\l&#45; mapHeight\l&#45; hasStart\l&#45; hasEnd\l|+ Map()\l+ Map()\l+ ~Map()\l+ getMapWidth()\l+ getMapHeight()\l+ setMapSize()\l+ getTile()\l+ addTile()\l+ removeTile()\l+ getMapPath()\land 11 more...\l&#45; outOfBounds()\l&#45; validPathPlacement()\l&#45; convertType()\l&#45; convertType()\l}" alt="" coords="160,315,312,671"/><area shape="rect" id="node9" href="class_player.html" title="{Player\n|&#45; _cash\l&#45; _points\l&#45; _high_score\l&#45; _lives\l|+ Player()\l+ Player()\l+ ~Player()\l+ getName()\l+ getCash()\l+ getPoints()\l+ getHighScore()\l+ getLives()\l+ earnCash()\l+ spendCash()\land 6 more...\l}" alt="" coords="5,359,125,627"/></map>
+<area shape="rect" id="node2" href="class_map.html" title="{Map\n|+ MAX_MAP_WIDTH\l+ MAX_MAP_HEIGHT\l&#45; mapWidth\l&#45; mapHeight\l&#45; hasStart\l&#45; hasEnd\l|+ Map()\l+ Map()\l+ ~Map()\l+ getMapWidth()\l+ getMapHeight()\l+ setMapSize()\l+ getTile()\l+ addTile()\l+ removeTile()\l+ getMapPath()\land 12 more...\l&#45; outOfBounds()\l&#45; validPathPlacement()\l&#45; convertType()\l&#45; convertType()\l}" alt="" coords="160,315,312,671"/><area shape="rect" id="node9" href="class_player.html" title="{Player\n|&#45; _startingCash\l&#45; _cash\l&#45; _points\l&#45; _high_score\l&#45; _lives\l|+ Player()\l+ Player()\l+ ~Player()\l+ getName()\l+ getCash()\l+ getPoints()\l+ getHighScore()\l+ getLives()\l+ earnCash()\l+ spendCash()\land 7 more...\l}" alt="" coords="5,351,125,634"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -145,7 +145,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:ab910de42d0cf4238d9d20815de472523"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_map.html">Map</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ab910de42d0cf4238d9d20815de472523">map</a> = <a class="el" href="class_map.html">Map</a>(<a class="el" href="class_map.html#ae9582bc1e99bdf1ecc5413f81cc95f69">Map::MAX_MAP_WIDTH</a>, <a class="el" href="class_map.html#aef313313ef5bbeafeae1f6b66073bace">Map::MAX_MAP_HEIGHT</a>)</td></tr>
 <tr class="memdesc:ab910de42d0cf4238d9d20815de472523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="class_game.html" title="Creates a Game. Game is a GameState manager that handles the changing of the states and info storage ...">Game</a> sets the game window properties and frame rate.  <a href="#ab910de42d0cf4238d9d20815de472523">More...</a><br /></td></tr>
 <tr class="separator:ab910de42d0cf4238d9d20815de472523"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e48721b0532833b99fd5615a3628792"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a6e48721b0532833b99fd5615a3628792">player</a> = <a class="el" href="class_player.html">Player</a>(&quot;Jamms&quot;, 500)</td></tr>
+<tr class="memitem:a6e48721b0532833b99fd5615a3628792"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a6e48721b0532833b99fd5615a3628792">player</a> = <a class="el" href="class_player.html">Player</a>(&quot;Jamms&quot;, 2000)</td></tr>
 <tr class="separator:a6e48721b0532833b99fd5615a3628792"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -255,7 +255,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_aede5f46c8c7bbbaf8459eeec397a11e7_icgraph.png" border="0" usemap="#class_game_aede5f46c8c7bbbaf8459eeec397a11e7_icgraph" alt=""/></div>
 <map name="class_game_aede5f46c8c7bbbaf8459eeec397a11e7_icgraph" id="class_game_aede5f46c8c7bbbaf8459eeec397a11e7_icgraph">
-<area shape="rect" id="node2" href="_main_8cpp.html#a17c71e8de8c58645dd41431d716ac739" title="main" alt="" coords="179,5,229,32"/></map>
+<area shape="rect" id="node2" href="_main_8cpp.html#aa306ac815a7115856bc4c6c8f3376df5" title="handleGameMode" alt="" coords="179,5,305,32"/><area shape="rect" id="node3" href="_main_8cpp.html#a17c71e8de8c58645dd41431d716ac739" title="main" alt="" coords="353,5,404,32"/></map>
 </div>
 </p>
 
@@ -282,7 +282,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_a6cdc6cb374ab8e7d8ac9b280284b3793_icgraph.png" border="0" usemap="#class_game_a6cdc6cb374ab8e7d8ac9b280284b3793_icgraph" alt=""/></div>
 <map name="class_game_a6cdc6cb374ab8e7d8ac9b280284b3793_icgraph" id="class_game_a6cdc6cb374ab8e7d8ac9b280284b3793_icgraph">
-<area shape="rect" id="node2" href="class_game.html#aede5f46c8c7bbbaf8459eeec397a11e7" title="Drives the game. " alt="" coords="177,5,303,32"/><area shape="rect" id="node3" href="_main_8cpp.html#a17c71e8de8c58645dd41431d716ac739" title="main" alt="" coords="351,5,401,32"/></map>
+<area shape="rect" id="node2" href="class_game.html#aede5f46c8c7bbbaf8459eeec397a11e7" title="Drives the game. " alt="" coords="177,5,303,32"/><area shape="rect" id="node3" href="_main_8cpp.html#aa306ac815a7115856bc4c6c8f3376df5" title="handleGameMode" alt="" coords="351,5,477,32"/><area shape="rect" id="node4" href="_main_8cpp.html#a17c71e8de8c58645dd41431d716ac739" title="main" alt="" coords="525,5,576,32"/></map>
 </div>
 </p>
 
@@ -337,7 +337,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_a5898f1edb6e3bc1700b2ffb1943bc609_icgraph.png" border="0" usemap="#class_game_a5898f1edb6e3bc1700b2ffb1943bc609_icgraph" alt=""/></div>
 <map name="class_game_a5898f1edb6e3bc1700b2ffb1943bc609_icgraph" id="class_game_a5898f1edb6e3bc1700b2ffb1943bc609_icgraph">
-<area shape="rect" id="node2" href="class_game.html#a8683b16995200bd11d95efc372e6722a" title="Helper function for GameState stack to change previous state into given state. " alt="" coords="221,5,360,32"/><area shape="rect" id="node3" href="class_game_state_game_over.html#aca1764af639f0e1ca817d93a2a19d45a" title="Function that transitions to the GameStateMainMenu state. " alt="" coords="212,57,369,98"/><area shape="rect" id="node5" href="class_game_state_win.html#a412ddc8fae7d78c8fbcd7431da080625" title="Function that transitions to the GameStateMainMenu state. " alt="" coords="177,123,404,149"/><area shape="rect" id="node7" href="class_game_state_main_menu.html#a76d18652314696ffa6369713ef5be3ed" title="Function that transitions to the GameStatePlay state. " alt="" coords="213,174,369,215"/><area shape="rect" id="node9" href="class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="209,239,373,281"/><area shape="rect" id="node11" href="class_game_state_play.html#aec5f72cea0e80d1d83b9cbe155a65ce9" title="GameStatePlay::handleGameOver" alt="" coords="180,305,401,332"/><area shape="rect" id="node13" href="class_game_state_start.html#abf9604839c31d8b48f3cdccb79f370e5" title="Function that transitions to the GameStateMainMenu state. " alt="" coords="187,356,395,383"/><area shape="rect" id="node15" href="_main_8cpp.html#a17c71e8de8c58645dd41431d716ac739" title="main" alt="" coords="265,407,316,433"/><area shape="rect" id="node4" href="class_game_state_game_over.html#a10777cb963bba4f1c80edd6112888585" title="Handles player input. " alt="" coords="469,57,626,98"/><area shape="rect" id="node6" href="class_game_state_win.html#a6a40673e81af38639e4191c0ec2f4048" title="Handles player input. " alt="" coords="455,123,640,149"/><area shape="rect" id="node8" href="class_game_state_main_menu.html#a91ca3c60e107d135ab67c5f9e05e8aa6" title="Handles player input. " alt="" coords="469,174,625,215"/><area shape="rect" id="node10" href="class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="474,239,621,281"/><area shape="rect" id="node12" href="class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="467,305,628,332"/><area shape="rect" id="node14" href="class_game_state_start.html#afa9da08e1a51b4914ee436e7f1c4f6e6" title="Handles player input. " alt="" coords="452,356,643,383"/></map>
+<area shape="rect" id="node2" href="class_game.html#a8683b16995200bd11d95efc372e6722a" title="Helper function for GameState stack to change previous state into given state. " alt="" coords="221,5,360,32"/><area shape="rect" id="node3" href="class_game_state_game_over.html#aca1764af639f0e1ca817d93a2a19d45a" title="Function that transitions to the GameStateMainMenu state. " alt="" coords="212,57,369,98"/><area shape="rect" id="node5" href="class_game_state_win.html#a412ddc8fae7d78c8fbcd7431da080625" title="Function that transitions to the GameStateMainMenu state. " alt="" coords="177,123,404,149"/><area shape="rect" id="node7" href="class_game_state_main_menu.html#a76d18652314696ffa6369713ef5be3ed" title="Function that transitions to the GameStatePlay state. " alt="" coords="213,174,369,215"/><area shape="rect" id="node9" href="class_game_state_map_editor.html#a3f2343fe7da91481f928ef9e9061458b" title="GameStateMapEditor\l::buttonCommandLibrary" alt="" coords="209,239,373,281"/><area shape="rect" id="node11" href="class_game_state_play.html#aec5f72cea0e80d1d83b9cbe155a65ce9" title="GameStatePlay::handleGameOver" alt="" coords="180,305,401,332"/><area shape="rect" id="node13" href="class_game_state_start.html#abf9604839c31d8b48f3cdccb79f370e5" title="Function that transitions to the GameStateMainMenu state. " alt="" coords="187,356,395,383"/><area shape="rect" id="node15" href="_main_8cpp.html#aa306ac815a7115856bc4c6c8f3376df5" title="handleGameMode" alt="" coords="227,407,354,433"/><area shape="rect" id="node4" href="class_game_state_game_over.html#a10777cb963bba4f1c80edd6112888585" title="Handles player input. " alt="" coords="469,57,626,98"/><area shape="rect" id="node6" href="class_game_state_win.html#a6a40673e81af38639e4191c0ec2f4048" title="Handles player input. " alt="" coords="455,123,640,149"/><area shape="rect" id="node8" href="class_game_state_main_menu.html#a91ca3c60e107d135ab67c5f9e05e8aa6" title="Handles player input. " alt="" coords="469,174,625,215"/><area shape="rect" id="node10" href="class_game_state_map_editor.html#ad8bd50d8a9823c26a57d315a6b303b88" title="Handles player input. " alt="" coords="474,239,621,281"/><area shape="rect" id="node12" href="class_game_state_play.html#a2faf041a447ddf86726658455560abb8" title="Updates game changes. " alt="" coords="467,305,628,332"/><area shape="rect" id="node14" href="class_game_state_start.html#afa9da08e1a51b4914ee436e7f1c4f6e6" title="Handles player input. " alt="" coords="452,356,643,383"/><area shape="rect" id="node16" href="_main_8cpp.html#a17c71e8de8c58645dd41431d716ac739" title="main" alt="" coords="522,407,573,433"/></map>
 </div>
 </p>
 
@@ -426,7 +426,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_player.html">Player</a> Game::player = <a class="el" href="class_player.html">Player</a>(&quot;Jamms&quot;, 500)</td>
+          <td class="memname"><a class="el" href="class_player.html">Player</a> Game::player = <a class="el" href="class_player.html">Player</a>(&quot;Jamms&quot;, 2000)</td>
         </tr>
       </table>
   </td>
@@ -445,7 +445,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 7 2014 19:14:36 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 28 2014 23:42:29 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

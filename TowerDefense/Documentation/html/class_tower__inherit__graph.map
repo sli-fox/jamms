@@ -1,7 +1,18 @@
 <map id="Tower" name="Tower">
-<area shape="rect" id="node4" href="$class_bulldog.html" title="{Bulldog\n||+ Bulldog()\l+ upgradeTower()\l}" alt="" coords="5,784,128,876"/>
-<area shape="rect" id="node5" href="$class_dalmatian.html" title="{Dalmatian\n||+ Dalmatian()\l+ upgradeTower()\l}" alt="" coords="152,784,275,876"/>
-<area shape="rect" id="node6" href="$class_shih_tzu.html" title="{ShihTzu\n||+ ShihTzu()\l+ upgradeTower()\l}" alt="" coords="299,784,421,876"/>
-<area shape="rect" id="node2" href="$class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="87,5,212,259"/>
-<area shape="rect" id="node3" href="$class_i_observer.html" title="{IObserver\n||+ update()\l}" alt="" coords="237,93,318,171"/>
+<area shape="rect" id="node3" href="$class_baby_bulldog.html" title="{BabyBulldog\n||+ BabyBulldog()\l+ BabyBulldog()\l+ upgradeTower()\l}" alt="" coords="19,755,141,861"/>
+<area shape="rect" id="node4" href="$class_baby_dalmatian.html" title="{BabyDalmatian\n||+ BabyDalmatian()\l+ BabyDalmatian()\l+ upgradeTower()\l}" alt="" coords="165,755,296,861"/>
+<area shape="rect" id="node5" href="$class_baby_shih_tzu.html" title="{BabyShihTzu\n||+ BabyShihTzu()\l+ BabyShihTzu()\l+ upgradeTower()\l}" alt="" coords="320,755,443,861"/>
+<area shape="rect" id="node6" href="$class_bulldog.html" title="{Bulldog\n||+ Bulldog()\l+ upgradeTower()\l}" alt="" coords="467,762,589,854"/>
+<area shape="rect" id="node7" href="$class_shih_tzu.html" title="{ShihTzu\n||+ ShihTzu()\l+ upgradeTower()\l}" alt="" coords="613,762,736,854"/>
+<area shape="rect" id="node8" href="$class_tower_decorator.html" title="{TowerDecorator\n|# _decoratedTower\l|+ TowerDecorator()\l+ TowerDecorator()\l+ ~TowerDecorator()\l}" alt="" coords="761,755,901,861"/>
+<area shape="rect" id="node2" href="$class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="392,5,517,273"/>
+<area shape="rect" id="node9" href="$class_adult_bulldog_upgrade.html" title="{AdultBulldogUpgrade\n|+ adult_upgrade_cost\l|+ AdultBulldogUpgrade()\l+ AdultBulldogUpgrade()\l+ ~AdultBulldogUpgrade()\l+ getTowerSpecs()\l}" alt="" coords="5,924,176,1045"/>
+<area shape="rect" id="node10" href="$class_adult_dalmatian_upgrade.html" title="{AdultDalmatianUpgrade\n|+ adult_upgrade_cost\l|+ AdultDalmatianUpgrade()\l+ AdultDalmatianUpgrade()\l+ ~AdultDalmatianUpgrade()\l+ getTowerSpecs()\l}" alt="" coords="200,924,387,1045"/>
+<area shape="rect" id="node11" href="$class_adult_shih_tzu_upgrade.html" title="{AdultShihTzuUpgrade\n|+ adult_upgrade_cost\l|+ AdultShihTzuUpgrade()\l+ AdultShihTzuUpgrade()\l+ ~AdultShihTzuUpgrade()\l+ getTowerSpecs()\l}" alt="" coords="411,924,586,1045"/>
+<area shape="rect" id="node12" href="$class_burn_effect.html" title="{BurnEffect\n|+ upgrade_cost\l&#45; _special_effect\l|+ BurnEffect()\l+ BurnEffect()\l+ ~BurnEffect()\l+ attack()\l+ getTowerSpecs()\l}" alt="" coords="611,909,741,1060"/>
+<area shape="rect" id="node13" href="$class_freeze_effect.html" title="{FreezeEffect\n|+ upgrade_cost\l&#45; _special_effect\l|+ FreezeEffect()\l+ FreezeEffect()\l+ ~FreezeEffect()\l+ getTowerSpecs()\l+ attack()\l}" alt="" coords="765,909,896,1060"/>
+<area shape="rect" id="node14" href="$class_slow_effect.html" title="{SlowEffect\n|+ upgrade_cost\l&#45; _special_effect\l|+ SlowEffect()\l+ SlowEffect()\l+ ~SlowEffect()\l+ getTowerSpecs()\l+ attack()\l}" alt="" coords="920,909,1051,1060"/>
+<area shape="rect" id="node15" href="$class_teen_bulldog_upgrade.html" title="{TeenBulldogUpgrade\n|+ teen_upgrade_cost\l|+ TeenBulldogUpgrade()\l+ TeenBulldogUpgrade()\l+ ~TeenBulldogUpgrade()\l+ getTowerSpecs()\l}" alt="" coords="1075,924,1245,1045"/>
+<area shape="rect" id="node16" href="$class_teen_dalmatian_upgrade.html" title="{TeenDalmatianUpgrade\n|+ teen_upgrade_cost\l|+ TeenDalmatianUpgrade()\l+ TeenDalmatianUpgrade()\l+ ~TeenDalmatianUpgrade()\l+ getTowerSpecs()\l}" alt="" coords="1269,924,1453,1045"/>
+<area shape="rect" id="node17" href="$class_teen_shih_tzu_upgrade.html" title="{TeenShihTzuUpgrade\n|+ teen_upgrade_cost\l|+ TeenShihTzuUpgrade()\l+ TeenShihTzuUpgrade()\l+ ~TeenShihTzuUpgrade()\l+ getTowerSpecs()\l}" alt="" coords="1477,924,1651,1045"/>
 </map>

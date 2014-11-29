@@ -1,6 +1,6 @@
 <map id="PathTile" name="PathTile">
-<area shape="rect" id="node4" href="$class_end_tile.html" title="{EndTile\n||+ EndTile()\l+ ~EndTile()\l}" alt="" coords="5,689,99,781"/>
-<area shape="rect" id="node5" href="$class_start_tile.html" title="{StartTile\n||+ StartTile()\l+ ~StartTile()\l}" alt="" coords="123,689,221,781"/>
-<area shape="rect" id="node2" href="$class_tile.html" title="{Tile\n|&#45; tileX\l&#45; tileY\l&#45; type\l|+ Tile()\l+ Tile()\l+ ~Tile()\l+ getTileX()\l+ getTileY()\l+ getType()\l+ setType()\l}" alt="" coords="67,307,157,501"/>
-<area shape="rect" id="node3" href="$class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="49,5,175,259"/>
+<area shape="rect" id="node4" href="$class_end_tile.html" title="{EndTile\n||+ EndTile()\l+ ~EndTile()\l}" alt="" coords="5,704,99,796"/>
+<area shape="rect" id="node5" href="$class_start_tile.html" title="{StartTile\n||+ StartTile()\l+ ~StartTile()\l}" alt="" coords="123,704,221,796"/>
+<area shape="rect" id="node2" href="$class_tile.html" title="{Tile\n|&#45; tileX\l&#45; tileY\l&#45; type\l|+ Tile()\l+ Tile()\l+ ~Tile()\l+ getTileX()\l+ getTileY()\l+ getType()\l+ setType()\l}" alt="" coords="67,321,157,516"/>
+<area shape="rect" id="node3" href="$class_game_object.html" title="Creates a GameObject. GameObject is a class that creates all objects seen in the application. Each GameObject instance creates a sprite at a specified position. GameObjects can then be drawn to the render window. " alt="" coords="49,5,175,273"/>
 </map>

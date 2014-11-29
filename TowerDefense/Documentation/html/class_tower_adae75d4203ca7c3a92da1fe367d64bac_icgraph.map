@@ -1,0 +1,11 @@
+<map id="Tower::getSellCost" name="Tower::getSellCost">
+<area shape="rect" id="node2" href="$class_adult_bulldog_upgrade.html#a9152b2b5fae3cc23cab3753832b06b94" title="AdultBulldogUpgrade\l::AdultBulldogUpgrade" alt="" coords="197,5,347,47"/>
+<area shape="rect" id="node3" href="$class_adult_dalmatian_upgrade.html#a8eba9816fcfc628e2c9310ef2f1ca989" title="AdultDalmatianUpgrade\l::AdultDalmatianUpgrade" alt="" coords="189,71,355,112"/>
+<area shape="rect" id="node4" href="$class_adult_shih_tzu_upgrade.html#a85e7b1079bb72002fb0873337435dc49" title="AdultShihTzuUpgrade\l::AdultShihTzuUpgrade" alt="" coords="195,136,349,177"/>
+<area shape="rect" id="node5" href="$class_burn_effect.html#a06df17552152fa567597e60ac9fc5a76" title="BurnEffect::BurnEffect" alt="" coords="197,202,347,229"/>
+<area shape="rect" id="node6" href="$class_freeze_effect.html#aa9aa4fc5b5a963f961c5250383977cdd" title="FreezeEffect::FreezeEffect" alt="" coords="184,253,360,279"/>
+<area shape="rect" id="node7" href="$class_slow_effect.html#a451bf06f86366b8857e09bcb38834756" title="SlowEffect::SlowEffect" alt="" coords="196,303,348,330"/>
+<area shape="rect" id="node8" href="$class_teen_bulldog_upgrade.html#a6808367cbdaa1deed5780a916bf127cd" title="TeenBulldogUpgrade\l::TeenBulldogUpgrade" alt="" coords="197,355,347,396"/>
+<area shape="rect" id="node9" href="$class_teen_dalmatian_upgrade.html#a36935783afda88bfb639c41f8ad68959" title="TeenDalmatianUpgrade\l::TeenDalmatianUpgrade" alt="" coords="190,420,354,461"/>
+<area shape="rect" id="node10" href="$class_teen_shih_tzu_upgrade.html#ac9c5b3bfe2a3b2529b649871e3afa4c3" title="TeenShihTzuUpgrade\l::TeenShihTzuUpgrade" alt="" coords="195,485,349,527"/>
+</map>

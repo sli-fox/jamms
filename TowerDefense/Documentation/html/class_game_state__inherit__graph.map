@@ -1,8 +1,8 @@
 <map id="GameState" name="GameState">
-<area shape="rect" id="node2" href="$class_game_state_game_over.html" title="Game state that represents the game start, including the main game menu. " alt="" coords="5,431,197,597"/>
-<area shape="rect" id="node3" href="$class_game_state_main_menu.html" title="Game state that represents the game start, including the main game menu. " alt="" coords="221,424,389,604"/>
-<area shape="rect" id="node4" href="$class_game_state_map_editor.html" title="Game state that represents the gameplay. " alt="" coords="413,343,608,685"/>
-<area shape="rect" id="node5" href="$class_game_state_play.html" title="Game state that represents the gameplay. " alt="" coords="633,175,861,853"/>
-<area shape="rect" id="node6" href="$class_game_state_start.html" title="Game state that represents the game start, including the main game menu. " alt="" coords="885,431,1056,597"/>
-<area shape="rect" id="node7" href="$class_game_state_win.html" title="Game state that represents the game start, including the main game menu. " alt="" coords="1080,431,1269,597"/>
+<area shape="rect" id="node2" href="$class_game_state_game_over.html" title="Game state that represents the game start, including the main game menu. " alt="" coords="5,483,197,648"/>
+<area shape="rect" id="node3" href="$class_game_state_main_menu.html" title="Game state that represents the game start, including the main game menu. " alt="" coords="221,475,389,655"/>
+<area shape="rect" id="node4" href="$class_game_state_map_editor.html" title="Game state that represents the gameplay. " alt="" coords="414,314,613,817"/>
+<area shape="rect" id="node5" href="$class_game_state_play.html" title="Game state that represents the gameplay. " alt="" coords="637,175,865,956"/>
+<area shape="rect" id="node6" href="$class_game_state_start.html" title="Game state that represents the game start, including the main game menu. " alt="" coords="889,483,1060,648"/>
+<area shape="rect" id="node7" href="$class_game_state_win.html" title="Game state that represents the game start, including the main game menu. " alt="" coords="1084,483,1273,648"/>
 </map>

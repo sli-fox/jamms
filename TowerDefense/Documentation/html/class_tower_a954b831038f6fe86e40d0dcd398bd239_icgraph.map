@@ -1,5 +1,4 @@
 <map id="Tower::setRateOfFire" name="Tower::setRateOfFire">
-<area shape="rect" id="node2" href="$class_bulldog.html#adfecd22f881be0d7946534c2012275d7" title="Bulldog::upgradeTower" alt="" coords="205,5,358,32"/>
-<area shape="rect" id="node3" href="$class_dalmatian.html#aa87cd8b4c763d84d24964024bde2fc9b" title="Dalmatian::upgradeTower" alt="" coords="197,56,365,83"/>
-<area shape="rect" id="node4" href="$class_shih_tzu.html#a9d8d599edbc19d2a16a65646d0cbc485" title="ShihTzu::upgradeTower" alt="" coords="203,107,360,133"/>
+<area shape="rect" id="node2" href="$class_bulldog.html#adfecd22f881be0d7946534c2012275d7" title="Bulldog::upgradeTower" alt="" coords="199,5,353,32"/>
+<area shape="rect" id="node3" href="$class_shih_tzu.html#a9d8d599edbc19d2a16a65646d0cbc485" title="ShihTzu::upgradeTower" alt="" coords="197,56,355,83"/>
 </map>
