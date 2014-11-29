@@ -7,7 +7,9 @@ AdultDalmatianUpgrade::AdultDalmatianUpgrade() {
 	std::cout << green << "AdultDalmatianUpgrade Default Constructor called." << std::endl;
 }
 
-AdultDalmatianUpgrade::AdultDalmatianUpgrade(Tower* tower) : _decoratedTower(tower) {
+AdultDalmatianUpgrade::AdultDalmatianUpgrade(Tower* tower) {
+	this->_decoratedTower = tower;
+
 	this->load("resources/images/towers/Dalmatian_2.png");
 	this->setPosition(tower->getPosition().first, tower->getPosition().second);		// has to be set BEFORE setRange();
 

@@ -7,7 +7,9 @@ AdultShihTzuUpgrade::AdultShihTzuUpgrade() {
 	std::cout << green << "AdultShihTzuUpgrade Default Constructor called." << std::endl;
 }
 
-AdultShihTzuUpgrade::AdultShihTzuUpgrade(Tower* tower) : _decoratedTower(tower) {
+AdultShihTzuUpgrade::AdultShihTzuUpgrade(Tower* tower) {
+	this->_decoratedTower = tower;
+
 	this->load("resources/images/towers/ShihTzu_2.png");
 	this->setPosition(tower->getPosition().first, tower->getPosition().second);		// has to be set BEFORE setRange();
 

@@ -16,7 +16,6 @@ public:
 	std::string getTowerSpecs();
 
 private:
-	Tower* _decoratedTower;
 	std::string _special_effect;
 
 };
