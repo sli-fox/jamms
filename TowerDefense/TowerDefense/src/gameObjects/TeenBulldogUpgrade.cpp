@@ -23,6 +23,7 @@ TeenBulldogUpgrade::TeenBulldogUpgrade(Tower* tower) {
 	this->_rate_of_fire = tower->getRateOfFire();
 	this->_upgrade_cost = tower->getUpgradeCost();
 	this->_sell_cost = tower->getSellCost();
+	this->_strategy.reset(tower->getStrategy());
 
 	std::cout << green << "Tower has grown up to Teen." << std::endl;
 }

@@ -19,6 +19,7 @@ BurnEffect::BurnEffect(Tower* tower) {
 	this->_rate_of_fire = tower->getRateOfFire();
 	this->_upgrade_cost = tower->getUpgradeCost();
 	this->_sell_cost = tower->getSellCost();
+	this->_strategy.reset(tower->getStrategy());
 }
 
 void BurnEffect::attack() {
@@ -30,7 +31,7 @@ void BurnEffect::attack() {
 // @Override
 std::string BurnEffect::getTowerSpecs() {
 	std::stringstream output;
-	output << _decoratedTower->getTowerSpecs();
+	output <<Tower::getTowerSpecs();
 	output << "Special Effect: Burning" << std::endl;
 	return output.str();
 }

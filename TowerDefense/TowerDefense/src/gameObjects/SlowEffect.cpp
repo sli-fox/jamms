@@ -20,6 +20,7 @@ SlowEffect::SlowEffect(Tower* tower) {
 	this->_upgrade_cost = tower->getUpgradeCost();
 	this->_sell_cost = tower->getSellCost();
 	this->_target = tower->getTarget();
+	this->_strategy.reset(tower->getStrategy());
 }
 
 void SlowEffect::attack() {
@@ -31,7 +32,7 @@ void SlowEffect::attack() {
 // @Override
 std::string SlowEffect::getTowerSpecs() {
 	std::stringstream output;
-	output << _decoratedTower->getTowerSpecs();
+	output << Tower::getTowerSpecs();
 	output << "Special Effect: Freezing" << std::endl;
 	return output.str();
 }
