@@ -62,8 +62,8 @@ SFML is the graphical library we will be using for this project. It's a dependen
 5. Now, your SFML should be ready! I've included a SFMLTest.txt file with code that should render a green circle in AN EMPTY SOLUTION if SFML is properly installed. To test, you can copy the code in SFMLTest.txt into your main cpp file and run the main function. If a green circle appears, then SFML works! :) Alternatively, you can just run the exisiting jamms project to test.
 
 # Documentation
-## Initial project documentation
-As a team, we brainstormed and created Game Design Document with initial concepts prior to coding. This document is found in the Documentation folder under "Initial Game Design Document". Additionally, we have an "Initial Domain Model" in the same Documentation folder.
+## Project documentation
+All UML diagrams presented at the final demo are included in the Documentation folder under Final Presentation UML Diagrams.
 
 ## Doxygen generated documentation
 This project has generated Doxygen documentation, including comments, class hierarchies, and diagrams.
