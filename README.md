@@ -13,7 +13,7 @@ TowerDefense
   - Project configuration (in case something isn't working)
 	- [Installing SFML](#user-content-installing-sfml)
   - Documentation
-	- [Initial project planning](#user-content-initial-project-planning)
+	- [Project Documentation](#user-content-project-documenation)
 	- [Doxygen generated documentation](#user-content-doxygen-generated-documentation)
 
 # Compilation information
